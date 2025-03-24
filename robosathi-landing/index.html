@@ -9,5 +9,10 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      if(window.location.pathname.includes('/lander')) {
+        window.location.href = '/';
+      }
+    </script>
   </body>
 </html>
