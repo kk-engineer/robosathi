@@ -13,18 +13,18 @@ export default function App() {
       position: 'relative'
     }}>
       {/* Watermark Background */}
-      <div style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        backgroundImage: `url(${logo})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        backgroundSize: '50%',
-        opacity: 0.25, // Increased visibility
-      }}></div>
+      {/*<div style={{*/}
+      {/*  position: 'absolute',*/}
+      {/*  top: 0,*/}
+      {/*  left: 0,*/}
+      {/*  right: 0,*/}
+      {/*  bottom: 0,*/}
+      {/*  backgroundImage: `url(${logo})`,*/}
+      {/*  backgroundRepeat: 'no-repeat',*/}
+      {/*  backgroundPosition: 'center',*/}
+      {/*  backgroundSize: '50%',*/}
+      {/*  opacity: 0.5, // Increased visibility*/}
+      {/*}}></div>*/}
 
       {/* Content Container */}
       <div style={{
@@ -90,7 +90,7 @@ export default function App() {
               AI Tutorial Videos
             </h2>
             <p style={{ color: '#555', lineHeight: '1.5' }}>
-              Access our library of AI-powered tutorial videos covering various subjects and skill levels.
+              Access our library of tutorial videos covering various subjects and skill levels.
             </p>
           </section>
 
@@ -99,7 +99,7 @@ export default function App() {
               Study Notes
             </h2>
             <p style={{ color: '#555', lineHeight: '1.5' }}>
-              Comprehensive, AI-generated study notes to help you learn and retain information effectively.
+              Comprehensive study notes to help you learn AI concepts effectively.
             </p>
           </section>
 
@@ -108,7 +108,7 @@ export default function App() {
               AI Friend
             </h2>
             <p style={{ color: '#555', lineHeight: '1.5' }}>
-              Your personal AI companion for learning assistance and academic support.
+              Your AI friend for learning assistance and academic support.
             </p>
           </section>
         </main>
