@@ -150,7 +150,7 @@ export default function App() {
             textShadow: '0 1px 2px rgba(0,0,0,0.2)',
             position: 'relative'
           }}>
-            Welcome to RoboSathi!
+            Welcome to RoboSathi !
           </h2>
           <p style={{
             fontSize: 'clamp(1rem, 3.5vw, 1.3rem)',
