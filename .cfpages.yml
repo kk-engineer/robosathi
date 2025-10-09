@@ -1,0 +1,15 @@
+# .cfpages.yml
+build:
+  command: hugo --gc --minify
+  directory: public    # <-- This is mandatory
+  deploy:
+    command: echo "Deployed"
+
+environment:
+  HUGO_VERSION: extended_0.151.0
+  HUGO_ENV: production
+  HUGO_ENABLEGITINFO: true
+
+git:
+  submodules: true
+
