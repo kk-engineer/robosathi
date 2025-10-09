@@ -19,14 +19,14 @@ RoboSathi is AI learning platform.
 
 {{% blocks/section %}}
 
-# Kumar Karan
+# Ayushi Kumari
 {.text-center}
 
 {{% /blocks/section %}}
 
 {{% blocks/section %}}
 
-# Ayushi Kumari
+# Kumar Karan
 {.text-center}
 
 {{% /blocks/section %}}
