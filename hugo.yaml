@@ -1,5 +1,5 @@
-baseURL: https://example.docsy.dev
-title: Goldydocs
+baseURL: https://robosathi.com
+title: RoboSathi
 
 # cSpell:ignore goldmark github hugo readingtime docsy subdir lastmod pygments linenos catmullrom norsk gu
 
@@ -46,28 +46,9 @@ imaging:
 languages:
   en:
     languageName: English
-    title: Goldydocs
+    title: RoboSathi
     params:
-      description: A Docsy example site
-  # cSpell:disable
-  'no':
-    languageName: Norsk
-    contentDir: content/no
-    title: Gulldoks
-    params:
-      description: Docsy er operativsystem for skyen
-      time_format_default: 02.01.2006
-      time_format_blog: 02.01.2006
-  fa:
-    languageDirection: rtl
-    languageName: "فارسی (Persian)"
-    contentDir: content/fa
-    title: "اسناد گلدی"
-    params:
-      description: "یک نمونه برای پوسته داکسی"
-      time_format_default: 2006.01.02
-      time_format_blog: 2006.01.02
-  # cSpell:enable
+      description: RoboSathi - AI for Good
 
 markup:
   goldmark:
@@ -145,15 +126,15 @@ params:
   prism_syntax_highlighting: false
 
   copyright:
-    authors: Docsy Authors | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) |
-    from_year: 2018
+    authors: RoboSathi.com | contact@robosathi.com |
+    from_year: 2024
 
   # User interface configuration
   ui:
     # Set to true to disable breadcrumb navigation.
     breadcrumb_disable: false
-    # Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top navbar
-    navbar_logo: true
+    # Set to false if you don't want to display a logo (/assets/icons/logo.png) in the top navbar
+    navbar_logo: false
     # Set to true if you don't want the top navbar to be translucent when over a `block/cover`, like on the homepage.
     navbar_translucent_over_cover_disable: false
     # Enable to show the side bar menu in its compact state.
@@ -182,32 +163,32 @@ params:
   links:
     # End user relevant links. These will show up on left side of footer and in the community page if you have one.
     user:
-      - name: User mailing list
-        url: https://example.org/mail
-        icon: fa fa-envelope
-        desc: Discussion and help from your fellow users
-      - name: Twitter
-        url: https://example.org/twitter
-        icon: fab fa-twitter
-        desc: Follow us on Twitter to get the latest news!
-      - name: Stack Overflow
-        url: https://example.org/stack
-        icon: fab fa-stack-overflow
+      - name: LinkedIn
+        url: https://www.linkedin.com/in/kk-engineer/
+        icon: fab fa-linkedin
         desc: Practical questions and curated answers
-    # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
-    developer:
-      - name: GitHub
-        url: https://github.com/google/docsy
+      - name: Github
+        url: https://github.com/kk-engineer
         icon: fab fa-github
-        desc: Development takes place here!
-      - name: Slack
-        url: https://example.org/slack
-        icon: fab fa-slack
-        desc: Chat with other project developers
-      - name: Developer mailing list
-        url: https://example.org/mail
-        icon: fa fa-envelope
-        desc: Discuss development issues around the project
+        desc: Checkout Code!
+      - name: X.com
+        url: https://x.com/who_kkaran
+        icon: fab fa-x-twitter
+        desc: Follow us on X.com to get the latest news!
+    # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
+#    developer:
+#      - name: GitHub
+#        url: https://github.com/google/docsy
+#        icon: fab fa-github
+#        desc: Development takes place here!
+#      - name: Slack
+#        url: https://example.org/slack
+#        icon: fab fa-slack
+#        desc: Chat with other project developers
+#      - name: Developer mailing list
+#        url: https://example.org/mail
+#        icon: fa fa-envelope
+#        desc: Discuss development issues around the project
 
 module:
   # Uncomment the next line to build and serve using local docsy clone declared in the named Hugo workspace:

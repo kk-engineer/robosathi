@@ -57,26 +57,7 @@ anchor = "smart"
 languageName ="English"
 title = "Goldydocs"
 [languages.en.params]
-description = "A Docsy example site"
-
-[languages.no]
-languageName ="Norsk"
-contentDir = "content/no"
-title = "Gulldoks"
-[languages.no.params]
-description = "Docsy er operativsystem for skyen"
-time_format_default = "02.01.2006"
-time_format_blog = "02.01.2006"
-
-[languages.fa]
-languageDirection = "rtl"
-languageName ="فارسی"
-contentDir = "content/fa"
-title = "اسناد گلدی"
-[languages.fa.params]
-description = "یک نمونه برای پوسته داکسی"
-time_format_default = "2006.01.02"
-time_format_blog = "2006.01.02"
+description = "RoboSathi - AI for Good"
 
 [markup]
   [markup.goldmark]
@@ -142,14 +123,14 @@ offlineSearch = false
 prism_syntax_highlighting = false
 
 [params.copyright]
-  authors = "Docsy Authors | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) | "
-  from_year = 2018
+  authors = "RoboSathi.com | contact@robosathi.com | "
+  from_year = 2025
 
 # User interface configuration
 [params.ui]
 #  Set to true to disable breadcrumb navigation.
 breadcrumb_disable = false
-# Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top navbar
+# Set to false if you don't want to display a logo (/assets/icons/logo.png) in the top navbar
 navbar_logo = true
 # Set to true if you don't want the top navbar to be translucent when over a `block/cover`, like on the homepage.
 navbar_translucent_over_cover_disable = false
@@ -177,20 +158,20 @@ enable = false
 [params.links]
 # End user relevant links. These will show up on left side of footer and in the community page if you have one.
 [[params.links.user]]
-  name = "User mailing list"
-  url = "https://example.org/mail"
+  name = "Email"
+  url = "contact@robosathi.com"
   icon = "fa fa-envelope"
-  desc = "Discussion and help from your fellow users"
+  desc = "Need help, reach out!"
 [[params.links.user]]
-  name ="Twitter"
-  url = "https://example.org/twitter"
-  icon = "fab fa-twitter"
-  desc = "Follow us on Twitter to get the latest news!"
+  name ="X"
+  url = "https://x.com/who_kkaran"
+  icon = "fab fa-x-twitter"
+  desc = "Follow us on X.com"
 [[params.links.user]]
-  name = "Stack Overflow"
-  url = "https://example.org/stack"
-  icon = "fab fa-stack-overflow"
-  desc = "Practical questions and curated answers"
+  name = "LinkedIn"
+  url = "https://www.linkedin.com/in/kk-engineer/"
+  icon = "fab fa-linkedin"
+  desc = "Follow us on LinkedIn"
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
   name = "GitHub"
