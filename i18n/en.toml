@@ -1,0 +1,20 @@
+
+
+
+# Community
+[community_join]
+other = "Join the {{ .Site.Title }} community"
+[community_introduce]
+other = "{{ .Site.Title }} is your AI learning companion"
+[community_learn]
+other = "Learn and Connect"
+[community_using]
+other = "Using or want to use {{ .Site.Title }}? Find out more here:"
+[community_develop]
+other = "For updates"
+[community_contribute]
+other = "For latest educational videos subscribe to {{ .Site.Title }}, Youtube channel."
+[community_how_to]
+other = "{{ .Site.Title }} Youtube Channel"
+[community_guideline]
+other = "Watch"

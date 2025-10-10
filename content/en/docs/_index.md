@@ -1,28 +1,81 @@
 ---
-title: Documentation
-linkTitle: Course
+title: Course
+description: AI & ML Course Overview
+weight: 1
 menu: {main: {weight: 20}}
 ---
 
 {{% pageinfo %}}
-This is a placeholder page that shows you how to use this template site.
+
+What to expect from this AI & ML course?
+
 {{% /pageinfo %}}
 
-This section is where the user documentation for your project lives - all the
-information your users need to understand and successfully use your project.
+###  Maths for AI & ML
+[This sheet](https://docs.google.com/spreadsheets/d/1NUv9DrXJcFZs0SGHiLo8GSyCP58nR2_1lD1YDGzwC1A/edit?gid=0#gid=0) contains all the topics that will be covered for Maths for AI & ML.
 
-For large documentation sets we recommend adding content under the headings in
-this section, though if some or all of them don’t apply to your project feel
-free to remove them or add your own. You can see an example of a smaller Docsy
-documentation site in the [Docsy User Guide](https://docsy.dev/docs/), which
-lives in the [Docsy theme
-repo](https://github.com/google/docsy/tree/master/userguide) if you'd like to
-copy its docs section.
+Below is the list of topics that will be covered in this course.
+-  Probability
+-  Statistics
+-  Linear Algebra
+-  Calculus
+-  Co-Ordinate Geometry (used everywhere for visualizing graphs of line, curve, plane, etc.)
 
-Other content such as marketing material, case studies, and community updates
-should live in the [About](/about/) and [Community](/community/) pages.
+{{< alert color="success" >}}We will understand each topic from pure AI & ML perspective.{{< /alert >}}
 
-Find out how to use the Docsy theme in the [Docsy User
-Guide](https://docsy.dev/docs/). You can learn more about how to organize your
-documentation (and how we organized this site) in [Organizing Your
-Content](https://docsy.dev/docs/best-practices/organizing-content/).
+{{< alert color="warning" >}}We will NOT go into much of theoretical proof of everything. <br> However, we will dive deep as and when required.{{< /alert >}}
+
+### Classical Machine Learning
+
+#### Supervised Learning
+-  Linear Regression
+-  Logistic Regression
+-  K Nearest Neighbours
+-  Decision Trees
+-  Support Vector Machines
+
+#### Unsupervised Learning
+-  K Means Clustering
+-  Hierarchical Clustering
+-  DBSCAN
+-  Gaussian Mixture Modeling
+-  Anomaly Detection
+-  t-SNE
+-  UMAP
+
+### Recommendation Systems
+-  Content Based Filtering
+-  Collaborative Filtering 
+    - Matrix Factorization
+    - Non-Negative Matrix Factorization
+    - Alternating Least Squares
+    - Netflix Prize
+-  Market Basket Analysis
+    -  Apriori Algorithm
+    -  Association Rule Mining
+
+### Time Series Analysis
+- Auto Correlation Function
+- Auto Regressive Modeling
+- Moving Average
+- ARIMA
+- SARIMA 
+- SARIMAX
+
+### Deep Learning
+-  Neural Networks
+-  Computer Vision
+    -  Convolutional Neural Networks
+    -  Recurrent Neural Networks
+    -  Generative Adversarial Networks
+-  Natural Language Processing
+    -  Text Representation
+    -  Language Modeling
+    -  Word Embeddings
+    -  Recurrent Neural Networks
+    -  Long Short Term Memory Networks
+    -  Attention Mechanism
+    -  Self Attention
+    -  Transformers
+    -  BERT
+    -  GPT-2

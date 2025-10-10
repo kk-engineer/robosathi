@@ -1,0 +1,35 @@
+---
+title: Calculus
+description: Calculus for AI & ML
+categories: [Integration, Differentiation, Loss Function, Optimisation, Gradient Descent]
+tags: [Integration, Derivative, Maths]
+weight: 4
+---
+
+{{% pageinfo %}}
+
+In this section, we will cover the topics related to Calculus for AI & ML.
+
+{{% /pageinfo %}}
+
+###  Maths for AI & ML
+[This sheet](https://docs.google.com/spreadsheets/d/1NUv9DrXJcFZs0SGHiLo8GSyCP58nR2_1lD1YDGzwC1A/edit?gid=801046905#gid=801046905) contains all the topics that will be covered for Maths for AI & ML.
+
+Below is the list of topics that will be covered in this section.
+-  Probability
+- Integration
+- Differentiation
+- Rules of Derivatives
+- Limit
+- Continuity
+- Maxima and Minima
+- Saddle Point
+- Loss Function
+- Convexity
+- Optimization
+- Gradient Descent
+- Newton's Method
+
+{{< alert color="success" >}}We will understand each topic from pure AI & ML perspective.{{< /alert >}}
+
+{{< alert color="warning" >}}We will NOT go into much of theoretical proof of everything. <br> However, we will dive deep as and when required.{{< /alert >}}
