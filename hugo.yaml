@@ -81,7 +81,7 @@ params:
     # set taxonomyPageHeader = [] to hide taxonomies on the page headers
     taxonomyPageHeader: [tags, categories]
 
-  privacy_policy: https://policies.google.com/privacy
+  #privacy_policy: https://policies.google.com/privacy
 
   # First one is picked as the Twitter card image if not set on page.
   # images: [images/project-illustration.png]
@@ -127,8 +127,8 @@ params:
   prism_syntax_highlighting: false
 
   copyright:
-    authors: RoboSathi.com | contact@robosathi.com |
-    from_year: 2024
+    authors: RoboSathi.com | contact@robosathi.com
+    #from_year: 2024
 
   # User interface configuration
   ui:
