@@ -9,15 +9,13 @@ title: RoboSathi
 <a class="btn btn-lg btn-secondary me-3 mb-4" href="https://www.youtube.com/@RoboSathi">
   Videos <i class="fab fa-youtube "></i>
 </a>
-<p class="lead mt-5">Hi, Karan here - Engineer and Educator |
-Deep Learning @ IISc | 
-Remote Instructor @ Scaler.</p>
+<p class="lead mt-5">Our Mission: Demystifying AI | Empowering Everyone</p>
 {{< blocks/link-down color="info" >}}
 {{< /blocks/cover >}}
 
 
 {{% blocks/lead color="primary" %}}
-**Our Mission:** Demystifying AI | Empowering Everyone.
+What's New !
 {{% /blocks/lead %}}
 
 <!-- KK Commenting this section for now
@@ -37,16 +35,12 @@ We do a [Pull Request](https://github.com/google/docsy-example/pulls) contributi
 
 
 {{% /blocks/section %}}
-This section commented End !-->
-
 
 {{% blocks/section %}}
-New Announcements !
+What's New!
 {.h1 .text-center}
 {{% /blocks/section %}}
 
-
-<!-- KK Commenting this section for now
 {{% blocks/section type="row" %}}
 
 {{% blocks/feature icon="fab fa-linkedin" title="LinkedIn"

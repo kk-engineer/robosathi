@@ -4,7 +4,7 @@ linkTitle: About
 menu: {main: {weight: 10}}
 ---
 
-{{% blocks/cover title="About RoboSathi" image_anchor="bottom" height="auto" %}}
+{{% blocks/cover title="Who we are ?" image_anchor="bottom" height="auto" %}}
 
 AI for Good !
 {.mt-5}
@@ -17,6 +17,7 @@ RoboSathi is AI learning platform.
 
 {{% /blocks/lead %}}
 
+<!-- KK Commenting this section for now
 {{% blocks/section %}}
 
 # Ayushi Kumari
@@ -30,3 +31,4 @@ RoboSathi is AI learning platform.
 {.text-center}
 
 {{% /blocks/section %}}
+This section commented End !-->

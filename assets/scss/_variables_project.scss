@@ -4,3 +4,28 @@ Add styles or override variables from the theme here.
 
 */
 
+// Dark jet black background for cover blocks
+.td-cover-block {
+  background-color: #0a0a0a !important;
+}
+
+// Meta blue color for navigation text
+$meta-blue: #0668E1;
+
+//// Override navbar link colors
+//.td-navbar {
+//  .nav-link {
+//    color: $meta-blue !important;
+//
+//    &:hover,
+//    &:focus {
+//      color: darken($meta-blue, 15%) !important;
+//    }
+//  }
+//}
+//
+//// RoboSathi brand name in meta blue
+//.navbar-brand {
+//  color: $meta-blue !important;
+//}
+
