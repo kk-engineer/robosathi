@@ -269,6 +269,14 @@ $$
 a^2+b^2=c^2
 $$
 
+##### Probability Katex
+
+\(P(\emptyset) = 0\) <br>
+\(P(\Omega \cap \emptyset) = 0\) <br>
+\(P(\Omega \cup \emptyset) = 1\) <br>
+\(P(\Omega \setminus \emptyset) = 1\) <br>
+\(P(\Omega \cap A) = P(A)\)
+
 
 ### Alert with Color
 {{< alert >}} {{% color "green" %}} Alert with green text {{% /color %}}{{< /alert >}}

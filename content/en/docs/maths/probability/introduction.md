@@ -44,7 +44,9 @@ For example:<br>
 3. Choose a real number \(x\) from the interval \([2,3]\), sample space: \(\Omega = [2,3]\); sample size = \(\infin\)<br>
 *Note: There can be infinitely many points between 2 and 3, e.g: 2.21, 2.211, 2.2111, 2.21111, ...*
 4. Randomly put a point in a rectangular region; sample size = \(\infin\)<br>
-*Note: There can be infinitely many points in any rectangular region.* <br><br>
+*Note: There can be infinitely many points in any rectangular region.* <br>
+
+\(P(\Omega) = 1\) <br><br>
 
 {{< definition >}} 
 **Event:**<br> An outcome of an experiment. A subset of all possible outcomes. <br>
@@ -93,11 +95,76 @@ graph TD
 
 For example:<br>
 1. Roll a die, sample space: \(\Omega = \{1,2,3,4,5,6\}\) <br> Odd outcome = \(A = \{1,3,5\}\) <br> 
-    Even outcome = \(B = \{2,4,6\}\) are mutually exclusive.<br>
-    \(P(A \cap B) = 0\) <br> <br>
+    Even outcome = \(B = \{2,4,6\}\) are mutually exclusive.<br><br>
+    \(P(A \cap B) = 0\) <br>
+    Since, \(P(A \cup B) = P(A) + P(B) - (P(A \cap B)\) <br>
+    Therefore, \(P(A \cup B) = P(A) + P(B)\) <br>
+    
 
+*Note: If we know that event \(A\) has occurred, then we can say for sure that the event \(B\) did NOT occur.* <br><br>
 
-``` 
-End of Introduction 
-```
+{{< definition >}} 
+**Independent Events:**<br> Two events are independent if the occurrence of one event does NOT impact 
+the outcome of the other event.
+{{</ definition >}}
+
+For example:<br>
+1. Roll a die twice , sample space: \(\Omega = \{1,2,3,4,5,6\}\) <br>
+    Odd number in 1st throw = \(A = \{1,3,5\}\) <br> 
+    Odd number in 2nd throw = \(B = \{1,3,5\}\) <br>
+    *Note: A and B are independent because whether we get an odd number in 1st roll has NO impact of getting
+    an odd number in second roll.* <br><br>
+    \(P(A \cap B) = P(A)*P(B)\) <br> 
+
+*Note: If we know that event \(A\) has occurred, then that gives us NO new information about the event \(B\).* <br><br>
+
+{{< question >}}
+Does \(P=0\) mean that the event is *impossible* or *improbable* ?
+{{</question >}}
+
+{{< answer >}} 
+No, it means that the event is *highly unlikely* to occur. 
+{{</ answer >}}
+
+{{< alert >}} 
+Lets understand this answer with an example..
+{{< /alert >}}
+
+{{< question >}}
+What is the probability of choosing a real number, say 2.5, from the interval \([2,3]\) ?
+{{</question >}}
+
+{{< answer >}} 
+Probability of choosing exactly one point on the number line or a real number, say 2.5, <br>
+from the interval \([2,3]\) is almost = 0, because there are infinitely many points between 2 and 3.<br><br>
+Also, we can NOT say that choosing exactly 2.5 is impossible, because it exists there on the number line.<br>
+But, for all practical purposes, \(P(2.5) = 0\). <br><br>
+
+*Therefore, we say that \(P=0\) means "Highly Unlikely" and NOT "Impossible".*<br><br>
+
+Extending this line of reasoning, we can say that probability of NOT choosing 2.5, \(P(!2.5) = 1\). <br>
+Theoretically yes, because there are infinitely many points between 2 and 3. <br>
+But, we cannot say for sure that we cannot choose 2.5 exactly.<br>
+There is some probability of choosing 2.5, but it is very small. <br><br>
+
+*Therefore, we say that \(P=1\) means "Almost Sure" and NOT "Certain".*
+{{</ answer >}}
+
+{{< alert >}} 
+Now, lets also see another example where \(P=0\) means *Impossible* and \(P=1\) means *Certain*.
+{{< /alert >}}
+
+{{< question >}}
+What is the probability of getting a **7** when we roll a **6** faced die ?
+{{</question >}}
+
+{{< answer >}} 
+Here, in this case we can say that \(P(7)=0\) and that means *Impossible*.<br>
+
+Similarly, we can say that \(P(get ~any ~number ~between ~1 ~and ~6)=1\) and \(P=1 => \) *Certain*. <br>
+{{< /answer >}} 
+
+<br>
+
+```End of Introduction```
 
