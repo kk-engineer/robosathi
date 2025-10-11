@@ -11,7 +11,6 @@ We are on a mission to demystify AI and make cutting-edge technology easy to und
 Whether you're a student, educator, or working professional, our goal is to empower you with the skills and confidence to thrive in <br> 
 the AI-powered future.
 {.mt-5}
-
 {{% /blocks/cover %}}
 
 {{% blocks/lead %}}

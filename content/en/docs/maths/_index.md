@@ -8,7 +8,8 @@ weight: 1
 
 {{% pageinfo %}}
 
-What to expect from this Maths for AI & ML module?
+In this section, we will cover the topics related to Maths for AI & ML. <br>
+[Maths Videos Playlist](https://youtube.com/playlist?list=PLnpa6KP2ZQxePOg6k6vAkcg5Y50EAZds9&si=XDmdD6sKzhHAnRWc)
 
 {{% /pageinfo %}}
 
@@ -21,3 +22,9 @@ Below is the list of topics that will be covered in this module.
 -  Linear Algebra
 -  Calculus
 -  Co-Ordinate Geometry (used everywhere for visualizing graphs of line, curve, plane, etc.)
+
+
+
+```aiignore
+End
+```

@@ -8,7 +8,8 @@ weight: 1
 
 {{% pageinfo %}}
 
-In this section, we will cover the topics related to Probability for AI & ML.
+In this section, we will cover the topics related to Probability for AI & ML.<br>
+[Probability Videos Playlist](https://youtube.com/playlist?list=PLnpa6KP2ZQxcI3JyTIwOTKXY7ANhw__v1&si=MNoo5fxBo_10dLuM)
 
 {{% /pageinfo %}}
 

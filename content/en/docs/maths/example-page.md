@@ -235,6 +235,43 @@ Plaid hell of cred microdosing, succulents tilde pour-over. Offal shabby chic 3 
 Stumptown PBR&B keytar plaid street art, forage XOXO pitchfork selvage affogato green juice listicle pickled everyday carry hashtag. Organic sustainable letterpress sartorial scenester intelligentsia swag bushwick. Put a bird on it stumptown neutra locavore. IPhone typewriter messenger bag narwhal. Ennui cold-pressed seitan flannel keytar, single-origin coffee adaptogen occupy yuccie williamsburg chillwave shoreditch forage waistcoat.
 
 
+### Katex
+
+For example, toss a coin, \(P(H) = P(T) = 1/2\).
+
+When \(a != 0\), there are two solutions to \(ax^2 + bx + c= 0\) and they are \(x = {-b \pm \sqrt{b^2-4ac} \over 2a}\).
+
+The probability of getting \(k\) heads when flipping \(n\) coins is:
+\[
+\tag*{(1)} P(E) = {n \choose k} p^k (1-p)^{n-k}
+\]
+
+The probability of getting \(k\) heads when flipping \(n\) coins is:
+
+```math
+\tag*{(1)} P(E) = {n \choose k} p^k (1-p)^{n-k}
+```
+
+
+This math is inline: \(a^2+b^2=c^2\).
+
+This math is on a separate line using a ` ```math ` block:
+
+```math
+a^2+b^2=c^2
+```
+
+This math is on a separate line using inline `$$`: $$a^2+b^2=c^2$$
+
+This math is on a separate line using a `$$...$$` block:
+
+$$
+a^2+b^2=c^2
+$$
+
+
+### Alert with Color
+{{< alert >}} {{% color "green" %}} Alert with green text {{% /color %}}{{< /alert >}}
 
 ```
 This is the final element on the page and there should be no margin below this.
