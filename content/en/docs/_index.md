@@ -29,14 +29,14 @@ so that you can read and understand the latest AI & ML research papers.{{< /aler
 
 ### {{% color "#0668E1" %}} **Classical Machine Learning** {{% /color %}}
 
-#### {{% color "#A2AAAD" %}} Supervised Learning {{% /color %}}
+#### {{% color "#1F80FF" %}} Supervised Learning {{% /color %}}
 -  Linear Regression
 -  Logistic Regression
 -  K Nearest Neighbours
 -  Decision Trees
 -  Support Vector Machines
 
-#### {{% color "#A2AAAD" %}} Unsupervised Learning {{% /color %}}
+#### {{% color "#1F80FF" %}} Unsupervised Learning {{% /color %}}
 -  K Means Clustering
 -  Hierarchical Clustering
 -  DBSCAN

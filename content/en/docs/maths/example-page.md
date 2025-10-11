@@ -273,6 +273,25 @@ $$
 ### Alert with Color
 {{< alert >}} {{% color "green" %}} Alert with green text {{% /color %}}{{< /alert >}}
 
+
+### Question
+{{< question >}}
+What are the steps for creating a shortcode?
+{{< /question >}}
+
+### Answer
+{{< answer >}}
+1. Create a new file in the `layouts/shortcodes` directory.
+2. Add the following content to the file:
+3. Add the following content to the file:
+{{< /answer >}}
+
+### Definition
+{{< definition >}}
+A model is a mathematical representation of a process or system used for prediction or analysis.
+{{< /definition >}}
+
+
 ```
 This is the final element on the page and there should be no margin below this.
 ```
