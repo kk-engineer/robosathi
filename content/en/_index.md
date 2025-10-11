@@ -2,7 +2,9 @@
 title: RoboSathi
 ---
 
-{{< blocks/cover title="RoboSathi - AI for Good!" image_anchor="top" height="full" >}}
+{{< blocks/cover title="RoboSathi" image_anchor="top" height="full" >}}
+<h1 <class="display-3 fw-bold">"AI for Good!"</h1>
+<br>
 <a class="btn btn-lg btn-primary me-3 mb-4" href="/docs/">
   Course <i class="fas fa-arrow-alt-circle-right ms-2"></i>
 </a>
