@@ -87,13 +87,17 @@ graph TD
 <br>
 
 {{< definition >}} 
-**Mutually Exclusive (Disjoint) Event:**<br> Two or more events that cannot happen at the same time. 
+**Mutually Exclusive (Disjoint) Events:**<br> Two or more events that cannot happen at the same time. 
 <br>No overlapping or common outcomes. <br>If one event occurs, then the other event does NOT occur.
 {{</ definition >}}
 
 For example:<br>
 1. Roll a die, sample space: \(\Omega = \{1,2,3,4,5,6\}\) <br> Odd outcome = \(A = \{1,3,5\}\) <br> 
     Even outcome = \(B = \{2,4,6\}\) are mutually exclusive.<br>
-    \(P(A \cap B) = 0\)
+    \(P(A \cap B) = 0\) <br> <br>
 
+
+``` 
+End of Introduction 
+```
 
