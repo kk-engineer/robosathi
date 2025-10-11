@@ -17,7 +17,32 @@ title: RoboSathi
 
 
 {{% blocks/lead color="primary" %}}
-What's New !
+
+<h3 class="text-center mb-4">Latest Video</h3>
+<div class="row justify-content-center mb-5">
+  <div class="col-lg-8">
+    {{< youtube CWnh1E8F-XU>}}
+  </div>
+</div>
+
+<h3 class="text-center mb-4">Watch More</h3>
+<div class="row">
+  <div class="col-md-4 mb-4">
+    {{< youtube MEgtD7x-RyY>}}
+  </div>
+  <div class="col-md-4 mb-4">
+    {{< youtube cBY4eshEo70>}}
+  </div>
+  <div class="col-md-4 mb-4">
+    {{< youtube Dsz7WcGcnxc>}}
+  </div>
+</div>
+
+<div class="text-center mt-4">
+  <a class="btn btn-lg btn-danger" href="https://www.youtube.com/@RoboSathi" target="_blank">
+    <i class="fab fa-youtube"></i> Subscribe for More
+  </a>
+</div>
 {{% /blocks/lead %}}
 
 <!-- KK Commenting this section for now
