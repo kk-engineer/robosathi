@@ -1,8 +1,8 @@
 ---
 title: Probability
 description: Probability for AI & ML
-categories: [Probability, Bayes' Theorem, CDF, PDF, PMF]
-tags: [Discrete, Continuous, Maths]
+#categories: [Probability, Bayes' Theorem, CDF, PDF, PMF]
+#tags: [Discrete, Continuous, Maths]
 weight: 1
 ---
 

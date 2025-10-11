@@ -1,8 +1,8 @@
 ---
 title: Linear Algebra
 description: Linear Algebra for AI & ML
-categories: [Vector, Matrix, Eigenvalue, EigenVector, EVD, SVD, PCA, Norms]
-tags: [Eigen, PCA, Maths]
+#categories: [Vector, Matrix, Eigenvalue, EigenVector, EVD, SVD, PCA, Norms]
+#tags: [Eigen, PCA, Maths]
 weight: 3
 ---
 

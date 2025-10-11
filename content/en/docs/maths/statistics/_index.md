@@ -1,8 +1,8 @@
 ---
 title: Statistics
 description: Statistics for AI & ML
-categories: [Data Distribution, Hypothesis Testing, Performance Metrics]
-tags: [CLT, CI, EDA, Maths]
+#categories: [Data Distribution, Hypothesis Testing, Performance Metrics]
+#tags: [CLT, CI, EDA, Maths]
 weight: 2
 ---
 

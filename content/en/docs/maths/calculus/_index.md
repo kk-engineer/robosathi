@@ -1,8 +1,8 @@
 ---
 title: Calculus
 description: Calculus for AI & ML
-categories: [Integration, Differentiation, Loss Function, Optimisation, Gradient Descent]
-tags: [Integration, Derivative, Maths]
+#categories: [Integration, Differentiation, Loss Function, Optimisation, Gradient Descent]
+#tags: [Integration, Derivative, Maths]
 weight: 4
 ---
 

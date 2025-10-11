@@ -1,8 +1,8 @@
 ---
 title: Maths
 description: Mathematics for AI & ML
-categories: [Probability, Statistics, Linear Algebra, Calculus]
-tags: [ML, Maths]
+#categories: [Probability, Statistics, Linear Algebra, Calculus]
+#tags: [ML, Maths]
 weight: 1
 ---
 

@@ -11,7 +11,9 @@ What to expect from this AI & ML course?
 
 {{% /pageinfo %}}
 
-###  Maths for AI & ML
+###  {{% color "#0668E1" %}}
+**Maths for AI & ML**
+{{% /color %}}
 [This sheet](https://docs.google.com/spreadsheets/d/1NUv9DrXJcFZs0SGHiLo8GSyCP58nR2_1lD1YDGzwC1A/edit?gid=0#gid=0) contains all the topics that will be covered for Maths for AI & ML.
 
 Below is the list of topics that will be covered in this course.
@@ -25,7 +27,9 @@ Below is the list of topics that will be covered in this course.
 
 {{< alert color="warning" >}}We will NOT go into much of theoretical proof of everything. <br> However, we will dive deep as and when required.{{< /alert >}}
 
-### Classical Machine Learning
+### {{% color "#0668E1" %}}
+**Classical Machine Learning**
+{{% /color %}}
 
 #### Supervised Learning
 -  Linear Regression
@@ -43,7 +47,9 @@ Below is the list of topics that will be covered in this course.
 -  t-SNE
 -  UMAP
 
-### Recommendation Systems
+### {{% color "#0668E1" %}}
+**Recommendation Systems**
+{{% /color %}}
 -  Content Based Filtering
 -  Collaborative Filtering 
     - Matrix Factorization
@@ -54,7 +60,9 @@ Below is the list of topics that will be covered in this course.
     -  Apriori Algorithm
     -  Association Rule Mining
 
-### Time Series Analysis
+### {{% color "#0668E1" %}}
+**Time Series Analysis**
+{{% /color %}}
 - Auto Correlation Function
 - Auto Regressive Modeling
 - Moving Average
@@ -62,7 +70,7 @@ Below is the list of topics that will be covered in this course.
 - SARIMA 
 - SARIMAX
 
-### Deep Learning
+### {{% color "#0668E1" %}}**Deep Learning**{{% /color %}}
 -  Neural Networks
 -  Computer Vision
     -  Convolutional Neural Networks
