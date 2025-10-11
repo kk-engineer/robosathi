@@ -6,9 +6,7 @@ menu: {main: {weight: 20}}
 ---
 
 {{% pageinfo %}}
-
-What to expect from this AI & ML course?
-
+This section contains the course outline.
 {{% /pageinfo %}}
 
 ###  {{% color "#0668E1" %}}
@@ -23,22 +21,22 @@ Below is the list of topics that will be covered in this course.
 -  Calculus
 -  Co-Ordinate Geometry (used everywhere for visualizing graphs of line, curve, plane, etc.)
 
-{{< alert color="success" >}}We will understand each topic from pure AI & ML perspective.{{< /alert >}}
+{{< alert color="success" >}}We will understand each mathematical topic from purely an AI & ML perspective.{{< /alert >}}
 
-{{< alert color="warning" >}}We will NOT go into much of theoretical proof of everything. <br> However, we will dive deep as and when required.{{< /alert >}}
+{{< alert color="warning" >}}We will NOT go into much of theoretical proof of everything. <br> 
+However, we will cover everything in enough depth, <br> 
+so that you can read and understand the latest AI & ML research papers.{{< /alert >}}
 
-### {{% color "#0668E1" %}}
-**Classical Machine Learning**
-{{% /color %}}
+### {{% color "#0668E1" %}} **Classical Machine Learning** {{% /color %}}
 
-#### Supervised Learning
+#### {{% color "#A2AAAD" %}} Supervised Learning {{% /color %}}
 -  Linear Regression
 -  Logistic Regression
 -  K Nearest Neighbours
 -  Decision Trees
 -  Support Vector Machines
 
-#### Unsupervised Learning
+#### {{% color "#A2AAAD" %}} Unsupervised Learning {{% /color %}}
 -  K Means Clustering
 -  Hierarchical Clustering
 -  DBSCAN

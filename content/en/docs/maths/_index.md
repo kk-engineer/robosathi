@@ -21,7 +21,3 @@ Below is the list of topics that will be covered in this module.
 -  Linear Algebra
 -  Calculus
 -  Co-Ordinate Geometry (used everywhere for visualizing graphs of line, curve, plane, etc.)
-
-{{< alert color="success" >}}We will understand each topic from pure AI & ML perspective.{{< /alert >}}
-
-{{< alert color="warning" >}}We will NOT go into much of theoretical proof of everything. <br> However, we will dive deep as and when required.{{< /alert >}}

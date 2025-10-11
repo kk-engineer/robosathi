@@ -1,33 +1,34 @@
 ---
-title: About Goldydocs
+title: About
 linkTitle: About
 menu: {main: {weight: 10}}
 ---
 
-{{% blocks/cover title="Who we are ?" image_anchor="bottom" height="auto" %}}
+{{% blocks/cover title="About RoboSathi" image_anchor="bottom" height="auto" %}}
 
-AI for Good !
+At Robosathi, we believe that AI and Machine Learning shouldn't be reserved for the few — they should be accessible to everyone. <br>
+We are on a mission to demystify AI and make cutting-edge technology easy to understand, practical to learn, and exciting to explore. <br>
+Whether you're a student, educator, or working professional, our goal is to empower you with the skills and confidence to thrive in <br> 
+the AI-powered future.
 {.mt-5}
 
 {{% /blocks/cover %}}
 
 {{% blocks/lead %}}
 
-RoboSathi is AI learning platform.
+RoboSathi is an AI & ML learning platform.
 
 {{% /blocks/lead %}}
 
 <!-- KK Commenting this section for now
 {{% blocks/section %}}
 
-# Ayushi Kumari
 {.text-center}
-
+# Todo
 {{% /blocks/section %}}
 
 {{% blocks/section %}}
-
-# Kumar Karan
+# Todo
 {.text-center}
 
 {{% /blocks/section %}}
