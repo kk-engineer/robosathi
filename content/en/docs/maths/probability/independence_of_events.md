@@ -83,7 +83,7 @@ Desired outcomes = \(\{HHH, TTT\}\) = 2 <br>
 So, \(P(A \cap B \cap C)\) = 2/8 = 1/4 <br>
 But, \(P(A)*P(B)*P(C) = 1/2*1/2*1/2 = 1/8\) <br>
 Therefore \(P(A \cap B \cap C)\) != \(P(A)*P(B)*P(C)\) <br>
-=> \(A, B, C\) are **NOT** mutually independent but only pair wise independent. <br>
+=> \(A, B, C\) are **NOT** mutually independent but only **pair wise independent**. <br>
 <br>
 
 {{< definition >}}
@@ -118,7 +118,7 @@ P(A \cap B \mid C) &= \frac{P(A \cap B \cap C)}{P(C)} = 1/20 \\
 \end{aligned}
 $$
 
-_Therefore, A & B are conditionally independent given C._
+_Therefore, A & B are **conditionally independent** given C._
 <br>
 
 {{< video "https://youtu.be/Rhvj1e1Q84Q" >}}
