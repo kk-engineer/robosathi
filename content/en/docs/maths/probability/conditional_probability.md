@@ -123,5 +123,8 @@ P(A_i \mid B) = \frac{P(A_i)*P(B \mid A_i)}{\sum_{j=1}^{n} P(A_j)*P(B \mid A_j)}
 $$
 {{< /alert >}}
 
+{{< video "https://youtu.be/CWnh1E8F-XU?si=7vp-yW89Cxw64P7S" >}}
+<br>
+
 ```End of Section```
     

@@ -2,7 +2,7 @@
 title: Probability Distribution
 description: Probability Distribution of Random Variables
 date: 2025-10-12
-weight: 3
+weight: 5
 ---
 
 {{% pageinfo %}}
