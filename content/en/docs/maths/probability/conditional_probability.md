@@ -1,8 +1,8 @@
 ---
-title: Probability Distribution
-description: Probability Distribution of a Random Variable
-date: 2025-10-11
-weight: 4
+title: Conditional Probability
+description: Conditional Probability & Bayes Theorem
+date: 2025-10-12
+weight: 3
 ---
 
 {{% pageinfo %}}

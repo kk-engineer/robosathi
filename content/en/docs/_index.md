@@ -9,6 +9,8 @@ menu: {main: {weight: 20}}
 This section contains the course outline.
 {{% /pageinfo %}}
 
+{{< alert color="warning" >}}*Note: Currently only Maths for AI & ML module content is available.*{{< /alert >}}
+
 ###  {{% color "#0668E1" %}}
 **Maths for AI & ML**
 {{% /color %}}
@@ -20,6 +22,8 @@ Below is the list of topics that will be covered in this course.
 -  Linear Algebra
 -  Calculus
 -  Co-Ordinate Geometry (used everywhere for visualizing graphs of line, curve, plane, etc.)
+
+{{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxePOg6k6vAkcg5Y50EAZds9&si=e2j6VPYw_3ptzXM_" >}}
 
 {{< alert color="success" >}}We will understand each mathematical topic from purely an AI & ML perspective.{{< /alert >}}
 

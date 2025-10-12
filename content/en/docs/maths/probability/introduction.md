@@ -8,10 +8,10 @@ math: true
 {{% pageinfo %}}
 
 This section will introduce you to basic terminologies and definitions used in probability for AI & ML.<br>
-[Probability Videos Playlist](https://youtube.com/playlist?list=PLnpa6KP2ZQxcI3JyTIwOTKXY7ANhw__v1&si=MNoo5fxBo_10dLuM)
-
 {{% /pageinfo %}}
 
+{{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxcI3JyTIwOTKXY7ANhw__v1&si=cwNInuB2qLy7gTEi" >}}
+<br>
 
 {{< question >}}
 Why do we need to understand what is **Probability** ?
@@ -22,7 +22,7 @@ Because the world around us is very uncertain, and **Probability** acts as - <br
 to *understand*, *express* and *deal* with this *uncertainty*. 
 {{</ answer >}}
 
-For example:<br>
+For example:
 1. Toss a fair coin, \(P(H) = P(T) = 1/2\) <br>
 2. Roll a die, \(P(1) = P(2) = P(3) = P(4) = P(5) = P(6) = 1/6\) <br>
 3. Email classifier, \(P(spam) = 0.95 ,~ P(not ~ spam) = 0.05\) <br><br>
@@ -34,11 +34,14 @@ Range: \([0,1]\) <br>
 \(P=0\): Highly unlikely <br>
 \(P=1\): Almost certain <br> <br>
 
+{{< video "https://youtu.be/3Q0FJzKOXgo?si=hp6Qhi7tPO5mqGYG" >}}
+<br>
+
 {{< definition >}} 
 **Sample Space:**<br> Set of all possible outcomes of an experiment. <br>
 Symbol: \(\Omega\)
 {{</ definition >}}
-For example:<br>
+For example:
 1. Toss a fair coin, sample space: \(\Omega = \{H,T\}\) <br>
 2. Roll a die, sample space: \(\Omega = \{1,2,3,4,5,6\}\) <br>
 3. Choose a real number \(x\) from the interval \([2,3]\), sample space: \(\Omega = [2,3]\); sample size = \(\infin\)<br>
@@ -52,7 +55,7 @@ For example:<br>
 **Event:**<br> An outcome of an experiment. A subset of all possible outcomes. <br>
 A,B,...⊆Ω
 {{</ definition >}}
-For example:<br>
+For example:
 1. Toss a fair coin, set of possible outcomes: \(\{H,T\}\) <br>
 2. Roll a die, set of possible outcomes: \(\{1,2,3,4,5,6\}\) <br>
 3. Roll a die, event \(A = \{1,2\} => P(A) = 2/6 = 1/3\) 
@@ -63,7 +66,7 @@ For example:<br>
 **Discrete:**<br> Number of potential outcomes from an experiment is countable, distinct, or can be listed in a sequence,
 even if infinite i.e countably infinite.
 {{</ definition >}}
-For example:<br>
+For example:
 1. Toss a fair coin, possible outcomes: \(\Omega = \{H,T\}\) <br>
 2. Roll a die, possible outcomes: \(\Omega = \{1,2,3,4,5,6\}\) <br>
 3. Choose a real number \(x\) from the interval \([2,3]\) *with decimal precision*, sample space: \(\Omega = [2,3]\).<br>
@@ -75,7 +78,7 @@ For example:<br>
 **Continuous:**<br> Potential outcomes from an experiment can take any value within a given range or interval,
 representing an uncountably infinite set of possibilities.
 {{</ definition >}}
-For example:<br>
+For example:
 1. A line segment between 2 and 3 - forms a continuum.
 2. Randomly put a point in a rectangular region. <br><br>
 
@@ -88,12 +91,15 @@ graph TD
 ```
 <br>
 
+{{< video "https://youtu.be/xmo2wkFCKXw?si=6xSsTtY9VwcEhIil" >}}
+<br>
+
 {{< definition >}} 
 **Mutually Exclusive (Disjoint) Events:**<br> Two or more events that cannot happen at the same time. 
 <br>No overlapping or common outcomes. <br>If one event occurs, then the other event does NOT occur.
 {{</ definition >}}
 
-For example:<br>
+For example:
 1. Roll a die, sample space: \(\Omega = \{1,2,3,4,5,6\}\) <br> Odd outcome = \(A = \{1,3,5\}\) <br> 
     Even outcome = \(B = \{2,4,6\}\) are mutually exclusive.<br><br>
     \(P(A \cap B) = 0\) <br>
@@ -117,6 +123,8 @@ For example:<br>
     \(P(A \cap B) = P(A)*P(B)\) <br> 
 
 *Note: If we know that event \(A\) has occurred, then that gives us NO new information about the event \(B\).* <br><br>
+
+{{< video "https://youtu.be/aTELWJAm_WE?si=-ydM63Ex9VKR-3yb" >}} <br>
 
 {{< question >}}
 Does \(P=0\) mean that the event is *impossible* or *improbable* ?
@@ -162,8 +170,9 @@ What is the probability of getting a **7** when we roll a **6** faced die ?
 Here, in this case we can say that \(P(7)=0\) and that means *Impossible*.<br>
 
 Similarly, we can say that \(P(get ~any ~number ~between ~1 ~and ~6)=1\) and \(P=1 => \) *Certain*. <br>
-{{< /answer >}} 
+{{< /answer >}}
 
+{{< video "https://youtu.be/MEgtD7x-RyY?si=Z3QbdJiOhMCVrKU_" >}}
 <br>
 
 ```End of Introduction```

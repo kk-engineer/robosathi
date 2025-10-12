@@ -12,7 +12,7 @@ In this section, we will cover the topics related to Calculus for AI & ML.
 
 {{% /pageinfo %}}
 
-###  Maths for AI & ML
+###  Calculus for AI & ML
 [This sheet](https://docs.google.com/spreadsheets/d/1NUv9DrXJcFZs0SGHiLo8GSyCP58nR2_1lD1YDGzwC1A/edit?gid=801046905#gid=801046905) contains all the topics that will be covered for Maths for AI & ML.
 
 Below is the list of topics that will be covered in this section.
