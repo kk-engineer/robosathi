@@ -43,5 +43,37 @@ Discrete random variable cannot take any value between 2 consecutive values.
 For example:  
 1. The number of heads in 2 coin tosses can be 0, 1 or 2 but NOT 1.5.
 
+{{< definition >}}
+**Continuous Random Variable:**  
+A random variable that can take any value between a given range/interval.  
+Possible outcomes are infinite.
+{{< /definition >}}
+For example:  
+1. A person's height in a given range of say 150cm-200cm.  
+    Height can take any value, not just round values, e.g: 150.1cm, 167.95cm, 180.123cm etc.
+
+Now, that we have understood that how random variable can be used to map outcomes of abstract random experiment to real 
+values for mathematical analysis, we will move on to the next topic.  
+<br>
+
+{{< question >}}
+How to calculate the probability of a random variable?
+{{< /question >}}
+
+{{< answer >}}
+Probability of a random variable is given by something called - _Cumulative Distribution Function (CDF)_. 
+{{< /answer >}}
+
+<br>
+
+{{< definition >}}
+**Cumulative Distribution Function:**   
+It gives the probability of a random variable \(X\) will take for a value \(<=X\).
+{{< /definition >}}
+<br>
+
+
+
+
 
 
