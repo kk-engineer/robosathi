@@ -1,13 +1,13 @@
 ---
-title: Probability Distribution
-description: Probability Distribution of Random Variables
+title: Cumulative Distribution Function
+description: Cumulative Distribution Function of a Random Variable
 date: 2025-10-12
 weight: 5
 math: true
 ---
 
 {{% pageinfo %}}
-In this section, we will understand all the concepts related to Probability Distribution of a Random Variable.<br>
+In this section, we will understand Cumulative Distribution Function of a Random Variable.<br>
 {{% /pageinfo %}}
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxcI3JyTIwOTKXY7ANhw__v1&si=MNoo5fxBo_10dLuM" >}}
@@ -110,8 +110,7 @@ For example:
    \]
 <br>
 
-{{< alert color="info" >}}
-**Key points about CDF**  
+{{< alert title="Key points about CDF" color="success" >}} 
 1. **Non-Decreasing**:  
 For any 2 values \(x_1\) and \(x_2\) such that \(x_1 \leq x_2\), corresponding CDF must satisfy - <br>
 \(F(x_1) \leq F(x_2)\) <br>
@@ -134,8 +133,31 @@ the value of \(F(X) = P(X \leq x) = F(1) = 3/4\).<br>
 But, if we approach \(X=1\) from left, say 0.99, 0.999 etc, the value of \(F(X) = 1/4\), 
 as these values do NOT yet include the value of the probability at \(X=1\).<br>
 {{< /alert >}}
-    
-    
+
+{{< alert title="Discrete Case" >}}
+For a discrete random variable, the CDF is a step function (i.e with jumps). <br>
+Value of the probability of a random variable X, at any given value x, is calculated by summing up all the probabilities
+for values \(\le x\).<br><br>
+\( CDF = F_X(x) = \sum_{x_i \le x} P(X=x_i) \), where \(P(X=x_i)\) is the Probability Mass Function (PMF) at \(x_i\) <br><br>
+In the above coin toss example - <br>
+Height of the jump at 'x' = Probability at that value 'x'.<br>
+e.g: Jump at (x=1) = 1/2 = Probability at (x=1). <br>
+{{< /alert >}}
+<br>
+{{< alert title="Continuous Case" >}}
+For a continuous random variable, the CDF is a continuous function. <br>
+CDF for continuous random variable is calculated by integrating the probability density function (PDF)
+from \(-\infty\) to the given value \(x\).<br><br>
+\( CDF = F_X(x) = \int_{-\infty}^{x} f(x) \,dx \), where \(f(x)\) is the Probability Density Function (PDF) of random variable. <br><br> 
+*Note: We can also say that PDF is the derivative of CDF for continuous random variable.* <br><br>
+\(PDF = f(x) = F'(X) = \frac{dF_X(x)}{dx} \)
+{{< /alert >}}
+
+{{< video "https://youtu.be/YqbtUTJT--E?si=UiVUx00ebssGCLgJ&t=1" >}}
+<br><br>
+
+```End of Section```
+
    
 
 
