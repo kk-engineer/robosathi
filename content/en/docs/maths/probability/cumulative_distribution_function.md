@@ -12,7 +12,7 @@ In this section, we will understand Cumulative Distribution Function of a Random
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxcI3JyTIwOTKXY7ANhw__v1&si=MNoo5fxBo_10dLuM" >}}
 {{< definition >}}
-**Random Variable:** <br>
+**Random Variable(RV):** <br>
 A random variable is a function that maps a the outcomes of a sample space to a real number.<br>
 Random Variable X represent as, \(X: \Omega \to \mathbb{R} \) <br>
 It maps abstract outcomes of a random experiment to concrete numerical values required for mathematical analysis.
@@ -68,7 +68,7 @@ Probability of a random variable is given by something called - _Cumulative Dist
 <br>
 
 {{< definition >}}
-**Cumulative Distribution Function:**   
+**Cumulative Distribution Function(CDF):**   
 It gives the cumulative probability of a random variable \(X\).  
 CDF = \(F(X) = P(X \leq x)\) i.e Probability a random variable \(X\) will take for a value \(<=x\).
 {{< /definition >}}

@@ -11,12 +11,13 @@ In this section, we will understand Probability Mass Function of a Discrete Rand
 {{% /pageinfo %}}
 
 {{< definition >}}
-**Probability Mass Function:** <br>
+**Probability Mass Function(PMF):** <br>
 It gives the exact value of a probability for a discrete random variable at a specific value \(x\).<br>
 It assigns a "non-zero" mass or probability to a specific countable outcome.<br>
 *Note: Called **'mass'** because probability is concentrated at a single discrete point.* <br>
 \(PMF = P(X=x)\) <br>
-Commonly visualised as a bar chart. <br><br>
+e.g: _Bernoulli_, _Binomial_, _Multinomial_, _Poisson_ etc. <br><br>
+Commonly visualised as a bar chart. <br>
 *Note: PMF = Jump at a given point in CDF.* <br><br>
 \(PMF = P_x(X=x_i) = F_X(X=x_i) - F_X(X=x_{i-1})\)
 {{</ definition >}}
