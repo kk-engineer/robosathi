@@ -30,9 +30,10 @@ For example:
     X(2) = \{HH\} = 1 \\
     \end{aligned}
     $$
-    Similar, output will be observed for number of tails.
+    Similar, output will be observed for number of tails. <br>
 
-*Depending upon the nature of output, random variables are of 2 types - **Discrete** and **Continuous**.*  
+*Depending upon the nature of output, random variables are of 2 types - **Discrete** and **Continuous**.* 
+<br><br>
 
 {{< definition >}}
 **Discrete Random Variable:**  
@@ -41,7 +42,7 @@ Typically obtained by counting.
 Discrete random variable cannot take any value between 2 consecutive values.  
 {{< /definition >}}
 For example:  
-1. The number of heads in 2 coin tosses can be 0, 1 or 2 but NOT 1.5.
+1. The number of heads in 2 coin tosses can be 0, 1 or 2 but NOT 1.5. <br><br>
 
 {{< definition >}}
 **Continuous Random Variable:**  
@@ -108,9 +109,9 @@ For example:
     0 & \text{if } x < 0
     \end{cases}
    \]
-<br>
 
-{{< alert title="Key points about CDF" color="success" >}} 
+
+{{< alert title="Key properties of CDF" color="success" >}} 
 1. **Non-Decreasing**:  
 For any 2 values \(x_1\) and \(x_2\) such that \(x_1 \leq x_2\), corresponding CDF must satisfy - <br>
 \(F(x_1) \leq F(x_2)\) <br>
@@ -143,7 +144,7 @@ In the above coin toss example - <br>
 Height of the jump at 'x' = Probability at that value 'x'.<br>
 e.g: Jump at (x=1) = 1/2 = Probability at (x=1). <br>
 {{< /alert >}}
-<br>
+
 {{< alert title="Continuous Case" >}}
 For a continuous random variable, the CDF is a continuous function. <br>
 CDF for continuous random variable is calculated by integrating the probability density function (PDF)
