@@ -53,7 +53,7 @@ For example:
     Height can take any value, not just round values, e.g: 150.1cm, 167.95cm, 180.123cm etc.
 
 Now, that we have understood that how random variable can be used to map outcomes of abstract random experiment to real 
-values for mathematical analysis, we will move on to the next topic.  
+values for mathematical analysis, we will understand its applications.  
 <br>
 
 {{< question >}}
@@ -68,10 +68,75 @@ Probability of a random variable is given by something called - _Cumulative Dist
 
 {{< definition >}}
 **Cumulative Distribution Function:**   
-It gives the probability of a random variable \(X\) will take for a value \(<=X\).
+It gives the cumulative probability of a random variable \(X\).  
+CDF = \(F(X) = P(X \leq x)\) i.e Probability a random variable \(X\) will take for a value \(<=x\).
 {{< /definition >}}
 <br>
+For example:  
+1. Discrete random variable - Toss a coin 2 times, sample space: \(\Omega = \{HH,HT, TH, TT\}\) <br>
+    Count the number of heads. <br>
+    $$
+    \begin{aligned}
+    X(0) = \{TT\} = 1 => P(X = 0) = 1/4 \\
+    X(1) = \{HT, TH\} = 2 => P(X = 1) = 1/2\\
+    X(2) = \{HH\} = 1 => P(X = 2) = 1/4 \\
+    \\
+    CDF = F(X) = P(X \leq x) \\
+    F(0) = P(X \leq 0) = P(X < 0) + P(X = 0) = 1/4 \\
+    F(1) = P(X \leq 1) = P(X < 1) + P(X = 1) = 1/4 + 1/2 = 3/4 \\
+    F(2) = P(X \leq 2) = P(X < 2) + P(X = 2) = 3/4 + 1/4 = 1 \\
+    \end{aligned}
+    $$
 
+![](https://robosathi.com/images/cdf_example_1.png)
+<br>
+2. Continuous random variable - Consider a line segment/interval from \(\Omega = [0,2] \) <br>
+    Random variable \(X(\omega) = \omega\) <br>
+    i.e \(X(1) = 1 ~and~ X(1.1) = 1.1 \) <br>
+    $$
+    \begin{aligned}
+    P[(0,1/2)] = (1/2)/2 = 1/4 \\
+    P[(3/4, 2)] = (2-3/4)/2 = 5/8 \\
+    P(X<=1.1) = P(-\infty, 1.1)/2 = 1.1/2
+    \end{aligned}
+    $$
+    \[
+    F_X(x) = P(X \leq x) =
+    \begin{cases}
+    \frac{x}{2} & \text{if } x \in [0,2] \\
+    1 & \text{if } x > 2 \\
+    0 & \text{if } x < 0
+    \end{cases}
+   \]
+<br>
+
+{{< alert color="info" >}}
+**Key points about CDF**  
+1. **Non-Decreasing**:  
+For any 2 values \(x_1\) and \(x_2\) such that \(x_1 \leq x_2\), corresponding CDF must satisfy - <br>
+\(F(x_1) \leq F(x_2)\) <br>
+*Note: Cumulative function can never decrease as x increases.* <br><br>
+2. **Bounded**:  
+Range of CDF is always between 0 and 1, because CDF represents total probability, 
+which cannot be negative or greater than 1. <br><br>
+\(\lim_{x \to -\infty} F(X) = 0\); as \(x \to -\infty\), event \((X \le x)\) becomes an impossible event <br>
+i.e \(P(X \le x) =0\)<br>
+\(\lim_{x \to \infty} F(X) = 1\); as \(x \to \infty\), event \((X \le x)\) includes all possible outcomes of the event, 
+making sure that \(P(X \le x) =1\) <br><br>
+3. **Right Continuous**: <br>
+Function's value at a point is same as the limit of the function, as we approach that point from right hand side (RHS).<br>
+*Note: Reason for only right continuity is because how the cumulative distribution function is defined, as we may have a jump 
+on the left side of the point.*<br><br>
+\(\lim_{h \to o^+} F(X+h) = F(X)\) <br><br>
+For example: <br> 
+In the above coin toss CDF example, if we approach X=1 from right, say 1.001, 1.01 etc,
+the value of \(F(X) = P(X \leq x) = F(1) = 3/4\).<br>
+But, if we approach \(X=1\) from left, say 0.99, 0.999 etc, the value of \(F(X) = 1/4\), 
+as these values do NOT yet include the value of the probability at \(X=1\).<br>
+{{< /alert >}}
+    
+    
+   
 
 
 
