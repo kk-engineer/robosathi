@@ -63,6 +63,7 @@ independent trials. <br>
 \(\binom{n}{k} = \frac{n!}{k!(n-k)!}\) i.e number of ways to achieve '_k_' successes in '_n_' independent trials. <br>
 
 *Note: Bernoulli is a special case of Binomial distribution where n = 1.* <br>
+*Also read about **Multinomial** distribution i.e where number of possible outcomes is > 2.* <br>
 {{</ definition >}}
 For example:
 - Counting number of heads(success) in 'n' coin tosses. <br>
@@ -111,14 +112,15 @@ Probability of winning lottery, P(k=1) = \[\binom{10}{1}p^1(1-p)^{10-1} \\
 **Poisson Distribution:** <br>
 It expresses the probability of an event happening a certain number of times 'k' within a fixed interval of time. <br>
 Given that:
-1. Events occur with a known constant rate.<br>
+1. Events occur with a known constant average rate.<br>
 2. Occurrence of an event is independent of the time since the last event. <br><br>
-Parameters: <br>
+**Parameters**: <br>
 \(\lambda\): Expected number of events per interval <br>
+\(k\) = Number of events in the same interval <br>
 **Mean** = \(\lambda\) <br>
 **Variance** = \(\lambda\)<br>
-\(k\) = Number of events in the same interval <br>
-PMF = Probability of 'k' events in the same interval <br>
+
+**PMF** = Probability of occurrence of 'k' events in the same interval <br>
 \[PMF = \lambda^ke^{-\lambda}/k!\]
 *Note: Useful to count data where total population size is large but the probability of an individual event is small.* <br>
 {{</ definition >}}

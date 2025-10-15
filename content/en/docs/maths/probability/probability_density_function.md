@@ -154,6 +154,7 @@ Z = \dfrac{X-\mu}{\sigma}
 \end{aligned}
 $$
 {{</ definition >}}
+
 For example:
 - Human height, IQ scores, blood-pressure etc. <br>
 - Measurement of errors in scientific experiments. <br>
@@ -168,6 +169,78 @@ For example:
 - 95.45% of the data lie within 2 standard deviations of the mean i.e \(\mu \pm 2\sigma\)<br>
 - 99.73% of the data lie within 3 standard deviations of the mean i.e \(\mu \pm 3\sigma\) <br>
 {{< /alert >}}
+<br> <br>
+
+{{< definition >}}
+**Exponential Distribution:** <br>
+It is used to model the amount of time until a specific event occurs. <br>
+Given that:
+1. Events occur with a known constant average rate.<br>
+2. Occurrence of an event is independent of the time since the last event. <br><br>
+**Parameters**: <br>
+**Rate parameter**: \(\lambda\): Average number of events per unit time <br>
+**Scale parameter**: \(\mu ~or~ \beta \): Mean time between events <br>
+**Mean** = \(\frac{1}{\lambda}\) <br>
+**Variance** = \(\frac{1}{\lambda^2}\) <br>
+\[ \lambda = \dfrac{1}{\beta} =  \dfrac{1}{\mu}\] <br>
+
+$$
+\begin{aligned}
+PDF = f(x) = \lambda e^{-\lambda x} ~~~ \forall ~~~  x \ge 0 ~~~\&~~~  \lambda > 0 \\
+CDF = F(x) = 1 - e^{-\lambda x} ~~~ \forall ~~~  x \ge 0 ~~~\&~~~  \lambda > 0
+\end{aligned}
+$$
+{{</ definition >}}
+<br><br>
+
+![](https://robosathi.com/images/exponential_pdf.png)
+{{< alert color="warning" >}}**Graph**: PDF of Exponential Distribution.{{< /alert >}}
+![](https://robosathi.com/images/exponential_cdf.png)
+{{< alert color="warning" >}}**Graph**: CDF of Exponential Distribution.{{< /alert >}}
+
+{{< question >}}
+At a bank, a teller spends 4 minutes, on an average, with every customer. What is the probability that a randomly 
+selected customer will be served in less than 3 minutes? <br>
+{{</ question >}}
+
+{{< answer >}}
+Mean time to serve 1 customer = \(\mu\) = 4 minutes <br>
+So, \(\lambda\) = average number of customers served per unit time =  \(1/\mu\) = 1/4 = 0.25 minutes <br>
+Probability to serve a customer in less than 3 minutes can be found using CDF - <br>
+\[ F(x) = P(X \le x) = 1 - e^{-\lambda x}\] <br>
+$$
+\begin{aligned}
+P(X \leq 3) &= 1 - e^{0.25*3} \\
+&= 1 - e^{-0.75} \\
+&= 1 - 0.47 \\
+&\approx 0.53 \\
+&\approx 53\%
+\end{aligned}
+$$
+So, probability of a customer being served in less than 3 minutes is 53%(approx). <br>
+{{</ answer >}}
+<br>
+
+{{< question >}}
+At a bank, a teller spends 4 minutes, on an average, with every customer. What is the probability that a randomly 
+selected customer will be served in greater than 2 minutes? <br>
+{{</ question >}}
+
+{{< answer >}}
+\[ CDF = F(x) = P(X \le x) = 1 - e^{-\lambda x} \\
+\text{Total probability} = P(X \le x) + P(X > x) = 1\\
+=>  1 - e^{-\lambda x} + P(X > x) = 1 \\
+=> P(X > x) =  e^{-\lambda x}
+\] <br>
+In this case x = 2 minutes, and \(\lambda\) = 0.25 so, <br>
+\[ P(X > 2) =  e^{-\lambda x} \\
+= e^{-0.25*2} \\
+= e^{-0.5} \\
+= 0.6065 \\
+\approx 60.65\% \] <br>
+So, probability of a customer being served in greater than 2 minutes is 60%(approx). <br>
+{{</ answer >}}
+
 
 <br><br>
 ```End of Section```
