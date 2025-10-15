@@ -64,13 +64,13 @@ $$
 \[
 \text{Expected value of continuous uniform random variable } = \\
 E[X] = \int_{-\infty}^{\infty} x.f(x) dx \\
-= \int_{-\infty}^{a} x.f(x) dx + \int_{a}^{b} x.f(x) dx + \int_{b}^{\infty} x.f(x) dx\\
-\text{Since, the PDF is defined only in the range [a,b] } \\
+= \int_{-\infty}^{a} x.f(x) dx + \int_{a}^{b} x.f(x) dx + \int_{b}^{\infty} x.f(x) dx\\[0.5em]
+\text{Since, the PDF is defined only in the range [a,b] } \\[0.5em]
 = 0 + \int_{a}^{b} x.f(x) dx + 0 \\
 = \int_{a}^{b} x.f(x) dx \\
-= \dfrac{1}{b-a} \int_{a}^{b} x dx \\
-= \dfrac{1}{b-a} (\frac{x^2}{2})_{a}^{b} \\
-= \dfrac{1}{b-a} * (\frac{b^2 - a^2}{2}) \\
+= \dfrac{1}{b-a} \int_{a}^{b} x dx \\[0.5em] 
+= \dfrac{1}{b-a} (\frac{x^2}{2})_{a}^{b} \\[0.5em]
+= \dfrac{1}{b-a} * (\frac{b^2 - a^2}{2}) \\[0.5em]
 = \dfrac{1}{b-a} * \{\frac{(b+a)(b-a)}{2}\}\\
 = \dfrac{b+a}{2} 
 \] 
@@ -116,8 +116,8 @@ f_X(x) =
 $$
 
 \[
-\text{Expected value = mean } = \\
-E[X] = \dfrac{b+a}{2} \\
+\text{Expected value = mean } = \\[0.5em]
+E[X] = \dfrac{b+a}{2} \\[0.5em]
 \]
 
 \[
@@ -128,16 +128,16 @@ For calculating \(Var[X]\), we know \(E[X]\), but we need to calculate \(E[X^2]\
 
 \[
 \begin{aligned}
-E[X] &= \int_{-\infty}^{\infty} x.f(x) dx \\
-E[X^2] &= \int_{-\infty}^{\infty} x^2.f(x) dx \\
-&= \int_{-\infty}^{a} x^2.f(x) dx + \int_{a}^{b} x^2.f(x) dx + \int_{b}^{\infty} x^2.f(x) dx\\
+E[X] &= \int_{-\infty}^{\infty} x.f(x) dx \\[0.9em]
+E[X^2] &= \int_{-\infty}^{\infty} x^2.f(x) dx \\[0.9em]
+&= \int_{-\infty}^{a} x^2.f(x) dx + \int_{a}^{b} x^2.f(x) dx + \int_{b}^{\infty} x^2.f(x) dx\\[0.5em]
 \text{Since, the PDF is defined only in the range [a,b] } \\
 &= 0 + \int_{a}^{b} x^2.f(x) dx + 0 \\
 &= \int_{a}^{b} x^2.f(x) dx \\
-&= \dfrac{1}{b-a} \int_{a}^{b} x^2 dx \\
-&= \dfrac{1}{b-a} * \{\frac{x^3}{3}\}_{a}^{b} \\
-&= \dfrac{1}{b-a} * \{\frac{b^3 - a^3}{3}\} \\
-&= \dfrac{1}{b-a} * \{\frac{(b-a)(b^2+ab+a^2)}{3}\} \\
+&= \dfrac{1}{b-a} \int_{a}^{b} x^2 dx \\[0.9em]
+&= \dfrac{1}{b-a} * \{\frac{x^3}{3}\}_{a}^{b} \\[0.9em]
+&= \dfrac{1}{b-a} * \{\frac{b^3 - a^3}{3}\} \\[0.9em]
+&= \dfrac{1}{b-a} * \{\frac{(b-a)(b^2+ab+a^2)}{3}\} \\[0.5em]
 E[X^2] &= \dfrac{b^2+ab+a^2}{3}
 \end{aligned}
 \]
@@ -153,10 +153,48 @@ Var[X] &= E[X^2] - E[X]^2 \\
 Var[X]&= \dfrac{(b-a)^2}{12}
 \end{aligned}
 \]
-
-
 {{< /answer >}}
 
+<br><br>
+
+{{< definition >}}
+**Co-Variance:** <br>
+It is the measure of how 2 variables X & Y vary together. <br>
+It gives the direction of the relationship between the variables. <br>
+
+\[
+\begin{aligned}
+\text{Cov}(X, Y) &> 0 &&\Rightarrow \text{ } X \text{ and } Y \text{ increase or decrease together} \\[0.5em]
+\text{Cov}(X, Y) &= 0 &&\Rightarrow \text{ } \text{No linear relationship} \\[0.5em]
+\text{Cov}(X, Y) &< 0 &&\Rightarrow \text{ } \text{If } X \text{ increases, } Y \text{ decreases (and vice versa)}
+\end{aligned}
+\]
+
+
+*Note: For both direction as well as magnitude, we use Correlation.* <br>
+Let's use expectation to compute the co-variance of two random variables X & Y: <br>
+\[
+\begin{aligned}
+Cov(X,Y) &= E[(X-E[X])(Y-E[Y])] \\
+&\text{where, E[X] = mean of X and E[Y] = mean of Y} \\
+& = E[XY - YE[X] -XE[Y] + E[X]E[Y] \\
+&= E[XY] - E[Y]E[X] - \cancel{E[X]E[Y]} + \cancel{E[X]E[Y]} \\
+Cov(X,Y) &= E[XY] - E[X]E[Y] \\
+\end{aligned}
+\]
+
+*Note:*
+- *In a multivariate setting, relationship between all the pairs of random variables are summarized in 
+a square symmetrix matrix called 'Co-Variance Matrix' \(\Sigma\).* <br>
+- *Covariance of a random variable with self gives the variance, hence the diagonals of covariance matrix are variances.* <br>
+
+\[
+\begin{aligned}
+Cov(X,Y) &= E[XY] - E[X]E[Y] \\
+Cov(X,X) &= E[X^2] - E[X]^2 = Var[X] \\
+\end{aligned}
+\]
+{{</ definition >}}
 
 
 <br><br>
