@@ -246,12 +246,14 @@ In this case x = 2 minutes, and \(\lambda\) = 0.25 so, <br>
 So, probability of a customer being served in greater than 2 minutes is 60%(approx). <br>
 {{</ answer >}}
 
+{{< video "https://youtu.be/WXgmMDe1bTM?si=NrvCQCsoCie0JsBC" >}}
+
 {{< alert title="Memoryless Property of Exponential Distribution" color="success" >}}
 Probability of waiting for an additional period of time for an event to occur is independent of 
 how long you have already waited. <br>
 e.g: Lifetime of electronic items follow exponential distribution.
 - Probability of a computer part failing in the next 1 hour is the same regardless of whether
-it has been operating for 1 day or 1 year. <br>
+it has been working for 1 day or 1 year or 5 years. <br>
 
 *Note: Memoryless property makes exponential distribution particularly useful for* -
 - Modeling systems that do not experience 'wear and tear'; where failure is due to a constant random rate 
@@ -287,7 +289,7 @@ is independent of the time 't' days it has already survived._ <br>
 {{</ answer >}}
 <br>
 
-{{< alert title="Relation of Exponential Distribution to Poisson Distribution" color="success" >}}
+{{< alert title="Relation of Exponential Distribution and Poisson Distribution" color="success" >}}
 Poisson distribution models the number of events occurring in a fixed interval of time, 
 given a constant average rate \(\lambda \). <br>
 Exponential distribution models the time interval between those successive events. <br>
@@ -348,7 +350,6 @@ P(T>10) = e^{-(1/20) * 10} \\
 *Therefore, we have seen that this problem can be solved using both Poisson and Exponential distribution.*
 {{</ answer >}}
 
-{{< video "https://youtu.be/WXgmMDe1bTM?si=NrvCQCsoCie0JsBC" >}} 
 
 
 <br><br>

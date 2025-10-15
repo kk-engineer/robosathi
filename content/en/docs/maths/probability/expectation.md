@@ -76,6 +76,87 @@ E[X] = \int_{-\infty}^{\infty} x.f(x) dx \\
 \] 
 <br>
 {{< /answer >}}
+<br><br>
+
+{{< definition >}}
+**Variance:** <br>
+It is the average of the squared differences from the mean. <br>
+- Measures the spread or variability in the data distribution. <br>
+- If the variance is low, then the data is clustered around the mean i.e less variability; <br>
+and if the variance is high, then the data is widely spread out i.e high variability.<br>
+
+Variance in terms of expected value, where \(E[X] = \mu\), is given by:
+
+\[
+\begin{aligned}
+Var[X] &= E[(X - E[X])^2] \\
+&= E[X^2 + E[X]^2  - 2XE[X]] \\
+&= E[X^2] + E[X]^2 - 2E[X]E[X]  \\
+&= E[X^2] + E[X]^2 - 2E[X]^2  \\
+Var[X] &= E[X^2] - E[X]^2 \\
+\end{aligned}
+\]
+
+*Note: This is the computational formula for variance, as it is easier to calculate than the 
+average of square distances from mean.* <br>
+{{</ definition >}}
+
+{{< question >}}
+What is the variance of a continuous uniform random variable distributed over the interval [a,b]?
+{{< /question >}}
+
+{{< answer >}}
+$$
+\text{PDF of continuous uniform random variable } = \\
+f_X(x) = 
+\begin{cases}
+\dfrac{1}{b-a}, & x \in [a,b] \\
+0, & \text{otherwise.}
+\end{cases} \\
+$$
+
+\[
+\text{Expected value = mean } = \\
+E[X] = \dfrac{b+a}{2} \\
+\]
+
+\[
+Var[X] = E[X^2] - E[X]^2 
+\]
+
+For calculating \(Var[X]\), we know \(E[X]\), but we need to calculate \(E[X^2]\). <br>
+
+\[
+\begin{aligned}
+E[X] &= \int_{-\infty}^{\infty} x.f(x) dx \\
+E[X^2] &= \int_{-\infty}^{\infty} x^2.f(x) dx \\
+&= \int_{-\infty}^{a} x^2.f(x) dx + \int_{a}^{b} x^2.f(x) dx + \int_{b}^{\infty} x^2.f(x) dx\\
+\text{Since, the PDF is defined only in the range [a,b] } \\
+&= 0 + \int_{a}^{b} x^2.f(x) dx + 0 \\
+&= \int_{a}^{b} x^2.f(x) dx \\
+&= \dfrac{1}{b-a} \int_{a}^{b} x^2 dx \\
+&= \dfrac{1}{b-a} * \{\frac{x^3}{3}\}_{a}^{b} \\
+&= \dfrac{1}{b-a} * \{\frac{b^3 - a^3}{3}\} \\
+&= \dfrac{1}{b-a} * \{\frac{(b-a)(b^2+ab+a^2)}{3}\} \\
+E[X^2] &= \dfrac{b^2+ab+a^2}{3}
+\end{aligned}
+\]
+
+Now, we know both \(E[X]\) and \(E[X^2]\), so we can calculate \(Var[X]\):
+\[
+\begin{aligned}
+Var[X] &= E[X^2] - E[X]^2 \\
+&= \dfrac{b^2+ab+a^2}{3} - \dfrac{(b+a)^2}{4} \\
+&= \dfrac{b^2+ab+a^2}{3} - \dfrac{b^2+2ab+a^2}{4} \\
+&= \dfrac{4b^2+4ab+4a^2-3b^2-6ab-3a^2}{12} \\
+&= \dfrac{b^2-2ab+a^2}{12} \\
+Var[X]&= \dfrac{(b-a)^2}{12}
+\end{aligned}
+\]
+
+
+{{< /answer >}}
+
 
 
 <br><br>
