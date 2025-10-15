@@ -126,5 +126,48 @@ For example: <br>
 ![](https://robosathi.com/images/uniform_cdf.png)
 {{< alert color="warning" >}}**Graph**: CDF of Uniform Distribution.{{< /alert >}}
 
+{{< definition >}}
+**Gaussian(Normal) Distribution:** <br>
+It is a continuous probability distribution characterized by a symmetrical, bell-shaped curve with 
+most data clustered around the central average, with frequency of values decreasing as they move away from the center.<br>
+- Most outcomes are average; extremely low or extremely high values are rare. <br>
+- Characterised by mean and standard deviation/variance. <br>
+- Peak at mean = median, symmetric around mean. <br>
+*Note: Most important and widely used distribution.* <br>
+<br> 
+\[ X \sim N(\mu, \sigma^2) \]
+$$
+\begin{aligned}
+PDF = f(x) =
+\dfrac{1}{\sqrt{2\pi}\sigma}e^{-\dfrac{(x-\mu)^2}{2\sigma^2}} \\
+\end{aligned}
+$$
+<br>
+**Mean** = \(\mu\) <br>
+**Variance** = \(\sigma^2\) <br>
+
+Standard normal distribution: \[ Z \sim N(0,1) ~i.e~ \mu = 0, \sigma^2 = 1 \] <br>
+Any normal distribution can be standardized using Z-score transformation:
+$$
+\begin{aligned}
+Z = \dfrac{X-\mu}{\sigma}
+\end{aligned}
+$$
+{{</ definition >}}
+For example:
+- Human height, IQ scores, blood-pressure etc. <br>
+- Measurement of errors in scientific experiments. <br>
+
+![](https://robosathi.com/images/gaussian_pdf.png)
+{{< alert color="warning" >}}**Graph**: PDF of Gaussian Distribution.{{< /alert >}}
+![](https://robosathi.com/images/gaussian_cdf.png)
+{{< alert color="warning" >}}**Graph**: CDF of Gaussian Distribution.{{< /alert >}}
+
+{{< alert title="68-95-99 Rule" color="success" >}} 
+- 68.27% of the data lie within 1 standard deviation of the mean i.e \(\mu \pm \sigma\) <br>
+- 95.45% of the data lie within 2 standard deviations of the mean i.e \(\mu \pm 2\sigma\)<br>
+- 99.73% of the data lie within 3 standard deviations of the mean i.e \(\mu \pm 3\sigma\) <br>
+{{< /alert >}}
+
 <br><br>
 ```End of Section```
