@@ -65,7 +65,7 @@ independent trials. <br>
 *Note: Bernoulli is a special case of Binomial distribution where n = 1.* <br>
 {{</ definition >}}
 For example:
-1. Counting number of heads(success) in 'n' coin tosses. <br>
+- Counting number of heads(success) in 'n' coin tosses. <br>
 
 {{< alert title="Assumptions" color="warning" >}}
 1. Trials are independent. <br>
@@ -73,6 +73,7 @@ For example:
 {{< /alert >}}
 <br>
 ![](https://robosathi.com/images/binomial.png)
+<br><br>
 
 {{< question >}}
 What is the probability of getting exactly 2 heads in 3 coin tosses? <br>
@@ -83,7 +84,9 @@ Total number of outcomes in 3 coin tosses = 2^3 = 8 <br>
 Desired outcomes i.e 2 heads in 3 coin tosses = \(\{HHT, HTH, THH\}\) = 3 <br>
 Probability of getting exactly 2 heads in 3 coin tosses = \(\frac{3}{8}\) = 0.375 <br>
 *Now lets solve the question using the binomial distribution formula.* <br>
-\(P(k=2) = \binom{3}{2}p^2(1-p)^{3-2} = \frac{3!}{2!(3-2)!}(0.5)^2(0.5) = 3*0.25*0.5 = 3*0.125 = 0.375\) <br>
+\[P(k=2) = \binom{3}{2}p^2(1-p)^{3-2} \\
+= \frac{3!}{2!(3-2)!}(0.5)^2(0.5) \\
+= 3*0.25*0.5 = 3*0.125 = 0.375\] <br>
 {{</ answer >}}
 <br>
 
@@ -95,8 +98,9 @@ What is the probability of winning a lottery 1 out of 10 times, given that the p
 Number of successes, k = 1 <br>
 Number of trials, n = 10 <br>
 Probability of success, p = 1/3 <br>
-Probability of winning lottery, P(k=1) = \(\binom{10}{1}p^1(1-p)^{10-1} = \frac{10!}{1!(10-1)!}(1/3)^1(2/3)^9 = 
-10*0.333*0.026 = 0.866 \approx 8.66\% \) <br>
+Probability of winning lottery, P(k=1) = \[\binom{10}{1}p^1(1-p)^{10-1} \\
+= \frac{10!}{1!(10-1)!}(1/3)^1(2/3)^9 \\
+= 10*0.333*0.026 = 0.866 \approx 8.66\% \] <br>
 {{</ answer >}}
 <br>
 
@@ -120,9 +124,10 @@ PMF = Probability of 'k' events in the same interval <br>
 {{</ definition >}}
 For example: 
 1. Model the number of customers arrival at a service center per hour. <br>
-2. Number of website clicks in a given time period. <br>
+2. Number of website clicks in a given time period. <br><br>
 
 ![](https://robosathi.com/images/poisson_pmf.png)
+{{< alert color="warning" >}}**Graph**: PMF of Poisson Distribution.{{< /alert >}}
 
 {{< question >}}
 A company receives, on an average, 5 customer emails per hour. What is the probability of receiving exactly 3 emails
@@ -130,8 +135,10 @@ in the next hour? <br>
 {{</ question >}}
 {{< answer >}}
 Expected (average) number of emails per hour, \(\lambda\) = 5 <br>
-Probability of receiving exactly k=3 emails in the next hour = ? <br>
-\(P(k=3) = \lambda^3e^{-\lambda} / 3! = 5^3e^{-5} / 3! = 125*e^{-5} / 6 = 125*0.00674 / 6 \approx 0.14 ~or~ 14\%  \) <br>
+Probability of receiving exactly k=3 emails in the next hour =  <br>
+\[P(k=3) = \lambda^3e^{-\lambda} / 3! \\
+= 5^3e^{-5} / 3! = 125*e^{-5} / 6 \\
+= 125*0.00674 / 6 \approx 0.14 ~or~ 14\%  \] <br>
 {{</ answer >}}
 <br>
 

@@ -73,7 +73,58 @@ $$
 by calculating the area under the curve.* <br><br>
 
 {{< video "https://www.youtube.com/watch?v=aa9hiJhQvvI" >}}
+<br>
+
+{{< definition >}}
+**Uniform Distribution:** <br>
+All the outcomes within the given range are equally likely to occur. <br>
+Also known as 'fair' distribution. <br>
+_Note: This is a natural starting point to understand randomness in general. <br>_
+<br> 
+\[ X \sim U(a,b) \]
+$$
+\begin{aligned}
+PDF = f(x) =
+\begin{cases}
+\frac{1}{b-a} & \text{if } x \in [a,b] \\
+0 & \text{~otherwise }
+\end{cases}
+\end{aligned}
+$$
+<br>
+**Mean** = **Median** = \( \frac{a+b}{2} ~if~ x \in [a,b] \) <br>
+**Variance** = \( \frac{(b-a)^2}{12} \) <br><br>
+Standard uniform distribution: \( X \sim U(0,1) \)
+$$
+\begin{aligned}
+PDF = f(x) =
+\begin{cases}
+1 & \text{if } x \in [0,1] \\
+0 & \text{~otherwise }
+\end{cases}
+\end{aligned}
+$$
+
+PDF in terms of mean(\(\mu\)) and standard deviation(\(\sigma\)) - <br>
+
+$$
+\begin{aligned}
+PDF = f(x) =
+\begin{cases}
+\frac{1}{2\sigma\sqrt{3}} & \text{if } \mu -\sigma\sqrt{3} \le x  \le \mu + \sigma\sqrt{3}\\
+0 & \text{~otherwise }
+\end{cases}
+\end{aligned}
+$$
+
+{{</ definition >}}
+For example: <br>
+- Random number generator that generates a random number between 0 and 1. <br>
+
+![](https://robosathi.com/images/uniform_pdf.png)
+{{< alert color="warning" >}}**Graph**: PDF of Uniform Distribution.{{< /alert >}}
+![](https://robosathi.com/images/uniform_cdf.png)
+{{< alert color="warning" >}}**Graph**: CDF of Uniform Distribution.{{< /alert >}}
 
 <br><br>
-
 ```End of Section```
