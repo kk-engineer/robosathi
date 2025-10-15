@@ -126,6 +126,9 @@ For example: <br>
 ![](https://robosathi.com/images/uniform_cdf.png)
 {{< alert color="warning" >}}**Graph**: CDF of Uniform Distribution.{{< /alert >}}
 
+{{< video "https://youtu.be/UrLRdi88U3g?si=63sHZ1B-1kUtf4E3" >}}
+<br> <br>
+
 {{< definition >}}
 **Gaussian(Normal) Distribution:** <br>
 It is a continuous probability distribution characterized by a symmetrical, bell-shaped curve with 
@@ -169,6 +172,8 @@ For example:
 - 95.45% of the data lie within 2 standard deviations of the mean i.e \(\mu \pm 2\sigma\)<br>
 - 99.73% of the data lie within 3 standard deviations of the mean i.e \(\mu \pm 3\sigma\) <br>
 {{< /alert >}}
+
+{{<video "https://youtu.be/B3SLD_4M2FU?si=RhLAyLCzab7hLeF0" >}}
 <br> <br>
 
 {{< definition >}}
@@ -341,9 +346,9 @@ P(T>10) = e^{-(1/20) * 10} \\
 \approx 60.65\%\] <br>
 
 *Therefore, we have seen that this problem can be solved using both Poisson and Exponential distribution.*
-
 {{</ answer >}}
 
+{{< video "https://youtu.be/WXgmMDe1bTM?si=NrvCQCsoCie0JsBC" >}} 
 
 
 <br><br>
