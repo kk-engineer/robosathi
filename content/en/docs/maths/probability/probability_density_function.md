@@ -241,6 +241,110 @@ In this case x = 2 minutes, and \(\lambda\) = 0.25 so, <br>
 So, probability of a customer being served in greater than 2 minutes is 60%(approx). <br>
 {{</ answer >}}
 
+{{< alert title="Memoryless Property of Exponential Distribution" color="success" >}}
+Probability of waiting for an additional period of time for an event to occur is independent of 
+how long you have already waited. <br>
+e.g: Lifetime of electronic items follow exponential distribution.
+- Probability of a computer part failing in the next 1 hour is the same regardless of whether
+it has been operating for 1 day or 1 year. <br>
+
+*Note: Memoryless property makes exponential distribution particularly useful for* -
+- Modeling systems that do not experience 'wear and tear'; where failure is due to a constant random rate 
+rather than degradation over time.
+- Also, useful for 'reliability analysis' of electronic systems where a 'random failure' model is more appropriate than
+a 'wear out' model. <br>
+{{< /alert >}}
+
+{{< question >}}
+Suppose, we know that an electronic item has lasted for time \(x>t\) days, then what is the probability that it will last 
+for an additional time of 's' days ? <br>
+{{</ question >}}
+
+{{< answer >}}
+**Task:** We want to find the probability of the electronic item lasting for \(x > t+s \) days, <br>
+given that it has already lasted for \(x>t\) days. <br>
+This is a 'conditional probability'. <br>
+Since, 
+\[ P(A \mid B) = \dfrac{P(A \cap B)}{P(B)} \] <br>
+We want to find: \( P(X > t+s \mid X > t) = ~? \)<br>
+
+\[
+P(X > t+s \mid X > t) = \dfrac{P(X > t+s ~and~ X > t)}{P(X > t)} \\
+\text{Since, t+s > t, we can only consider t+s} \\
+= \dfrac{P(X > t+s)}{P(X > t)} \\
+= \dfrac{e^{-\lambda(t+s)}}{e^{-\lambda(t)}} \\
+= e^{-\lambda(t) -\lambda(s) + \lambda(t)} \\
+= e^{-\lambda(s)} \\
+=> \text{Independent of time 't'}
+\]
+_Hence, probability that the electronic item will survive for an additional time 's' days <br>
+is independent of the time 't' days it has already survived._ <br> 
+{{</ answer >}}
+<br>
+
+{{< alert title="Relation of Exponential Distribution to Poisson Distribution" color="success" >}}
+Poisson distribution models the number of events occurring in a fixed interval of time, 
+given a constant average rate \(\lambda \). <br>
+Exponential distribution models the time interval between those successive events. <br>
+- 2 faces of the same coin.
+- \(\lambda_{poisson}\) is identical to rate parameter \(\lambda_{exponential}\). <br>
+
+*Note: If the number of events in a given interval follow a Poisson distribution, then the waiting time between 
+those events will necessarily follow an Exponential distribution.* 
+{{< /alert >}}
+
+{{< answer >}}
+Lets see the **proof** for the above statement. <br><br>
+**Poisson Case:** <br>
+The probability of observing exactly 'k' events in a time interval of length 't' <br>
+with an average rate of \( \lambda \) events per unit time is given by - <br>
+\[ PMF = P(X=k) = \dfrac{(\lambda t)^k e^{-\lambda t}}{k!} \] <br>
+
+The event that waiting time until next event > t, is same as observing '0' events in that interval. <br>
+=> We can use the PMF of Poisson distribution with k=0. <br>
+\[ PMF = P(X=k=0) = \dfrac{(\lambda t)^0 e^{-\lambda t}}{0!} = e^{-\lambda t}
+\] <br>
+
+**Exponential Case:** <br>
+Now, lets consider exponential distribution that models the waiting time 'T' until next event. <br>
+The event that waiting time 'T' > t, is same as observing '0' events in that interval. <br>
+\[ CDF = P(X>t) = e^{-\lambda t} \]
+
+**Observation:** <br>
+*Exponential distribution is a direct consequence of Poisson distribution probability of '0' events.*
+{{</ answer >}}
+<br>
+
+{{< question >}}
+Consider a machine that fails, on an average, every 20 hours. What is the probability of having NO failures in 
+the next 10 hours?
+{{</ question >}}
+
+{{< answer >}}
+**Using Poisson:** <br>
+Average failure rate, \(\lambda\) = 1/20 = 0.05 <br>
+Time interval, t = 10 hours <br>
+Number of events, k = 0 <br>
+Average number of events in interval, (\(\lambda t\)) = (1/20) * 10 = 0.5 <br>
+Probability of having NO failures in the next 10 hours = ? <br>
+\[ P(X=0) = \dfrac{(\lambda t)^0 e^{-\lambda t}}{0!} = e^{-\lambda t} \\
+= e^{-0.5} \approx 0.6065 \\
+\approx 60.65\%\] <br>
+
+**Using Exponential:** <br>
+What is the probability that wait time until next failure > 10 hours? <br>
+Waiting time, T > t = 10 hours. <br>
+Average number of failures per hour, \(\lambda\) = 1/20 per hour<br>
+\[ CDF = P(X>t) = e^{-\lambda t} \\ 
+P(T>10) = e^{-(1/20) * 10} \\
+= e^{-0.5} \approx 0.6065 \\
+\approx 60.65\%\] <br>
+
+*Therefore, we have seen that this problem can be solved using both Poisson and Exponential distribution.*
+
+{{</ answer >}}
+
+
 
 <br><br>
 ```End of Section```
