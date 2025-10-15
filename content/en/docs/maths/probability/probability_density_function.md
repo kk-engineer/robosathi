@@ -287,7 +287,8 @@ P(X > t+s \mid X > t) = \dfrac{P(X > t+s ~and~ X > t)}{P(X > t)} \\
 _Hence, probability that the electronic item will survive for an additional time 's' days <br>
 is independent of the time 't' days it has already survived._ <br> 
 {{</ answer >}}
-<br>
+
+{{< video "https://youtu.be/DFjUpTcLooM?si=FP8Lq_5MDOFhvm6h" >}}
 
 {{< alert title="Relation of Exponential Distribution and Poisson Distribution" color="success" >}}
 Poisson distribution models the number of events occurring in a fixed interval of time, 
@@ -350,7 +351,7 @@ P(T>10) = e^{-(1/20) * 10} \\
 *Therefore, we have seen that this problem can be solved using both Poisson and Exponential distribution.*
 {{</ answer >}}
 
-
+{{< video "https://youtu.be/6TTJXMEZAKo?si=sll0sJfy1aRep3c_"  >}}
 
 <br><br>
 ```End of Section```
