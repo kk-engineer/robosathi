@@ -55,6 +55,155 @@ f_{X,Y}(x,y) = \iint_{A \in \mathbb{R}^2} f_{X,Y}(x,y) dy dx
 For example:
 - If we consider 2 random variables, say, height(X) and weight(Y), then the joint distribution will tell us 
 the probability of finding a person having a particular height and weight.
+<br>
+
+{{< question >}}
+There are 2 bags; bag_1 has 2 red balls & 3 blue balls, bag_2 has 3 red balls & 2 blue balls. <br>
+A ball is picked at random from each bag, such that both draws are independent of each other. <br>
+Let's use this example to understand joint probability. <br>
+{{</ question >}}
+<br>
+![](https://robosathi.com/images/joint_marginal_example_1.png)
+<br>
+{{< answer >}}
+Let **A** & **B** be discrete random variables associated with the outcome of the ball drawn from first and second bags
+respectively. <br>
+
+|              | A = Red        | A = Blue       |
+|--------------|----------------|----------------|
+| B = Red      | 2/5*3/5 = 6/25 | 3/5*3/5 = 9/25 |
+| B = Blue     | 2/5*2/5 = 4/25 | 3/5*2/5 = 6/25 |
+|  |  |           |
+
+Since, the draws are independent, joint probability = P(A) * P(B) <br>
+Each of the 4 cells in above table shows the probability of combination of results from 2 draws or joint probability. <br>
+{{</ answer >}}
+<br><br>
+
+{{< definition >}}
+**Marginal Probability Distribution:** <br>
+It describes the probability distribution of an individual random variable in a joint distribution, 
+without considering the outcomes of other random variables. <br>
+- If we have the joint distribution, then we can get the marginal distribution of each random variable from it. <br>
+- Marginal probability equals summing the joint probability across other random variables. <br>
+
+**Marginal CDF:** <br>
+We know that _Joint CDF_ = 
+\[
+F_{X,Y}(a,b) = P(X \le a, Y \le b),~ -\infty < a, b < \infty
+\]
+_Marginal CDF_ = 
+\[
+F_X(a, \infty) = P(X \le a, Y < \infty) = P(X \le a)
+\]
+
+**Discrete Case:** <br>
+\[
+F_X(a) = P(X \le a, Y \le \infty) = \sum_{x_i \le a} \sum_{y_j \in \mathbb{R}} P(X = x_i, Y = y_j)
+\]
+**Continuous Case:** <br>
+\[
+F_X(a) = P(X \le a, Y \le \infty) = \int_{-\infty}^{a} \int_{-\infty}^{\infty} f_{X,Y}(x,y)dydx = \int_{-\infty}^{\infty} f_{X,Y}(x,y)dy
+\]
+
+**Law of Total Probability** <br>
+We know that _Joint Probability Distribution_ = 
+\[
+P_{X,Y}(x,y) = P(X = x, Y = y)
+\]
+
+The events \((Y=y)\) partition the sample space, such that:<br>
+1. \( (Y=y_1) \cap (Y=y_2) \cap ... \cap (Y=y_n)  = \Phi \)
+2. \( (Y=y_1) \cup (Y=y_2) \cup ... \cup (Y=y_n) = \Omega \) 
+<br>
+
+From _Law of Total Probability_, we get: <br><br>
+**Marginal PMF:** <br>
+\[
+P_X(x) = P(X=x) = \sum_{y} P_{X,Y}(x,y) = \sum_{y} P(X = x, Y = y)
+\]
+
+**Marginal PDF:** <br>
+\[
+f_X(x) = \int_{-\infty}^{\infty} f_{X,Y}(x,y) dy
+\]
+<br>
+{{</ definition >}}
+
+{{< question >}}
+**Setup**: Roll a die + Toss a coin. <br>
+X: Roll a die ; \( \Omega = \{1,2,3,4,5,6\} \) <br>
+Y: Toss a coin ; \( \Omega = \{H,T\} \) <br>
+{{</ question >}}
+
+{{< answer >}}
+Joint PMF = \( P_{X,Y}(x,y) = P(X=x, Y=y) = 1/6*1/2 = 1/12\) <br>
+Marginal PMF of X = \( P_X(x) =\sum_{y \in \mathbb{\{H,T\}}} P_{X,Y}(x,y) = = 1/12+1/12 = 1/6\) <br>
+=> Marginally, X is uniform over 1-6 i.e a fair die. <br>
+
+Marginal PMF of Y = \( P_Y(y) = \sum_{1}^6 P_{X,Y}(x,y) = 6*(1/12) = 1/2 \) <br>
+=> Marginally, Y is uniform over H,T i.e a fair coin. <br>
+{{</ answer >}}
+
+{{< question >}}
+**Setup**: X and Y are two continuous uniform distribution. <br>
+\( X \sim U(0,1) \) <br>
+\( Y \sim U(0,1) \) <br>
+{{</ question >}}
+
+{{< answer >}}
+Marginal PDF = \(f_X(x) = \int_{-\infty}^{\infty} f_{X,Y}(x,y) dy \) <br>
+Joint PDF = 
+$$
+f_{X,Y}(x,y) = 
+\begin{cases}
+1 & \text{if } x \in [0,1], y \in [0,1] \\
+0 & \text{otherwise } 
+\end{cases}
+$$
+Marginal PDF = 
+
+\[ 
+\begin{aligned}
+f_X(x) &= \int_{0}^{1} f_{X,Y}(x,y) dy  \\
+&= \int_{0}^{1} 1 dy  \\
+&= 1 \\
+f_X(x) &= 
+\begin{cases}
+1 & \text{if } x \in [0,1] \\
+0 & \text{otherwise } 
+\end{cases}
+\end{aligned}
+\]
+{{</ answer >}}
+
+
+For example:
+- If we consider 2 random variables, say, height(X) and weight(Y), then the joint distribution will tell us 
+the probability of finding a person having a particular height and weight.
+<br>
+
+{{< question >}}
+There are 2 bags; bag_1 has 2 red balls & 3 blue balls, bag_2 has 3 red balls & 2 blue balls. <br>
+A ball is picked at random from each bag, such that both draws are independent of each other. <br>
+Let's use this example to understand joint probability. <br>
+{{</ question >}}
+<br>
+![](https://robosathi.com/images/joint_marginal_example_1.png)
+<br>
+{{< answer >}}
+Let **A** & **B** be discrete random variables associated with the outcome of the ball drawn from first and second bags
+respectively. <br>
+
+|              | A = Red        | A = Blue       |
+|--------------|----------------|----------------|
+| B = Red      | 2/5*3/5 = 6/25 | 3/5*3/5 = 9/25 |
+| B = Blue     | 2/5*2/5 = 4/25 | 3/5*2/5 = 6/25 |
+|  |  |           |
+
+Since, the draws are independent, joint probability = P(A) * P(B) <br>
+Each of the 4 cells in above table shows the probability of combination of results from 2 draws or joint probability. <br>
+{{</ answer >}}
 
 
 <br><br>
