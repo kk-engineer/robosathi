@@ -173,7 +173,6 @@ It gives the direction of the relationship between the variables. <br>
 \end{aligned}
 \]
 
-
 *Note: For both direction as well as magnitude, we use Correlation.* <br>
 Let's use expectation to compute the co-variance of two random variables X & Y: <br>
 \[
