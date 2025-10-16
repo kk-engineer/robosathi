@@ -10,6 +10,9 @@ math: true
 In this section, we will understand Expectation, Variance and Co-Variance of a Random Variable.<br>
 {{% /pageinfo %}}
 
+{{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxcI3JyTIwOTKXY7ANhw__v1&si=MNoo5fxBo_10dLuM" >}}
+<br>
+
 {{< definition >}}
 **Expectation:** <br> 
 Long run average of the outcomes of a random experiment.<br>
@@ -106,38 +109,38 @@ What is the variance of a continuous uniform random variable distributed over th
 {{< /question >}}
 
 {{< answer >}}
+PDF of continuous uniform random variable = 
 $$
-\text{PDF of continuous uniform random variable } = \\
-f_X(x) = 
+\begin{aligned}
+f_X(x) &= 
 \begin{cases}
 \dfrac{1}{b-a}, & x \in [a,b] \\
 0, & \text{otherwise.}
 \end{cases} \\
+\end{aligned}
 $$
 
 \[
+\begin{aligned}
 \text{Expected value = mean } = \\[0.5em]
 E[X] = \dfrac{b+a}{2} \\[0.5em]
-\]
-
-\[
 Var[X] = E[X^2] - E[X]^2 
+\end{aligned}
 \]
 
-For calculating \(Var[X]\), we know \(E[X]\), but we need to calculate \(E[X^2]\). <br>
+We know \(E[X]\) already, now we will calculate \(E[X^2]\):
 
 \[
 \begin{aligned}
-E[X] &= \int_{-\infty}^{\infty} x.f(x) dx \\[0.9em]
-E[X^2] &= \int_{-\infty}^{\infty} x^2.f(x) dx \\[0.9em]
-&= \int_{-\infty}^{a} x^2.f(x) dx + \int_{a}^{b} x^2.f(x) dx + \int_{b}^{\infty} x^2.f(x) dx\\[0.5em]
-\text{Since, the PDF is defined only in the range [a,b] } \\
-&= 0 + \int_{a}^{b} x^2.f(x) dx + 0 \\
-&= \int_{a}^{b} x^2.f(x) dx \\
-&= \dfrac{1}{b-a} \int_{a}^{b} x^2 dx \\[0.9em]
-&= \dfrac{1}{b-a} * \{\frac{x^3}{3}\}_{a}^{b} \\[0.9em]
-&= \dfrac{1}{b-a} * \{\frac{b^3 - a^3}{3}\} \\[0.9em]
-&= \dfrac{1}{b-a} * \{\frac{(b-a)(b^2+ab+a^2)}{3}\} \\[0.5em]
+E[X] &= \int_{-\infty}^{\infty} x.f(x) dx \\
+E[X^2] &= \int_{-\infty}^{\infty} x^2.f(x) dx \\
+&= \int_{-\infty}^{a} x^2f(x) dx + \int_{a}^{b} x^2f(x) dx + \int_{b}^{\infty} x^2f(x) dx\\
+&= 0 + \int_{a}^{b} x^2f(x) dx + 0 \\
+&= \int_{a}^{b} x^2f(x) dx \\
+&= \dfrac{1}{b-a} \int_{a}^{b} x^2 dx \\
+&= \dfrac{1}{b-a} * \{\frac{x^3}{3}\}_{a}^{b} \\
+&= \dfrac{1}{b-a} * \{\frac{b^3 - a^3}{3}\} \\
+&= \dfrac{1}{b-a} * \{\frac{(b-a)(b^2+ab+a^2)}{3}\} \\
 E[X^2] &= \dfrac{b^2+ab+a^2}{3}
 \end{aligned}
 \]

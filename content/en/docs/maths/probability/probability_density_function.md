@@ -10,6 +10,9 @@ math: true
 In this section, we will understand Probability Density Function of a Continuous Random Variable.<br>
 {{% /pageinfo %}}
 
+{{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxcI3JyTIwOTKXY7ANhw__v1&si=MNoo5fxBo_10dLuM" >}}
+<br>
+
 {{< definition >}}
 **Probability Density Function(PDF):** <br>
 This is a function used for continuous random variables to describe the likelihood of the variable taking on a value

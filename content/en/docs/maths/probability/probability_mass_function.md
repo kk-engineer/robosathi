@@ -10,6 +10,9 @@ math: true
 In this section, we will understand Probability Mass Function of a Discrete Random Variable.<br>
 {{% /pageinfo %}}
 
+{{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxcI3JyTIwOTKXY7ANhw__v1&si=MNoo5fxBo_10dLuM" >}}
+<br>
+
 {{< definition >}}
 **Probability Mass Function(PMF):** <br>
 It gives the exact value of a probability for a discrete random variable at a specific value \(x\).<br>

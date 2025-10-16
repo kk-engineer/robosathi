@@ -11,6 +11,7 @@ In this section, we will understand different kinds of Independence of Events.<b
 {{% /pageinfo %}}
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxcI3JyTIwOTKXY7ANhw__v1&si=MNoo5fxBo_10dLuM" >}}
+<br>
 
 {{< definition >}}
 **Independence of Events:** <br>

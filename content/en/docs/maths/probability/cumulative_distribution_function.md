@@ -10,7 +10,9 @@ math: true
 In this section, we will understand Cumulative Distribution Function of a Random Variable.<br>
 {{% /pageinfo %}}
 
-{{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxcI3JyTIwOTKXY7ANhw__v1&si=MNoo5fxBo_10dLuM" >}}
+{{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxcI3JyTIwOTKXY7ANhw__v1&si=MNoo5fxBo_10dLuM" >}} 
+<br>
+
 {{< definition >}}
 **Random Variable(RV):** <br>
 A random variable is a function that maps a the outcomes of a sample space to a real number.<br>
