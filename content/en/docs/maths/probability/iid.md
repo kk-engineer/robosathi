@@ -70,3 +70,69 @@ Y = \{1,2,3,4,5,6\} \\
 Here, clearly, X and Y are independent. <br>
 
 2. Toss a coin twice. <br>
+\(X\) = Number of heads = \(\{0,1,2\}\) <br>
+\(Y\) = Number of tails = \(\{0,1,2\}\) <br>
+
+X, Y are NOT independent, but mutually exclusive, because if we know about one, then we automatically know about the other. <br>
+
+3. \(X\) is a continuous uniform random variable \( X \sim U(-1,1) \). <br>
+\(Y = 2X\). <br>
+
+\[
+f_X(x) = 
+\begin{cases} 
+\frac{1}{b-a} = \frac{1}{1-(-1)} = \frac{1}{2}  & \text{if } x \in [a,b]  \\
+0 & \text{otherwise} 
+\end{cases} \\
+\text{}\\
+E[X] = \text{ mean } =  \frac{a+b}{2} = \frac{-1+1}{2} = 0 \\
+\]
+<br>
+Let's check for independence of \(X\) and \(Y\) i.e \(E[XY] = E[X]E[Y]\) or not? <br>
+\[
+\text{We know that: } E[X] = 0\\
+E[Y] = E[2X] = 2E[X] = 0 \\
+\tag{1} E[X]E[Y] = 0
+\]
+Now, lets calculate the value of \(E[XY]\): <br>
+\[
+\begin{aligned}
+E[XY] &= E[X.2X] = 2.E[X^2] \\
+&= 2*\int_{-1}^{1} x^2 dx = 2*{\frac{x^3}{3}} \bigg|_{-1}^1 \\
+&= \frac{2}{3}*\{1^3-(-1)^3\} 
+& = \frac{2}{3}*2 = \frac{4}{3} \\
+\tag{2} E[XY] &= \frac{4}{3}
+\end{aligned}
+\]
+<br>
+
+From (1) and (2), we can say that:
+\[
+E[XY] ⍯ E[X]E[Y] \\
+\]
+Hence, \(X\) and \(Y\) are NOT independent.
+<br><br>
+
+{{< definition >}}
+**Identically Distributed** <br>
+Random variable X is said to be identically distributed if each sample comes from the same probability distribution,
+such as, Gaussian, Bernoulli, Uniform, etc with the same properties i.e mean, variance, etc are same. <br>
+Similarly, random variables X & Y are said to be identically distributed if they belong to the same probability distribution.<br> <br>
+{{</ definition >}}
+<br>
+
+{{< definition >}}
+**Independent & Identically Distributed(I.I.D)** <br>
+I.I.D assumption for samples(data points) in a dataset means that the samples are:
+- Independent, i.e, each sample is independent of the other.
+- Identically distributed, i.e, each sample is drawn from the same probability distribution.
+{{</ definition >}}
+For example: <br>
+- We take the heights of a random sample of people to estimate the average height of the population of a city.
+  - Here 'independent' assumption means that the height of each person in the sample is independent of the other person.<br>
+  Usually, heights of members of the same family may be highly correlated.<br> 
+  However, for practical purposes, we can assume that all the heights are independent of one another.
+  - And, for 'identically distributed' - we can assume that all the heights are from the same Gaussian distribution with some mean and variance.
+
+<br><br>
+```End of Section```
