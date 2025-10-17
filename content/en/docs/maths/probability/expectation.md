@@ -198,6 +198,7 @@ Cov(X,X) &= E[X^2] - E[X]^2 = Var[X] \\
 \]
 {{</ definition >}}
 
+{{< video "https://youtu.be/F83gibIzCho?si=PKKtqYJK5Qp69vPY&t=1" >}}
 
 <br><br>
 ```End of Section```

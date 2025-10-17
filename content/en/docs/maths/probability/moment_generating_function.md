@@ -24,7 +24,9 @@ _Important moments:_ <br>
 3. **Skewness** : Asymmetry 
 4. **Kurtosis** : Tailedness
 {{</ definition >}}
-<br><br>
+
+{{< video "https://youtu.be/VR-yHsEGyww?si=i-JZqbPxFrErODeP" >}}
+<br>
 
 {{< definition >}}
 **Moment Generating Function:** <br>
@@ -93,6 +95,7 @@ M_X(t) = E[e^{tX}] = \sum_{i=1}^{\infty} e^{tx} P(X=x)
 \]
 {{</ definition >}}
 
+{{< video "https://youtu.be/KEqqV54Raz8?si=6wjZKKChX9XWyEoY" >}}
 
 <br><br>
 ```End of Section```
