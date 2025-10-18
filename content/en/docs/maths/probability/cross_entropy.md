@@ -47,7 +47,8 @@ It conveys how much 'information' we expect to gain from a random event. <br>
 H(X) = E[-log(P(x)] = -\sum_{x \in X} P(x)log(P(x))
 \]
 {{</ definition >}}
-For example: 
+
+{{< answer >}}
 - _Case 1_: <br>
     Toss a _fair_ coin; \(P(H) = P(T) = 0.5 = 2^{-1}\) <br>
     Surprise factor (Heads or Tails) = \(-log(P(x)) =  -log_2(0.5) = -log_2(2^{-1}) = 1~bit\) <br>
@@ -60,6 +61,7 @@ For example:
     Entropy = \( \sum_{x \in X} P(x)log(-P(x)) = 0.9*0.15 + 0.1*3.32 \approx 0.47 ~bits\) <br>
 
 Therefore, a biased coin is less surprising on an average than a fair coin, hence lower entropy.
+{{</ answer >}}
 <br><br>
 
 {{< definition >}}
@@ -69,13 +71,12 @@ from a true model \(P\). <br>
 - It measures how surprised we are on an average, if the true distribution is \(P\), but we predict using another distribution 
 \(Q\). <br>
 
-
 \[
 H(P,Q) = E[-log(Q(x)] = -\sum_{i=1}^n P(x_i)log(Q(x_i)) \\[10pt]
 \text{ where true distribution of X} \sim P \text{ but the predictions are made using another distribution } Q
 \]
 {{</ definition >}}
-For example: <br>
+{{< answer >}}
 A model is trained to classify images as '_cat_' or '_dog_'. Say, for an input image the true label is '_cat_', 
 so the true distribution: <br>
 \(P = [1.0 ~(cat), 0.0 ~(dog)]\). <br>
@@ -91,6 +92,7 @@ Cross Entropy = \(H(P, Q_A) = -\sum_{i=1}^n P(x_i)log(Q_A(x_i)) \) <br>
 Cross Entropy = \(H(P, Q_B) = -\sum_{i=1}^n P(x_i)log(Q_B(x_i)) \) <br>
 \(= -[1*log_2(0.2) + 0*log_2(0.8)] \approx 2.32 ~bits\) <br>
 *Note: Here the cross-entropy is very high, since the predicted value is quite far from the actual truth, i.e high surprise.* <br>
+{{</ answer >}}
 <br><br>
 
 {{< definition >}}
@@ -116,7 +118,7 @@ D_{KL}(P \parallel Q) &= \int_{-\infty}^{\infty} p(x)log(\frac{p(x)}{q(x)})dx
 - KL divergence is NOT symmetrical ,i.e, \(D_{KL}(P \parallel Q) ⍯ (D_{KL}(Q \parallel P)\).
 {{</ definition >}}
 
-For example: <br>
+{{< answer >}}
 Using the same cat, dog classification problem example as mentioned above. <br>
 A model is trained to classify images as '_cat_' or '_dog_'. Say, for an input image the true label is '_cat_', 
 so the true distribution: <br>
@@ -133,6 +135,7 @@ Model A incurs an additional 0.32 bits of surprise due to its imperfect predicti
 - _Model B_: <br>
 \( D_{KL}(P \parallel Q) = H(P, Q) - H(P) = 2.32 - 0 = 2.32 ~bits \) <br>
 Model B has much more '_information loss_' or incurs higher '_penalty_' of 2.32 bits as its prediction was from from the truth. <br>
+{{</ answer >}}
 <br><br>
 
 {{< definition >}}
@@ -149,7 +152,8 @@ D_{JS}(P \parallel Q) = \frac{1}{2}[D_{KL}(P \parallel M) + D_{KL}(Q \parallel M
 \]
 
 {{</ definition >}}
-For example: <br>
+
+{{< answer >}}
 Let's continue the cat and dog image classification example discussed above.<br>
 A model is trained to classify images as '_cat_' or '_dog_'. Say, for an input image the true label is '_cat_', 
 so the true distribution: <br>
@@ -195,6 +199,7 @@ D_{JS}(P \parallel Q) &= \frac{1}{2}[D_{KL}(P \parallel M) + D_{KL}(Q \parallel 
 \]
 
 Therefore, lower JS divergence value => P and Q are more similar. <br>
+{{</ answer >}}
 
 <br><br>
 ```End of Section```

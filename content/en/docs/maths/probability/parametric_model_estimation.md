@@ -98,25 +98,36 @@ Therefore, **Maximum Likelihood Estimation** is the parameter \(\Theta_{ML}\) th
 
 {{</ definition >}}
 
-For example: 
-1. Let's do a maximum likelihood estimation of parameters \(\theta\) for the **Bernoulli** distribution.
-\(X_1, X_2, \dots, X_n\) are I.I.D. *Bernoulli* random variable with PMF as below: <br>
+{{< question >}}
+Given \(X_1, X_2, \dots, X_n\) are I.I.D. *Bernoulli* random variable with PMF as below: <br>
 \[
 P(X_i = 1) = \theta \\
 P(X_i = 0) = 1 - \theta
 \]
-We need to estimate the parameter \(\theta\). <br>
+Estimate the parameter \(\theta\) using Maximum Likelihood Estimation. <br>
+{{</ question >}}
+<br>
+
+{{< answer >}} 
 Let, \(n_1 = \) number of 1's in the dataset. <br>
 
+**Likelihood Function:** <br>
 \[
 \begin{aligned}
-\text{Likelihood Function: } \\
 \mathcal{L_{X_1, X_2, \dots, X_n}}(\Theta) &= \prod_{i=1}^{n} P_{\Theta}(X_i) \\
 &= \theta^{n_1} (1 - \theta)^{n - n_1} \\
-\text{Log-Likelihood Function: } \\
+\end{aligned}
+\]
+**Log-Likelihood Function:** <br>
+\[
+\begin{aligned}
 \bar{L}_{X_1, X_2, \dots, X_n}(\Theta) &= log [\theta^{n_1} (1 - \theta)^{n - n_1}] \\
 &= n_1 log \theta + (n - n_1) log (1 - \theta) \\
-\text{Maximum Likelihood Estimation: } \\
+\end{aligned}
+\]
+**Maximum Likelihood Estimation:** <br>
+\[
+\begin{aligned}
 \Theta_{ML} &= \underset{\Theta}{\mathrm{argmax}}\ \bar{L}_{X_1, X_2, \dots, X_n}(\Theta) \\
 &= \underset{\Theta}{\mathrm{argmax}}\ n_1 log \theta + (n - n_1) log (1 - \theta) \\
 \end{aligned}
@@ -139,18 +150,27 @@ with respect to \(\theta\) and equate it to zero. <br>
 
 Say, **e.g.**, we have 10 observations for the Bernoulli random variable as: 1,0,1,1,0,1,1,0,1,0. <br>
 Then, the parameter \(\Theta_{ML} = \frac{6}{10} = 0.6\) i.e proportion of 1's. <br>
+{{</ answer >}} 
+<br>
 
-2. Let's do a maximum likelihood estimation of parameters \(\mu\) and \(\sigma\) for the **Gaussian** distribution. <br>
-\(X_1, X_2, \dots, X_n\) are I.I.D. *Gaussian* \( \sim N(\mu, \sigma^2) \)  <br>
+{{< question >}}
+Given \(X_1, X_2, \dots, X_n\) are I.I.D. *Gaussian* \( \sim N(\mu, \sigma^2) \)  <br>
 \(x_1, x_2, \dots, x_n\) are the realisations/observations of the random variable. <br><br>
+Estimate the parameters \(\mu\) and \(\sigma\) of the *Gaussian* distribution using Maximum Likelihood Estimation. <br>
+{{</ question >}}
 
+{{< answer >}}
+**Likelihood Function:** <br>
 \[
 \begin{aligned}
-\text{Likelihood Function: } \\
 \mathcal{L_{X_1, X_2, \dots, X_n}}(\Theta) &= \prod_{i=1}^{n} f_{\mu, \sigma}(X_i) \\
 &= \prod_{i=1}^{n} \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x_i - \mu)^2}{2\sigma^2}} \\
 &= (\frac{1}{\sqrt{2\pi\sigma^2}})^n \prod_{i=1}^{n} e^{-\frac{(x_i - \mu)^2}{2\sigma^2}} \\
-\text{Log-Likelihood Function: } \\
+\end{aligned}
+\]
+**Log-Likelihood Function:** <br>
+\[
+\begin{aligned}
 \bar{L}_{X_1, X_2, \dots, X_n}(\Theta) &= log [(\frac{1}{\sqrt{2\pi\sigma^2}})^n \prod_{i=1}^{n} e^{-\frac{(x_i - \mu)^2}{2\sigma^2}}] \\
 &= log (2\pi\ \sigma^2)^{\frac{-n}{2}}  - \sum_{i=1}^{n} \frac{(x_i - \mu)^2}{2\sigma^2} \\
 => \bar{L}_{X_1, X_2, \dots, X_n}(\Theta) &= -\frac{n}{2} log (2\pi) -nlog(\sigma) - \frac{1}{2\sigma^2} \sum_{i=1}^{n} (x_i - \mu)^2 \\
@@ -193,7 +213,9 @@ and equating it to 0. <br>
 \]
 
 *Note: In general MLE is biased, i.e does NOT give an unbiased estimate => divides by \(n\) instead of \((n-1)\).* <br>
+{{</ answer >}}
 <br><Br>
+
 
 {{<definition >}}
 **Bayesian Statistics:** <br>
@@ -213,6 +235,117 @@ P(\Theta \mid X) = \frac{P(\Theta)P(X \mid \Theta)}{P(X)}
 \(P(X)\): **Evidence**: Probability of seeing the data \(X\). <br>
 
 {{</ definition >}}
+<br>
+
+{{< question >}}
+\(X_1, X_2, \dots, X_n\) are I.I.D. *Bernoulli* random variable. <br>
+\(x_1, x_2, \dots, x_n\) are the realisations, \(\Theta \in [0, 1] \). <br>
+Estimate the parameter \(\Theta\) using Bayesian statistics. <br>
+{{</ question >}}
+
+{{< answer >}}
+Let, \(n_1 = \) number of 1's in the dataset. <br>
+**Prior**: \(P(\Theta)\) : \(\Theta \sim U(0, 1) \), i.e, parameter \(\Theta\) comes from a continuos uniform
+distribution in the range [0,1]. <br>
+\(f_{\Theta}(\theta) = 1, \theta \in [0, 1] \) <br>
+
+**Likelihood**: \(P_{X \mid \Theta}(x \mid \theta) = \theta^{n_1} (1 - \theta)^{n - n_1} \). <br>
+
+**Posterior**: 
+\[
+f_{\Theta \mid X} (\theta \mid x) = \frac{f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)}{f_{X}(x)} \\
+\]
+
+*Note: The most difficult part is to calculate the denominator \(f_{X}(x)\).* <br>
+*So, either we try NOT to compute it all together, or we try to map it to some known functions to make calculations easier.* <br>
+
+We know that we can get the marginal probability by integrating the joint probability over another variable. <br>
+\[
+\tag{1} f_{X}(x) = \int_{Y}f_{X,Y}(x,y)dy \\
+\]
+Also from conditional probability, we know:
+\[
+\tag{2} f_{X \mid Y}(x \mid y) = \frac{f_{X,Y}(x,y)}{f_{Y}(y)} \\
+=> f_{X,Y}(x,y) = f_{Y}(y) f_{X \mid Y}(x \mid y)
+\]
+From equations 1 and 2, we have:
+\[
+\tag{3} f_{X}(x) = \int_{Y}f_{Y}(y) f_{X \mid Y}(x \mid y)dy
+\]
+
+Now let's replace the value of \(f_{X}(x) \) in the posterior from equation 3: <br>
+**Posterior**: 
+\[
+\begin{aligned}
+f_{\Theta \mid X} (\theta \mid x) &= \frac{f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)}{f_{X}(x)} \\[10pt]
+&= \frac{f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)}{\int_{\Theta}f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)d\theta} \\[10pt]
+&= \frac{f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)}{\int_{0}^1f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)d\theta} \\[10pt]
+\text{ We know that: } f_{\Theta}(\theta) = 1, \theta \in [0, 1] \\
+&= \frac{1* P_{X \mid \Theta}(x \mid \theta)}{\int_{0}^1 1* P_{X \mid \Theta}(x \mid \theta)d\theta} \\[10pt]
+=> f_{\Theta \mid X} (\theta \mid x) & = \frac{\theta^{n_1} (1 - \theta)^{n - n_1}}{\int_{0}^1 \theta^{n_1} (1 - \theta)^{n - n_1}} \\ 
+\end{aligned}
+\]
+
+**Beta Function:** <br>
+It is a special mathematical function denoted by B(a, b) or β(a, b) that is defined by the integral formula: <br>
+\[
+β(a, b) = \int_{0}^1 t^{a-1}(1-t)^{b-1}dt
+\]
+*Note: We can see that the denominator of the posterior is of the form of Beta function.* <br>
+**Posterior:**
+\[
+f_{\Theta \mid X} (\theta \mid x) = \frac{\theta^{n_1} (1 - \theta)^{n - n_1}}{β(n_1+1, n-n_1+1)}
+\]
+{{</ answer >}}
+
+<br>
+
+{{< question >}} 
+Suppose, in the above example, we are told that the parameter \(\Theta\) is closer to 1 than 0. <br>
+How will we incorporate this useful information (apriori knowledge) into our parameter estimation? <br>
+
+\[
+f_{\Theta}(\theta) = 
+\begin{cases} 
+2\Theta,  & \forall ~ \theta \in [0,1]  \\
+0, & \text{otherwise} 
+\end{cases} \\
+\]
+
+{{</ question >}} 
+
+{{< answer >}}
+Since, we know apriori that \(\Theta\) is closer to 1 than 0, we should take this initial belief into account
+to do our parameter estimation. <br>
+
+**Prior:** <br>
+\[
+f_{\Theta}(\theta) = 
+\begin{cases} 
+2\Theta,  & \forall ~ \theta \in [0,1]  \\
+0, & \text{otherwise} 
+\end{cases} \\
+\]
+
+**Posterior**: 
+\[
+\begin{aligned}
+f_{\Theta \mid X} (\theta \mid x) &= \frac{f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)}{f_{X}(x)} \\[10pt]
+&= \frac{f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)}{\int_{\Theta}f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)d\theta} \\[10pt]
+&= \frac{f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)}{\int_{0}^1f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)d\theta} \\[10pt]
+\text{ We know that: } f_{\Theta}(\theta) = 2\Theta, \theta \in [0, 1] \\
+&= \frac{2\Theta * P_{X \mid \Theta}(x \mid \theta)}{\int_{0}^1 2\Theta* P_{X \mid \Theta}(x \mid \theta)d\theta} \\[10pt]
+& = \frac{2\Theta * \theta^{n_1} (1 - \theta)^{n - n_1}}{\int_{0}^1 2\Theta * \theta^{n_1} (1 - \theta)^{n - n_1}} \\[10pt]
+=> f_{\Theta \mid X} (\theta \mid x) &= \frac{\theta^{n_1+1} (1 - \theta)^{n - n_1}}{β(n_1+2, n-n_1+1)}
+\end{aligned}
+\]
+
+*Note: If we do NOT have enough data, then we should NOT ignore our intial belief.* <br>
+*However, if we have enough data, then the data will override our initial belief and the posterior will be dominated by data.* <br>
+{{</ answer >}}
+<br><br>
+
+![](https://robosathi.com/images/mle.png)
 
 
 <br><br>
