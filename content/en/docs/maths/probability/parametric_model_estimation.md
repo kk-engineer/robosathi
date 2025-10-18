@@ -346,7 +346,129 @@ f_{\Theta \mid X} (\theta \mid x) &= \frac{f_{\Theta}(\theta) P_{X \mid \Theta}(
 <br><br>
 
 ![](https://robosathi.com/images/mle.png)
+{{< alert color="warning" >}}**Plot:** Prior, Posterior & MLE.{{< /alert >}}
 
+
+*Note: Bayesian approach gives us a probability distribution of parameter \(Theta\).*
+
+{{< question >}}
+What if we want to have a single point estimate of the parameter \(\Theta\) instead of a probability distribution? <br>
+{{</ question >}}
+
+{{< answer >}}
+We can use **Bayesian Point Estimators**, after getting the posterior distribution, to summarize it with a single value for 
+practical use, such as, <br>
+- Maximum A Posteriori (MAP) Estimator
+- Minimum Mean Square Error (MMSE) Estimator
+{{</ answer >}}
+<br><br>
+
+{{< definition >}}
+**Maximum A Posteriori (MAP) Estimator:** <br>
+It finds the mode(peak) of the posterior distribution. <br>
+- MAP has the minimum probability of error, since it picks single most probable value. <br>
+
+\[
+\Theta_{MAP} = \underset{\Theta}{\mathrm{argmax}}\ f_{\Theta \mid X} (\theta \mid x) \text{, \(\theta\) is continuous} \\
+\Theta_{MAP} = \underset{\Theta}{\mathrm{argmax}}\ P_{\Theta \mid X} (\theta \mid x) \text{, \(\theta\) is discrete}
+\]
+{{</ definition >}}
+
+{{< question >}}
+Given a Gaussian distribution, \( X \sim N(\Theta, 1) \) with a prior belief that \(\mu\) is equally likely to be 0 or 1.<br>
+Estimate the unknown parameter \(\mu\) using MAP. <br>
+{{</ question >}}
+
+{{< answer >}}
+Given that :  <br>
+\(\Theta\) is discrete, with probability 0.5 for both 0 and 1. <br>
+=> The Gaussian distribution is equally likely to be centered at 0 or 1. <br>
+Variance: \(\sigma^2 = 1\) <br>
+
+**Prior:** <br>
+\[
+P_{\Theta}(\theta=0) =  P_{\Theta}(\theta=1) = 1/2
+\]
+
+**Likelihood:** <br>
+\[
+f_{X \mid \Theta}(x \mid \theta) = \prod_{i=1}^n \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x_i-\theta)^2}{2 \sigma^2}} \\
+f_{X \mid \Theta}(x \mid \theta) = \prod_{i=1}^n \frac{1}{\sqrt{2\pi}} e^{-\frac{(x_i-\theta)^2}{2}}, \text{ since \(\sigma = 1\)} 
+\]
+
+**Posterior:** <br>
+\[
+P_{\Theta \mid X} (\theta \mid x) = \frac{P_{\Theta}(\theta) f_{X \mid \Theta}(x \mid \theta)}{f_{X}(x)} \\
+\]
+
+We need to find: 
+\[
+\underset{\Theta}{\mathrm{argmax}}\ P_{\Theta \mid X} (\theta \mid x)
+\]
+
+Taking log on both sides: <br>
+\[
+\tag{1}\log P_{\Theta \mid X} (\theta \mid x) = \log P_{\Theta}(\theta) + \log f_{X \mid \Theta}(x \mid \theta) - \log f_{X}(x)
+\]
+
+Let's calculate the log-likelihood function first - 
+\[
+\begin{aligned}
+\log f_{X \mid \Theta}(x \mid \theta) &= \log \prod_{i=1}^n \frac{1}{\sqrt{2\pi}} e^{-\frac{(x_i-\theta)^2}{2}} \\
+&= log(\frac{1}{\sqrt{2\pi}})^n + \sum_{i=1}^n \log (e^{-\frac{(x_i-\theta)^2}{2}}), \text{ since \(\sigma = 1\)} \\
+&= n\log(\frac{1}{\sqrt{2\pi}}) + \sum_{i=1}^n -\frac{(x_i-\theta)^2}{2} \\
+=> \tag{2} \log f_{X \mid \Theta}(x \mid \theta) &= n\log(\frac{1}{\sqrt{2\pi}}) - \sum_{i=1}^n \frac{(x_i-\theta)^2}{2}
+\end{aligned}
+\]
+
+Here computing \(f_{X}(x)\) is difficult. <br>
+So, instead of differentiating above equation wrt \(\Theta\), and equating to 0, <br>
+we will calculate the above expression for \(\theta=0\) and \(\theta=1\) and compare the values.<br>
+This way we can get rid of the common value \(f_{X}(x)\) in both expressions that is not dependent on \(\Theta\). <br>
+
+When \(\theta=1\): <br>
+\[
+\begin{aligned}
+\log P_{\Theta \mid X} (1 \mid x) &= \log P_{\Theta}(1) + \log f_{X \mid \Theta}(x \mid 1) \\
+\tag{3} \log P_{\Theta \mid X} (1 \mid x) &= \log(1/2) + n\log(\frac{1}{\sqrt{2\pi}}) - \sum_{i=1}^n \frac{(x_i - 1)^2}{2}\\
+\end{aligned}
+\]
+
+Similarly, when \(\theta=0\): <br>
+\[
+\begin{aligned}
+\log P_{\Theta \mid X} (0 \mid x) &= \log P_{\Theta}(0) + \log f_{X \mid \Theta}(x \mid 0) \\
+\tag{4} \log P_{\Theta \mid X} (0 \mid x) &= \log(1/2) + n\log(\frac{1}{\sqrt{2\pi}}) - \sum_{i=1}^n \frac{(x_i - 0)^2}{2}\\
+\end{aligned}
+\]
+
+So, we can say that \(\theta = 1\) only if : <br>
+the value of the above expression for \(\theta = 1\) > the value of the above expression for \(\theta = 0\)
+From equation 3 and 4: <br>
+\[
+\begin{aligned}
+&\log(1/2) + n\log(\frac{1}{\sqrt{2\pi}}) - \sum_{i=1}^n \frac{(x_i - 1)^2}{2} > 
+\log(1/2) + n\log(\frac{1}{\sqrt{2\pi}}) - \sum_{i=1}^n \frac{(x_i - 0)^2}{2} \\
+=> &\cancel{\log(1/2)} + \cancel{n\log(\frac{1}{\sqrt{2\pi}})} - \sum_{i=1}^n \frac{(x_i - 1)^2}{2} > 
+\cancel{\log(1/2)} + \cancel{n\log(\frac{1}{\sqrt{2\pi}})} - \sum_{i=1}^n \frac{(x_i - 0)^2}{2} \\
+=> &\sum_{i=1}^n \frac{(x_i - 0)^2}{2} - \sum_{i=1}^n \frac{(x_i - 1)^2}{2} > 0 \\
+=> & \sum_{i=1}^n \frac{\cancel{x_i^2} - \cancel{x_i^2} + 2x_i -1 }{2} > 0 \\
+=> & \sum_{i=1}^n [x_i - \frac{1}{2}] > 0 \\
+=> & \sum_{i=1}^n x_i  - \frac{n}{2} > 0 \\
+=> & \sum_{i=1}^n x_i  > \frac{n}{2} \\
+=> & \frac{1}{n} \sum_{i=1}^n x_i > \frac{1}{2} \\
+=> & \Theta_{MAP}(X) = 
+\begin{cases}
+1 & \text{if } \frac{1}{n} \sum_{i=1}^n x_i > \frac{1}{2} \\
+0 & \text{otherwise.}
+\end{cases}
+\end{aligned}
+\]
+
+*Note: If the prior is uniform then \(\Theta_{MAP} = \Theta_{MLE}\), because uniform prior does NOT give any information
+about the initial bias, and all possibilities are equally likely.*
+{{</ answer >}}
+<br><br>
 
 <br><br>
 ```End of Section```
