@@ -113,8 +113,8 @@ D_{KL}(P \parallel Q) &= \int_{-\infty}^{\infty} p(x)log(\frac{p(x)}{q(x)})dx
 *Note:*
 - If \(P = Q\) ,i.e, P and Q are the same distributions, then KL Divergence = 0.
 - KL divergence is NOT symmetrical ,i.e, \(D_{KL}(P \parallel Q) ⍯ (D_{KL}(Q \parallel P)\).
-
 {{</ definition >}}
+
 For example: <br>
 Using the same cat, dog classification problem example as mentioned above. <br>
 A model is trained to classify images as '_cat_' or '_dog_'. Say, for an input image the true label is '_cat_', 
@@ -134,7 +134,66 @@ Model A incurs an additional 0.32 bits of surprise due to its imperfect predicti
 Model B has much more '_information loss_' or incurs higher '_penalty_' of 2.32 bits as its prediction was from from the truth. <br>
 <br><br>
 
+{{< definition >}}
+**Jensen-Shannon Divergence:** <br>
+It is a smoothed and symmetric version of the Kullback-Leibler (KL) divergence and is calculated by averaging the <br>
+KL divergences between each of the two distributions and their combined average distribution. <br>
+- Symmetrical and smoothed version of KL divergence.
+- Always finite; KL divergence can be infinite if \( P ⍯ 0 ~and~ Q = 0 \).
+  - Makes JS divergence more stable for ML models where some predicted probabilities may be exactly 0. 
 
+\[
+D_{JS}(P \parallel Q) = \frac{1}{2}[D_{KL}(P \parallel M) + D_{KL}(Q \parallel M)] \\
+\text{ where: } M = \frac{P + Q}{2}
+\]
+
+{{</ definition >}}
+For example: <br>
+Let's continue the cat and dog image classification example discussed above.<br>
+A model is trained to classify images as '_cat_' or '_dog_'. Say, for an input image the true label is '_cat_', 
+so the true distribution: <br>
+\(P = [1.0 ~(cat), 0.0 ~(dog)]\). <br><br>
+**Step 1**: Calculate the average distribution M.<br>
+\[
+M = \frac{P + Q}{2} = \frac{1}{2} [[1.0, 0.0] + [0.8, 0.2]] \\[10pt]
+=> M = [0.9, 0.1]
+\]
+
+**Step 2**: Calculate \(D_{KL}(P \parallel M)\).<br>
+\[
+\begin{aligned}
+D_{KL}(P \parallel M) &= \sum_{i=1}^n P(x_i)log_2(\frac{P(x_i)}{M(x_i)}) \\[10pt]
+&= 1*log_2(\frac{1}{0.9}) + 0*log_2(\frac{0}{0.1}) \\[10pt]
+& = log_2(1.111) + 0 \\[10pt]
+=> D_{KL}(P \parallel M) &\approx 0.152 ~bits \\[10pt]
+\end{aligned}
+\]
+
+**Step 3**: Calculate \(D_{KL}(Q \parallel M)\).<br>
+
+\[
+\begin{aligned}
+D_{KL}(Q \parallel M) &= \sum_{i=1}^n Q(x_i)log_2(\frac{Q(x_i)}{M(x_i)}) \\[10pt]
+&= 0.8*log_2(\frac{0.8}{0.9}) + 0.2*log_2(\frac{0.2}{0.1}) \\[10pt]
+&= 0.8*log_2(0.888) + 0.2*log_2(2) \\[10pt]
+&= 0.8*(-0.17) + 0.2*1 \\[10pt]
+&= -0.136 + 0.2 \\[10pt]
+=> D_{KL}(Q \parallel M) &\approx 0.064 ~bits \\[10pt]
+\end{aligned}
+\]
+
+**Step 4**: Finally, lets put all together to calculate \(D_{JS}(P \parallel Q)\).<br>
+
+\[
+\begin{aligned}
+D_{JS}(P \parallel Q) &= \frac{1}{2}[D_{KL}(P \parallel M) + D_{KL}(Q \parallel M)] \\[10pt]
+&= \frac{1}{2}[0.152 + 0.064] \\[10pt]
+&= \frac{1}{2}*0.216 \\[10pt]
+=> D_{JS}(P \parallel Q) &= 0.108 ~ bits \\[10pt]
+\end{aligned}
+\]
+
+Therefore, lower JS divergence value => P and Q are more similar. <br>
 
 <br><br>
 ```End of Section```
