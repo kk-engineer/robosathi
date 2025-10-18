@@ -8,8 +8,8 @@ math: true
 
 {{% pageinfo %}}
 In this section, we will understand Entropy, Cross Entropy, KL Divergence & JS Divergence.<br>
-All these topics come from the field of '_Information Theory_' and can be understood thrught the lens of '_Information_' or 
-'_Surprise_'.
+All these topics come from the field of '_Information Theory_' and can be understood through the lens of <br>
+'_Information_' or '_Surprise_'.
 {{% /pageinfo %}}
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxcI3JyTIwOTKXY7ANhw__v1&si=MNoo5fxBo_10dLuM" >}}
@@ -106,6 +106,7 @@ D_{KL}(P \parallel Q) &= H(P, Q) - H(P) \\
 &= -\sum_{i=1}^n P(x_i)log(Q(x_i)) - [-\sum_{i=1}^n P(x_i)log(P(x_i))] \\[10pt]
 &= \sum_{i=1}^n P(x_i)[log(P(x_i)) - log(Q(x_i)) ] \\[10pt]
 D_{KL}(P \parallel Q) &= \sum_{i=1}^n P(x_i)log(\frac{P(x_i)}{Q(x_i)}) \\[10pt]
+\text{ For continuous case: } \\
 D_{KL}(P \parallel Q) &= \int_{-\infty}^{\infty} p(x)log(\frac{p(x)}{q(x)})dx
 \end{aligned}
 \]
