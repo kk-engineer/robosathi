@@ -78,6 +78,8 @@ respectively. <br>
 Since, the draws are independent, joint probability = P(A) * P(B) <br>
 Each of the 4 cells in above table shows the probability of combination of results from 2 draws or joint probability. <br>
 {{</ answer >}}
+
+{{< video "https://youtu.be/iAaWgnrr87I?si=1o9dCg4Bg4lH55BJ&t=1" >}}
 <br><br>
 
 {{< definition >}}
@@ -198,6 +200,7 @@ respectively. <br>
 
 We can see from the table above - P(A=Red) is the sum of joint distribution over all possible values of B i.e Red & Blue. <br>
 {{</ answer >}}
+{{< video "https://www.youtube.com/watch?v=UTU9yjgnRjk" >}}
 <br> <br>
 
 {{< definition >}}
@@ -314,8 +317,8 @@ For example:
 - Variance of car's mileage for city driving might be small, but the variance will be large for mix of city and highway driving.
 
 *Note: Models that take into account the change in variance or **heteroscedasticity** tend to be more accurate.*
-
 {{</ definition >}}
+{{< video "https://www.youtube.com/watch?v=hHN1z18-Vjo&t=1s" >}}
 
 <br><br>
 ```End of Section```

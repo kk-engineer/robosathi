@@ -53,7 +53,7 @@ Var(X+Y) = Var(X) + Var(Y) \\
 \]
 
 {{</ definition >}}
-Let's go through few examples to understand independence of random variables. <br>
+Let's go through few examples to understand the independence of random variables. <br>
 For example: <br>
 
 1. Toss a coin + Roll a die. <br>
@@ -66,7 +66,8 @@ X =
 \text{} \\
 Y = \{1,2,3,4,5,6\} \\
 \text{} \\
-\Omega = \{ (H,1), (H,2), (H,3), (H,4), (H,5), (H,6), \\
+\text{ Joint probability is all possible combinations of X and Y i.e 2x6 = 12 } \\[10pt]
+\text{ Sample space: } \Omega = \{ (H,1), (H,2), (H,3), (H,4), (H,5), (H,6), \\
 (T,1), (T,2), (T,3), (T,4), (T,5), (T,6) \}
 \]
 
