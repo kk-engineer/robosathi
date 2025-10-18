@@ -470,5 +470,138 @@ about the initial bias, and all possibilities are equally likely.*
 {{</ answer >}}
 <br><br>
 
+{{< question >}}
+What if, in the above example, we know that the initial belief is not uniform but biased towards 0? <br>
+**Prior:** <br>
+\[
+P_{\Theta}(\theta=0) = 3/4 ,  P_{\Theta}(\theta=1) = 1/4
+\]
+{{</ question >}}
+
+{{< answer >}}
+Now, let's compare the log-posterior for both the cases i.e \(\theta=0\) and \(\theta=1\) as we did earlier.<br>
+But, note that this time the probabilities for \(\theta=0\) and \(\theta=1\) are different.
+
+So, we can say that \(\theta = 1\) only if : <br>
+the value of the above expression for \(\theta = 1\) > the value of the above expression for \(\theta = 0\)
+From equation 3 and 4 above: <br>
+
+\[
+\begin{aligned}
+&\log(1/4) + n\log(\frac{1}{\sqrt{2\pi}}) - \sum_{i=1}^n \frac{(x_i - 1)^2}{2} > 
+\log(3/4) + n\log(\frac{1}{\sqrt{2\pi}}) - \sum_{i=1}^n \frac{(x_i - 0)^2}{2} \\
+=> &\log(1/4) + \cancel{n\log(\frac{1}{\sqrt{2\pi}})} - \sum_{i=1}^n \frac{(x_i - 1)^2}{2} > 
+\log(3/4) + \cancel{n\log(\frac{1}{\sqrt{2\pi}})} - \sum_{i=1}^n \frac{(x_i - 0)^2}{2} \\
+=> &\sum_{i=1}^n \frac{(x_i - 0)^2}{2} - \sum_{i=1}^n \frac{(x_i - 1)^2}{2} > \log3 -\cancel{\log4} -\log1 +\cancel{\log4} \\
+=> & \sum_{i=1}^n \frac{\cancel{x_i^2} - \cancel{x_i^2} + 2x_i -1 }{2} > \log3 - 0 \text{ , since log(1) = 0}\\
+=> & \sum_{i=1}^n [x_i - \frac{1}{2}] > \log3 \\
+=> & \sum_{i=1}^n x_i  - \frac{n}{2} > \log3 \\
+=> & \sum_{i=1}^n x_i  > \frac{n}{2} + \log3 \\
+\text{ dividing both sides by n: } \\
+=> & \frac{1}{n} \sum_{i=1}^n x_i > \frac{1}{2} + \frac{\log3}{n}\\
+=> & \Theta_{MAP}(X) = 
+\begin{cases}
+1 & \text{if } \frac{1}{n} \sum_{i=1}^n x_i > \frac{1}{2} + \frac{\log3}{n}\\
+0 & \text{otherwise.}
+\end{cases}
+\end{aligned}
+\]
+
+Therefore, we can see that \(\Theta_{MAP}\) is extra biased towards 0. <br>
+
+*Note: For a non-uniform prior \(\Theta_{MAP}\) estimate will be pulled towards the prior's mode.*
+{{</ answer >}}
+<br><br>
+
+{{< question >}}
+MAP estimator is good for classification like problems, such as Yes/No, True/False, etc. <br>
+e.g: Patient has a certain disease or not. <br>
+But, what if we want to minimize average magnitude of errors, over time, say predicting a stock's price? <br>
+Just getting to know whether the prediction was right or wrong is not sufficient here.<br>
+We also want to know that the prediction was wrong by how much, so that we can minimize the loss over time. <br>
+{{</ question >}}
+
+{{< answer >}}
+We can use **Minimum Mean Square Error (MMSE) Estimator** to do this. <br>
+{{</ answer >}}
+<br>
+
+{{< definition >}}
+**Minimum Mean Square Error (MMSE) Estimation:** <br>
+Minimizes the expected value of squared error. <br>
+Mean of the posterior distribution is the conditional expectation of parameter \(\Theta\), given the data. <br>
+- Posterior mean minimizes the the mean squared error.
+
+\[
+\hat\Theta_{MMSE}(X) = \underset{\Theta}{\mathrm{argmin}}\ \mathbb{E}[(\hat\Theta(X) - \Theta)^2]
+\]
+\(\hat\Theta(X)\): Predicted value. <br>
+\(\Theta\): Actual value. <br>
+
+\[
+\hat\Theta_{MMSE}(X) = \sum_{\Theta} \theta P_{\Theta \mid X} (\theta \mid x), \text{ if \(\Theta\) is discrete} \\
+\hat\Theta_{MMSE}(X) = \int_{\Theta} \theta f_{\Theta \mid X} (\theta \mid x)d\theta, \text{ if \(\Theta\) is continuous}
+\]
+
+{{</ definition >}}
+
+{{< answer >}}
+Let's revisit the above examples that we used for MLE.
+
+**Case 1:** Uniform Continuous Prior for parameter \(\Theta\) of Bernoulli distribution <br>
+**Prior:** <br>
+\[
+f_{\Theta}(\theta) = 1, ~or~  X \sim U(0,1), ~or~ \beta(1,1)
+\]
+
+**Posterior:** <br>
+\[
+f_{\Theta \mid X} (\theta \mid x)  = \frac{\theta^{n_1} (1 - \theta)^{n - n_1}}{\beta(n_1+1, n-n_1+1)} 
+\]
+
+Let's calculate the \(\Theta_{MMSE}\): <br>
+
+\[
+\begin{aligned}
+\Theta_{MMSE}(X) &= \int_{0}^1 f_{\Theta \mid X} (\theta \mid x)d\theta \\
+& = \frac{\int_{0}^1 \theta * \theta^{n_1} (1 - \theta)^{n - n_1}}{\beta(n_1+1, n-n_1+1)} \\[10pt]
+& = \frac{ \int_{0}^1 \theta^{n_1+1} (1 - \theta)^{n - n_1}}{\beta(n_1+1, n-n_1+1)} \\[10pt]
+\text{ Since: } \beta(a, b) = \int_0^1 t^{a-1}(1-t)^{b-1}dt \\[10pt]
+=> \Theta_{MMSE}(X) &= \frac{\beta(n_1+2, n-n_1+1)}{\beta(n_1+1, n-n_1+1)}
+\end{aligned}
+\]
+
+{{</ answer >}}
+
+{{< answer >}}
+Similarly, for the second case where the prior is biased towards 1. <br>
+**Case 2:** Prior is biased towards 1 for parameter \(\Theta\) of Bernoulli distribution <br>
+**Prior:** <br>
+\[
+f_{\Theta}(\theta) = 2\Theta
+\]
+
+**Posterior:** <br>
+\[
+f_{\Theta \mid X} (\theta \mid x)  = \frac{\theta^{n_1+1} (1 - \theta)^{n - n_1}}{\beta(n_1+2, n-n_1+1)} 
+\]
+
+So, here in this case our \(\Theta_{MMSE}\) is: <br>
+\[
+\Theta_{MMSE}(X) = \frac{\beta(n_1+3, n-n_1+1)}{\beta(n_1+2, n-n_1+1)}
+\]
+{{</ answer >}}
+
+{{% alert title="MAP vs MMSE" %}}
+- MMSE is the average of the posterior distribution, whereas MAP is the mode/peak.
+- If posterior distribution is symmetric and unimodal(only 1 peak), then MAP and MMSE are very close.
+- If posterior distribution is skewed and multimodal(many peaks), then MAP and MMSE can differ a lot.
+- MMSE considers all the values of the posterior distribution, hence it is more accurate than MAP, especially for skewed 
+or multimodal distributions.
+{{% /alert %}}
+
+
+
+
 <br><br>
 ```End of Section```
