@@ -9,10 +9,6 @@ sidebar_menu_unfold_depth: 2
 ---
 
 {{% pageinfo %}}
-What to expect from this Classical Machine Learning module?
+Work in progress.
 {{% /pageinfo %}}
-
-{{< alert color="success" >}}We will cover Supervised and Unsupervised learning.{{< /alert >}}
-
-{{< alert color="warning" >}}We will NOT cover Reinforcement and Semi-Supervised learning.{{< /alert >}}
 

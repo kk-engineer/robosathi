@@ -25,12 +25,6 @@ Below is the list of topics that will be covered in this course.
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxePOg6k6vAkcg5Y50EAZds9&si=e2j6VPYw_3ptzXM_" >}}
 
-{{< alert color="success" >}}We will understand each mathematical topic from purely an AI & ML perspective.{{< /alert >}}
-
-{{< alert color="warning" >}}We will NOT go into much of theoretical proof of everything. <br> 
-However, we will cover everything in enough depth, <br> 
-so that you can read and understand the latest AI & ML research papers.{{< /alert >}}
-
 ### {{% color "#0668E1" %}} **Classical Machine Learning** {{% /color %}}
 
 #### {{% color "#1F80FF" %}} Supervised Learning {{% /color %}}

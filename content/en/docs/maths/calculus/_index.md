@@ -7,9 +7,7 @@ weight: 4
 ---
 
 {{% pageinfo %}}
-
 In this section, we will cover the topics related to Calculus for AI & ML.
-
 {{% /pageinfo %}}
 
 ###  Calculus for AI & ML
@@ -30,6 +28,5 @@ Below is the list of topics that will be covered in this section.
 - Gradient Descent
 - Newton's Method
 
-{{< alert color="success" >}}We will understand each topic from pure AI & ML perspective.{{< /alert >}}
 
-{{< alert color="warning" >}}We will NOT go into much of theoretical proof of everything. <br> However, we will dive deep as and when required.{{< /alert >}}
+``` End of Section```
