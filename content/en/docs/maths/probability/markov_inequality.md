@@ -119,5 +119,7 @@ P(S_n \ge c) \le e^{-tc}(M_x(t))^n \\[10pt]
 *Note: Used to compute how far the sum of independent random variables deviate from their expected value.*
 {{</ definition >}}
 
+{{< video "https://youtu.be/m9Aqmnt89Tg?si=jYJREpH4arHA_m2h&t=1" >}}
+
 <br><br>
 ```End of Section```

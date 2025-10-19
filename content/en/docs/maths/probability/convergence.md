@@ -146,5 +146,8 @@ Y_3 = \frac{X_1 + X_2 + X_3}{3} \\[10pt]
 Y_n = \frac{1}{n} \sum_{i=1}^{n} X_i \xrightarrow{Almost ~ Sure} \frac{1}{2}
 \]
 
+<br>
+{{< video "https://www.youtube.com/watch?v=ZIXMVF6t834&t=1s" >}}
+
 <br><br>
 ```End of Section```

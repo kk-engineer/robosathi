@@ -8,7 +8,7 @@ title: RoboSathi
 <a class="btn btn-lg btn-primary me-3 mb-4" href="/docs/">
   Course <i class="fas fa-arrow-alt-circle-right ms-2"></i>
 </a>
-<a class="btn btn-lg btn-secondary me-3 mb-4" href="https://www.youtube.com/@RoboSathi">
+<a class="btn btn-lg btn-primary me-3 mb-4" href="https://www.youtube.com/@RoboSathi">
   Videos <i class="fab fa-youtube "></i>
 </a>
 <p class="lead mt-5">Our Mission: Demystifying AI | Empowering Everyone</p>

@@ -66,6 +66,9 @@ This means that a sequence where the proportion of heads never settles down to 0
 - Almost sure convergence ensures ML model's reliability by guaranteeing that the average error on a large dataset will
 converge to the true error. <br>
 Thus, providing confidence that model will perform consistently and accurately on unseen data.
+<br>
+
+{{< video "https://www.youtube.com/watch?v=ZIXMVF6t834&t=1s" >}}
 
 <br><br>
 

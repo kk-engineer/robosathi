@@ -62,6 +62,9 @@ H(X) = E[-log(P(x)] = -\sum_{x \in X} P(x)log(P(x))
 
 Therefore, a biased coin is less surprising on an average than a fair coin, hence lower entropy.
 {{</ answer >}}
+
+{{< video "https://youtu.be/7D-8ZudYJdk?si=eRcK891RiPhNjP8t" >}}
+
 <br><br>
 
 {{< definition >}}
@@ -93,6 +96,9 @@ Cross Entropy = \(H(P, Q_B) = -\sum_{i=1}^n P(x_i)log(Q_B(x_i)) \) <br>
 \(= -[1*log_2(0.2) + 0*log_2(0.8)] \approx 2.32 ~bits\) <br>
 *Note: Here the cross-entropy is very high, since the predicted value is quite far from the actual truth, i.e high surprise.* <br>
 {{</ answer >}}
+
+{{< video "https://youtu.be/YHUnFH42lqw?si=CCOlBq1qZyITxIWc" >}}
+
 <br><br>
 
 {{< definition >}}
@@ -136,6 +142,9 @@ Model A incurs an additional 0.32 bits of surprise due to its imperfect predicti
 \( D_{KL}(P \parallel Q) = H(P, Q) - H(P) = 2.32 - 0 = 2.32 ~bits \) <br>
 Model B has much more '_information loss_' or incurs higher '_penalty_' of 2.32 bits as its prediction was from from the truth. <br>
 {{</ answer >}}
+
+{{< video "https://youtu.be/rE4PbltQwxo?si=ClaOPI2MA6uuBUGz" >}}
+
 <br><br>
 
 {{< definition >}}
@@ -200,6 +209,8 @@ D_{JS}(P \parallel Q) &= \frac{1}{2}[D_{KL}(P \parallel M) + D_{KL}(Q \parallel 
 
 Therefore, lower JS divergence value => P and Q are more similar. <br>
 {{</ answer >}}
+
+{{< video "https://youtu.be/0wtJNYaTB-8?si=lZvH0Bk65ibb7Rqa" >}}
 
 <br><br>
 ```End of Section```
