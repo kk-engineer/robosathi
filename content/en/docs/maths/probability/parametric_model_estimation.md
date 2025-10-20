@@ -349,7 +349,7 @@ f_{\Theta \mid X} (\theta \mid x) &= \frac{f_{\Theta}(\theta) P_{X \mid \Theta}(
 {{< alert color="warning" >}}**Plot:** Prior, Posterior & MLE.{{< /alert >}}
 
 
-*Note: Bayesian approach gives us a probability distribution of parameter \(Theta\).*
+*Note: Bayesian approach gives us a probability distribution of parameter \(\Theta\).*
 
 {{< question >}}
 What if we want to have a single point estimate of the parameter \(\Theta\) instead of a probability distribution? <br>

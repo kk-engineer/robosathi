@@ -3,7 +3,7 @@ title: RoboSathi
 ---
 
 {{< blocks/cover title="RoboSathi" image_anchor="top" height="full" >}}
-<h1 <class="display-3 fw-bold">"AI for Good!"</h1>
+<h1 <class="display-3 fw-bold">"AI for Good"</h1>
 <br>
 <a class="btn btn-lg btn-primary me-3 mb-4" href="/docs/">
   Course <i class="fas fa-arrow-alt-circle-right ms-2"></i>
@@ -11,7 +11,7 @@ title: RoboSathi
 <a class="btn btn-lg btn-primary me-3 mb-4" href="https://www.youtube.com/@RoboSathi">
   Videos <i class="fab fa-youtube "></i>
 </a>
-<p class="lead mt-5">Our Mission: Demystifying AI | Empowering Everyone</p>
+<p class="lead mt-5">Our Mission: Demystify AI | Empower Everyone</p>
 {{< blocks/link-down color="info" >}}
 {{< /blocks/cover >}}
 
