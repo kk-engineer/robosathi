@@ -162,7 +162,7 @@ mean \(\mu\) using confidence interval. <br>
 - We generated 100 confidence intervals(CI) each based on different samples.
 - 95% CI guarantees that, in long run, 95 out of 100 CIs will include the true average weight, i.e, \(\mu=30kg\),
 and may be will miss 5 out of 100 times.
-<br>
+<br><br>
 
 {{< question >}}
 Suggest which company is offering a better salary? <br>
