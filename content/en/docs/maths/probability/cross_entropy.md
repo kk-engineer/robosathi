@@ -69,7 +69,7 @@ Therefore, a biased coin is less surprising on an average than a fair coin, henc
 
 {{< definition >}}
 **Cross Entropy:** <br>
-It is a measure of the average '_information gain_' or '_surprise_' when using an imperfect model (\Q\) to encode events 
+It is a measure of the average '_information gain_' or '_surprise_' when using an imperfect model \(Q\) to encode events 
 from a true model \(P\). <br>
 - It measures how surprised we are on an average, if the true distribution is \(P\), but we predict using another distribution 
 \(Q\). <br>
