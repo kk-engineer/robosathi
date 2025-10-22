@@ -204,9 +204,55 @@ when the alternative hypothesis (\(H_{a}\)) is true.
 - \(\beta\): Probability of wrongly rejecting alternate hypothesis \(H_{a}\)
 
 ![](https://robosathi.com/images/power_of_test.png)
-<br>
 {{< /definition >}}
-  
+<br>
+
+{{< question >}}
+Does having a large sample size make a hypothesis test more powerful?
+{{< /question >}}
+
+{{< answer >}}
+Yes, having a large sample size makes a hypothesis test more powerful. <br>
+- As n increases, sample mean \(\bar{x}\) approaches the population mean \(\mu\).
+- Also, as n increases, t-distribution approaches normal distribution.
+{{</ answer >}}
+
+{{< alert color="warning" >}}
+P-value only measures whether the observed change is statistically significant.
+{{< /alert >}}
+<br><br>
+
+{{< definition >}}
+**Effect Size:** <br>
+It is a standardized objective measure that complements p-value by clarifying whether the a statistically significant 
+finding has any real world relevance. <br>
+It quantifies the magnitude of relationship between two variables. <br>
+- Larger effect size => more impactful effect.
+- Standardized (mean centered + variance scaled) measure allows us to compare the imporance of effect across various
+studies or groups, even with different sample sizes.
+
+Effect size is measured using Cohen's d formula: <br>
+\[
+d = \frac{\bar{X_1} - \bar{X_2}}{s_p} \\[10pt]
+s_p = \sqrt{\frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2}{n_1 + n_2 - 2}}
+\]
+\(\bar{X}\): Sample mean <br>
+\(s_p\): Pooled Standard deviation <br>
+\(n\): Sample size <br>
+\(s\): Standard deviation <br>
+
+*Note: Theoretically, Cohen's d value can range from negative infinity to positive infinity. <br>
+but for practical purposes, we use the following value: <br>
+small effect (\(d=0.2\)), medium effect (\(d=0.5\)), and large effect (\(d\ge 0.8\)).*
+- More overlap => less effect i.e low Cohen's d value.
+![](https://robosathi.com/images/effect_size.png)
+{{</ definition >}}
+For example: <br>
+- A study on drug trials finds that patients taking a new drug had statistically significant <br>
+improvement (p-value<0.05), compared to a placebo group.
+1. Small effect size: Cohen's d = 0.1 => drug had minimal effect.
+2. Large effect size: Cohen's d = 0.8 => drug produced substantial improvement.
+
 <br><br>
 ```End of Section```
 
