@@ -109,7 +109,7 @@ Let's do a 2 sample **T-Test**, i.e, \(m_{m1} < m_{m2}\)
 **Step 3**: _Calculate the test statistic under null hypothesis_.<br>
 **Test Statistic**:<br>
 For 2 sample T-Test:
-\[t_{obs} = \frac{m_{m1} - m_{m2}}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}\] <br>
+\[t_{obs} = \frac{m_{m_1} - m_{m_2}}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}\] <br>
 s: Standard Deviation <br>
 n: Sample Size <br>
 
@@ -129,6 +129,47 @@ If \(p_{value} < \alpha\), we reject the null hypothesis and accept the alternat
 *Note: In the above example \(p_{value} < \alpha\), so we reject the null hypothesis.* <br>
 
 {{< /answer >}}
+
+{{< alert color="success" title="Left or Right Sided (Tailed) Test" >}}
+We need to do a left or right sided test, or a 2-sided test, this depends upon our alternate hypothesis and test statistic. <br>
+
+Let's continue our 2 sample mean T-test to understand the concept: <br>
+\[t_{obs} = \frac{m_{m_1} - m_{m_2}}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}\]
+
+**Left Sided/Tailed Test:** <br>
+\(H_a\): Mean recovery time of medicine 1 < medicine 2, i.e,  \(m_{m_1} < m_{m_2}\) <br>
+=> \(m_{m_1} - m_{m_2} < 0\) <br>
+\[t_{obs} = \frac{m_{m_1} - m_{m_2}}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}\]
+Since, the denominator in above equation is always positive.<br>
+=> \(t_{obs} < 0\) <br>
+Therefore, we need to do a left sided/tailed test. <br>
+<br>
+![](https://robosathi.com/images/left_tailed.png)
+<br>
+So, we want \(t_{obs}\) to be very negative to confidently conclude that alternate hypothesis is true. <br>
+
+**Right Sided/Tailed Test:** <br>
+\(H_a\): Mean recovery time of medicine 1 > medicine 2, i.e,  \(m_{m_1} > m_{m_2}\) <br>
+=> \(m_{m_1} - m_{m_2} > 0\) <br>
+Similarly, here we need to do a right sided/tailed test. <br>
+
+
+**2 Sided/Tailed Test:** <br>
+\(H_a\): Mean recovery time of medicine 1 ⍯ medicine 2, i.e,  \(m_{m_1} ⍯ ~ m_{m_2}\) <br>
+=> \(m_{m_1} - m_{m_2} < 0\)  or \(m_{m_1} - m_{m_2} > 0\)<br>
+If \(H_a\) is true then \(t_{obs}\) is a large -ve value or a large +ve value. <br> 
+\[t_{obs} = \frac{m_{m_1} - m_{m_2}}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}\]
+Since, t-distribution is symmetric, we can divide the significance level \(\alpha\) into 2 equal parts. <br>
+i.e \(\alpha = 2.5\%\) on each side. <br>
+
+![](https://robosathi.com/images/two_sided.png)
+<br>
+So, we want \(t_{obs}\) to be very negative or very positive to confidently conclude that the alternate hypothesis is true.
+We accept \(H_a\) if \(t_{obs} < t^1_{\alpha/2}\)  or \(t_{obs} > t^2_{\alpha/2}\).
+
+*Note: For critical applications '\(\alpha\)' can be very small i.e. 0.1% or 0.01%, e.g medicine.* <br>
+
+{{< /alert >}}
 
 
 
