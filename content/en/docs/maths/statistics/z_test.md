@@ -197,11 +197,63 @@ It is used to compare whether the 2 independent samples differ in their proporti
 - Standard test used in A/B testing.
 
 \[
-\bar{p} = \frac{total ~ successes}{total ~ sample  ~ size}
+\bar{p} = \frac{total ~ successes}{total ~ sample  ~ size} = \frac{x_1+x_2}{n_1+n_2} = \frac{n_1\hat{p_1}+n_2\hat{p_2}}{n_1+n_2} \\[10pt]
+Standard ~ Error_{\hat{p_1}-\hat{p_2}} = \sqrt{\bar{p}(1-\bar{p})(\frac{1}{n_1} +\frac{1}{n_2})} \\[10pt]
+Z = \frac{\hat{p_1}-\hat{p_2}}{SE_{\hat{p_1}-\hat{p_2}}} \\[10pt]
+=> Z = \frac{\hat{p_1}-\hat{p_2}}{\sqrt{\bar{p}(1-\bar{p})(\frac{1}{n_1} +\frac{1}{n_2})}}
 \]
 {{</ definition >}}
+<br>
 
+{{< question >}}
+A company wants to compare its 2 different website designs A & B.<br>
+Below is the table that shows the data: <br>
+| Design | # of visitors(n)| # of signups(x)| conversion rate(\(\hat{p} = \frac{x}{n}\))|
+| ------ | --------------- | -------------- | ------------------ |
+| A      | 1000             | 80             | 0.08               |
+| B      | 1200             | 114            | 0.095              |
 
+Is the design B better, i.e, design B increases conversion rate or proportion of visitors who sign up? <br>
+Consider the significance level of 5%.
+{{</ question >}}
+
+{{< answer >}}
+Null Hypothesis: \(\hat{p_A} = \hat{p_B}\), i.e, no difference in conversion rates of 2 designs A & B. <br>
+Alternative Hypothesis: \(\hat{p_B} >  \hat{p_A}\) i.e conversion rate  of B > A => right tailed test. <br>
+
+Check large sample condition for both samples A & B. <br>
+\(n\hat{p_A} = 80 > 10 ~and~ n(1-\hat{p_A}) = 920 > 10\) <br>
+Similarly, we can show for B too. <br>
+
+Pooled proportion: 
+\[
+\bar{p} = \frac{x_A+x_B}{n_A+n_B} = \frac{80+114}{1000+1200} = \frac{194}{2200}  \\[10pt]
+=> \bar{p}\approx 0.0882
+\]
+
+Standard Error(Pooled):
+\[
+SE=\sqrt{\bar{p}(1-\bar{p})(\frac{1}{n_1} +\frac{1}{n_2})} \\[10pt]
+= \sqrt{0.0882(1-0.0882)(\frac{1}{1000} +\frac{1}{1200})} \\[10pt]
+=> SE \approx 0.0123
+\]
+
+Test Statistic(Z):
+\[
+t_{obs}  = \frac{\hat{p_B}-\hat{p_A}}{SE_{\hat{p_A}-\hat{p_B}}} \\[10pt]
+ = \frac{0.095-0.0882}{0.0123} \\[10pt]
+=> t_{obs} \approx 1.22
+\]
+
+Significance level \(\alpha\) = 5% =0.05. <br>
+Critical value \(Z_{0.05}\) = 1.645 <br>
+
+![](https://robosathi.com/images/two_sample_z_test_proportion.png)
+
+Since, \(t_{obs} < Z_{0.05}\) => p-value > 5%. <br>
+Hence, we fail to reject the null hypothesis. <br>
+Therefore, the observed conversion rate of design B is due to random chance; thus, B is not a better design.
+{{</ answer >}}
 <br><br>
 
 ```End of Section```
