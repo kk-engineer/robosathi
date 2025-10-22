@@ -122,7 +122,7 @@ _Note: If the 2 means are very close then \(t_{obs} \approx 0\)._ <br>
 \[p_{value} =  \mathbb{P}(t \geq t_{obs} | H_0)\] <br>
 p-value = area under curve = probability of observing test statistic \( \ge t_{obs} \) if the null hypothesis is true. <br>
 <br>
-![](https://robosathi.com/images/p_value.png)
+![](https://robosathi.com/images/p_value_1.png)
 
 **Step 6**: _Accept or reject the null hypothesis, based on the significance level (\(\alpha\))._ <br>
 If \(p_{value} < \alpha\), we reject the null hypothesis and accept the alternative hypothesis and vice versa. <br>
