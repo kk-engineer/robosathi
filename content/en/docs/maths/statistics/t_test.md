@@ -16,7 +16,7 @@ It is a statistical test used to determine whether there is a significant differ
 - It is a parametric test, since it assumes data to be approximately normally distributed.
 - Appropriate when:
   - sample size n < 30.
-  - population standard deviation is unknown.
+  - population standard deviation \(\sigma\) is unknown.
 - It is based on Student's t-distribution.
 {{</ definition >}}
 <br>
