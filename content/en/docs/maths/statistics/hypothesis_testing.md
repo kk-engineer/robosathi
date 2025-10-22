@@ -168,15 +168,45 @@ So, we want \(t_{obs}\) to be very negative or very positive to confidently conc
 We accept \(H_a\) if \(t_{obs} < t^1_{\alpha/2}\)  or \(t_{obs} > t^2_{\alpha/2}\).
 
 *Note: For critical applications '\(\alpha\)' can be very small i.e. 0.1% or 0.01%, e.g medicine.* <br>
-
 {{< /alert >}}
+<br>
 
+{{< definition >}}
+**Significance Level (\(\alpha\)):** <br>
+It is the probability of wrongly rejecting a true null hypothesis, known as a Type I error or false +ve rate. <br>
+- Tolerance level of wrongly accepting alternate hypothesis.
+- If the p-value < \(\alpha\), we reject the null hypothesis and conclude that the finding is statistically NOT so significant..
 
+{{< /definition >}}
+<br>
 
+{{< definition >}}
+**Critical Value:** <br>
+It is a specific point on the test-statistic distribution that defines the boundaries of the null hypothesis 
+acceptance/rejection region. <br>
+- It tells us that at what value (\(t_{\alpha}\)) of test statistic will the area under curve be equal to the significance level \(\alpha\).
+- For a right tailed/sided test:
+  - if \(t_{obs} > t_{\alpha} => p_{value} < \alpha\); therefore, reject null hypothesis.
+  - if \(t_{obs} < t_{\alpha} => p_{value} \ge \alpha\); therefore, failed to reject null hypothesis.
 
+![](https://robosathi.com/images/critical_value.png)
+<br>
+{{< /definition >}}
+<br>
 
+{{< definition >}}
+**Power of Test:** <br>
+It is the probability that a hypothesis test will correctly reject a false null hypothesis (\(H_{0}\)) 
+when the alternative hypothesis (\(H_{a}\)) is true.
+- Power of test = \(1 - \beta\)
+- Probability of correctly accepting alternate hypothesis (\(H_{a}\))
+- \(\alpha\): Probability of wrongly accepting alternate hypothesis \(H_{a}\)
+- \(\beta\): Probability of wrongly rejecting alternate hypothesis \(H_{a}\)
 
-
+![](https://robosathi.com/images/power_of_test.png)
+<br>
+{{< /definition >}}
+  
 <br><br>
 ```End of Section```
 
