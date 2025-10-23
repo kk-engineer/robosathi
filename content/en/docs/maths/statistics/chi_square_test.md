@@ -162,12 +162,86 @@ t_{obs} = \chi_{calc}^2 = \sum_{i=1}^2 \frac{(O_i - E_i)^2}{E_i} \\[10pt]
 => t_{obs} = 5.76
 \]
 Since, significance level = 5% = 0.05 <br>
-Critical value = \(chi^2(0.95,1)\) = 3.84 <br>
+Critical value = \(\chi^2(0.05,1)\) = 3.84 <br>
 
 ![](https://robosathi.com/images/chi_square_gof.png)
 
-Since, \(t_{obs}\) = 5.76 < 3.84 (critical value), we reject the null hypothesis \(H_0\). <br>
+Since, \(t_{obs}\) = 5.76 > 3.84 (critical value), we reject the null hypothesis \(H_0\). <br>
 Therefore, the coin is biased towards head.
+{{</ answer >}}
+<br>
+
+{{< definition >}}
+**Test of Independence:** <br>
+It is used to determine whether an association exists between two categorical variables, 
+using a contingency(dependency) table. <br>
+It is a non-parametric test, i.e, does NOT make any assumption about the underlying distribution of the data. <br>
+
+Test Statistic: <br>
+\[
+\chi_{calc}^2 = \sum_{i=1}^R \sum_{i=1}^C \frac{(O_i - E_i)^2}{E_i}
+\]
+\(O_{ij}\): Observed count for \(cell_{i,j}\)<br>
+\(E_{ij}\): Expected count for \(cell_{i,j}\), under null hypothesis \(H_0\) <br>
+\(R\): Number of rows <br>
+\(C\): Number of columns <br>
+\(\nu\): Degrees of freedom = (R-1)*(C-1)<br>
+
+Let's understand the above test statistic in more detail. <br>
+We know that, if 2 random variables A & B are independent, then, <br>
+\(P(A \cap B) = P(A, B) =  P(A)*P(B)\) <br>
+i.e Joint Probability = Product of marginal probabilities. <br>
+
+Null Hypothesis \(H_0\): \(A\) and \(B\) are independent. <br>
+Alternative Hypothesis \(H_a\): \(A\) and \(B\) are dependent or associated. <br>
+N = Sample size <br>
+\(P(A_i) \approx \frac{Row ~~ Total_i}{N}\) <br><br>
+\(P(B_j) \approx \frac{Col ~~ Total_j}{N}\) <br><br>
+\(E_{ij}\) : Expected count for \(cell_{i,j}\) = \( N*P(A_i)*P(B_j)\) <br><br>
+=> \(E_{ij}\) = \(N*\frac{Row ~~ Total_i}{N}*\frac{Col ~~ Total_j}{N}\) <br><br>
+=> \(E_{ij}\) = \(\frac{Row ~~ Total_i * Col ~~ Total_j}{N}\) <br><br>
+\(O_{ij}\): Observed count for \(cell_{i,j}\) <br>
+
+{{</ definition >}}
+<br>
+
+{{< question >}}
+A survey of 100 students was conducted to understand whether there is any relation between gender and beverage preference. <br>
+Below is the table that shows the number of students who prefer each beverage. <br>
+| Gender | Tea | Coffee| |
+|--------|-----|-------|--- |
+| Male   | 20  | 30    | 50  |
+| Female | 10  | 40    | 50  |
+|        | 30  | 70    |  | 
+
+Significance level = 5% <br>
+{{</ question >}}
+
+{{< answer >}}
+Null Hypothesis \(H_0\): Gender and beverage preference are independent. <br>
+Alternative Hypothesis \(H_a\): Gender and beverage preference are dependent. <br>
+
+We know that Expected count for cell(i,j) = \(E_{ij}\) = \(\frac{Row ~~ Total_i * Col ~~ Total_j}{N}\) <br><br>
+\(E_{11} = \frac{50*30}{100} = 15\) <br><br>
+\(E_{12} = \frac{50*70}{100} = 35\) <br><br>
+\(E_{21} = \frac{50*30}{100} = 15\) <br><br>
+\(E_{22} = \frac{50*70}{100} = 35\) <br><br>
+
+Test Statistic: <br>
+\[
+t_{obs} = \chi_{calc}^2 = \sum_{i=1}^R \sum_{i=1}^C \frac{(O_i - E_i)^2}{E_i} \\[10pt]
+= \frac{(20 - 15)^2}{15} + \frac{(30 - 35)^2}{35} + \frac{(10 - 15)^2}{15}  + \frac{(40 - 35)^2}{35} \\[10pt]
+= \frac{25}{15} + \frac{25}{35} + \frac{25}{15} + \frac{25}{35} \\[10pt]
+=> t_{obs} =   \frac{50}{15} + \frac{50}{35} \approx 4.76
+\]
+Degrees of freedom = (R-1)(C-1) = (2-1)(2-1) = 1 <br>
+Since, significance level = 5% = 0.05 <br>
+Critical value = \(\chi^2(0.05,1)\) = 3.84 <br>
+
+![](https://robosathi.com/images/chi_square_independence.png)
+
+Since, \(t_{obs}\) = 4.76 > 3.84 (critical value), we reject the null hypothesis \(H_0\). <br>
+Therefore, the gender and beverage preference are dependent.
 {{</ answer >}}
 
 
