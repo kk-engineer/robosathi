@@ -41,9 +41,8 @@ e.g.: Model predicted that a patient does NOT have diabetes, but the patient act
 
 {{</ definition >}}
 
-Many metrics are derived from the confusion matrix. <br>
-
 {{< alert color="secondary" title="Important Metrics" >}}
+Many metrics are derived from the confusion matrix. <br><br>
 **Precision:** <br>
 It answers the question: "Of all the instances that the model predicted as positive, how many were actually positive?" <br>
 It measures exactness or quality of the positive predictions. <br>
@@ -87,7 +86,6 @@ e.g.: Medical diagnosis of a serious disease. <br>
 A false negative, i.e, falsely missing a serious disease can cost someone's life. <br>
 <br>
 {{< /alert >}}
-<br>
 
 {{< question >}}
 Analyze the performance of an access control system. Below is the data for 1000 access attempts. <br>
@@ -220,7 +218,7 @@ Unacceptable precision for a good fraud detection system.<br>
 **Precision-Recall Curve:** <br>
 It is used to evaluate the performance of a binary classifier model across various thresholds. <br>
 It is similar to the ROC curve, but it uses Precision instead of TPR on the Y-axis. <br>
-Plots Precision (Y-axis) against Recall (X-axis) for different classification thresholds. <br>
+Plots **Precision** (Y-axis) against **Recall** (X-axis) for different classification thresholds. <br>
 *Note*: It is useful when the data is **imbalanced**.
 
 \[
@@ -230,7 +228,7 @@ Recall = \frac{TP}{TP + FN}
 
 ![](https://robosathi.com/images/prc.png)
 
-AU PRC = Area under Precision-Recall curve
+AU PRC = PR AUC = Area under Precision-Recall curve
 {{</ definition >}}
 <br>
 
