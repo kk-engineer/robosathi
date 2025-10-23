@@ -138,11 +138,13 @@ It is of 2 types:
 The categorical data,i.e success/failure, is discrete that can be modeled as **Bernoulli** distribution. <br>
 Let's understand how this Bernoulli random variable can be approximated as a **Gaussian** distribution for a very large sample size,
 using **Central Limit Theorem**.<br>
-[Read more about Central Limit Theorem]({{<ref  "/docs/maths/statistics/clt_ci"  >}})
+[Read more about Central Limit Theorem]({{<ref "/docs/maths/statistics/clt_ci" >}})
+
+{{</ definition >}}
 
 *Note:We will not prove the complete thing, but we will understand the concept in enough depth for clarity.* <br>
 
-**Sampling Distribution of a Proportion:** <br>
+{{< alert color="dark" title="Sampling Distribution of a Proportion" >}}
 \(Y \sim Bernoulli(p)\) <br>
 \(X \sim Binomial(n,p)\) <br> 
 E[X] = mean = np <br>
@@ -150,7 +152,7 @@ Var[X] = variance = np(1-p)  <br>
 X = total number of successes <br>
 p = true probability of success <br>
 n = number of trials <br>
-Proportion of Success in sample =  Sample Proportion = \(\hat{p} = \frac{X}{n}\) <br>
+Proportion of Success in sample =  **Sample Proportion** = \(\hat{p} = \frac{X}{n}\) <br>
 e.g.: If n=100 people were surveyed, and 40 said yes, then \(\hat{p} = \frac{40}{100} = 0.4\) <br>
 
 \[
@@ -171,10 +173,10 @@ We can say that: <br>
 Mean = \(\mu_{\hat{p}} = p\) = True proportion of success in the entire population <br>
 Standard Error = \(SE_{\hat{p}} = \sqrt{Var[\frac{X}{n}]} = \sqrt{\frac{p(1-p)}{n}}\) = Standard Deviation of the sample proportion <br>
 
-*Note: Large Sample Condition - Approximation is only valid when expected number of successes and failures are both > 10 (sometimes 5).* <br>
+*Note: Large Sample Condition - Approximation is only valid when the expected number of successes and failures are both > 10 (sometimes 5).* <br>
 \(np \ge 10 ~and~ n(1-p) \ge 10\)
+{{< /alert >}}
 
-{{</ definition >}}
 <br>
 
 {{< definition >}}

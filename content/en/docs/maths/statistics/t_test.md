@@ -27,14 +27,6 @@ It is a continuous probability distribution that is a symmetrical, bell-shaped c
 to the normal distribution but with heavier tails. <br>
 - Shape of the curve or mass in tail is controlled by degrees of freedom.
 
-**Degrees of Freedom(\(\nu\)):** <br>
-It represents number of independent pieces of information available in the sample to estimate the variability in the data.<br>
-Generally speaking, it represents the number of independent values that are free to vary in a dataset when 
-estimating a parameter. <br>
-e.g.: If we have 10 observations and the sum of values = 50. <br>
-The sum of first 9 values can be anything, but the 10th value is fixed at 50 - (sum of other 9 values). <br>
-So, we have only 9 values that can change independently, therefore, the DOF = 9.
-
 ![](https://robosathi.com/images/t_distribution.png)
 
 There are 3 types of T-Test: <br>
@@ -42,7 +34,14 @@ There are 3 types of T-Test: <br>
 2. **2-Sample T-Test**: Test whether there is a significant difference between the means of two independent groups.
 3. **Paired T-Test**: Test whether 2 related samples differ, e.g., before and after.
 {{</ definition >}}
-<br>
+{{< alert color="dark" title="Degrees of Freedom (\(\nu\))" >}}
+It represents the number of independent pieces of information available in the sample to estimate the variability in the data.<br>
+Generally speaking, it represents the number of independent values that are free to vary in a dataset when 
+estimating a parameter. <br>
+e.g.: If we have k observations and their sum = 50. <br>
+The sum of (k-1) terms can be anything, but the kth term is fixed at 50 - (sum of other (k-1) terms). <br>
+So, we have only (k-1) terms that can change independently, therefore, the DOF(\(\nu\)) = k-1.
+{{< /alert >}}
 
 {{<definition >}}
 **1-Sample T-Test:** <br>
