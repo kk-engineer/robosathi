@@ -1,7 +1,7 @@
 ---
 title: Vector
 description: Vector Fundamentals
-date: 2025-10-20
+date: 2025-10-24
 weight: 2
 math: true
 ---
