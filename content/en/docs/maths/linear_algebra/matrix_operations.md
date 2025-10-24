@@ -75,9 +75,9 @@ a_{m1} + b_{m1} & a_{m2} + b_{m2} & \cdots & a_{mn} + b_{mn}
 \end{bmatrix}
 _{\text{m x n}}
 \)
-<br>
+<br><br>
 ![](https://robosathi.com/images/matrix_addition.png)
-
+<br><br>
 **Multiplication:** <br>
 We can multiply two matrices only if their inner dimensions are equal. <br>
 \( \mathbf{C}_{m x n} = \mathbf{A}_{m x d} ~ \mathbf{B}_{d x n} \) <br>
@@ -269,7 +269,7 @@ Singular matrix is also NOT invertible, because the inverse has division by dete
 *Also called **rank deficient** matrix, because the rank < number of dimensions of the matrix, 
 due to the presence of linearly dependent rows or columns.* <br><br>
 
-e.g: Below is a linearly dependent 2x2 matrix. <br>
+e.g: Below is a **linearly dependent** 2x2 matrix. <br>
 \( \mathbf{A} = 
 \begin{bmatrix}
 a_{11} & a_{12} \\
@@ -283,7 +283,7 @@ a_{11}\cdot \beta a_{12} - a_{12} \cdot \beta a_{11} = 0
 
 *Note:*
 1. \( det(A) = det(A^T) \)
-2. \( det(\beta A) = \beta^n det(A) \), where n is the number of dimensions of A and \(\beta\) is a scalar.
+2. \( det(\beta A) = \beta^n det(A) \), where n is the number of dimensions of A and \(\beta\) is a **scalar**.
 <br><br>
 
 **Inverse:** <br>
@@ -294,7 +294,269 @@ It is a square matrix that when multiplied by the original matrix, gives the ide
 A^{-1} = \frac{1}{|A|} \, \text{adj}(A)
 \]
 
+**Steps to compute inverse of a matrix:**
+1. Calculate the determinant of the matrix.
+\( |A| = \det(A) \)
+2. For each element \(a_{ij}\), compute its minor \(M_{ij}\). <br>
+\(M_{ij}\) is the determinant of the submatrix of the matrix excluding the i-th row and j-th column. <br>
+3. Form the co-factor matrix \(C_{ij}\), using the minor. <br>
+\( C_{ij} = (-1)^{\,i+j}\,M_{ij} \) <br> 
+4. Take the transpose of the cofactor matrix to get the adjugate matrix. <br>
+\( \mathrm{adj}(A) = \mathrm{C}^\mathrm{T} \) <br>
+5. Compute the inverse: <br>
+\( A^{-1} = \frac{1}{|A|}\,\mathrm{adj}(A)  = \frac{1}{|A|}\,\mathrm{C}^\mathrm{T}\)
+
+<br>
+
+e.g: <br>
+\(
+\mathbf{A} = 
+\begin{bmatrix}
+1 & 0  & 3\\
+2 & 1 & 1\\
+1 & 1 & 1 \\
+\end{bmatrix}
+_{\text{3 x 3}}
+\),
+Co-factor matrix:
+\(
+\mathbf{C} = 
+\begin{bmatrix}
+0 & -1 & 1\\
+3 & -2 & -1\\
+-3 & 5 & 1 \\
+\end{bmatrix}
+_{\text{3 x 3}}
+\)
+<br><br>
+Adjugate matrix, adj(A) = 
+\(
+\mathbf{C}^\mathrm{T} = 
+\begin{bmatrix}
+0 & 3 & -3\\
+-1 & -2 & 5\\
+1 & -1 & 1 \\
+\end{bmatrix}
+_{\text{3 x 3}}
+\)
+
+<br><br>
+
+determinant of \( \mathbf{A} \) = 
+\(
+\begin{vmatrix}
+1 & 0  & 3\\
+2 & 1 & 1\\
+1 & 1 & 1 \\
+\end{vmatrix}
+= 0  -\cancel 1 + \cancel 1 + \cancel3 - 2 -\cancel1 -\cancel 3 + 5 + \cancel1 = 3
+\)
+<br>
+
+\(
+\mathbf{A}^{-1} = \frac{1}{|A|}\,\mathrm{adj}(A)
+= \frac{1}{3}\,
+\begin{bmatrix}
+0 & 3 & -3\\
+-1 & -2 & 5\\
+1 & -1 & 1 \\
+\end{bmatrix}
+_{\text{3 x 3}}
+\)
+<br><br>
+=> \(
+\mathbf{A}^{-1} =
+\begin{bmatrix}
+0 & 1 & -1\\
+-1/3 & -2/3 & 5/3\\
+1/3 & -1/3 & 1/3 \\
+\end{bmatrix}
+_{\text{3 x 3}}
+\)
+
+*Note:*
+1. Inverse of an Identity matrix is the Identity matrix itself.
+2. Inverse of \( \beta \mathbf{A} = \frac{1}{\beta}\mathbf{A}^{-1} \).
+3. \( (\mathbf{A}^\mathrm{T})^{-1} = (\mathbf{A}^{-1})^\mathrm{T} \).
+4. Inverse of a diagonal matrix is a diagonal matrix with reciprocal of the diagonal elements.
+5. Inverse of a upper triangular matrix is the upper triangular matrix.
+6. Inverse of a lower triangular matrix is the lower triangular matrix.
+7. Symmetric matrix, if invertible, then \((\mathbf{A}^{-1})^\mathrm{T} = \mathbf{A}^{-1}\),
+since, \(\mathbf{A} = \mathbf{A}^\mathrm{T}\)
+
 {{< /alert >}}
+<br><br>
+
+{{< definition >}}
+**Orthogonal Matrix:** <br>
+It is a square matrix that whose rows and columns are **orthonormal** vectors, i.e, they are **perpendicular** to each other
+and have a **unit length**. <br><br>
+\( \mathbf{A} \mathbf{A}^\mathrm{T} = \mathbf{A}^\mathrm{T} \mathbf{A} = \mathbf{A} \mathbf{A}^{-1} = \mathbf{I}  \) <br>
+=> \( \mathbf{A}^\mathrm{T} = \mathbf{A}^{-1} \) <br>
+
+*Note:*
+1. Orthogonal matrix preserves the length and angles of vectors, acting as rotation or reflection in geometry.
+2. The determinant of an orthogonal matrix is always +1 or -1, because \( \mathbf{A} \mathbf{A}^\mathrm{T} = \mathbf{I} \)
+
+Let's check out why the rows and columns of an orthogonal matrix are **orthonormal**. <br>
+\( \mathbf{A} = 
+\begin{bmatrix}
+a_{11} & a_{12} \\
+\\
+a_{21} & a_{22}
+\end{bmatrix}
+_{\text{2 x 2}}
+\),
+=> \( \mathbf{A}^\mathrm{T} = 
+\begin{bmatrix}
+a_{11} & a_{21} \\
+\\
+a_{12} & a_{22}
+\end{bmatrix}
+_{\text{2 x 2}}
+\)
+<br><br>
+Since, \( \mathbf{A} \mathbf{A}^\mathrm{T} = \mathbf{I} \) <br>
+\(
+\begin{bmatrix}
+a_{11} & a_{12} \\
+\\
+a_{21} & a_{22}
+\end{bmatrix} 
+\begin{bmatrix}
+a_{11} & a_{21} \\
+\\
+a_{12} & a_{22}
+\end{bmatrix}
+= \begin{bmatrix}
+a_{11}^2 + a_{12}^2 & a_{11}a_{21} + a_{12}a_{22} \\
+\\
+a_{21}a_{11} + a_{21}a_{12} & a_{21}^2 + a_{22}^2
+\end{bmatrix}
+= \begin{bmatrix}
+1 & 0 \\
+\\
+0 & 1
+\end{bmatrix}
+\) 
+<br><br>
+Equating the terms, we get: <br>
+\( a_{11}^2 + a_{12}^2 = 1 \) => row 1 is a **unit** vector <br>
+\( a_{21}^2 + a_{22}^2 = 1 \)  => row 2 is a **unit** vector <br>
+\( a_{11}a_{21} + a_{12}a_{22} = 0 \) => row 1 and row 2 are **orthogonal** to each other, since dot product = 0 <br>
+\( a_{21}a_{11} + a_{21}a_{12} = 0 \) => row 1 and row 2 are **orthogonal** to each other, since dot product = 0 <br>
+
+Therefore, the rows and columns of an orthogonal matrix are **orthonormal**.
+{{</ definition >}}
+<br>
+
+{{< question >}}
+Why multiplication of a vector with an orthogonal matrix does NOT change its size?
+{{</ question >}}
+
+{{< answer >}}
+Let, \(\mathbf{Q}\) is an orthogonal matrix, and \(\mathbf{v}\) is a vector. <br>
+Let's calculate the length of \( \mathbf{Q} \mathbf{v} \) <br>
+\[
+\text{ length of } \mathbf{Qv} = \|\mathbf{Qv}\|  \\
+= (\mathbf{Qv})^T\mathbf{Qv} = \mathbf{v}^T\mathbf{Q}^T\mathbf{Qv} \\
+\text{ but } \mathbf{Q}^T\mathbf{Q} = \mathbf{I} \quad \text{ since, Q is orthogonal }\\
+= \mathbf{v}^T\mathbf{v} = \|\mathbf{v}\| \quad \text{ = length of vector }\\
+\]
+
+Therefore, linear transformation of a vector by an orthogonal matrix does NOT change its length.
+{{</ answer >}}
+<br>
+
+{{< question >}}
+Solve the following system of equations: <br>
+\( 2x + y = 5 \) <br>
+\( x + 2y = 4 \) <br>
+{{</ question >}}
+
+{{< answer >}}
+Lets solve the system of equations using matrix: <br>
+\(\begin{bmatrix}
+2 & 1 \\
+\\
+1 & 2
+\end{bmatrix}
+\)
+\(
+\begin{bmatrix}
+x \\
+\\
+y
+\end{bmatrix}
+= \begin{bmatrix}
+5 \\
+\\
+4
+\end{bmatrix}
+\)
+
+The above equation can be written as: <br>
+\(\mathbf{AX} = \mathbf{B} \) <br>
+=> \( \mathbf{X} = \mathbf{A}^{-1} \mathbf{B} \) <br>
+<br>
+\( \mathbf{A} = \begin{bmatrix}
+2 & 1 \\
+\\
+1 & 2
+\end{bmatrix},
+\mathbf{B} = \begin{bmatrix}
+5 \\
+\\
+4
+\end{bmatrix},
+\mathbf{X} = \begin{bmatrix}
+x \\
+\\
+y
+\end{bmatrix}
+\)
+<br><br>
+
+Lets compute the inverse of A matrix: <br>
+\( \mathbf{A}^{-1} = \frac{1}{3}\begin{bmatrix}
+2 & -1 \\
+\\
+-1 & 2
+\end{bmatrix}
+\)
+<br><br>
+Since, \( \mathbf{X} = \mathbf{A}^{-1} \mathbf{B} \) <br>
+=> \( \mathbf{X} = \begin{bmatrix}
+x \\
+\\
+y
+\end{bmatrix}
+= \frac{1}{3}\begin{bmatrix}
+2 & -1 \\
+\\
+-1 & 2
+\end{bmatrix} 
+\begin{bmatrix}
+5 \\
+\\
+4
+\end{bmatrix} 
+= \frac{1}{3}\begin{bmatrix}
+6 \\
+\\
+3
+\end{bmatrix}
+= = \begin{bmatrix}
+2 \\
+\\
+1
+\end{bmatrix}
+\)
+<br><br>
+
+Therefore, \( x = 2 \) and \( y = 1 \).
+
+{{</ answer >}}
 
 
 <br><br>

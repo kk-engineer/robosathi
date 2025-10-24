@@ -80,6 +80,8 @@ The most frequently occurring value in a dataset. <br>
 - A dataset can have multiple modes, or no mode at all, which can make mode less informative.
 
 {{</ definition >}}
+
+{{< video "https://youtu.be/tRqgJS1nR4o?si=P3vdco_f4DkMtWpS" >}}
 <br><br>
 
 {{< definition >}}
@@ -219,6 +221,10 @@ Normal distribution has kurtosis = 3. <br>
 ![](https://robosathi.com/images/kurtosis.png)
 <br>
 ![](https://robosathi.com/images/excess_kurtosis.png)
+
+<br>
+{{< video "https://youtu.be/ljxOw47oUrU?si=LqttW0ZyGCImT1Wm" >}}
+
 <br> <br>
 
 {{< definition >}}
@@ -307,7 +313,9 @@ Lower fence = Q1 - 1.5 * IQR  = 3 - 9 = -6<br>
 Upper fence = Q3 + 1.5 * IQR = 9 + 9 = 18 <br>
 So, any data point that is less than  -6 or greater than 18 is considered as a potential  outlier. <br>
 As in this example, 100 can be considered as an outlier.
-<br>br>
+<br>
+{{< video "https://youtu.be/3-qQu9jNMPk?si=mxnrRIC8lrqtC2Oa" >}}
+<br><br>
 
 {{< alert color="warning" title="Anscombe's Quartet">}}
 Even though the above metrics give us a good idea of the data distribution,

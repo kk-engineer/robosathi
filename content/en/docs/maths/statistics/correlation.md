@@ -54,7 +54,9 @@ Let's calculate the covariance: <br>
 \(\text{Cov}(X, Y) = \frac{1}{3-1}[(1-2)(2-4) + (2-2)(4-4) + (3-2)(6-4)]= 0\) <br>
 \( = \frac{1}{2}[2+0+2]= 2\) <br>
 => Cov(X,Y) > 0 i.e if X increases, Y increases and vice versa. <br>
+<br>
 
+{{< video "https://youtu.be/deAM6uPsdAQ?si=J7sZEwpA51-Jm7sJ" >}}
 <br><br>
 
 {{< definition >}}
@@ -146,6 +148,9 @@ Therefore, we can say that there is a strong +ve correlation between the ranks g
 Here, Spearman's rank correlation coefficient \(\rho\) will be perfect 1 as there is a monotonic relationship i.e
 as X increases, Y increases and vice versa. <br>
 But, the Pearson's correlation coefficient (r) will be slightly less than 1 i.e r = 0.9662.
+
+<br>
+{{< video "https://youtu.be/Vsy2pH2M9F0?si=hPe9P5mS-lWR3va-" >}}
 <br><br>
 
 {{< alert color="success" title="Correlation Application" >}}
@@ -168,5 +173,8 @@ Whereas, **correlation** means that two variables move together.
 **E.g**: Election results and stock market - there may be some correlation between the two, <br> 
 but establishing clear causal links is difficult. 
 {{< /alert >}}
+<br>
+{{< video "https://youtu.be/FH8jnYEGDzE?si=HhWImSk2PfGL_kv-" >}}
 
+<br><br>
 ```End of Section```

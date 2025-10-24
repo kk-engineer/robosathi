@@ -72,6 +72,9 @@ It must be true if the null hypothesis is rejected.
 - T-Test: For regression coefficients
 - F-Test: For overall regression significance
 {{< /alert >}}
+<br>
+{{< video "https://youtu.be/u1DsXg2G7_c?si=m78ntxJv_uVGXF6b" >}}
+<br>
 
 {{< alert color="secondary" title="Framework for Hypothesis Testing" >}}
 We can structure any hypothesis test in 6 steps as follows: <br><br>

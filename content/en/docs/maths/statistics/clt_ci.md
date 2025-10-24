@@ -114,6 +114,10 @@ e.g: <br>
 1. Cauchy distribution has infinite mean and infinite variance.
 2. Pareto distribution (with low alpha) has infinite variance, such as distribution of wealth.  
 {{</ answer >}}
+<br>
+
+{{< video "https://youtu.be/GcHz8vOggnc?si=326B1_v-egzrLZDh" >}}
+
 <br><br>
 
 {{< definition >}}
@@ -190,6 +194,8 @@ We can see that initially company B's salary looked obviously better, <br>
 but after calculating the 95% CI, we can see that there is a significant overlap in the salaries of two companies,<br>
 i.e [36.12, 37.94].
 {{</ answer >}}
+<br>
+{{< video "https://youtu.be/vQb9l9Zw3Hs?si=AxRVhQwFgbhtIeKf" >}}
 
 <br><br>
 ```End of Section```
