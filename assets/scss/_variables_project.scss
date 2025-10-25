@@ -22,7 +22,7 @@ $primary: #000000;
 
 // Target the cover block container itself
 section.td-cover-block {
-  background-color: #000000 !important;
+  background-color: $primary !important;
   background-image: none !important;
 }
 
@@ -30,7 +30,7 @@ section.td-cover-block {
 section.td-cover-block .row,
 section.td-cover-block .container,
 section.td-cover-block .container-fluid {
-  background-color: #000000 !important;
+  background-color: $primary !important;
   background-image: none !important;
 }
 

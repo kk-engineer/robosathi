@@ -227,7 +227,7 @@ P-value only measures whether the observed change is statistically significant.
 
 {{< definition >}}
 **Effect Size:** <br>
-It is a standardized objective measure that complements p-value by clarifying whether the a statistically significant 
+It is a standardized objective measure that complements p-value by clarifying whether a statistically significant 
 finding has any real world relevance. <br>
 It quantifies the magnitude of relationship between two variables. <br>
 - Larger effect size => more impactful effect.

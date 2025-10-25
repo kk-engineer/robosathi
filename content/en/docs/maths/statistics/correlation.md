@@ -163,8 +163,9 @@ Correlation is very useful in feature selection for training machine learning mo
 as they have little predictive power.
 {{< /alert >}}
 
-{{< alert color="warning" title="Correlation Vs Causation" >}}
-**Causation** means that one variable directly causes the change in another variable, i.e, direct cause->effect relationship. <br>
+{{< alert color="secondary" title="Correlation Vs Causation" >}}
+**Causation** means that one variable directly causes the change in another variable, i.e, direct <br>
+cause->effect relationship. <br>
 Whereas, **correlation** means that two variables move together.
 
 - _Correlation_ does NOT imply _Causation_.
