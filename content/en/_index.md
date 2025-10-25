@@ -2,13 +2,13 @@
 title: RoboSathi
 ---
 
-{{< blocks/cover title="RoboSathi" image_anchor="top" height="full" >}}
+{{< blocks/cover title="RoboSathi" >}}
 <h1 <class="display-3 fw-bold">"AI for Good"</h1>
 <br>
-<a class="btn btn-lg btn-primary me-3 mb-4" href="/docs/">
+<a class="btn btn-lg btn-secondary me-3 mb-4" href="/docs/">
   Course <i class="fas fa-arrow-alt-circle-right ms-2"></i>
 </a>
-<a class="btn btn-lg btn-primary me-3 mb-4" href="https://www.youtube.com/@RoboSathi" target="_blank">
+<a class="btn btn-lg btn-secondary me-3 mb-4" href="https://www.youtube.com/@RoboSathi" target="_blank">
   Videos <i class="fab fa-youtube "></i>
 </a>
 <p class="lead mt-5">Our Mission: Demystify AI | Empower Everyone</p>
@@ -48,7 +48,7 @@ title: RoboSathi
 <!-- KK Commenting this section for now
 {{% blocks/section color="dark" type="row" %}}
 {{% blocks/feature icon="fa-linkedin" title="LinkedIn" %}}
-Follow us on [LinkedIn](https://www.linkedin.com/in/kk-engineer/)
+Follow us on [LinkedIn](https://www.linkedin.com/company/robosathi/)
 {{% /blocks/feature %}}
 
 

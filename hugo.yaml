@@ -174,7 +174,7 @@ params:
     # End user relevant links. These will show up on left side of footer and in the community page if you have one.
     user:
       - name: LinkedIn
-        url: https://www.linkedin.com/in/kk-engineer/
+        url: https://www.linkedin.com/company/robosathi/
         icon: fab fa-linkedin
         desc: Be updated with the latest news!
       - name: Github

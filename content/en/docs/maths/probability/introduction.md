@@ -34,7 +34,7 @@ Range: \([0,1]\) <br>
 \(P=0\): Highly unlikely <br>
 \(P=1\): Almost certain <br> <br>
 
-{{< video "https://youtu.be/3Q0FJzKOXgo?si=hp6Qhi7tPO5mqGYG" >}}
+{{< video "https://www.youtube.com/watch?v=Lg4I4OqeKII&t=1s" >}}
 <br>
 
 {{< definition >}} 
