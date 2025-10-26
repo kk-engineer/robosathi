@@ -1,13 +1,13 @@
 ---
 title: Eigen Value Decomposition
-description: Eigen Values, Eigen Vectors & Eigen Value Decomposition
+description: Eigen Values, Eigen Vectors, & Eigen Value Decomposition
 date: 2025-10-26
 weight: 4
 math: true
 ---
 
 {{% pageinfo %}}
-In this section we will understand Eigen Values, Eigen Vectors & Eigen Value Decomposition.<br>
+In this section we will understand Eigen Values, Eigen Vectors, & Eigen Value Decomposition.<br>
 {{% /pageinfo %}}
 
 {{< question >}}
@@ -378,8 +378,117 @@ Just reshuffling the above equation will give us the **Eigen Value Decomposition
 **Important:** Given that \(\mathbf{V}^{-1}\) exists, i.e, all the eigen vectors are linearly independent. <br>
 
 {{< /alert >}}
+For example: <br>
+Let's revisit the example given above: <br>
+\(\mathbf{A} = \begin{bmatrix}
+2 & 1 \\
+\\
+1 & 2
+\end{bmatrix}
+\),
+\(\quad \lambda_1 = 3\) and \( \lambda_2 = 1\), 
+\(\mathbf{v_1} = \begin{bmatrix} 1 \\  \\ 1 \\ \end{bmatrix}\), 
+ \(\mathbf{v_2} = \begin{bmatrix} 1 \\  \\ -1 \\ \end{bmatrix}\) <br><br>
+
+=> \( \mathbf{V} = \begin{bmatrix}
+1 & 1  \\
+\\
+1 & -1 \\
+\end{bmatrix}
+\), 
+\(\quad \mathbf{\Lambda} = \begin{bmatrix}
+3 & 0 \\
+\\
+0 & 1
+\end{bmatrix}
+\) 
+<br> <br>
+\( \because \mathbf{A} = \mathbf{V} \mathbf{\Lambda} \mathbf{V}^{-1}\) <br>
+We know, \( \mathbf{V} ~and~ \mathbf{\Lambda} \), we need to calculate \(\mathbf{V}^{-1}\). <br>
+
+\(\mathbf{V}^{-1} = \frac{1}{2}\begin{bmatrix}
+1 & 1  \\
+\\
+1 & -1 \\
+\end{bmatrix}
+\)
+
+\( \therefore \mathbf{V} \mathbf{\Lambda} \mathbf{V}^{-1} = \begin{bmatrix}
+1 & 1  \\
+\\
+1 & -1 \\
+\end{bmatrix} \begin{bmatrix}
+3 & 0 \\
+\\
+0 & 1
+\end{bmatrix} \frac{1}{2}\begin{bmatrix}
+1 & 1  \\
+\\
+1 & -1 \\
+\end{bmatrix} 
+\)
+<br><br>
+\( = \frac{1}{2}
+\begin{bmatrix}
+3 & 1  \\
+\\
+3 & -1 \\
+\end{bmatrix} \begin{bmatrix}
+1 & 1  \\
+\\
+1 & -1 \\
+\end{bmatrix} = \frac{1}{2}\begin{bmatrix}
+4 & 2  \\
+\\
+2 & 4 \\
+\end{bmatrix}
+\)
+<br><br>
+\( = \begin{bmatrix}
+2 & 1 \\
+\\
+1 & 2
+\end{bmatrix} = \mathbf{A}
+\)
+<br><br>
+
+{{< alert color="success" title="Spectral Decomposition" >}}
+**Spectral decomposition** is a specific type of eigendecomposition that applies to a **symmetric** matrix, 
+requiring its eigenvectors to be **orthogonal**. <br>
+In contrast, a general eigendecomposition applies to any diagonalizable matrix and does not require the eigenvectors 
+to be orthogonal. <br>
+
+The eigen vectors corresponding to **distinct** eigen values are orthogonal. <br>
+However, the matrix \(\mathbf{V}\) formed by the eigen vectors as columns is NOT **orthogonal**, 
+because the rows/columns are NOT **orthonormal** i.e unit length.<br>
+So, in order to make the matrix \(\mathbf{V}\) orthogonal, we need to **normalize** the rows/columns of the matrix 
+\(\mathbf{V}\), i.e, make, each eigen vector(column) unit length, by dividing the vector by its magnitude. <br><br>
+
+After **normalisation** we get orthogonal matrix \(\mathbf{Q}\) that is composed of unit length and orthogonal eigen vectors 
+or **orthonormal eigen vectors**. <br>
+Since, matrix \(\mathbf{Q}\) is orthogonal, => \(\mathbf{Q}^T = \mathbf{Q}^{-1}\) <br><br>
+
+The eigen value decomposition of a square matrix is: <br>
+\(\mathbf{A} = \mathbf{V} \mathbf{\Lambda} \mathbf{V}^{-1}\) <br>
+
+And, the **spectral** decomposition of a **real symmetric** matrix is: <br>
+\(\mathbf{A} = \mathbf{Q} \mathbf{\Lambda} \mathbf{Q}^T\) <br>
+
+**Important:** Note that, we are discussing only the special case of **real symmetric** matrix here, <br>
+because a real symmetric matrix is guaranteed to have all real eigenvalues. <br>
+
+{{</ alert >}}
+
+<br>
+
+{{< alert color="secondary" title="Applications of Eigen Value Decomposition" >}}
+1. **Principal Component Analysis** (PCA): For dimensionality reduction.
+2. **Page Rank Algorithm**: For finding the importance of a web page.
+3. **Structural Engineering**: By calculating the eigen values of a bridge's structural model, we can identify its **natural**
+ **frequencies** to ensure that the bridge won't **resonate** and be damaged by external forces, such as wind, and seismic waves.
 
 
+{{</ alert >}}
 
 <br><br>
 ```End of Section```
