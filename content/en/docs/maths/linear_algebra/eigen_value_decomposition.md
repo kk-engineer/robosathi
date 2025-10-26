@@ -51,7 +51,7 @@ Result of linear transformation, i.e, multiplying the vector by a matrix, is jus
 <br>
 
 {{< definition >}}
-**Eigen Value \(\lambda\)** <br>
+**Eigen Value (\(\lambda\))** <br>
 It is the scaling factor of the eigen vector, i.e, a scalar multiple \(\lambda\) of the original vector, when the vector 
 is multiplied by a matrix. <br>
 \(|\lambda| > 1 \): Vector stretched <br>
@@ -249,6 +249,136 @@ We know that for eigen vectors - <br>
 => \text{ eigen vectors are orthogonal to each other,} => \mathbf{v_1} \perp \mathbf{v_2} \\[10pt]
 \]
 {{< /alert >}}
+<br><br>
+
+{{< question >}}
+How will we calculate the 2nd power of a matrix i.e \(\mathbf{A}^2\)?
+{{</ question >}}
+
+{{< answer >}}
+Let' calculate the 2nd power of a square matrix. <br>
+
+e.g.: <br>
+\(\mathbf{A} = \begin{bmatrix}
+2 & 1 \\
+\\
+1 & 2
+\end{bmatrix}
+\),
+\(\quad \mathbf{A}^2 = \begin{bmatrix}
+2 & 1 \\
+\\
+1 & 2
+\end{bmatrix} \begin{bmatrix}
+2 & 1 \\
+\\
+1 & 2
+\end{bmatrix} = \begin{bmatrix}
+5 & 4 \\
+\\
+4 & 5
+\end{bmatrix}
+\)
+{{</ answer >}}
+<br>
+{{< question >}}
+Now, how will we calculate higher powers of a matrix i.e \(\mathbf{A}^k\)?
+{{</ question >}}
+
+{{< answer >}}
+If we follow the above method, then we will have to multiply the matrix \(\mathbf{A}\), \(k\) times, which will 
+be very time consuming and cumbersome.<br>
+So, we need to find an easier way to calculate the power of a matrix. <br>
+{{</ answer >}}
+<br>
+
+{{< question >}}
+How will we calculate the power of diagonal matrix?
+{{</ question >}}
+
+{{< answer >}}
+Let's calculate the 2nd power of a diagonal matrix. <br>
+
+e.g.: <br>
+\(\mathbf{A} = \begin{bmatrix}
+3 & 0 \\
+\\
+0 & 2
+\end{bmatrix}
+\),
+\(\quad \mathbf{A}^2 = \begin{bmatrix}
+3 & 0 \\
+\\
+0 & 2
+\end{bmatrix} \begin{bmatrix}
+3 & 0 \\
+\\
+0 & 2
+\end{bmatrix} = \begin{bmatrix}
+9 & 0 \\
+\\
+0 & 4
+\end{bmatrix}
+\)
+<br><br>
+
+Note that when we square the diagonal matrix, then all the diagonal elements got squared. <br>
+Similarly, if we want to calculate the kth power of a diagonal matrix, then all we need to do is to just compute the kth
+powers of all diagonal elements, instead of complex matrix multiplications. <br>
+\(\quad \mathbf{A}^k = \begin{bmatrix}
+3^k & 0 \\
+\\
+0 & 2^k
+\end{bmatrix}
+\)
+<br> <br>
+
+Therefore, if we **diagonalize** a square matrix then the computation of power of the matrix will become very easy. <br>
+Next, let's see **how to diagonalize a matrix**.
+{{</ answer >}}
+<br>
+
+{{< alert color="success" title="Eigen Value Decomposition" >}}
+\(\mathbf{V}\): M**atrix of all eigen vectors**(as columns) of matrix \(\mathbf{A}\) <br>
+\( \mathbf{V} = \begin{bmatrix}
+\mathbf{v}_1 & \mathbf{v}_2 & \cdots & \mathbf{v}_n \\
+\vdots & \vdots & \ddots & \vdots \\
+\vdots & \vdots & \vdots & \vdots\\
+\end{bmatrix}
+\), <br>
+where, each column is an eigen vector corresponding to an eigen value \(\lambda_i\). <br>
+If \( \mathbf{v}_1  \mathbf{v}_2  \cdots  \mathbf{v}_n \) are linearly independent, then,
+\(det(\mathbf{V}) ~⍯ ~ 0\). <br>
+=> \(\mathbf{V}\) is NOT singular and \(\mathbf{V}^{-1}\) exists. <br>
+
+\(\Lambda\): **Diagonal matrix of all eigen values** of matrix \(\mathbf{A}\) <br>
+\( \Lambda = \begin{bmatrix}
+\lambda_1 & 0 & \cdots & 0 \\
+\\
+0 & \lambda_2 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & \lambda_n
+\end{bmatrix}
+\), <br>
+where, each diagonal element is an eigen value corresponding to an eigen vector \(\mathbf{v}_i\). <br>
+
+Let's recall the characteristic equation of a matrix for calculating eigen values: <br>
+\(\mathbf{A} \mathbf{v} = \lambda \mathbf{v}\) <br>
+Let's use the consolidated matrix for eigen values and eigen vectors described above: <br>
+i.e, \(\mathbf{A} \mathbf{V} = \mathbf{\Lambda} \mathbf{V}\) <br>
+For **diagonalisation**: <br>
+=> \(\mathbf{\Lambda}  = \mathbf{V}^{-1} \mathbf{A} \mathbf{V}\) <br>
+
+We can see that, using the above equation, we can represent the matrix \(\mathbf{A}\) as a 
+diagonal matrix \(\mathbf{\Lambda}\) using the matrix of eigen vectors \(\mathbf{V}\). <br>
+
+Just reshuffling the above equation will give us the **Eigen Value Decomposition** of the matrix \(\mathbf{A}\): <br>
+\(\mathbf{A}  = \mathbf{V} \mathbf{\Lambda} \mathbf{V}^{-1}\) <br>
+
+**Important:** Given that \(\mathbf{V}^{-1}\) exists, i.e, all the eigen vectors are linearly independent. <br>
+
+{{< /alert >}}
+
 
 
 <br><br>
