@@ -1,5 +1,5 @@
 ---
-title: Vector
+title: Vector Fundamentals
 description: Vector Fundamentals
 date: 2025-10-24
 weight: 2

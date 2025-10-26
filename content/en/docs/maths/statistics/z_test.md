@@ -67,7 +67,7 @@ Z = \frac{\bar{x} - \mu}{\sigma / \sqrt{n}}
 \(n\): sample size <br>
 \(\sigma / \sqrt{n}\): standard error of mean
 
-[Read more about Standard Error]({{<ref  "/docs/maths/statistics/clt_ci"  >}})
+[Read more about Standard Error]({{<ref  "/docs/maths/statistics/central_limit_theorem"  >}})
 
 *Note: Test statistic Z follows a standard normal distribution \(Z \sim \mathcal{N}(0, 1)\).*
 
@@ -138,7 +138,7 @@ It is of 2 types:
 The categorical data,i.e success/failure, is discrete that can be modeled as **Bernoulli** distribution. <br>
 Let's understand how this Bernoulli random variable can be approximated as a **Gaussian** distribution for a very large sample size,
 using **Central Limit Theorem**.<br>
-[Read more about Central Limit Theorem]({{<ref "/docs/maths/statistics/clt_ci" >}})
+[Read more about Central Limit Theorem]({{<ref "/docs/maths/statistics/central_limit_theorem" >}})
 
 {{</ definition >}}
 

@@ -48,7 +48,7 @@ the sample size increases, regardless of the distribution of the population. <br
 More broadly, we can also say that _sum/count_ of independent random variables approaches a normal distribution as 
 the sample size increases. <br>
 Since, sample mean \(\bar{x} = \frac{sum}{n} \). <br><br>
-[Read more about Central Limit Theorem]({{<ref "/docs/maths/statistics/clt_ci" >}})
+[Read more about Central Limit Theorem]({{<ref "/docs/maths/statistics/central_limit_theorem" >}})
 {{< /alert >}}
 
 {{< alert color="dark" title="Sampling Distribution of Counts" >}}

@@ -1,5 +1,5 @@
 ---
-title: Matrix
+title: Matrix Operations
 description: Matrix Operations
 date: 2025-10-24
 weight: 3
