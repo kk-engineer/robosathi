@@ -308,6 +308,7 @@ How will we incorporate this useful information (apriori knowledge) into our par
 f_{\Theta}(\theta) = 
 \begin{cases} 
 2\Theta,  & \forall ~ \theta \in [0,1]  \\
+\\
 0, & \text{otherwise} 
 \end{cases} \\
 \]
@@ -323,6 +324,7 @@ to do our parameter estimation. <br>
 f_{\Theta}(\theta) = 
 \begin{cases} 
 2\Theta,  & \forall ~ \theta \in [0,1]  \\
+\\
 0, & \text{otherwise} 
 \end{cases} \\
 \]
@@ -460,6 +462,7 @@ From equation 3 and 4: <br>
 => & \Theta_{MAP}(X) = 
 \begin{cases}
 1 & \text{if } \frac{1}{n} \sum_{i=1}^n x_i > \frac{1}{2} \\
+\\
 0 & \text{otherwise.}
 \end{cases}
 \end{aligned}
@@ -502,6 +505,7 @@ From equation 3 and 4 above: <br>
 => & \Theta_{MAP}(X) = 
 \begin{cases}
 1 & \text{if } \frac{1}{n} \sum_{i=1}^n x_i > \frac{1}{2} + \frac{\log3}{n}\\
+\\
 0 & \text{otherwise.}
 \end{cases}
 \end{aligned}
