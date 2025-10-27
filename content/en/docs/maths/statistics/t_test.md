@@ -12,7 +12,8 @@ In this section, we will understand Student's T-Test. <br>
 
 {{< definition >}}
 **T-Test:** <br>
-It is a statistical test used to determine whether there is a significant difference between mean of 2 groups. <br>
+It is a statistical test that is used to determine whether the sample mean is equal to a hypothesized value or <br> 
+is there a significant difference between the sample means of 2 groups. <br>
 - It is a parametric test, since it assumes data to be approximately normally distributed.
 - Appropriate when:
   - sample size n < 30.

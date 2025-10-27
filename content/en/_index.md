@@ -5,7 +5,7 @@ title: RoboSathi
 {{< blocks/cover title="RoboSathi" >}}
 <h1 <class="display-3 fw-bold">"AI for Good"</h1>
 <br>
-<a class="btn btn-lg btn-secondary me-3 mb-4" href="/docs/">
+<a class="btn btn-lg btn-success me-3 mb-4" href="/docs/">
   Course <i class="fas fa-arrow-alt-circle-right ms-2"></i>
 </a>
 <a class="btn btn-lg btn-secondary me-3 mb-4" href="https://www.youtube.com/@RoboSathi" target="_blank">
@@ -21,14 +21,14 @@ title: RoboSathi
 <h3 class="text-center mb-4">Latest Video</h3>
 <div class="row justify-content-center mb-5">
   <div class="col-lg-8">
-    {{< youtube rE4PbltQwxo>}}
+    {{< youtube Dsz7WcGcnxc>}}
   </div>
 </div>
 
 <h3 class="text-center mb-4">Watch More</h3>
 <div class="row">
   <div class="col-md-4 mb-4">
-    {{< youtube Dsz7WcGcnxc>}}
+    {{< youtube vE3suVMRH0o>}} 
   </div>
   <div class="col-md-4 mb-4">
     {{< youtube B3SLD_4M2FU>}}
