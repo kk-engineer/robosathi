@@ -10,6 +10,10 @@
 ">
   <a href="{{ .Get 0 }}" target="_blank" style="text-decoration: none; color: inherit;">
     <i class="fab fa-youtube" style="color: #ff0000; margin-right: 6px;"></i>
-    Watch Playlist
+    {{ with .Get 1 }}
+      {{ . }}
+    {{ else }}
+      Complete Course
+    {{ end }}
   </a>
 </div>

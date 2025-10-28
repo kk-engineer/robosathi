@@ -10,7 +10,8 @@ weight: 1
 In this section, we will cover the topics related to Probability for AI & ML.<br>
 {{% /pageinfo %}}
 
-{{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxcI3JyTIwOTKXY7ANhw__v1&si=cwNInuB2qLy7gTEi" >}}
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
+"Probability for AI & ML | Full Course Videos">}}
 
 ###  Probability for AI & ML
 [This sheet](https://docs.google.com/spreadsheets/d/1NUv9DrXJcFZs0SGHiLo8GSyCP58nR2_1lD1YDGzwC1A/edit?gid=0#gid=0) contains all the topics that will be covered for Maths for AI & ML.

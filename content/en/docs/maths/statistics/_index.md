@@ -10,6 +10,9 @@ weight: 2
 In this section, we will cover the topics related to Statistics for AI & ML.
 {{% /pageinfo %}}
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
+"Statistics for AI & ML | Full Course Videos">}}
+
 ###  Statistics for AI & ML
 [This sheet](https://docs.google.com/spreadsheets/d/1NUv9DrXJcFZs0SGHiLo8GSyCP58nR2_1lD1YDGzwC1A/edit?gid=1700540705#gid=1700540705) contains all the topics that will be covered for Maths for AI & ML.
 

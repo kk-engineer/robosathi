@@ -23,7 +23,8 @@ Below is the list of topics that will be covered in this course.
 -  Calculus
 -  Co-Ordinate Geometry (used everywhere for visualizing graphs of line, curve, plane, etc.)
 
-{{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxen-R6NytSMigAri7piPhFp&si=l2v25LPhJs5i7S2u_" >}}
+{{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxen-R6NytSMigAri7piPhFp&si=JUBpWmnh7DBjhBCq" 
+"Maths for AI & ML | Full Course Videos" >}}
 
 ### {{% color "#0668E1" %}} **Classical Machine Learning** {{% /color %}}
 
