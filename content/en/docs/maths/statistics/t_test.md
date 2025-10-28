@@ -2,7 +2,7 @@
 title: T-Test
 description: Student's T-Test
 date: 2025-10-22
-weight: 6
+weight: 7
 math: true
 ---
 

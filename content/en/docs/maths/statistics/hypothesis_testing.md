@@ -2,7 +2,7 @@
 title: Hypothesis Testing
 description: Hypothesis Testing
 date: 2025-10-22
-weight: 5
+weight: 6
 math: true
 ---
 

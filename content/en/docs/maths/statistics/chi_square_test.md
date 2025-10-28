@@ -2,7 +2,7 @@
 title: Chi-Square Test
 description: Chi-Square Test
 date: 2025-10-23
-weight: 8
+weight: 9
 math: true
 ---
 

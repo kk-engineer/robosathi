@@ -6,7 +6,7 @@ title: RoboSathi
 <h1 <class="display-3 fw-bold">"AI for Good"</h1>
 <br>
 <a class="btn btn-lg btn-success me-3 mb-4" href="/docs/">
-  Course <i class="fas fa-arrow-alt-circle-right ms-2"></i>
+  Notes <i class="fas fa-arrow-alt-circle-right ms-2"></i>
 </a>
 <a class="btn btn-lg btn-secondary me-3 mb-4" href="https://www.youtube.com/@RoboSathi" target="_blank">
   Videos <i class="fab fa-youtube "></i>
@@ -18,31 +18,42 @@ title: RoboSathi
 
 {{% blocks/lead color="primary" %}}
 
-<h3 class="text-center mb-4">Latest Video</h3>
+<!-- KK Commenting this section for now
+<h2 class="text-center mb-4">Latest Video</h2>
 <div class="row justify-content-center mb-5">
   <div class="col-lg-8">
-    {{< youtube Dsz7WcGcnxc>}}
+    {{< youtube u1DsXg2G7_c>}}
   </div>
 </div>
+<br><br>
+This section commented End !-->
 
-<h3 class="text-center mb-4">Watch More</h3>
+<h1 class="text-center mb-4"><strong>Maths Courses</strong></h1>
 <div class="row">
   <div class="col-md-4 mb-4">
-    {{< youtube vE3suVMRH0o>}} 
+    {{< youtube_playlist id="PLnpa6KP2ZQxen-R6NytSMigAri7piPhFp" title="Maths for AI & ML Full Course" >}}
   </div>
   <div class="col-md-4 mb-4">
-    {{< youtube B3SLD_4M2FU>}}
+    {{< youtube_playlist id="PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" title="Probability for AI & ML Full Course" >}}
   </div>
   <div class="col-md-4 mb-4">
-    {{< youtube aa9hiJhQvvI>}}
+    {{< youtube_playlist id="PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" title="Statistics for AI & ML Full Course" >}}
   </div>
-</div>
+  <div class="col-md-4 mb-4">
+    {{< youtube_playlist id="PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" title="Linear Algebra for AI & ML Full Course" >}}
+  </div>
+   <div class="col-md-4 mb-4">
+    {{< youtube_playlist id="PLnpa6KP2ZQxfzDh2D3OqVo-piGAZQPWDj" title="Calculus for AI & ML Full Course" >}}
+  </div>
+
 
 <div class="text-center mt-4">
-  <a class="btn btn-lg btn-danger" href="https://www.youtube.com/@RoboSathi" target="_blank">
+  <a class="btn btn-lg btn-danger" href="https://www.youtube.com/@RoboSathi?sub_confirmation=1" target="_blank">
     <i class="fab fa-youtube"></i> Subscribe for More
   </a>
 </div>
+
+
 {{% /blocks/lead %}}
 
 <!-- KK Commenting this section for now

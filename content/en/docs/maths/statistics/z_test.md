@@ -2,7 +2,7 @@
 title: Z-Test
 description: Z-Test
 date: 2025-10-22
-weight: 7
+weight: 8
 math: true
 ---
 

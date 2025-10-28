@@ -1,5 +1,5 @@
 ---
-title: Course
+title: Notes
 description: AI & ML Course Overview
 weight: 1
 menu: {main: {weight: 20}}
@@ -23,7 +23,7 @@ Below is the list of topics that will be covered in this course.
 -  Calculus
 -  Co-Ordinate Geometry (used everywhere for visualizing graphs of line, curve, plane, etc.)
 
-{{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxePOg6k6vAkcg5Y50EAZds9&si=e2j6VPYw_3ptzXM_" >}}
+{{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxen-R6NytSMigAri7piPhFp&si=l2v25LPhJs5i7S2u_" >}}
 
 ### {{% color "#0668E1" %}} **Classical Machine Learning** {{% /color %}}
 
