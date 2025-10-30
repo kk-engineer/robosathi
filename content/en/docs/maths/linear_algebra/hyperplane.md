@@ -161,3 +161,6 @@ The above concept of equation of hyperplane will be very helpful when we discuss
 1. **Logistic Regression**
 2. **Support Vector Machines**
 {{< /alert >}}
+
+<br><br>
+```End of Section```
