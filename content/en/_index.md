@@ -50,7 +50,7 @@ This section commented End !-->
     {{< youtube_playlist id="PLnpa6KP2ZQxfzDh2D3OqVo-piGAZQPWDj" title="Calculus for AI & ML Full Course" 
         thumbnail="/images/thumbnails/calculus.png">}}
   </div>
-
+</div>
 
 <div class="text-center mt-4">
   <a class="btn btn-lg btn-danger" href="https://www.youtube.com/@RoboSathi?sub_confirmation=1" target="_blank">
