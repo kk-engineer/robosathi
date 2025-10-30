@@ -10,6 +10,9 @@ math: true
 In this section, we will understand about Hypothesis Testing, along with a framework for Hypothesis Testing. <br>
 {{% /pageinfo %}}
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
+        "Statistics for AI & ML | Full Course Videos">}}
+
 {{< alert color="success" title="Hypothesis" >}}
 An idea that is suggested as a possible explanation for a phenomenon, but has not been found to be true.
 {{< /alert >}}

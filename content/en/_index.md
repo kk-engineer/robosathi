@@ -31,19 +31,24 @@ This section commented End !-->
 <h1 class="text-center mb-4"><strong>Maths Courses</strong></h1>
 <div class="row">
   <div class="col-md-4 mb-4">
-    {{< youtube_playlist id="PLnpa6KP2ZQxen-R6NytSMigAri7piPhFp" title="Maths for AI & ML Full Course" >}}
+    {{< youtube_playlist id="PLnpa6KP2ZQxen-R6NytSMigAri7piPhFp" title="Maths for AI & ML Full Course" 
+        thumbnail="/images/thumbnails/maths.png">}}
   </div>
   <div class="col-md-4 mb-4">
-    {{< youtube_playlist id="PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" title="Probability for AI & ML Full Course" >}}
+    {{< youtube_playlist id="PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" title="Probability for AI & ML Full Course" 
+        thumbnail="/images/thumbnails/probability.png">}}
   </div>
   <div class="col-md-4 mb-4">
-    {{< youtube_playlist id="PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" title="Statistics for AI & ML Full Course" >}}
+    {{< youtube_playlist id="PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" title="Statistics for AI & ML Full Course" 
+        thumbnail="/images/thumbnails/statistics.png">}}
   </div>
   <div class="col-md-4 mb-4">
-    {{< youtube_playlist id="PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" title="Linear Algebra for AI & ML Full Course" >}}
+    {{< youtube_playlist id="PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" title="Linear Algebra for AI & ML Full Course" 
+        thumbnail="/images/thumbnails/linear_algebra.png">}}
   </div>
    <div class="col-md-4 mb-4">
-    {{< youtube_playlist id="PLnpa6KP2ZQxfzDh2D3OqVo-piGAZQPWDj" title="Calculus for AI & ML Full Course" >}}
+    {{< youtube_playlist id="PLnpa6KP2ZQxfzDh2D3OqVo-piGAZQPWDj" title="Calculus for AI & ML Full Course" 
+        thumbnail="/images/thumbnails/calculus.png">}}
   </div>
 
 

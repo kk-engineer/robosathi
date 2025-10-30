@@ -10,16 +10,17 @@ math: true
 In this section, we will understand all the concepts related to Conditional Probability and Bayes' Theorem.<br>
 {{% /pageinfo %}}
 
-{{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxcI3JyTIwOTKXY7ANhw__v1&si=MNoo5fxBo_10dLuM" >}}
+{{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
+        "Probability for AI & ML | Full Course Videos" >}}
 <br>
 
 {{< definition >}}
 **Conditional Probability**: <br>
 It is the probability of an event occurring, given that another event has already occurred.<br>
 Allows us to update probability when additional information is revealed.
+\[P(A \mid B) = \frac{P(A \cap B)}{P(B)}\]
 {{< /definition >}}
 <br>
-\[P(A \mid B) = \frac{P(A \cap B)}{P(B)}\]
 
 {{< definition >}}
 **Chain Rule**: <br>
@@ -48,8 +49,7 @@ $$
 **Bayes' Theorem**: <br>
 It is a formula that uses conditional probability. <br>
 It allows us to update our belief about an event's probability based on new evidence.
-{{< /definition >}}
-
+<br>
 We know from conditional probability and chain rule that:
 $$
 \begin{aligned}
@@ -69,6 +69,7 @@ $$
 ![](https://robosathi.com/images/bayes_theorem.png)
 <br>
 ![](https://robosathi.com/images/bayes_likelihood.png)
+{{< /definition >}}
 
 For example:
 1. Roll a die, sample space: \(\Omega = \{1,2,3,4,5,6\}\) <br>
@@ -116,8 +117,7 @@ where \(n\) is the number of mutually exclusive partitions of the sample space \
 
 *Now, we can also generalize the Bayes' Theorem using the Law of Total Probability.*
 
-{{< alert >}}
-**Generalised Bayes' Theorem:** <br>
+{{< alert color="success" title="Generalised Bayes' Theorem">}}
 $$
 P(A_i \mid B) = \frac{P(A_i)*P(B \mid A_i)}{\sum_{j=1}^{n} P(A_j)*P(B \mid A_j)}
 $$

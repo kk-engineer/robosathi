@@ -11,10 +11,10 @@ In this section, we will cover the topics related to Probability for AI & ML.<br
 {{% /pageinfo %}}
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
-"Probability for AI & ML | Full Course Videos">}}
+        "Probability for AI & ML | Full Course Videos">}}
 
 ###  Probability for AI & ML
-[This sheet](https://docs.google.com/spreadsheets/d/1NUv9DrXJcFZs0SGHiLo8GSyCP58nR2_1lD1YDGzwC1A/edit?gid=0#gid=0) contains all the topics that will be covered for Maths for AI & ML.
+[This sheet](https://docs.google.com/spreadsheets/d/1NUv9DrXJcFZs0SGHiLo8GSyCP58nR2_1lD1YDGzwC1A/edit?gid=0#gid=0) contains all the topics that will be covered for Probability for AI & ML.
 
 Below is the list of topics that will be covered in this section.
 - Probability

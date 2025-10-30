@@ -10,7 +10,8 @@ math: true
 This section will introduce you to basic terminologies and definitions used in probability for AI & ML.<br>
 {{% /pageinfo %}}
 
-{{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxcI3JyTIwOTKXY7ANhw__v1&si=cwNInuB2qLy7gTEi" >}}
+{{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
+        "Probability for AI & ML | Full Course Videos">}}
 <br>
 
 {{< question >}}

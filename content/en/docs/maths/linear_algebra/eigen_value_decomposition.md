@@ -10,6 +10,9 @@ math: true
 In this section we will understand Eigen Values, Eigen Vectors, & Eigen Value Decomposition.<br>
 {{% /pageinfo %}}
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" 
+        "Linear Algebra for AI & ML | Full Course Videos">}}
+
 {{< question >}}
 What is the meaning of the word "**Eigen**" ?
 {{</ question >}}

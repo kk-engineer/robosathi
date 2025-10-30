@@ -1,6 +1,6 @@
 ---
 title: Vector Norms
-description: Vector Norms
+description: Vector & Matrix Norms
 date: 2025-10-29
 weight: 8
 math: true
@@ -9,6 +9,9 @@ math: true
 {{% pageinfo %}}
 In this section we will understand about Vector Norms.<br>
 {{% /pageinfo %}}
+
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" 
+        "Linear Algebra for AI & ML | Full Course Videos">}}
 
 {{< definition >}}
 **Vector Norm:** <br>

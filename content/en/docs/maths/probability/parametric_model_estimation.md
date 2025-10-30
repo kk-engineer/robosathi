@@ -12,7 +12,8 @@ In this section, we will understand Parametric Model Estimation via two philosop
 2. Bayesian: Parameter \(\Theta\) itself is unknown, so we model it as a random variable with a probability distribution.
 {{% /pageinfo %}}
 
-{{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxcI3JyTIwOTKXY7ANhw__v1&si=MNoo5fxBo_10dLuM" >}}
+{{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
+        "Probability for AI & ML | Full Course Videos" >}}
 <br>
 
 {{<definition >}}

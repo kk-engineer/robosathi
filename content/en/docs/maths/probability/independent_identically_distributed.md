@@ -1,5 +1,5 @@
 ---
-title: I.I.D
+title: Independent & Identically Distributed
 description: Independent & Identically Distributed (I.I.D) Random Variables
 date: 2025-10-17
 weight: 11
@@ -10,11 +10,12 @@ math: true
 In this section, we will understand Independent & Identically Distributed(I.I.D) Random Variables.<br>
 {{% /pageinfo %}}
 
-{{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxcI3JyTIwOTKXY7ANhw__v1&si=MNoo5fxBo_10dLuM" >}}
+{{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
+        "Probability for AI & ML | Full Course Videos">}}
 <br>
 
-There are 2 parts in IID, Independent and Identically Distributed. <br> 
-Let's revisit and understand independence of random variables first. <br>
+There are 2 parts in I.I.D, "Independent" and "Identically Distributed". <br> 
+Let's revisit and understand the **independence** of random variables first. <br>
 
 {{< definition >}}
 **Independence of Random Variables** <br>

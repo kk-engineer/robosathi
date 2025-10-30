@@ -10,6 +10,9 @@ math: true
 In this section, we will understand Z-Test. <br>
 {{% /pageinfo %}}
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
+        "Statistics for AI & ML | Full Course Videos">}}
+
 {{< definition >}}
 **Z-Test:** <br>
 It is a statistical test used to determine whether there is a significant difference between mean of 2 groups or sample and population mean. <br>

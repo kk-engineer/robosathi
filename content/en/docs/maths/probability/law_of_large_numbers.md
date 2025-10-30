@@ -12,7 +12,8 @@ In this section, we will understand Law of Large Numbers.<br>
 - Strong Law of Large Numbers (SLLN)
 {{% /pageinfo %}}
 
-{{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxcI3JyTIwOTKXY7ANhw__v1&si=MNoo5fxBo_10dLuM" >}}
+{{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
+        "Probability for AI & ML | Full Course Videos">}}
 <br>
 
 {{< definition >}}

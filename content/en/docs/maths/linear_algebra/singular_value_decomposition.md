@@ -10,6 +10,9 @@ math: true
 In this section we will understand Singular Value Decomposition.<br>
 {{% /pageinfo %}}
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" 
+        "Linear Algebra for AI & ML | Full Course Videos">}}
+
 {{< definition >}}
 **Singular Value Decomposition (SVD):** <br>
 It decomposes any matrix into a rotation, a scaling (based on singular values), and another rotation. <br>

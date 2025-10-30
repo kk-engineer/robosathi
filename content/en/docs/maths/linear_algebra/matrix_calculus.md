@@ -10,6 +10,9 @@ math: true
 In this section we will understand Derivatives of Vector & Matrix, Jacobian and Hessian.<br>
 {{% /pageinfo %}}
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" 
+        "Linear Algebra for AI & ML | Full Course Videos">}}
+
 {{< alert color="success" title="Vector Derivative" >}}
 Let \(\mathbf{x} = \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}_{\text{n×1}}\) be a vector, i.e, \(\mathbf{x} \in \mathbb{R}^n\).
 <br><br>

@@ -11,6 +11,9 @@ In this section, we will understand about the various metrics to Understand the 
 some basic tools for Exploratory Data Analysis (EDA). <br>
 {{% /pageinfo %}}
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
+        "Statistics for AI & ML | Full Course Videos">}}
+
 {{< definition >}}
 **Measures of Central Tendency:** <br>
 A single number that describes the central, typical, or representative value of a dataset, e.g, mean, median, and mode. <br>

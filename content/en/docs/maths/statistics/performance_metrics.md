@@ -10,6 +10,9 @@ math: true
 In this section, we will understand various Performance Metrics for classification models. <br>
 {{% /pageinfo %}}
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
+        "Statistics for AI & ML | Full Course Videos">}}
+
 {{< definition >}}
 **Performance Metrics:** <br>
 They are quantitative measures used to evaluate how well a machine learning model performs on unseen data. <br>

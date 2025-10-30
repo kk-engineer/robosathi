@@ -10,6 +10,9 @@ math: true
 In this section, we will understand Chi-Square Test. <br>
 {{% /pageinfo %}}
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
+        "Statistics for AI & ML | Full Course Videos">}}
+
 {{< alert color="warning" >}}
 _Note_: _All the hypothesis tests get their name from the underlying distribution of the test statistic._
 {{< /alert >}}

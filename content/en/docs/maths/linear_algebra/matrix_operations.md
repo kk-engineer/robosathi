@@ -10,6 +10,9 @@ math: true
 This section will understand various Matrix operations, such as, addition, multiplication, determinant, inverse, etc.<br>
 {{% /pageinfo %}}
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" 
+        "Linear Algebra for AI & ML | Full Course Videos">}}
+
 {{< question >}}
 Why study Matrix?
 {{< /question >}}
