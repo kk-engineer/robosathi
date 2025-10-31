@@ -144,19 +144,261 @@ Now, let's dive deeper and understand the concepts that required for differentia
 **differentiability**, etc.
 
 {{< alert color="success" title="Limits" >}}
+Limit of a function f(x) at any point 'c' is the value that f(x) approaches, as x gets very close to 'c', <br>
+but NOT necessarily equal to 'c'. <br><br>
+**One-sided limit**: value of the function, as it approaches a point 'c' from only **one** direction, either left or right. <br>
+**Two-sided limit**: value of the function, as it approaches a point 'c' from **both** directions, left and right, simultaneously. <br>
+<br>
+e.g.:
+1. \(f(x) = \frac{1}{x}\), find the limit of f(x) at x = 0. <br>
+Let's check for one-sided limit at x=0: <br>
+\[
+\lim_{x \rightarrow 0^+} \frac{1}{x} = + \infty \\[10pt]
+\lim_{x \rightarrow 0^-} \frac{1}{x} = - \infty \\[10pt]
+so, \lim_{x \rightarrow 0^+} \frac{1}{x} ⍯ \lim_{x \rightarrow 0^-} \frac{1}{x} \\[10pt]
+=> \text{ limit does NOT exist at } x = 0.
+\]
+![](https://robosathi.com/images/calculus/fundamentals/limit_1_by_x.png)
+<br><br>
+2. \(f(x) = x^2\), find the limit of f(x) at x = 0. <br>
+Let's check for one-sided limit at x=0: <br>
+\[
+\lim_{x \rightarrow 0^+} x^2 = 0 \\[10pt]
+\lim_{x \rightarrow 0^-} x^2 = 0 \\[10pt]
+so, \lim_{x \rightarrow 0^+} x^2 = \lim_{x \rightarrow 0^-} x^2 \\[10pt]
+=> \text{ limit exists at } x = 0.
+\]
+![](https://robosathi.com/images/calculus/fundamentals/parabola_convex.png)
+<br><br>
+*Note: Two-Sided Limit* <br>
+\[ \lim_{x \rightarrow a^+} f(x) = \lim_{x \rightarrow a^-} f(x) = \lim_{x \rightarrow a} f(x) \]
+<br>
+3. f(x) = |x|, find the limit of f(x) at x = 0. <br>
+Let's check for one-sided limit at x=0: <br>
+\[
+\lim_{x \rightarrow 0^+} |x| = x = 0 \\[10pt]
+\lim_{x \rightarrow 0^-} |x| = -x = 0 \\[10pt]
+so, \lim_{x \rightarrow 0^+} |x| = \lim_{x \rightarrow 0^-} |x| \\[10pt]
+=> \text{ limit exists at } x = 0.
+\]
+![](https://robosathi.com/images/calculus/fundamentals/abs_x.png)
+<br><br>
 {{< /alert >}}
+<br>
 
 {{< alert color="success" title="Continuity" >}}
+A function f(x) is said to be continuous at a point 'c', if its graph can be drawn through that point,
+_without lifting the pen_. <br>
+Continuity bridges the gap between the function's value at the given point and the limit. <br>
+<br><br>
+**Conditions for Continuity:** <br>
+A function f(x) is continuous at a point 'c', if and only if, all the below 3 conditions are met: <br>
+1. f(x) must be defined at point 'c'.
+2. Limit of f(x) must exist at point 'c', i.e, left and right limits must be equal.
+\[ \lim_{x \rightarrow c^+} f(x) = \lim_{x \rightarrow c^-} f(x) \]
+3. Value of f(x) at 'c' must be equal to its limit at 'c'.
+\[ \lim_{x \rightarrow c} f(x) = f(c) \]
+
+e.g.: <br>
+1. \(f(x) = \frac{1}{x}\) is NOT continuous at x = 0, since, f(x) is not defined at x = 0. <br><br>
+![](https://robosathi.com/images/calculus/fundamentals/limit_1_by_x.png)
+<br><br>
+2. \(f(x) = |x|\) is continuous everywhere. <br><br>
+![](https://robosathi.com/images/calculus/fundamentals/abs_x.png)
+<br><br>
+3. \(f(x) = tanx \) is discontinuous at infinite points. <br><br>
+![](https://robosathi.com/images/calculus/fundamentals/tan_x.png)
+<br><br>
 
 {{< /alert >}}
+<br>
 
 {{< alert color="success" title="Differentiability" >}}
+A function is differentiable at a point 'c', if **derivative** of the function **exists** at that point. <br>
+A function must be **continuous** at the given point 'c' to be differentiable at that point. <br>
+*Note: A function can be continuous at a given point, but NOT differentiable at that point.* <br>
+
+\[ 
+f\prime(x) = \lim_{\Delta x \rightarrow 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}
+\]
+
+e.g.: <br>
+We know that \( f(x) = |x| \) is continuous at x=0, but its NOT differentiable at x=0. <br>
+\[
+f\prime(x) =\lim_{\Delta x \rightarrow 0} \frac{f(x + \Delta x) - f(x)}{\Delta x} 
+= \lim_{\Delta x \rightarrow 0} \frac{|x + \Delta x| - |x|}{\Delta x}  \\[10pt]
+\text{ let's calculate the one-sided limit from both left and right sides and check if they are equal: } \\[10pt]
+if ~ x>0, \lim_{\Delta x \rightarrow 0^+} \frac{|x + \Delta x| - |x|}{\Delta x}
+= \lim_{\Delta x \rightarrow 0+} \frac{\cancel x + \Delta x - \cancel x}{\Delta x} = 1 \\[10pt]
+if ~ x<0, \lim_{\Delta x \rightarrow 0^-} \frac{|x + \Delta x| - |x|}{\Delta x}
+= \lim_{\Delta x \rightarrow 0^-} \frac{-(x + \Delta x) - (-x)}{\Delta x}
+= \lim_{\Delta x \rightarrow 0-} \frac{\cancel {-x} - \Delta x + \cancel x}{\Delta x} = -1 \\[10pt]
+=> \text{ left hand limit (-1) ⍯ right hand limit (1) } \\[10pt]
+=> f\prime(0) \text{ does NOT exist.}
+\]
 {{< /alert >}}
+<br>
 
 {{< alert color="success" title="Maxima & Minima" >}}
+**Critical Point:** <br>
+A point of the function where the **derivative** is either **zero** or **undefined**. <br>
+<br>
+These critical points are candidates for local **maxima** or **minima**, 
+which are the highest and lowest points in a function's immediate neighborhood, respectively.
+<br><br>
+**Maxima:** <br>
+**Highest** point w.r.t immediate neighbourhood. <br>
+f'(x)/gradient/slope changes from +ve to 0 to -ve, therefore, change in f'(x) is -ve. <br>
+=> f''(x) < 0
+<br><br>
+ Let, \(f(x) = -x^2; \quad f'(x) = -2x; \quad f''(x) = -2 < 0 => maxima\) <br><br>
+|x | f'(x)|
+|---| ----|
+|-1 | 2 |
+|0 | 0 |
+|1 | -2 |
+
+<br><br>
+![](https://robosathi.com/images/calculus/fundamentals/parabola_concave.png)
+<br><br>
+**Minima:** <br>
+**Lowest** point w.r.t immediate neighbourhood. <br>
+f'(x)/gradient/slope changes from -ve to 0 to +ve, therefore, change in f'(x) is +ve. <br>
+=> f''(x) > 0
+<br><br>
+Let, \(f(x) = x^2; \quad f'(x) = 2x; \quad f''(x) = 2 > 0 => minima\) <br><br>
+|x | f'(x)|
+|---| ----|
+|-1 | -2 |
+|0 | 0 |
+|1 | 2 |
+
+<br><br>
+![](https://robosathi.com/images/calculus/fundamentals/parabola_convex.png)
+<br><br>
+
+e.g.: <br>
+1. Let \(f(x) = 2x^3 + 5x^2 + 3 \), find the maxima and minima of f(x). <br>
+To find the maxima and minima, lets take the derivative of the function and equate it to zero. <br>
+\[
+f'(x) = 6x^2 + 10x  = 0\\[10pt]
+=> x(6x+10) = 0 \\[10pt]
+=> x = 0 \quad or \quad x = -10/6 = -5/3 \\[10pt]
+\text{ lets check the second order derivative to find which point is maxima and minima: } \\[10pt]
+f''(x) = 12x + 10 \\[10pt]
+=> at ~ x = 0, \quad f''(x) = 12*0 + 10 = 10 >0 \quad => minima \\[10pt]
+=> at ~ x = -5/3, \quad f''(x) = 12*(-5/3) + 10 = -20 + 10 = -10<0 \quad => maxima \\[10pt]
+\]
+<br><br>
+![](https://robosathi.com/images/calculus/fundamentals/maxima_minima.png)
+<br><br>
+
+2. \(f(x,y) = z = x^2 + y^2\), find the minima of f(x,y). <br> 
+Since, this is a multi-variable function, we will use vector and matrix for calculation. <br>
+\[
+Gradient = \nabla f_z = 
+\begin{bmatrix}
+\frac{\partial f_z}{\partial x} \\
+\\
+\frac{\partial f_z}{\partial y}
+\end{bmatrix} = 
+\begin{bmatrix}
+2x \\
+\\
+2y
+\end{bmatrix} = 
+\begin{bmatrix}
+0 \\
+\\
+0
+\end{bmatrix} \\[10pt]
+=> x=0, y=0 \text{ is a point of optima for } f(x,y)
+\] 
+<br>
+
+**Partial Derivative:** <br>
+Partial derivative \( \frac{\partial f(x,y)}{\partial x} ~or~ \frac{\partial f(x,y)}{\partial y} \)is the rate of change 
+or derivative of a **multi-variable** function w.r.t **one** of its variables, 
+while all the **other** variables are held **constant**. <br>
+<br>
+
+Let's continue solving the above problem, and calculate the Hessian, i.e, 2nd order derivative of f(x,y): <br>
+\[
+Hessian = H_z = 
+\begin{bmatrix}
+\frac{\partial^2 f_z}{\partial x^2} & \frac{\partial^2 f_z}{\partial x \partial y} \\
+\\
+\frac{\partial^2 f_z}{\partial y \partial x} & \frac{\partial^2 f_z}{\partial y^2}
+\end{bmatrix} = 
+\begin{bmatrix}
+2 & 0 \\
+\\
+0 & 2
+\end{bmatrix}
+\]
+<br>
+Since, determinant of Hessian = 4 > 0 and \( \frac{\partial^2 f_z}{\partial x^2} > 0\) => (x=0, y=0) is a point of minima.<br>
+<br><br>
+![](https://robosathi.com/images/calculus/fundamentals/parabolloid.png)
+<br><br>
+
+**Hessian Interpretation:** <br>
+- **Minima**: If det(Hessian) > 0 and \( \frac{\partial^2 f(x,y)}{\partial x^2} > 0\)
+- **Maxima**: If det(Hessian) > 0 and \( \frac{\partial^2 f(x,y)}{\partial x^2} < 0\)
+- **Saddle Point**: If det(Hessian) < 0
+- **Inconclusive**: If det(Hessian) = 0, need to perform other tests.
+<br>
 {{< /alert >}}
+<br>
 
 {{< alert color="secondary" title="Saddle Point" >}}
+**Saddle Point** is a critical point where the function is **maximum** w.r.t one variable, <br>
+and **minimum** w.r.t to another. <br>
+<br>
+e.g.: <br>
+Let, \(f(x,y) = z = x^2 - y^2\), find the point of optima for f(x,y). <br>
+\[
+Gradient = \nabla f_z = 
+\begin{bmatrix}
+\frac{\partial f_z}{\partial x} \\
+\\
+\frac{\partial f_z}{\partial y}
+\end{bmatrix} = 
+\begin{bmatrix}
+2x \\
+\\
+-2y
+\end{bmatrix} = 
+\begin{bmatrix}
+0 \\
+\\
+0
+\end{bmatrix} \\[10pt]
+=> x=0, y=0 \text{ is a point of optima for } f(x,y)
+\] 
+
+\[
+Hessian = H_z = 
+\begin{bmatrix}
+\frac{\partial^2 f_z}{\partial x^2} & \frac{\partial^2 f_z}{\partial x \partial y} \\
+\\
+\frac{\partial^2 f_z}{\partial y \partial x} & \frac{\partial^2 f_z}{\partial y^2}
+\end{bmatrix} = 
+\begin{bmatrix}
+2 & 0 \\
+\\
+0 & -2
+\end{bmatrix}
+\]
+<br>
+Since, determinant of Hessian = -4 < 0 => (x=0, y=0) is a saddle point. <br>
+<br><br>
+![](https://robosathi.com/images/calculus/fundamentals/saddle_point_1.png)
+<br><br>
+<br><br>
+![](https://robosathi.com/images/calculus/fundamentals/saddle_point_2.png)
+<br><br>
 {{< /alert >}}
+
 <br><br>
 ```End of Section```
