@@ -123,5 +123,7 @@ which is achieved by keeping only the largest singular values and corresponding 
 1. Image compression
 2. Data compression, such as, LoRA (Low Rank Adaptation)
 {{</ definition >}}
+<br>
+{{< video "https://www.youtube.com/watch?v=1dQap9e_tkg&t=1s" >}}
 <br><br>
 ```End of Section```

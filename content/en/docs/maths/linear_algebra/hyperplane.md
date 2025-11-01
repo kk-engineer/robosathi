@@ -159,5 +159,6 @@ The above concept of equation of hyperplane will be very helpful when we discuss
 2. **Support Vector Machines**
 {{< /alert >}}
 
+{{< video "https://www.youtube.com/watch?v=VU7hUuNydUE&t=1s" >}}
 <br><br>
 ```End of Section```

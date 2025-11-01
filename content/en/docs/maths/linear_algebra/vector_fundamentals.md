@@ -294,6 +294,9 @@ also form an orthonormal basis for 2-D space. <br>
 
 *Note: In a n-dimensional space, there are only \(n\) possible orthonormal bases.*
 {{</ definition >}}
+<br>
+
+{{< video "https://www.youtube.com/watch?v=LzLswBOf_vM&t=1s" >}}
 
 <br><br>
 ```End of Section```

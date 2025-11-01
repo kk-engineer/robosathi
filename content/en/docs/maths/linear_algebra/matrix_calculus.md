@@ -257,7 +257,8 @@ similarly, \((\frac{\partial f}{\partial A})_{(i,i)}\) = 1 for all \(i=j\)
 \)
 <br><br>
 Therefore, derivative of trace(A) w.r.t A is an identity matrix.
-
 {{< /alert >}}
+
+{{< video "https://www.youtube.com/watch?v=41B-VWrwxKY&t=1s" >}}
 <br><br>
 ```End of Section```

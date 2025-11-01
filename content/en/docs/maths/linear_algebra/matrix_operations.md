@@ -566,6 +566,9 @@ y
 Therefore, \( x = 2 \) and \( y = 1 \).
 
 {{</ answer >}}
+<br>
+
+{{< video "https://www.youtube.com/watch?v=aoPJ7yzX6lE&t=1s" >}}
 
 
 <br><br>

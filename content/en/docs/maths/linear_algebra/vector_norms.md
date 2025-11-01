@@ -167,4 +167,8 @@ det\begin{bmatrix} 5 - \lambda & 4 \\ \\ 4 & 5- \lambda \end{bmatrix} = 0
 => Largest Singular Value = Square root of largest eigen value = \(\sqrt{9} = 3\)  <br>
 Therefore, \({\| A \|_2} = \sigma_{max}(A) = 3\)
 <br><br>
+{{< video "https://www.youtube.com/watch?v=8j4GOTM5-uY&t=1s" >}}
+<br><br>
+
+```End of Section```
 

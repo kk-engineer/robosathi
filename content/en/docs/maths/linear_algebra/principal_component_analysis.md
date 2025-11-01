@@ -109,6 +109,7 @@ Covariance of projected data = \((XQ)^TXQ \)
 \]
 Therefore, the diagonal matrix \( \Lambda \) captures the variance along every principal component direction. <br>
 {{</ answer >}}
-
+<br>
+{{< video "https://www.youtube.com/watch?v=KvSeAzyoeCQ&t=1s" >}}
 <br><br>
 ```End of Section```

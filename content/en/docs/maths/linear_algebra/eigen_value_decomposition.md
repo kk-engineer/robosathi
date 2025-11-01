@@ -485,8 +485,9 @@ because a real symmetric matrix is guaranteed to have all real eigenvalues. <br>
 3. **Structural Engineering**: By calculating the eigen values of a bridge's structural model, we can identify its **natural**
  **frequencies** to ensure that the bridge won't **resonate** and be damaged by external forces, such as wind, and seismic waves.
 
-
 {{</ alert >}}
+
+{{< video "https://www.youtube.com/watch?v=T5US_vIhvOA&t=1s" >}}
 
 <br><br>
 ```End of Section```
