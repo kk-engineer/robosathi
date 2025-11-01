@@ -36,7 +36,7 @@ Q = \chi^2(n) = \sum_{i=1}^n Z_i^2 \\
 approaches a normal distribution.
 {{</ definition >}}
 
-{{< alert color="dark" title="Degrees of Freedom (\(\nu\))" >}}
+{{< alert color="success" title="Degrees of Freedom (\(\nu\))" >}}
 It represents the number of independent pieces of information available in the sample to estimate the variability in the data.<br>
 Generally speaking, it represents the number of independent values that are free to vary in a dataset when 
 estimating a parameter. <br>
@@ -54,7 +54,7 @@ Since, sample mean \(\bar{x} = \frac{sum}{n} \). <br><br>
 [Read more about Central Limit Theorem]({{<ref "/docs/maths/statistics/central_limit_theorem" >}})
 {{< /alert >}}
 
-{{< alert color="dark" title="Sampling Distribution of Counts" >}}
+{{< alert color="success" title="Sampling Distribution of Counts" >}}
 *Note: We are dealing with categorical data, where there is a count associated with each category.* <br>
 In the context of categorical data, the counts \(O_i\) are governed by _multinomial distribution_ <br> 
 (a generalisation of binomial distribution). <br>

@@ -38,7 +38,7 @@ There are 3 types of T-Test: <br>
 2. **2-Sample T-Test**: Test whether there is a significant difference between the means of two independent groups.
 3. **Paired T-Test**: Test whether 2 related samples differ, e.g., before and after.
 {{</ definition >}}
-{{< alert color="dark" title="Degrees of Freedom (\(\nu\))" >}}
+{{< alert color="secondary" title="Degrees of Freedom (\(\nu\))" >}}
 It represents the number of independent pieces of information available in the sample to estimate the variability in the data.<br>
 Generally speaking, it represents the number of independent values that are free to vary in a dataset when 
 estimating a parameter. <br>

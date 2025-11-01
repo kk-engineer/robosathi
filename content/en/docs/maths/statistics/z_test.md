@@ -147,7 +147,7 @@ using **Central Limit Theorem**.<br>
 
 *Note:We will not prove the complete thing, but we will understand the concept in enough depth for clarity.* <br>
 
-{{< alert color="dark" title="Sampling Distribution of a Proportion" >}}
+{{< alert color="success" title="Sampling Distribution of a Proportion" >}}
 \(Y \sim Bernoulli(p)\) <br>
 \(X \sim Binomial(n,p)\) <br> 
 E[X] = mean = np <br>

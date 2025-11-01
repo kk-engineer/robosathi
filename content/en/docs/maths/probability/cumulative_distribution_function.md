@@ -138,7 +138,7 @@ But, if we approach \(X=1\) from left, say 0.99, 0.999 etc, the value of \(F(X) 
 as these values do NOT yet include the value of the probability at \(X=1\).<br>
 {{< /alert >}}
 
-{{< alert title="Discrete Case" >}}
+{{< alert color="secondary" title="Discrete Case" >}}
 For a discrete random variable, the CDF is a step function (i.e with jumps). <br>
 Value of the probability of a random variable X, at any given value x, is calculated by summing up all the probabilities
 for values \(\le x\).<br><br>
@@ -148,7 +148,7 @@ Height of the jump at 'x' = Probability at that value 'x'.<br>
 e.g: Jump at (x=1) = 1/2 = Probability at (x=1). <br>
 {{< /alert >}}
 
-{{< alert title="Continuous Case" >}}
+{{< alert color="secondary" title="Continuous Case" >}}
 For a continuous random variable, the CDF is a continuous function. <br>
 CDF for continuous random variable is calculated by integrating the probability density function (PDF)
 from \(-\infty\) to the given value \(x\).<br><br>

@@ -44,7 +44,7 @@ The statement representing an effect, a difference, or a relationship. <br>
 It must be true if the null hypothesis is rejected.
 {{< /definition >}}
 
-{{< alert color="dark" title="Types of Hypothesis Testing" >}}
+{{< alert color="success" title="Types of Hypothesis Testing" >}}
 1. **Test of Means:** <br>
 - 1-Sample Mean Test: Compare sample mean to a known population mean.
 - 2-Sample Mean Test: Compare means of 2 populations.

@@ -597,7 +597,7 @@ So, here in this case our \(\Theta_{MMSE}\) is: <br>
 \]
 {{</ answer >}}
 
-{{% alert title="MAP vs MMSE" %}}
+{{% alert color="secondary" title="MAP vs MMSE" %}}
 - MMSE is the average of the posterior distribution, whereas MAP is the mode/peak.
 - If posterior distribution is symmetric and unimodal(only 1 peak), then MAP and MMSE are very close.
 - If posterior distribution is skewed and multimodal(many peaks), then MAP and MMSE can differ a lot.

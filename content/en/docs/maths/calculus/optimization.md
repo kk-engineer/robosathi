@@ -1,6 +1,6 @@
 ---
 title: Optimization
-description: Loss Function, Convexity, Optimization & Gradient Descent
+description: Loss Function, Convexity & Optimization
 date: 2025-10-30
 weight: 3
 math: true
@@ -8,7 +8,7 @@ math: true
 
 {{% pageinfo %}}
 In this section we will understand Optimization in Machine Learning and related concepts, such as, Loss Function, Convexity, 
-Optimization & Gradient Descent.<br>
+& Optimization.<br>
 {{% /pageinfo %}}
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfzDh2D3OqVo-piGAZQPWDj" 
