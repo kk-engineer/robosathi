@@ -113,8 +113,7 @@ So, we can conclude that, if \(n > \frac{1}{\epsilon}\), then: <br>
 \text{Converges in Probability } \\[10pt]
 => X_n \xrightarrow{Probability} X
 \]
-
-<br><br>
+<br>
 
 {{< definition >}}
 **Almost Sure Convergence:** <br>

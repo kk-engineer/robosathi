@@ -12,7 +12,7 @@ In this section, we will understand Student's T-Test. <br>
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
-
+<br>
 {{< definition >}}
 **T-Test:** <br>
 It is a statistical test that is used to determine whether the sample mean is equal to a hypothesized value or <br> 
@@ -92,8 +92,7 @@ Since \(t_{obs}\) > \(t_{0.05}\), we reject the null hypothesis. <br>
 And, accept the alternative hypothesis that the API response time is significantly > 100 ms. <br>
 Hence, the developer's claim is NOT valid.
 {{</ answer >}}
-
-<br><br>
+<br>
 
 {{< definition >}}
 **2-Sample T-Test:** <br>

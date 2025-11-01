@@ -14,7 +14,7 @@ In this section, we will understand Independent & Identically Distributed(I.I.D)
         "Probability for AI & ML | Full Course Videos">}}
 <br>
 
-There are 2 parts in I.I.D, "Independent" and "Identically Distributed". <br> 
+There are 2 parts in I.I.D, "**Independent**" and "**Identically Distributed**". <br> 
 Let's revisit and understand the **independence** of random variables first. <br>
 
 {{< definition >}}

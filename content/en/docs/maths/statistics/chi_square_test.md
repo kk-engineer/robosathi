@@ -13,6 +13,7 @@ In this section, we will understand Chi-Square Test. <br>
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
 
+
 {{< alert color="warning" >}}
 _Note_: _All the hypothesis tests get their name from the underlying distribution of the test statistic._
 {{< /alert >}}
@@ -89,7 +90,6 @@ Note that the denominator is \(\sqrt{E_{i}}\) NOT \(\sqrt{Var_{i}}\). <br>
 
 **Important**: \(E_{i}\): Expected count should be large i.e >= 5 (typically) for a good enough approximation. <br>
 {{< /alert >}}
-<br>
 
 {{< definition >}}
 **Chi-Square (\(\chi^2\)) Test Statistic:** <br>
@@ -132,7 +132,6 @@ Test Statistic: <br>
 _Note: Typical m=0, since, NO parameters are estimated._
 
 {{</ definition >}}
-<br>
 
 {{< alert color="secondary" title="Other Goodness of Fit Tests" >}}
 1. **Kolmogorov-Smirnov (KS) Test**: Compares empirical CDF with theoretical CDF of distribution.

@@ -12,7 +12,7 @@ In this section, we will understand about Correlation and Covariance. <br>
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
-
+<br>
 {{< definition >}}
 **Covariance:** <br>
 It measures the direction of linear relationship between two variables \(X\) and \(Y\). <br>
@@ -60,7 +60,7 @@ Let's calculate the covariance: <br>
 <br>
 
 {{< video "https://youtu.be/deAM6uPsdAQ?si=J7sZEwpA51-Jm7sJ" >}}
-<br><br>
+<br>
 
 {{< definition >}}
 **Correlation:** <br>
@@ -154,7 +154,6 @@ But, the Pearson's correlation coefficient (r) will be slightly less than 1 i.e 
 
 <br>
 {{< video "https://youtu.be/Vsy2pH2M9F0?si=hPe9P5mS-lWR3va-" >}}
-<br><br>
 
 {{< alert color="success" title="Correlation Application" >}}
 Correlation is very useful in feature selection for training machine learning models.
@@ -177,7 +176,7 @@ Whereas, **correlation** means that two variables move together.
 **E.g**: Election results and stock market - there may be some correlation between the two, <br> 
 but establishing clear causal links is difficult. 
 {{< /alert >}}
-<br>
+
 {{< video "https://youtu.be/FH8jnYEGDzE?si=HhWImSk2PfGL_kv-" >}}
 
 <br><br>

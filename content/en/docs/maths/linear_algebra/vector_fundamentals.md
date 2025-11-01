@@ -12,7 +12,7 @@ This section will introduce you to basic terminologies and definitions related t
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" 
         "Linear Algebra for AI & ML | Full Course Videos">}}
-
+<br>
 {{< question >}}
 Why study Vectors?
 {{< /question >}}
@@ -80,9 +80,8 @@ associativity, commutativity, distributivity, existence of a zero vector, and ad
 
 e.g.: Set of all points in 2D is a vector space. <br>
 {{</ definition >}}
-<br>
 
-{{< alert color="secondary" title="Vector Operations" >}}
+{{< alert color="success" title="Vector Operations" >}}
 **Addition:** <br>
 We can only add vectors of the same dimension. <br>
 - Commutative: \(a + b = b + a\)

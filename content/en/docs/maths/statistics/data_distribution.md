@@ -13,6 +13,7 @@ some basic tools for Exploratory Data Analysis (EDA). <br>
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
+<br>
 
 {{< definition >}}
 **Measures of Central Tendency:** <br>
@@ -85,7 +86,7 @@ The most frequently occurring value in a dataset. <br>
 {{</ definition >}}
 
 {{< video "https://youtu.be/tRqgJS1nR4o?si=P3vdco_f4DkMtWpS" >}}
-<br><br>
+<br>
 
 {{< definition >}}
 **Measures of Dispersion(Spread):** <br>
@@ -110,7 +111,7 @@ The difference between the largest and smallest values in a dataset. Simplest me
 {{</ definition >}}
 For example: <br>
 1. range\((1,2,3,4,5) = 5 - 1 = 4\) <br>
-<br><br>
+<br>
 
 {{< definition >}}
 **Variance:** <br>
@@ -143,7 +144,7 @@ For example: <br>
  =  \sqrt{\frac{1}{5}(4+1+0+1+4)} \\
  = \sqrt{\frac{10}{5}} = \sqrt{2} = 1.414
 \]
-<br><br>
+<br>
 
 {{< definition >}}
 **Mean Absolute Deviation:** <br>
@@ -227,8 +228,7 @@ Normal distribution has kurtosis = 3. <br>
 
 <br>
 {{< video "https://youtu.be/ljxOw47oUrU?si=LqttW0ZyGCImT1Wm" >}}
-
-<br> <br>
+<br> 
 
 {{< definition >}}
 **Measures of Position:** <br>
@@ -318,9 +318,8 @@ So, any data point that is less than  -6 or greater than 18 is considered as a p
 As in this example, 100 can be considered as an outlier.
 <br>
 {{< video "https://youtu.be/3-qQu9jNMPk?si=mxnrRIC8lrqtC2Oa" >}}
-<br><br>
 
-{{< alert color="warning" title="Anscombe's Quartet">}}
+{{< alert color="secondary" title="Anscombe's Quartet">}}
 Even though the above metrics give us a good idea of the data distribution,
 but still we should **always** plot the data and **visually inspect** the data distribution. <br>
 As these metrics may not provide the complete picture. <br>

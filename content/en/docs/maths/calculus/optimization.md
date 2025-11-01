@@ -13,7 +13,7 @@ In this section we will understand Optimization in Machine Learning and related 
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfzDh2D3OqVo-piGAZQPWDj" 
         "Calculus for AI & ML | Full Course Videos">}}
-
+<br>
 {{< question >}}
 Whenever we build a Machine Learning model, we try to make sure that the model makes least mistakes in its predictions.<br>
 How do we measure and minimize these mistakes in predictions made by the model? <br>
@@ -23,7 +23,6 @@ How do we measure and minimize these mistakes in predictions made by the model? 
 To measure, how wrong the are the predictions made by a Machine Learning model, every model is formulated as <br>
 minimizing a loss function.
 {{</ answer >}}
-<br><br>
 
 {{< alert color="success" title="Loss Function" >}}
 **Loss Function:** <br>
@@ -127,7 +126,6 @@ A symmetric matrix is positive semi-definite if and only if: <br>
 [Read more about Eigen Values]({{<ref  "/docs/maths/linear_algebra/eigen_value_decomposition"  >}})
 <br>
 {{< /alert >}}
-<br>
 
 {{< alert color="success" title="Optimization" >}}
 All machine learning algorithms minimize loss (mostly), so we need to find the **optimum parameters** for the model that
@@ -259,7 +257,7 @@ Now, we have 3 variables and 3 equations (1), (2) and (3), lets solve them. <br>
 
 Hence, the point (x=2, y=3) on the line 2x + 3y = 13 that is closest to the origin.
 {{</ answer >}}
-<br>
+
 {{< alert color="warning" >}}
 To solve the optimization problem, there are many methods, such as, **analytical method**, which gives the **normal equation** for the linear regression,
 but we will discuss that method later in detail, when we have understood what is linear regression? <br> <br>

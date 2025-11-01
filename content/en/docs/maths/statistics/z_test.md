@@ -12,7 +12,7 @@ In this section, we will understand Z-Test. <br>
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
-
+<br>
 {{< definition >}}
 **Z-Test:** <br>
 It is a statistical test used to determine whether there is a significant difference between mean of 2 groups or sample and population mean. <br>
@@ -179,8 +179,6 @@ Standard Error = \(SE_{\hat{p}} = \sqrt{Var[\frac{X}{n}]} = \sqrt{\frac{p(1-p)}{
 *Note: Large Sample Condition - Approximation is only valid when the expected number of successes and failures are both > 10 (sometimes 5).* <br>
 \(np \ge 10 ~and~ n(1-p) \ge 10\)
 {{< /alert >}}
-
-<br>
 
 {{< definition >}}
 **1-Sample Z-Test of Proportion:** <br>

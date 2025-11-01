@@ -51,7 +51,6 @@ Let's see an example: <br><br>
 \]
 
 {{< /alert >}}
-<br>
 
 {{< alert color="success" title="Differentiation" >}}
 Differentiation is a mathematical tool that is used to find the **derivative** or rate of change of a function 
@@ -184,7 +183,6 @@ so, \lim_{x \rightarrow 0^+} |x| = \lim_{x \rightarrow 0^-} |x| \\[10pt]
 ![](https://robosathi.com/images/calculus/fundamentals/abs_x.png)
 <br><br>
 {{< /alert >}}
-<br>
 
 {{< alert color="success" title="Continuity" >}}
 A function f(x) is said to be continuous at a point 'c', if its graph can be drawn through that point,
@@ -211,7 +209,6 @@ e.g.: <br>
 <br><br>
 
 {{< /alert >}}
-<br>
 
 {{< alert color="success" title="Differentiability" >}}
 A function is differentiable at a point 'c', if **derivative** of the function **exists** at that point. <br>
@@ -237,7 +234,6 @@ if ~ x<0, \lim_{\Delta x \rightarrow 0^-} \frac{|x + \Delta x| - |x|}{\Delta x}
 => f\prime(0) \text{ does NOT exist.}
 \]
 {{< /alert >}}
-<br>
 
 {{< alert color="success" title="Maxima & Minima" >}}
 **Critical Point:** <br>
@@ -349,7 +345,6 @@ Since, determinant of Hessian = 4 > 0 and \( \frac{\partial^2 f_z}{\partial x^2}
 - **Inconclusive**: If det(Hessian) = 0, need to perform other tests.
 <br>
 {{< /alert >}}
-<br>
 
 {{< alert color="secondary" title="Saddle Point" >}}
 **Saddle Point** is a critical point where the function is **maximum** w.r.t one variable, <br>

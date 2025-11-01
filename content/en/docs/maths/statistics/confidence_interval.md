@@ -12,7 +12,7 @@ In this section, we will understand about Confidence Interval. <br>
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
-
+<br>
 {{< definition >}}
 **Confidence Interval:** <br>
 It is a range of values that is likely to contain the true population mean, based on a sample. <br>

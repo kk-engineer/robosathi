@@ -103,7 +103,6 @@ y = \sum_{i=1}^n \sum_{j=1}^n x_i a_{ij} x_j \\
 <br>
 
 {{< /alert >}}
-<br>
 
 {{< alert color="secondary" title="Jacobian Matrix" >}}
 Above, we saw the **gradient** of a **scalar valued function**, i.e, a function that maps a vector to a scalar, i.e, 
@@ -152,7 +151,6 @@ The above matrix is called **Jacobian matrix** of \(f(x)\).
 _Assumption: All the first order partial derivatives exist._
 <br>
 {{< /alert >}}
-<br>
 
 {{< alert color="secondary" title="Hessian Matrix" >}}
 **Hessian Matrix:** <br>
@@ -198,7 +196,6 @@ e.g: <br>
 = \begin{bmatrix} 2 & 0 \\ \\ 0 & 2 \end{bmatrix}\)
 
 {{< /alert >}}
-<br>
 
 {{< alert color="success" title="Matrix Derivative" >}}
 Let, A is a mxn matrix, i.e \(A \in \mathbb{R}^{m \times n}\) 

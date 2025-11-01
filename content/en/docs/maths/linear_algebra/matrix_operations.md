@@ -12,7 +12,7 @@ This section will understand various Matrix operations, such as, addition, multi
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" 
         "Linear Algebra for AI & ML | Full Course Videos">}}
-
+<br>
 {{< question >}}
 Why study Matrix?
 {{< /question >}}
@@ -25,7 +25,6 @@ e.g: <br>
 3. When multiplied, matrix, linearly transforms a vector, i.e, its direction and magnitude, making it useful in image rotation, scaling, etc.
 {{< /answer >}}
 
-<br>
 
 {{< definition >}}
 **Matrix** <br>
@@ -62,7 +61,6 @@ _{\text{n x m}}
 Rank of a matrix is the number of **linearly independent** rows or columns of the matrix. <br>
 
 {{< /definition >}}
-<br>
 
 {{< alert color="secondary" title="Matrix Operations" >}}
 **Addition:** <br>
@@ -131,7 +129,6 @@ _{\text{2 x 2}}
 3. A(B+C) = AB+AC ; Distributive <br>
 
 {{< /alert >}}
-<br><br>
 
 {{< alert color="success" title="Square Matrix" >}}
 **Square Matrix:** <br>
@@ -398,7 +395,6 @@ _{\text{3 x 3}}
 since, \(\mathbf{A} = \mathbf{A}^\mathrm{T}\)
 
 {{< /alert >}}
-<br><br>
 
 {{< definition >}}
 **Orthogonal Matrix:** <br>

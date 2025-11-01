@@ -12,7 +12,7 @@ In this section we will understand Principal Component Analysis.<br>
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" 
         "Linear Algebra for AI & ML | Full Course Videos">}}
-
+<br>
 {{< question >}}
 In the diagram below, if we need to reduce the dimensionality of the data to 1, which feature should be dropped?
 ![](https://robosathi.com/images/pca_example_1.png)

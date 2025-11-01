@@ -12,7 +12,7 @@ In this section, we will understand about Central Limit Theorem. <br>
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
-
+<br>
 Before we understand the Central Limit Theorem, let's understand a few related concepts. <br>
 
 {{< definition >}}

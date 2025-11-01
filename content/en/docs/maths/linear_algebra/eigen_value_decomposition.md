@@ -12,7 +12,7 @@ In this section we will understand Eigen Values, Eigen Vectors, & Eigen Value De
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" 
         "Linear Algebra for AI & ML | Full Course Videos">}}
-
+<br>
 {{< question >}}
 What is the meaning of the word "**Eigen**" ?
 {{</ question >}}
@@ -64,7 +64,7 @@ is multiplied by a matrix. <br>
 {{</ definition >}}
 <br>
 
-{{< alert color="secondary" title="Characteristic Equation" >}}
+{{< alert color="success" title="Characteristic Equation" >}}
 Since, for an eigen vector, result of linear transformation, i.e, multiplying the vector by a matrix, 
 is just a scalar multiple of the original vector, =>
 \[
@@ -140,7 +140,6 @@ Similarly, for \(\lambda_2 = 1\) <br>
 we will get, eigen vector: \(v_2 = \begin{bmatrix} 1 \\  \\ -1 \\ \end{bmatrix}\) <br>
 
 {{</ alert >}}
-<br>
 
 {{< question >}}
 What are the eigen values and vectors of an identity matrix?
@@ -212,7 +211,7 @@ _{\text{n x n}}
 => \(\lambda = d_{11}, d_{22}, \cdots, d_{nn}\) <br>
 So, eigen values are the diagonal elements of the matrix.
 {{</ answer >}}
-<br><br>
+<br>
 
 {{< alert color="success" title="Key Properties of Eigen Values and Eigen Vectors" >}}
 1. For a \(n \times n\) matrix, there are \(n\) eigen values.
@@ -252,7 +251,6 @@ We know that for eigen vectors - <br>
 => \text{ eigen vectors are orthogonal to each other,} => \mathbf{v_1} \perp \mathbf{v_2} \\[10pt]
 \]
 {{< /alert >}}
-<br><br>
 
 {{< question >}}
 How will we calculate the 2nd power of a matrix i.e \(\mathbf{A}^2\)?
@@ -339,7 +337,6 @@ powers of all diagonal elements, instead of complex matrix multiplications. <br>
 Therefore, if we **diagonalize** a square matrix then the computation of power of the matrix will become very easy. <br>
 Next, let's see **how to diagonalize a matrix**.
 {{</ answer >}}
-<br>
 
 {{< alert color="success" title="Eigen Value Decomposition" >}}
 \(\mathbf{V}\): M**atrix of all eigen vectors**(as columns) of matrix \(\mathbf{A}\) <br>
@@ -481,8 +478,6 @@ And, the **spectral** decomposition of a **real symmetric** matrix is: <br>
 because a real symmetric matrix is guaranteed to have all real eigenvalues. <br>
 
 {{</ alert >}}
-
-<br>
 
 {{< alert color="secondary" title="Applications of Eigen Value Decomposition" >}}
 1. **Principal Component Analysis** (PCA): For dimensionality reduction.

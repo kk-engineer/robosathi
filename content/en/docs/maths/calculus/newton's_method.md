@@ -12,7 +12,7 @@ In this section we will understand Newton's Method for solving optimization prob
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfzDh2D3OqVo-piGAZQPWDj" 
         "Calculus for AI & ML | Full Course Videos">}}
-
+<br>
 {{< definition >}}
 **Newton's Method:** <br>
 It is a **second-order** iterative gradient based optimization technique known for its **extremely fast** convergence. <br>
@@ -56,10 +56,9 @@ x_{new} = x_{old} - \frac{f\prime(x_{old})}{f\prime\prime(x_{old}} \\[10pt]
 \]
 
 Hence, we can see that using **Newton's Method** we can get to the minima \(x^* = 2\) in just 1 step.
-<br><br>
+<br>
 
 {{< alert color="warning" title="Limitations" >}}
-
 Full **Newton's Method** is rarely used in Machine Learning/Deep Learning optimization, 
 because of the following limitations: <br>
 1. \(TC = O(n^2\)) for **Hessian** calculation, since for a network with \(n\) parameters <br>

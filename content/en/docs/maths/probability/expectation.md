@@ -80,7 +80,7 @@ E[X] = \int_{-\infty}^{\infty} x.f(x) dx \\
 \] 
 <br>
 {{< /answer >}}
-<br><br>
+<br>
 
 {{< definition >}}
 **Variance:** <br>
@@ -158,8 +158,7 @@ Var[X]&= \dfrac{(b-a)^2}{12}
 \end{aligned}
 \]
 {{< /answer >}}
-
-<br><br>
+<br>
 
 {{< definition >}}
 **Co-Variance:** <br>

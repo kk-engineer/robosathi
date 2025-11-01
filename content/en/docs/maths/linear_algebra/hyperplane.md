@@ -28,7 +28,7 @@ To represent a **line** in 2D space, we need 2 things: <br>
 {{</ answer >}}
 <br>
 
-{{< alert color="warning" title="Hyperplane" >}}
+{{< alert color="secondary" title="Hyperplane" >}}
 A **hyperplane** is a lower (d-1) dimensional **sub-space** that **divides** a d-dimensional space into 2 **distinct** parts.
 {{< /alert >}}
 
@@ -59,9 +59,8 @@ Similarly, to represent a **hyperplane** in d-dimensions, we need 2 things: <br>
 
 ![](https://robosathi.com/images/linear_algebra/hyperplane.png)
 {{< /alert >}}
-<br>
 
-{{< alert color="secondary" title="Distance from Origin" >}}
+{{< alert color="success" title="Distance from Origin" >}}
 If a point 'x' is on the hyperplane, then it satisfies the below equation: <br>
 \[
 \pi_d = \mathbf{w}^\top \mathbf{x} + w_0 = 0 \\
@@ -85,7 +84,6 @@ If a point 'x' is on the hyperplane, then it satisfies the below equation: <br>
 
 
 {{< /alert >}}
-<br>
 
 {{< question >}}
 Consider a line as a hyperplane in 2D space. Let the unit vector point towards the positive x-axis direction.<br>
@@ -111,7 +109,7 @@ i.e, towards the **-ve** x-axis direction. <br>
 {{</ answer >}}
 <br>
 
-{{< alert color="secondary" title="Half Spaces" >}}
+{{< alert color="success" title="Half Spaces" >}}
 A hyperplane divides a space into 2 distinct parts called **half-spaces**. <br>
 e.g.: A 2D hyperplane divided a 3D space into 2 distinct parts. <br>
 *Similar example in real world: A wall divides a room into 2 distinct spaces.*
@@ -154,7 +152,6 @@ d_{\pi_d} = \frac{\mathbf{w}^\top \mathbf{x\prime} + w_0}{\Vert \mathbf{w}\Vert}
 \]
 ![](https://robosathi.com/images/linear_algebra/half_spaces.png)
 {{< /alert >}}
-<br>
 
 {{< alert color="warning" title="Applications of Equation of Hyperplane" >}}
 The above concept of equation of hyperplane will be very helpful when we discuss the following topics later:

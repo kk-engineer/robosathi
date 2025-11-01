@@ -12,7 +12,7 @@ In this section we will understand about Vector Norms.<br>
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" 
         "Linear Algebra for AI & ML | Full Course Videos">}}
-
+<br>
 {{< definition >}}
 **Vector Norm:** <br>
 It is a measure of the size of a vector or distance from the origin. <br>

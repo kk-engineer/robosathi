@@ -12,7 +12,7 @@ In this section, we will understand various Performance Metrics for classificati
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
-
+<br>
 {{< definition >}}
 **Performance Metrics:** <br>
 They are quantitative measures used to evaluate how well a machine learning model performs on unseen data. <br>
@@ -116,7 +116,7 @@ F1 ~ Score = 2 * \frac{Precision \times Recall}{Precision + Recall} \\[10pt]
 => F1 ~ Score \approx  0.942
 \]
 {{</ answer >}}
-<br><br>
+<br>
 
 {{< definition >}}
 **Receiver Operating Characteristic (ROC) Curve:** <br>
@@ -215,7 +215,7 @@ Let's look at the Precision value: <br>
 We can see that the model has poor precision,i.e, only 26.7% of flagged transactions are actual frauds. <br>
 Unacceptable precision for a good fraud detection system.<br>
 {{</ answer >}}
-<br><br>
+<br>
 
 {{< definition >}}
 **Precision-Recall Curve:** <br>

@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: Introduction to Probability
 description: Introduction to Probability
 weight: 2
 math: true
@@ -15,7 +15,7 @@ This section will introduce you to basic terminologies and definitions used in p
 <br>
 
 {{< question >}}
-Why do we need to understand what is **Probability** ?
+Why do we need to understand what is **Probability**?
 {{</question >}}
 
 {{< answer >}} 
@@ -135,9 +135,7 @@ Does \(P=0\) mean that the event is *impossible* or *improbable* ?
 No, it means that the event is *highly unlikely* to occur. 
 {{</ answer >}}
 
-{{< alert >}} 
-Lets understand this answer with an example..
-{{< /alert >}}
+Let's understand this answer with an example.
 
 {{< question >}}
 What is the probability of choosing a real number, say 2.5, from the interval \([2,3]\) ?
@@ -159,7 +157,7 @@ There is some probability of choosing 2.5, but it is very small. <br><br>
 *Therefore, we say that \(P=1\) means "Almost Sure" and NOT "Certain".*
 {{</ answer >}}
 
-{{< alert >}} 
+{{< alert color="secondary" >}} 
 Now, lets also see another example where \(P=0\) means *Impossible* and \(P=1\) means *Certain*.
 {{< /alert >}}
 

@@ -28,7 +28,7 @@ by assessing whether observed difference or patterns are likely due to chance or
 - Based on the results of hypothesis testing, we can make reliable inferences about the whole group based on a representative sample.
 - It helps us determine whether an observed result is statistically significant finding, or if it could have just happened by random chance.
 {{< /answer >}}
-<br><br>
+<br>
 
 {{< definition >}}
 **Hypothesis Testing:** <br>
@@ -75,9 +75,8 @@ It must be true if the null hypothesis is rejected.
 - T-Test: For regression coefficients
 - F-Test: For overall regression significance
 {{< /alert >}}
-<br>
+
 {{< video "https://youtu.be/u1DsXg2G7_c?si=m78ntxJv_uVGXF6b" >}}
-<br>
 
 {{< alert color="secondary" title="Framework for Hypothesis Testing" >}}
 We can structure any hypothesis test in 6 steps as follows: <br><br>
@@ -175,7 +174,6 @@ We accept \(H_a\) if \(t_{obs} < t^1_{\alpha/2}\)  or \(t_{obs} > t^2_{\alpha/2}
 
 *Note: For critical applications '\(\alpha\)' can be very small i.e. 0.1% or 0.01%, e.g medicine.* <br>
 {{< /alert >}}
-<br>
 
 {{< definition >}}
 **Significance Level (\(\alpha\)):** <br>
@@ -226,7 +224,6 @@ Yes, having a large sample size makes a hypothesis test more powerful. <br>
 {{< alert color="warning" >}}
 P-value only measures whether the observed change is statistically significant.
 {{< /alert >}}
-<br><br>
 
 {{< definition >}}
 **Effect Size:** <br>

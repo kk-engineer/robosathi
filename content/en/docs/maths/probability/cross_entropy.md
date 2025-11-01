@@ -36,7 +36,7 @@ S(x) = -log(P(x)))
 - The unit of surprise factor with log base 2 is **bits**. <br>
 - with base 'e' or natural log its **nats** (natural units of information). <br>
 {{</ definition >}}
-<br><br>
+<br>
 
 {{< definition >}}
 **Entropy:** <br>
@@ -65,8 +65,7 @@ Therefore, a biased coin is less surprising on an average than a fair coin, henc
 {{</ answer >}}
 
 {{< video "https://youtu.be/7D-8ZudYJdk?si=eRcK891RiPhNjP8t" >}}
-
-<br><br>
+<br>
 
 {{< definition >}}
 **Cross Entropy:** <br>
@@ -99,8 +98,7 @@ Cross Entropy = \(H(P, Q_B) = -\sum_{i=1}^n P(x_i)log(Q_B(x_i)) \) <br>
 {{</ answer >}}
 
 {{< video "https://youtu.be/YHUnFH42lqw?si=CCOlBq1qZyITxIWc" >}}
-
-<br><br>
+<br>
 
 {{< definition >}}
 **Kullback Leibler (KL) Divergence:** <br>
@@ -145,8 +143,7 @@ Model B has much more '_information loss_' or incurs higher '_penalty_' of 2.32 
 {{</ answer >}}
 
 {{< video "https://youtu.be/rE4PbltQwxo?si=ClaOPI2MA6uuBUGz" >}}
-
-<br><br>
+<br>
 
 {{< definition >}}
 **Jensen-Shannon Divergence:** <br>

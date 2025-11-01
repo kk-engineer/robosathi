@@ -202,8 +202,7 @@ respectively. <br>
 We can see from the table above - P(A=Red) is the sum of joint distribution over all possible values of B i.e Red & Blue. <br>
 {{</ answer >}}
 {{< video "https://www.youtube.com/watch?v=UTU9yjgnRjk" >}}
-<br> <br>
-
+<br> 
 {{< definition >}}
 **Conditional Probability:** <br>
 It measures the probability of an event occurring given that another event has already happened. <br>
@@ -278,8 +277,7 @@ P(A \mid B) &= \frac{P(A \cap B)}{P(B)} \\
 \]
 Therefore, probability of drawing a red ball in the first draw, given that a blue ball is drawn in second draw = 2/5. <br>
 {{</ answer >}}
-<br> <br>
-
+<br>
 
 {{< definition >}}
 **Conditional Expectation:** <br>
