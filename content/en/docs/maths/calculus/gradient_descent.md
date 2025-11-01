@@ -107,5 +107,6 @@ also GPUs are the reason for the mini-batch size to be a power of 2.*
 
 {{< /alert >}}
 
+{{< video "https://youtu.be/OdYNB1KRwKo?si=AzdYvM6hpkQEK9Kc&t=3350" >}}
 <br><br>
 ```End of Section```

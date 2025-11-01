@@ -52,6 +52,8 @@ Let's see an example: <br><br>
 
 {{< /alert >}}
 
+{{< video "https://www.youtube.com/watch?v=cBY4eshEo70&t=1s" >}}
+
 {{< alert color="success" title="Differentiation" >}}
 Differentiation is a mathematical tool that is used to find the **derivative** or rate of change of a function 
 at a specific point.<br>
@@ -394,6 +396,8 @@ Since, determinant of Hessian = -4 < 0 => (x=0, y=0) is a saddle point. <br>
 ![](https://robosathi.com/images/calculus/fundamentals/saddle_point_2.png)
 <br><br>
 {{< /alert >}}
+
+{{< video "https://www.youtube.com/watch?v=qpAieJgrcR8&t=1s" >}}
 
 <br><br>
 ```End of Section```

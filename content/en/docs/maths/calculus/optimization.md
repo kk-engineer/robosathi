@@ -269,5 +269,7 @@ X: Feature variables <br>
 y: Vector of all observed target values <br>
 {{< /alert >}}
 
+{{< video "https://www.youtube.com/watch?v=OdYNB1KRwKo&t=1s" >}}
+
 <br><br>
 ```End of Section```

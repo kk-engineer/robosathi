@@ -75,5 +75,6 @@ of curvature without incurring the cost of Hessian calculation. <br>
 
 {{< /alert >}}
 
+{{< video "https://www.youtube.com/watch?v=wM8bfEP12pw&t=1s" >}}
 <br><br>
 ```End of Section```
