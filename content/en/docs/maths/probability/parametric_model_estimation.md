@@ -49,6 +49,9 @@ There are 2 philosophical approaches to estimate the parameters of a parametric 
 - For example, Maximum A Posteriori Estimation(MAP), Minimum Mean Square Error Estimation(MMSE), etc..
 <br><br>
 
+{{< video "https://www.youtube.com/watch?v=uGjlEjN0giM&t=1s" >}}
+<br>
+
 {{<definition >}}
 **Maximum Likelihood Estimation:** <br>
 It is the most popular frequentist approach to estimate the parameters of a model. <br>
@@ -136,6 +139,7 @@ Let, \(n_1 = \) number of 1's in the dataset. <br>
 
 In order to find the parameter \(\theta_{ML}\), we need to take the first derivative of the log-likelihood function
 with respect to \(\theta\) and equate it to zero. <br>
+[Read more about Derivative]({{<ref "/docs/maths/calculus/calculus_fundamentals" >}})
 
 \[
 \begin{aligned}
@@ -192,7 +196,7 @@ we can find \(\mu\) and \(\sigma\) that minimises the negative of the log-likeli
 
 Now, lets differentiate the log likelihood function wrt \(\mu\) and \(\sigma\) separately to get \(\mu_{ML}, \sigma_{ML}\). <br><br>
 Lets, calculate \(\mu_{ML}\) first by taking the derivative of the log-likelihood function wrt \(\mu\) and equating it to 0. <br>
-
+[Read more about Derivative]({{<ref  "/docs/maths/calculus/calculus_fundamentals" >}})
 \[
 \begin{aligned}
 &\frac{d}{d\mu} \bar{L}_{X_1, X_2, \dots, X_n}(\Theta) = \frac{d}{d\mu} [nlog(\sigma) + \frac{1}{2\sigma^2} \sum_{i=1}^{n} (x_i - \mu)^2] = 0 \\
@@ -215,8 +219,9 @@ and equating it to 0. <br>
 
 *Note: In general MLE is biased, i.e does NOT give an unbiased estimate => divides by \(n\) instead of \((n-1)\).* <br>
 {{</ answer >}}
-<br><Br>
-
+<br>
+{{< video "https://www.youtube.com/watch?v=74tLuSlmd-c" >}}
+<br>
 
 {{<definition >}}
 **Bayesian Statistics:** <br>
@@ -229,6 +234,8 @@ which allows to quantify uncertainty and yields more robust models, especially w
 \[
 P(\Theta \mid X) = \frac{P(\Theta)P(X \mid \Theta)}{P(X)}
 \]
+
+[Read more about Bayes' Theorem]({{<ref  "/docs/maths/probability/conditional_probability" >}})
 
 \(P(\Theta)\): **Prior**: Initial distribution of \(\Theta\) before seeing the data. <br> 
 \(P(X \mid \Theta)\): **Likelihood**: Conditional distribution of data \(X\), given the parameter \(\Theta\). <br> 
@@ -364,7 +371,10 @@ practical use, such as, <br>
 - Maximum A Posteriori (MAP) Estimator
 - Minimum Mean Square Error (MMSE) Estimator
 {{</ answer >}}
-<br><br>
+<br>
+
+{{< video "https://www.youtube.com/watch?v=ANqXXsZSeyA&t=1s" >}}
+<br>
 
 {{< definition >}}
 **Maximum A Posteriori (MAP) Estimator:** <br>
@@ -516,7 +526,10 @@ Therefore, we can see that \(\Theta_{MAP}\) is extra biased towards 0. <br>
 
 *Note: For a non-uniform prior \(\Theta_{MAP}\) estimate will be pulled towards the prior's mode.*
 {{</ answer >}}
-<br><br>
+<br>
+
+{{< video "https://www.youtube.com/watch?v=v5y5Kw221VU" >}}
+<br>
 
 {{< question >}}
 MAP estimator is good for classification like problems, such as Yes/No, True/False, etc. <br>
@@ -599,12 +612,13 @@ So, here in this case our \(\Theta_{MMSE}\) is: <br>
 
 {{% alert color="secondary" title="MAP vs MMSE" %}}
 - MMSE is the average of the posterior distribution, whereas MAP is the mode/peak.
-- If posterior distribution is symmetric and unimodal(only 1 peak), then MAP and MMSE are very close.
-- If posterior distribution is skewed and multimodal(many peaks), then MAP and MMSE can differ a lot.
-- MMSE considers all the values of the posterior distribution, hence it is more accurate than MAP, especially for skewed 
+- If posterior distribution is symmetric and unimodal (only 1 peak), then MAP and MMSE are very close.
+- If posterior distribution is skewed and multimodal (many peaks), then MAP and MMSE can differ a lot.
+- MMSE considers all the values of the posterior distribution; hence, it is more accurate than MAP, especially for skewed 
 or multimodal distributions.
 {{% /alert %}}
 
+{{< video "https://www.youtube.com/watch?v=WXcJBbF8AvM" >}}
 
 
 

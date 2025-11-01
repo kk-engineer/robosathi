@@ -36,6 +36,9 @@ It is also the derivative of Cumulative Distribution Function (CDF) \(F_X(x)\)* 
 \( \int_{-\infty}^{\infty} f(x) \,dx = 1\) <br>
 3. Probability of a continuous random variable in the range [a,b] is given by - <br>
 \( P(a \le x \le b) = \int_{a}^{b} f(x) \,dx\)
+<br><br>
+
+[Read more about Integration]({{<ref  "/docs/maths/calculus/calculus_fundamentals" >}})
 {{< /alert >}}
 
 {{< alert title="Note" color="warning" >}}
@@ -116,6 +119,7 @@ $$
 PDF = f(x) =
 \begin{cases}
 \frac{1}{2\sigma\sqrt{3}} & \text{if } \mu -\sigma\sqrt{3} \le x  \le \mu + \sigma\sqrt{3}\\
+\\
 0 & \text{~otherwise }
 \end{cases}
 \end{aligned}
@@ -131,7 +135,7 @@ For example: <br>
 {{< alert color="warning" >}}**Graph**: CDF of Uniform Distribution.{{< /alert >}}
 
 {{< video "https://youtu.be/UrLRdi88U3g?si=63sHZ1B-1kUtf4E3" >}}
-<br> <br>
+<br> 
 
 {{< definition >}}
 **Gaussian(Normal) Distribution:** <br>
@@ -178,7 +182,7 @@ For example:
 {{< /alert >}}
 
 {{<video "https://youtu.be/B3SLD_4M2FU?si=RhLAyLCzab7hLeF0" >}}
-<br> <br>
+<br>
 
 {{< definition >}}
 **Exponential Distribution:** <br>

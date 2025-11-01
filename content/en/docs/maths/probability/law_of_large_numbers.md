@@ -30,7 +30,8 @@ the expected value \(E[X]\) or population mean (\( \mu \)).
 
 *Note: Does NOT guarantee that sample mean will be close to population mean, <br> 
 but instead says that - the probability of sample mean being far away from the population mean is low.*
-
+<br><br>
+[Read more about Limits]({{<ref  "/docs/maths/calculus/calculus_fundamentals" >}})
 {{</ definition >}}
 For example:
 - Toss a coin large number of times \('n'\), as \(n \rightarrow \infty\), the proportion of heads will probably be very 
@@ -56,7 +57,9 @@ P(\lim_{n\rightarrow\infty} \bar{X_n} = E[X]) = 1, \text{ as } n \rightarrow \in
 - It guarantees that the sequence of sample averages itself converges to population mean, with exception of set of 
 outcomes that has probability = 0.
 - Almost certain guarantee; Much stronger statement than Weak Law of Large Numbers.
+<br><br>
 
+[Read more about Limits]({{<ref  "/docs/maths/calculus/calculus_fundamentals" >}})
 {{</ definition >}}
 For example:
 - Toss a coin large number of times \('n'\), as \(n \rightarrow \infty\), the proportion of heads will converge 

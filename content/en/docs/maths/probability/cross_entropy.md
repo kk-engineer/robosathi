@@ -47,6 +47,8 @@ It conveys how much 'information' we expect to gain from a random event. <br>
 \[
 H(X) = E[-log(P(x)] = -\sum_{x \in X} P(x)log(P(x))
 \]
+
+[Read more about Expectation]({{<ref  "/docs/maths/probability/expectation" >}})
 {{</ definition >}}
 
 {{< answer >}}

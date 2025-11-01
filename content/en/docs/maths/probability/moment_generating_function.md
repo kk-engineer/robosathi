@@ -94,6 +94,8 @@ M_X(t) = E[e^{tX}] = \int_{-\infty}^{\infty} e^{tx} f_X(x) dx
 \[
 M_X(t) = E[e^{tX}] = \sum_{i=1}^{\infty} e^{tx} P(X=x)
 \]
+<br>
+[Read more about Integration & Differentiation]({{<ref  "/docs/maths/calculus/calculus_fundamentals" >}})
 {{</ definition >}}
 
 {{< video "https://youtu.be/KEqqV54Raz8?si=6wjZKKChX9XWyEoY" >}}

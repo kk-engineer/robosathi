@@ -30,7 +30,9 @@ where, <br>
 \(X_n\): is the estimator or sample based random variable.<br>
 \(X\): is the known or limiting or target random variable. <br>
 \(\epsilon\): is the tolerance level or margin of error. <br>
+<br>
 
+[Read more about Limits]({{<ref  "/docs/maths/calculus/calculus_fundamentals" >}})
 {{< /definition >}}
 
 For example: 
@@ -40,6 +42,7 @@ Estimator:
 \[
 X_n = \begin{cases}
 \frac{n}{n+1} & \text{, if Head } \\
+\\
 \frac{1}{n} & \text{, if Tail} \\
 \end{cases} 
 \]
@@ -49,6 +52,7 @@ Known random variable (Bernoulli):
 \[
 X = \begin{cases}
 1 & \text{, if Head } \\
+\\
 0 & \text{, if Tail} \\
 \end{cases} 
 \]
@@ -56,6 +60,7 @@ X = \begin{cases}
 \[
 X_n - X = \begin{cases}
 \frac{n}{n+1} - 1 = \frac{-1}{n+1} & \text{, if Head } \\
+\\
 \frac{1}{n} - 0 = \frac{1}{n} & \text{, if Tail} \\
 \end{cases} 
 \]
@@ -63,6 +68,7 @@ X_n - X = \begin{cases}
 \[
 |X_n - X| = \begin{cases}
 \frac{1}{n+1} & \text{, if Head } \\
+\\
 \frac{1}{n} & \text{, if Tail} \\
 \end{cases} 
 \]
@@ -76,6 +82,7 @@ If **n=5**; <br>
 \[
 |X_n - X| = \begin{cases}
 \frac{1}{n+1} = \frac{1}{6} \approx 0.16 & \text{, if Head } \\
+\\
 \frac{1}{n} = \frac{1}{5} = 0.2 & \text{, if Tail} \\
 \end{cases} 
 \]
@@ -87,6 +94,7 @@ if **n=20**; <br>
 \[
 |X_n - X| = \begin{cases}
 \frac{1}{n+1} = \frac{1}{21} \approx 0.04 & \text{, if Head } \\
+\\
 \frac{1}{n} = \frac{1}{20} = 0.05 & \text{, if Tail} \\
 \end{cases} 
 \]
@@ -133,7 +141,9 @@ If, \(X_n \xrightarrow{Almost ~ Sure} X \), => \(X_n \xrightarrow{Probability} X
 But, converse is NOT true.
 
 *Note: Almost Sure convergence is hardest to satisfy amongst all convergence, such as, convergence in probability, 
-convergence in distribution, etc.*=
+convergence in distribution, etc.
+<br><br>
+[Read more about Limits]({{<ref  "/docs/maths/calculus/calculus_fundamentals" >}})
 {{< /definition >}}
 For example:
 - \(X\) is random variable such that \(X = \frac{1}{2} \), a constant, i.e \(X_1 = X_2 = \dots = X_n = \frac{1}{2}\). <br>

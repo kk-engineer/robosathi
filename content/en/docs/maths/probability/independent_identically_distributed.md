@@ -62,6 +62,7 @@ For example: <br>
 X = 
 \begin{cases}
 1 & \text{if Heads}  \\
+\\
 0 & \text{if Tails} 
 \end{cases} \\
 \text{} \\
@@ -87,6 +88,7 @@ X, Y are NOT independent, but mutually exclusive, because if we know about one, 
 f_X(x) = 
 \begin{cases} 
 \frac{1}{b-a} = \frac{1}{1-(-1)} = \frac{1}{2}  & \text{if } x \in [a,b]  \\
+\\
 0 & \text{otherwise} 
 \end{cases} \\
 \text{}\\
@@ -116,6 +118,8 @@ From (1) and (2), we can say that:
 E[XY] ⍯ E[X]E[Y] \\
 \]
 Hence, \(X\) and \(Y\) are NOT independent.
+<br><br>
+[Read more about Integration]({{<ref  "/docs/maths/calculus/calculus_fundamentals" >}})
 <br><br>
 
 {{< definition >}}

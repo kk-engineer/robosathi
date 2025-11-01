@@ -155,6 +155,8 @@ from \(-\infty\) to the given value \(x\).<br><br>
 \( CDF = F_X(x) = \int_{-\infty}^{x} f(x) \,dx \), where \(f(x)\) is the Probability Density Function (PDF) of random variable. <br><br> 
 *Note: We can also say that PDF is the derivative of CDF for continuous random variable.* <br><br>
 \(PDF = f(x) = F'(X) = \frac{dF_X(x)}{dx} \)
+<br><br>
+[Read more about Integration]({{<ref  "/docs/maths/calculus/calculus_fundamentals" >}})
 {{< /alert >}}
 
 {{< video "https://youtu.be/YqbtUTJT--E?si=UiVUx00ebssGCLgJ&t=1" >}}

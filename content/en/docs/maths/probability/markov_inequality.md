@@ -23,6 +23,8 @@ P(X \ge a) \le \frac{E[X]}{a}
 \]
 
 *Note: It gives a very loose upper bound.*
+<br><br>
+[Read more about Expectation]({{<ref  "/docs/maths/probability/expectation" >}})
 {{</ definition >}}
 <br>
 
@@ -118,6 +120,8 @@ P(S_n \ge c) \le e^{-tc}(M_x(t))^n \\[10pt]
 \text{ where } M_x(t) \text{ is the Moment Generating Function of } X \\[10pt]
 \]
 *Note: Used to compute how far the sum of independent random variables deviate from their expected value.*
+<br><br>
+[Read more about Moment Generating Function]({{<ref  "/docs/maths/probability/moment_generating_function" >}})
 {{</ definition >}}
 
 {{< video "https://youtu.be/m9Aqmnt89Tg?si=jYJREpH4arHA_m2h&t=1" >}}
