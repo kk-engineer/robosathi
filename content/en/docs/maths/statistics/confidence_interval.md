@@ -88,7 +88,7 @@ but after calculating the 95% CI, we can see that there is a significant overlap
 i.e [36.12, 37.94].
 {{</ answer >}}
 <br>
-{{< video "https://youtu.be/vQb9l9Zw3Hs?si=AxRVhQwFgbhtIeKf" >}}
+{{< video "https://www.youtube.com/watch?v=vQb9l9Zw3Hs&t=1s" >}}
 
 <br><br>
 ```End of Section```

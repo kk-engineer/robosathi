@@ -134,6 +134,8 @@ If \(p_{value} < \alpha\), we reject the null hypothesis and accept the alternat
 *Note: In the above example \(p_{value} < \alpha\), so we reject the null hypothesis.* <br>
 
 {{< /answer >}}
+{{< video "https://youtu.be/t_6o-RlcBDI?si=Szy5cFwMYrFKBa1w&t=1" >}}
+<br>
 
 {{< alert color="success" title="Left or Right Sided (Tailed) Test" >}}
 We need to do a left or right sided test, or a 2-sided test, this depends upon our alternate hypothesis and test statistic. <br>
@@ -174,6 +176,9 @@ We accept \(H_a\) if \(t_{obs} < t^1_{\alpha/2}\)  or \(t_{obs} > t^2_{\alpha/2}
 
 *Note: For critical applications '\(\alpha\)' can be very small i.e. 0.1% or 0.01%, e.g medicine.* <br>
 {{< /alert >}}
+
+{{< video "https://www.youtube.com/watch?v=1pM0UfNgEQI&t=1s" >}}
+<br>
 
 {{< definition >}}
 **Significance Level (\(\alpha\)):** <br>
@@ -221,6 +226,9 @@ Yes, having a large sample size makes a hypothesis test more powerful. <br>
 - Also, as n increases, t-distribution approaches normal distribution.
 {{</ answer >}}
 
+<br>
+{{< video "https://www.youtube.com/watch?v=DFY2cKy4Sjg&t=1s" >}}
+
 {{< alert color="warning" >}}
 P-value only measures whether the observed change is statistically significant.
 {{< /alert >}}
@@ -256,6 +264,8 @@ improvement (p-value<0.05), compared to a placebo group.
 1. Small effect size: Cohen's d = 0.1 => drug had minimal effect.
 2. Large effect size: Cohen's d = 0.8 => drug produced substantial improvement.
 
+<br>
+{{< video "https://www.youtube.com/watch?v=AfawJHBRQOc&t=01s" >}}
 <br><br>
 ```End of Section```
 

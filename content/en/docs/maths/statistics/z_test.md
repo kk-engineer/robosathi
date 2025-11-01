@@ -55,6 +55,8 @@ Z-score helps to define probability areas: <br>
 
 {{</ definition >}}
 <br>
+{{< video "https://www.youtube.com/watch?v=ArsUOjkfERQ" >}}
+<br>
 
 {{< definition >}}
 **1-Sample Z-Test:** <br>
@@ -126,6 +128,8 @@ Our \(t_{obs}\) is much more extreme than the the critical value \(Z_{0.05}\), =
 Hence, we reject the null hypothesis. <br>
 Therefore, there is a statistically significant evidence that the new optimisation reduces the runtime of the model.
 {{</ answer >}}
+<br>
+{{< video "https://www.youtube.com/watch?v=PHQhOoMB-6s&t=1s" >}}
 <br>
 
 {{< definition >}}
@@ -257,6 +261,8 @@ Since, \(t_{obs} < Z_{0.05}\) => p-value > 5%. <br>
 Hence, we fail to reject the null hypothesis. <br>
 Therefore, the observed conversion rate of design B is due to random chance; thus, B is not a better design.
 {{</ answer >}}
+<br>
+{{< video "https://www.youtube.com/watch?v=ukdF4Zx7pSU" >}}
 <br><br>
 
 ```End of Section```

@@ -46,6 +46,8 @@ The sum of (k-1) terms can be anything, but the kth term is fixed at 50 - (sum o
 So, we have only (k-1) terms that can change independently, therefore, the DOF(\(\nu\)) = k-1.
 {{< /alert >}}
 
+{{< video "https://www.youtube.com/watch?v=qGRpfhDK-zI" >}}
+
 {{< alert color="secondary" title="Central Limit Theorem">}}
 Central Limit Theorem states that the sampling distribution of sample means approaches a normal distribution as 
 the sample size increases, regardless of the distribution of the population. <br>
@@ -101,6 +103,8 @@ For \(k\) categories, the test statistic is: <br>
 
 Note: For very large 'n', the Pearson's chi-square (\(\chi^2\)) test statistic follows a chi-square (\(\chi^2\)) distribution. <br>
 {{</ definition >}}
+<br>
+{{< video "https://www.youtube.com/watch?v=ZvESq3cXTKo&t=1s" >}}
 <br>
 
 {{< definition >}}
@@ -245,7 +249,8 @@ Critical value = \(\chi^2(0.05,1)\) = 3.84 <br>
 Since, \(t_{obs}\) = 4.76 > 3.84 (critical value), we reject the null hypothesis \(H_0\). <br>
 Therefore, the gender and beverage preference are dependent.
 {{</ answer >}}
-
+<br>
+{{< video "https://www.youtube.com/watch?v=4ww_2A7pHio&t=1s" >}}
 
 <br><br>
 ```End of Section```

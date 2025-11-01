@@ -47,6 +47,8 @@ The sum of (k-1) terms can be anything, but the kth term is fixed at 50 - (sum o
 So, we have only (k-1) terms that can change independently, therefore, the DOF(\(\nu\)) = k-1.
 {{< /alert >}}
 
+{{< video "https://www.youtube.com/watch?v=tdgmwh0DZJU&t=1s" >}}
+<br>
 {{<definition >}}
 **1-Sample T-Test:** <br>
 It is used to test whether the sample mean is equal to a known/hypothesized value. <br>
@@ -92,6 +94,8 @@ Since \(t_{obs}\) > \(t_{0.05}\), we reject the null hypothesis. <br>
 And, accept the alternative hypothesis that the API response time is significantly > 100 ms. <br>
 Hence, the developer's claim is NOT valid.
 {{</ answer >}}
+<br>
+{{< video "https://www.youtube.com/watch?v=pQ6owcLIpms&t=1s" >}}
 <br>
 
 {{< definition >}}
@@ -170,7 +174,8 @@ _Important: Find the value of \(t_{\alpha}\) in [T-table](https://www.sjsu.edu/f
 Since \(t_{obs}\) > \(t_{0.05}\), we reject the null hypothesis. <br>
 And, accept the alternative hypothesis that the new model has better accuracy than the existing model. <br>
 {{</ answer >}}
-
+<br>
+{{< video "https://www.youtube.com/watch?v=MnJfCKaCYSU&t=1s" >}}
 
 <br><br>
 ```End of Section```

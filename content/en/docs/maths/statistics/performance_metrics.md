@@ -248,6 +248,8 @@ Let's revisit the fraud detection example discussed above to understand the util
 If we check the location of above (Precision, Recall) point on PRC curve, we will find that it is located near the 
 _bottom right corner_, i.e, the model performance is poor.
 {{</ answer >}}
+<br>
+{{< video "https://www.youtube.com/watch?v=XvBYoR-qoDQ&t=1s" >}}
 <br><br>
 ```End of Section```
 
