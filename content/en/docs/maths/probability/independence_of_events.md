@@ -125,7 +125,7 @@ $$
 _Therefore, A & B are **conditionally independent** given C._
 <br>
 
-{{< video "https://youtu.be/Rhvj1e1Q84Q" >}}
+{{< video "https://youtu.be/Rhvj1e1Q84Q?si=999FWQPg6kLnP4rE&t=1" >}}
 <br>
 
 ```End of Section```

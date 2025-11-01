@@ -84,7 +84,7 @@ The most frequently occurring value in a dataset. <br>
 - A dataset can have multiple modes, or no mode at all, which can make mode less informative.
 
 {{</ definition >}}
-
+<br>
 {{< video "https://youtu.be/tRqgJS1nR4o?si=P3vdco_f4DkMtWpS" >}}
 <br>
 
@@ -316,7 +316,7 @@ Lower fence = Q1 - 1.5 * IQR  = 3 - 9 = -6<br>
 Upper fence = Q3 + 1.5 * IQR = 9 + 9 = 18 <br>
 So, any data point that is less than  -6 or greater than 18 is considered as a potential  outlier. <br>
 As in this example, 100 can be considered as an outlier.
-<br>
+<br><br>
 {{< video "https://youtu.be/3-qQu9jNMPk?si=mxnrRIC8lrqtC2Oa" >}}
 
 {{< alert color="secondary" title="Anscombe's Quartet">}}

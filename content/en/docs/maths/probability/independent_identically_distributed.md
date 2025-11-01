@@ -142,7 +142,7 @@ For example: <br>
   Usually, heights of members of the same family may be highly correlated.<br> 
   However, for practical purposes, we can assume that all the heights are independent of one another.
   - And, for 'identically distributed' - we can assume that all the heights are from the same Gaussian distribution with some mean and variance.
-<br>
+<br><br>
 
 {{< video "https://www.youtube.com/watch?v=vE3suVMRH0o&t=1s" >}}
 

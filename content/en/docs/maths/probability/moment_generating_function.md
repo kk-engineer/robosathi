@@ -25,7 +25,7 @@ _Important moments:_ <br>
 3. **Skewness** : Asymmetry 
 4. **Kurtosis** : Tailedness
 {{</ definition >}}
-
+<br>
 {{< video "https://youtu.be/VR-yHsEGyww?si=i-JZqbPxFrErODeP" >}}
 <br>
 

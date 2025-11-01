@@ -134,6 +134,7 @@ If \(p_{value} < \alpha\), we reject the null hypothesis and accept the alternat
 *Note: In the above example \(p_{value} < \alpha\), so we reject the null hypothesis.* <br>
 
 {{< /answer >}}
+<br>
 {{< video "https://youtu.be/t_6o-RlcBDI?si=Szy5cFwMYrFKBa1w&t=1" >}}
 <br>
 
@@ -267,6 +268,7 @@ improvement (p-value<0.05), compared to a placebo group.
 <br>
 {{< video "https://www.youtube.com/watch?v=AfawJHBRQOc&t=01s" >}}
 <br><br>
+
 ```End of Section```
 
 

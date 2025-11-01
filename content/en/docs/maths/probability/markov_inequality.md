@@ -53,7 +53,7 @@ P(X \ge 90) \le \frac{70}{90} \approx 0.78
 \]
 Hence, there is a 78% chance that a randomly selected student gets a score of 90 marks or more.
 {{</ answer >}}
-<br><br>
+<br>
 
 {{< definition >}}
 **Chebyshev's Inequality:** <br>
@@ -91,7 +91,7 @@ P(\big|X - 70\big| \ge 20) \le \frac{100}{20^2} = \frac{1}{4} = 0.25
 \]
 Hence, Chebyshev's Inequality gives a far tighter upper bound of 25% than Markov's Inequality of 78%(approx).
 {{</ answer >}}
-<br><br>
+<br>
 
 {{< definition >}}
 **Chernoff Bound:** <br>
@@ -123,6 +123,7 @@ P(S_n \ge c) \le e^{-tc}(M_x(t))^n \\[10pt]
 <br><br>
 [Read more about Moment Generating Function]({{<ref  "/docs/maths/probability/moment_generating_function" >}})
 {{</ definition >}}
+<br>
 
 {{< video "https://youtu.be/m9Aqmnt89Tg?si=jYJREpH4arHA_m2h&t=1" >}}
 
