@@ -78,6 +78,10 @@ outputs:
   section: [HTML, print, RSS]
 
 params:
+  # Set this to the path of your social sharing image in the static folder.
+  # The path is relative to the static folder (or the root if placed there).
+  images:
+    - images/social_share.png
   taxonomy:
     # set taxonomyCloud = [] to hide taxonomy clouds
     taxonomyCloud: [tags, categories]
