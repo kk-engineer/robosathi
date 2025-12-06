@@ -6,9 +6,6 @@ weight: 6
 math: true
 ---
 
-{{% pageinfo %}}
-In this section, we will understand about Hypothesis Testing, along with a framework for Hypothesis Testing. <br>
-{{% /pageinfo %}}
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}

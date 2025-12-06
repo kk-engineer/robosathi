@@ -6,9 +6,6 @@ weight: 4
 math: true
 ---
 
-{{% pageinfo %}}
-In this section, we will understand different kinds of Independence of Events.<br>
-{{% /pageinfo %}}
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos">}}

@@ -6,10 +6,6 @@ weight: 3
 math: true
 ---
 
-{{% pageinfo %}}
-In this section we will understand Optimization in Machine Learning and related concepts, such as, Loss Function, Convexity, 
-& Optimization.<br>
-{{% /pageinfo %}}
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfzDh2D3OqVo-piGAZQPWDj" 
         "Calculus for AI & ML | Full Course Videos">}}

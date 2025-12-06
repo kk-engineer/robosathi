@@ -6,9 +6,6 @@ weight: 3
 math: true
 ---
 
-{{% pageinfo %}}
-In this section, we will understand about Correlation and Covariance. <br>
-{{% /pageinfo %}}
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}

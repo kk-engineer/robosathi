@@ -6,11 +6,6 @@ weight: 16
 math: true
 ---
 
-{{% pageinfo %}}
-In this section, we will understand Parametric Model Estimation via two philosophical approaches. <br>
-1. Frequentist: Parameter \(\Theta\) is fixed, but unknown.
-2. Bayesian: Parameter \(\Theta\) itself is unknown, so we model it as a random variable with a probability distribution.
-{{% /pageinfo %}}
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos" >}}

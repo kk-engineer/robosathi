@@ -9,9 +9,6 @@ weight: 2
 draft: true
 ---
 
-{{% pageinfo %}}
-Work in progress.
-{{% /pageinfo %}}
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxen-R6NytSMigAri7piPhFp&si=JUBpWmnh7DBjhBCq" 
 "Maths for AI & ML | Full Course Videos" >}}

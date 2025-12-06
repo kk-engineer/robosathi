@@ -6,12 +6,6 @@ weight: 12
 math: true
 ---
 
-{{% pageinfo %}}
-In this section, we will understand Convergence of Random Variables.<br>
-We will only discuss the below two types of convergence:
-- Convergence in Probability
-- Almost Sure Convergence
-{{% /pageinfo %}}
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos">}}

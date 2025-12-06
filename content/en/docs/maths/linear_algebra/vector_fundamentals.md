@@ -6,9 +6,6 @@ weight: 2
 math: true
 ---
 
-{{% pageinfo %}}
-This section will introduce you to basic terminologies and definitions related to Vectors.<br>
-{{% /pageinfo %}}
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" 
         "Linear Algebra for AI & ML | Full Course Videos">}}

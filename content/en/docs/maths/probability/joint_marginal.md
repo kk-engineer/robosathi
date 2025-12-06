@@ -6,11 +6,6 @@ weight: 10
 math: true
 ---
 
-{{% pageinfo %}}
-In this section, we will understand Joint, Marginal & Conditional Probability.<br>
-So far, we have dealt with a single random variable.<br>
-Now, let's explore the probability distributions of 2 or more random variables occurring together.<br>
-{{% /pageinfo %}}
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos">}}

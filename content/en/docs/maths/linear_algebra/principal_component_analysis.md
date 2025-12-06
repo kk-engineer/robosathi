@@ -6,9 +6,6 @@ weight: 5
 math: true
 ---
 
-{{% pageinfo %}}
-In this section we will understand Principal Component Analysis.<br>
-{{% /pageinfo %}}
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" 
         "Linear Algebra for AI & ML | Full Course Videos">}}

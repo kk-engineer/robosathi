@@ -6,11 +6,6 @@ weight: 15
 math: true
 ---
 
-{{% pageinfo %}}
-In this section, we will understand Entropy, Cross Entropy, KL Divergence & JS Divergence.<br>
-All these topics come from the field of '_Information Theory_' and can be understood through the lens of <br>
-'_Information_' or '_Surprise_'.
-{{% /pageinfo %}}
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos">}}

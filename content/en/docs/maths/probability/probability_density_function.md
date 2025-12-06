@@ -6,9 +6,6 @@ weight: 7
 math: true
 ---
 
-{{% pageinfo %}}
-In this section, we will understand Probability Density Function of a Continuous Random Variable.<br>
-{{% /pageinfo %}}
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos" >}}

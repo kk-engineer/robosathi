@@ -6,17 +6,9 @@ weight: 9
 math: true
 ---
 
-{{% pageinfo %}}
-In this section, we will understand Chi-Square Test. <br>
-{{% /pageinfo %}}
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
-
-
-{{< alert color="warning" >}}
-_Note_: _All the hypothesis tests get their name from the underlying distribution of the test statistic._
-{{< /alert >}}
 
 {{< definition >}}
 **Chi-Square Distribution (\(\chi^2\)):** <br>
@@ -106,6 +98,10 @@ Note: For very large 'n', the Pearson's chi-square (\(\chi^2\)) test statistic f
 <br>
 {{< video "https://www.youtube.com/watch?v=ZvESq3cXTKo&t=1s" >}}
 <br>
+
+{{< alert color="warning" >}}
+_Note_: _All the hypothesis tests get their name from the underlying distribution of the test statistic._
+{{< /alert >}}
 
 {{< definition >}}
 **Chi-Square (\(\chi^2\)) Test:** <br>

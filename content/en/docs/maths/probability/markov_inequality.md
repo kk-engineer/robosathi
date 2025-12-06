@@ -6,9 +6,6 @@ weight: 14
 math: true
 ---
 
-{{% pageinfo %}}
-In this section, we will understand Markov's, Chebyshev's Inequality & Chernoff Bound.<br>
-{{% /pageinfo %}}
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos" >}}

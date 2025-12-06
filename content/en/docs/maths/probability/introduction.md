@@ -5,10 +5,6 @@ weight: 2
 math: true
 ---
 
-{{% pageinfo %}}
-
-This section will introduce you to basic terminologies and definitions used in probability for AI & ML.<br>
-{{% /pageinfo %}}
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos">}}

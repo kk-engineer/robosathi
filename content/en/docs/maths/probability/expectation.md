@@ -6,9 +6,6 @@ weight: 8
 math: true
 ---
 
-{{% pageinfo %}}
-In this section, we will understand Expectation, Variance and Co-Variance of a Random Variable.<br>
-{{% /pageinfo %}}
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos">}}

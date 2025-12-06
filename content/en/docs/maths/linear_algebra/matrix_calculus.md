@@ -6,9 +6,6 @@ weight: 7
 math: true
 ---
 
-{{% pageinfo %}}
-In this section we will understand Derivatives of Vector & Matrix, Jacobian and Hessian.<br>
-{{% /pageinfo %}}
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" 
         "Linear Algebra for AI & ML | Full Course Videos">}}

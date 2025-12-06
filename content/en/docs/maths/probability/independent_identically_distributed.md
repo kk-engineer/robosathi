@@ -6,9 +6,6 @@ weight: 11
 math: true
 ---
 
-{{% pageinfo %}}
-In this section, we will understand Independent & Identically Distributed(I.I.D) Random Variables.<br>
-{{% /pageinfo %}}
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos">}}

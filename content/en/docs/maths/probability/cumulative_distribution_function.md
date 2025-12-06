@@ -6,9 +6,6 @@ weight: 5
 math: true
 ---
 
-{{% pageinfo %}}
-In this section, we will understand Cumulative Distribution Function of a Random Variable.<br>
-{{% /pageinfo %}}
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos">}} 
