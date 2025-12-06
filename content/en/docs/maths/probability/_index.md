@@ -6,40 +6,8 @@ description: Probability for AI & ML
 weight: 1
 ---
 
-{{% pageinfo %}}
-In this section, we will cover the topics related to Probability for AI & ML.<br>
-{{% /pageinfo %}}
-
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos">}}
 
 ###  Probability for AI & ML
 [This sheet](https://docs.google.com/spreadsheets/d/1NUv9DrXJcFZs0SGHiLo8GSyCP58nR2_1lD1YDGzwC1A/edit?gid=0#gid=0) contains all the topics that will be covered for Probability for AI & ML.
-
-Below is the list of topics that will be covered in this section.
-- Probability
-- Sample Space
--  Random Variables
--  Discrete & Continuous Random Variables
--  Probability Distribution
--  Cumulative Distribution Function (CDF)
--  Probability Mass Function (PMF)
--  Probability Density Function (PDF)
--  Bayes' Theorem
--  Conditional Probability
--  Joint Probability
--  Marginal Probability
--  Independence & Mutual Exclusion
--  Expectation
--  Markov Inequality
--  Chebyshev's Inequality
--  Chernoff Bound
--  Law of Large Numbers
--  Independent & Identically Distributed Random Variables
--  Cross Entropy
--  Kullback-Leibler Divergence
--  Maximum Likelihood Estimation (MLE)
--  Maximum A Posteriori Estimation (MAP)
--  Minimum Mean Squared Error (MMSE)
-
-``` End of Section```
