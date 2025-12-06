@@ -171,7 +171,9 @@ Critical value = \(\chi^2(0.05,1)\) = 3.84 <br>
 Since, \(t_{obs}\) = 5.76 > 3.84 (critical value), we reject the null hypothesis \(H_0\). <br>
 Therefore, the coin is biased towards head.
 {{</ answer >}}
-<br>
+
+{{< video "https://youtu.be/XdsOaHQYXnk?si=Zmrqtz7eZjHvxH--&t=1" >}}
+<br><br>
 
 {{< definition >}}
 **Test of Independence:** <br>
@@ -246,7 +248,7 @@ Since, \(t_{obs}\) = 4.76 > 3.84 (critical value), we reject the null hypothesis
 Therefore, the gender and beverage preference are dependent.
 {{</ answer >}}
 <br>
-{{< video "https://www.youtube.com/watch?v=4ww_2A7pHio&t=1s" >}}
+{{< video "https://youtu.be/yiymXqaA608" >}}
 
 <br><br>
 ```End of Section```

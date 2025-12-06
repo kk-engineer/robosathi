@@ -38,8 +38,9 @@ e.g.: Model predicted that a patient has diabetes, but the patient actually does
 **Type-2 Error:** <br>
 It is the number of false negatives. 
 e.g.: Model predicted that a patient does NOT have diabetes, but the patient actually has diabetes; "_a miss_". <br>
-
 {{</ definition >}}
+
+{{< video "https://www.youtube.com/watch?v=VclTKXnlb_U" >}}
 
 {{< alert color="secondary" title="Important Metrics" >}}
 Many metrics are derived from the confusion matrix. <br><br>
@@ -113,7 +114,8 @@ F1 ~ Score = 2 * \frac{Precision \times Recall}{Precision + Recall} \\[10pt]
 => F1 ~ Score \approx  0.942
 \]
 {{</ answer >}}
-<br>
+
+{{< video "https://youtu.be/Z1-OC4sl-Qw?si=tVAerxRJ95jCDH6-&t=1" >}}
 
 {{< definition >}}
 **Receiver Operating Characteristic (ROC) Curve:** <br>
@@ -212,7 +214,8 @@ Let's look at the Precision value: <br>
 We can see that the model has poor precision,i.e, only 26.7% of flagged transactions are actual frauds. <br>
 Unacceptable precision for a good fraud detection system.<br>
 {{</ answer >}}
-<br>
+
+{{< video "https://www.youtube.com/watch?v=0tX3df_rz-0" >}}
 
 {{< definition >}}
 **Precision-Recall Curve:** <br>
@@ -246,7 +249,8 @@ If we check the location of above (Precision, Recall) point on PRC curve, we wil
 _bottom right corner_, i.e, the model performance is poor.
 {{</ answer >}}
 <br>
-{{< video "https://www.youtube.com/watch?v=XvBYoR-qoDQ&t=1s" >}}
+{{< video "https://www.youtube.com/watch?v=vIqEUeDGAiE" >}}
 <br><br>
+
 ```End of Section```
 
