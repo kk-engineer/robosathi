@@ -14,9 +14,7 @@ the AI-powered future.
 {{% /blocks/cover %}}
 
 {{% blocks/lead %}}
-
-RoboSathi is an AI & ML learning platform.
-
+Our Mission: Demystify AI | Empower Everyone
 {{% /blocks/lead %}}
 
 <!-- KK Commenting this section for now

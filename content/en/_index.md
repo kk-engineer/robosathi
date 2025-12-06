@@ -3,16 +3,16 @@ title: RoboSathi
 ---
 
 {{< blocks/cover title="RoboSathi" >}}
-<h1 <class="display-3 fw-bold">"AI for Good"</h1>
+<h1> "AI for Good"</h1>
 <br>
 <a class="btn btn-lg btn-success me-3 mb-4" href="/docs/">
   Notes <i class="fas fa-arrow-alt-circle-right ms-2"></i>
 </a>
 <a class="btn btn-lg btn-secondary me-3 mb-4" href="https://www.youtube.com/@RoboSathi" target="_blank">
-  Videos <i class="fab fa-youtube "></i>
+  Videos <i class="fab fa-youtube"></i>
 </a>
-<p class="lead mt-5">Our Mission: Demystify AI | Empower Everyone</p>
-{{< blocks/link-down color="info" >}}
+<p class="lead mt-5 fw-bold text-dark">RoboSathi is an AI & ML learning platform.</p>
+{{< blocks/link-down color="dark" >}}
 {{< /blocks/cover >}}
 
 
@@ -28,7 +28,7 @@ title: RoboSathi
 <br><br>
 This section commented End !-->
 
-<h1 class="text-center mb-4"><strong>Maths Courses</strong></h1>
+<h2 class="text-center mb-4"><strong>Maths for AI & ML Courses</strong></h2>
 <div class="row">
   <div class="col-md-4 mb-4">
     {{< youtube_playlist id="PLnpa6KP2ZQxen-R6NytSMigAri7piPhFp" title="Maths for AI & ML Full Course" 

@@ -7,22 +7,133 @@ Add styles or override variables from the theme here.
 // Override Docsy's default fonts with a apple style font stack.
 $font-family-sans-serif: "SF Pro Text", sans-serif;
 
-// Override the primary color to black for navbar
-$primary: #000000;
+// Override the primary color to white
+$primary: #ffffff;
 
-// Dark jet black background for cover blocks
-//.td-cover-block {
-//  background-color: $primary!important;
-//}
+// ========================================
+// NAVBAR STYLES - Black text on white background
+// ========================================
 
-// Dark jet black background for footer
-.td-footer {
-  background-color: $primary !important;
+// Navbar background
+.td-navbar {
+  background-color: #ffffff !important;
+
+  // Navbar links (About, Notes)
+  .nav-link {
+    color: #000000 !important;
+    text-shadow: none !important; // Remove shadow
+
+    &:hover,
+    &:focus {
+      color: #333333 !important;
+      text-shadow: none !important; // Remove shadow on hover
+    }
+  }
+
+  // Navbar brand/logo text
+  .navbar-brand {
+    color: #000000 !important;
+
+    // Make logo bigger
+    img, svg {
+      height: 40px !important; // Increased from default ~30px
+      width: auto !important;
+    }
+  }
+
+  // Dropdown menu items
+  .dropdown-menu {
+    background-color: #ffffff !important;
+
+    .dropdown-item {
+      color: #000000 !important;
+
+      &:hover {
+        background-color: #f8f9fa !important;
+        color: #000000 !important;
+      }
+    }
+  }
+
+  // Mobile menu toggle
+  .navbar-toggler {
+    border-color: #000000 !important;
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    }
+  }
 }
+
+// ========================================
+// SEARCH BAR STYLES - Dark/visible styling
+// ========================================
+
+// Search input field
+.td-search {
+  input.form-control {
+    background-color: #f8f9fa !important; // Light gray background
+    border: 1px solid #000000 !important; // Black border
+    color: #000000 !important; // Black text
+
+    &::placeholder {
+      color: #6c757d !important; // Gray placeholder text
+      opacity: 1 !important;
+    }
+
+    &:focus {
+      background-color: #ffffff !important;
+      border-color: #000000 !important;
+      box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.15) !important;
+      color: #000000 !important;
+    }
+  }
+
+  // Search icon
+  .td-search-input::before {
+    color: #000000 !important;
+  }
+
+  // Search button if present
+  button {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+    color: #ffffff !important;
+
+    &:hover {
+      background-color: #333333 !important;
+      border-color: #333333 !important;
+    }
+  }
+}
+
+// Algolia/DocSearch styling (if using)
+.DocSearch-Button {
+  background-color: #f8f9fa !important;
+  border: 1px solid #000000 !important;
+
+  .DocSearch-Search-Icon {
+    color: #000000 !important;
+  }
+
+  .DocSearch-Button-Placeholder,
+  .DocSearch-Button-Keys {
+    color: #000000 !important;
+  }
+
+  &:hover {
+    background-color: #ffffff !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.15) !important;
+  }
+}
+
+// ========================================
+// COVER BLOCK STYLES - White background, black text
+// ========================================
 
 // Target the cover block container itself
 section.td-cover-block {
-  background-color: $primary !important;
+  background-color: #ffffff !important;
   background-image: none !important;
 }
 
@@ -30,7 +141,7 @@ section.td-cover-block {
 section.td-cover-block .row,
 section.td-cover-block .container,
 section.td-cover-block .container-fluid {
-  background-color: $primary !important;
+  background-color: #ffffff !important;
   background-image: none !important;
 }
 
@@ -46,13 +157,81 @@ section.td-cover-block::after {
   opacity: 0 !important;
 }
 
-// Ensure text remains visible
+// Make all text BLACK and visible
 section.td-cover-block h1,
 section.td-cover-block h2,
+section.td-cover-block h3,
+section.td-cover-block h4,
+section.td-cover-block h5,
+section.td-cover-block h6,
 section.td-cover-block p,
 section.td-cover-block .lead,
-section.td-cover-block a {
-  color: #ffffff !important;
+section.td-cover-block span {
+  color: #000000 !important;
   position: relative !important;
   z-index: 10 !important;
+  text-shadow: none !important;
+}
+
+// Regular links (not buttons) in cover block
+section.td-cover-block a:not(.btn) {
+  color: #0066cc !important;
+
+  &:hover {
+    color: #004499 !important;
+  }
+}
+
+// Button styles - ensure good contrast
+section.td-cover-block .btn {
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+// Link down arrow - make it black
+section.td-cover-block .td-arrow-down {
+  color: #000000 !important;
+
+  svg, i {
+    color: #000000 !important;
+    fill: #000000 !important;
+  }
+
+  &:hover {
+    color: #333333 !important;
+
+    svg, i {
+      color: #333333 !important;
+      fill: #333333 !important;
+    }
+  }
+}
+
+// ========================================
+// FOOTER STYLES - Black text
+// ========================================
+
+.td-footer {
+  background-color: $primary !important;
+}
+
+footer {
+  color: #000000 !important;
+
+  a {
+    color: #000000 !important;
+
+    &:hover {
+      color: #333333 !important;
+    }
+  }
+
+  // Target Font Awesome icons specifically
+  .fa, .fas, .far, .fab {
+    color: #000000 !important;
+  }
+
+  p {
+    color: #000000 !important;
+  }
 }
