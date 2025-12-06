@@ -34,35 +34,36 @@ $primary: #ffffff;
   .navbar-brand {
     color: #000000 !important;
 
-    // Make logo bigger
-    img, svg {
-      height: 40px !important; // Increased from default ~30px
-      width: auto !important;
-    }
+    // // Make logo bigger
+    // img,
+    // svg {
+    //   height: 40px !important; // Increased from default ~30px
+    //   width: auto !important;
+    // }
   }
 
-  // Dropdown menu items
-  .dropdown-menu {
-    background-color: #ffffff !important;
+  // // Dropdown menu items
+  // .dropdown-menu {
+  //   background-color: #ffffff !important;
 
-    .dropdown-item {
-      color: #000000 !important;
+  //   .dropdown-item {
+  //     color: #000000 !important;
 
-      &:hover {
-        background-color: #f8f9fa !important;
-        color: #000000 !important;
-      }
-    }
-  }
+  //     &:hover {
+  //       background-color: #f8f9fa !important;
+  //       color: #000000 !important;
+  //     }
+  //   }
+  // }
 
   // Mobile menu toggle
-  .navbar-toggler {
-    border-color: #000000 !important;
+  // .navbar-toggler {
+  //   border-color: #000000 !important;
 
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-    }
-  }
+  //   .navbar-toggler-icon {
+  //     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  //   }
+  // }
 }
 
 // ========================================
@@ -192,7 +193,8 @@ section.td-cover-block .btn {
 section.td-cover-block .td-arrow-down {
   color: #000000 !important;
 
-  svg, i {
+  svg,
+  i {
     color: #000000 !important;
     fill: #000000 !important;
   }
@@ -200,7 +202,8 @@ section.td-cover-block .td-arrow-down {
   &:hover {
     color: #333333 !important;
 
-    svg, i {
+    svg,
+    i {
       color: #333333 !important;
       fill: #333333 !important;
     }
@@ -227,7 +230,10 @@ footer {
   }
 
   // Target Font Awesome icons specifically
-  .fa, .fas, .far, .fab {
+  .fa,
+  .fas,
+  .far,
+  .fab {
     color: #000000 !important;
   }
 
