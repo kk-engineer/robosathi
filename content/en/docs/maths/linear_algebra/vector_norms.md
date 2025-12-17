@@ -41,9 +41,9 @@ It is the square root of the sum of squares of all the elements of a vector; als
 **p=2**: <br>
 \[ {\| x \|_2} =  (\sum_{i=1}^n x_i^2)^{1/2} = \sqrt{x_1^2 + x_2^2 + ... + x_n^2} \]
 
-**L-\(infty\) Norm:** <br>
+**L-\(\infty\) Norm:** <br>
 It is the maximum of absolute values of all the elements of a vector; also known as **Chebyshev** distance. <br>
-**p=\infty**: <br>
+**p=\(\infty\)**: <br>
 \[ {\| x \|_\infty} = \max |x_i| = \lim_{p \to \infty}  (\sum_{i=1}^n |x_i|^p)^{1/p}\]
 {{</ definition >}}
 For example: 
