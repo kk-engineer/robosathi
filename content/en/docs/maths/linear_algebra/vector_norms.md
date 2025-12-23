@@ -26,7 +26,7 @@ Norm is always greater than or equal to zero, <br>
 <br>
 
 **P-Norm:** <br>
-It is a generalised form of most common family of vector norms. <br>
+It is a generalised form of most common family of vector norms, also called **Minkowski norm**. <br>
 It is defined as: <br>
 \[ {\| x \|}_p = (\sum_{i=1}^n |x_i|^p)^{1/p} \] <br>
 We can change the value of \(p\) to get different norms.
