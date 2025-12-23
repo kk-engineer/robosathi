@@ -7,6 +7,9 @@ Add styles or override variables from the theme here.
 // Override Docsy's default fonts with a apple style font stack.
 $font-family-sans-serif: "SF Pro Text", sans-serif;
 
+// Increase the default font size
+$font-size-base: 1.125rem;
+
 // Override the primary color to white
 $primary: #ffffff;
 
