@@ -3,7 +3,7 @@ title: Maths
 description: Mathematics for AI & ML
 #categories: [Probability, Statistics, Linear Algebra, Calculus]
 #tags: [ML, Maths]
-weight: 1
+weight: 2
 ---
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxen-R6NytSMigAri7piPhFp&si=JUBpWmnh7DBjhBCq" 

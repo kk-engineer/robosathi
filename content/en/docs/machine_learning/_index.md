@@ -1,16 +1,16 @@
 ---
 title: Machine Learning
 description: Classical Machine Learning
-date: 2025-10-10
-weight: 2
+date: 2026-02-07
+weight: 1
 #categories: [Supervised, Unsupervised]
 #tags: [Regression, Classification, Clustering]
 #toc_hide: true
-draft: true
+#draft: true
 ---
 
 
-{{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxen-R6NytSMigAri7piPhFp&si=JUBpWmnh7DBjhBCq" 
-"Maths for AI & ML | Full Course Videos" >}}
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxeydAqz2lsSMFYinbrJy9mu" 
+"Classical Machine Learning | Full Course Videos" >}}
 
 ```End of Section```

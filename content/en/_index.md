@@ -28,6 +28,14 @@ title: RoboSathi
 <br><br>
 This section commented End !-->
 
+<h2 class="text-center mb-4"><strong>Classical Machine Learning Courses</strong></h2>
+<div class="row">
+  <div class="col-md-4 mb-4">
+    {{< youtube_playlist id="PLnpa6KP2ZQxeydAqz2lsSMFYinbrJy9mu" title="Classical Machine Learning Full Course" 
+        thumbnail="/images/thumbnails/machine_learning.png">}}
+  </div>
+</div>
+
 <h2 class="text-center mb-4"><strong>Maths for AI & ML Courses</strong></h2>
 <div class="row">
   <div class="col-md-4 mb-4">
