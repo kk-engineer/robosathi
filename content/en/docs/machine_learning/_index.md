@@ -12,4 +12,5 @@ weight: 1
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxeydAqz2lsSMFYinbrJy9mu" 
 "Classical Machine Learning | Full Course Videos" >}}
 
+<br><br>
 ```End of Section```
