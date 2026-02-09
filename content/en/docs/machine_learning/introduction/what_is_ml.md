@@ -15,7 +15,6 @@ math: true
 Learn = to gain knowledge or understanding of a skill,  by study, instruction, or experience.
 <br><br>
 {{< /definition >}}
-<br>
 
 ![](https://robosathi.com/images/machine_learning/introduction/learning.png)
 <br><br>
@@ -41,13 +40,14 @@ The machine learning lifecycle ♼ is generally divided into two main stages:
 **Training Phase:** <br>
 Where the machine learning model is developed and taught to understand a specific task using a large volume 
 of historical data.
-
+<br><br>
 ![](https://robosathi.com/images/machine_learning/introduction/training.png)
 <br><br>
 
 **Runtime (Inference) Phase:** <br> 
 Where the fully trained and deployed model is put to practical use in a real-world 🌎 environment, i.e., 
 to make predictions on new, unseen data.
+<br><br>
 ![](https://robosathi.com/images/machine_learning/introduction/inference.png)
 <br><br>
 
