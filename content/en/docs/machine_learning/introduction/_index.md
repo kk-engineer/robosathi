@@ -1,11 +1,8 @@
 ---
-title: Machine Learning
-description: Classical Machine Learning
+title: Introduction
+description: Introduction To Machine Learning
 date: 2026-02-07
 weight: 1
-#categories: [Supervised, Unsupervised]
-#tags: [Regression, Classification, Clustering]
-#toc_hide: true
 #draft: true
 ---
 

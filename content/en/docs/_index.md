@@ -5,8 +5,11 @@ weight: 1
 menu: {main: {weight: 20}}
 ---
 
-{{< alert color="warning" >}}*Note: Currently only Maths for AI & ML module content is available.*{{< /alert >}}
+{{< alert color="warning" >}}*Note: Currently only Maths for AI & ML module notes is available.*{{< /alert >}}
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxeydAqz2lsSMFYinbrJy9mu" 
+"Classical Machine Learning | Full Course Videos" >}}
+<br>
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxen-R6NytSMigAri7piPhFp&si=JUBpWmnh7DBjhBCq" 
 "Maths for AI & ML | Full Course Videos" >}}
 
