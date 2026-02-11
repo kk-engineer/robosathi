@@ -82,6 +82,9 @@ params:
   math:
     enable: true
     engine: katex  # This switches the engine from mathjax to katex
+    options:
+      output: htmlAndMathml # This ensures the <annotation> tag is created
+
   # Set this to the path of your social sharing image in the static folder.
   # The path is relative to the static folder (or the root if placed there).
   images:

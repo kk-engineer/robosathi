@@ -244,3 +244,60 @@ footer {
     color: #000000 !important;
   }
 }
+
+// Copy Formula
+/* Ensure the equation container is the anchor */
+.katex-display, .katex {
+    position: relative !important;
+    display: inline-block;
+}
+
+/* The invisible bridge to prevent mouse-out when moving toward the button */
+.katex:hover::before, .katex-display:hover::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1; /* Sits below the button but keeps hover active */
+}
+
+/* The Copy Button styling */
+.copy-tex-button {
+    position: absolute;
+    top: -10px; /* Moves it closer to the text to bridge the gap */
+    right: 0;
+    display: none; /* Controlled by JS */
+    background-color: #ffffff;
+    color: #374151;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    padding: 2px 10px;
+    font-size: 13px; /* Larger font as requested */
+    font-weight: 500;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    align-items: center;
+}
+
+/* Specific adjustment for Inline equations inside sentences */
+.copy-inline {
+    top: -22px;
+    font-size: 11px;
+}
+
+/* Button Hover State */
+.copy-tex-button:hover {
+    background-color: #f3f4f6;
+    border-color: #9ca3af;
+    transform: translateY(-1px);
+}
+
+/* Success State */
+.copy-tex-button.copied {
+    background-color: #10b981;
+    color: white;
+    border-color: #059669;
+}
