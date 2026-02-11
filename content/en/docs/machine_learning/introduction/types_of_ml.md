@@ -56,7 +56,7 @@ unlabelled data to improve accuracy. <br>
 **Benefit:** <br>
 It effectively expands the training data by assigning labels to previously unlabelled examples, 
 allowing the model to learn from a *larger dataset*.<br>
-![](https://robosathi.com/images/machine_learning/introduction/pseudo_labeling.png)
+![](https://robosathi.com/images/machine_learning/introduction/pseudo_labelling.png)
 <br><br>
 
 **2. Graph-based methods:** <br>
