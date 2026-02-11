@@ -55,8 +55,8 @@ unlabelled data to improve accuracy. <br>
 
 **Benefit:** <br>
 It effectively expands the training data by assigning labels to previously unlabelled examples, 
-allowing the model to learn from a *larger dataset*.<br>
-![](https://robosathi.com/images/machine_learning/introduction/pseudo_labeling.png)
+allowing the model to learn from a *larger dataset*.<br><br>
+![](https://robosathi.com/images/machine_learning/introduction/pseudo_labelling.png)
 <br><br>
 
 **2. Graph-based methods:** <br>
@@ -66,7 +66,8 @@ allowing the model to learn from a *larger dataset*.<br>
 - Various algorithms, such as label propagation or graph neural networks (GNNs), can be employed to infer the labels of unlabelled nodes.
 
 **Benefit:** <br> 
-These methods are particularly useful when the data naturally exhibits a *graph-like structure* or when local neighborhood information is crucial for classification.<br>
+These methods are particularly useful when the data naturally exhibits a *graph-like structure* or when local 
+neighborhood information is crucial for classification.<br><br>
 ![](https://robosathi.com/images/machine_learning/introduction/graph_based_method.png)
 <br><br>
 {{< /alert >}}
@@ -106,7 +107,7 @@ in a specific state. <br>
 ![](https://robosathi.com/images/machine_learning/introduction/popular_llms.png)
 <br><br>
 
-{{< alert color="blue" title="Machine Learning Concepts used in LLMs" >}}
+{{< alert color="blue" title="Large Language Models" >}}
 
 **Large Language Models (LLMs)** are deep learning models that often employ **unsupervised learning** 
 techniques during their pre-training phase.
