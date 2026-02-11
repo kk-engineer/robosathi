@@ -107,7 +107,7 @@ in a specific state. <br>
 ![](https://robosathi.com/images/machine_learning/introduction/popular_llms.png)
 <br><br>
 
-{{< alert color="blue" title="Machine Learning Concepts used in LLMs" >}}
+{{< alert color="blue" title="Large Language Models" >}}
 
 **Large Language Models (LLMs)** are deep learning models that often employ **unsupervised learning** 
 techniques during their pre-training phase.
