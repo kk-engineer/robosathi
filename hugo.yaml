@@ -79,6 +79,9 @@ outputs:
   section: [HTML, print, RSS]
 
 params:
+  math:
+    enable: true
+    engine: katex  # This switches the engine from mathjax to katex
   # Set this to the path of your social sharing image in the static folder.
   # The path is relative to the static folder (or the root if placed there).
   images:
