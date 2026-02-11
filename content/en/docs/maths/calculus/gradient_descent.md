@@ -10,7 +10,7 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfzDh2D3OqVo-piGAZQPWDj" 
         "Calculus for AI & ML | Full Course Videos">}}
 
-{{< alert color="secondary" title="Gradient Based Optimization" >}}
+{{< panel color="orange" title="Gradient Based Optimization" >}}
 _Till now, we have understood how to formulate a minimization problem as a mathematical optimization problem. <br> 
 Now, lets take a step forward and understand how to solve these optimization problems._ <br>
 
@@ -19,7 +19,7 @@ We will focus on two important iterative gradient based methods: <br>
 2. **Newton's Method**: Second order method, used both the gradient and the Hessian.
 
 
-{{< /alert >}}
+{{< /panel >}}
 
 {{< definition >}}
 **Gradient Descent:** <br>
@@ -39,13 +39,11 @@ w_{new} = w_{old} - \eta \cdot \frac{\partial f}{\partial w_{old}} \\[10pt]
 
 4. Repeat steps 2 and 3 iteratively until convergence (to minima).
 
-<br><br>
-![](https://robosathi.com/images/calculus/optimization/gradient_descent.png)
-<br><br>
+{{< imgproc "images/maths/calculus/optimization/gradient_descent.png" Resize "800x" >}}{{< /imgproc >}}
 
 {{</ definition >}}
 
-{{< alert color="secondary" title="Types of Gradient Descent" >}}
+{{< panel color="green" title="Types of Gradient Descent" >}}
 There are 3 types of Gradient Descent:
 1. **Batch Gradient Descent**
 2. **Stochastic Gradient Descent**
@@ -102,7 +100,7 @@ w_{new} = w_{old} - \eta \cdot (\text{average gradient of k data points})
 *Note: Vectorization on GPUs allows for parallel processing of mini-batches; 
 also GPUs are the reason for the mini-batch size to be a power of 2.*
 
-{{< /alert >}}
+{{< /panel >}}
 
 {{< video "https://youtu.be/OdYNB1KRwKo?si=AzdYvM6hpkQEK9Kc&t=3350" >}}
 <br><br>
