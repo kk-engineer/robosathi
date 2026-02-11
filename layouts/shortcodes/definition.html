@@ -1,12 +1,23 @@
-{{ $_hugo_config := `{ "version": 1 }` }}
+{{/* Handle optional title from named or first positional parameter */}}
+{{ $title := .Get "title" | default (.Get 0) }}
+
 <div style="
   background-color: #e6f2ff;
   border-left: 5px solid #3498db;
   padding: 10px 15px;
   margin: 10px 0;
   border-radius: 6px;
-  #font-weight: bold;
   color: #154360;
+  display: block;
+  width: 100%;
 ">
-  {{ .Inner | markdownify }}
+  {{ if $title }}
+    <div style="font-size: 1.6rem; font-weight: 400; margin-bottom: 5px; line-height: 1.2;">
+      {{ $title }}
+    </div>
+  {{ end }}
+
+  <div style="color: #333;">
+    {{ .Inner | markdownify }}
+  </div>
 </div>

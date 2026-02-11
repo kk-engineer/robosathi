@@ -12,8 +12,7 @@ math: true
 
 {{< imgproc "images/machine_learning/introduction/types_of_ml.png" Resize "800x" >}}{{< /imgproc >}}
 
-{{< definition >}}
-**Supervised Learning:** <br>
+{{< definition title="Supervised Learning">}}
 Supervised Learning uses labelled data (input-output pairs) to predict outcomes, such as, spam filters. <br>
 
 - Regression
@@ -22,8 +21,7 @@ Supervised Learning uses labelled data (input-output pairs) to predict outcomes,
 
 {{< imgproc "images/machine_learning/introduction/supervised_learning.png" Resize "800x" >}}{{< /imgproc >}}
 
-{{< definition >}}
-**Unsupervised Learning:** <br>
+{{< definition title="Unsupervised Learning">}}
 Unsupervised Learning finds hidden patterns in unlabelled data (like customer segmentation). <br>
 
 - Clustering (k-means, hierarchical)
@@ -32,7 +30,7 @@ Unsupervised Learning finds hidden patterns in unlabelled data (like customer se
 
 {{< imgproc "images/machine_learning/introduction/unsupervised_learning.png" Resize "800x" >}}{{< /imgproc >}}
 
-{{< definition >}}
+{{< definition title="Semi-Supervised Learning">}}
 **Semi-Supervised Learning:** <br>
 Semi-Supervised Learning uses a mix of both, leveraging a small amount of labelled data with a large amount of 
 unlabelled data to improve accuracy. <br>
@@ -41,7 +39,7 @@ unlabelled data to improve accuracy. <br>
 - Graph-based methods
 {{< /definition >}}
 
-{{< panel color="forest" title="Types of Semi-Supervised Learning" >}}
+{{< panel color="green" title="Types of Semi-Supervised Learning" >}}
 **1. Pseudo-labelling:**<br>
 - A model is initially trained on the available, *limited* labelled dataset. <br>
 - This trained model is then used to predict labels for the unlabelled data.These predictions are called *‘pseudo-labels’*.
@@ -64,10 +62,9 @@ These methods are particularly useful when the data naturally exhibits a *graph-
 neighborhood information is crucial for classification.<br><br>
 {{< imgproc "images/machine_learning/introduction/graph_based_method.png" Resize "800x" >}}{{< /imgproc >}}
 {{< /panel >}}
+<br>
 
-
-{{< definition >}}
-**Reinforcement Learning:** <br>
+{{< definition title="Reinforcement Learning">}}
 Agent learns to make optimal decisions by interacting with an environment, receiving rewards (positive feedback) 
 or penalties (negative feedback) for its actions. <br>
 
@@ -89,7 +86,7 @@ in a specific state. <br>
 
 {{< /panel >}}
 
-{{< panel color="forest" title="How Reinforcement Learning Works ?" >}}
+{{< panel color="green" title="How Reinforcement Learning Works ?" >}}
 - **Exploration:** The agent tries out new actions to discover their effects and potentially find better strategies.
 - **Exploitation:** The agent utilizes its learned knowledge to choose actions that have yielded high rewards in the past.
 

@@ -104,7 +104,7 @@ For example: <br>
 <br><br>
 
 {{< question >}}
-Why variance must be finite??
+Why variance must be finite?
 {{< /question >}}
 
 {{< answer >}}

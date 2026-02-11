@@ -10,16 +10,14 @@ math: true
 "Classical Machine Learning | Full Course Videos" >}}
 <br>
 
-{{< definition >}}
-**Learn:** <br>
-Learn = to gain knowledge or understanding of a skill,  by study, instruction, or experience.
+{{< definition title="Learn">}}
+To gain knowledge or understanding of a skill,  by study, instruction, or experience.
 {{< /definition >}}
 
 {{< imgproc "images/machine_learning/introduction/learning.png" Resize "800x" >}}{{< /imgproc >}}
 
-{{< definition >}}
-**Machine Learning:** <br>
-Machine Learning  =  to teach computers 💻 to learn from data, find patterns 🧮, and make decisions or predictions 
+{{< definition title="Machine Learning">}}
+To teach computers 💻 to learn from data, find patterns 🧮, and make decisions or predictions 
 without being explicitly programmed for every task, as humans🧍‍♀️🧍 learn from experience.
 <br><br>
 {{< /definition >}}
