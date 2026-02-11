@@ -55,7 +55,7 @@ unlabelled data to improve accuracy. <br>
 
 **Benefit:** <br>
 It effectively expands the training data by assigning labels to previously unlabelled examples, 
-allowing the model to learn from a *larger dataset*.<br>
+allowing the model to learn from a *larger dataset*.<br><br>
 ![](https://robosathi.com/images/machine_learning/introduction/pseudo_labelling.png)
 <br><br>
 
@@ -66,7 +66,8 @@ allowing the model to learn from a *larger dataset*.<br>
 - Various algorithms, such as label propagation or graph neural networks (GNNs), can be employed to infer the labels of unlabelled nodes.
 
 **Benefit:** <br> 
-These methods are particularly useful when the data naturally exhibits a *graph-like structure* or when local neighborhood information is crucial for classification.<br>
+These methods are particularly useful when the data naturally exhibits a *graph-like structure* or when local 
+neighborhood information is crucial for classification.<br><br>
 ![](https://robosathi.com/images/machine_learning/introduction/graph_based_method.png)
 <br><br>
 {{< /alert >}}
