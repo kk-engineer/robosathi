@@ -32,10 +32,9 @@ f\prime\prime(x_k) : \text{ tells curvature of the function at } x_k \\[10pt]
 x_{new} = x_{old} - (\nabla^2 f(x_{old})^{-1} \nabla f(x_{old}) \\[10pt]
 \nabla^2 f(x_{old}): Hessian
 \]
-<br>
 
-![](https://robosathi.com/images/calculus/optimization/newton_method.png)
-<br><br>
+{{< imgproc "images/maths/calculus/optimization/newton_method.png" Resize "800x" >}}{{< /imgproc >}}
+
 {{</ definition >}}
 For example: <br>
 1. Find the minima of \(f(x) = x^2 - 4x + 5\)
@@ -55,7 +54,7 @@ x_{new} = x_{old} - \frac{f\prime(x_{old})}{f\prime\prime(x_{old}} \\[10pt]
 Hence, we can see that using **Newton's Method** we can get to the minima \(x^* = 2\) in just 1 step.
 <br>
 
-{{< alert color="warning" title="Limitations" >}}
+{{< panel color="rust" title="Limitations" >}}
 Full **Newton's Method** is rarely used in Machine Learning/Deep Learning optimization, 
 because of the following limitations: <br>
 1. \(TC = O(n^2\)) for **Hessian** calculation, since for a network with \(n\) parameters <br>
@@ -70,7 +69,7 @@ of curvature without incurring the cost of Hessian calculation. <br>
 **BFGS**: Broyden-Fletcher-Goldfarb-Shanno <br>
 **L-BFGS**: Limited-memory BFGS <br>
 
-{{< /alert >}}
+{{< /panel >}}
 
 {{< video "https://www.youtube.com/watch?v=wM8bfEP12pw&t=1s" >}}
 <br><br>

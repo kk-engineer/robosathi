@@ -20,7 +20,7 @@ To measure, how wrong the are the predictions made by a Machine Learning model, 
 minimizing a loss function.
 {{</ answer >}}
 
-{{< alert color="success" title="Loss Function" >}}
+{{< panel color="blue" title="Loss Function" >}}
 **Loss Function:** <br>
 It quantifies error of a single data point in a dataset. <br>
 e.g.: Squared Loss, Hinge Loss, Absolute Loss, etc, for a single data point. <br>
@@ -70,19 +70,21 @@ The **task** is to **minimize** the above **loss**. <br>
 **Key Points:** <br>
 1. Loss is the bridge between 'data' and 'optimization'.
 2. Good loss functions are differentiable and convex.
-{{< /alert >}}
+{{< /panel >}}
 
-{{< alert color="secondary" title="Convexity" >}}
+{{< video "https://youtu.be/4ck0Mv6cYUU" >}}
+
+{{< panel color="orange" title="Convexity" >}}
 **Convexity:** <br>
 It refers to a property of a function where a line segment connecting any two points on its graph 
 lies above or on the graph itself. <br>
 A convex function is curved upwards. <br>
 It is always described by a convex set. <br>
 <br>
-![](https://robosathi.com/images/calculus/optimization/convex.png)
-<br><br>
-![](https://robosathi.com/images/calculus/optimization/non_convex.png)
-<br><br>
+{{< imgproc "images/maths/calculus/optimization/convex.png" Resize "800x" >}}{{< /imgproc >}}
+
+{{< imgproc "images/maths/calculus/optimization/non_convex.png" Resize "800x" >}}{{< /imgproc >}}
+
 
 **Convex Set:** <br>
 A convex set is a set of points in which the straight line segment connecting any two points in the set lies 
@@ -121,9 +123,11 @@ A symmetric matrix is positive semi-definite if and only if: <br>
 
 [Read more about Eigen Values]({{<ref  "/docs/maths/linear_algebra/eigen_value_decomposition"  >}})
 <br>
-{{< /alert >}}
+{{< /panel >}}
 
-{{< alert color="success" title="Optimization" >}}
+{{< video "https://youtu.be/apPRfDxWvbM" >}}
+
+{{< panel color="blue" title="Optimization" >}}
 All machine learning algorithms minimize loss (mostly), so we need to find the **optimum parameters** for the model that
 minimizes the loss. <br>
 This is an **optimization** problem, i.e, find the **best solution** from a set of **alternatives**. <br>
@@ -145,9 +149,8 @@ Loss = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat y_i)^2 \\[10pt]
 
 *Note: To minimize the loss, we want \(y_i, \hat y_i\) to be as close as possible,
 for that we want to find the optimum weights \(w, w_0\) of the model.*
-<br><br>
-![](https://robosathi.com/images/calculus/optimization/optimization_minima.png)
-<br><br>
+
+{{< imgproc "images/maths/calculus/optimization/optimization_minima.png" Resize "800x" >}}{{< /imgproc >}}
 
 **Important:** <br>
 **Deep Learning** models have **non-convex** loss function, so it is **challenging** to reach the **global** minima, 
@@ -155,9 +158,11 @@ so any **local** minima is also a **good enough** solution. <br>
 <br>
 [Read more about Maxima-Minima]({{<ref  "/docs/maths/calculus/calculus_fundamentals"  >}})
 
-{{< /alert >}}
+{{< /panel >}}
 
-{{< alert color="secondary" title="Constrained Optimization" >}}
+{{< video "https://youtu.be/IIRTTngB5UE" >}}
+
+{{< panel color="orange" title="Constrained Optimization" >}}
 **Constrained Optimization:** <br>
 It is an **optimization** process to find the best possible solution (min or max), but within a set of **limitations** or
 **restrictions** called **constraints**. <br>
@@ -192,7 +197,7 @@ Now, the above constrained optimization problem becomes an unconstrained optimiz
 By solving the above unconstrained optimization problem, 
 we get the optimum solution for the original constrained problem. <br>
 
-{{< /alert >}}
+{{< /panel >}}
 
 {{< question >}}
 Find the point on the line 2x + 3y = 13 that is closest to the origin.
@@ -254,7 +259,9 @@ Now, we have 3 variables and 3 equations (1), (2) and (3), lets solve them. <br>
 Hence, the point (x=2, y=3) on the line 2x + 3y = 13 that is closest to the origin.
 {{</ answer >}}
 
-{{< alert color="warning" >}}
+{{< video "https://youtu.be/BDogM9wBQPo" >}}
+
+{{< panel color="rust">}}
 To solve the optimization problem, there are many methods, such as, **analytical method**, which gives the **normal equation** for the linear regression,
 but we will discuss that method later in detail, when we have understood what is linear regression? <br> <br>
 Normal Equation for linear regression:
@@ -263,7 +270,7 @@ w^* = (X^TX)^{-1}X^Ty
 \]
 X: Feature variables <br>
 y: Vector of all observed target values <br>
-{{< /alert >}}
+{{< /panel >}}
 
 {{< video "https://www.youtube.com/watch?v=OdYNB1KRwKo&t=1s" >}}
 

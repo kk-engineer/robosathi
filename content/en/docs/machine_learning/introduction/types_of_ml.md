@@ -10,9 +10,7 @@ math: true
 "Classical Machine Learning | Full Course Videos" >}}
 <br>
 
-![](https://robosathi.com/images/machine_learning/introduction/types_of_ml.png)
-<br><br>
-
+{{< imgproc "images/machine_learning/introduction/types_of_ml.png" Resize "800x" >}}{{< /imgproc >}}
 
 {{< definition >}}
 **Supervised Learning:** <br>
@@ -22,9 +20,7 @@ Supervised Learning uses labelled data (input-output pairs) to predict outcomes,
 - Classification
 {{< /definition >}}
 
-![](https://robosathi.com/images/machine_learning/introduction/supervised_learning.png)
-<br><br>
-
+{{< imgproc "images/machine_learning/introduction/supervised_learning.png" Resize "800x" >}}{{< /imgproc >}}
 
 {{< definition >}}
 **Unsupervised Learning:** <br>
@@ -34,8 +30,7 @@ Unsupervised Learning finds hidden patterns in unlabelled data (like customer se
 - Dimensionality Reduction and Data Visualization (PCA, t-SNE, UMAP)
 {{< /definition >}}
 
-![](https://robosathi.com/images/machine_learning/introduction/unsupervised_learning.png)
-<br><br>
+{{< imgproc "images/machine_learning/introduction/unsupervised_learning.png" Resize "800x" >}}{{< /imgproc >}}
 
 {{< definition >}}
 **Semi-Supervised Learning:** <br>
@@ -46,7 +41,7 @@ unlabelled data to improve accuracy. <br>
 - Graph-based methods
 {{< /definition >}}
 
-{{< alert color="forest" title="Types of Semi-Supervised Learning" >}}
+{{< panel color="forest" title="Types of Semi-Supervised Learning" >}}
 **1. Pseudo-labelling:**<br>
 - A model is initially trained on the available, *limited* labelled dataset. <br>
 - This trained model is then used to predict labels for the unlabelled data.These predictions are called *‘pseudo-labels’*.
@@ -56,8 +51,7 @@ unlabelled data to improve accuracy. <br>
 **Benefit:** <br>
 It effectively expands the training data by assigning labels to previously unlabelled examples, 
 allowing the model to learn from a *larger dataset*.<br><br>
-![](https://robosathi.com/images/machine_learning/introduction/pseudo_labelling.png)
-<br><br>
+{{< imgproc "images/machine_learning/introduction/pseudo_labelling.png" Resize "800x" >}}{{< /imgproc >}}
 
 **2. Graph-based methods:** <br>
 - Data points (both labelled and unlabelled) are represented as nodes in a graph. 
@@ -68,9 +62,8 @@ allowing the model to learn from a *larger dataset*.<br><br>
 **Benefit:** <br> 
 These methods are particularly useful when the data naturally exhibits a *graph-like structure* or when local 
 neighborhood information is crucial for classification.<br><br>
-![](https://robosathi.com/images/machine_learning/introduction/graph_based_method.png)
-<br><br>
-{{< /alert >}}
+{{< imgproc "images/machine_learning/introduction/graph_based_method.png" Resize "800x" >}}{{< /imgproc >}}
+{{< /panel >}}
 
 
 {{< definition >}}
@@ -81,10 +74,9 @@ or penalties (negative feedback) for its actions. <br>
 * Mimic human trial-and-error learning to achieve a goal 🎯.
 {{< /definition >}}
 
-![](https://robosathi.com/images/machine_learning/introduction/reinforcement_learning.png)
-<br><br>
+{{< imgproc "images/machine_learning/introduction/reinforcement_learning.png" Resize "800x" >}}{{< /imgproc >}}
 
-{{< alert color="secondary" title="Key Components of Reinforcement Learning" >}}
+{{< panel color="orange" title="Key Components of Reinforcement Learning" >}}
 - **Agent:** The learning entity that makes decisions and takes actions within the environment.
 - **Environment:** The external system with which the agent interacts.It defines the rules, states, 
 and the consequences of the agent's actions.
@@ -95,19 +87,19 @@ in a specific state. <br>
 *Positive* rewards encourage certain behaviors, while *negative* rewards (penalties) discourage them.
 - **Policy:** The strategy or mapping that defines which action the agent should take in each state to maximize long-term rewards 💰.
 
-{{< /alert >}}
+{{< /panel >}}
 
-{{< alert color="forest" title="How Reinforcement Learning Works ?" >}}
+{{< panel color="forest" title="How Reinforcement Learning Works ?" >}}
 - **Exploration:** The agent tries out new actions to discover their effects and potentially find better strategies.
 - **Exploitation:** The agent utilizes its learned knowledge to choose actions that have yielded high rewards in the past.
 
-*Note:* The agent continuously balances *exploration* and *exploitation* to refine its policy and achieve the optimal behavior.
-{{< /alert >}}
+***Note:*** The agent continuously balances *exploration* and *exploitation* to refine its policy and achieve the optimal behavior.
+{{< /panel >}}
 
-![](https://robosathi.com/images/machine_learning/introduction/popular_llms.png)
+{{< imgproc "images/machine_learning/introduction/popular_llms.png" Resize "800x" >}}{{< /imgproc >}}
 <br><br>
 
-{{< alert color="blue" title="Large Language Models" >}}
+{{< panel color="orange" title="Large Language Models" >}}
 
 **Large Language Models (LLMs)** are deep learning models that often employ **unsupervised learning** 
 techniques during their pre-training phase.
@@ -122,7 +114,7 @@ labeled datasets to improve performance on those tasks.
  
 **Reinforcement Learning from Human Feedback (RLHF)** allows LLMs to learn from human judgment, 
 enabling them to generate more nuanced, context-aware, and ethically aligned outputs that better meet human expectations.
-{{< /alert >}}
+{{< /panel >}}
 
 {{< video "https://youtu.be/6hUiPW-7Zpg" >}}
 <br><br>

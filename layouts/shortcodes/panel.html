@@ -1,0 +1,40 @@
+{{/* Handle parameters: 1:color, 2:title, 3:icon */}}
+{{ $color_name := .Get "color" | default (.Get 0 | default "blue") }}
+{{ $title := .Get "title" | default (.Get 1) }}
+{{ $icon  := .Get "icon"  | default (.Get 2) }}
+
+{{/* Define the hex map to match your SCSS exactly */}}
+{{ $colors := dict
+  "navy"     "#003366"
+  "green"   "#4F7942"
+  "rust"     "#FF4444"
+  "charcoal" "#3E4551"
+  "blue"     "#007BFF"
+  "orange"   "#FF8800"
+  "magenta"  "#FF00FF"
+  "cyan"     "#00E5FF"
+}}
+
+
+{{ $base_hex := index $colors $color_name | default "#0066CC" }}
+
+<div class="custom-panel-wrapper" style="
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 6px;
+  background-color: {{ printf "%s30" $base_hex }}; /* Pure input color at 15% opacity */
+  border-left: 5px solid {{ $base_hex }};         /* Pure input color boundary */
+  color: {{ $base_hex }};                         /* Pure input color text */
+">
+  {{ if or $title $icon }}
+    <div class="panel-header" style="font-size: 1.6rem; font-weight: 400; margin-bottom: 5px; line-height: 1.2; color: {{ $base_hex }};">
+      {{ with $icon }}{{ . }} {{ end }}{{ with $title }}{{ . }}{{ end }}
+    </div>
+  {{ end }}
+
+  <div class="panel-body" style="color: #333;">
+    {{ .Inner | markdownify }}
+  </div>
+</div>
