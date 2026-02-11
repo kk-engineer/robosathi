@@ -1,0 +1,46 @@
+{{/* 1. Find the image */}}
+{{ $imgName := .Get 0 }}
+{{ $img := .Page.Resources.GetMatch $imgName }}
+{{ if not $img }}
+  {{ $img = resources.Get $imgName }}
+{{ end }}
+
+{{ if $img }}
+  {{/* 2. Determine Command & Options */}}
+  {{ $command := .Get 1 | default "Resize" }}
+  {{ $options := .Get 2 | default "800x" }}
+
+  {{/* 3. Force WebP for speed */}}
+  {{ if not (in $options "webp") }}
+    {{ $options = printf "%s webp q75" $options }}
+  {{ end }}
+
+  {{/* 4. Process safely - No more nil pointer errors */}}
+  {{ $processed := "" }}
+  {{ if eq $command "Fill" }}
+    {{ $processed = $img.Fill $options }}
+  {{ else }}
+    {{ $processed = $img.Resize $options }}
+  {{ end }}
+
+  <figure style="margin: 1.5rem 0; text-align: center;">
+    <img src="{{ $processed.RelPermalink }}"
+         width="{{ $processed.Width }}"
+         height="{{ $processed.Height }}"
+         loading="lazy"
+         decoding="async"
+         style="max-width: 100%; height: auto; border-radius: 4px;"
+         alt="{{ $imgName }}">
+    {{ if .Inner }}
+      <figcaption style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
+        {{ .Inner | markdownify }}
+      </figcaption>
+    {{ end }}
+  </figure>
+
+{{ else }}
+  {{/* 5. Error message that DOES NOT break the build */}}
+  <div style="color: red; border: 1px dashed red; padding: 10px;">
+    <strong>Imgproc Error:</strong> Could not find <code>{{ $imgName }}</code> in <code>assets/</code> or Page Bundle.
+  </div>
+{{ end }}

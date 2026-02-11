@@ -11,7 +11,7 @@ math: true
         "Calculus for AI & ML | Full Course Videos">}}
 
 
-{{< alert color="success" title="Integration" >}}
+{{< panel color="blue" title="Integration" >}}
 Integration is a mathematical tool that is used to find the area under a curve.<br>
 
 \[
@@ -21,14 +21,15 @@ and ~ \int x^n dx = \frac{x^{n+1}}{n+1} + C, \text{ where C is constant.} \\
 
 Let's understand integration with the help of few simple examples for finding area under a curve: <br>
 1. Area of a **triangle**: <br>
-![](https://robosathi.com/images/calculus/fundamentals/integration_triangle.png)
+{{< imgproc "images/maths/calculus/fundamentals/integration_triangle.png" Resize "800x" >}}{{< /imgproc >}}
 \[
 \text{Area of } \triangle ~ABC = \frac{1}{2} \times base \times height = \frac{1}{2} \times 3 \times 3 = 9/2 = 4.5 \\[10pt]
 \text{Area of } \triangle ~ABC = \int_0^3 f(x) dx = \int_0^3 x dx = \frac{x^2}{2} \big|_0^3 = \frac{3^2 - 0^2}{2} = 9/2 = 4.5
 \]
 
 2. Area of a **rectangle**: <br>
-![](https://robosathi.com/images/calculus/fundamentals/integration_rectangle.png)
+{{< imgproc "images/maths/calculus/fundamentals/integration_rectangle.png" Resize "800x" >}}{{< /imgproc >}}
+
 \[
 \text{Area of rectangle ABCD} = length \times breadth = 4 \times 3 = 12 \\[10pt]
 \text{Area of rectangle ABCD} = \int_1^5 f(x) dx = \int_1^5 3 dx = 3x \big|_1^5 = 3(5-1) = 12
@@ -40,17 +41,18 @@ Let's understand integration with the help of few simple examples for finding ar
 the area under the curve.* <br>
 Let's see an example: <br><br>
 3. Area of a **part of parabola**: <br>
-![](https://robosathi.com/images/calculus/fundamentals/integration_parabola.png)
+{{< imgproc "images/maths/calculus/fundamentals/integration_parabola.png" Resize "800x" >}}{{< /imgproc >}}
+
 \[
 \text{Area under curve} = \int_{-2}^2 f(x) dx = \int_{-2}^2 x^2 dx = \frac{x^3}{3} \big|_{-2}^2
 = \frac{(2)^3 - (-2)^3}{3} = \frac{8 - (-8)}{3} = \frac{16}{3}
 \]
 
-{{< /alert >}}
+{{< /panel >}}
 
 {{< video "https://www.youtube.com/watch?v=cBY4eshEo70&t=1s" >}}
 
-{{< alert color="success" title="Differentiation" >}}
+{{< panel color="rust" title="Differentiation" >}}
 Differentiation is a mathematical tool that is used to find the **derivative** or rate of change of a function 
 at a specific point.<br>
 - \(\frac{dy}{dx} = f\prime(x) = tan\theta\) = Derivative = Slope = Gradient 
@@ -58,7 +60,8 @@ at a specific point.<br>
 
 _Note: For a line, the slope is constant, but for a parabola, the slope is changing at every point._ <br><br>
 **How do we calculate the slope at a given point?** <br><br>
-![](https://robosathi.com/images/calculus/fundamentals/tangent_secant.png)
+{{< imgproc "images/maths/calculus/fundamentals/tangent_secant.png" Resize "800x" >}}{{< /imgproc >}}
+
 <br><br>
 Let AB is a **secant** on the parabola, i.e, line connecting any 2 points on the curve. <br>
 Slope of secant = \(tan\theta = \frac{\Delta y}{\Delta x} = \frac{y_2-y_1}{x_2-x_1}\) <br>
@@ -86,9 +89,9 @@ e.g.: <br>
 \therefore \frac{dy}{dx} &= 2x \\[10pt]
 \end{aligned}
 \]
-{{< /alert >}}
+{{< /panel >}}
 
-{{< alert color="secondary" title="Rules of Differentiation" >}}
+{{< panel color="green" title="Rules of Differentiation" >}}
 We will understand few important rules of differentiation that are most frequently used in Machine Learning. <br>
 
 1. **Sum Rule**: <br>
@@ -135,12 +138,12 @@ h(x) = log(u) \\[10pt]
 => h\prime(x) = \frac{1}{u} \cdot 2x = \frac{2x}{x^2} \\[10pt]
 => h\prime(x) = \frac{2}{x}
 \]
-{{< /alert >}}
+{{< /panel >}}
 
 Now, let's dive deeper and understand the concepts that required for differentiation, such as, **limits**, **continuity**, 
 **differentiability**, etc.
 
-{{< alert color="success" title="Limits" >}}
+{{< panel color="blue" title="Limits" >}}
 Limit of a function f(x) at any point 'c' is the value that f(x) approaches, as x gets very close to 'c', <br>
 but NOT necessarily equal to 'c'. <br><br>
 **One-sided limit**: value of the function, as it approaches a point 'c' from only **one** direction, either left or right. <br>
@@ -155,7 +158,8 @@ Let's check for one-sided limit at x=0: <br>
 so, \lim_{x \rightarrow 0^+} \frac{1}{x} ⍯ \lim_{x \rightarrow 0^-} \frac{1}{x} \\[10pt]
 => \text{ limit does NOT exist at } x = 0.
 \]
-![](https://robosathi.com/images/calculus/fundamentals/limit_1_by_x.png)
+{{< imgproc "images/maths/calculus/fundamentals/limit_1_by_x.png" Resize "800x" >}}{{< /imgproc >}}
+
 <br><br>
 2. \(f(x) = x^2\), find the limit of f(x) at x = 0. <br>
 Let's check for one-sided limit at x=0: <br>
@@ -165,7 +169,7 @@ Let's check for one-sided limit at x=0: <br>
 so, \lim_{x \rightarrow 0^+} x^2 = \lim_{x \rightarrow 0^-} x^2 \\[10pt]
 => \text{ limit exists at } x = 0.
 \]
-![](https://robosathi.com/images/calculus/fundamentals/parabola_convex.png)
+{{< imgproc "images/maths/calculus/fundamentals/parabola_convex.png" Resize "800x" >}}{{< /imgproc >}}
 <br><br>
 *Note: Two-Sided Limit* <br>
 \[ \lim_{x \rightarrow a^+} f(x) = \lim_{x \rightarrow a^-} f(x) = \lim_{x \rightarrow a} f(x) \]
@@ -178,11 +182,10 @@ Let's check for one-sided limit at x=0: <br>
 so, \lim_{x \rightarrow 0^+} |x| = \lim_{x \rightarrow 0^-} |x| \\[10pt]
 => \text{ limit exists at } x = 0.
 \]
-![](https://robosathi.com/images/calculus/fundamentals/abs_x.png)
-<br><br>
-{{< /alert >}}
+{{< imgproc "images/maths/calculus/fundamentals/abs_x.png" Resize "800x" >}}{{< /imgproc >}}
+{{< /panel >}}
 
-{{< alert color="success" title="Continuity" >}}
+{{< panel color="green" title="Continuity" >}}
 A function f(x) is said to be continuous at a point 'c', if its graph can be drawn through that point,
 _without lifting the pen_. <br>
 Continuity bridges the gap between the function's value at the given point and the limit. <br>
@@ -196,19 +199,18 @@ A function f(x) is continuous at a point 'c', if and only if, all the below 3 co
 \[ \lim_{x \rightarrow c} f(x) = f(c) \]
 
 e.g.: <br>
-1. \(f(x) = \frac{1}{x}\) is NOT continuous at x = 0, since, f(x) is not defined at x = 0. <br><br>
-![](https://robosathi.com/images/calculus/fundamentals/limit_1_by_x.png)
-<br><br>
-2. \(f(x) = |x|\) is continuous everywhere. <br><br>
-![](https://robosathi.com/images/calculus/fundamentals/abs_x.png)
-<br><br>
-3. \(f(x) = tanx \) is discontinuous at infinite points. <br><br>
-![](https://robosathi.com/images/calculus/fundamentals/tan_x.png)
-<br><br>
+1. \(f(x) = \frac{1}{x}\) is NOT continuous at x = 0, since, f(x) is not defined at x = 0. 
+{{< imgproc "images/maths/calculus/fundamentals/limit_1_by_x.png" Resize "800x" >}}{{< /imgproc >}}
 
-{{< /alert >}}
+2. \(f(x) = |x|\) is continuous everywhere.
+{{< imgproc "images/maths/calculus/fundamentals/abs_x.png" Resize "800x" >}}{{< /imgproc >}}
 
-{{< alert color="success" title="Differentiability" >}}
+3. \(f(x) = tanx \) is discontinuous at infinite points. 
+{{< imgproc "images/maths/calculus/fundamentals/tan_x.png" Resize "800x" >}}{{< /imgproc >}}
+
+{{< /panel >}}
+
+{{< panel color="rust" title="Differentiability" >}}
 A function is differentiable at a point 'c', if **derivative** of the function **exists** at that point. <br>
 A function must be **continuous** at the given point 'c' to be differentiable at that point. <br>
 *Note: A function can be continuous at a given point, but NOT differentiable at that point.* <br>
@@ -231,9 +233,11 @@ if ~ x<0, \lim_{\Delta x \rightarrow 0^-} \frac{|x + \Delta x| - |x|}{\Delta x}
 => \text{ left hand limit (-1) ⍯ right hand limit (1) } \\[10pt]
 => f\prime(0) \text{ does NOT exist.}
 \]
-{{< /alert >}}
+{{< /panel >}}
 
-{{< alert color="success" title="Maxima & Minima" >}}
+{{< video "https://youtu.be/Vw35N4zDF-I" >}}
+
+{{< panel color="blue" title="Maxima & Minima" >}}
 **Critical Point:** <br>
 A point of the function where the **derivative** is either **zero** or **undefined**. <br>
 <br>
@@ -252,9 +256,8 @@ f'(x)/gradient/slope changes from +ve to 0 to -ve, therefore, change in f'(x) is
 |0 | 0 |
 |1 | -2 |
 
-<br><br>
-![](https://robosathi.com/images/calculus/fundamentals/parabola_concave.png)
-<br><br>
+{{< imgproc "images/maths/calculus/fundamentals/parabola_concave.png" Resize "800x" >}}{{< /imgproc >}}
+
 **Minima:** <br>
 **Lowest** point w.r.t immediate neighbourhood. <br>
 f'(x)/gradient/slope changes from -ve to 0 to +ve, therefore, change in f'(x) is +ve. <br>
@@ -267,9 +270,7 @@ Let, \(f(x) = x^2; \quad f'(x) = 2x; \quad f''(x) = 2 > 0 => minima\) <br><br>
 |0 | 0 |
 |1 | 2 |
 
-<br><br>
-![](https://robosathi.com/images/calculus/fundamentals/parabola_convex.png)
-<br><br>
+{{< imgproc "images/maths/calculus/fundamentals/parabola_convex.png" Resize "800x" >}}{{< /imgproc >}}
 
 e.g.: <br>
 1. Let \(f(x) = 2x^3 + 5x^2 + 3 \), find the maxima and minima of f(x). <br>
@@ -283,9 +284,7 @@ f''(x) = 12x + 10 \\[10pt]
 => at ~ x = 0, \quad f''(x) = 12*0 + 10 = 10 >0 \quad => minima \\[10pt]
 => at ~ x = -5/3, \quad f''(x) = 12*(-5/3) + 10 = -20 + 10 = -10<0 \quad => maxima \\[10pt]
 \]
-<br><br>
-![](https://robosathi.com/images/calculus/fundamentals/maxima_minima.png)
-<br><br>
+{{< imgproc "images/maths/calculus/fundamentals/maxima_minima.png" Resize "800x" >}}{{< /imgproc >}}
 
 2. \(f(x,y) = z = x^2 + y^2\), find the minima of f(x,y). <br> 
 Since, this is a multi-variable function, we will use vector and matrix for calculation. <br>
@@ -332,9 +331,8 @@ Hessian = H_z =
 \]
 <br>
 Since, determinant of Hessian = 4 > 0 and \( \frac{\partial^2 f_z}{\partial x^2} > 0\) => (x=0, y=0) is a point of minima.<br>
-<br><br>
-![](https://robosathi.com/images/calculus/fundamentals/parabolloid.png)
-<br><br>
+
+{{< imgproc "images/maths/calculus/fundamentals/parabolloid.png" Resize "800x" >}}{{< /imgproc >}}
 
 **Hessian Interpretation:** <br>
 - **Minima**: If det(Hessian) > 0 and \( \frac{\partial^2 f(x,y)}{\partial x^2} > 0\)
@@ -342,9 +340,11 @@ Since, determinant of Hessian = 4 > 0 and \( \frac{\partial^2 f_z}{\partial x^2}
 - **Saddle Point**: If det(Hessian) < 0
 - **Inconclusive**: If det(Hessian) = 0, need to perform other tests.
 <br>
-{{< /alert >}}
+{{< /panel >}}
 
-{{< alert color="secondary" title="Saddle Point" >}}
+{{< video "https://youtu.be/Vl8GE7F-J7g" >}}
+
+{{< panel color="orange" title="Saddle Point" >}}
 **Saddle Point** is a critical point where the function is **maximum** w.r.t one variable, <br>
 and **minimum** w.r.t to another. <br>
 <br>
@@ -385,13 +385,10 @@ Hessian = H_z =
 \]
 <br>
 Since, determinant of Hessian = -4 < 0 => (x=0, y=0) is a saddle point. <br>
-<br><br>
-![](https://robosathi.com/images/calculus/fundamentals/saddle_point_1.png)
-<br><br>
-<br><br>
-![](https://robosathi.com/images/calculus/fundamentals/saddle_point_2.png)
-<br><br>
-{{< /alert >}}
+{{< imgproc "images/maths/calculus/fundamentals/saddle_point_1.png" Resize "800x" >}}{{< /imgproc >}}
+
+{{< imgproc "images/maths/calculus/fundamentals/saddle_point_2.png" Resize "800x" >}}{{< /imgproc >}}
+{{< /panel >}}
 
 {{< video "https://www.youtube.com/watch?v=qpAieJgrcR8&t=1s" >}}
 
