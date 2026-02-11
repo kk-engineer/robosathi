@@ -1,6 +1,6 @@
 ---
 title: Meaning of 'Linear'
-description: Meaning of Linear in Linear Regression
+description: Meaning of 'Linear' in Linear Regression
 date: 2026-02-11
 weight: 1
 math: true
