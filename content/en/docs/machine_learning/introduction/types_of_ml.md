@@ -46,7 +46,7 @@ unlabelled data to improve accuracy. <br>
 - Graph-based methods
 {{< /definition >}}
 
-{{< alert color="secondary" title="Types of Semi-Supervised Learning" >}}
+{{< alert color="forest" title="Types of Semi-Supervised Learning" >}}
 **1. Pseudo-labelling:**<br>
 - A model is initially trained on the available, *limited* labelled dataset. <br>
 - This trained model is then used to predict labels for the unlabelled data.These predictions are called *‘pseudo-labels’*.
@@ -71,40 +71,58 @@ These methods are particularly useful when the data naturally exhibits a *graph-
 <br><br>
 {{< /alert >}}
 
+
 {{< definition >}}
-**Machine Learning:** <br>
-Machine Learning  =  to teach computers 💻 to learn from data, find patterns 🧮, and make decisions or predictions 
-without being explicitly programmed for every task, as humans🧍‍♀️🧍 learn from experience.
-<br><br>
+**Reinforcement Learning:** <br>
+Agent learns to make optimal decisions by interacting with an environment, receiving rewards (positive feedback) 
+or penalties (negative feedback) for its actions. <br>
+
+* Mimic human trial-and-error learning to achieve a goal 🎯.
 {{< /definition >}}
 
-![](https://robosathi.com/images/machine_learning/introduction/ai_ml_dl.png)
+![](https://robosathi.com/images/machine_learning/introduction/reinforcement_learning.png)
 <br><br>
 
-{{< alert color="secondary" title="Phases of Machine Learning" >}}
-The machine learning lifecycle ♼ is generally divided into two main stages:
-- Training Phase
-- Runtime (Inference) Phase
-
-![](https://robosathi.com/images/machine_learning/introduction/training_inference.png)
-<br><br>
-
-**Training Phase:** <br>
-Where the machine learning model is developed and taught to understand a specific task using a large volume 
-of historical data.
-<br><br>
-![](https://robosathi.com/images/machine_learning/introduction/training.png)
-<br><br>
-
-**Runtime (Inference) Phase:** <br> 
-Where the fully trained and deployed model is put to practical use in a real-world 🌎 environment, i.e., 
-to make predictions on new, unseen data.
-<br><br>
-![](https://robosathi.com/images/machine_learning/introduction/inference.png)
-<br><br>
+{{< alert color="secondary" title="Key Components of Reinforcement Learning" >}}
+- **Agent:** The learning entity that makes decisions and takes actions within the environment.
+- **Environment:** The external system with which the agent interacts.It defines the rules, states, 
+and the consequences of the agent's actions.
+- **State:** A specific configuration or situation of the environment at a given point in time.
+- **Action:** A move or decision made by the agent in a particular state.
+- **Reward:** A numerical signal received by the agent from the environment, indicating the desirability of an action taken 
+in a specific state. <br>
+*Positive* rewards encourage certain behaviors, while *negative* rewards (penalties) discourage them.
+- **Policy:** The strategy or mapping that defines which action the agent should take in each state to maximize long-term rewards 💰.
 
 {{< /alert >}}
 
-{{< video "https://youtu.be/XL143gJmUCA" >}}
+{{< alert color="forest" title="How Reinforcement Learning Works ?" >}}
+- **Exploration:** The agent tries out new actions to discover their effects and potentially find better strategies.
+- **Exploitation:** The agent utilizes its learned knowledge to choose actions that have yielded high rewards in the past.
+
+*Note:* The agent continuously balances *exploration* and *exploitation* to refine its policy and achieve the optimal behavior.
+{{< /alert >}}
+
+![](https://robosathi.com/images/machine_learning/introduction/popular_llms.png)
+<br><br>
+
+{{< alert color="blue" title="Machine Learning Concepts used in LLMs" >}}
+
+**Large Language Models (LLMs)** are deep learning models that often employ **unsupervised learning** 
+techniques during their pre-training phase.
+
+**LLMs** are trained on massive amounts of raw, unlabelled text data (e.g., books, articles, web pages) to predict the next 
+word in a sequence or fill in masked words. <br>
+This process, often called **self-supervised learning**, allows the model to learn grammar, syntax, semantics, 
+and general world knowledge by identifying statistical relationships within the text.
+
+**LLMs** generally also undergo **supervised fine-tuning (SFT)** for specific tasks, where they are trained on 
+labeled datasets to improve performance on those tasks. 
+ 
+**Reinforcement Learning from Human Feedback (RLHF)** allows LLMs to learn from human judgment, 
+enabling them to generate more nuanced, context-aware, and ethically aligned outputs that better meet human expectations.
+{{< /alert >}}
+
+{{< video "https://youtu.be/6hUiPW-7Zpg" >}}
 <br><br>
 ```End of Section```

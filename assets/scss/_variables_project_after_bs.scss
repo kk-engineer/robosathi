@@ -1,0 +1,33 @@
+// Define your custom colors
+$custom-colors: (
+  "navy": #003366,
+  "forest": #4F7942,
+  "rust": #C04000,
+  "violet": #4B0082,
+  "charcoal": #2F4F4F,
+  "blue": #0066CC
+);
+
+// Merge them into the existing Bootstrap theme-colors map
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// Generate required emphasis and subtle variables for each custom color
+@each $name, $color in $custom-colors {
+  .alert-#{$name} {
+    // 1. Make the base text and background
+    --bs-alert-color: #{shade-color($color, 80%)}; // Increased to 80% for much darker text
+    --bs-alert-bg: #{tint-color($color, 80%)};    // Increased to 90% for a lighter, cleaner background
+    --bs-alert-border-color: #{tint-color($color, 30%)};
+
+    // 2. Explicitly target the heading (h4 is used by Docsy alert)
+    .alert-heading, h1, h2, h3, h4, h5, h6 {
+      color: #{shade-color($color, 90%)}; // Almost black version of your color
+      font-weight: 500; // Extra boldness helps visibility
+    }
+
+    // 3. Ensure icons (if any) are also dark
+    svg {
+      fill: #{shade-color($color, 80%)};
+    }
+  }
+}
