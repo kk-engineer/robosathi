@@ -11,8 +11,7 @@ math: true
         "Probability for AI & ML | Full Course Videos">}}
 <br>
 
-{{< definition >}}
-**Surprise Factor:** <br>
+{{< definition title="Surprise Factor" >}}
 It is a measure of the amount of information gained when a specific, individual event occurs, and is defined based on 
 the probability of that event. <br>
 It is defined as the negative logarithm of the probability of the event. <br>
@@ -33,8 +32,7 @@ S(x) = -log(P(x)))
 {{</ definition >}}
 <br>
 
-{{< definition >}}
-**Entropy:** <br>
+{{< definition title="Entropy" >}}
 It conveys how much 'information' we expect to gain from a random event. <br>
 - Entropy is the average or expected value of surprise factor of a random variable.
 - More uniform the distribution ⇒ greater average surprise factor, since all possible outcomes are equally likely.
@@ -60,12 +58,10 @@ H(X) = E[-log(P(x)] = -\sum_{x \in X} P(x)log(P(x))
 
 Therefore, a biased coin is less surprising on an average than a fair coin, hence lower entropy.
 {{</ answer >}}
-<br>
-{{< video "https://youtu.be/7D-8ZudYJdk?si=eRcK891RiPhNjP8t" >}}
-<br>
 
-{{< definition >}}
-**Cross Entropy:** <br>
+{{< video "https://youtu.be/7D-8ZudYJdk?si=eRcK891RiPhNjP8t" >}}
+
+{{< definition title="Cross Entropy" >}}
 It is a measure of the average '_information gain_' or '_surprise_' when using an imperfect model \(Q\) to encode events 
 from a true model \(P\). <br>
 - It measures how surprised we are on an average, if the true distribution is \(P\), but we predict using another distribution 
@@ -93,12 +89,10 @@ Cross Entropy = \(H(P, Q_B) = -\sum_{i=1}^n P(x_i)log(Q_B(x_i)) \) <br>
 \(= -[1*log_2(0.2) + 0*log_2(0.8)] \approx 2.32 ~bits\) <br>
 *Note: Here the cross-entropy is very high, since the predicted value is quite far from the actual truth, i.e high surprise.* <br>
 {{</ answer >}}
-<br>
-{{< video "https://youtu.be/YHUnFH42lqw?si=CCOlBq1qZyITxIWc" >}}
-<br>
 
-{{< definition >}}
-**Kullback Leibler (KL) Divergence:** <br>
+{{< video "https://youtu.be/YHUnFH42lqw?si=CCOlBq1qZyITxIWc" >}}
+
+{{< definition title="Kullback Leibler (KL) Divergence" >}}
 It measures the information lost when one probability distribution \(Q\) is used to approximate another distribution \(P\). <br>
 It quantifies the '_extra cost_' in bits needed to encode data using the approximate distribution \(Q\) instead of 
 the true distribution \(P\). <br>
@@ -138,12 +132,9 @@ Model A incurs an additional 0.32 bits of surprise due to its imperfect predicti
 \( D_{KL}(P \parallel Q) = H(P, Q) - H(P) = 2.32 - 0 = 2.32 ~bits \) <br>
 Model B has much more '_information loss_' or incurs higher '_penalty_' of 2.32 bits as its prediction was from from the truth. <br>
 {{</ answer >}}
-<br>
 {{< video "https://youtu.be/rE4PbltQwxo?si=ClaOPI2MA6uuBUGz" >}}
-<br>
 
-{{< definition >}}
-**Jensen-Shannon Divergence:** <br>
+{{< definition title="Jensen-Shannon Divergence" >}}
 It is a smoothed and symmetric version of the Kullback-Leibler (KL) divergence and is calculated by averaging the <br>
 KL divergences between each of the two distributions and their combined average distribution. <br>
 - Symmetrical and smoothed version of KL divergence.
@@ -204,7 +195,7 @@ D_{JS}(P \parallel Q) &= \frac{1}{2}[D_{KL}(P \parallel M) + D_{KL}(Q \parallel 
 
 Therefore, lower JS divergence value => P and Q are more similar. <br>
 {{</ answer >}}
-<br>
+
 {{< video "https://youtu.be/0wtJNYaTB-8?si=lZvH0Bk65ibb7Rqa" >}}
 
 <br><br>

@@ -11,18 +11,15 @@ math: true
         "Probability for AI & ML | Full Course Videos">}}
 <br>
 
-{{< definition >}}
-**Independence of Events:** <br>
+{{< definition title="Independence of Events" >}}
 Two events are independent if the occurrence of one event does not affect the probability of the other event.<br>
 There are 3 types of independence of events: <br>
 - Mutual Independence
 - Pair-Wise Independence
 - Conditional Independence
 {{< /definition >}}
-<br>
 
-{{< definition >}}
-**Mutual Independence:** <br>
+{{< definition title="Mutual Independence" >}}
 Joint probability of two events is equal to the product of the individual probabilities of the two events.<br>
 \(P(A \cap B) = P(A)*P(B)\)
 
@@ -49,8 +46,7 @@ $$
     => A and B are mutually independent.
 <br>
 
-{{< definition >}}
-**Pair-Wise Independence:** <br>
+{{< definition title="Pair-Wise Independence" >}}
 Every pair of events in the set is independent.<br>
 Pair-wise independence != Mutual independence.
 {{< /definition >}}
@@ -85,13 +81,11 @@ Therefore \(P(A \cap B \cap C)\) ≠ \(P(A)*P(B)*P(C)\) <br>
 => \(A, B, C\) are **NOT** mutually independent but only **pair wise independent**. <br>
 <br>
 
-{{< definition >}}
-**Conditional Independence:** <br>
+{{< definition title="Conditional Independence" >}}
 Two events A & B are conditionally independent given a third event C, <br>
 if they are independent given that C has occurred. <br>
 Occurrence of C changes the context, causing the events A & B to become independent of each other.
 {{< /definition >}}
-<br>
 
 {{< imgproc "images/maths/probability/conditional_independence.png" Resize "800x" >}}{{< /imgproc >}}
 

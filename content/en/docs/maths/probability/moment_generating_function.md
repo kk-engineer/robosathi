@@ -11,8 +11,7 @@ math: true
         "Probability for AI & ML | Full Course Videos" >}}
 <br>
 
-{{< definition >}}
-**Moments:** <br>
+{{< definition title="Moments" >}}
 They are statistical measures that describe the characteristics of a probability distribution, 
 such as its central tendency, spread/variability, and asymmetry. <br>
 _Note_: We will discuss '_raw_' and '_central_' moments. <br><br>
@@ -22,12 +21,10 @@ _Important moments:_ <br>
 3. **Skewness** : Asymmetry 
 4. **Kurtosis** : Tailedness
 {{</ definition >}}
-<br>
-{{< video "https://youtu.be/VR-yHsEGyww?si=i-JZqbPxFrErODeP" >}}
-<br>
 
-{{< definition >}}
-**Moment Generating Function:** <br>
+{{< video "https://youtu.be/VR-yHsEGyww?si=i-JZqbPxFrErODeP" >}}
+
+{{< definition title="Moment Generating Function" >}}
 It is a function that simplifies computation of moments, such as, the mean, variance, skewness, and kurtosis,
 by providing a compact way to derive any moment of a random variable through differentiation. <br>
 - Provides an alternative to PDFs and CDFs of random variables.

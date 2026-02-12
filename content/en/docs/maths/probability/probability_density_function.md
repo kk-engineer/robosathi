@@ -11,8 +11,7 @@ math: true
         "Probability for AI & ML | Full Course Videos" >}}
 <br>
 
-{{< definition >}}
-**Probability Density Function(PDF):** <br>
+{{< definition title="Probability Density Function(PDF)" >}}
 This is a function used for continuous random variables to describe the likelihood of the variable taking on a value
 within a specific range or interval. <br>
 Since, at any given point the probability of a continuous random variable is zero, 
@@ -77,10 +76,8 @@ $$
 by calculating the area under the curve.* <br><br>
 
 {{< video "https://www.youtube.com/watch?v=aa9hiJhQvvI" >}}
-<br>
 
-{{< definition >}}
-**Uniform Distribution:** <br>
+{{< definition title="Uniform Distribution" >}}
 All the outcomes within the given range are equally likely to occur. <br>
 Also known as 'fair' distribution. <br>
 _Note: This is a natural starting point to understand randomness in general. <br>_
@@ -132,10 +129,8 @@ For example: <br>
 {{< alert color="warning" >}}**Graph**: CDF of Uniform Distribution.{{< /alert >}}
 
 {{< video "https://youtu.be/UrLRdi88U3g?si=63sHZ1B-1kUtf4E3" >}}
-<br> 
 
-{{< definition >}}
-**Gaussian(Normal) Distribution:** <br>
+{{< definition title="Gaussian(Normal) Distribution" >}}
 It is a continuous probability distribution characterized by a symmetrical, bell-shaped curve with 
 most data clustered around the central average, with frequency of values decreasing as they move away from the center.<br>
 - Most outcomes are average; extremely low or extremely high values are rare. <br>
@@ -179,10 +174,8 @@ For example:
 {{< /alert >}}
 
 {{<video "https://youtu.be/B3SLD_4M2FU?si=RhLAyLCzab7hLeF0" >}}
-<br>
 
-{{< definition >}}
-**Exponential Distribution:** <br>
+{{< definition title="Exponential Distribution" >}}
 It is used to model the amount of time until a specific event occurs. <br>
 Given that:
 1. Events occur with a known constant average rate.<br>
@@ -201,7 +194,6 @@ CDF = F(x) = 1 - e^{-\lambda x} ~~~ \forall ~~~  x \ge 0 ~~~\&~~~  \lambda > 0
 \end{aligned}
 $$
 {{</ definition >}}
-<br><br>
 
 {{< imgproc "images/maths/probability/exponential_pdf.png" Resize "800x" >}}{{< /imgproc >}}
 {{< alert color="warning" >}}**Graph**: PDF of Exponential Distribution.{{< /alert >}}
@@ -355,7 +347,7 @@ P(T>10) = e^{-(1/20) * 10} \\
 
 *Therefore, we have seen that this problem can be solved using both Poisson and Exponential distribution.*
 {{</ answer >}}
-<br>
+
 {{< video "https://youtu.be/6TTJXMEZAKo?si=sll0sJfy1aRep3c_"  >}}
 
 <br><br>

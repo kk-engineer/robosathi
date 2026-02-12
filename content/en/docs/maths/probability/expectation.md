@@ -11,8 +11,9 @@ math: true
         "Probability for AI & ML | Full Course Videos">}}
 <br>
 
-{{< definition >}}
-**Expectation:** <br> 
+{{< definition title="Expectation" >}}
+
+ 
 Long run average of the outcomes of a random experiment.<br>
 When we talk about '_Expectation_' we mean - on an average. <br>
 - Value we expect to get when we repeated an experiment multiple times and took an average of the results.
@@ -79,8 +80,8 @@ E[X] = \int_{-\infty}^{\infty} x.f(x) dx \\
 {{< /answer >}}
 <br>
 
-{{< definition >}}
-**Variance:** <br>
+{{< definition title="Variance" >}}
+
 It is the average of the squared differences from the mean. <br>
 - Measures the spread or variability in the data distribution. <br>
 - If the variance is low, then the data is clustered around the mean i.e less variability; <br>
@@ -157,8 +158,8 @@ Var[X]&= \dfrac{(b-a)^2}{12}
 {{< /answer >}}
 <br>
 
-{{< definition >}}
-**Co-Variance:** <br>
+{{< definition title="Co-Variance" >}}
+
 It is the measure of how 2 variables X & Y vary together. <br>
 It gives the direction of the relationship between the variables. <br>
 

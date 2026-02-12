@@ -11,8 +11,8 @@ math: true
         "Probability for AI & ML | Full Course Videos">}}
 <br>
 
-{{< definition >}}
-**Joint Probability Distribution:** <br>
+{{< definition title="Joint Probability Distribution" >}}
+
 It describes the probability of 2 or more random variables occurring simultaneously. <br>
 - The random variables can be from different distributions, such as, discrete and continuous. <br>
 
@@ -48,6 +48,7 @@ f_{X,Y}(x,y) = \iint_{A \in \mathbb{R}^2} f_{X,Y}(x,y) dy dx
 2. \( \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} f_{X,Y}(x,y) dy dx = 1 \)
 <br>
 {{</ definition >}}
+
 For example:
 - If we consider 2 random variables, say, height(X) and weight(Y), then the joint distribution will tell us 
 the probability of finding a person having a particular height and weight.
@@ -76,10 +77,9 @@ Each of the 4 cells in above table shows the probability of combination of resul
 {{</ answer >}}
 <br>
 {{< video "https://youtu.be/iAaWgnrr87I?si=1o9dCg4Bg4lH55BJ&t=1" >}}
-<br><br>
 
-{{< definition >}}
-**Marginal Probability Distribution:** <br>
+{{< definition title="Marginal Probability Distribution" >}}
+
 It describes the probability distribution of an individual random variable in a joint distribution, 
 without considering the outcomes of other random variables. <br>
 - If we have the joint distribution, then we can get the marginal distribution of each random variable from it. <br>
@@ -196,11 +196,11 @@ respectively. <br>
 
 We can see from the table above - P(A=Red) is the sum of joint distribution over all possible values of B i.e Red & Blue. <br>
 {{</ answer >}}
-<br>
+
 {{< video "https://www.youtube.com/watch?v=UTU9yjgnRjk" >}}
-<br> 
-{{< definition >}}
-**Conditional Probability:** <br>
+
+{{< definition title="Conditional Probability" >}}
+
 It measures the probability of an event occurring given that another event has already happened. <br>
 - It provides a way to update our belief about the likelihood based on new information. <br>
 
@@ -274,8 +274,8 @@ Therefore, probability of drawing a red ball in the first draw, given that a blu
 {{</ answer >}}
 <br>
 
-{{< definition >}}
-**Conditional Expectation:** <br>
+{{< definition title="Conditional Expectation" >}}
+
 This gives us the conditional expectation of a random variable X, given another random variable Y=y. <br>
 
 **Discrete Case:** <br>
@@ -297,8 +297,8 @@ of all people with height = 165 cm.
 - Expectation Maximisation(EM) algorithm is built on conditional expectation.
 <br><br>
 
-{{< definition >}}
-**Conditional Variance:** <br>
+{{< definition title="Conditional Variance" >}}
+
 This gives us the variance of a random variable calculated after taking into account the value(s) of another related variable. <br>
 \[
 \begin{aligned}
@@ -312,7 +312,7 @@ For example:
 
 *Note: Models that take into account the change in variance or **heteroscedasticity** tend to be more accurate.*
 {{</ definition >}}
-<br>
+
 {{< video "https://www.youtube.com/watch?v=hHN1z18-Vjo&t=1s" >}}
 
 <br><br>

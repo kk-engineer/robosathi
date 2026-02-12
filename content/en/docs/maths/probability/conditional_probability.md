@@ -11,16 +11,13 @@ math: true
         "Probability for AI & ML | Full Course Videos" >}}
 <br>
 
-{{< definition >}}
-**Conditional Probability**: <br>
+{{< definition title="Conditional Probability" >}}
 It is the probability of an event occurring, given that another event has already occurred.<br>
 Allows us to update probability when additional information is revealed.
 \[P(A \mid B) = \frac{P(A \cap B)}{P(B)}\]
 {{< /definition >}}
-<br>
 
-{{< definition >}}
-**Chain Rule**: <br>
+{{< definition title="Chain Rule" >}}
 \(P(A \cap B) = P(B)*P(A \mid B)\) or <br>
 \(P(A \cap B) = P(A)*P(B \mid A)\)
 {{< /definition >}}
@@ -40,10 +37,8 @@ P(A \mid B) &= \frac{P(A \cap B)}{P(B)} \\
 $$
 
 {{< video "https://youtu.be/pIJ2EX2uwDI?si=QIYVlZf_gpS2FwRd" >}}
-<br>
 
-{{< definition >}}
-**Bayes' Theorem**: <br>
+{{< definition title="Bayes' Theorem" >}}
 It is a formula that uses conditional probability. <br>
 It allows us to update our belief about an event's probability based on new evidence.
 <br>
@@ -98,8 +93,7 @@ $$
 What if the sample space is divided into 'n' such partitions ?
 {{< /question >}}
 
-{{< definition >}}
-**Law of Total Probability**: <br>
+{{< definition title="Law of Total Probability" >}}
 Overall probability of an event B, considering all the different, mutually exclusive ways it can occur.<br>
 If A₁, A₂, ..., Aₙ are a set of events that partition the sample space, such that they are - 
  - Mututally exclusive : \(A_i \cap A_j = \emptyset\) for all \(i, j\)
@@ -109,7 +103,6 @@ P(B) = \sum_{i=1}^{n} P(A_i)*P(B \mid A_i)
 $$
 where \(n\) is the number of mutually exclusive partitions of the sample space \(\Omega\) .
 {{< /definition >}}
-<br>
 
 *Now, we can also generalize the Bayes' Theorem using the Law of Total Probability.*
 

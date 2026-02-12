@@ -11,8 +11,7 @@ math: true
         "Probability for AI & ML | Full Course Videos" >}}
 <br>
 
-{{< definition >}}
-**Probability Mass Function(PMF):** <br>
+{{< definition title="Probability Mass Function(PMF)" >}}
 It gives the exact value of a probability for a discrete random variable at a specific value \(x\).<br>
 It assigns a "non-zero" mass or probability to a specific countable outcome.<br>
 *Note: Called **'mass'** because probability is concentrated at a single discrete point.* <br>
@@ -33,10 +32,8 @@ Commonly visualised as a bar chart. <br>
 {{< /alert >}}
 
 {{< video "https://youtu.be/xExee4sdtnU?si=cPkCyQ7NNYdfGIt5" >}}
-<br>
 
-{{< definition >}}
-**Bernoulli Distribution:** <br>
+{{< definition title="Bernoulli Distribution" >}}
 It models a single event with two possible outcomes, _success_ (1) or _failure_ (0), with a fixed probability of success, 
 **'p'**. <br>
 **p** = Probability of _success_ <br>
@@ -51,8 +48,7 @@ For example:
 2. Result of a test, pass or fail. <br>
 3. Machine learning, binary classification model. <br><br>
 
-{{< definition >}}
-**Binomial Distribution:** <br>
+{{< definition title="Binomial Distribution" >}}
 It extends the Bernoulli distribution by modeling the number of successes that occur over a fixed number of 
 independent trials. <br>
 **n** = Number of trials <br>
@@ -103,13 +99,10 @@ Probability of winning lottery, P(k=1) = \[\binom{10}{1}p^1(1-p)^{10-1} \\
 = \frac{10!}{1!(10-1)!}(1/3)^1(2/3)^9 \\
 = 10*0.333*0.026 = 0.866 \approx 8.66\% \] <br>
 {{</ answer >}}
-<br>
 
 {{< video "https://youtu.be/Rbs_bE3fP7U?si=NUavMSxzS1fbCqEF" >}}
-<br>
 
-{{< definition >}}
-**Poisson Distribution:** <br>
+{{< definition title="Poisson Distribution" >}}
 It expresses the probability of an event happening a certain number of times 'k' within a fixed interval of time. <br>
 Given that:
 1. Events occur with a known constant average rate.<br>
@@ -142,7 +135,6 @@ Probability of receiving exactly k=3 emails in the next hour =  <br>
 = 5^3e^{-5} / 3! = 125*e^{-5} / 6 \\
 = 125*0.00674 / 6 \approx 0.14 ~or~ 14\%  \] <br>
 {{</ answer >}}
-<br>
 
 {{< video "https://youtu.be/M49tlndZvxI?si=0H7yCO8IquopO2ud" >}}
 

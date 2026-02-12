@@ -24,20 +24,21 @@ For example:
 2. Roll a die, \(P(1) = P(2) = P(3) = P(4) = P(5) = P(6) = 1/6\) <br>
 3. Email classifier, \(P(spam) = 0.95 ,~ P(not ~ spam) = 0.05\) <br><br>
 
-{{< definition >}} 
-**Probability:**<br> Numerical measure of chance or likelihood that an event will occur. 
+{{< definition title="Probability" >}}
+Numerical measure of chance or likelihood that an event will occur. 
 {{</ definition >}}
+
 Range: \([0,1]\) <br>
 \(P=0\): Highly unlikely <br>
 \(P=1\): Almost certain <br> <br>
 
 {{< video "https://www.youtube.com/watch?v=Lg4I4OqeKII&t=1s" >}}
-<br>
 
-{{< definition >}} 
-**Sample Space:**<br> Set of all possible outcomes of an experiment. <br>
+{{< definition title="Sample Space" >}}
+Set of all possible outcomes of an experiment. <br>
 Symbol: \(\Omega\)
 {{</ definition >}}
+
 For example:
 1. Toss a fair coin, sample space: \(\Omega = \{H,T\}\) <br>
 2. Roll a die, sample space: \(\Omega = \{1,2,3,4,5,6\}\) <br>
@@ -48,21 +49,22 @@ For example:
 
 \(P(\Omega) = 1\) <br><br>
 
-{{< definition >}} 
-**Event:**<br> An outcome of an experiment. A subset of all possible outcomes. <br>
+{{< definition title="Event" >}}
+An outcome of an experiment. A subset of all possible outcomes. <br>
 A,B,...⊆Ω
 {{</ definition >}}
+
 For example:
 1. Toss a fair coin, set of possible outcomes: \(\{H,T\}\) <br>
 2. Roll a die, set of possible outcomes: \(\{1,2,3,4,5,6\}\) <br>
 3. Roll a die, event \(A = \{1,2\} => P(A) = 2/6 = 1/3\) 
 4. Email classifier, set of possible outcomes: \(\{spam,not ~spam\}\).<br><br>
 
-
-{{< definition >}} 
-**Discrete:**<br> Number of potential outcomes from an experiment is countable, distinct, or can be listed in a sequence,
+{{< definition title="Discrete" >}}
+Number of potential outcomes from an experiment is countable, distinct, or can be listed in a sequence,
 even if infinite i.e countably infinite.
 {{</ definition >}}
+
 For example:
 1. Toss a fair coin, possible outcomes: \(\Omega = \{H,T\}\) <br>
 2. Roll a die, possible outcomes: \(\Omega = \{1,2,3,4,5,6\}\) <br>
@@ -71,8 +73,8 @@ For example:
 4. Number of cars passing a specific traffic signal in 1 hour.
 <br><br>
 
-{{< definition >}} 
-**Continuous:**<br> Potential outcomes from an experiment can take any value within a given range or interval,
+{{< definition title="Continuous" >}}
+Potential outcomes from an experiment can take any value within a given range or interval,
 representing an uncountably infinite set of possibilities.
 {{</ definition >}}
 For example:
@@ -86,13 +88,11 @@ graph TD
     C --> |Discrete| D(Countable)
     C --> |Continuous| E(Uncountable)
 ```
-<br>
 
 {{< video "https://youtu.be/xmo2wkFCKXw?si=6xSsTtY9VwcEhIil" >}}
-<br>
 
-{{< definition >}} 
-**Mutually Exclusive (Disjoint) Events:**<br> Two or more events that cannot happen at the same time. 
+{{< definition title="Mutually Exclusive (Disjoint) Events" >}}
+Two or more events that cannot happen at the same time. 
 <br>No overlapping or common outcomes. <br>If one event occurs, then the other event does NOT occur.
 {{</ definition >}}
 
@@ -106,8 +106,8 @@ For example:
 
 *Note: If we know that event \(A\) has occurred, then we can say for sure that the event \(B\) did NOT occur.* <br><br>
 
-{{< definition >}} 
-**Independent Events:**<br> Two events are independent if the occurrence of one event does NOT impact 
+{{< definition title="Independent Events" >}}
+Two events are independent if the occurrence of one event does NOT impact 
 the outcome of the other event.
 {{</ definition >}}
 
@@ -121,7 +121,7 @@ For example:<br>
 
 *Note: If we know that event \(A\) has occurred, then that gives us NO new information about the event \(B\).* <br><br>
 
-{{< video "https://youtu.be/aTELWJAm_WE?si=-ydM63Ex9VKR-3yb" >}} <br>
+{{< video "https://youtu.be/aTELWJAm_WE?si=-ydM63Ex9VKR-3yb" >}}
 
 {{< question >}}
 Does \(P=0\) mean that the event is *impossible* or *improbable* ?
@@ -131,7 +131,7 @@ Does \(P=0\) mean that the event is *impossible* or *improbable* ?
 No, it means that the event is *highly unlikely* to occur. 
 {{</ answer >}}
 
-Let's understand this answer with an example.
+*Let's understand this answer with an example.*
 
 {{< question >}}
 What is the probability of choosing a real number, say 2.5, from the interval \([2,3]\) ?

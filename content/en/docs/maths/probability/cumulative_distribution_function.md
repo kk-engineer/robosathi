@@ -11,13 +11,12 @@ math: true
         "Probability for AI & ML | Full Course Videos">}} 
 <br>
 
-{{< definition >}}
-**Random Variable(RV):** <br>
+{{< definition title="Random Variable(RV)" >}}
 A random variable is a function that maps a the outcomes of a sample space to a real number.<br>
 Random Variable X represent as, \(X: \Omega \to \mathbb{R} \) <br>
 It maps abstract outcomes of a random experiment to concrete numerical values required for mathematical analysis.
 {{< /definition >}}
-<br>
+
 For example:
 1. Toss a coin 2 times, sample space: \(\Omega = \{HH,HT, TH, TT\}\) <br>
     The above random experiment of coin tosses can be mapped to a random variable \(X: \Omega \to \mathbb{R} \) <br>
@@ -35,8 +34,7 @@ For example:
 *Depending upon the nature of output, random variables are of 2 types - **Discrete** and **Continuous**.* 
 <br><br>
 
-{{< definition >}}
-**Discrete Random Variable:**  
+{{< definition title="Discrete Random Variable">}}
 A random variable whose possible outcomes are finite or countably infinite.  
 Typically obtained by counting.  
 Discrete random variable cannot take any value between 2 consecutive values.  
@@ -44,8 +42,7 @@ Discrete random variable cannot take any value between 2 consecutive values.
 For example:  
 1. The number of heads in 2 coin tosses can be 0, 1 or 2 but NOT 1.5. <br><br>
 
-{{< definition >}}
-**Continuous Random Variable:**  
+{{< definition title="Continuous Random Variable">}} 
 A random variable that can take any value between a given range/interval.  
 Possible outcomes are infinite.
 {{< /definition >}}
@@ -67,8 +64,7 @@ Probability of a random variable is given by something called - _Cumulative Dist
 
 <br>
 
-{{< definition >}}
-**Cumulative Distribution Function(CDF):**   
+{{< definition title="Cumulative Distribution Function(CDF)">}}
 It gives the cumulative probability of a random variable \(X\).  
 CDF = \(F(X) = P(X \leq x)\) i.e Probability a random variable \(X\) will take for a value \(<=x\).
 {{< /definition >}}

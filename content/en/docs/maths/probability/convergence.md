@@ -11,8 +11,7 @@ math: true
         "Probability for AI & ML | Full Course Videos">}}
 <br>
 
-{{< definition >}}
-**Convergence in Probability:** <br>
+{{< definition title="Convergence in Probability" >}}
 A sequence of random variables \(X_1, X_1, \dots, X_n\) is said to converge in probability 
 to a known random variable \(X\), <br> 
 if for every number \(\epsilon >0 \), the following is true:
@@ -117,8 +116,7 @@ So, we can conclude that, if \(n > \frac{1}{\epsilon}\), then: <br>
 \]
 <br>
 
-{{< definition >}}
-**Almost Sure Convergence:** <br>
+{{< definition title="Almost Sure Convergence" >}}
 A sequence of random variables \(X_1, X_2, \dots, X_n\) is said to almost surely converge to a known random variable \(X\), <br> 
 for \(n \ge 1\), if the following is true:
 
@@ -150,7 +148,6 @@ Y_3 = \frac{X_1 + X_2 + X_3}{3} \\[10pt]
 Y_n = \frac{1}{n} \sum_{i=1}^{n} X_i \xrightarrow{Almost ~ Sure} \frac{1}{2}
 \]
 
-<br>
 {{< video "https://www.youtube.com/watch?v=ZIXMVF6t834&t=1s" >}}
 
 <br><br>

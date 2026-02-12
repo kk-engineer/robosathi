@@ -11,8 +11,7 @@ math: true
         "Probability for AI & ML | Full Course Videos" >}}
 <br>
 
-{{<definition >}}
-**Parametric Model Estimation:** <br>
+{{<definition title="Parametric Model Estimation">}}
 It is the process of finding the best-fitting finite set of parameters \(\Theta\) for a model that assumes a 
 specific probability distribution for the data. <br>
 It involves using the dataset to estimate the parameters (like the mean and standard deviation of a normal distribution) 
@@ -42,13 +41,11 @@ There are 2 philosophical approaches to estimate the parameters of a parametric 
  Thus, integrating prior knowledge with data to express the uncertainty about the parameters.
 - It is favoured when the sample size is small, as it uses prior belief about the data distribution too.
 - For example, Maximum A Posteriori Estimation(MAP), Minimum Mean Square Error Estimation(MMSE), etc..
-<br><br>
-
-{{< video "https://www.youtube.com/watch?v=uGjlEjN0giM&t=1s" >}}
 <br>
 
-{{<definition >}}
-**Maximum Likelihood Estimation:** <br>
+{{< video "https://www.youtube.com/watch?v=uGjlEjN0giM&t=1s" >}}
+
+{{<definition title="Maximum Likelihood Estimation">}}
 It is the most popular frequentist approach to estimate the parameters of a model. <br>
 This method helps us find the parameters \(\Theta\) that make the data most probable.
 
@@ -214,12 +211,10 @@ and equating it to 0. <br>
 
 *Note: In general MLE is biased, i.e does NOT give an unbiased estimate => divides by \(n\) instead of \((n-1)\).* <br>
 {{</ answer >}}
-<br>
-{{< video "https://www.youtube.com/watch?v=74tLuSlmd-c" >}}
-<br>
 
-{{<definition >}}
-**Bayesian Statistics:** <br>
+{{< video "https://www.youtube.com/watch?v=74tLuSlmd-c" >}}
+
+{{<definition title="Bayesian Statistics">}}
 Bayesian statistics model parameters by updating initial beliefs (prior probabilities) with observed data to form 
 a final belief (posterior probability) using Bayes' Theorem. <br>
 Instead of a single point estimate, it provides a probability distribution over possible parameter values, 
@@ -371,8 +366,7 @@ practical use, such as, <br>
 {{< video "https://www.youtube.com/watch?v=ANqXXsZSeyA&t=1s" >}}
 <br>
 
-{{< definition >}}
-**Maximum A Posteriori (MAP) Estimator:** <br>
+{{< definition title="Maximum A Posteriori (MAP) Estimator" >}}
 It finds the mode(peak) of the posterior distribution. <br>
 - MAP has the minimum probability of error, since it picks single most probable value. <br>
 
@@ -539,8 +533,7 @@ We can use **Minimum Mean Square Error (MMSE) Estimator** to do this. <br>
 {{</ answer >}}
 <br>
 
-{{< definition >}}
-**Minimum Mean Square Error (MMSE) Estimation:** <br>
+{{< definition title="Minimum Mean Square Error (MMSE) Estimation" >}}
 Minimizes the expected value of squared error. <br>
 Mean of the posterior distribution is the conditional expectation of parameter \(\Theta\), given the data. <br>
 - Posterior mean minimizes the the mean squared error.

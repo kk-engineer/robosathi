@@ -14,8 +14,7 @@ math: true
 There are 2 parts in I.I.D, "**Independent**" and "**Identically Distributed**". <br> 
 Let's revisit and understand the **independence** of random variables first. <br>
 
-{{< definition >}}
-**Independence of Random Variables** <br>
+{{< definition title="Independence of Random Variables" >}}
 It means that the knowing the outcome of one random variable does not impact the probability of the other random variable. <br>
 Two random variables X & Y are independent if: <br>
 
@@ -119,16 +118,14 @@ Hence, \(X\) and \(Y\) are NOT independent.
 [Read more about Integration]({{<ref  "/docs/maths/calculus/calculus_fundamentals" >}})
 <br><br>
 
-{{< definition >}}
-**Identically Distributed** <br>
+{{< definition title="Identically Distributed" >}}
 Random variable X is said to be identically distributed if each sample comes from the same probability distribution,
 such as, Gaussian, Bernoulli, Uniform, etc with the same properties i.e mean, variance, etc are same. <br>
 Similarly, random variables X & Y are said to be identically distributed if they belong to the same probability distribution.<br> <br>
 {{</ definition >}}
 <br>
 
-{{< definition >}}
-**Independent & Identically Distributed(I.I.D)** <br>
+{{< definition title="Independent & Identically Distributed(I.I.D)" >}}
 I.I.D assumption for samples(data points) in a dataset means that the samples are:
 - Independent, i.e, each sample is independent of the other.
 - Identically distributed, i.e, each sample is drawn from the same probability distribution.
@@ -139,7 +136,6 @@ For example: <br>
   Usually, heights of members of the same family may be highly correlated.<br> 
   However, for practical purposes, we can assume that all the heights are independent of one another.
   - And, for 'identically distributed' - we can assume that all the heights are from the same Gaussian distribution with some mean and variance.
-<br><br>
 
 {{< video "https://www.youtube.com/watch?v=vE3suVMRH0o&t=1s" >}}
 

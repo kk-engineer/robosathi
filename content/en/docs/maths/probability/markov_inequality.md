@@ -11,8 +11,7 @@ math: true
         "Probability for AI & ML | Full Course Videos" >}}
 <br>
 
-{{< definition >}}
-**Markov's Inequality:** <br>
+{{< definition title="Markov's Inequality" >}}
 It gives an upper bound for the probability that a non-negative random variable will NOT exceed, based on its expected value. <br>
 
 \[
@@ -52,8 +51,7 @@ Hence, there is a 78% chance that a randomly selected student gets a score of 90
 {{</ answer >}}
 <br>
 
-{{< definition >}}
-**Chebyshev's Inequality:** <br>
+{{< definition title="Chebyshev's Inequality" >}}
 It states that the probability of a random variable deviating from its mean is small if its variance is small. <br>
 - It is a more powerful version of Markov's Inequality. <br>
 - It uses variance of the distribution in addition to the expected value or mean. <br>
@@ -90,8 +88,7 @@ Hence, Chebyshev's Inequality gives a far tighter upper bound of 25% than Markov
 {{</ answer >}}
 <br>
 
-{{< definition >}}
-**Chernoff Bound:** <br>
+{{< definition title="Chernoff Bound" >}}
 It is an upper bound on the probability that a random variable deviates from its expected value. <br>
 It's an exponentially decreasing bound on the "tail" of a random variable's distribution, 
 which can be calculated using its moment generating function. <br>
@@ -120,7 +117,6 @@ P(S_n \ge c) \le e^{-tc}(M_x(t))^n \\[10pt]
 <br><br>
 [Read more about Moment Generating Function]({{<ref  "/docs/maths/probability/moment_generating_function" >}})
 {{</ definition >}}
-<br>
 
 {{< video "https://youtu.be/m9Aqmnt89Tg?si=jYJREpH4arHA_m2h&t=1" >}}
 
