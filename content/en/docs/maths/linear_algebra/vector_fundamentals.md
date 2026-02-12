@@ -115,7 +115,7 @@ _Dot product:_ <br>
 Geometrically, \(\mathbf{u} \cdot \mathbf{v}\) = \(|u||v|cos\theta\) <br>
 where \(\theta\) is the angle between \(\mathbf{u}\) and \(\mathbf{v}\).
 
-![](https://robosathi.com/images/vector_dot_product.png)
+{{< imgproc "images/maths/linear_algebra/vector_dot_product.png" Resize "800x" >}}{{< /imgproc >}}
 
 \(\mathbf{u} = \begin{bmatrix} 1 \\ \\ 2 \\ \end{bmatrix}_{\text{2×1}}\), 
 \(\mathbf{v} = \begin{bmatrix} 3 \\ \\ 4 \\ \end{bmatrix}_{\text{2×1}}\)

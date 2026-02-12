@@ -36,11 +36,10 @@ Any rectangular matrix can be decomposed into a product of three matrices using 
 such that, \(\sigma_{11} \geq \sigma_{22} \geq \cdots \geq \sigma_{rr}\), r = rank of \(\mathbf{A}\).
 <br><br>
 
-Singular value decomposition, thus refers to the set of scale factors \(\mathbf{\Sigma}\) that are fundamentally
+**Singular value decomposition**, thus refers to the set of scale factors \(\mathbf{\Sigma}\) that are fundamentally
 linked to the matrix's **singularity** and **rank**.
 <br>
-![](https://robosathi.com/images/singular_value_decomposition.png)
-<br>
+{{< imgproc "images/maths/linear_algebra/singular_value_decomposition.png" Resize "800x" >}}{{< /imgproc >}}
 
 {{</ definition >}}
 <br>
@@ -53,8 +52,7 @@ linked to the matrix's **singularity** and **rank**.
 *Note: If rank of matrix < dimensions, then 1 or more of the singular values are zero, i.e, dimension collapse.*
 {{< /alert >}}
 
-![](https://robosathi.com/images/svd_example_1.png)
-<br>
+{{< imgproc "images/maths/linear_algebra/svd_example_1.png" Resize "800x" >}}{{< /imgproc >}}
 
 {{< question >}}
 Suppose a satellite takes picture of objects in space and sends them to earth. Size of each picture = 1000x1000 pixels. <br>

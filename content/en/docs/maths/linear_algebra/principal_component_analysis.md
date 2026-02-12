@@ -12,7 +12,7 @@ math: true
 <br>
 {{< question >}}
 In the diagram below, if we need to reduce the dimensionality of the data to 1, which feature should be dropped?
-![](https://robosathi.com/images/pca_example_1.png)
+{{< imgproc "images/maths/linear_algebra/pca_example_1.png" Resize "800x" >}}{{< /imgproc >}}
 {{< /question >}}
 
 {{< answer >}}
@@ -25,7 +25,7 @@ Therefore, drop the feature 1.
 {{< question >}}
 What if the variance in both directions is same ? <br>
 What should be done in this case? Check the diagram below.<br>
-![](https://robosathi.com/images/pca_example_2.png)
+{{< imgproc "images/maths/linear_algebra/pca_example_2.png" Resize "800x" >}}{{< /imgproc >}}
 {{< /question >}}
 
 {{< answer >}}

@@ -39,8 +39,7 @@ For example: <br>
 \(\mathbf{Au} = \begin{bmatrix} 1 \\  \\ 2 \\ \end{bmatrix}\) , \(\quad\)
 \(\mathbf{Av} = \begin{bmatrix} 3 \\  \\ 3 \\ \end{bmatrix}\)
 <br><br>
-![](https://robosathi.com/images/linear_transformation.png)
-<br>
+{{< imgproc "images/maths/linear_algebra/linear_transformation.png" Resize "800x" >}}{{< /imgproc >}}
 
 {{< definition >}}
 **Eigen Vector** <br>

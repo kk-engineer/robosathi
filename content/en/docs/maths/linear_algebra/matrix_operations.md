@@ -74,8 +74,8 @@ a_{m1} + b_{m1} & a_{m2} + b_{m2} & \cdots & a_{mn} + b_{mn}
 _{\text{m x n}}
 \)
 <br><br>
-![](https://robosathi.com/images/matrix_addition.png)
-<br><br>
+{{< imgproc "images/maths/linear_algebra/matrix_addition.png" Resize "800x" >}}{{< /imgproc >}}
+
 **Multiplication:** <br>
 We can multiply two matrices only if their inner dimensions are equal. <br>
 \( \mathbf{C}_{m x n} = \mathbf{A}_{m x d} ~ \mathbf{B}_{d x n} \) <br>

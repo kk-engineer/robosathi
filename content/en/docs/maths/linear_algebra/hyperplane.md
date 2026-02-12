@@ -21,7 +21,7 @@ To represent a **line** in 2D space, we need 2 things: <br>
 1. m = slope or **direction** of the line <br>
 2. c = y-intercept or **distance** from the **origin** <br>
 
-![](https://robosathi.com/images/linear_algebra/line.png)
+{{< imgproc "images/maths/linear_algebra/line.png" Resize "800x" >}}{{< /imgproc >}}
 {{</ answer >}}
 <br>
 
@@ -54,7 +54,7 @@ Similarly, to represent a **hyperplane** in d-dimensions, we need 2 things: <br>
 1. Towards the origin
 2. Away from the origin
 
-![](https://robosathi.com/images/linear_algebra/hyperplane.png)
+{{< imgproc "images/maths/linear_algebra/hyperplane.png" Resize "800x" >}}{{< /imgproc >}}
 {{< /alert >}}
 
 {{< alert color="success" title="Distance from Origin" >}}
@@ -68,8 +68,7 @@ If a point 'x' is on the hyperplane, then it satisfies the below equation: <br>
 \therefore distance(0, \pi_d) = \frac{-w_0}{\Vert \mathbf{w} \Vert}
 \]
 
-![](https://robosathi.com/images/linear_algebra/hyperplane_distance.png)
-<br>
+{{< imgproc "images/maths/linear_algebra/hyperplane_distance.png" Resize "800x" >}}{{< /imgproc >}}
 
 **Key Points:**
 1. By convention, the direction of the hyperplane is given by a **unit** vector perpendicular to the hyperplane 
@@ -102,7 +101,7 @@ Therefore, equation of hyperplane: \( x + 5 = 0 => x = -5\) <br>
 Here, the hyperplane(line) is located in the **opposite** direction as the unit vector w.r.t the origin,<br>
 i.e, towards the **-ve** x-axis direction. <br>
 
-![](https://robosathi.com/images/linear_algebra/hyperplane_example.png)
+{{< imgproc "images/maths/linear_algebra/hyperplane_example.png" Resize "800x" >}}{{< /imgproc >}}
 {{</ answer >}}
 <br>
 
@@ -147,7 +146,7 @@ Equation of distance of any point \(x\prime\) from the hyperplane:
 \[
 d_{\pi_d} = \frac{\mathbf{w}^\top \mathbf{x\prime} + w_0}{\Vert \mathbf{w}\Vert} = 0
 \]
-![](https://robosathi.com/images/linear_algebra/half_spaces.png)
+{{< imgproc "images/maths/linear_algebra/half_spaces.png" Resize "800x" >}}{{< /imgproc >}}
 {{< /alert >}}
 
 {{< alert color="warning" title="Applications of Equation of Hyperplane" >}}
