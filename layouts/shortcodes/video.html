@@ -1,23 +1,20 @@
-<div class="video-link-container" style="margin: 10px 0;">
-  <a href="{{ .Get 0 }}" target="_blank" rel="noopener" class="video-btn">
-    <i class="fab fa-youtube"></i> Watch Video
+{{- $url := .Get 0 -}}
+{{- $title := "Watch Video" -}}
+
+{{/* Construct the YouTube oEmbed API URL */}}
+{{- $apiURL := printf "https://www.youtube.com/oembed?url=%s&format=json" $url -}}
+
+{{/* Fetch the data from YouTube at build time */}}
+{{- with resources.GetRemote $apiURL -}}
+  {{- with .Content -}}
+    {{- $data := unmarshal . -}}
+    {{- $title = $data.title -}}
+  {{- end -}}
+{{- end -}}
+
+<div class="video-link-container">
+  <a href="{{ $url }}" target="_blank" rel="noopener" class="video-btn" aria-label="Watch {{ $title }} on YouTube">
+    <i class="fab fa-youtube" aria-hidden="true"></i>
+    <span>{{ $title }}</span>
   </a>
 </div>
-
-<style>
-.video-btn {
-  background-color: #ffd6d6;
-  border-left: 5px solid #ff0000;
-  padding: 10px 15px;
-  border-radius: 6px;
-  font-weight: bold;
-  color: #8b0000;
-  display: inline-block;
-  transition: transform 0.2s;
-  text-decoration: none;
-}
-.video-btn:hover {
-  transform: scale(1.02);
-  background-color: #ffc2c2;
-}
-</style>

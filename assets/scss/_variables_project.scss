@@ -301,3 +301,35 @@ footer {
     color: white;
     border-color: #059669;
 }
+
+// Youtube video links
+.video-link-container {
+    margin: 1.5rem 0;
+}
+
+.video-btn {
+    background-color: #ffd6d6;
+    border-left: 5px solid #ff0000;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    color: #8b0000;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.video-btn:hover {
+    transform: translateY(-2px); /* Better visual cue than scaling */
+    background-color: #ffc2c2;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    color: #8b0000;
+    text-decoration: none;
+}
+
+.video-btn i {
+    font-size: 1.2rem;
+    color: #ff0000;
+}
