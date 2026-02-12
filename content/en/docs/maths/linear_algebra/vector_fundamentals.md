@@ -22,8 +22,7 @@ And, In machine learning, vectors are used to represent data, both the input fea
 {{< /answer >}}
 <br>
 
-{{< definition >}}
-**Vector:** <br>
+{{< definition title="Vector">}}
 It is a collection of scalars(numbers) that has both magnitude and direction. <br>
 Geometrically, it is a line segment in space characterized by its length(magnitude) and direction. <br>
 By convention, we represent vectors as column vectors. <br>
@@ -32,17 +31,18 @@ e.g.:
 
 *Important: In machine learning, we will use **bold** notation \(\mathbf{v}\) to represent vectors, instead 
 of arrow notation \(\mathbf{v}\).* <br>
+{{</ definition >}}
 
-**Transpose:** <br>
+{{< definition title="Transpose">}}
+
 Swap the rows and columns, i.e, a column vector becomes a row vector after transpose. <br>
 e.g:
 \(\mathbf{v} = \begin{bmatrix} v_1 \\ v_2 \\ \vdots \\ v_d \end{bmatrix}_{\text{d×1}}\) <br><br>
 
 \(\mathbf{v}^\mathrm{T} = \begin{bmatrix} v_1 & v_2 & \cdots & v_d \end{bmatrix}_{\text{1×d}}\) 
+{{</ definition >}}
 
-<br>
-
-**Length of Vector:**<br>
+{{< definition title="Length of Vector">}}
 The length (or magnitude or norm) of a vector \(\mathbf{v}\) is the distance from the origin to the point represented <br> 
 by \(\mathbf{v}\) in n-dimensional space. <br>
 
@@ -54,8 +54,9 @@ _Length of vector_:
  = \sqrt{v_1^2 + v_2^2 + \cdots + v_d^2}\]
 
 *Note: The length of a **zero vector** is **0**.* <br>
+{{</ definition >}}
 
-**Direction of Vector:**<br>
+{{< definition title="Direction of Vector">}}
 The direction of a vector tells us where the vector points in space, independent of its length. <br>
 
 _Direction of vector:_
@@ -64,8 +65,7 @@ _Direction of vector:_
 {{</ definition >}}
 <br>
 
-{{< definition >}}
-**Vector Space:** <br>
+{{< definition title="Vector Space">}}
 It is a collection of vectors that can be added together and scaled by numbers (scalars), such that, 
 the results are still in the same space. <br>
 Vector space or linear space is a non-empty set of vectors equipped with 2 operations:<br>
@@ -166,18 +166,16 @@ _{\text{2×2}}\)
 *Note: We will NOT discuss about cross product \(\mathbf{u} \times \mathbf{v}\); product perpendicular to both vectors.*
 
 {{< /alert >}}
-<br><br>
 
-{{< definition >}}
-**Linear Combination:** <br>
+
+{{< definition title="Linear Combination">}}
 A vector \(\mathbf{v}\) is a linear combination of vectors \(\mathbf{u}_1, \mathbf{u}_2, \cdots, \mathbf{u}_n\) if: <br><br>
 \(\mathbf{v} = \alpha_1 \mathbf{u}_1 + \alpha_2 \mathbf{u}_2 + \cdots + \alpha_k \mathbf{u}_k\) <br>
 where \(\alpha_1, \alpha_2, \cdots, \alpha_k\) are scalars. <br>
 {{</ definition >}}
 <br>
 
-{{< definition >}}
-**Linear Independence:** <br>
+{{< definition title="Linear Independence">}}
 A set of vectors are linearly independent if NO vector in the set can be expressed as a linear combination of 
 the other vectors in the set. <br>
 <br>
@@ -210,10 +208,9 @@ and the feature is NOT bringing any new information. <br>
 e.g.: In 2 dimensions, 3 vectors \(\mathbf{x_1}, \mathbf{x_2}, \mathbf{x_3} \) are linearly dependent.
 
 {{</ definition >}}
-<br><br>
+<br>
 
-{{< definition >}}
-**Span:** <br>
+{{< definition title="Span">}}
 Span of a set of vectors is the geometric shape by all possible linear combinations of those vectors, such as, 
 line, plane, or higher dimensional volume. <br>
 e.g.: <br>
@@ -224,9 +221,7 @@ linear combination of the 2 vectors - (1,0) and (0,1).
 
 <br>
 
-{{< definition >}}
-**Basis:** <br>
-It is the minimal set of linearly independent vectors that spans or defines the entire vector space, 
+{{< definition title="Basis">}}It is the minimal set of linearly independent vectors that spans or defines the entire vector space, 
 providing a unique co-ordinate system for every vector within the space. <br>
 Every vector in the vector space can be represented as a unique linear combination of the basis vectors. <br>
 e.g.: 
@@ -236,11 +231,9 @@ e.g.:
 **_Note_: Basis = Dimensions**
 
 {{</ definition >}}
+<br>
 
-<br><br>
-
-{{< definition >}}
-**Orthogonal Vectors:** <br>
+{{< definition title="Orthogonal Vectors">}}
 Two vectors are orthogonal if their dot product is 0. <br>
 A set of vectors \(\mathbf{x_1}, \mathbf{x_2}, \cdots ,\mathbf{x_n} \) are said to be orthogonal if: <br>
 \(\mathbf{x_i} \cdot \mathbf{x_j} = 0 \forall i⍯j\), for every pair, i.e, every pair must be orthogonal. <br>
@@ -261,9 +254,7 @@ Since, \(\mathbf{u} \cdot \mathbf{v} = 2*1 + 3*0 = 2 ⍯ 0\). <br>
 
 <br>
 
-{{< definition >}}
-**Orthonormal Vectors:** <br>
-Orthonormal vectors are vectors that are orthogonal and have unit length. <br>
+{{< definition title="Orthonormal Vectors">}}Orthonormal vectors are vectors that are orthogonal and have unit length. <br>
 A set of vectors \(\mathbf{x_1}, \mathbf{x_2}, \cdots ,\mathbf{x_n} \) are said to be orthonormal if: <br>
 \(\mathbf{x_i} \cdot \mathbf{x_j} = 0 \forall i⍯j\) and \(\|\mathbf{x_i}\| = 1\), i.e, **unit vector**. <br>
 
@@ -274,9 +265,7 @@ e.g.: <br>
 {{</ definition >}}
 <br>
 
-{{< definition >}}
-**Orthonormal Basis:** <br>
-It is a set of vectors that functions as a basis for a space while also being orthonormal, <br>
+{{< definition title="Orthonormal Basis">}}It is a set of vectors that functions as a basis for a space while also being orthonormal, <br>
 meaning each vector is a unit vector (has a length of 1) and all vectors are mutually perpendicular (orthogonal) to each other. <br>
 A set of vectors \(\mathbf{x_1}, \mathbf{x_2}, \cdots ,\mathbf{x_n} \) are said to be orthonormal basis of a vector space
 \(\mathbb{R}^{n \times 1}\), if every vector: <br>

@@ -23,8 +23,7 @@ e.g: <br>
 {{< /answer >}}
 
 
-{{< definition >}}
-**Matrix** <br>
+{{< definition title="Matrix">}}
 It is a two-dimensional array of numbers with a fixed number of rows(m) and columns(n). <br>
 e.g: <br>
 \(
@@ -37,9 +36,9 @@ a_{m1} & a_{m2} & \cdots & a_{mn}
 \end{bmatrix}
 _{\text{m x n}}
 \)
-<br>
+{{< /definition >}}
 
-**Transpose:** <br>
+{{< definition title="Transpose">}}
 Swapping rows and columns of a matrix. <br>
 \(
 \mathbf{A}^T = 
@@ -53,8 +52,9 @@ _{\text{n x m}}
 \)
 <br><br>
 **Important**: \( (AB)^T = B^TA^T \)
+{{< /definition >}}
 
-**Rank:** <br>
+{{< definition title="Rank">}}
 Rank of a matrix is the number of **linearly independent** rows or columns of the matrix. <br>
 
 {{< /definition >}}
@@ -393,8 +393,7 @@ since, \(\mathbf{A} = \mathbf{A}^\mathrm{T}\)
 
 {{< /alert >}}
 
-{{< definition >}}
-**Orthogonal Matrix:** <br>
+{{< definition title="Orthogonal Matrix">}}
 It is a square matrix that whose rows and columns are **orthonormal** vectors, i.e, they are **perpendicular** to each other
 and have a **unit length**. <br><br>
 \( \mathbf{A} \mathbf{A}^\mathrm{T} = \mathbf{A}^\mathrm{T} \mathbf{A} = \mathbf{A} \mathbf{A}^{-1} = \mathbf{I}  \) <br>

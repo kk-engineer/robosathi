@@ -38,9 +38,7 @@ drop f2'-axis, which is **perpendicular** to f1'-axis.
 
 <br>
 
-{{< definition >}}
-**Principal Component Analysis (PCA)** <br>
-It is a **dimensionality reduction** technique that finds the direction of maximum variance in the data. <br>
+{{< definition title="Principal Component Analysis (PCA)">}}It is a **dimensionality reduction** technique that finds the direction of maximum variance in the data. <br>
 *Note: Some **loss of information** will always be there in dimensionality reduction, because there will be some variability
 in data along the direction that is dropped, and that will be lost.* <br><br>
 

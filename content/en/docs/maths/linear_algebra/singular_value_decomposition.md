@@ -10,8 +10,7 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" 
         "Linear Algebra for AI & ML | Full Course Videos">}}
 <br>
-{{< definition >}}
-**Singular Value Decomposition (SVD):** <br>
+{{< definition title="Singular Value Decomposition (SVD)">}}
 It decomposes any matrix into a rotation, a scaling (based on singular values), and another rotation. <br>
 It is a generalization of the eigen value decomposition(for square matrix) to rectangular matrices. <br>
 Any rectangular matrix can be decomposed into a product of three matrices using SVD, as follows: <br>
@@ -89,9 +88,7 @@ Therefore, compression rate = (2000*20)/(10^6) = 1/25 <br>
 {{</ alert >}}
 <br>
 
-{{< definition >}}
-**Low Rank Approximation:** <br>
-The process of **approximating** any matrix by a matrix of a lower rank, using singular value decomposition. <br>
+{{< definition title="Low Rank Approximation">}}The process of **approximating** any matrix by a matrix of a lower rank, using singular value decomposition. <br>
 It is used for data compression. <br>
 
 Any matrix A of rank 'r' can be written as sum of rank=1 outer products:

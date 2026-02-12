@@ -10,8 +10,7 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" 
         "Linear Algebra for AI & ML | Full Course Videos">}}
 <br>
-{{< definition >}}
-**Vector Norm:** <br>
+{{< definition title="Vector Norm">}}
 It is a measure of the size of a vector or distance from the origin. <br>
 Vector norm is a function that maps a vector to a real number, i.e, \({\| \cdot \|} : \mathbb{R}^n \rightarrow \mathbb{R}\).
 <br>
@@ -55,9 +54,7 @@ For example:
 \({\| x \|_\infty} = max(|3|, |-4|) = max(3, 4) = 4\)
 <br><br>
 
-{{< definition >}}
-**Matrix Norm:** <br>
-It is a function that assigns non-negative size or magnitude to a matrix. <br>
+{{< definition title="Matrix Norm">}}It is a function that assigns non-negative size or magnitude to a matrix. <br>
 Matrix Norm is a function that maps a matrix to a non-negative real number, i.e, \({\| \cdot \|} : \mathbb{R}^{m \times n} \rightarrow \mathbb{R}\)
 <br>
 It should satisfy following 3 properties: <br>

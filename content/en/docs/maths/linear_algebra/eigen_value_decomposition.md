@@ -20,9 +20,7 @@ It tells us about the characteristic properties of a matrix.
 {{</ answer >}}
 <br>
 
-{{< definition >}}
-**Linear Transformation** <br>
-A linear transformation defined by a matrix, denoted as \(T(x)=A\mathbf{x}\), is a function that maps a vector \(\mathbf{x}\) 
+{{< definition title="Linear Transformation">}}A linear transformation defined by a matrix, denoted as \(T(x)=A\mathbf{x}\), is a function that maps a vector \(\mathbf{x}\) 
 to a new vector by multiplying it by a matrix \(A\). <br>
 Multiplying a vector by a matrix can change the direction or magnitude or both of the vector. <br>
 {{</ definition >}}
@@ -41,24 +39,20 @@ For example: <br>
 <br><br>
 {{< imgproc "images/maths/linear_algebra/linear_transformation.png" Resize "800x" >}}{{< /imgproc >}}
 
-{{< definition >}}
-**Eigen Vector** <br>
+{{< definition title="Eigen Vector">}}
 A special non-zero vector whose direction remains unchanged after transformation by a matrix is applied. <br>
 It might get scaled up or down but does not change its direction. <br>
 Result of linear transformation, i.e, multiplying the vector by a matrix, is just a scalar multiple of the original vector. <br>
 {{</ definition >}}
 <br>
 
-{{< definition >}}
-**Eigen Value (\(\lambda\))** <br>
-It is the scaling factor of the eigen vector, i.e, a scalar multiple \(\lambda\) of the original vector, when the vector 
+{{< definition title="Eigen Value (\(\lambda\))">}}It is the scaling factor of the eigen vector, i.e, a scalar multiple \(\lambda\) of the original vector, when the vector 
 is multiplied by a matrix. <br>
 \(|\lambda| > 1 \): Vector stretched <br>
 \(0 < |\lambda| < 1 \): Vector shrunk <br>
 \(|\lambda| = 1 \): Same size <br>
 \(\lambda < 0 \): Vector's direction is reversed <br>
 {{</ definition >}}
-<br>
 
 {{< alert color="success" title="Characteristic Equation" >}}
 Since, for an eigen vector, result of linear transformation, i.e, multiplying the vector by a matrix, 
