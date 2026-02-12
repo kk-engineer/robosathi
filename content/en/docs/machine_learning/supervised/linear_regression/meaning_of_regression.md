@@ -2,7 +2,7 @@
 title: Meaning of 'Regression'
 description: Meaning of 'Regression' in Linear Regression
 date: 2026-02-11
-weight: 1
+weight: 2
 math: true
 ---
 
@@ -40,7 +40,6 @@ Over time ⏳, the name **‘regression’** got **permanently attached** to the
 {{</ answer >}}
 
 {{< imgproc "images/machine_learning/supervised/linear_regression/line_of_best_fit.png" Resize "800x" >}}{{< /imgproc >}}
-
 
 {{< video "https://youtu.be/dDvioj-12Uw" >}}
 <br><br>
