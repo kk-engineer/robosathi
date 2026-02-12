@@ -23,7 +23,7 @@ Commonly visualised as a bar chart. <br>
 \(PMF = P_x(X=x_i) = F_X(X=x_i) - F_X(X=x_{i-1})\)
 {{</ definition >}}
 
-![](https://robosathi.com/images/cdf_example_1.png)
+{{< imgproc "images/maths/probability/cdf_example_1.png" Resize "800x" >}}{{< /imgproc >}}
 
 {{< alert title="Key properties of PMF" color="success" >}}
 1. **Non-Negative:** Probability of any value 'x' must be non-negative i.e \(P(X=x) \ge 0 ~\forall x~\). <br>
@@ -69,13 +69,12 @@ independent trials. <br>
 For example:
 - Counting number of heads(success) in 'n' coin tosses. <br>
 
-{{< alert title="Assumptions" color="warning" >}}
+{{< alert color="warning" title="Assumptions">}}
 1. Trials are independent. <br>
 2. Probability of success remains constant for every trial. <br>
 {{< /alert >}}
 <br>
-![](https://robosathi.com/images/binomial.png)
-<br><br>
+{{< imgproc "images/maths/probability/binomial.png" Resize "800x" >}}{{< /imgproc >}}
 
 {{< question >}}
 What is the probability of getting exactly 2 heads in 3 coin tosses? <br>
@@ -129,7 +128,7 @@ For example:
 1. Model the number of customers arrival at a service center per hour. <br>
 2. Number of website clicks in a given time period. <br><br>
 
-![](https://robosathi.com/images/poisson_pmf.png)
+{{< imgproc "images/maths/probability/poisson_pmf.png" Resize "800x" >}}{{< /imgproc >}}
 {{< alert color="warning" >}}**Graph**: PMF of Poisson Distribution.{{< /alert >}}
 
 {{< question >}}

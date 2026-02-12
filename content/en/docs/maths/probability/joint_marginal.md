@@ -59,8 +59,8 @@ A ball is picked at random from each bag, such that both draws are independent o
 Let's use this example to understand joint probability. <br>
 {{</ question >}}
 <br>
-![](https://robosathi.com/images/joint_marginal_example_1.png)
-<br>
+{{< imgproc "images/maths/probability/joint_marginal_example_1.png" Resize "800x" >}}{{< /imgproc >}}
+
 {{< answer >}}
 Let **A** & **B** be discrete random variables associated with the outcome of the ball drawn from first and second bags
 respectively. <br>
@@ -182,8 +182,8 @@ A ball is picked at random from each bag, such that both draws are independent o
 Let's use this example to understand _marginal_ probability. <br>
 {{</ question >}}
 <br>
-![](https://robosathi.com/images/joint_marginal_example_1.png)
-<br>
+{{< imgproc "images/maths/probability/joint_marginal_example_1.png" Resize "800x" >}}{{< /imgproc >}}
+
 {{< answer >}}
 Let **A** & **B** be discrete random variables associated with the outcome of the ball drawn from first and second bags
 respectively. <br>
@@ -249,8 +249,7 @@ _Note_: _We only have information about the joint and marginal probabilities._ <
 What is the conditional probability of drawing a red ball in the first draw, given that a blue ball is drawn in second draw? <br>
 {{</ question >}}
 <br>
-![](https://robosathi.com/images/joint_marginal_example_1.png)
-<br>
+{{< imgproc "images/maths/probability/joint_marginal_example_1.png" Resize "800x" >}}{{< /imgproc >}}
 
 {{< answer >}}
 Let **A** & **B** be discrete random variables associated with the outcome of the ball drawn from first and second bags

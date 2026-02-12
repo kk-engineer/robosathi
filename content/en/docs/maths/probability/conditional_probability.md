@@ -63,9 +63,8 @@ P(A \mid B) = \frac{P(A)*P(B \mid A)}{P(B)}
 \end{aligned}
 $$
 
-![](https://robosathi.com/images/bayes_theorem.png)
-<br>
-![](https://robosathi.com/images/bayes_likelihood.png)
+{{< imgproc "images/maths/probability/bayes_theorem.png" Resize "800x" >}}{{< /imgproc >}}
+{{< imgproc "images/maths/probability/bayes_likelihood.png" Resize "800x" >}}{{< /imgproc >}}
 {{< /definition >}}
 
 For example:

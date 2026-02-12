@@ -350,7 +350,7 @@ f_{\Theta \mid X} (\theta \mid x) &= \frac{f_{\Theta}(\theta) P_{X \mid \Theta}(
 {{</ answer >}}
 <br><br>
 
-![](https://robosathi.com/images/mle.png)
+{{< imgproc "images/maths/probability/mle.png" Resize "800x" >}}{{< /imgproc >}}
 {{< alert color="warning" >}}**Plot:** Prior, Posterior & MLE.{{< /alert >}}
 
 

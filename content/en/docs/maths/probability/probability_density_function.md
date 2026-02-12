@@ -71,7 +71,7 @@ $$
 \end{cases}
 $$
 
-![](https://robosathi.com/images/pdf_uniform.png)
+{{< imgproc "images/maths/probability/pdf_uniform.png" Resize "800x" >}}{{< /imgproc >}}
 <br>
 *Note: If we know the PDF of a continuous random variable, then we can find the probability of any given region/interval
 by calculating the area under the curve.* <br><br>
@@ -126,9 +126,9 @@ $$
 For example: <br>
 - Random number generator that generates a random number between 0 and 1. <br>
 
-![](https://robosathi.com/images/uniform_pdf.png)
+{{< imgproc "images/maths/probability/uniform_pdf.png" Resize "800x" >}}{{< /imgproc >}}
 {{< alert color="warning" >}}**Graph**: PDF of Uniform Distribution.{{< /alert >}}
-![](https://robosathi.com/images/uniform_cdf.png)
+{{< imgproc "images/maths/probability/uniform_cdf.png" Resize "800x" >}}{{< /imgproc >}}
 {{< alert color="warning" >}}**Graph**: CDF of Uniform Distribution.{{< /alert >}}
 
 {{< video "https://youtu.be/UrLRdi88U3g?si=63sHZ1B-1kUtf4E3" >}}
@@ -167,9 +167,9 @@ For example:
 - Human height, IQ scores, blood-pressure etc. <br>
 - Measurement of errors in scientific experiments. <br>
 
-![](https://robosathi.com/images/gaussian_pdf.png)
+{{< imgproc "images/maths/probability/gaussian_pdf.png" Resize "800x" >}}{{< /imgproc >}}
 {{< alert color="warning" >}}**Graph**: PDF of Gaussian Distribution.{{< /alert >}}
-![](https://robosathi.com/images/gaussian_cdf.png)
+{{< imgproc "images/maths/probability/gaussian_cdf.png" Resize "800x" >}}{{< /imgproc >}}
 {{< alert color="warning" >}}**Graph**: CDF of Gaussian Distribution.{{< /alert >}}
 
 {{< alert title="68-95-99 Rule" color="success" >}} 
@@ -203,9 +203,9 @@ $$
 {{</ definition >}}
 <br><br>
 
-![](https://robosathi.com/images/exponential_pdf.png)
+{{< imgproc "images/maths/probability/exponential_pdf.png" Resize "800x" >}}{{< /imgproc >}}
 {{< alert color="warning" >}}**Graph**: PDF of Exponential Distribution.{{< /alert >}}
-![](https://robosathi.com/images/exponential_cdf.png)
+{{< imgproc "images/maths/probability/exponential_cdf.png" Resize "800x" >}}{{< /imgproc >}}
 {{< alert color="warning" >}}**Graph**: CDF of Exponential Distribution.{{< /alert >}}
 
 {{< question >}}

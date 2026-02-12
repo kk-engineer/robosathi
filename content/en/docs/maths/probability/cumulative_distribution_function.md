@@ -74,7 +74,7 @@ CDF = \(F(X) = P(X \leq x)\) i.e Probability a random variable \(X\) will take f
 {{< /definition >}}
 <br>
 For example:  
-1. Discrete random variable - Toss a coin 2 times, sample space: \(\Omega = \{HH,HT, TH, TT\}\) <br>
+1. **Discrete random variable** - Toss a coin 2 times, sample space: \(\Omega = \{HH,HT, TH, TT\}\) <br>
     Count the number of heads. <br>
     $$
     \begin{aligned}
@@ -89,9 +89,9 @@ For example:
     \end{aligned}
     $$
 
-![](https://robosathi.com/images/cdf_example_1.png)
-<br>
-2. Continuous random variable - Consider a line segment/interval from \(\Omega = [0,2] \) <br>
+{{< imgproc "images/maths/probability/cdf_example_1.png" Resize "800x" >}}{{< /imgproc >}}
+
+2. **Continuous random variable** - Consider a line segment/interval from \(\Omega = [0,2] \) <br>
     Random variable \(X(\omega) = \omega\) <br>
     i.e \(X(1) = 1 ~and~ X(1.1) = 1.1 \) <br>
     $$

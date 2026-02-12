@@ -93,10 +93,9 @@ Occurrence of C changes the context, causing the events A & B to become independ
 {{< /definition >}}
 <br>
 
-![](https://robosathi.com/images/conditional_independence.png)
-<br>
+{{< imgproc "images/maths/probability/conditional_independence.png" Resize "800x" >}}{{< /imgproc >}}
 
-$$
+\[
 \begin{aligned}
 A = 10 ,~ B = 10  ,~ C = 20  ~and~  \Omega = 50 \\
 P(A) = 10/50 = 1/5 \\
@@ -105,11 +104,11 @@ P(A) * P(B) = 1/5*1/5 =1/25 \\
 P(A \cap B) = 3/50 \\
 \text{clearly, } P(A \cap B) ~⍯ ~P(A) * P(B) \\
 \end{aligned}
-$$
+\]
 => _A & B are **NOT** independent._<br>
 Now, let's check for _conditional independence_ of A & B given C. <br>
 
-$$
+\[
 \begin{aligned}
 P(A \mid C) &= \frac{P(A \cap C)}{P(C)} = 4/20 = 1/5 \\
 P(B \mid C) &= \frac{P(B \cap C)}{P(C)} = 5/20 = 1/4 \\
@@ -117,7 +116,7 @@ P(A \mid C) * P(B \mid C) &= 1/5 * 1/4 = 1/20  \\
 P(A \cap B \mid C) &= \frac{P(A \cap B \cap C)}{P(C)} = 1/20 \\
 \text{clearly, } P(A \cap B \mid C) &= P(A \mid C)*P(B \mid C) \\
 \end{aligned}
-$$
+\]
 
 _Therefore, A & B are **conditionally independent** given C._
 <br>
