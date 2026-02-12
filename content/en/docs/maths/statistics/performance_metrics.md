@@ -162,7 +162,7 @@ Set the threshold \(\tau_n\) = 0.05, calculate \({TPR}_n, {FPR}_n\) <br>
 Now, we have 'n' pairs of (TPR, FPR) for all 'n' data points. <br>
 Plot the points on a graph to get the final ROC curve. <br>
 
-![](https://robosathi.com/images/roc.png)
+{{< imgproc "images/maths/statistics/roc.png" Resize "800x" >}}{{< /imgproc >}}
 
 **AU ROC** = AUC = Area under the ROC curve = Area under the curve <br>
 
@@ -229,9 +229,9 @@ Precision = \frac{TP}{TP + FP} \\[10pt]
 Recall = \frac{TP}{TP + FN}
 \]
 
-![](https://robosathi.com/images/prc.png)
+{{< imgproc "images/maths/statistics/prc.png" Resize "800x" >}}{{< /imgproc >}}
 
-AU PRC = PR AUC = Area under Precision-Recall curve
+**AU PRC = PR AUC = Area under Precision-Recall curve**
 {{</ definition >}}
 <br>
 

@@ -20,7 +20,7 @@ Q = \chi^2(n) = \sum_{i=1}^n Z_i^2 \\
 \text{ n: degrees of freedom }
 \]
 
-![](https://robosathi.com/images/chi_square_distribution.png)
+{{< imgproc "images/maths/statistics/chi_square_distribution.png" Resize "800x" >}}{{< /imgproc >}}
 
 **Key Properties:** <br>
 1. Non-negative, since sum of squares.
@@ -166,7 +166,7 @@ t_{obs} = \chi_{calc}^2 = \sum_{i=1}^2 \frac{(O_i - E_i)^2}{E_i} \\[10pt]
 Since, significance level = 5% = 0.05 <br>
 Critical value = \(\chi^2(0.05,1)\) = 3.84 <br>
 
-![](https://robosathi.com/images/chi_square_gof.png)
+{{< imgproc "images/maths/statistics/chi_square_gof.png" Resize "800x" >}}{{< /imgproc >}}
 
 Since, \(t_{obs}\) = 5.76 > 3.84 (critical value), we reject the null hypothesis \(H_0\). <br>
 Therefore, the coin is biased towards head.
@@ -242,7 +242,7 @@ Degrees of freedom = (R-1)(C-1) = (2-1)(2-1) = 1 <br>
 Since, significance level = 5% = 0.05 <br>
 Critical value = \(\chi^2(0.05,1)\) = 3.84 <br>
 
-![](https://robosathi.com/images/chi_square_independence.png)
+{{< imgproc "images/maths/statistics/chi_square_independence.png" Resize "800x" >}}{{< /imgproc >}}
 
 Since, \(t_{obs}\) = 4.76 > 3.84 (critical value), we reject the null hypothesis \(H_0\). <br>
 Therefore, the gender and beverage preference are dependent.

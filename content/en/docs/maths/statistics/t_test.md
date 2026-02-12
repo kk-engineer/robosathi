@@ -28,7 +28,7 @@ It is a continuous probability distribution that is a symmetrical, bell-shaped c
 to the normal distribution but with heavier tails. <br>
 - Shape of the curve or mass in tail is controlled by degrees of freedom.
 
-![](https://robosathi.com/images/t_distribution.png)
+{{< imgproc "images/maths/statistics/t_distribution.png" Resize "800x" >}}{{< /imgproc >}}
 
 There are 3 types of T-Test: <br>
 1. **1-Sample T-Test**: Test if sample mean differs from hypothesized value.
@@ -85,7 +85,7 @@ Let significance level \(\alpha\) = 5% =0.05. <br>
 Critical value \(t_{0.05}\) = 1.729 <br>
 _Important: Find the value of \(t_{\alpha}\) in [T-table](https://www.sjsu.edu/faculty/gerstman/StatPrimer/t-table.pdf)_ <br>
 
-![](https://robosathi.com/images/one_sample_t_test.png)
+{{< imgproc "images/maths/statistics/one_sample_t_test.png" Resize "800x" >}}{{< /imgproc >}}
 
 Since \(t_{obs}\) > \(t_{0.05}\), we reject the null hypothesis. <br>
 And, accept the alternative hypothesis that the API response time is significantly > 100 ms. <br>
@@ -166,7 +166,7 @@ Let significance level \(\alpha\) = 5% =0.05. <br>
 Critical value \(t_{0.05}\) = 1.684 <br>
 _Important: Find the value of \(t_{\alpha}\) in [T-table](https://www.sjsu.edu/faculty/gerstman/StatPrimer/t-table.pdf)_ <br>
 
-![](https://robosathi.com/images/two_sample_t_test.png)
+{{< imgproc "images/maths/statistics/two_sample_t_test.png" Resize "800x" >}}{{< /imgproc >}}
 
 Since \(t_{obs}\) > \(t_{0.05}\), we reject the null hypothesis. <br>
 And, accept the alternative hypothesis that the new model has better accuracy than the existing model. <br>

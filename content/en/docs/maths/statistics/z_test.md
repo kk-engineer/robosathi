@@ -119,7 +119,7 @@ Since, significance level \(\alpha\) = 5% =0.05. <br>
 Critical value \(Z_{0.05}\) = -1.645 <br>
 _Important_: Find the value of \(Z_{\alpha}\) in [Z-Score Table](https://www.craftonhills.edu/current-students/tutoring-center/mathematics-tutoring/distribution_tables_normal_studentt_chisquared.pdf)
 
-![](https://robosathi.com/images/one_sample_z_test.png)
+{{< imgproc "images/maths/statistics/one_sample_z_test.png" Resize "800x" >}}{{< /imgproc >}}
 
 Our \(t_{obs}\) is much more extreme than the the critical value \(Z_{0.05}\), => p-value < 5%. <br>
 Hence, we reject the null hypothesis. <br>
@@ -252,7 +252,7 @@ t_{obs}  = \frac{\hat{p_B}-\hat{p_A}}{SE_{\hat{p_A}-\hat{p_B}}} \\[10pt]
 Significance level \(\alpha\) = 5% =0.05. <br>
 Critical value \(Z_{0.05}\) = 1.645 <br>
 
-![](https://robosathi.com/images/two_sample_z_test_proportion.png)
+{{< imgproc "images/maths/statistics/two_sample_z_test_proportion.png" Resize "800x" >}}{{< /imgproc >}}
 
 Since, \(t_{obs} < Z_{0.05}\) => p-value > 5%. <br>
 Hence, we fail to reject the null hypothesis. <br>

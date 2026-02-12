@@ -124,7 +124,7 @@ _Note: If the 2 means are very close then \(t_{obs} \approx 0\)._ <br>
 \[p_{value} =  \mathbb{P}(t \geq t_{obs} | H_0)\] <br>
 p-value = area under curve = probability of observing test statistic \( \ge t_{obs} \) if the null hypothesis is true. <br>
 <br>
-![](https://robosathi.com/images/p_value_1.png)
+{{< imgproc "images/maths/statistics/p_value_1.png" Resize "800x" >}}{{< /imgproc >}}
 
 **Step 6**: _Accept or reject the null hypothesis, based on the significance level (\(\alpha\))._ <br>
 If \(p_{value} < \alpha\), we reject the null hypothesis and accept the alternative hypothesis and vice versa. <br>
@@ -149,8 +149,8 @@ Since, the denominator in above equation is always positive.<br>
 => \(t_{obs} < 0\) <br>
 Therefore, we need to do a left sided/tailed test. <br>
 <br>
-![](https://robosathi.com/images/left_tailed.png)
-<br>
+{{< imgproc "images/maths/statistics/left_tailed.png" Resize "800x" >}}{{< /imgproc >}}
+
 So, we want \(t_{obs}\) to be very negative to confidently conclude that alternate hypothesis is true. <br>
 
 **Right Sided/Tailed Test:** <br>
@@ -167,8 +167,8 @@ If \(H_a\) is true then \(t_{obs}\) is a large -ve value or a large +ve value. <
 Since, t-distribution is symmetric, we can divide the significance level \(\alpha\) into 2 equal parts. <br>
 i.e \(\alpha = 2.5\%\) on each side. <br>
 
-![](https://robosathi.com/images/two_sided.png)
-<br>
+{{< imgproc "images/maths/statistics/two_sided.png" Resize "800x" >}}{{< /imgproc >}}
+
 So, we want \(t_{obs}\) to be very negative or very positive to confidently conclude that the alternate hypothesis is true.
 We accept \(H_a\) if \(t_{obs} < t^1_{\alpha/2}\)  or \(t_{obs} > t^2_{\alpha/2}\).
 
@@ -196,8 +196,7 @@ acceptance/rejection region. <br>
   - if \(t_{obs} > t_{\alpha} => p_{value} < \alpha\); therefore, reject null hypothesis.
   - if \(t_{obs} < t_{\alpha} => p_{value} \ge \alpha\); therefore, failed to reject null hypothesis.
 
-![](https://robosathi.com/images/critical_value.png)
-<br>
+{{< imgproc "images/maths/statistics/critical_value.png" Resize "800x" >}}{{< /imgproc >}}
 {{< /definition >}}
 <br>
 
@@ -210,7 +209,7 @@ when the alternative hypothesis (\(H_{a}\)) is true.
 - \(\alpha\): Probability of wrongly accepting alternate hypothesis \(H_{a}\)
 - \(\beta\): Probability of wrongly rejecting alternate hypothesis \(H_{a}\)
 
-![](https://robosathi.com/images/power_of_test.png)
+{{< imgproc "images/maths/statistics/power_of_test.png" Resize "800x" >}}{{< /imgproc >}}
 {{< /definition >}}
 <br>
 
@@ -254,8 +253,9 @@ s_p = \sqrt{\frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2}{n_1 + n_2 - 2}}
 but for practical purposes, we use the following value: <br>
 small effect (\(d=0.2\)), medium effect (\(d=0.5\)), and large effect (\(d\ge 0.8\)).*
 - More overlap => less effect i.e low Cohen's d value.
-![](https://robosathi.com/images/effect_size.png)
+{{< imgproc "images/maths/statistics/effect_size.png" Resize "800x" >}}{{< /imgproc >}}
 {{</ definition >}}
+
 For example: <br>
 - A study on drug trials finds that patients taking a new drug had statistically significant <br>
 improvement (p-value<0.05), compared to a placebo group.

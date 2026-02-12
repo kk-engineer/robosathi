@@ -178,7 +178,7 @@ Tells us whether the data is concentrated on one side of mean and is there a lon
 - Mean = Median = Mode.
 
 {{</ definition >}}
-![](https://robosathi.com/images/skewness.png)
+{{< imgproc "images/maths/statistics/skewness.png" Resize "800x" >}}{{< /imgproc >}}
 
 For example: <br>
 1. Consider the salary of employees in a company. Most employees earn a very modest salary, but a few executives earn 
@@ -218,9 +218,9 @@ Normal distribution has kurtosis = 3. <br>
 
 {{</ definition >}}
 
-![](https://robosathi.com/images/kurtosis.png)
+{{< imgproc "images/maths/statistics/kurtosis.png" Resize "800x" >}}{{< /imgproc >}}
 <br>
-![](https://robosathi.com/images/excess_kurtosis.png)
+{{< imgproc "images/maths/statistics/excess_kurtosis.png" Resize "800x" >}}{{< /imgproc >}}
 
 <br>
 {{< video "https://youtu.be/ljxOw47oUrU?si=LqttW0ZyGCImT1Wm" >}}
@@ -269,7 +269,7 @@ Q2 = (11+1) * 1/2 = 12*1/2 = 6 \\
 Q3 = (11+1) * 3/4 = 12*3/4 = 9
 \]
 <br>
-![](https://robosathi.com/images/quartiles.png)
+{{< imgproc "images/maths/statistics/quartiles.png" Resize "800x" >}}{{< /imgproc >}}
 <br><br>
 
 {{< definition >}}
@@ -326,9 +326,9 @@ It comprises four datasets that have nearly identical simple descriptive statist
 yet have very different distributions and appear very different when plotted.
 {{< /alert >}}
 
-![](https://robosathi.com/images/anscombe_quartet_data.png)
+{{< imgproc "images/maths/statistics/anscombe_quartet_data.png" Resize "800x" >}}{{< /imgproc >}}
 <br>
-![](https://robosathi.com/images/anscombe_quartet.png)
+{{< imgproc "images/maths/statistics/anscombe_quartet.png" Resize "800x" >}}{{< /imgproc >}}
 
 {{< alert color="warning" >}}Figure: Anscombe's Quartet {{< /alert >}}
 
