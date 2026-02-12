@@ -28,27 +28,27 @@ Q = \chi^2(n) = \sum_{i=1}^n Z_i^2 \\
 approaches a normal distribution.
 {{</ definition >}}
 
-{{< alert color="success" title="Degrees of Freedom (\(\nu\))" >}}
+{{< panel color="green" title="Degrees of Freedom (\(\nu\))" >}}
 It represents the number of independent pieces of information available in the sample to estimate the variability in the data.<br>
 Generally speaking, it represents the number of independent values that are free to vary in a dataset when 
 estimating a parameter. <br>
 e.g.: If we have k observations and their sum = 50. <br>
 The sum of (k-1) terms can be anything, but the kth term is fixed at 50 - (sum of other (k-1) terms). <br>
 So, we have only (k-1) terms that can change independently, therefore, the DOF(\(\nu\)) = k-1.
-{{< /alert >}}
+{{< /panel >}}
 
 {{< video "https://www.youtube.com/watch?v=qGRpfhDK-zI" >}}
 
-{{< alert color="secondary" title="Central Limit Theorem">}}
+{{< panel color="orange" title="Central Limit Theorem">}}
 Central Limit Theorem states that the sampling distribution of sample means approaches a normal distribution as 
 the sample size increases, regardless of the distribution of the population. <br>
 More broadly, we can also say that _sum/count_ of independent random variables approaches a normal distribution as 
 the sample size increases. <br>
 Since, sample mean \(\bar{x} = \frac{sum}{n} \). <br><br>
 [Read more about Central Limit Theorem]({{<ref "/docs/maths/statistics/central_limit_theorem" >}})
-{{< /alert >}}
+{{< /panel >}}
 
-{{< alert color="success" title="Sampling Distribution of Counts" >}}
+{{< panel color="green" title="Sampling Distribution of Counts" >}}
 *Note: We are dealing with categorical data, where there is a count associated with each category.* <br>
 In the context of categorical data, the counts \(O_i\) are governed by _multinomial distribution_ <br> 
 (a generalisation of binomial distribution). <br>
@@ -82,7 +82,7 @@ Note that the denominator is \(\sqrt{E_{i}}\) NOT \(\sqrt{Var_{i}}\). <br>
 \(E_{i}\): Expected count for \(i^{th}\) category <br><br>
 
 **Important**: \(E_{i}\): Expected count should be large i.e >= 5 (typically) for a good enough approximation. <br>
-{{< /alert >}}
+{{< /panel >}}
 
 {{< definition title="Chi-Square (\(\chi^2\)) Test Statistic" >}}
 It is formed by squaring the approximately standard normal counts above, and summing them up. <br>
@@ -96,9 +96,9 @@ Note: For very large 'n', the Pearson's chi-square (\(\chi^2\)) test statistic f
 <br>
 {{< video "https://www.youtube.com/watch?v=ZvESq3cXTKo&t=1s" >}}
 
-{{< alert color="warning" >}}
+{{< panel color="cyan" title="Name of Test">}}
 _Note_: _All the hypothesis tests get their name from the underlying distribution of the test statistic._
-{{< /alert >}}
+{{< /panel >}}
 
 {{< definition title="Chi-Square (\(\chi^2\)) Test" >}}
 It is used to analyze categorical data to determine whether there is a significant difference between observed and expected counts. <br>
@@ -127,11 +127,11 @@ _Note: Typical m=0, since, NO parameters are estimated._
 
 {{</ definition >}}
 
-{{< alert color="secondary" title="Other Goodness of Fit Tests" >}}
+{{< panel color="orange" title="Other Goodness of Fit Tests" >}}
 1. **Kolmogorov-Smirnov (KS) Test**: Compares empirical CDF with theoretical CDF of distribution.
 2. **Anderson-Darling (AD) Test**: Refinement of KS Test.
 3. **Shapiro-Wilk (SW) Test**: Specialised for normal distribution; good for small samples.
-{{< /alert >}}
+{{< /panel >}}
 
 {{< question >}}
 In a coin toss experiment, we tossed a coin 100 times, and got 62 heads and 38 tails. <br>

@@ -343,10 +343,9 @@ f_{\Theta \mid X} (\theta \mid x) &= \frac{f_{\Theta}(\theta) P_{X \mid \Theta}(
 *Note: If we do NOT have enough data, then we should NOT ignore our intial belief.* <br>
 *However, if we have enough data, then the data will override our initial belief and the posterior will be dominated by data.* <br>
 {{</ answer >}}
-<br><br>
 
 {{< imgproc "images/maths/probability/mle.png" Resize "800x" >}}{{< /imgproc >}}
-{{< alert color="warning" >}}**Plot:** Prior, Posterior & MLE.{{< /alert >}}
+{{< panel color="charcoal" title="Plot: Prior, Posterior & MLE">}}{{< /panel >}}
 
 
 *Note: Bayesian approach gives us a probability distribution of parameter \(\Theta\).*
@@ -598,7 +597,7 @@ So, here in this case our \(\Theta_{MMSE}\) is: <br>
 \]
 {{</ answer >}}
 
-{{% alert color="secondary" title="MAP vs MMSE" %}}
+{{% alert color="orange" title="MAP vs MMSE" %}}
 - MMSE is the average of the posterior distribution, whereas MAP is the mode/peak.
 - If posterior distribution is symmetric and unimodal (only 1 peak), then MAP and MMSE are very close.
 - If posterior distribution is skewed and multimodal (many peaks), then MAP and MMSE can differ a lot.

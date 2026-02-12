@@ -42,14 +42,14 @@ linked to the matrix's **singularity** and **rank**.
 
 {{</ definition >}}
 <br>
-{{< alert color="secondary" title="Properties of Singular Values" >}}
+{{< panel color="orange" title="Properties of Singular Values" >}}
 1. All singular values are non-negative.
 2. Square roots of the eigen values of the matrix \(\mathbf{AA^T}\) or \(\mathbf{A^TA}\).
 3. Arranged in non-decreasing order.
 \(\sigma_{11} \geq \sigma_{22} \geq \cdots \geq \sigma_{rr} \ge 0\) <br>
 
 *Note: If rank of matrix < dimensions, then 1 or more of the singular values are zero, i.e, dimension collapse.*
-{{< /alert >}}
+{{< /panel >}}
 
 {{< imgproc "images/maths/linear_algebra/svd_example_1.png" Resize "800x" >}}{{< /imgproc >}}
 
@@ -80,12 +80,12 @@ Therefore, compression rate = (2000*20)/(10^6) = 1/25 <br>
 
 <br>
 
-{{< alert color="secondary" title="Applications of SVD" >}}
+{{< panel color="orange" title="Applications of SVD" >}}
 1. **Image compression**.
 2. **Low Rank Approximation**: Compress data by keeping top rank singular values. 
 3. **Noise Reduction**: Capture main structure, ignore small singular values.
 4. **Recommendation Systems**: Decompose user-item rating matrix to discover underlying user preferences and make recommendations.
-{{</ alert >}}
+{{</ panel >}}
 <br>
 
 {{< definition title="Low Rank Approximation">}}The process of **approximating** any matrix by a matrix of a lower rank, using singular value decomposition. <br>

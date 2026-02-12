@@ -153,9 +153,9 @@ There is some probability of choosing 2.5, but it is very small. <br><br>
 *Therefore, we say that \(P=1\) means "Almost Sure" and NOT "Certain".*
 {{</ answer >}}
 
-{{< alert color="secondary" >}} 
+{{< panel color="charcoal" title="Note">}} 
 Now, lets also see another example where \(P=0\) means *Impossible* and \(P=1\) means *Certain*.
-{{< /alert >}}
+{{< /panel >}}
 
 {{< question >}}
 What is the probability of getting a **7** when we roll a **6** faced die ?

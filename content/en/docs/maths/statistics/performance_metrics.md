@@ -40,7 +40,7 @@ e.g.: Model predicted that a patient does NOT have diabetes, but the patient act
 
 {{< video "https://www.youtube.com/watch?v=VclTKXnlb_U" >}}
 
-{{< alert color="secondary" title="Important Metrics" >}}
+{{< panel color="orange" title="Important Metrics" >}}
 Many metrics are derived from the confusion matrix. <br><br>
 **Precision:** <br>
 It answers the question: "Of all the instances that the model predicted as positive, how many were actually positive?" <br>
@@ -84,7 +84,7 @@ A false positive, i.e, wrongly flagging an innocent person as a potential terror
 e.g.: Medical diagnosis of a serious disease. <br>
 A false negative, i.e, falsely missing a serious disease can cost someone's life. <br>
 <br>
-{{< /alert >}}
+{{< /panel >}}
 
 {{< question >}}
 Analyze the performance of an access control system. Below is the data for 1000 access attempts. <br>

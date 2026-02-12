@@ -271,13 +271,13 @@ Q3 = (11+1) * 3/4 = 12*3/4 = 9
 Therefore, IQR = Q3-Q1 = 9-3 = 6 <br>
 <br>
 
-{{< alert color="success" title="Outlier Detection" >}}
+{{< panel color="green" title="Outlier Detection" >}}
 IQR is a standard tool for detecting outliers. <br>
 Values that fall outside the '_fences_' can be considered as potential outliers.
 
 **Lower fence = Q1 - 1.5 * IQR <br>
 Upper fence = Q3 + 1.5 * IQR <br>**
-{{< /alert >}}
+{{< /panel >}}
 For example: <br>
 1. Data = \(\{1,2,3,4,5,6,7,8,9,10,100\}\)
 \[
@@ -294,7 +294,7 @@ As in this example, 100 can be considered as an outlier.
 <br><br>
 {{< video "https://youtu.be/3-qQu9jNMPk?si=mxnrRIC8lrqtC2Oa" >}}
 
-{{< alert color="secondary" title="Anscombe's Quartet">}}
+{{< panel color="orange" title="Anscombe's Quartet">}}
 Even though the above metrics give us a good idea of the data distribution,
 but still we should **always** plot the data and **visually inspect** the data distribution. <br>
 As these metrics may not provide the complete picture. <br>
@@ -303,13 +303,13 @@ A mathematician called _Francis John Anscombe_ has illustrated this point beauti
 **Anscombe's quartet:** <br>
 It comprises four datasets that have nearly identical simple descriptive statistics, <br> 
 yet have very different distributions and appear very different when plotted.
-{{< /alert >}}
+{{< /panel >}}
 
 {{< imgproc "images/maths/statistics/anscombe_quartet_data.png" Resize "800x" >}}{{< /imgproc >}}
 <br>
 {{< imgproc "images/maths/statistics/anscombe_quartet.png" Resize "800x" >}}{{< /imgproc >}}
 
-{{< alert color="warning" >}}Figure: Anscombe's Quartet {{< /alert >}}
+{{< panel color="charcoal" title="Figure: Anscombe's Quartet">}}{{< /panel >}}
 
 <br><br>
 ```End of Section```

@@ -144,7 +144,7 @@ But, the Pearson's correlation coefficient (r) will be slightly less than 1 i.e 
 
 {{< video "https://youtu.be/Vsy2pH2M9F0?si=hPe9P5mS-lWR3va-" >}}
 
-{{< alert color="success" title="Correlation Application" >}}
+{{< panel color="green" title="Correlation Application" >}}
 Correlation is very useful in feature selection for training machine learning models.
 1. If 2 features are highly correlated => they provide redundant information.
 - One of the features can be removed without significant loss of information.
@@ -152,9 +152,9 @@ Correlation is very useful in feature selection for training machine learning mo
 2. If a feature is highly correlated with the target variable => this feature is a strong predictor, so keep it.
 - A feature with very low or near zero correlation with the target variable may be considered for removal,
 as they have little predictive power.
-{{< /alert >}}
+{{< /panel >}}
 
-{{< alert color="secondary" title="Correlation Vs Causation" >}}
+{{< panel color="orange" title="Correlation Vs Causation" >}}
 **Causation** means that one variable directly causes the change in another variable, i.e, direct <br>
 cause->effect relationship. <br>
 Whereas, **correlation** means that two variables move together.
@@ -164,7 +164,7 @@ Whereas, **correlation** means that two variables move together.
 
 **E.g**: Election results and stock market - there may be some correlation between the two, <br> 
 but establishing clear causal links is difficult. 
-{{< /alert >}}
+{{< /panel >}}
 
 {{< video "https://youtu.be/FH8jnYEGDzE?si=HhWImSk2PfGL_kv-" >}}
 

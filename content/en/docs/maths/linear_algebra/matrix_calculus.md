@@ -10,7 +10,7 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" 
         "Linear Algebra for AI & ML | Full Course Videos">}}
 
-{{< alert color="success" title="Vector Derivative" >}}
+{{< panel color="green" title="Vector Derivative" >}}
 Let \(\mathbf{x} = \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}_{\text{n×1}}\) be a vector, i.e, \(\mathbf{x} \in \mathbb{R}^n\).
 <br><br>
 Let \(f(x)\) be a function that maps a vector to a scalar, i.e, \(f : \mathbb{R}^n \rightarrow \mathbb{R}\). <br>
@@ -99,9 +99,9 @@ y = \sum_{i=1}^n \sum_{j=1}^n x_i a_{ij} x_j \\
 \]
 <br>
 
-{{< /alert >}}
+{{< /panel >}}
 
-{{< alert color="secondary" title="Jacobian Matrix" >}}
+{{< panel color="orange" title="Jacobian Matrix" >}}
 Above, we saw the **gradient** of a **scalar valued function**, i.e, a function that maps a vector to a scalar, i.e, 
 \(f : \mathbb{R}^n \rightarrow \mathbb{R}\). <br>
 There is another kind of function called **vector valued function**, i.e, a function that maps a vector to another vector, i.e, 
@@ -147,9 +147,9 @@ The above matrix is called **Jacobian matrix** of \(f(x)\).
 
 _Assumption: All the first order partial derivatives exist._
 <br>
-{{< /alert >}}
+{{< /panel >}}
 
-{{< alert color="secondary" title="Hessian Matrix" >}}
+{{< panel color="orange" title="Hessian Matrix" >}}
 **Hessian Matrix:** <br>
 It is a square matrix of **second-order partial derivatives** of a **scalar-valued function**. <br>
 This is used to characterize the **curvature** of a function at a give point.
@@ -192,9 +192,9 @@ e.g: <br>
 \\ \frac{\partial^2 f}{\partial y \partial x} & \frac{\partial^2 f}{\partial y^2} \end{bmatrix} 
 = \begin{bmatrix} 2 & 0 \\ \\ 0 & 2 \end{bmatrix}\)
 
-{{< /alert >}}
+{{< /panel >}}
 
-{{< alert color="success" title="Matrix Derivative" >}}
+{{< panel color="green" title="Matrix Derivative" >}}
 Let, A is a mxn matrix, i.e \(A \in \mathbb{R}^{m \times n}\) 
 <br><br>
 \(\mathbf{A} = 
@@ -254,7 +254,7 @@ similarly, \((\frac{\partial f}{\partial A})_{(i,i)}\) = 1 for all \(i=j\)
 \)
 <br><br>
 Therefore, derivative of trace(A) w.r.t A is an identity matrix.
-{{< /alert >}}
+{{< /panel >}}
 
 {{< video "https://www.youtube.com/watch?v=41B-VWrwxKY&t=1s" >}}
 <br><br>

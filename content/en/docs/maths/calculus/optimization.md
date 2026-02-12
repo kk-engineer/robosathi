@@ -261,15 +261,15 @@ Hence, the point (x=2, y=3) on the line 2x + 3y = 13 that is closest to the orig
 
 {{< video "https://youtu.be/BDogM9wBQPo" >}}
 
-{{< panel color="rust">}}
+{{< panel color="cyan" title="Note">}}
 To solve the optimization problem, there are many methods, such as, **analytical method**, which gives the **normal equation** for the linear regression,
 but we will discuss that method later in detail, when we have understood what is linear regression? <br> <br>
 Normal Equation for linear regression:
 \[
 w^* = (X^TX)^{-1}X^Ty
 \]
-X: Feature variables <br>
-y: Vector of all observed target values <br>
+**X**: Feature variables <br>
+**y**: Vector of all observed target values <br>
 {{< /panel >}}
 
 {{< video "https://www.youtube.com/watch?v=OdYNB1KRwKo&t=1s" >}}

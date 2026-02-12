@@ -26,7 +26,7 @@ It is also the derivative of Cumulative Distribution Function (CDF) \(F_X(x)\)* 
 
 {{</ definition >}}
 
-{{< alert title="Key properties of PDF" color="success" >}}
+{{< panel title="Key properties of PDF" color="green" >}}
 1. **Non-Negative:** Function must be non-negative everywhere i.e \(f(x) \ge 0 \forall x\). <br>
 2. **Sum = 1:** Total area under curve must be equal to 1. <br>
 \( \int_{-\infty}^{\infty} f(x) \,dx = 1\) <br>
@@ -35,12 +35,12 @@ It is also the derivative of Cumulative Distribution Function (CDF) \(F_X(x)\)* 
 <br><br>
 
 [Read more about Integration]({{<ref  "/docs/maths/calculus/calculus_fundamentals" >}})
-{{< /alert >}}
+{{< /panel >}}
 
-{{< alert title="Note" color="warning" >}}
+{{< panel title="Note" color="warning" >}}
 We use a general term **Probability Distribution Function** for both **PMF**(_discrete_) and **PDF**(_continuous_) 
 because both describe how the probability is distributed across a random variable's entire domain.
-{{< /alert >}}
+{{< /panel >}}
 
 For example: <br>
 Consider a line segment/interval from \(\Omega = [0,2] \) <br>
@@ -124,9 +124,9 @@ For example: <br>
 - Random number generator that generates a random number between 0 and 1. <br>
 
 {{< imgproc "images/maths/probability/uniform_pdf.png" Resize "800x" >}}{{< /imgproc >}}
-{{< alert color="warning" >}}**Graph**: PDF of Uniform Distribution.{{< /alert >}}
+{{< panel color="charcoal" title="PDF of Uniform Distribution" >}}{{< /panel >}}
 {{< imgproc "images/maths/probability/uniform_cdf.png" Resize "800x" >}}{{< /imgproc >}}
-{{< alert color="warning" >}}**Graph**: CDF of Uniform Distribution.{{< /alert >}}
+{{< panel color="charcoal" title="CDF of Uniform Distribution" >}}{{< /panel >}}
 
 {{< video "https://youtu.be/UrLRdi88U3g?si=63sHZ1B-1kUtf4E3" >}}
 
@@ -163,15 +163,15 @@ For example:
 - Measurement of errors in scientific experiments. <br>
 
 {{< imgproc "images/maths/probability/gaussian_pdf.png" Resize "800x" >}}{{< /imgproc >}}
-{{< alert color="warning" >}}**Graph**: PDF of Gaussian Distribution.{{< /alert >}}
+{{< panel color="charcoal" title="PDF of Gaussian Distribution" >}}{{< /panel >}}
 {{< imgproc "images/maths/probability/gaussian_cdf.png" Resize "800x" >}}{{< /imgproc >}}
-{{< alert color="warning" >}}**Graph**: CDF of Gaussian Distribution.{{< /alert >}}
+{{< panel color="charcoal" title="CDF of Gaussian Distribution" >}}{{< /panel >}}
 
-{{< alert title="68-95-99 Rule" color="success" >}} 
+{{< panel title="68-95-99 Rule" color="green" >}} 
 - 68.27% of the data lie within 1 standard deviation of the mean i.e \(\mu \pm \sigma\) <br>
 - 95.45% of the data lie within 2 standard deviations of the mean i.e \(\mu \pm 2\sigma\)<br>
 - 99.73% of the data lie within 3 standard deviations of the mean i.e \(\mu \pm 3\sigma\) <br>
-{{< /alert >}}
+{{< /panel >}}
 
 {{<video "https://youtu.be/B3SLD_4M2FU?si=RhLAyLCzab7hLeF0" >}}
 
@@ -196,9 +196,9 @@ $$
 {{</ definition >}}
 
 {{< imgproc "images/maths/probability/exponential_pdf.png" Resize "800x" >}}{{< /imgproc >}}
-{{< alert color="warning" >}}**Graph**: PDF of Exponential Distribution.{{< /alert >}}
+{{< panel color="charcoal" title="PDF of Exponential Distribution" >}}{{< /panel >}}
 {{< imgproc "images/maths/probability/exponential_cdf.png" Resize "800x" >}}{{< /imgproc >}}
-{{< alert color="warning" >}}**Graph**: CDF of Exponential Distribution.{{< /alert >}}
+{{< panel color="charcoal" title="CDF of Exponential Distribution" >}}{{< /panel >}}
 
 {{< question >}}
 At a bank, a teller spends 4 minutes, on an average, with every customer. What is the probability that a randomly 
@@ -245,7 +245,7 @@ So, probability of a customer being served in greater than 2 minutes is 60%(appr
 <br>
 {{< video "https://youtu.be/WXgmMDe1bTM?si=NrvCQCsoCie0JsBC" >}}
 
-{{< alert title="Memoryless Property of Exponential Distribution" color="success" >}}
+{{< panel title="Memoryless Property of Exponential Distribution" color="green" >}}
 Probability of waiting for an additional period of time for an event to occur is independent of 
 how long you have already waited. <br>
 e.g: Lifetime of electronic items follow exponential distribution.
@@ -257,7 +257,7 @@ it has been working for 1 day or 1 year or 5 years. <br>
 rather than degradation over time.
 - Also, useful for 'reliability analysis' of electronic systems where a 'random failure' model is more appropriate than
 a 'wear out' model. <br>
-{{< /alert >}}
+{{< /panel >}}
 
 {{< question >}}
 Suppose, we know that an electronic item has lasted for time \(x>t\) days, then what is the probability that it will last 
@@ -287,7 +287,7 @@ is independent of the time 't' days it has already survived._ <br>
 <br>
 {{< video "https://youtu.be/DFjUpTcLooM?si=FP8Lq_5MDOFhvm6h" >}}
 
-{{< alert title="Relation of Exponential Distribution and Poisson Distribution" color="success" >}}
+{{< panel title="Relation of Exponential Distribution and Poisson Distribution" color="green" >}}
 Poisson distribution models the number of events occurring in a fixed interval of time, 
 given a constant average rate \(\lambda \). <br>
 Exponential distribution models the time interval between those successive events. <br>
@@ -296,7 +296,7 @@ Exponential distribution models the time interval between those successive event
 
 *Note: If the number of events in a given interval follow a Poisson distribution, then the waiting time between 
 those events will necessarily follow an Exponential distribution.* 
-{{< /alert >}}
+{{< /panel >}}
 
 {{< answer >}}
 Lets see the **proof** for the above statement. <br><br>

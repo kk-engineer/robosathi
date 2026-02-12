@@ -106,11 +106,11 @@ where \(n\) is the number of mutually exclusive partitions of the sample space \
 
 *Now, we can also generalize the Bayes' Theorem using the Law of Total Probability.*
 
-{{< alert color="success" title="Generalised Bayes' Theorem">}}
+{{< panel color="green" title="Generalised Bayes' Theorem">}}
 $$
 P(A_i \mid B) = \frac{P(A_i)*P(B \mid A_i)}{\sum_{j=1}^{n} P(A_j)*P(B \mid A_j)}
 $$
-{{< /alert >}}
+{{< /panel >}}
 
 {{< video "https://youtu.be/CWnh1E8F-XU?si=7vp-yW89Cxw64P7S" >}}
 <br>

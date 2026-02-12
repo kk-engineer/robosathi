@@ -78,7 +78,7 @@ associativity, commutativity, distributivity, existence of a zero vector, and ad
 e.g.: Set of all points in 2D is a vector space. <br>
 {{</ definition >}}
 
-{{< alert color="success" title="Vector Operations" >}}
+{{< panel color="green" title="Vector Operations" >}}
 **Addition:** <br>
 We can only add vectors of the same dimension. <br>
 - Commutative: \(a + b = b + a\)
@@ -165,7 +165,7 @@ _{\text{2×2}}\)
 <br><br>
 *Note: We will NOT discuss about cross product \(\mathbf{u} \times \mathbf{v}\); product perpendicular to both vectors.*
 
-{{< /alert >}}
+{{< /panel >}}
 
 
 {{< definition title="Linear Combination">}}

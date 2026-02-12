@@ -25,11 +25,11 @@ To represent a **line** in 2D space, we need 2 things: <br>
 {{</ answer >}}
 <br>
 
-{{< alert color="secondary" title="Hyperplane" >}}
+{{< panel color="orange" title="Hyperplane" >}}
 A **hyperplane** is a lower (d-1) dimensional **sub-space** that **divides** a d-dimensional space into 2 **distinct** parts.
-{{< /alert >}}
+{{< /panel >}}
 
-{{< alert color="success" title="Equation of a Hyperplane" >}}
+{{< panel color="green" title="Equation of a Hyperplane" >}}
 Similarly, to represent a **hyperplane** in d-dimensions, we need 2 things: <br>
 1. \(\vec{w}\) = **direction** of the hyperplane = vector **perpendicular** to the hyperplane
 2. \(w_0\) = **distance** from the **origin**
@@ -55,9 +55,9 @@ Similarly, to represent a **hyperplane** in d-dimensions, we need 2 things: <br>
 2. Away from the origin
 
 {{< imgproc "images/maths/linear_algebra/hyperplane.png" Resize "800x" >}}{{< /imgproc >}}
-{{< /alert >}}
+{{< /panel >}}
 
-{{< alert color="success" title="Distance from Origin" >}}
+{{< panel color="green" title="Distance from Origin" >}}
 If a point 'x' is on the hyperplane, then it satisfies the below equation: <br>
 \[
 \pi_d = \mathbf{w}^\top \mathbf{x} + w_0 = 0 \\
@@ -79,7 +79,7 @@ If a point 'x' is on the hyperplane, then it satisfies the below equation: <br>
     \(w_0 > 0\) => Hyperplane is in the **opposite** direction of **unit** vector \(\mathbf{\widehat{w}}\) w.r.t the **origin**.
 
 
-{{< /alert >}}
+{{< /panel >}}
 
 {{< question >}}
 Consider a line as a hyperplane in 2D space. Let the unit vector point towards the positive x-axis direction.<br>
@@ -105,7 +105,7 @@ i.e, towards the **-ve** x-axis direction. <br>
 {{</ answer >}}
 <br>
 
-{{< alert color="success" title="Half Spaces" >}}
+{{< panel color="green" title="Half Spaces" >}}
 A hyperplane divides a space into 2 distinct parts called **half-spaces**. <br>
 e.g.: A 2D hyperplane divided a 3D space into 2 distinct parts. <br>
 *Similar example in real world: A wall divides a room into 2 distinct spaces.*
@@ -147,13 +147,13 @@ Equation of distance of any point \(x\prime\) from the hyperplane:
 d_{\pi_d} = \frac{\mathbf{w}^\top \mathbf{x\prime} + w_0}{\Vert \mathbf{w}\Vert} = 0
 \]
 {{< imgproc "images/maths/linear_algebra/half_spaces.png" Resize "800x" >}}{{< /imgproc >}}
-{{< /alert >}}
+{{< /panel >}}
 
-{{< alert color="warning" title="Applications of Equation of Hyperplane" >}}
+{{< panel color="rust" title="Applications of Equation of Hyperplane" >}}
 The above concept of equation of hyperplane will be very helpful when we discuss the following topics later:
 1. **Logistic Regression**
 2. **Support Vector Machines**
-{{< /alert >}}
+{{< /panel >}}
 
 {{< video "https://www.youtube.com/watch?v=VU7hUuNydUE&t=1s" >}}
 <br><br>

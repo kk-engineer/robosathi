@@ -10,9 +10,9 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
 
-{{< alert color="success" title="Hypothesis" >}}
+{{< panel color="green" title="Hypothesis" >}}
 An idea that is suggested as a possible explanation for a phenomenon, but has not been found to be true.
-{{< /alert >}}
+{{< /panel >}}
 
 {{< question >}}
 Why do we need **Hypothesis Testing**?
@@ -39,7 +39,7 @@ The statement representing an effect, a difference, or a relationship. <br>
 It must be true if the null hypothesis is rejected.
 {{< /definition >}}
 
-{{< alert color="success" title="Types of Hypothesis Testing" >}}
+{{< panel color="green" title="Types of Hypothesis Testing" >}}
 1. **Test of Means:** <br>
 - 1-Sample Mean Test: Compare sample mean to a known population mean.
 - 2-Sample Mean Test: Compare means of 2 populations.
@@ -69,11 +69,11 @@ It must be true if the null hypothesis is rejected.
 6. **Regression Test:** <br>
 - T-Test: For regression coefficients
 - F-Test: For overall regression significance
-{{< /alert >}}
+{{< /panel >}}
 
 {{< video "https://youtu.be/u1DsXg2G7_c?si=m78ntxJv_uVGXF6b" >}}
 
-{{< alert color="secondary" title="Framework for Hypothesis Testing" >}}
+{{< panel color="orange" title="Framework for Hypothesis Testing" >}}
 We can structure any hypothesis test in 6 steps as follows: <br><br>
 **Step 1**: Define the null and alternative hypotheses. <br>
 **Step 2**: Select a relevant statistical test for the task with associated test statistic. <br>
@@ -83,7 +83,7 @@ typically - 5% or 1%. <br>
 **Step 5**: Compute the p-value from the observed value of test-statistic. <br>
 **Step 6**: Make a decision to either accept or reject the null hypothesis, based on the significance level (\(\alpha\)). <br>
 
-{{< /alert >}}
+{{< /panel >}}
 
 {{< question >}}
 Perform a hypothesis test to compare the mean recovery time of 2 medicines.
@@ -132,7 +132,7 @@ If \(p_{value} < \alpha\), we reject the null hypothesis and accept the alternat
 
 {{< video "https://youtu.be/t_6o-RlcBDI?si=Szy5cFwMYrFKBa1w&t=1" >}}
 
-{{< alert color="success" title="Left or Right Sided (Tailed) Test" >}}
+{{< panel color="green" title="Left or Right Sided (Tailed) Test" >}}
 We need to do a left or right sided test, or a 2-sided test, this depends upon our alternate hypothesis and test statistic. <br>
 
 Let's continue our 2 sample mean T-test to understand the concept: <br>
@@ -170,7 +170,7 @@ So, we want \(t_{obs}\) to be very negative or very positive to confidently conc
 We accept \(H_a\) if \(t_{obs} < t^1_{\alpha/2}\)  or \(t_{obs} > t^2_{\alpha/2}\).
 
 *Note: For critical applications '\(\alpha\)' can be very small i.e. 0.1% or 0.01%, e.g medicine.* <br>
-{{< /alert >}}
+{{< /panel >}}
 
 {{< video "https://www.youtube.com/watch?v=1pM0UfNgEQI&t=1s" >}}
 
@@ -216,9 +216,9 @@ Yes, having a large sample size makes a hypothesis test more powerful. <br>
 
 {{< video "https://www.youtube.com/watch?v=DFY2cKy4Sjg&t=1s" >}}
 
-{{< alert color="warning" >}}
+{{< panel color="cyan" title="P-Value">}}
 P-value only measures whether the observed change is statistically significant.
-{{< /alert >}}
+{{< /panel >}}
 
 {{< definition title="Effect Size" >}}
 It is a standardized objective measure that complements p-value by clarifying whether a statistically significant 

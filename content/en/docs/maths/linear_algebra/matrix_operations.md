@@ -59,7 +59,7 @@ Rank of a matrix is the number of **linearly independent** rows or columns of th
 
 {{< /definition >}}
 
-{{< alert color="secondary" title="Matrix Operations" >}}
+{{< panel color="orange" title="Matrix Operations" >}}
 **Addition:** <br>
 We add two matrices by adding the corresponding elements. <br>
 They must have same dimensions. <br>
@@ -125,9 +125,9 @@ _{\text{2 x 2}}
 2. (AB)C = A(BC) ; Associative <br>
 3. A(B+C) = AB+AC ; Distributive <br>
 
-{{< /alert >}}
+{{< /panel >}}
 
-{{< alert color="success" title="Square Matrix" >}}
+{{< panel color="green" title="Square Matrix" >}}
 **Square Matrix:** <br>
 It is a matrix with same number of rows and columns (m=n). <br><br>
 \(
@@ -241,10 +241,10 @@ _{\text{n x n}}
 
 **Important:**  <br>
 \( \mathbf{I} \times \mathbf{A} = \mathbf{A} \times \mathbf{I} = \mathbf{A} \)
-{{< /alert >}}
+{{< /panel >}}
 
 
-{{< alert color="secondary" title="Operations of Square Matrix" >}}
+{{< panel color="orange" title="Operations of Square Matrix" >}}
 **Trace:** <br>
 It is the sum of the elements on the **main diagonal** of a square matrix. <br>
 *Note: Main diagonal is NOT defined for a rectangular matrix.* <br>
@@ -391,7 +391,7 @@ _{\text{3 x 3}}
 7. Symmetric matrix, if invertible, then \((\mathbf{A}^{-1})^\mathrm{T} = \mathbf{A}^{-1}\),
 since, \(\mathbf{A} = \mathbf{A}^\mathrm{T}\)
 
-{{< /alert >}}
+{{< /panel >}}
 
 {{< definition title="Orthogonal Matrix">}}
 It is a square matrix that whose rows and columns are **orthonormal** vectors, i.e, they are **perpendicular** to each other

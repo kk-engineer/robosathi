@@ -107,7 +107,7 @@ For example:
    \]
 
 
-{{< alert title="Key properties of CDF" color="success" >}} 
+{{< panel title="Key properties of CDF" color="green" >}} 
 1. **Non-Decreasing**:  
 For any 2 values \(x_1\) and \(x_2\) such that \(x_1 \leq x_2\), corresponding CDF must satisfy - <br>
 \(F(x_1) \leq F(x_2)\) <br>
@@ -129,9 +129,9 @@ In the above coin toss CDF example, if we approach X=1 from right, say 1.001, 1.
 the value of \(F(X) = P(X \leq x) = F(1) = 3/4\).<br>
 But, if we approach \(X=1\) from left, say 0.99, 0.999 etc, the value of \(F(X) = 1/4\), 
 as these values do NOT yet include the value of the probability at \(X=1\).<br>
-{{< /alert >}}
+{{< /panel >}}
 
-{{< alert color="secondary" title="Discrete Case" >}}
+{{< panel color="orange" title="Discrete Case" >}}
 For a discrete random variable, the CDF is a step function (i.e with jumps). <br>
 Value of the probability of a random variable X, at any given value x, is calculated by summing up all the probabilities
 for values \(\le x\).<br><br>
@@ -139,9 +139,9 @@ for values \(\le x\).<br><br>
 In the above coin toss example - <br>
 Height of the jump at 'x' = Probability at that value 'x'.<br>
 e.g: Jump at (x=1) = 1/2 = Probability at (x=1). <br>
-{{< /alert >}}
+{{< /panel >}}
 
-{{< alert color="secondary" title="Continuous Case" >}}
+{{< panel color="orange" title="Continuous Case" >}}
 For a continuous random variable, the CDF is a continuous function. <br>
 CDF for continuous random variable is calculated by integrating the probability density function (PDF)
 from \(-\infty\) to the given value \(x\).<br><br>
@@ -150,7 +150,7 @@ from \(-\infty\) to the given value \(x\).<br><br>
 \(PDF = f(x) = F'(X) = \frac{dF_X(x)}{dx} \)
 <br><br>
 [Read more about Integration]({{<ref  "/docs/maths/calculus/calculus_fundamentals" >}})
-{{< /alert >}}
+{{< /panel >}}
 
 {{< video "https://youtu.be/YqbtUTJT--E?si=UiVUx00ebssGCLgJ&t=1" >}}
 <br><br>

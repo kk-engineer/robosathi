@@ -140,7 +140,7 @@ using **Central Limit Theorem**.<br>
 
 *Note:We will not prove the complete thing, but we will understand the concept in enough depth for clarity.* <br>
 
-{{< alert color="success" title="Sampling Distribution of a Proportion" >}}
+{{< panel color="green" title="Sampling Distribution of a Proportion" >}}
 \(Y \sim Bernoulli(p)\) <br>
 \(X \sim Binomial(n,p)\) <br> 
 E[X] = mean = np <br>
@@ -171,7 +171,7 @@ Standard Error = \(SE_{\hat{p}} = \sqrt{Var[\frac{X}{n}]} = \sqrt{\frac{p(1-p)}{
 
 *Note: Large Sample Condition - Approximation is only valid when the expected number of successes and failures are both > 10 (sometimes 5).* <br>
 \(np \ge 10 ~and~ n(1-p) \ge 10\)
-{{< /alert >}}
+{{< /panel >}}
 
 {{< definition title="1-Sample Z-Test of Proportion" >}}
 It is used to test whether the observed proportion in a sample differs from hypothesized proportion. <br>

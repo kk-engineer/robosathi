@@ -24,12 +24,12 @@ Commonly visualised as a bar chart. <br>
 
 {{< imgproc "images/maths/probability/cdf_example_1.png" Resize "800x" >}}{{< /imgproc >}}
 
-{{< alert title="Key properties of PMF" color="success" >}}
+{{< panel title="Key properties of PMF" color="green" >}}
 1. **Non-Negative:** Probability of any value 'x' must be non-negative i.e \(P(X=x) \ge 0 ~\forall x~\). <br>
 2. **Sum = 1:** Sum of probabilities of all possible outcomes must be 1. <br>
 \( \sum_{x} P(X=x) = 1 \) <br>
 3. For any value that the discrete random variable can NOT take, the probability must be zero.
-{{< /alert >}}
+{{< /panel >}}
 
 {{< video "https://youtu.be/xExee4sdtnU?si=cPkCyQ7NNYdfGIt5" >}}
 
@@ -65,10 +65,10 @@ independent trials. <br>
 For example:
 - Counting number of heads(success) in 'n' coin tosses. <br>
 
-{{< alert color="warning" title="Assumptions">}}
+{{< panel color="rust" title="Assumptions">}}
 1. Trials are independent. <br>
 2. Probability of success remains constant for every trial. <br>
-{{< /alert >}}
+{{< /panel >}}
 <br>
 {{< imgproc "images/maths/probability/binomial.png" Resize "800x" >}}{{< /imgproc >}}
 
@@ -122,7 +122,7 @@ For example:
 2. Number of website clicks in a given time period. <br><br>
 
 {{< imgproc "images/maths/probability/poisson_pmf.png" Resize "800x" >}}{{< /imgproc >}}
-{{< alert color="warning" >}}**Graph**: PMF of Poisson Distribution.{{< /alert >}}
+{{< panel color="charcoal" title="PMF of Poisson Distribution">}}{{< /panel >}}
 
 {{< question >}}
 A company receives, on an average, 5 customer emails per hour. What is the probability of receiving exactly 3 emails

@@ -54,7 +54,7 @@ is multiplied by a matrix. <br>
 \(\lambda < 0 \): Vector's direction is reversed <br>
 {{</ definition >}}
 
-{{< alert color="success" title="Characteristic Equation" >}}
+{{< panel color="green" title="Characteristic Equation" >}}
 Since, for an eigen vector, result of linear transformation, i.e, multiplying the vector by a matrix, 
 is just a scalar multiple of the original vector, =>
 \[
@@ -129,7 +129,7 @@ So, we can choose any vector, where x-axis and y-axis components are same, i.e, 
 Similarly, for \(\lambda_2 = 1\) <br>
 we will get, eigen vector: \(v_2 = \begin{bmatrix} 1 \\  \\ -1 \\ \end{bmatrix}\) <br>
 
-{{</ alert >}}
+{{</ panel >}}
 
 {{< question >}}
 What are the eigen values and vectors of an identity matrix?
@@ -203,7 +203,7 @@ So, eigen values are the diagonal elements of the matrix.
 {{</ answer >}}
 <br>
 
-{{< alert color="success" title="Key Properties of Eigen Values and Eigen Vectors" >}}
+{{< panel color="green" title="Key Properties of Eigen Values and Eigen Vectors" >}}
 1. For a \(n \times n\) matrix, there are \(n\) eigen values.
 2. Eigen values need NOT be **unique**, e.g, identity matrix has only one eigen value \(\lambda = 1\).
 3. **Sum** of eigen values = **trace** of matrix = sum of diagonal elements, i.e, <br>
@@ -240,7 +240,7 @@ We know that for eigen vectors - <br>
 \therefore \mathbf{v_1} \cdot \mathbf{v_2} = 0 \\[10pt]
 => \text{ eigen vectors are orthogonal to each other,} => \mathbf{v_1} \perp \mathbf{v_2} \\[10pt]
 \]
-{{< /alert >}}
+{{< /panel >}}
 
 {{< question >}}
 How will we calculate the 2nd power of a matrix i.e \(\mathbf{A}^2\)?
@@ -328,7 +328,7 @@ Therefore, if we **diagonalize** a square matrix then the computation of power o
 Next, let's see **how to diagonalize a matrix**.
 {{</ answer >}}
 
-{{< alert color="success" title="Eigen Value Decomposition" >}}
+{{< panel color="green" title="Eigen Value Decomposition" >}}
 \(\mathbf{V}\): M**atrix of all eigen vectors**(as columns) of matrix \(\mathbf{A}\) <br>
 \( \mathbf{V} = \begin{bmatrix}
 \mathbf{v}_1 & \mathbf{v}_2 & \cdots & \mathbf{v}_n \\
@@ -367,7 +367,7 @@ Just reshuffling the above equation will give us the **Eigen Value Decomposition
 
 **Important:** Given that \(\mathbf{V}^{-1}\) exists, i.e, all the eigen vectors are linearly independent. <br>
 
-{{< /alert >}}
+{{< /panel >}}
 For example: <br>
 Let's revisit the example given above: <br>
 \(\mathbf{A} = \begin{bmatrix}
@@ -442,7 +442,7 @@ We know, \( \mathbf{V} ~and~ \mathbf{\Lambda} \), we need to calculate \(\mathbf
 \)
 <br><br>
 
-{{< alert color="success" title="Spectral Decomposition" >}}
+{{< panel color="green" title="Spectral Decomposition" >}}
 **Spectral decomposition** is a specific type of eigendecomposition that applies to a **symmetric** matrix, 
 requiring its eigenvectors to be **orthogonal**. <br>
 In contrast, a general eigendecomposition applies to any diagonalizable matrix and does not require the eigenvectors 
@@ -467,15 +467,15 @@ And, the **spectral** decomposition of a **real symmetric** matrix is: <br>
 **Important:** Note that, we are discussing only the special case of **real symmetric** matrix here, <br>
 because a real symmetric matrix is guaranteed to have all real eigenvalues. <br>
 
-{{</ alert >}}
+{{</ panel >}}
 
-{{< alert color="secondary" title="Applications of Eigen Value Decomposition" >}}
+{{< panel color="orange" title="Applications of Eigen Value Decomposition" >}}
 1. **Principal Component Analysis** (PCA): For dimensionality reduction.
 2. **Page Rank Algorithm**: For finding the importance of a web page.
 3. **Structural Engineering**: By calculating the eigen values of a bridge's structural model, we can identify its **natural**
  **frequencies** to ensure that the bridge won't **resonate** and be damaged by external forces, such as wind, and seismic waves.
 
-{{</ alert >}}
+{{</ panel >}}
 
 {{< video "https://www.youtube.com/watch?v=T5US_vIhvOA&t=1s" >}}
 
