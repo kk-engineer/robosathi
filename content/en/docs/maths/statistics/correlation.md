@@ -10,8 +10,7 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
 <br>
-{{< definition >}}
-**Covariance:** <br>
+{{< definition title="Covariance" >}}
 It measures the direction of linear relationship between two variables \(X\) and \(Y\). <br>
 
 \[Population ~ Covariance(X,Y) = \sigma_{xy} = \frac{1}{N}\sum_{i=1}^{N}(x_i - \mu_{x})(y_i - \mu_{y})\] <br>
@@ -54,13 +53,10 @@ Let's calculate the covariance: <br>
 \(\text{Cov}(X, Y) = \frac{1}{3-1}[(1-2)(2-4) + (2-2)(4-4) + (3-2)(6-4)]= 0\) <br>
 \( = \frac{1}{2}[2+0+2]= 2\) <br>
 => Cov(X,Y) > 0 i.e if X increases, Y increases and vice versa. <br>
-<br>
 
 {{< video "https://youtu.be/deAM6uPsdAQ?si=J7sZEwpA51-Jm7sJ" >}}
-<br>
 
-{{< definition >}}
-**Correlation:** <br>
+{{< definition title="Correlation" >}}
 It measures both the strength and direction of the linear relationship between two variables \(X\) and \(Y\). <br>
 It is a standardized version of covariance that gives a dimensionless measure of linear relationship. <br>
 
@@ -68,10 +64,8 @@ There are 2 popular ways to calculate correlation coefficient: <br>
 1. Pearson Correlation Coefficient (r) <br>
 2. Spearman Rank Correlation Coefficient (\(\rho\))<br>
 {{</ definition >}}
-<br>
 
-{{< definition >}}
-**Pearson Correlation Coefficient (r):** <br>
+{{< definition title="Pearson Correlation Coefficient (r)" >}}
 It is a standardized version of covariance and most widely used measure of correlation. <br>
 *Assumption:* Data is normally distributed. <br><br>
 \[r_{xy} = \frac{Cov(X, Y)}{\sigma_{x} \sigma_{y}}\] <br>
@@ -111,8 +105,7 @@ Therefore, we can say that there is a strong +ve linear relationship between X a
 <br><br>
 
 
-{{< definition >}}
-**Spearman Rank Correlation Coefficient (\(\rho\)):** <br>
+{{< definition title="Spearman Rank Correlation Coefficient (\(\rho\))" >}}
 It is a measure of the strength and direction of the monotonic relationship between two ranked variables \(X\) and \(Y\).<br>
 It captures monotonic relationship, meaning the variables move in the same or opposite direction, <br>
 but not necessarily a linear relationship. 
@@ -149,7 +142,6 @@ Here, Spearman's rank correlation coefficient \(\rho\) will be perfect 1 as ther
 as X increases, Y increases and vice versa. <br>
 But, the Pearson's correlation coefficient (r) will be slightly less than 1 i.e r = 0.9662.
 
-<br>
 {{< video "https://youtu.be/Vsy2pH2M9F0?si=hPe9P5mS-lWR3va-" >}}
 
 {{< alert color="success" title="Correlation Application" >}}

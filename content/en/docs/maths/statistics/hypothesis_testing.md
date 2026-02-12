@@ -25,10 +25,8 @@ by assessing whether observed difference or patterns are likely due to chance or
 - Based on the results of hypothesis testing, we can make reliable inferences about the whole group based on a representative sample.
 - It helps us determine whether an observed result is statistically significant finding, or if it could have just happened by random chance.
 {{< /answer >}}
-<br>
 
-{{< definition >}}
-**Hypothesis Testing:** <br>
+{{< definition title="Hypothesis Testing" >}}
 It is a statistical inference framework used to make decisions about a population parameter, such as, the mean, variance,
 distribution, correlation, etc., based on a sample of data.
 It provides a formal method to evaluate competing claims. <br>
@@ -131,9 +129,8 @@ If \(p_{value} < \alpha\), we reject the null hypothesis and accept the alternat
 *Note: In the above example \(p_{value} < \alpha\), so we reject the null hypothesis.* <br>
 
 {{< /answer >}}
-<br>
+
 {{< video "https://youtu.be/t_6o-RlcBDI?si=Szy5cFwMYrFKBa1w&t=1" >}}
-<br>
 
 {{< alert color="success" title="Left or Right Sided (Tailed) Test" >}}
 We need to do a left or right sided test, or a 2-sided test, this depends upon our alternate hypothesis and test statistic. <br>
@@ -176,19 +173,15 @@ We accept \(H_a\) if \(t_{obs} < t^1_{\alpha/2}\)  or \(t_{obs} > t^2_{\alpha/2}
 {{< /alert >}}
 
 {{< video "https://www.youtube.com/watch?v=1pM0UfNgEQI&t=1s" >}}
-<br>
 
-{{< definition >}}
-**Significance Level (\(\alpha\)):** <br>
+{{< definition title="Significance Level (\(\alpha\))" >}}
 It is the probability of wrongly rejecting a true null hypothesis, known as a Type I error or false +ve rate. <br>
 - Tolerance level of wrongly accepting alternate hypothesis.
 - If the p-value < \(\alpha\), we reject the null hypothesis and conclude that the finding is statistically NOT so significant..
 
 {{< /definition >}}
-<br>
 
-{{< definition >}}
-**Critical Value:** <br>
+{{< definition title="Critical Value" >}}
 It is a specific point on the test-statistic distribution that defines the boundaries of the null hypothesis 
 acceptance/rejection region. <br>
 - It tells us that at what value (\(t_{\alpha}\)) of test statistic will the area under curve be equal to the significance level \(\alpha\).
@@ -198,10 +191,8 @@ acceptance/rejection region. <br>
 
 {{< imgproc "images/maths/statistics/critical_value.png" Resize "800x" >}}{{< /imgproc >}}
 {{< /definition >}}
-<br>
 
-{{< definition >}}
-**Power of Test:** <br>
+{{< definition title="Power of Test" >}}
 It is the probability that a hypothesis test will correctly reject a false null hypothesis (\(H_{0}\)) 
 when the alternative hypothesis (\(H_{a}\)) is true.
 - Power of test = \(1 - \beta\)
@@ -223,15 +214,13 @@ Yes, having a large sample size makes a hypothesis test more powerful. <br>
 - Also, as n increases, t-distribution approaches normal distribution.
 {{</ answer >}}
 
-<br>
 {{< video "https://www.youtube.com/watch?v=DFY2cKy4Sjg&t=1s" >}}
 
 {{< alert color="warning" >}}
 P-value only measures whether the observed change is statistically significant.
 {{< /alert >}}
 
-{{< definition >}}
-**Effect Size:** <br>
+{{< definition title="Effect Size" >}}
 It is a standardized objective measure that complements p-value by clarifying whether a statistically significant 
 finding has any real world relevance. <br>
 It quantifies the magnitude of relationship between two variables. <br>
@@ -262,7 +251,6 @@ improvement (p-value<0.05), compared to a placebo group.
 1. Small effect size: Cohen's d = 0.1 => drug had minimal effect.
 2. Large effect size: Cohen's d = 0.8 => drug produced substantial improvement.
 
-<br>
 {{< video "https://www.youtube.com/watch?v=AfawJHBRQOc&t=01s" >}}
 <br><br>
 

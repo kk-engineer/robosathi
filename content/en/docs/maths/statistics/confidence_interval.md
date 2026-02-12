@@ -10,8 +10,7 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
 <br>
-{{< definition >}}
-**Confidence Interval:** <br>
+{{< definition title="Confidence Interval" >}}
 It is a range of values that is likely to contain the true population mean, based on a sample. <br>
 Instead of giving a point estimate, it gives a range of values with confidence level. <br><br>
 
@@ -84,7 +83,7 @@ We can see that initially company B's salary looked obviously better, <br>
 but after calculating the 95% CI, we can see that there is a significant overlap in the salaries of two companies,<br>
 i.e [36.12, 37.94].
 {{</ answer >}}
-<br>
+
 {{< video "https://www.youtube.com/watch?v=vQb9l9Zw3Hs&t=1s" >}}
 
 <br><br>

@@ -10,16 +10,14 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
 <br>
-{{< definition >}}
-**Performance Metrics:** <br>
+{{< definition title="Performance Metrics" >}}
 They are quantitative measures used to evaluate how well a machine learning model performs on unseen data. <br>
 E.g.: For regression models, we have - MSE, RMSE, MAE, R^2 metric, etc. <br>
 Here, we will discuss various performance metrics for classification models.
 {{</ definition >}}
-<br>
 
-{{< definition >}}
-**Confusion Matrix:** <br>
+
+{{< definition title="Confusion Matrix" >}}
 It is a table that summarizes model's predictions against the actual class labels, detailing where the model 
 succeeded and where it failed. <br>
 It is used for binary or multi-class classification problems.
@@ -117,8 +115,7 @@ F1 ~ Score = 2 * \frac{Precision \times Recall}{Precision + Recall} \\[10pt]
 
 {{< video "https://youtu.be/Z1-OC4sl-Qw?si=tVAerxRJ95jCDH6-&t=1" >}}
 
-{{< definition >}}
-**Receiver Operating Characteristic (ROC) Curve:** <br>
+{{< definition title="Receiver Operating Characteristic (ROC) Curve" >}}
 It is a graphical plot that shows the discriminating ability of a binary classifier system, as its
 discrimination threshold is varied. <br>
 **Y-axis**: True Positive Rate (**TPR**), Recall, Sensitivity <br>
@@ -217,8 +214,7 @@ Unacceptable precision for a good fraud detection system.<br>
 
 {{< video "https://www.youtube.com/watch?v=0tX3df_rz-0" >}}
 
-{{< definition >}}
-**Precision-Recall Curve:** <br>
+{{< definition title="Precision-Recall Curve" >}}
 It is used to evaluate the performance of a binary classifier model across various thresholds. <br>
 It is similar to the ROC curve, but it uses Precision instead of TPR on the Y-axis. <br>
 Plots **Precision** (Y-axis) against **Recall** (X-axis) for different classification thresholds. <br>
@@ -233,7 +229,6 @@ Recall = \frac{TP}{TP + FN}
 
 **AU PRC = PR AUC = Area under Precision-Recall curve**
 {{</ definition >}}
-<br>
 
 {{< answer >}}
 Let's revisit the fraud detection example discussed above to understand the utility of PR curve. <br>
@@ -248,9 +243,9 @@ Let's revisit the fraud detection example discussed above to understand the util
 If we check the location of above (Precision, Recall) point on PRC curve, we will find that it is located near the 
 _bottom right corner_, i.e, the model performance is poor.
 {{</ answer >}}
-<br>
-{{< video "https://www.youtube.com/watch?v=vIqEUeDGAiE" >}}
-<br><br>
 
+{{< video "https://www.youtube.com/watch?v=vIqEUeDGAiE" >}}
+
+<br><br>
 ```End of Section```
 

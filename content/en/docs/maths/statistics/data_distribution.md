@@ -11,17 +11,14 @@ math: true
         "Statistics for AI & ML | Full Course Videos">}}
 <br>
 
-{{< definition >}}
-**Measures of Central Tendency:** <br>
+{{< definition title="Measures of Central Tendency" >}}
 A single number that describes the central, typical, or representative value of a dataset, e.g, mean, median, and mode. <br>
 The mean is the average, the median is the middle value in a sorted list, and the mode is the most frequently occurring value. <br>
 
 - A single representative value can be used to compare different groups or distributions.
 {{< /definition >}}
-<br>
 
-{{< definition >}}
-**Mean:** <br>
+{{< definition title="Mean" >}}
 The artihmetic average of a set of numbers i.e sum all values and divide by the number of values. <br>
 \(mean = \frac{1}{n}\sum_{i=1}^{n}x_i\) <br>
 
@@ -41,10 +38,9 @@ For example: <br>
 1. mean\((1,2,3,4,5) = \frac{1+2+3+4+5}{5} = 3 \) <br>
 2. With outlier: mean\((1,2,3,4,100) = \frac{1+2+3+4+100}{5} = \frac{110}{5} = 22\) <br>
 _Note: Just a single extreme value of 100 has pushed the mean from 3 to 22._ 
-<br><br>
+<br>
 
-{{< definition >}}
-**Median:** <br>
+{{< definition title="Median" >}}
 The middle value of a sorted list of numbers. It divides the dataset into 2 equal halves.<br>
 _Calculation:_ <br>
 - Arrange the data points in ascending order.
@@ -64,10 +60,9 @@ For example: <br>
 2. median\((1,2,3,4,5,6) = \frac{3+4}{2} = 3.5\) <br>
 3. With outlier: median\((1,2,3,4,100) = 3\) <br>
 _Note: No impact of outlier._
-<br><br>
+<br>
 
-{{< definition >}}
-**Mode:** <br>
+{{< definition title="Mode" >}}
 The most frequently occurring value in a dataset. <br>
 - Dataset can have 1 mode i.e unimodal, 2 modes i.e bimodal, and more than 2 modes i.e multimodal.
   - If NO value repeats, then NO mode.
@@ -80,21 +75,17 @@ The most frequently occurring value in a dataset. <br>
 - A dataset can have multiple modes, or no mode at all, which can make mode less informative.
 
 {{</ definition >}}
-<br>
-{{< video "https://youtu.be/tRqgJS1nR4o?si=P3vdco_f4DkMtWpS" >}}
-<br>
 
-{{< definition >}}
-**Measures of Dispersion(Spread):** <br>
+{{< video "https://youtu.be/tRqgJS1nR4o?si=P3vdco_f4DkMtWpS" >}}
+
+{{< definition title="Measures of Dispersion(Spread)" >}}
 It measures the spread or variability of a dataset. <br>
 Quantifies how spread out or scattered the data points are. <br>
 E.g: Range, Variance, Standard Deviation, Median Absoulute Deviation(MAD), Skewness, Kurtosis, etc.
 
 {{</ definition >}}
-<br>
 
-{{< definition >}}
-**Range:** <br>
+{{< definition title="Range" >}}
 The difference between the largest and smallest values in a dataset. Simplest measure of dispersion <br>
 \(range = max - min\)
 
@@ -109,8 +100,7 @@ For example: <br>
 1. range\((1,2,3,4,5) = 5 - 1 = 4\) <br>
 <br>
 
-{{< definition >}}
-**Variance:** <br>
+{{< definition title="Variance" >}}
 The average of the squared distance of each value from the mean. <br>
 Measures the spread of data points. <br>
 
@@ -121,10 +111,8 @@ Measures the spread of data points. <br>
 - Highly sensitive to outliers, as squaring amplifies the weight of extreme data points.
 - Less intuitive to understand, as the units are square of original units.
 {{</ definition >}}
-<br>
 
-{{< definition >}}
-**Standard Deviation:** <br>
+{{< definition title="Standard Deviation" >}}
 The square root of the variance, measures average distance of data points from the mean. <br> 
 - Low standard deviation indicates that the data points are clustered around the mean, whereas <br> 
 high standard deviation means that the data points are spread out over a wide range.
@@ -142,8 +130,8 @@ For example: <br>
 \]
 <br>
 
-{{< definition >}}
-**Mean Absolute Deviation:** <br>
+{{< definition title="Mean Absolute Deviation" >}}
+
 It is the average of absolute deviation or distance of all data points from mean.
 
 \( mad = \frac{1}{n}\sum_{i=1}^{n}|x_i - \bar{x}| \) <br>
@@ -156,10 +144,9 @@ It is the average of absolute deviation or distance of all data points from mean
 For example: <br>
 1. Mean Absolute Deviation\((1,2,3,4,5) = \\ \frac{1}{5}\left(\left|1-3\right| + \left|2-3\right| + \left|3-3\right| + \left|4-3\right| + \left|5-3\right|\right) = 
 \frac{1}{5}\left(2+1+0+1+2\right) = \frac{6}{5} = 1.2\)
-<br><br>
+<br>
 
-{{< definition >}}
-**Skewness:** <br>
+{{< definition title="Skewness" >}}
 It measures the asymmetry of a data distribution. <br>
 Tells us whether the data is concentrated on one side of mean and is there a long tail stretching on the other side. <br>
 
@@ -184,10 +171,9 @@ For example: <br>
 1. Consider the salary of employees in a company. Most employees earn a very modest salary, but a few executives earn 
 extremely high salaries. This dataset will be positively skewed with the mean salary > median salary. <br>
 Median salary would be a better representation of the typical salary of employees.
-<br><br>
+<br>
 
-{{< definition >}}
-**Kurtosis:** <br>
+{{< definition title="Kurtosis" >}}
 It measures the "tailedness" of a data distribution. <br>
 It describes how much the data is concentrated in tails (fat or thin) versus the center. <br>
 
@@ -222,19 +208,14 @@ Normal distribution has kurtosis = 3. <br>
 <br>
 {{< imgproc "images/maths/statistics/excess_kurtosis.png" Resize "800x" >}}{{< /imgproc >}}
 
-<br>
 {{< video "https://youtu.be/ljxOw47oUrU?si=LqttW0ZyGCImT1Wm" >}}
-<br> 
 
-{{< definition >}}
-**Measures of Position:** <br>
+{{< definition title="Measures of Position" >}}
 It helps us understand the relative position of a data point i.e where a specific value lies within a dataset. <br>
 E.g: Percentile, Quartile, Inter Quartile Range(IQR), etc.<br>
 {{</ definition >}}
-<br>
 
-{{< definition >}}
-**Percentile:** <br>
+{{< definition title="Percentile" >}}
 It indicates the percentage of scores in a dataset that are equal to or below a specific value. <br>
 Here, the complete dataset is divided into 100 equal parts. <br>
 - \(k^{th}\) percentile => at least \(k\) percent of the data points are equal to or below the value.
@@ -243,10 +224,9 @@ Here, the complete dataset is divided into 100 equal parts. <br>
 {{</ definition >}}
 For example: <br>
 1. 90th percentile => score is higher than 90% of of all other test takers.
-<br><br>
+<br>
 
-{{< definition >}}
-**Quartile:** <br>
+{{< definition title="Quartile" >}}
 They are special percentiles that divide the complete dataset into 4 equal parts. <br>
 
 **Q1** => **25th percentile**, value below which 25% of the data falls. <br>
@@ -270,10 +250,9 @@ Q3 = (11+1) * 3/4 = 12*3/4 = 9
 \]
 <br>
 {{< imgproc "images/maths/statistics/quartiles.png" Resize "800x" >}}{{< /imgproc >}}
-<br><br>
+<br>
 
-{{< definition >}}
-**Inter Quartile Range(IQR):** <br>
+{{< definition title="Inter Quartile Range(IQR)" >}}
 It is the single number that measures the spread of middle 50% of the data, i.e Q1-Q3.<br>
 - More robust measure of spread than range as is NOT impacted by outliers.
 

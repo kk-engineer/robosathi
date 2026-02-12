@@ -10,8 +10,7 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
 
-{{< definition >}}
-**Chi-Square Distribution (\(\chi^2\)):** <br>
+{{< definition title="Chi-Square Distribution (\(\chi^2\))" >}}
 A random variable Q is said to follow a chi-square distribution with 'n' degrees of freedom,i.e \(\chi^2(n)\), <br>
 if it is the sum of squares of 'n' independent random variables that follow a standard normal distribution, i.e, \(N(0,1)\).
 \[
@@ -85,8 +84,7 @@ Note that the denominator is \(\sqrt{E_{i}}\) NOT \(\sqrt{Var_{i}}\). <br>
 **Important**: \(E_{i}\): Expected count should be large i.e >= 5 (typically) for a good enough approximation. <br>
 {{< /alert >}}
 
-{{< definition >}}
-**Chi-Square (\(\chi^2\)) Test Statistic:** <br>
+{{< definition title="Chi-Square (\(\chi^2\)) Test Statistic" >}}
 It is formed by squaring the approximately standard normal counts above, and summing them up. <br>
 For \(k\) categories, the test statistic is: <br>
 \[
@@ -97,24 +95,20 @@ Note: For very large 'n', the Pearson's chi-square (\(\chi^2\)) test statistic f
 {{</ definition >}}
 <br>
 {{< video "https://www.youtube.com/watch?v=ZvESq3cXTKo&t=1s" >}}
-<br>
 
 {{< alert color="warning" >}}
 _Note_: _All the hypothesis tests get their name from the underlying distribution of the test statistic._
 {{< /alert >}}
 
-{{< definition >}}
-**Chi-Square (\(\chi^2\)) Test:** <br>
+{{< definition title="Chi-Square (\(\chi^2\)) Test" >}}
 It is used to analyze categorical data to determine whether there is a significant difference between observed and expected counts. <br>
 It is a **non-parametric** test for categorical data, i.e, does NOT make any assumption about the underlying distribution 
 of the data, such as, normally distributed with known mean and variance; only uses observed and expected count/frequencies. <br>
 _Note_: Requires a large sample size.
 
 {{</ definition >}}
-<br>
 
-{{< definition >}}
-**Test of Goodness of Fit:** <br>
+{{< definition title="Test of Goodness of Fit" >}}
 It is used to compare the observed frequency distribution of a single categorical variable to a hypothesized or expected 
 probability distribution. <br>
 It can be used to determine whether a sample taken from a population follows a particular distribution, 
@@ -173,10 +167,8 @@ Therefore, the coin is biased towards head.
 {{</ answer >}}
 
 {{< video "https://youtu.be/XdsOaHQYXnk?si=Zmrqtz7eZjHvxH--&t=1" >}}
-<br><br>
 
-{{< definition >}}
-**Test of Independence:** <br>
+{{< definition title="Test of Independence" >}}
 It is used to determine whether an association exists between two categorical variables, 
 using a contingency(dependency) table. <br>
 It is a non-parametric test, i.e, does NOT make any assumption about the underlying distribution of the data. <br>
@@ -207,7 +199,6 @@ N = Sample size <br>
 \(O_{ij}\): Observed count for \(cell_{i,j}\) <br>
 
 {{</ definition >}}
-<br>
 
 {{< question >}}
 A survey of 100 students was conducted to understand whether there is any relation between gender and beverage preference. <br>
@@ -247,7 +238,7 @@ Critical value = \(\chi^2(0.05,1)\) = 3.84 <br>
 Since, \(t_{obs}\) = 4.76 > 3.84 (critical value), we reject the null hypothesis \(H_0\). <br>
 Therefore, the gender and beverage preference are dependent.
 {{</ answer >}}
-<br>
+
 {{< video "https://youtu.be/yiymXqaA608" >}}
 
 <br><br>

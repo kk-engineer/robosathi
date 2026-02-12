@@ -10,8 +10,7 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
 <br>
-{{< definition >}}
-**T-Test:** <br>
+{{< definition title="T-Test" >}}
 It is a statistical test that is used to determine whether the sample mean is equal to a hypothesized value or <br> 
 is there a significant difference between the sample means of 2 groups. <br>
 - It is a parametric test, since it assumes data to be approximately normally distributed.
@@ -20,10 +19,8 @@ is there a significant difference between the sample means of 2 groups. <br>
   - population standard deviation \(\sigma\) is unknown.
 - It is based on Student's t-distribution.
 {{</ definition >}}
-<br>
 
-{{< definition >}}
-**Student's t-distribution:** <br>
+{{< definition title="Student's t-distribution" >}}
 It is a continuous probability distribution that is a symmetrical, bell-shaped curve similar
 to the normal distribution but with heavier tails. <br>
 - Shape of the curve or mass in tail is controlled by degrees of freedom.
@@ -45,9 +42,8 @@ So, we have only (k-1) terms that can change independently, therefore, the DOF(\
 {{< /alert >}}
 
 {{< video "https://www.youtube.com/watch?v=tdgmwh0DZJU&t=1s" >}}
-<br>
-{{<definition >}}
-**1-Sample T-Test:** <br>
+
+{{<definition title="1-Sample T-Test">}}
 It is used to test whether the sample mean is equal to a known/hypothesized value. <br>
 Test statistic (t):
 \[
@@ -91,12 +87,10 @@ Since \(t_{obs}\) > \(t_{0.05}\), we reject the null hypothesis. <br>
 And, accept the alternative hypothesis that the API response time is significantly > 100 ms. <br>
 Hence, the developer's claim is NOT valid.
 {{</ answer >}}
-<br>
-{{< video "https://www.youtube.com/watch?v=pQ6owcLIpms&t=1s" >}}
-<br>
 
-{{< definition >}}
-**2-Sample T-Test:** <br>
+{{< video "https://www.youtube.com/watch?v=pQ6owcLIpms&t=1s" >}}
+
+{{< definition title="2-Sample T-Test" >}}
 It is used to determine whether there is a significant difference between the means of two independent groups. <br>
 There are 2 types of 2-sample t-test: <br>
 1. *Unequal Variance*
@@ -171,7 +165,7 @@ _Important: Find the value of \(t_{\alpha}\) in [T-table](https://www.sjsu.edu/f
 Since \(t_{obs}\) > \(t_{0.05}\), we reject the null hypothesis. <br>
 And, accept the alternative hypothesis that the new model has better accuracy than the existing model. <br>
 {{</ answer >}}
-<br>
+
 {{< video "https://www.youtube.com/watch?v=MnJfCKaCYSU&t=1s" >}}
 
 <br><br>

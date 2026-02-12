@@ -12,8 +12,7 @@ math: true
 <br>
 Before we understand the Central Limit Theorem, let's understand a few related concepts. <br>
 
-{{< definition >}}
-**Population Mean:** <br>
+{{< definition title="Population Mean" >}}
 It is the true average of the entire group. <br>
 It describe the central tendency of the entire population. <br>
 
@@ -21,28 +20,22 @@ It describe the central tendency of the entire population. <br>
 N: Number of data points <br>
 
 {{</ definition >}}
-<br>
 
-{{< definition >}}
-**Sample Mean:** <br>
+{{< definition title="Sample Mean" >}}
 It is the average of a smaller representative subset (a sample) of the entire population. <br>
 It provides an estimate of the population mean. <br>
 
 \( \bar{x} = \frac{1}{n}\sum_{i=1}^{n}x_i \) <br>
 n: size of sample <br>
 {{</ definition >}}
-<br>
 
-{{< definition >}}
-**Law of Large Numbers:** <br>
+{{< definition title="Law of Large Numbers" >}}
 This law states that as the number of I.I.D samples from a population increases, <br>
 the sample mean converges to the true the population mean. <br>
 In other words, a long-run average of a repeated random variable approaches the expected value. <br>
 {{</ definition >}}
-<br>
 
-{{< definition >}}
-**Central Limit Theorem:** <br>
+{{< definition title="Central Limit Theorem" >}}
 This law states that for a sequence of of I.I.D random variables \( X_1, X_2, \dots, X_n \), <br>
 with finite mean and variance, the distribution of the sample mean \( \bar{X} \) approaches a normal distribution 
 as \( n \rightarrow \infty \), regardless of its original population distribution. <br>
@@ -114,7 +107,6 @@ e.g: <br>
 1. Cauchy distribution has infinite mean and infinite variance.
 2. Pareto distribution (with low alpha) has infinite variance, such as distribution of wealth.  
 {{</ answer >}}
-<br>
 
 {{< video "https://youtu.be/GcHz8vOggnc?si=326B1_v-egzrLZDh" >}}
 
