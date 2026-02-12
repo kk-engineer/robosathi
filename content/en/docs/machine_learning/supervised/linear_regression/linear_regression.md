@@ -10,7 +10,7 @@ math: true
 "Linear Regression | All Videos" >}}
 <br>
 
-{{< panel color="blue" title="Example" >}}
+{{< panel color="blue" title="Predict Salary" >}}
 Let's understand linear regression using an example to predict salary.
 
 Predict the salary 💰 of an IT employee, based on various factors, such as, years of experience, domain, role, etc.
@@ -231,7 +231,7 @@ e.g:
 \Sigma ^{+}=\left[\begin{matrix}1/5&0\\ 0&1/2\\ 0&0\end{matrix}\right]=\left[\begin{matrix}0.2&0\\ 0&0.5\\ 0&0\end{matrix}\right]
 \]
 
-**Note**: Time Complexity = O(mn^2￼)
+**Note**: Time Complexity = O(mn^2)
 {{< /panel >}}
 
 {{< video "https://youtu.be/E-1kMEymBuA" >}}
