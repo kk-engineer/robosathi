@@ -12,8 +12,9 @@ math: true
 <br>
 
 {{< panel color="blue" title="Categorical Variables" >}}
-- ML models operate on numerical vectors.
-- Categorical variables must be transformed (encoded) while preserving information and semantics.
+ML models operate on numerical vectors.
+
+Categorical variables must be transformed (encoded) while preserving information and semantics.
 - One Hot Encoding (OHE)
 - Label Encoding
 - Ordinal Encoding

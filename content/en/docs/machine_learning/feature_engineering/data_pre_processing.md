@@ -12,14 +12,13 @@ math: true
 <br>
 
 {{< panel color="blue" title="Real World 🌎 Data" >}}
-- Messy and Incomplete.
-- We need to pre-process the data to make it:
+**Messy and Incomplete.**
+We need to pre-process the data to make it:
 - Clean
 - Consistent
 - Mathematically valid
 - Computationally stable
-- So that, the machine learning algorithm can
-- safely consume the data.
+- So that, the machine learning algorithm can safely consume the data.
 {{< /panel >}}
 
 {{< panel color="orange" title="Missing Values" >}}

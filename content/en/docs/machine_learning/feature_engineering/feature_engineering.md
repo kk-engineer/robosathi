@@ -11,20 +11,16 @@ math: true
 
 <br>
 
-{{< panel color="blue" title="Visual" >}}
-{{< imgproc "images/machine_learning/feature_engineering/feature_engineering/slide_01_01.png" Resize "1400x" >}}{{< /imgproc >}}
-{{< /panel >}}
-
 {{< panel color="orange" title="Feature Engineering" >}}
-- Use domain knowledge 📕 to create new or transform existing features to improve model performance 🏋️‍♀️.
+Use domain knowledge 📕 to create new or transform existing features to improve model performance 🏋️‍♀️.
 {{< /panel >}}
 
-{{< panel color="green" title="Polynomial 🐙 FeaturesCreate polynomial features, such as, x, x, etc., to learn non-linear " >}}
-- Polynomial 🐙 FeaturesCreate polynomial features, such as, x, x, etc., to learn non-linear relationship.
+{{< panel color="green" title="Polynomial 🐙 Features" >}}
+Create polynomial features, such as, x^2, x^3, etc., to learn non-linear relationship.
+{{< imgproc "images/machine_learning/feature_engineering/feature_engineering/slide_04_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
 {{< panel color="red" title="Visual" >}}
-{{< imgproc "images/machine_learning/feature_engineering/feature_engineering/slide_04_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
 {{< panel color="navy" title="Feature Crossing 🦓" >}}

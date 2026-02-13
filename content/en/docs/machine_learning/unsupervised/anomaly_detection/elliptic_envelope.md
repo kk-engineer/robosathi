@@ -44,7 +44,6 @@ math: true
 
 {{< panel color="orange" title="Visual" >}}
 {{< imgproc "images/machine_learning/unsupervised/anomaly_detection/elliptic_envelope/slide_07_01.png" Resize "1400x" >}}{{< /imgproc >}}
-{{< imgproc "images/machine_learning/unsupervised/anomaly_detection/elliptic_envelope/slide_07_02.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
 {{< panel color="green" title="Problem 🦀" >}}
