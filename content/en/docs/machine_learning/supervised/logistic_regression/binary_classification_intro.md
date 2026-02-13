@@ -1,8 +1,8 @@
 ---
-title: Binary Classification Intro
-description: Binary Classification Intro
+title: Binary Classification
+description: Binary Classification
 date: 2026-02-13
-weight: 221
+weight: 1
 math: true
 ---
 

@@ -2,7 +2,7 @@
 title: Logistic Probabilistic Interpretation
 description: Logistic Probabilistic Interpretation
 date: 2026-02-13
-weight: 225
+weight: 5
 math: true
 ---
 

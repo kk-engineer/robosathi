@@ -2,7 +2,7 @@
 title: Log Odds
 description: Log Odds
 date: 2026-02-13
-weight: 224
+weight: 4
 math: true
 ---
 

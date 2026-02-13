@@ -2,7 +2,7 @@
 title: Logistic Regularization
 description: Logistic Regularization
 date: 2026-02-13
-weight: 223
+weight: 3
 math: true
 ---
 

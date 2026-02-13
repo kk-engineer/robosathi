@@ -2,7 +2,7 @@
 title: Log Loss
 description: Log Loss
 date: 2026-02-13
-weight: 222
+weight: 2
 math: true
 ---
 

@@ -97,8 +97,13 @@ log \mathcal{L}(w)  &= Nlog(\frac{1}{\sigma\sqrt{2\pi}}) - \sum_{i=1}^N
 **Note**: The first term is constant w.r.t ‘w'.
 
 So, we need to find parameters ‘w' that maximize the log likelihood.
-\[log \mathcal{L}(w)∝-\frac{1}{2\sigma^{2}}\sum_{i=1}^{N}(y_{i}-x_{i}^{T}w)^{2} \\ ∵\frac{1}{2\sigma^{2}}is constant \\ log \mathcal{L}(w)∝-\sum_{i=1}^{N}(y_{i}-x_{i}^{T}w)^{2}\]
-
+\[ 
+\begin{align}
+log \mathcal{L}(w) & \propto -\frac{1}{2\sigma^2} \sum_{i=1}^N (y_i-x_i^Tw)^2 \\ 
+& \because \frac{1}{2\sigma^2} \text{ is constant} \\
+log \mathcal{L}(w) & \propto -\sum_{i=1}^N (y_i-x_i^Tw)^2 \\ 
+\end{align}
+\]
 {{< /panel >}}
 
 {{< panel color="red" title="Ordinary Least Squares" >}}
