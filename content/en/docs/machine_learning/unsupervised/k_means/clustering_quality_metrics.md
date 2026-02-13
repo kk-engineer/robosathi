@@ -6,6 +6,11 @@ weight: 315
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxddB_on_ZQ0pzP6C6gRHR_i" 
+"K Means Clustering | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="How to Evaluate Quality of Clustering?" >}}
 - 👉 Elbow Method: Quickest to compute; good for initial EDA.
 - 👉 Dunn Index: Focuses on the ‘gap' between the closest clusters.

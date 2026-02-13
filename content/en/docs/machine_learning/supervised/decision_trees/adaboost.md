@@ -6,6 +6,11 @@ weight: 249
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" 
+"Decision Tree | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Adaptive Boosting (AdaBoost)" >}}
 - Works by increasing 📈 the weight 🏋️‍♀️ of misclassified data points after each iteration, forcing the next weak learner to
 - ‘pay more attention'🚨 to the difficult cases.

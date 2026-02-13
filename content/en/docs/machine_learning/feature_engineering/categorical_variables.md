@@ -6,6 +6,11 @@ weight: 402
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcg0tJ0CAqPKjDk6Ry_atqu" 
+"Feature Engineering | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Categorical Variables" >}}
 - ML models operate on numerical vectors.
 - Categorical variables must be transformed (encoded) while preserving information and semantics.

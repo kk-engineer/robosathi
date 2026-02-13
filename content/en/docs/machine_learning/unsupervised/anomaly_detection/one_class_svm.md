@@ -6,6 +6,11 @@ weight: 353
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcQTrzlCVhQOtpvVbWsft3a" 
+"Anomaly Detection | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Use Case (Novelty Detection)🐝" >}}
 - Only one class of data (normal, non-outlier) is available for training, making standard supervised learning models impossible.
 - e.g. Only normal observations are available for fraud detection, cyber attack, fault detection etc.

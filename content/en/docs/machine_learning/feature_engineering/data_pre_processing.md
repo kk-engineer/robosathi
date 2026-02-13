@@ -6,6 +6,11 @@ weight: 401
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcg0tJ0CAqPKjDk6Ry_atqu" 
+"Feature Engineering | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Real World 🌎 Data" >}}
 - Messy and Incomplete.
 - We need to pre-process the data to make it:

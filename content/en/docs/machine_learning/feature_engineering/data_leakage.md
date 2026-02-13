@@ -6,6 +6,11 @@ weight: 404
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcg0tJ0CAqPKjDk6Ry_atqu" 
+"Feature Engineering | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Data Leakage 💦" >}}
 - Occurs when information ℹ️ NOT available at inference time is used during training 🏃‍♂️, leading to good training performance, but poor real‑world 🌎 performance.
 {{< /panel >}}

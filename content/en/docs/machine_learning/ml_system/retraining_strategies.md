@@ -6,6 +6,11 @@ weight: 502
 math: true
 ---
 
+{{< playlist " https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfu7gGVAzvIvolLZeH8Ddb1" 
+"Machine Learning System | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Why Retrain 🦮?" >}}
 - In a production ML environment, retraining is the
 - ‘maintenance engine' ⚙️

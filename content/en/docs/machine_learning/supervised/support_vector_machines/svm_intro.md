@@ -6,6 +6,11 @@ weight: 251
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfFECdHEHPM6NjErmLmg2Ff" 
+"Support Vector Machine | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Classification Problem" >}}
 - Classification Problem
 {{< imgproc "images/machine_learning/supervised/support_vector_machines/svm_intro/slide_01_01.tif" Resize "1400x" >}}{{< /imgproc >}}

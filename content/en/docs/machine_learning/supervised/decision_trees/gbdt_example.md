@@ -6,6 +6,11 @@ weight: 2492
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" 
+"Decision Tree | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Gradient Boosting Machine" >}}
 - GBM treats the final model as weighted 🏋️‍♀️ sum of ‘m' weak learners:
 - : The initial base model (usually a constant).

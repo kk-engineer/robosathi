@@ -6,6 +6,11 @@ weight: 2495
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" 
+"Decision Tree | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="LightGBM (Light Gradient Boosting Machine)" >}}
 - Developed by Microsoft, this framework is designed for high speed and efficiency with large datasets.
 - It grows trees leaf-wise rather than level-wise and uses Gradient-based One-Side Sampling (GOSS) to speed up the finding of optimal split points.

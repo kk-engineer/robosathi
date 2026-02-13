@@ -6,6 +6,11 @@ weight: 501
 math: true
 ---
 
+{{< playlist " https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfu7gGVAzvIvolLZeH8Ddb1" 
+"Machine Learning System | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Distribution Shift or Data Drift 🦣" >}}
 - The data a model works with changes over time ⏰, which causes this model's predictions to become less accurate as time passes⏳.
 {{< /panel >}}

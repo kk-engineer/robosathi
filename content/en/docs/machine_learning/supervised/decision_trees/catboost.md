@@ -6,6 +6,11 @@ weight: 2496
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" 
+"Decision Tree | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="CatBoost (Categorical Boosting)" >}}
 - 👷 Developed by Yandex, this algorithm is specifically optimized for handling ‘categorical' features without requiring extensive preprocessing (like one-hot encoding).
 {{< /panel >}}

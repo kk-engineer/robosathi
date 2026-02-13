@@ -6,6 +6,11 @@ weight: 243
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" 
+"Decision Tree | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Decision Trees can also be used for Regression tasks." >}}
 - Metric:
 - Mean Squared Error (MSE)

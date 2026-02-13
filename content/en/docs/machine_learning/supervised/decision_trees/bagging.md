@@ -6,6 +6,11 @@ weight: 245
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" 
+"Decision Tree | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Issues with Decision Tree ?" >}}
 - A single decision tree is highly sensitive to the specific training dataset. Small changes, such as, a few different rows or the presence of an outlier, can lead to a completely different tree structure.
 - Unpruned decision trees often grow until they perfectly classify the training set, essentially ‘memorizing' noise and outliers, i.e, high variance, rather than finding general patterns.

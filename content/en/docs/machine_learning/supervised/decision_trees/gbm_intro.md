@@ -6,6 +6,11 @@ weight: 2491
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" 
+"Decision Tree | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Idea 💡" >}}
 - GBM fits new models to the ‘residual errors' (the difference between actual and predicted values) of the previous models.
 {{< /panel >}}

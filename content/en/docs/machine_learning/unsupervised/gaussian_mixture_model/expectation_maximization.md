@@ -6,6 +6,11 @@ weight: 343
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcF-fY0gn6FSxSgKT84rvpV" 
+"Gaussian Mixture Model (GMM) | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="GMM as Latent Variable Model" >}}
 - GMM is a latent variable model, where the variable is a latent (hidden) variable that indicates which specific Gaussian component generated a particular data point.
 {{< /panel >}}

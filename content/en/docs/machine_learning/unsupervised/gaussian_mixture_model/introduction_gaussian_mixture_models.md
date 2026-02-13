@@ -6,6 +6,11 @@ weight: 341
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcF-fY0gn6FSxSgKT84rvpV" 
+"Gaussian Mixture Model (GMM) | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Issue with K-Means" >}}
 - K-means uses Euclidean distance and assumes that clusters are spherical (isotropic) and have the same variance across all dimensions.
 - ⭐️ Places a circle or sphere around each centroid.

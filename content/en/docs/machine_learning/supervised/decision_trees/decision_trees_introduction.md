@@ -6,6 +6,11 @@ weight: 241
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" 
+"Decision Tree | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Decision Trees Dataset 📈" >}}
 - Decision Trees Dataset 📈
 {{< imgproc "images/machine_learning/supervised/decision_trees/decision_trees_introduction/slide_01_01.tif" Resize "1400x" >}}{{< /imgproc >}}

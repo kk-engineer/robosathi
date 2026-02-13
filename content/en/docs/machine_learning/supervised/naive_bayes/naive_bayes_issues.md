@@ -6,6 +6,11 @@ weight: 262
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxftG4rRbOU9q6nFrt-Taqi7" 
+"Naive Bayes' | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Naive Bayes" >}}
 - Simple, fast, and highly effective probabilistic machine learning classifier based on Bayes' theorem.
 \[P(y|W)∝\prod_{i=1}^{d}P(w_{i}|y)×P(y)\]

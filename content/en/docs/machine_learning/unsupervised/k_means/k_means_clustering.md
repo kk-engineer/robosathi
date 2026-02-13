@@ -6,6 +6,11 @@ weight: 311
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxddB_on_ZQ0pzP6C6gRHR_i" 
+"K Means Clustering | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Visual" >}}
 {{< imgproc "images/machine_learning/unsupervised/k_means/k_means_clustering/slide_01_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}

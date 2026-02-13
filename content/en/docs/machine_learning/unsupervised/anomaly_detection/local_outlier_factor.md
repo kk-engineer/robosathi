@@ -6,6 +6,11 @@ weight: 354
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcQTrzlCVhQOtpvVbWsft3a" 
+"Anomaly Detection | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Use Case 🐝" >}}
 - Geographic fraud detection:
 - A $100 transaction might be ‘normal' in New York but an ‘outlier' in a small rural village.

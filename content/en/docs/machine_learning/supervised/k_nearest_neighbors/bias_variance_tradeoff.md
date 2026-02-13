@@ -6,6 +6,11 @@ weight: 234
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxf8kijzBo00irrF7JhvNwhZ" 
+"K Nearest Neighbors (KNN) | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="KNN Dataset" >}}
 - KNN Dataset
 {{< imgproc "images/machine_learning/supervised/k_nearest_neighbors/bias_variance_tradeoff/slide_01_01.tif" Resize "1400x" >}}{{< /imgproc >}}

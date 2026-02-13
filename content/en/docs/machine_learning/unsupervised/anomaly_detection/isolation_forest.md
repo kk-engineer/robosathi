@@ -6,6 +6,11 @@ weight: 355
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcQTrzlCVhQOtpvVbWsft3a" 
+"Anomaly Detection | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Use Case 🐝" >}}
 - 'Large scale tabular data.'
 - Credit card fraud detection in datasets with millions of rows and hundreds of features.

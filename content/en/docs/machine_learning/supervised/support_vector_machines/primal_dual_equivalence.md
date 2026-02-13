@@ -6,6 +6,11 @@ weight: 254
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfFECdHEHPM6NjErmLmg2Ff" 
+"Support Vector Machine | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Intuition💡" >}}
 - The Primal form is intuitive but computationally expensive in high dimensions.
 - ➡️ Number of new features = , grows roughly as

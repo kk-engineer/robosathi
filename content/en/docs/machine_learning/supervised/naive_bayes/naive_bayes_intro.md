@@ -6,6 +6,11 @@ weight: 261
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxftG4rRbOU9q6nFrt-Taqi7" 
+"Naive Bayes' | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Use Case" >}}
 - Let's understand Naive Bayes through an Email/Text classification example.
 - Number of words not fixed.

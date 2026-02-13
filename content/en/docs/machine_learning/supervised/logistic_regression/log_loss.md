@@ -6,6 +6,11 @@ weight: 222
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxdNo7m8fKMx-pseLizEoU6Z" 
+"Logistic Regression | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Visual" >}}
 {{< imgproc "images/machine_learning/supervised/logistic_regression/log_loss/slide_01_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}

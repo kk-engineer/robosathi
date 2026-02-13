@@ -6,6 +6,11 @@ weight: 2493
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" 
+"Decision Tree | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Advanced GBDT Algorithms" >}}
 - 🔴 XGBoost (Extreme Gradient Boosting)
 - 🔵 LightGBM (Light Gradient Boosting Machine)

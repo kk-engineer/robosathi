@@ -6,6 +6,11 @@ weight: 231
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxf8kijzBo00irrF7JhvNwhZ" 
+"K Nearest Neighbors (KNN) | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Visual" >}}
 {{< imgproc "images/machine_learning/supervised/k_nearest_neighbors/knn_intro/slide_01_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}

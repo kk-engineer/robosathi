@@ -6,6 +6,11 @@ weight: 255
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfFECdHEHPM6NjErmLmg2Ff" 
+"Support Vector Machine | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Intuition 💡" >}}
 - 🌌 If our data is not linearly separable in its original space , we can map 🗺️ it to a higher-dimensional feature space (where D>>d) using a transformation function .
 {{< /panel >}}

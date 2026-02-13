@@ -6,6 +6,11 @@ weight: 233
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxf8kijzBo00irrF7JhvNwhZ" 
+"K Nearest Neighbors (KNN) | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Euclidean Distance" >}}
 - While Euclidean distance(L norm) is the most frequently discussed, ‘Curse of Dimensionality' impacts all Minkowski norms (L)
 - L=

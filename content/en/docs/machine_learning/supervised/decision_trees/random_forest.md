@@ -6,6 +6,11 @@ weight: 246
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" 
+"Decision Tree | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Problem with Bagging" >}}
 - If one feature is extremely predictive
 - (e.g., ‘Area' for house prices), almost every bootstrap tree will split on that feature at the root.

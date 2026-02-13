@@ -6,6 +6,11 @@ weight: 257
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfFECdHEHPM6NjErmLmg2Ff" 
+"Support Vector Machine | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Intuition 💡" >}}
 - Imagine a ‘tube' of radius surrounding the regression line.
 - Points inside the tube are considered ‘correct' and incur zero penalty.

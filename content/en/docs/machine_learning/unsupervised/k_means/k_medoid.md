@@ -6,6 +6,11 @@ weight: 314
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxddB_on_ZQ0pzP6C6gRHR_i" 
+"K Means Clustering | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Issues with K-Means" >}}
 - In K-Means, the centroid is the arithmetic mean of the cluster. The mean is very sensitive to outliers.
 - Not interpretable; centroid is the mean of cluster data points and may not be an actual data point, hence not representative.

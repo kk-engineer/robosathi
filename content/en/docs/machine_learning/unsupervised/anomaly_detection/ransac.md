@@ -6,6 +6,11 @@ weight: 356
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcQTrzlCVhQOtpvVbWsft3a" 
+"Anomaly Detection | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Use Case 🐝" >}}
 - Estimate the parameters of a model from a set of observed data that contains a significant number of outliers.
 {{< /panel >}}

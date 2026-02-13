@@ -6,6 +6,11 @@ weight: 242
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" 
+"Decision Tree | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Pure Leaf 🍃 Node ?" >}}
 - Terminal node where every single data point belongs to the same class.
 - Zero Uncertainty.

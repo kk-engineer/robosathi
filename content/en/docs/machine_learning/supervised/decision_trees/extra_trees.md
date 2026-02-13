@@ -6,6 +6,11 @@ weight: 247
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" 
+"Decision Tree | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Issue with Decision Trees/ RF" >}}
 - In a standard Decision Tree or Random Forest, the algorithm searches for the optimal split point (the threshold 's') that maximizes Information Gain or minimizes MSE.
 - This search is:

@@ -6,6 +6,11 @@ weight: 405
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcg0tJ0CAqPKjDk6Ry_atqu" 
+"Feature Engineering | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Visual" >}}
 {{< imgproc "images/machine_learning/feature_engineering/model_interpretability/slide_01_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}

@@ -6,6 +6,11 @@ weight: 312
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxddB_on_ZQ0pzP6C6gRHR_i" 
+"K Means Clustering | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Idea 💡" >}}
 - Since, we cannot enumerate all partitions (i.e, partitioning 'n' observations into ‘k' distinct, non-overlapping clusters), Lloyd's algorithm provides a local search heuristic (approximate algorithm).
 {{< /panel >}}

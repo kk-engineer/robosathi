@@ -6,6 +6,11 @@ weight: 2494
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" 
+"Decision Tree | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="XgBoost (Extreme Gradient Boosting)" >}}
 - An optimized and highly efficient implementation of gradient boosting.
 - Widely used in competitive data science (like Kaggle) due to its speed and performance.

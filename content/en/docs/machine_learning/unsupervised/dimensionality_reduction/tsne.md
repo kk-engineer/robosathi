@@ -6,6 +6,11 @@ weight: 362
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxc3nlviPEjCfl5drLYy2aRF" 
+"Dimensionality Reduction Techniques | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Use Case 🐝" >}}
 - Visualizing complex datasets, such as MNIST handwritten digits, text embeddings, or biological data, where clusters are expected to form naturally.
 {{< /panel >}}

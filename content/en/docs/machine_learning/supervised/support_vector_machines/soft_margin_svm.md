@@ -6,6 +6,11 @@ weight: 253
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfFECdHEHPM6NjErmLmg2Ff" 
+"Support Vector Machine | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Intuition💡" >}}
 - Imagine the margin is a fence 🌉.
 - Hard Margin: fence is made of steel.

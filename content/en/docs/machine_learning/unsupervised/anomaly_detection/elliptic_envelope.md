@@ -6,6 +6,11 @@ weight: 352
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcQTrzlCVhQOtpvVbWsft3a" 
+"Anomaly Detection | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Use Case 🐝" >}}
 - Detect anomalies in multivariate Gaussian data, such as, biometric data (height/weight) where features are normally distributed and correlated.
 - Assumption: The data can be modeled by a Gaussian distribution.

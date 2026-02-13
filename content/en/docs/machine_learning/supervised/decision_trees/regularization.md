@@ -6,6 +6,11 @@ weight: 244
 math: true
 ---
 
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" 
+"Decision Tree | All Videos" >}}
+
+<br>
+
 {{< panel color="blue" title="Over-Fitting" >}}
 - Because trees🌲 are non-parametric and ‘greedy'💰, they will naturally try to grow 📈 until every leaf 🍃 is pure, effectively memorizing noise and outliers rather than learning generalizable patterns.
 {{< /panel >}}
