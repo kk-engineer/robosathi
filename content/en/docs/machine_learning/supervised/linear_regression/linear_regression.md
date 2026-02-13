@@ -25,7 +25,7 @@ Let's start with a simple problem and predict the salary using only one input fe
 **Slope** = \(m = w_1 \) <br>
 **Intercept** = \(c = w_0\) <br>
 
-{{< imgproc "images/machine_learning/supervised/linear_regression/salary_yoe.png" Resize "800x" >}}{{< /imgproc >}}
+{{< imgproc "images/machine_learning/supervised/linear_regression/salary_yoe.png" Resize "1400x" >}}{{< /imgproc >}}
 Similarly, if we include other factors/features impacting the salary 💰, such as, domain, role, etc, 
 we get an equation of a fitting **hyperplane**:
 
@@ -50,7 +50,7 @@ What is the dimensions of the fitting hyperplane?
 **Space** = 'd' features + 1 target variable = **'d+1' dimensions** 
 <br>
 In a **'d+1' dimensional *space***, we try to fit a **'d' dimensional *hyperplane***.
-{{< imgproc "images/machine_learning/supervised/linear_regression/fitting_hyperplane.png" Resize "800x" >}}{{< /imgproc >}}
+{{< imgproc "images/machine_learning/supervised/linear_regression/fitting_hyperplane.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /answer >}}
 
 {{< video "https://youtu.be/ylgshdNFtc8" >}}
@@ -99,14 +99,14 @@ We can **quantify** the **error** for a **single** data point in following ways:
 - **Not differentiable** at x=0, required for gradient descent.
 - **Constant gradient**, i.e \(\pm 1\), model learns at same rate, whether the error is large or small.
 
-{{< imgproc "images/machine_learning/supervised/linear_regression/absolute_value_function.png" Resize "800x" >}}{{< /imgproc >}}
+{{< imgproc "images/machine_learning/supervised/linear_regression/absolute_value_function.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
 {{< panel color="navy" title="Cost 💰 Function" >}}
 **Average loss** across all data points. <br>
 
 **Mean Squared Error (MSE)** = \[ J(w) = \frac{1}{n} \sum_{i=1}^N (y_i - \hat{y_i})^2 \]
-{{< imgproc "images/machine_learning/supervised/linear_regression/mean_squared_error.png" Resize "800x" >}}{{< /imgproc >}}
+{{< imgproc "images/machine_learning/supervised/linear_regression/mean_squared_error.png" Resize "1400x" >}}{{< /imgproc >}}
 
 {{< /panel >}}
 
@@ -122,7 +122,7 @@ We can **quantify** the **error** for a **single** data point in following ways:
 The above equation is **quadratic** in \(w_0, w_1, w_2, \dots w_d \).
 
 Below is an image of a **Paraboloid** in 3D, similarly we will have a *Paraboloid* in 'd' dimensions.
-{{< imgproc "images/machine_learning/supervised/linear_regression/paraboloid.png" Resize "800x" >}}{{< /imgproc >}}
+{{< imgproc "images/machine_learning/supervised/linear_regression/paraboloid.png" Resize "1400x" >}}{{< /imgproc >}}
 
 {{< /panel >}}
 
