@@ -1,7 +1,7 @@
 ---
 title: Soft Margin SVM
 description: Soft Margin SVM
-date: 2026-02-13
+date: 2026-02-14
 weight: 253
 math: true
 ---

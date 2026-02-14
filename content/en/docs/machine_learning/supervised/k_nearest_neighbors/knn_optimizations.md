@@ -1,7 +1,7 @@
 ---
 title: KNN Optimizations
 description: KNN Optimizations
-date: 2026-02-13
+date: 2026-02-14
 weight: 232
 math: true
 ---

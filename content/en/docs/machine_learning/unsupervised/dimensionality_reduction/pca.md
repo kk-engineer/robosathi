@@ -1,7 +1,7 @@
 ---
 title: PCA
 description: PCA
-date: 2026-02-13
+date: 2026-02-14
 weight: 361
 math: true
 ---

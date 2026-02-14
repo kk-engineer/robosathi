@@ -1,7 +1,7 @@
 ---
 title: Support Vector Regression
 description: Support Vector Regression
-date: 2026-02-13
+date: 2026-02-14
 weight: 257
 math: true
 ---

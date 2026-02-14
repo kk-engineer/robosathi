@@ -1,7 +1,7 @@
 ---
 title: Probabilistic Interpretation
 description: Probabilistic Interpretation of Linear Regression
-date: 2026-02-13
+date: 2026-02-14
 weight: 4
 math: true
 ---

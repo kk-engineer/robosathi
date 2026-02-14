@@ -1,7 +1,7 @@
 ---
 title: Naive Bayes Example
 description: Naive Bayes Example
-date: 2026-02-13
+date: 2026-02-14
 weight: 263
 math: true
 ---

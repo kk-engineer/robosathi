@@ -1,7 +1,7 @@
 ---
 title: Naive Bayes Intro
 description: Naive Bayes Intro
-date: 2026-02-13
+date: 2026-02-14
 weight: 261
 math: true
 ---

@@ -1,7 +1,7 @@
 ---
-title: Assumptions Of Linear Regression
+title: Assumptions
 description: Assumptions Of Linear Regression
-date: 2026-02-13
+date: 2026-02-14
 weight: 13
 math: true
 ---
@@ -26,7 +26,6 @@ Relationship between features and target 🎯 is **linear** in **parameters**.
 **Note**: Polynomial regression is linear regression. <br>
 \(y=w_0 +w_1x_1+w_2x_2^2 + w_3x_3^3\)
 
-{{< imgproc "images/machine_learning/supervised/linear_regression/assumptions_of_linear_regression/slide_03_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
 

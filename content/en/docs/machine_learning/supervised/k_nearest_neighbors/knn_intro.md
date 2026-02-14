@@ -1,7 +1,7 @@
 ---
 title: KNN Intro
 description: KNN Intro
-date: 2026-02-13
+date: 2026-02-14
 weight: 231
 math: true
 ---

@@ -1,7 +1,7 @@
 ---
 title: SVM Intro
 description: SVM Intro
-date: 2026-02-13
+date: 2026-02-14
 weight: 251
 math: true
 ---

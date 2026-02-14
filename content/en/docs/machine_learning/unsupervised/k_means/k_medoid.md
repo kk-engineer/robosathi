@@ -1,7 +1,7 @@
 ---
 title: K Medoid
 description: K Medoid
-date: 2026-02-13
+date: 2026-02-14
 weight: 314
 math: true
 ---

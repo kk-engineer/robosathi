@@ -1,7 +1,7 @@
 ---
 title: tSNE
 description: tSNE
-date: 2026-02-13
+date: 2026-02-14
 weight: 362
 math: true
 ---

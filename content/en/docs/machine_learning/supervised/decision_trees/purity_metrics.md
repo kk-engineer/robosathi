@@ -1,7 +1,7 @@
 ---
 title: Purity Metrics
 description: Purity Metrics
-date: 2026-02-13
+date: 2026-02-14
 weight: 242
 math: true
 ---

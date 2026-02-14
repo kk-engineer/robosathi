@@ -1,7 +1,7 @@
 ---
 title: Bias Variance Tradeoff
 description: Bias Variance Tradeoff
-date: 2026-02-13
+date: 2026-02-14
 weight: 234
 math: true
 ---

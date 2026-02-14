@@ -1,7 +1,7 @@
 ---
 title: Polynomial Regression
 description: Polynomial Regression
-date: 2026-02-13
+date: 2026-02-14
 weight: 7
 math: true
 ---

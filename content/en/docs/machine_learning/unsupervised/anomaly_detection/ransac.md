@@ -1,7 +1,7 @@
 ---
 title: RANSAC
 description: RANSAC
-date: 2026-02-13
+date: 2026-02-14
 weight: 356
 math: true
 ---

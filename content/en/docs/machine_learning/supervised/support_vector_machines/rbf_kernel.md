@@ -1,7 +1,7 @@
 ---
 title: RBF Kernel
 description: RBF Kernel
-date: 2026-02-13
+date: 2026-02-14
 weight: 256
 math: true
 ---

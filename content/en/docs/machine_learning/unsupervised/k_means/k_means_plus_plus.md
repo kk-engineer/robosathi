@@ -1,7 +1,7 @@
 ---
 title: K Means Plus Plus
 description: K Means Plus Plus
-date: 2026-02-13
+date: 2026-02-14
 weight: 313
 math: true
 ---

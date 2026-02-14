@@ -1,7 +1,7 @@
 ---
 title: Isolation Forest
 description: Isolation Forest
-date: 2026-02-13
+date: 2026-02-14
 weight: 355
 math: true
 ---
