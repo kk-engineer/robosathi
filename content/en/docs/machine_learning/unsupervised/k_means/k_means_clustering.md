@@ -94,4 +94,12 @@ math: true
 
 {{< video "https://youtu.be/s2-eu_hjepQ" >}}
 <br><br>
+
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/unsupervised/k_means/lloyds_algorithm" >}}">Next: Lloyds Algorithm</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

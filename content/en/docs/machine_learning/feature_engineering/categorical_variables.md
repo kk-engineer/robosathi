@@ -80,4 +80,12 @@ Categorical variables must be transformed (encoded) while preserving information
 
 {{< video "https://youtu.be/RRgE1pLkApk" >}}
 <br><br>
+
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/machine_learning/feature_engineering/data_pre_processing" >}}">Previous: Data Pre Processing</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/feature_engineering/feature_engineering" >}}">Next: Feature Engineering</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

@@ -118,5 +118,12 @@ _Therefore, A & B are **conditionally independent** given C._
 {{< video "https://youtu.be/Rhvj1e1Q84Q?si=999FWQPg6kLnP4rE&t=1" >}}
 <br>
 
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/maths/probability/conditional_probability" >}}">Previous: Conditional Probability</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/probability/cumulative_distribution_function" >}}">Next: Cumulative Distribution Function</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```
 

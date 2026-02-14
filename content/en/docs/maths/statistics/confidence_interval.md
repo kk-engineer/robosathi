@@ -87,4 +87,11 @@ i.e [36.12, 37.94].
 {{< video "https://www.youtube.com/watch?v=vQb9l9Zw3Hs&t=1s" >}}
 
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/maths/statistics/central_limit_theorem" >}}">Previous: Central Limit Theorem</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/statistics/hypothesis_testing" >}}">Next: Hypothesis Testing</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

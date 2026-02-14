@@ -91,4 +91,11 @@ Why weights shrink exactly to 0 in L1 regularization but NOT in L2 regularizatio
 
 {{< video "https://youtu.be/fTSqCkPyBmk" >}}
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/machine_learning/supervised/linear_regression/bias_variance_tradeoff" >}}">Previous: Bias Variance Tradeoff</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/linear_regression/regression_metrics" >}}">Next: Regression Metrics</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

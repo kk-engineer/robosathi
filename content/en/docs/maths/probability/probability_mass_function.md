@@ -139,4 +139,11 @@ Probability of receiving exactly k=3 emails in the next hour =  <br>
 {{< video "https://youtu.be/M49tlndZvxI?si=0H7yCO8IquopO2ud" >}}
 
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/maths/probability/cumulative_distribution_function" >}}">Previous: Cumulative Distribution Function</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/probability/probability_density_function" >}}">Next: Probability Density Function</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

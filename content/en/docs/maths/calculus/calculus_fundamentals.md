@@ -393,4 +393,11 @@ Since, determinant of Hessian = -4 < 0 => (x=0, y=0) is a saddle point. <br>
 {{< video "https://www.youtube.com/watch?v=qpAieJgrcR8&t=1s" >}}
 
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/calculus/optimization" >}}">Next: Optimization</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

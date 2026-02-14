@@ -68,4 +68,11 @@ Thus, providing confidence that model will perform consistently and accurately o
 
 <br><br>
 
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/maths/probability/convergence" >}}">Previous: Convergence</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/probability/markov_inequality" >}}">Next: Markov's Inequality</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

@@ -55,4 +55,12 @@ math: true
 
 {{< video "https://youtu.be/IOIM-APSCok" >}}
 <br><br>
+
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/machine_learning/feature_engineering/data_leakage" >}}">Previous: Data Leakage</a></span>
+<span style="margin-left:auto;"></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

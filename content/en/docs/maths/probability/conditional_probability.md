@@ -115,5 +115,12 @@ $$
 {{< video "https://youtu.be/CWnh1E8F-XU?si=7vp-yW89Cxw64P7S" >}}
 <br>
 
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/maths/probability/introduction" >}}">Previous: Introduction to Probability</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/probability/independence_of_events" >}}">Next: Independence of Events</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```
     

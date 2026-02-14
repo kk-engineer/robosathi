@@ -47,4 +47,12 @@ to make predictions on new, unseen data.
 
 {{< video "https://youtu.be/XL143gJmUCA" >}}
 <br><br>
+
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/introduction/types_of_ml" >}}">Next: Types of ML</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

@@ -157,4 +157,11 @@ The above concept of equation of hyperplane will be very helpful when we discuss
 
 {{< video "https://www.youtube.com/watch?v=VU7hUuNydUE&t=1s" >}}
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/maths/linear_algebra/vector_norms" >}}">Previous: Vector Norms</a></span>
+<span style="margin-left:auto;"></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

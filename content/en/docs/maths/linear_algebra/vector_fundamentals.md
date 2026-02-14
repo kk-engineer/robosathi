@@ -285,4 +285,11 @@ also form an orthonormal basis for 2-D space. <br>
 {{< video "https://www.youtube.com/watch?v=LzLswBOf_vM&t=1s" >}}
 
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/linear_algebra/matrix_operations" >}}">Next: Matrix Operations</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

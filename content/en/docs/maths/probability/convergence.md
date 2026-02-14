@@ -151,4 +151,11 @@ Y_n = \frac{1}{n} \sum_{i=1}^{n} X_i \xrightarrow{Almost ~ Sure} \frac{1}{2}
 {{< video "https://www.youtube.com/watch?v=ZIXMVF6t834&t=1s" >}}
 
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/maths/probability/independent_identically_distributed" >}}">Previous: Independent & Identically Distributed</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/probability/law_of_large_numbers" >}}">Next: Law of Large Numbers</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

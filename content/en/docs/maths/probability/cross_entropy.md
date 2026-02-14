@@ -199,4 +199,11 @@ Therefore, lower JS divergence value => P and Q are more similar. <br>
 {{< video "https://youtu.be/0wtJNYaTB-8?si=lZvH0Bk65ibb7Rqa" >}}
 
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/maths/probability/markov_inequality" >}}">Previous: Markov's Inequality</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/probability/parametric_model_estimation" >}}">Next: Parametric Model Estimation</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

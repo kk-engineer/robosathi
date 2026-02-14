@@ -111,4 +111,11 @@ e.g: <br>
 {{< video "https://youtu.be/GcHz8vOggnc?si=326B1_v-egzrLZDh" >}}
 
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/maths/statistics/correlation" >}}">Previous: Correlation</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/statistics/confidence_interval" >}}">Next: Confidence Interval</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

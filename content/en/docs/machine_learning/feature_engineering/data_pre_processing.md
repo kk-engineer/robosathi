@@ -75,4 +75,12 @@ We need to pre-process the data to make it:
 
 {{< video "https://youtu.be/1uc1S4iRCoE" >}}
 <br><br>
+
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/feature_engineering/categorical_variables" >}}">Next: Categorical Variables</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

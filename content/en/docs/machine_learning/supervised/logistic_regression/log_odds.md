@@ -11,44 +11,55 @@ math: true
 
 <br>
 
-{{< panel color="blue" title="Visual" >}}
+{{< panel color="green" title="What is the meaning of Odds ?" >}}
+Odds compare the likelihood of an event **happening** vs. **not happening**.
+
+**Odds** = \(\frac{p}{1-p}\)
+- p = probability of success
+
 {{< imgproc "images/machine_learning/supervised/logistic_regression/log_odds/slide_01_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="orange" title="What is the meaning of Odds ?" >}}
-- Odds compare the likelihood of an event happening vs. not happening.
-- Odds =
-- = probability of success
+{{< panel color="blue" title="Log Odds (Logit) Assumption" >}}
+In logistic regression we assume that Log-Odds (the log of the ratio of positive class to negative class) is a linear function of inputs.
+
+**Log-Odds (Logit)** = \(log_e \frac{p}{1-p}\)
 {{< /panel >}}
 
-{{< panel color="green" title="Log Odds (Logit) Assumption" >}}
-- In logistic regression we assume that Log-Odds (the log of the ratio of positive class to negative class) is a linear function of inputs.
-- Log-Odds (Logit) = log
-{{< /panel >}}
-
-{{< panel color="red" title="Log Odds (Logit)" >}}
-- Log Odds = log
+{{< panel color="green" title="Log Odds (Logit)" >}}
+**Log Odds** = \(log_e \frac{p}{1-p} = z\)
 \[z=w^{T}x+w_{0}\]
-\[log_{e}(\frac{p}{1-p})=z \\ ⟹\frac{p}{1-p}=e^{z}\]
-{{< /panel >}}
-
-{{< panel color="navy" title="Log Odds (Logit) (Continued)" >}}
-- Log Odds (Logit) (Continued)
-\[\frac{p}{1-p}=e^{z} \\ ⟹p=e^{z}-p.e^{z} \\ ⟹p=\frac{e^{z}}{1+e^{z}} \\ divide numerator and denominator bye^{z} \\ ⟹p=\frac{1}{1+e^{-z}}Sigmoid function\]
+\[
+\begin{align*}
+&log_{e}(\frac{p}{1-p}) = z \\ 
+&⟹\frac{p}{1-p} = e^{z} \\
+&\implies  p = e^z - p.e^z \\ 
+&\implies  p = \frac{e^z}{1+e^z} \\
+&\text { divide numerator and denominator by } e^z \\
+&\implies  p  = \frac{1}{1+e^{-z}}  \quad \text { i.e, Sigmoid function}
+\end{align*}
+\]
 {{< /panel >}}
 
 {{< panel color="blue" title="Sigmoid Function" >}}
-- Sigmoid function is the inverse of
-- log-odds (logit) function, it converts the log-odds back to probability,
-- and vice-versa.
+**Sigmoid function** is the **inverse** of log-odds (logit) function, it converts the **log-odds** back to **probability**, 
+and vice versa.
 {{< /panel >}}
 
-{{< panel color="orange" title="Range of Values 🏔️" >}}
+{{< panel color="orange" title="Range of Values" >}}
 - Probability: 0 to 1
-- Odds: 0 to +
-- Log Odds: - to +
+- Odds: 0 to + \(\infty\)
+- Log Odds: -\(\infty\) to +\(\infty\)
 {{< /panel >}}
 
 {{< video "https://youtu.be/UDAhIFDxK1g" >}}
 <br><br>
+
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/machine_learning/supervised/logistic_regression/logistic_regularization" >}}">Previous: Logistic Regularization</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/logistic_regression/logistic_probabilistic_interpretation" >}}">Next: Logistic Probabilistic Interpretation</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

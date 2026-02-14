@@ -52,4 +52,12 @@ Create polynomial features, such as, x^2, x^3, etc., to learn non-linear relatio
 
 {{< video "https://youtu.be/YFbBCnFG2o0" >}}
 <br><br>
+
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/machine_learning/feature_engineering/categorical_variables" >}}">Previous: Categorical Variables</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/feature_engineering/data_leakage" >}}">Next: Data Leakage</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

@@ -169,4 +169,11 @@ And, accept the alternative hypothesis that the new model has better accuracy th
 {{< video "https://www.youtube.com/watch?v=MnJfCKaCYSU&t=1s" >}}
 
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/maths/statistics/hypothesis_testing" >}}">Previous: Hypothesis Testing</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/statistics/z_test" >}}">Next: Z-Test</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

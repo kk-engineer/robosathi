@@ -59,4 +59,12 @@ math: true
 
 {{< video "https://youtu.be/uPjOC92Hcq0" >}}
 <br><br>
+
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/machine_learning/supervised/support_vector_machines/svm_intro" >}}">Previous: SVM Intro</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/support_vector_machines/soft_margin_svm" >}}">Next: Soft Margin SVM</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

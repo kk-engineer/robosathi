@@ -351,4 +351,11 @@ P(T>10) = e^{-(1/20) * 10} \\
 {{< video "https://youtu.be/6TTJXMEZAKo?si=sll0sJfy1aRep3c_"  >}}
 
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/maths/probability/probability_mass_function" >}}">Previous: Probability Mass Function</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/probability/expectation" >}}">Next: Expectation</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

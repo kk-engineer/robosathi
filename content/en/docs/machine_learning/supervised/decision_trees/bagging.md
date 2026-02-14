@@ -63,4 +63,12 @@ math: true
 
 {{< video "https://youtu.be/KKPljiXurPs" >}}
 <br><br>
+
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/regularization" >}}">Previous: Regularization</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/random_forest" >}}">Next: Random Forest</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

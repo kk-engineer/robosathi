@@ -73,4 +73,11 @@ a set of linear equations, making estimation *straightforward*.
 
 {{< video "https://youtu.be/iRioqzKpJI4" >}}
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/linear_regression/meaning_of_regression" >}}">Next: Meaning of 'Regression</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

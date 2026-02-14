@@ -93,4 +93,12 @@ math: true
 
 {{< video "https://youtu.be/PPeLhm38Bw8" >}}
 <br><br>
+
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/machine_learning/unsupervised/gaussian_mixture_model/introduction_gaussian_mixture_models" >}}">Previous: Introduction Gaussian Mixture Models</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/unsupervised/gaussian_mixture_model/expectation_maximization" >}}">Next: Expectation Maximization</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

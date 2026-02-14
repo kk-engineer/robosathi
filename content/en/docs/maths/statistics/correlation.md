@@ -169,4 +169,11 @@ but establishing clear causal links is difficult.
 {{< video "https://youtu.be/FH8jnYEGDzE?si=HhWImSk2PfGL_kv-" >}}
 
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/maths/statistics/data_distribution" >}}">Previous: Data Distribution</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/statistics/central_limit_theorem" >}}">Next: Central Limit Theorem</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

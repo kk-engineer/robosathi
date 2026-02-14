@@ -44,4 +44,12 @@ math: true
 
 {{< video "https://youtu.be/gBP7z0Ty4Ic" >}}
 <br><br>
+
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/unsupervised/anomaly_detection/elliptic_envelope" >}}">Next: Elliptic Envelope</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

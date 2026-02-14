@@ -34,4 +34,12 @@ math: true
 
 {{< video "https://youtu.be/j9OFJo6kuCs" >}}
 <br><br>
+
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/gbdt_example" >}}">Previous: GBDT Example</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/xgboost" >}}">Next: XgBoost</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

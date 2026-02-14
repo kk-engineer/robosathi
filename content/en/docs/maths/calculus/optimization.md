@@ -275,4 +275,11 @@ w^* = (X^TX)^{-1}X^Ty
 {{< video "https://www.youtube.com/watch?v=OdYNB1KRwKo&t=1s" >}}
 
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/maths/calculus/calculus_fundamentals" >}}">Previous: Calculus Fundamentals</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/calculus/gradient_descent" >}}">Next: Gradient Descent</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

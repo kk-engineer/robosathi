@@ -53,4 +53,12 @@ math: true
 
 {{< video "https://youtu.be/OTDLjYxInp0" >}}
 <br><br>
+
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/xgboost" >}}">Previous: XgBoost</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/catboost" >}}">Next: CatBoost</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

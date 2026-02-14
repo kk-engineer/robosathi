@@ -115,4 +115,12 @@ enabling them to generate more nuanced, context-aware, and ethically aligned out
 
 {{< video "https://youtu.be/6hUiPW-7Zpg" >}}
 <br><br>
+
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/machine_learning/introduction/what_is_ml" >}}">Previous: What is ML ?</a></span>
+<span style="margin-left:auto;"></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

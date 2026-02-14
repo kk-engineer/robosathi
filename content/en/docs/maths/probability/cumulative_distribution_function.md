@@ -155,6 +155,13 @@ from \(-\infty\) to the given value \(x\).<br><br>
 {{< video "https://youtu.be/YqbtUTJT--E?si=UiVUx00ebssGCLgJ&t=1" >}}
 <br><br>
 
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/maths/probability/independence_of_events" >}}">Previous: Independence of Events</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/probability/probability_mass_function" >}}">Next: Probability Mass Function</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```
 
    

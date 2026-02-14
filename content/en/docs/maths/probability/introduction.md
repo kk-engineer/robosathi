@@ -172,3 +172,9 @@ Similarly, we can say that \(P(get ~any ~number ~between ~1 ~and ~6)=1\) and \(P
 
 ```End of Introduction```
 
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/probability/conditional_probability" >}}">Next: Conditional Probability</a></span>
+</div>
+<!-- nav-panel:end -->

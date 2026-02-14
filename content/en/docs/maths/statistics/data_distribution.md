@@ -312,5 +312,12 @@ yet have very different distributions and appear very different when plotted.
 {{< panel color="charcoal" title="Figure: Anscombe's Quartet">}}{{< /panel >}}
 
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/statistics/correlation" >}}">Next: Correlation</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```
 

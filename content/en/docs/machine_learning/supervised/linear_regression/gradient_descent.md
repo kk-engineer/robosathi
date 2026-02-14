@@ -137,4 +137,11 @@ Uses only 1 data point selected randomly from dataset to compute gradient for pa
 
 {{< video "https://youtu.be/3Nt-lWj4Wvs" >}}
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/machine_learning/supervised/linear_regression/convex_function" >}}">Previous: Convex Function</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/linear_regression/polynomial_regression" >}}">Next: Polynomial Regression</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

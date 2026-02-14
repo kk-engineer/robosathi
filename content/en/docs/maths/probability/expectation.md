@@ -199,4 +199,11 @@ Cov(X,X) &= E[X^2] - E[X]^2 = Var[X] \\
 {{< video "https://youtu.be/F83gibIzCho?si=PKKtqYJK5Qp69vPY&t=1" >}}
 
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/maths/probability/probability_density_function" >}}">Previous: Probability Density Function</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/probability/moment_generating_function" >}}">Next: Moment Generating Function</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

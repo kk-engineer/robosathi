@@ -67,4 +67,12 @@ math: true
 
 {{< video "https://youtu.be/CR_qWTXdiEY" >}}
 <br><br>
+
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/machine_learning/ml_system/data_distribution_shift" >}}">Previous: Data Distribution Shift</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/ml_system/deployment_patterns" >}}">Next: Deployment Patterns</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

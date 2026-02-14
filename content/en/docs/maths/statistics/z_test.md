@@ -251,4 +251,11 @@ Therefore, the observed conversion rate of design B is due to random chance; thu
 {{< video "https://www.youtube.com/watch?v=ukdF4Zx7pSU" >}}
 
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/maths/statistics/t_test" >}}">Previous: T-Test</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/statistics/chi_square_test" >}}">Next: Chi-Square Test</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

@@ -95,4 +95,12 @@ math: true
 
 {{< video "https://youtu.be/SG_G4thCTF4" >}}
 <br><br>
+
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/machine_learning/unsupervised/gaussian_mixture_model/latent_variable_model" >}}">Previous: Latent Variable Model</a></span>
+<span style="margin-left:auto;"></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

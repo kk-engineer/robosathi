@@ -104,4 +104,11 @@ also GPUs are the reason for the mini-batch size to be a power of 2.*
 
 {{< video "https://youtu.be/OdYNB1KRwKo?si=AzdYvM6hpkQEK9Kc&t=3350" >}}
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/maths/calculus/optimization" >}}">Previous: Optimization</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/calculus/newton's_method" >}}">Next: Newton's Method</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

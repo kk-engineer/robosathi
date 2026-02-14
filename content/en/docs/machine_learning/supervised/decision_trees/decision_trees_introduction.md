@@ -63,4 +63,12 @@ math: true
 
 {{< video "https://youtu.be/yBNQERShy-A" >}}
 <br><br>
+
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/purity_metrics" >}}">Next: Purity Metrics</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

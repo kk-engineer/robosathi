@@ -66,4 +66,11 @@ Because, we use the logistic (sigmoid) function as the ‘link function'🔗 to 
 
 {{< video "https://youtu.be/sinmvk9LQFU" >}}
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/logistic_regression/log_loss" >}}">Next: Log Loss</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

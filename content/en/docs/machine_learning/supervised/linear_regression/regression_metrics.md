@@ -80,4 +80,11 @@ e.g: = 95th percentile of errors or 1.35\(\sigma\) for standard Gaussian data.
 
 {{< video "https://youtu.be/qh7q9M-4tls" >}}
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/machine_learning/supervised/linear_regression/regularization" >}}">Previous: Regularization</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/linear_regression/assumptions_of_linear_regression" >}}">Next: Assumptions</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

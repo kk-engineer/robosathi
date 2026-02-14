@@ -140,4 +140,11 @@ For example: <br>
 {{< video "https://www.youtube.com/watch?v=vE3suVMRH0o&t=1s" >}}
 
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/maths/probability/joint_marginal" >}}">Previous: Joint & Marginal</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/probability/convergence" >}}">Next: Convergence</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

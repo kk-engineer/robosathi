@@ -60,4 +60,11 @@ e.g:
 
 {{< video "https://youtu.be/b7RYViDf9vk" >}}
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/machine_learning/supervised/linear_regression/gradient_descent" >}}">Previous: Gradient Descent</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/linear_regression/data_splitting" >}}">Next: Data Splitting</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

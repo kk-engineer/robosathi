@@ -49,4 +49,12 @@ math: true
 
 {{< video "https://youtu.be/3b-WkL1Zn5s" >}}
 <br><br>
+
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/machine_learning/ml_system/retraining_strategies" >}}">Previous: Retraining Strategies</a></span>
+<span style="margin-left:auto;"></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

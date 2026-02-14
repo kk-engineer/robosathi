@@ -93,4 +93,12 @@ math: true
 
 {{< video "https://youtu.be/LofkdQ6rCPA" >}}
 <br><br>
+
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/machine_learning/supervised/support_vector_machines/hard_margin_svm" >}}">Previous: Hard Margin SVM</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/support_vector_machines/primal_dual_equivalence" >}}">Next: Primal Dual Equivalence</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

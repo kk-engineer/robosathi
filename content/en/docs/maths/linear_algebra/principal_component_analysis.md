@@ -107,4 +107,11 @@ Therefore, the diagonal matrix \( \Lambda \) captures the variance along every p
 <br>
 {{< video "https://www.youtube.com/watch?v=KvSeAzyoeCQ&t=1s" >}}
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/maths/linear_algebra/eigen_value_decomposition" >}}">Previous: Eigen Value Decomposition</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/linear_algebra/singular_value_decomposition" >}}">Next: Singular Value Decomposition</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

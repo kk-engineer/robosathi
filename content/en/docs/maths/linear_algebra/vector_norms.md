@@ -164,5 +164,12 @@ Therefore, \({\| A \|_2} = \sigma_{max}(A) = 3\)
 {{< video "https://www.youtube.com/watch?v=8j4GOTM5-uY&t=1s" >}}
 <br><br>
 
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/maths/linear_algebra/matrix_calculus" >}}">Previous: Vector & Matrix Calculus</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/linear_algebra/hyperplane" >}}">Next: Hyperplane</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```
 

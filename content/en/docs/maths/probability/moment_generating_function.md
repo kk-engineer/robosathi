@@ -95,4 +95,11 @@ M_X(t) = E[e^{tX}] = \sum_{i=1}^{\infty} e^{tx} P(X=x)
 {{< video "https://youtu.be/KEqqV54Raz8?si=6wjZKKChX9XWyEoY" >}}
 
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/maths/probability/expectation" >}}">Previous: Expectation</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/probability/joint_marginal" >}}">Next: Joint & Marginal</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

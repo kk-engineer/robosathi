@@ -258,4 +258,11 @@ Therefore, derivative of trace(A) w.r.t A is an identity matrix.
 
 {{< video "https://www.youtube.com/watch?v=41B-VWrwxKY&t=1s" >}}
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/maths/linear_algebra/singular_value_decomposition" >}}">Previous: Singular Value Decomposition</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/linear_algebra/vector_norms" >}}">Next: Vector Norms</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

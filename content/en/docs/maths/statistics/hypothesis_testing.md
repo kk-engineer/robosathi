@@ -254,6 +254,13 @@ improvement (p-value<0.05), compared to a placebo group.
 {{< video "https://www.youtube.com/watch?v=AfawJHBRQOc&t=01s" >}}
 <br><br>
 
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/maths/statistics/confidence_interval" >}}">Previous: Confidence Interval</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/statistics/t_test" >}}">Next: T-Test</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```
 
 

@@ -61,4 +61,12 @@ math: true
 
 {{< video "https://youtu.be/39F0lxpo8Hg" >}}
 <br><br>
+
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/decision_trees_for_regression" >}}">Previous: Decision Trees For Regression</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/bagging" >}}">Next: Bagging</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

@@ -242,4 +242,11 @@ Therefore, the gender and beverage preference are dependent.
 {{< video "https://youtu.be/yiymXqaA608" >}}
 
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/maths/statistics/z_test" >}}">Previous: Z-Test</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/statistics/performance_metrics" >}}">Next: Performance Metrics</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

@@ -39,4 +39,11 @@ For the Hessian of J(w),
 
 {{< video "https://youtu.be/PIWtSJvxYFs" >}}
 <br><br>
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/machine_learning/supervised/linear_regression/probabilistic_interpretation" >}}">Previous: Probabilistic Interpretation</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/linear_regression/gradient_descent" >}}">Next: Gradient Descent</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```

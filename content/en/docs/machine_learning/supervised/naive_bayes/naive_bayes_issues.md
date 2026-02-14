@@ -53,4 +53,12 @@ math: true
 
 {{< video "https://youtu.be/_lGBf0QoHls" >}}
 <br><br>
+
+<!-- nav-panel:start -->
+<div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
+<span><a href="{{< ref "/docs/machine_learning/supervised/naive_bayes/naive_bayes_intro" >}}">Previous: Naive Bayes Intro</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/naive_bayes/naive_bayes_example" >}}">Next: Naive Bayes Example</a></span>
+</div>
+<!-- nav-panel:end -->
+
 ```End of Section```
