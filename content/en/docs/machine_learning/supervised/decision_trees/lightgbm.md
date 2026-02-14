@@ -2,7 +2,7 @@
 title: LightGBM
 description: LightGBM
 date: 2026-02-14
-weight: 2495
+weight: 15
 math: true
 ---
 

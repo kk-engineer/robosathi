@@ -2,7 +2,7 @@
 title: Advanced GBDT Algorithms
 description: Advanced GBDT Algorithms
 date: 2026-02-14
-weight: 2493
+weight: 13
 math: true
 ---
 

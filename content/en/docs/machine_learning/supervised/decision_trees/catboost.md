@@ -2,7 +2,7 @@
 title: CatBoost
 description: CatBoost
 date: 2026-02-14
-weight: 2496
+weight: 16
 math: true
 ---
 
