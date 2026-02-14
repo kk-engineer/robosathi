@@ -11,28 +11,30 @@ math: true
 
 <br>
 
-{{< panel color="blue" title="KNN Dataset" >}}
-- KNN Dataset
+{{< panel color="charcoal" title="KNN Dataset" >}}
+Let's use this dataset to understand the impact of number of neighbours 'k'.
 {{< imgproc "images/machine_learning/supervised/k_nearest_neighbors/bias_variance_tradeoff/slide_01_01.tif" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="orange" title="High Bias, Low Variance" >}}
-- If ‘k' is very large, say, k=n,
-- the model simply predicts the majority class of the entire dataset for every query point , i.e, under-fitting.
+{{< panel color="blue" title="High Bias, Low Variance" >}}
+👉If ‘k' is very large, say, k=n,
+- model simply predicts the **majority** class of the entire dataset for every query point , i.e, **under-fitting**.
 {{< /panel >}}
 
-{{< panel color="green" title="High Variance, Low Bias" >}}
-- If ‘k' is very small, say, k=1,
-- the model is highly sensitive to noise or outliers, i.e, over-fitting.
+{{< panel color="orange" title="High Variance, Low Bias" >}}
+👉If ‘k' is very small, say, k=1,
+- model is highly sensitive to noise or outliers, as it looks at only 1 nearest neighbor, i.e, **over-fitting**.
 {{< /panel >}}
 
-{{< panel color="red" title="‘K' Hyper-Parameter Tuning" >}}
-- ‘K' Hyper-Parameter Tuning
+{{< panel color="green" title="‘K' Hyper-Parameter Tuning" >}}
+Let's plot Error vs 'K' neighbors:
 {{< imgproc "images/machine_learning/supervised/k_nearest_neighbors/bias_variance_tradeoff/slide_04_01.tif" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
 {{< panel color="navy" title="Over-Fitting Vs Under-Fitting" >}}
-- Over-Fitting Vs Under-Fitting
+- Figure 1: k=1, Over-fitting
+- Figure 2: k=n, Under-fitting
+- Figure 3: k=11, Lowest Error (Optimum)
 {{< imgproc "images/machine_learning/supervised/k_nearest_neighbors/bias_variance_tradeoff/slide_05_01.tif" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
