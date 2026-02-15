@@ -2,7 +2,7 @@
 title: Soft Margin SVM
 description: Soft Margin SVM
 date: 2026-02-14
-weight: 253
+weight: 3
 math: true
 ---
 
@@ -12,82 +12,84 @@ math: true
 <br>
 
 {{< panel color="blue" title="Intuition💡" >}}
-- Imagine the margin is a fence 🌉.
-- Hard Margin: fence is made of steel.
-- Nothing can cross it.
-- Soft Margin: fence is made of rubber(porous).Some points can ‘push' into the margin or even cross over to the wrong side, but we charge them a penalty 💵 for doing so.
-{{< /panel >}}
+💡Imagine the margin is a fence 🌉.
+- **Hard Margin**: fence is made of steel. <br>
+_Nothing can cross it_.
+- **Soft Margin**: fence is made of rubber(porous). <br>
+Some points can ‘push' into the margin or even **cross over** to the wrong side, but we charge them a **penalty** 💵 for doing so.
 
-{{< panel color="orange" title="Visual" >}}
-{{< imgproc "images/machine_learning/supervised/support_vector_machines/soft_margin_svm/slide_02_01.png" Resize "1400x" >}}{{< /imgproc >}}
-{{< /panel >}}
-
-{{< panel color="green" title="Classification Problem (labelled noise points)" >}}
-- Classification Problem (labelled noise points)
 {{< imgproc "images/machine_learning/supervised/support_vector_machines/soft_margin_svm/slide_03_01.tif" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
 {{< panel color="red" title="Issue" >}}
-- Distance from decision boundary:
-- Positive labelled 1
-- Noise 📢 points < 1
+Distance from decision boundary:
+- Distance of positive labelled points must be  \(\ge 1\)
+- But, distance of noise 📢 points (actually positive points) \(x_1, x_2 ~\&~ x_3\) < 1
 {{< /panel >}}
 
-{{< panel color="navy" title="Solution" >}}
-- ⚔️ So, we introduce a slack variable or error term
-- (pronounced ‘xi') for every single data point .
-- So,
-- Note: The above error term is also called ‘Hinge Loss'.
-\[y_{i}.(w^{T}x_{i}+w_{0})≥1-ξ_{i},∀i=1,2,…,n\]
-{{< /panel >}}
+{{< panel color="green" title="Solution" >}}
+⚔️ So, we introduce a **slack** variable or allowance for **error** term, \(\xi_i\) (pronounced ‘xi') for every single data point.
+\[y_i.(w^Tx_i + w_0) \ge 1 - \xi_i, ~ \forall i  = 1,2,\dots, n\]
+\[
+\implies \xi_i \ge 1 - y_i.(w^Tx_i + w_0) \\
+also, ~ \xi_i \ge 0 
+\]
 
-{{< panel color="blue" title="Visual" >}}
+\[So, ~ \xi _{i}=\max (0,1-y_{i}\cdot (w^Tx_i + w_0))\]
+**Note**: The above error term is also called '**Hinge Loss**'.
 {{< imgproc "images/machine_learning/supervised/support_vector_machines/soft_margin_svm/slide_06_01.png" Resize "1400x" >}}{{< /imgproc >}}
-{{< imgproc "images/machine_learning/supervised/support_vector_machines/soft_margin_svm/slide_06_02.png" Resize "1400x" >}}{{< /imgproc >}}
+**Hinge**
+{{< imgproc "images/machine_learning/supervised/support_vector_machines/soft_margin_svm/slide_06_02.png" Resize "200x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="orange" title="Slack/Error Term Meaning" >}}
-- : Correctly classified and outside (or on) the margin.
-- : Within the margin but on the correct side of the decision boundary.
-- : On the wrong side of the decision boundary (misclassified).
-\[ξ_{i}=max(0,1-y_{i}⋅f(x_{i}))\]
-{{< /panel >}}
+{{< panel color="blue" title="Slack/Error Term Interpretation" >}}
+\[\xi _{i}=\max (0,1-y_{i}\cdot f(x_{i}))\]
+- \(\xi_i = 0\) : **Correctly classified** and outside (or on) the margin.
+- \(0 < \xi_i \le 1 \) : **Within the margin** but on the correct side of the decision boundary.
+- \(\xi_i > 0\): On the **wrong side** of the decision boundary (**misclassified**).
 
-{{< panel color="green" title="Example" >}}
-- Since, the noise 📢 point are +ve () labeled:
-- :
-\[ξ_{i}=max(0,1-f(x_{i}))\]
-{{< /panel >}}
+e.g.:
+Since, the noise 📢 point are +ve (\(y_i=1\)) labeled:
+\[\xi _{i}=\max (0,1-f(x_{i}))\]
 
-{{< panel color="red" title="Classification Problem (labelled noise points)" >}}
-- Classification Problem (labelled noise points)
+- \(x_1, (d=+0.5)\): \(\xi _{i}=\max (0,1-0.5) = 0.5\)
+- \(x_2, (d=-0.5)\): \(\xi _{i}=\max (0,1-(-0.5))= 1.5\)
+- \(x_3, (d=-1.5)\): \(\xi _{i}=\max (0,1-(-1.5)) = 2.5\)
+
 {{< imgproc "images/machine_learning/supervised/support_vector_machines/soft_margin_svm/slide_09_01.tif" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="navy" title="Goal 🎯" >}}
-- Maximize the width of margin:
-- Minimize violation or sum of slack/error terms:
+
+{{< panel color="orange" title="Goal 🎯" >}}
+\[\text{Maximize the width of margin: } \min_{w, w_0} \frac{1}{2} {\|w\|^2}\]
+\[\text{Minimize violation or sum of slack/error terms: } \sum \xi_i\]
 {{< /panel >}}
 
-{{< panel color="blue" title="Optimization (Primal Formulation)" >}}
-- Subject to constraints:
-- (The ‘softened' margin constraint)
-- (Slack/Error cannot be negative)
-- Note: We use a hyper-parameter ‘C' to control the trade-off.
+{{< panel color="green" title="Optimization (Primal Formulation)" >}}
+\[\min_{w, w_0, \xi} \underbrace{\frac{1}{2} \|w\|^2}_{\text{Regularization}} + \underbrace{C \sum_{i=1}^n \xi_i}_{\text{Error Penalty}}\]
+
+Subject to **constraints**:
+1. \(y_i(w^T x_i + b) \geq 1 - \xi_i\): The ‘softened' margin constraint.
+2. \(\xi_i \geq 0\): Slack/Error cannot be negative.
+
+**Note**: We use a **hyper-parameter** ‘**C**' to control the trade-off.
 {{< /panel >}}
 
-{{< panel color="orange" title="Role of Hyper-Parameter ‘C'" >}}
-- Large ‘C': Over-Fitting; Misclassifications are expensive 💰. Model tries to keep the errors as low as possible.
-- Small ‘C': Under-Fitting;Margin width is more important than individual errors.Model will ignore outliers/noise 📢 to get a ‘cleaner'(wider) boundary.
+{{< panel color="navy" title="Hyper-Parameter ‘C'" >}}
+- **Large ‘C'**: **Over-Fitting**; <br>
+Misclassifications are expensive 💰. <br>
+Model tries to keep the errors as low as possible. <br>
+- **Small ‘C'**: **Under-Fitting**; <br>
+Margin width is more important than individual errors. <br>
+Model will ignore outliers/noise to get a ‘cleaner'(wider) boundary.
 {{< /panel >}}
 
-{{< panel color="green" title="Hinge Loss View" >}}
-- Hinge loss =
-- Note: SVM is just L2-Regularized Hinge Loss minimization, as Logistic Regression minimizes Log-Loss.
-\[min_{w,b}\frac{1}{2}∥w∥^{2}+C\sum_{i=1}^{n}HingeLoss(y_{i},f(x_{i}))\]
-{{< /panel >}}
+{{< panel color="blue" title="Hinge Loss View" >}} 
+\[ \text{Hinge loss: } \xi _{i}=\max (0,1-y_{i}\cdot (w^Tx_i + w_0))\]
 
-{{< panel color="red" title="Visual" >}}
+\[ \min_{w, b} \frac{1}{2} \|w\|^2 + C \sum_{i=1}^n \text{HingeLoss}(y_i, f(x_i))\]
+
+**Note**: SVM is just **L2-Regularized Hinge Loss minimization**, as Logistic Regression minimizes Log-Loss.
 {{< imgproc "images/machine_learning/supervised/support_vector_machines/soft_margin_svm/slide_14_01.tif" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 

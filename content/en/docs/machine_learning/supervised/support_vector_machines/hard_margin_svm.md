@@ -2,7 +2,7 @@
 title: Hard Margin SVM
 description: Hard Margin SVM
 date: 2026-02-14
-weight: 252
+weight: 2
 math: true
 ---
 
@@ -11,50 +11,55 @@ math: true
 
 <br>
 
-{{< panel color="blue" title="Classification Problem" >}}
-- Classification Problem
+{{< panel color="red" title="Assumptions of Hard Margin SVM" >}}
+- Data is perfectly linearly separable, i.e, there must exist a hyperplane that can perfectly separate the data into two distinct classes without any misclassification.
+- No noise or outliers that fall within the margin or on the wrong side of the decision boundary. Note: Even a single outlier can prevent the algorithm from finding a valid solution or drastically affect the boundary's position, leading to poor generalization.
 {{< imgproc "images/machine_learning/supervised/support_vector_machines/hard_margin_svm/slide_01_01.tif" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="orange" title="Assumptions" >}}
-- Data is perfectly linearly separable, i.e, there must exist a hyperplane that can perfectly separate the data into two distinct classes without any misclassification.
-- No noise or outliers that fall within the margin or on the wrong side of the decision boundary. Note: Even a single outlier can prevent the algorithm from finding a valid solution or drastically affect the boundary's position, leading to poor generalization.
-{{< /panel >}}
+{{< panel color="blue" title="Distance Between Margins" >}}
+\[
+\begin{aligned}
+\text{Decision Boundary: } \pi &= \mathbf{w^Tx} + w_0 = 0\\
+\text{Upper Margin: }\pi^+ &= \mathbf{w^Tx} + w_0 = +1\\
+\text{Lower Margin: }\pi^- &= \mathbf{w^Tx} + w_0 = -1\\
+\end{aligned}
+\]
 
-{{< panel color="green" title="Distance Between Margins" >}}
-- 🐎 Distance(signed) of a hyperplane from origin =
-- 🦣 Margin width = distance()
-- = =
-- distance() =
-\[\pi=w^{T}x+w_{0}=0 \\ \pi^{+}=w^{T}x+w_{0}=+1 \\ \pi^{-}=w^{T}x+w_{0}=-1\]
-{{< /panel >}}
+- 🐎 Distance(signed) of a hyperplane from origin = \(\frac{-w_0}{\|w\|}\)
+- 🦣 Margin width = distance(\(\pi^+, \pi^-\))
+- = \(\frac{1-w_0 - (-1 -w_0)}{\|w\|}\) = \(\frac{1-\cancel{w_0} + 1 + \cancel{w_0})}{\|w\|}\)
+- distance(\(\pi^+, \pi^-\)) = \(\frac{2}{\|w\|}\)
 
-{{< panel color="red" title="Distance of Hyperplane from Origin" >}}
-- Distance of Hyperplane from Origin
+**Figure: Distance of Hyperplane from Origin**
 {{< imgproc "images/machine_learning/supervised/support_vector_machines/hard_margin_svm/slide_04_01.png" Resize "1400x" >}}{{< /imgproc >}}
+[Read more about Hyperplane]({{<ref  "/docs/maths/linear_algebra/hyperplane/"  >}}) 
 {{< /panel >}}
 
-{{< panel color="navy" title="Goal 🎯" >}}
-- Separating hyperplane is exactly equidistant from and .
+{{< panel color="orange" title="Goal 🎯" >}}
+- Separating hyperplane \(\pi\) is exactly equidistant from \(\pi^+\) and  \(\pi^-\).
 - We want to maximize the margin between +ve(🐶) and -ve (😸) points.
 {{< /panel >}}
 
-{{< panel color="blue" title="Constraint" >}}
-- Combining above two constraints:
-\[w^{T}x_{i}+w_{0}≥+1fory_{i}=+1\]
-\[w^{T}x_{i}+w_{0}≤-1fory_{i}=-1\]
+{{< panel color="red" title="Constraint" >}}
+\[w^Tx_i + w_0 \ge +1 ~ for ~ y_i = +1 \]
+\[w^Tx_i + w_0 \le -1 ~ for ~ y_i = -1 \]
+👉Combining above two constraints:
 \[y_{i}.(w^{T}x_{i}+w_{0})≥1\]
 {{< /panel >}}
 
-{{< panel color="orange" title="Optimization ⚖️" >}}
-- s.t.
+{{< panel color="green" title="Optimization ⚖️" >}}
+\[\max_{w, w_0} \frac{2}{\|w\|}\]
+such that, \(y_i.(w^Tx_i + w_0) \ge 1\)
 {{< /panel >}}
 
-{{< panel color="green" title="Primal Problem" >}}
-- To maximize the margin, we must minimize .
-- s.t.
-- Note: Hard margin SVM will not work if the data has a single outlier or slight overlap.
-\[min_{w,w_{0}}\frac{1}{2}∥w∥^{2}\]
+{{< panel color="navy" title="Primal Problem" >}}
+👉To maximize the margin, we must minimize \(\|w\|\). <br>
+Since, distance(\(\pi^+, \pi^-\)) = \(\frac{2}{\|w\|}\)
+\[\min_{w, w_0} \frac{1}{2} {\|w\|^2}\]
+such that, \(y_i.(w^Tx_i + w_0) \ge 1 ~ \forall i  = 1,2,\dots, n\)
+
+**Note**: Hard margin SVM will not work if the data has a single outlier or slight overlap.
 {{< /panel >}}
 
 {{< video "https://youtu.be/uPjOC92Hcq0" >}}

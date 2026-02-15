@@ -2,7 +2,7 @@
 title: Support Vector Regression
 description: Support Vector Regression
 date: 2026-02-14
-weight: 257
+weight: 7
 math: true
 ---
 
@@ -11,55 +11,68 @@ math: true
 
 <br>
 
-{{< panel color="blue" title="Intuition 💡" >}}
-- Imagine a ‘tube' of radius surrounding the regression line.
-- Points inside the tube are considered ‘correct' and incur zero penalty.
-- Points outside the tube are penalized based on their distance from the tube's boundary.
+{{< panel color="cyan" title="Intuition 💡" >}}
+👉Imagine a ‘**tube**' of radius \(\epsilon\) **surrounding** the **regression line**.
+- Points inside the tube are considered ‘**correct**' and incur zero penalty.
+- Points outside the tube are **penalized** based on their distance from the tube's boundary.
 {{< /panel >}}
 
-{{< panel color="orange" title="Visual" >}}
-{{< imgproc "images/machine_learning/supervised/support_vector_machines/support_vector_regression/slide_02_01.png" Resize "1400x" >}}{{< /imgproc >}}
-{{< /panel >}}
 
 {{< panel color="green" title="Ignore Errors" >}}
-- SVR ignores errors as long as they are within a certain distance () from the true value.
-- This makes SVR inherently robust to noise and outliers, as it does not try to fit every single point perfectly, only those that ‘matter' to the structure of the data.
-- Note: Standard regression (like OLS) tries to minimize the squared error between the prediction and every data point.
+👉SVR ignores errors as long as they are within a certain distance (\(\epsilon\)) from the true value.
+
+🎯This makes SVR inherently robust to noise and outliers, as it does not try to fit every single point perfectly, 
+only those that ‘**matter**' to the structure of the data.
+
+**Note**: Standard regression (like OLS) tries to minimize the squared error between the prediction and every data point.
 {{< /panel >}}
 
-{{< panel color="red" title="Optimization (Primal Formulation)" >}}
-- Subject to constraints:
-- (Upper boundary)
-- (Lower boundary)
-- (Slack/Error cannot be negative)
-- Epsilon(): The width of the tube. Increasing ‘' results in fewer support vectors and a smoother (flatter) model.
-- Slack Variables (): How far a point lies outside the upper and lower boundaries of the tube.
-- C: The trade-off between the flatness of the model and the extent to which deviations larger than 7 are tolerated.
+{{< panel color="blue" title="Optimization (Primal Formulation)" >}}
+\[\min_{w, w_0, \xi, \xi^*} \underbrace{\frac{1}{2} \|w\|^2}_{\text{Regularization}} + \underbrace{C \sum_{i=1}^n \xi_i, \xi_i^*}_{\text{Error Penalty}}\]
+
+Subject to constraints:
+- \(y_i - (w^T x_i + w_0) \leq \epsilon + \xi_i\): (Upper boundary)
+- \((w^T x_i + w_0) - y_i \leq \epsilon + \xi_i^*\): (Lower boundary)
+- \(\xi_i, \xi_i^* \geq 0\): (Slack/Error cannot be negative)
+
+**Terms**:
+- Epsilon(\(\epsilon\)): The width of the tube. Increasing '\(\epsilon\)' results in fewer support vectors and a smoother (flatter) model.
+- Slack Variables (\(\xi_i, \xi_i^*\)): How far a point lies outside the upper and lower boundaries of the tube.
+- C: The trade-off between the flatness of the model and the extent to which deviations larger than \(\epsilon\) are tolerated.
 {{< /panel >}}
 
-{{< panel color="navy" title="Loss Function" >}}
-- SVR uses a specific loss function that is 0 when the error<‘'.
-- The solution becomes sparse, because the loss is zero for points inside the tube.
-- Only the Support Vectors, i.e, points outside or on the boundary of the tube have non-zero Lagrange multipliers ().
-- Note: default value in scikit-learn.
+{{< panel color="rust" title="Loss Function" >}}
+SVR uses a specific loss function that is 0 when the error<'\(\epsilon\)'.
+\[L_\epsilon(y, f(x)) = \max(0, |y - f(x)| - \epsilon)\]
+- The solution becomes sparse, because the loss is **zero** for points **inside** the tube.
+- Only the **Support Vectors**, i.e, points outside or on the boundary of the tube have **non-zero** Lagrange multipliers (\(\alpha_i\)).
+
+**Note**: \(\epsilon=0.1\) default value in scikit-learn.
 {{< /panel >}}
 
 {{< panel color="blue" title="(Wolfe) ‘Dual' Optimization" >}}
-- Subject to:
-- : point is inside the tube.
-- : support vectors; points on or outside the tube.
-- Note: cannot both be non-zero for the same point; a point cannot be simultaneously above and below the tube.
-\[max_{\alpha,\alpha^{*}}\sum_{i=1}^{n}y_{i}(\alpha_{i}-\alpha_{i}^{*})-ϵ\sum_{i=1}^{n}(\alpha_{i}+\alpha_{i}^{*})-\frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}(\alpha_{i}-\alpha_{i}^{*})(\alpha_{j}-\alpha_{j}^{*})(x_{i}^{T}x_{j})\]
-\[0≤\alpha_{i},\alpha_{i}^{*}≤C\]
+\[\max_{\alpha, \alpha^*} \sum_{i=1}^n y_i (\alpha_i - \alpha_i^*) - \epsilon \sum_{i=1}^n (\alpha_i + \alpha_i^*) - \frac{1}{2} \sum_{i=1}^n \sum_{j=1}^n (\alpha_i - \alpha_i^*) (\alpha_j - \alpha_j^*) \mathbf{(x_i^T x_j)}\]
+
+Subject to:
+1. \(\sum_{i=1}^n (\alpha_i - \alpha_i^*) = 0\)
+2. \(0 \leq \alpha_i, \alpha_i^* \leq C\)
+
+
+- \(\alpha_i = \alpha_i^* = 0\): point is inside the tube.
+- \(|\alpha_i - \alpha_i^*| > 0\) : support vectors; points on or outside the tube.
+
+**Note**: \(\alpha_i , \alpha_i^* \) cannot both be non-zero for the same point; a point cannot be simultaneously above and below the tube.
 {{< /panel >}}
 
-{{< panel color="orange" title="Inference & Kernel Trick" >}}
-- 👉 For non-linear SVR we replace dot product with kernel function .
-- ✅ Model needs to store only support vectors, i.e, points where.
-- ⭐️ for a point that lies exactly on the boundary, so we can use that to calculate the bias ():
-- Since,
-\[f(z)=\sum_{i∈SV}(\alpha_{i}-\alpha_{i}^{*})K(x_{i},z)+w_{0}\]
-\[w_{0}=y_{i}-\sum_{j∈SV}(\alpha_{j}-\alpha_{j}^{*})K(x_{j},x_{i})-ϵ\]
+{{< panel color="green" title="Inference & Kernel Trick" >}}
+\[f(z) = \sum_{i \in SV} (\alpha_i - \alpha_i^*) \mathbf{K(x_i, z)} + w_0\]
+
+- 👉 For non-linear SVR we replace dot product \(x_i^T x_j\) with kernel function \(K(x_i, x_j)\).
+- ✅ Model needs to store only support vectors, i.e, points where \(|\alpha_i - \alpha_i^*| > 0\).
+- ⭐️\(\xi_i =0 \) for a point that lies exactly on the boundary, so we can use that to calculate the bias (\(w_0\)):
+
+\[w_0 = y_i - \sum_{j \in SV} (\alpha_j - \alpha_j^*) K(x_j, x_i) - \epsilon\]
+\[ \text{Since, } y_i - (w^T x_i + w_0) \leq \epsilon + \xi_i\]
 {{< /panel >}}
 
 {{< video "https://youtu.be/hAUFhP6N0u8" >}}
