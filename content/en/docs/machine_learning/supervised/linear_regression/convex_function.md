@@ -15,7 +15,6 @@ Refers to a property of a function where a line segment connecting any two point
 - A convex function is curved upwards.
 
 {{< imgproc "images/machine_learning/supervised/linear_regression/convex_function/slide_01_01.png" Resize "1400x" >}}{{< /imgproc >}}
-{{< imgproc "images/machine_learning/supervised/linear_regression/convex_function/slide_03_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
 {{< panel color="green" title="Is MSE Cost function Convex ? YES ✅" >}}

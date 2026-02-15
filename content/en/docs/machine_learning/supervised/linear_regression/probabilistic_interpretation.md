@@ -57,7 +57,6 @@ the distribution of the sample mean(sum) approximates to a **normal distribution
 Quantifies the chance of observing a specific outcome given a known, fixed model.
 - **Likelihood (Backward/Inverse View)**:<br>
 Inverse concept used for inference (working backward from results to causes). It is a function of the parameters and measures how ‘likely' a specific set of parameters makes the observed data appear.
-{{< imgproc "images/machine_learning/supervised/linear_regression/probabilistic_interpretation/slide_09_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
 {{< panel color="navy" title="Maximum Likelihood Estimate (MLE)" >}}
@@ -106,7 +105,7 @@ log \mathcal{L}(w) & \propto -\sum_{i=1}^N (y_i-x_i^Tw)^2 \\
 \]
 {{< /panel >}}
 
-{{< panel color="red" title="Ordinary Least Squares" >}}
+{{< panel color="navy" title="Ordinary Least Squares" >}}
 
 \[
 \begin{align*}

@@ -27,7 +27,6 @@ But it is not always feasible and computationally expensive 💰(due to inverse 
 An iterative optimization algorithm slowly nudges parameters ‘w' towards a value that minimize the cost💰 function.
 
 {{< imgproc "images/machine_learning/supervised/linear_regression/gradient_descent/slide_05_01.png" Resize "1400x" >}}{{< /imgproc >}}
-{{< imgproc "images/machine_learning/supervised/linear_regression/gradient_descent/slide_01_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
 {{< panel color="blue" title="Algorithm ⚙️" >}}

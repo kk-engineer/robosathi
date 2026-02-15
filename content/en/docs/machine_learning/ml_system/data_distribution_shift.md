@@ -30,7 +30,6 @@ math: true
 
 👉 P(X)(input) changes, but P(Y|X) (model) remains same.
 - e.g. Self-driving car 🚗 trained on a bright, sunny day is used during foggy winter.
-{{< imgproc "images/machine_learning/ml_system/data_distribution_shift/slide_04_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
 {{< panel color="navy" title="Label Shift or Prior Probability Shift (P(Y) Changes)" >}}
@@ -40,8 +39,6 @@ math: true
 - 😷 e.g. Flu-detection model is trained during summer, when only 1% of patients have flu.
   - The same model is used during winter when 40% of patients have flu.
   - 🍎 Prior probability of having flu P(Y) has changed from 1% to 40%, but the symptoms for a person to have flu P(X|Y) remains same.
-
-{{< imgproc "images/machine_learning/ml_system/data_distribution_shift/slide_06_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
 {{< panel color="blue" title="Concept Drift or Posterior Shift (P(Y|X) Changes)" >}}
@@ -50,7 +47,6 @@ math: true
 
 👉 Concept drifts are cyclic or seasonal.
 - e.g. ‘Normal' spending behavior in 2019 became ‘Abnormal' during 2020 lockdowns 🔐.
-{{< imgproc "images/machine_learning/ml_system/data_distribution_shift/slide_08_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
 {{< video "https://youtu.be/1hXmxGC2okE" >}}

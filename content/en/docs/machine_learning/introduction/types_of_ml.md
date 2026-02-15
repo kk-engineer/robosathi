@@ -19,8 +19,6 @@ Supervised Learning uses labelled data (input-output pairs) to predict outcomes,
 - Classification
 {{< /definition >}}
 
-{{< imgproc "images/machine_learning/introduction/supervised_learning.png" Resize "800x" >}}{{< /imgproc >}}
-
 {{< definition title="Unsupervised Learning">}}
 Unsupervised Learning finds hidden patterns in unlabelled data (like customer segmentation). <br>
 
@@ -28,10 +26,7 @@ Unsupervised Learning finds hidden patterns in unlabelled data (like customer se
 - Dimensionality Reduction and Data Visualization (PCA, t-SNE, UMAP)
 {{< /definition >}}
 
-{{< imgproc "images/machine_learning/introduction/unsupervised_learning.png" Resize "800x" >}}{{< /imgproc >}}
-
 {{< definition title="Semi-Supervised Learning">}}
-**Semi-Supervised Learning:** <br>
 Semi-Supervised Learning uses a mix of both, leveraging a small amount of labelled data with a large amount of 
 unlabelled data to improve accuracy. <br>
 
@@ -49,7 +44,6 @@ unlabelled data to improve accuracy. <br>
 **Benefit:** <br>
 It effectively expands the training data by assigning labels to previously unlabelled examples, 
 allowing the model to learn from a *larger dataset*.<br><br>
-{{< imgproc "images/machine_learning/introduction/pseudo_labelling.png" Resize "800x" >}}{{< /imgproc >}}
 
 **2. Graph-based methods:** <br>
 - Data points (both labelled and unlabelled) are represented as nodes in a graph. 
@@ -60,9 +54,7 @@ allowing the model to learn from a *larger dataset*.<br><br>
 **Benefit:** <br> 
 These methods are particularly useful when the data naturally exhibits a *graph-like structure* or when local 
 neighborhood information is crucial for classification.<br><br>
-{{< imgproc "images/machine_learning/introduction/graph_based_method.png" Resize "800x" >}}{{< /imgproc >}}
 {{< /panel >}}
-<br>
 
 {{< definition title="Reinforcement Learning">}}
 Agent learns to make optimal decisions by interacting with an environment, receiving rewards (positive feedback) 
@@ -70,8 +62,6 @@ or penalties (negative feedback) for its actions. <br>
 
 * Mimic human trial-and-error learning to achieve a goal 🎯.
 {{< /definition >}}
-
-{{< imgproc "images/machine_learning/introduction/reinforcement_learning.png" Resize "800x" >}}{{< /imgproc >}}
 
 {{< panel color="orange" title="Key Components of Reinforcement Learning" >}}
 - **Agent:** The learning entity that makes decisions and takes actions within the environment.
@@ -93,11 +83,7 @@ in a specific state. <br>
 ***Note:*** The agent continuously balances *exploration* and *exploitation* to refine its policy and achieve the optimal behavior.
 {{< /panel >}}
 
-{{< imgproc "images/machine_learning/introduction/popular_llms.png" Resize "800x" >}}{{< /imgproc >}}
-<br><br>
-
-{{< panel color="orange" title="Large Language Models" >}}
-
+{{< panel color="cyan" title="Large Language Models" >}}
 **Large Language Models (LLMs)** are deep learning models that often employ **unsupervised learning** 
 techniques during their pre-training phase.
 

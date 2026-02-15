@@ -22,21 +22,14 @@ To avoid over-fitting (memorize), so that, the model generalizes well, improving
 - Training Data: Learn model parameters (Textbook + Practice problems)
 - Validation Data: Tune hyper-parameters (Mock tests)
 - Test Data: Evaluate model performance (Real (final) exam)
-
-Training 🏃‍♂️Data
-{{< imgproc "images/machine_learning/supervised/linear_regression/data_splitting/slide_01_01.png" Resize "1400x" >}}{{< /imgproc >}}
-Validation 📋 Data
-{{< imgproc "images/machine_learning/supervised/linear_regression/data_splitting/slide_02_01.png" Resize "1400x" >}}{{< /imgproc >}}
-Test 🧪 Data
-{{< imgproc "images/machine_learning/supervised/linear_regression/data_splitting/slide_03_01.png" Resize "1400x" >}}{{< /imgproc >}}
-
 {{< /panel >}}
 
 {{< panel color="orange" title="Data Leakage 💦" >}}
-Data leakage occurs when information from the validation or test set is inadvertently used to
+Data leakage occurs when **information** from the validation or test set is **inadvertently used** to
 train 🏃‍♂️ the model.
 
-The model ‘cheats' by learning to exploit information it should not have access to, resulting in artificially inflated performance metrics during testing 🧪.
+The model ‘**cheats**' by learning to exploit information it should not have access to, resulting in artificially 
+inflated performance metrics during testing 🧪.
 {{< /panel >}}
 
 {{< panel color="green" title="Typical Split Ratios" >}}

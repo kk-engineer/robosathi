@@ -16,8 +16,6 @@ Odds compare the likelihood of an event **happening** vs. **not happening**.
 
 **Odds** = \(\frac{p}{1-p}\)
 - p = probability of success
-
-{{< imgproc "images/machine_learning/supervised/logistic_regression/log_odds/slide_01_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
 {{< panel color="blue" title="Log Odds (Logit) Assumption" >}}

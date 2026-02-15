@@ -14,7 +14,6 @@ math: true
 To gain knowledge or understanding of a skill,  by study, instruction, or experience.
 {{< /definition >}}
 
-{{< imgproc "images/machine_learning/introduction/learning.png" Resize "800x" >}}{{< /imgproc >}}
 
 {{< definition title="Machine Learning">}}
 To teach computers 💻 to learn from data, find patterns 🧮, and make decisions or predictions 
@@ -22,14 +21,11 @@ without being explicitly programmed for every task, as humans🧍‍♀️🧍 l
 <br><br>
 {{< /definition >}}
 
-{{< imgproc "images/machine_learning/introduction/ai_ml_dl.png" Resize "800x" >}}{{< /imgproc >}}
 
 {{< panel color="orange" title="Phases of Machine Learning" >}}
 The machine learning lifecycle ♼ is generally divided into two main stages:
 - Training Phase
 - Runtime (Inference) Phase
-
-{{< imgproc "images/machine_learning/introduction/training_inference.png" Resize "800x" >}}{{< /imgproc >}}
 
 **Training Phase:** <br>
 Where the machine learning model is developed and taught to understand a specific task using a large volume 
