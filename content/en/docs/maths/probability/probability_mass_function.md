@@ -122,7 +122,7 @@ For example:
 2. Number of website clicks in a given time period. <br><br>
 
 {{< imgproc "images/maths/probability/poisson_pmf.png" Resize "800x" >}}{{< /imgproc >}}
-{{< panel color="charcoal" title="PMF of Poisson Distribution">}}{{< /panel >}}
+{{< panel color="grey" title="PMF of Poisson Distribution">}}{{< /panel >}}
 
 {{< question >}}
 A company receives, on an average, 5 customer emails per hour. What is the probability of receiving exactly 3 emails

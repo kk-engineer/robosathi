@@ -345,7 +345,7 @@ f_{\Theta \mid X} (\theta \mid x) &= \frac{f_{\Theta}(\theta) P_{X \mid \Theta}(
 {{</ answer >}}
 
 {{< imgproc "images/maths/probability/mle.png" Resize "800x" >}}{{< /imgproc >}}
-{{< panel color="charcoal" title="Plot: Prior, Posterior & MLE">}}{{< /panel >}}
+{{< panel color="grey" title="Plot: Prior, Posterior & MLE">}}{{< /panel >}}
 
 
 *Note: Bayesian approach gives us a probability distribution of parameter \(\Theta\).*

@@ -72,7 +72,7 @@ Set of techniques that prevents over-fitting by adding a penalty term to the mod
 - **Use case**: Best when we have high dimensional data with correlated features and we want sparse and stable solution.
 {{< /panel >}}
 
-{{< panel color="charcoal" title="L1/L2/Elastic Net Regularization Comparison" >}}
+{{< panel color="grey" title="L1/L2/Elastic Net Regularization Comparison" >}}
 {{< imgproc "images/machine_learning/supervised/linear_regression/regularization/slide_12_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
@@ -85,7 +85,7 @@ Why weights shrink exactly to 0 in L1 regularization but NOT in L2 regularizatio
 - Whereas, the derivative of L2 penalty is proportional to the weight (\(2w_j\)) and as the weight reaches close to 0, the gradient also becomes very small, this means that the weight will become very close to 0, but not exactly equal to 0.
 {{< /answer >}}
 
-{{< panel color="charcoal" title="L1 vs L2 Regularization Comparison" >}}
+{{< panel color="grey" title="L1 vs L2 Regularization Comparison" >}}
 {{< imgproc "images/machine_learning/supervised/linear_regression/regularization/slide_14_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 

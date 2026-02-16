@@ -11,7 +11,7 @@ math: true
 
 <br>
 
-{{< panel color="charcoal" title="Binary Classification" >}}
+{{< panel color="grey" title="Binary Classification" >}}
 {{< imgproc "images/machine_learning/supervised/logistic_regression/binary_classification_intro/slide_02_01.tif" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 

@@ -11,7 +11,7 @@ math: true
 
 <br>
 
-{{< panel color="charcoal" title="How do we classify the below dataset ?" >}}
+{{< panel color="grey" title="How do we classify the below dataset ?" >}}
 {{< imgproc "images/machine_learning/supervised/decision_trees/decision_trees_introduction/slide_01_01.tif" Resize "1400x" >}}{{< /imgproc >}}
 
 💡It can be written as nested 🕸️ if else statements.

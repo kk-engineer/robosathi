@@ -129,7 +129,7 @@ Uses only 1 data point selected randomly from dataset to compute gradient for pa
 - Standard optimization algorithm for Deep Learning.Note: Vectorization on GPUs allows for parallel processing of mini-batches; also GPUs are the reason for the mini-batch size to be a power of 2.
 {{< /panel >}}
 
-{{< panel color="charcoal" title="BGD vs SGD vs Mini-BGD" >}}
+{{< panel color="grey" title="BGD vs SGD vs Mini-BGD" >}}
 {{< imgproc "images/machine_learning/supervised/linear_regression/types_of_gradient_descent/slide_08_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< imgproc "images/machine_learning/supervised/linear_regression/types_of_gradient_descent/slide_09_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}

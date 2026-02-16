@@ -124,9 +124,9 @@ For example: <br>
 - Random number generator that generates a random number between 0 and 1. <br>
 
 {{< imgproc "images/maths/probability/uniform_pdf.png" Resize "800x" >}}{{< /imgproc >}}
-{{< panel color="charcoal" title="PDF of Uniform Distribution" >}}{{< /panel >}}
+{{< panel color="grey" title="PDF of Uniform Distribution" >}}{{< /panel >}}
 {{< imgproc "images/maths/probability/uniform_cdf.png" Resize "800x" >}}{{< /imgproc >}}
-{{< panel color="charcoal" title="CDF of Uniform Distribution" >}}{{< /panel >}}
+{{< panel color="grey" title="CDF of Uniform Distribution" >}}{{< /panel >}}
 
 {{< video "https://youtu.be/UrLRdi88U3g?si=63sHZ1B-1kUtf4E3" >}}
 
@@ -163,9 +163,9 @@ For example:
 - Measurement of errors in scientific experiments. <br>
 
 {{< imgproc "images/maths/probability/gaussian_pdf.png" Resize "800x" >}}{{< /imgproc >}}
-{{< panel color="charcoal" title="PDF of Gaussian Distribution" >}}{{< /panel >}}
+{{< panel color="grey" title="PDF of Gaussian Distribution" >}}{{< /panel >}}
 {{< imgproc "images/maths/probability/gaussian_cdf.png" Resize "800x" >}}{{< /imgproc >}}
-{{< panel color="charcoal" title="CDF of Gaussian Distribution" >}}{{< /panel >}}
+{{< panel color="grey" title="CDF of Gaussian Distribution" >}}{{< /panel >}}
 
 {{< panel title="68-95-99 Rule" color="green" >}} 
 - 68.27% of the data lie within 1 standard deviation of the mean i.e \(\mu \pm \sigma\) <br>
@@ -196,9 +196,9 @@ $$
 {{</ definition >}}
 
 {{< imgproc "images/maths/probability/exponential_pdf.png" Resize "800x" >}}{{< /imgproc >}}
-{{< panel color="charcoal" title="PDF of Exponential Distribution" >}}{{< /panel >}}
+{{< panel color="grey" title="PDF of Exponential Distribution" >}}{{< /panel >}}
 {{< imgproc "images/maths/probability/exponential_cdf.png" Resize "800x" >}}{{< /imgproc >}}
-{{< panel color="charcoal" title="CDF of Exponential Distribution" >}}{{< /panel >}}
+{{< panel color="grey" title="CDF of Exponential Distribution" >}}{{< /panel >}}
 
 {{< question >}}
 At a bank, a teller spends 4 minutes, on an average, with every customer. What is the probability that a randomly 

@@ -27,7 +27,7 @@ High dimensional data created following challenges:
 - Exponential Sample Requirement
 {{< /panel >}}
 
-{{< panel color="charcoal" title="Distance Concentration" >}}
+{{< panel color="grey" title="Distance Concentration" >}}
 💡Consider a hypercube in d-dimensions of side length = 1; Volume = \(1^d\) = 1 <br>
 🧊 A smaller inner cube with side length = 1 - \(\epsilon\) ; Volume = \((1 -\epsilon)^d\) <br>
 \[\lim_{d \rightarrow \infty} (1 - \epsilon)^d = 0\]

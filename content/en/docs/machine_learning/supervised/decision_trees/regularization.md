@@ -33,7 +33,7 @@ effectively **memorizing** noise and outliers rather than learning **generalizab
 - **min_impurity_decrease**: A split is only made if it reduces the impurity (Gini/MSE) by at least a certain threshold.
 {{< /panel >}}
 
-{{< panel color="charcoal" title="Max Depth Hyper Parameter Tuning" >}}
+{{< panel color="grey" title="Max Depth Hyper Parameter Tuning" >}}
 Below is an example for one of the hyper-parameter's **max_depth** tuning.
 
 As we can see below the cross-validation error decreases till depth=6 and after that 

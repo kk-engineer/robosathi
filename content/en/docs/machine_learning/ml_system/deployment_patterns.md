@@ -20,7 +20,7 @@ Types of deployment (most common):
 - Canary 🦜 Deployment
 {{< /panel >}}
 
-{{< panel color="charcoal" title="Shadow ❏ Deployment" >}}
+{{< panel color="grey" title="Shadow ❏ Deployment" >}}
 👉 **Safest** way to deploy our model or any software update.
 - Deploy the candidate model in parallel with the existing model.
 - For each incoming request, route it to both models to make predictions, but only serve the existing model's prediction to the user.

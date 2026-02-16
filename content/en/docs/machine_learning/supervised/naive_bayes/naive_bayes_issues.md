@@ -11,44 +11,54 @@ math: true
 
 <br>
 
-{{< panel color="blue" title="Naive Bayes" >}}
-- Simple, fast, and highly effective probabilistic machine learning classifier based on Bayes' theorem.
-\[P(y|W)∝\prod_{i=1}^{d}P(w_{i}|y)×P(y)\]
-\[P(w_{i}|y)=\frac{count(w_{i}iny)}{total words in class y}\]
+{{< panel color="cyan" title="Naive Bayes" >}}
+⭐️Simple, fast, and highly effective probabilistic machine learning classifier based on **Bayes' theorem**.
+\[P(y|W) \propto \prod_{i=1}^d P(w_i|y)\times P(y)\]
+\[P(w_i|y) = \frac{count(w_i ~in~ y)}{\text{total words in class y}}\]
 {{< /panel >}}
 
-{{< panel color="orange" title="Problem # 1" >}}
-- What if at runtime we encounter a word that was never seen during training ?
-- e.g. A word ‘crypto' appears in the test email that was not present in training emails; P(‘crypto'|S) =0.
-- This will force the entire product to zero.
-\[P(w_{i}|S)=\frac{Total count ofw_{i}in all Spam emails}{Total count of all words in all Spam emails}\]
+{{< panel color="red" title="Problem # 1" >}}
+🦀What if at runtime we encounter a word that was never seen during training ?
+
+e.g. A word ‘crypto' appears in the test email that was not present in training emails; P(‘crypto'|S) =0.
+
+👉This will force the entire product to zero.
+\[P(w_i|S) = \frac{\text{Total count of } w_i \text{ in all Spam emails}}{\text{Total count of all words in all Spam emails}}\]
 {{< /panel >}}
 
-{{< panel color="green" title="Solution" >}}
-- Add ‘Laplace smoothing' to all likelihoods, both during training and test time.
-- : number of times word appears in documents of class ‘y'.
-- : The total count of all words in documents of class ‘y'.
-- (or ):Vocabulary size or total number of unique possible words.
-\[P(x_{i}|y)=\frac{count(x_{i},y)+\alpha}{count(y)+\alpha⋅|V|}\]
+{{< panel color="green" title="Laplace Smoothing" >}}
+💡Add ‘**Laplace smoothing**' to all likelihoods, both during training and test time, so that the probability becomes **non-zero**.
+
+\[P(x_{i}|y)=\frac{count(x_{i},y)+\alpha }{count(y)+\alpha \cdot |V|}\]
+- \(count(x_{i},y)\) : number of times word appears in documents of class ‘y'.
+- \(count(y)\): The total count of all words in documents of class ‘y'.
+- \(|V|\)(or \(N_{features}\)):Vocabulary size or total number of unique possible words.
+
+Let's understand this by the examples below:
+\[P(w_{i}|S)=\frac{count(w_{i},S)+\alpha }{count(S)+\alpha \cdot |V|}\]
+
+1. \(count(w_{i},S) = 0 \), \(count(S) = 100\), \(|V|\)(or \(N_{features}) =2, \alpha = 1\)
+\[P(w_{i}|S)=\frac{ 0+1 }{100 +1 \cdot 2} = \frac{1}{102}\]
+2. \(count(w_{i},S) = 0 \), \(count(S) = 100\), \(|V|\)(or \(N_{features}) =2, \alpha = 10,000\)
+\[P(w_{i}|S)=\frac{ 0+10,000 }{100 +10,000 \cdot 2} = \frac{10,000}{20,100} \approx \frac{1}{2}\]
+
+**Note**: High alpha value may lead to under-fitting; \(\alpha = 1\) recommended.
 {{< /panel >}}
 
-{{< panel color="red" title="Example" >}}
-- = 0, = 100, (or )= 2, = 1
-- = 0, = 100, (or )= 2, = 10,000
-- Note: High alpha value may lead to under-fitting. = 1 (recommended)
-\[P(w_{i}|S)=\frac{count(w_{i},S)+\alpha}{count(S)+\alpha⋅|V|}\]
+{{< panel color="red" title="Problem # 2" >}}
+🦀What happens if the number of words ‘d' is very large ?
+
+👉Multiplying 500 times will result in a number so small a computer 💻 cannot store it (**underflow**).
+
+**Note**: Computers have a limit to store floating point numbers, e.g., 32 bit: \(1.175 x 10^{-38}\)
 {{< /panel >}}
 
-{{< panel color="navy" title="Problem # 2" >}}
-- What happens if the number of words ‘d' is very large ?
-- Multiplying 500 times will result in a number so small a computer 💻 cannot store it (underflow).
-- Note: Computers have a limit to store floating point numbers, e.g., 32 bit: 1.175 x 10
-{{< /panel >}}
+{{< panel color="green" title="Logarithm" >}}
+💡Take 'Logarithm' that will convert the product to sum.
+\[P(y|W) \propto \prod_{i=1}^d P(w_i|y)\times P(y)\]
+\[\log(P(y| W)) \propto \sum_{i=1}^d \log(P(w_i|y)) + \log(P(y))\]
 
-{{< panel color="blue" title="Solution" >}}
-- Take ‘Logarithm' that will convert the product to sum.
-\[P(y|W)∝\prod_{i=1}^{d}P(w_{i}|y)×P(y)\]
-\[log(P(y|W))∝\sum_{i=1}^{d}log(P(w_{i}|y))+log(P(y))\]
+**Note**: In the next section we will solve a problem covering all the concepts discussed in this section.
 {{< /panel >}}
 
 {{< video "https://youtu.be/_lGBf0QoHls" >}}

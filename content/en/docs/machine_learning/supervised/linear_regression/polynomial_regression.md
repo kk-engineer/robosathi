@@ -47,7 +47,7 @@ e.g:
 **Note**: Detect and remove outliers from error distribution.
 {{< /panel >}}
 
-{{< panel color="charcoal" title="High Degree Polynomial Regression" >}}
+{{< panel color="grey" title="High Degree Polynomial Regression" >}}
 
 {{< imgproc "images/machine_learning/supervised/linear_regression/polynomial_regression/slide_07_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}

@@ -309,7 +309,7 @@ yet have very different distributions and appear very different when plotted.
 <br>
 {{< imgproc "images/maths/statistics/anscombe_quartet.png" Resize "800x" >}}{{< /imgproc >}}
 
-{{< panel color="charcoal" title="Figure: Anscombe's Quartet">}}{{< /panel >}}
+{{< panel color="grey" title="Figure: Anscombe's Quartet">}}{{< /panel >}}
 
 <br><br>
 <!-- nav-panel:start -->

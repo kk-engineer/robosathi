@@ -58,7 +58,7 @@ Within each leaf 🍃, we calculate the optimal value ‘\(\gamma_{jm}\)' that m
 ➡️ The optimal leaf 🍃value is the ‘Mean'(MSE) of the residuals; \(\gamma = \frac{\sum r_i}{n_j}\)
 {{< /panel >}}
 
-{{< panel color="charcoal" title="Step 2.4: Update the model." >}}
+{{< panel color="grey" title="Step 2.4: Update the model." >}}
 Add the new ‘correction' to the existing model, scaled by the learning rate.
 \[F_{m}(x)=F_{m-1}(x)+\nu \cdot \underbrace{\sum _{j=1}^{J_{m}}\gamma _{jm}\mathbb{I}(x\in R_{jm})}_{h_{m}(x)}\]
 

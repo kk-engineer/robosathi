@@ -27,7 +27,7 @@ Naive KNN needs some improvements to fix some of its drawbacks.
 \[z=\frac{x-\mu}{\sigma}\]
 {{< /panel >}}
 
-{{< panel color="charcoal" title="Distance-Weighted KNN" >}}
+{{< panel color="grey" title="Distance-Weighted KNN" >}}
 ⭐️Vanilla KNN treats the 1st nearest neighbor and the k-th nearest neighbor as equal.
 
 💡A neighbor that is 0.1units away should have more influence than a neighbor that is 10 units away.

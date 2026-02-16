@@ -31,7 +31,7 @@ SVM tries to make this highway 🛣️ as wide as possible without hitting any '
 The points that lie exactly on the edges of the highway are the Support Vectors.
 {{< /panel >}}
 
-{{< panel color="charcoal" title="Goal" >}}
+{{< panel color="grey" title="Goal" >}}
 🎯Maximize the width of the ‘street' (the margin) to ensure the model generalizes well to unseen data.
 {{< /panel >}}
 

@@ -11,7 +11,7 @@ math: true
 
 <br>
 
-{{< panel color="charcoal" title="KNN Dataset" >}}
+{{< panel color="grey" title="KNN Dataset" >}}
 Let's use this dataset to understand the impact of number of neighbours 'k'.
 {{< imgproc "images/machine_learning/supervised/k_nearest_neighbors/bias_variance_tradeoff/slide_01_01.tif" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}

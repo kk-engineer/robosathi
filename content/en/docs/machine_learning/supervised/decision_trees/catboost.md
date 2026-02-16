@@ -37,7 +37,7 @@ index (e.g 101) and **jumps directly** to that leaf 🍃 in memory 🧠.
 
 {{< /panel >}}
 
-{{< panel color="charcoal" title="Handling Missing Values" >}}
+{{< panel color="grey" title="Handling Missing Values" >}}
 - ⚙️ CatBoost offers built-in, intelligent handling of missing values and sparse features, which often require manual preprocessing in other GBDT libraries.
 - 💡Treats ‘**NaN**' as a **distinct category**, reducing the need for imputation.
 {{< imgproc "images/machine_learning/supervised/decision_trees/catboost/slide_08_01.png" Resize "1400x" >}}{{< /imgproc >}}

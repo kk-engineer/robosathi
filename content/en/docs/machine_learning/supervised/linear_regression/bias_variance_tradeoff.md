@@ -42,11 +42,11 @@ Say a house 🏠 in XYZ street was sold for very low price 💰.
 **Note**: Model will make wrong(lower) price 💰predictions for all houses in XYZ street.
 {{< /panel >}}
 
-{{< panel color="charcoal" title="Linear (High Bias), Polynomial(High Variance)" >}}
+{{< panel color="grey" title="Linear (High Bias), Polynomial(High Variance)" >}}
 {{< imgproc "images/machine_learning/supervised/linear_regression/bias_variance_tradeoff/slide_06_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="charcoal" title="Bias Variance Table" >}}
+{{< panel color="grey" title="Bias Variance Table" >}}
 {{< imgproc "images/machine_learning/supervised/linear_regression/bias_variance_tradeoff/bias_variance_table.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 

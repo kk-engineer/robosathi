@@ -88,7 +88,7 @@ Features should not be highly correlated with each other.
 - Remove redundant features
 {{< /panel >}}
 
-{{< panel color="charcoal" title="No Endogeneity (Exogeneity)" >}}
+{{< panel color="grey" title="No Endogeneity (Exogeneity)" >}}
 Error term must be uncorrelated with the features; E[ϵ|X] = 0
 
 **Risk**:

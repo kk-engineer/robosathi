@@ -34,7 +34,7 @@ GBM treats the final model \(F_m(x)\) as weighted 🏋️‍♀️ sum of ‘m' 
 - 2.4:Update the model.
 {{< /panel >}}
 
-{{< panel color="charcoal" title="Predict House Prices" >}}
+{{< panel color="grey" title="Predict House Prices" >}}
 {{< imgproc "images/machine_learning/supervised/decision_trees/gbdt_example/house_price_table.png" Resize "1400x" >}}{{< /imgproc >}}
 
 👉Loss = MSE, Learning rate (\(\nu\)) = 0.5

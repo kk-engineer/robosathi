@@ -153,7 +153,7 @@ There is some probability of choosing 2.5, but it is very small. <br><br>
 *Therefore, we say that \(P=1\) means "Almost Sure" and NOT "Certain".*
 {{</ answer >}}
 
-{{< panel color="charcoal" title="Note">}} 
+{{< panel color="grey" title="Note">}} 
 Now, lets also see another example where \(P=0\) means *Impossible* and \(P=1\) means *Certain*.
 {{< /panel >}}
 
