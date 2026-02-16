@@ -9,6 +9,8 @@
   {{/* 2. Determine Command & Options */}}
   {{ $command := .Get 1 | default "Resize" }}
   {{ $options := .Get 2 | default "800x" }}
+  {{ $loading := .Get 3 | default "lazy" }}
+  {{ $fetchpriority := .Get 4 | default "auto" }}
 
   {{/* 3. Force WebP for speed */}}
   {{ if not (in $options "webp") }}
@@ -27,7 +29,8 @@
     <img src="{{ $processed.RelPermalink }}"
          width="{{ $processed.Width }}"
          height="{{ $processed.Height }}"
-         loading="lazy"
+         loading="{{ $loading }}"
+         fetchpriority="{{ $fetchpriority }}"
          decoding="async"
          style="max-width: 100%; height: auto; border-radius: 4px;"
          alt="{{ $imgName }}">
