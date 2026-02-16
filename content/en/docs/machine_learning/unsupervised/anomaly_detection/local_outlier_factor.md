@@ -11,62 +11,68 @@ math: true
 
 <br>
 
-{{< panel color="blue" title="Use Case 🐝" >}}
-- Geographic fraud detection:
-- A $100 transaction might be ‘normal' in New York but an ‘outlier' in a small rural village.
+{{< panel color="green" title="Use Case 🐝" >}}
+⭐️Geographic fraud detection: <br>
+A $100 transaction might be '**normal**' in New York but an '**outlier**' in a small rural village.
 {{< /panel >}}
 
-{{< panel color="orange" title="Intuition 💡" >}}
-- 🦎 ‘Local context matters.'
-- Global distance metrics fail when density is non-uniform.
-- 🦄 An outlier is a point that is ‘unusual' relative to its immediate neighbors, regardless of how far it is from the center of the entire dataset.
+{{< panel color="cyan" title="Intuition 💡" >}}
+ _'Local context matters.'_
+
+**Global distance metrics fail when density is non-uniform.**
+
+🦄 An **outlier** is a point that is '**unusual**' _relative to its immediate neighbors_, 
+regardless of how far it is from the center of the entire dataset.
 {{< /panel >}}
 
-{{< panel color="green" title="Problem 🦀" >}}
-- Traditional distance-based outlier detection methods, such as, KNN, often struggle with datasets where data is clustered at varying densities.
+{{< panel color="red" title="Problem 🦀" >}}
+💡Traditional **distance-based** outlier detection methods, such as, **KNN**, often struggle with datasets where data 
+is clustered at **varying densities**.
 - A point in a sparse region might be considered an outlier by a global method, even if it is a normal part of that sparse cluster.
 - Conversely, a point very close to a dense cluster might be an outlier relative to that specific neighborhood.
 {{< /panel >}}
 
-{{< panel color="red" title="Solution 🦉" >}}
-- Calculate the relative density of a point compared to its immediate neighborhood.
-- e.g. If the neighbors are in a dense crowd and the point is not, it is an outlier.
+{{< panel color="green" title="Solution 🦉" >}}
+👉Calculate the relative density of a point compared to its immediate neighborhood.
+
+e.g. If the neighbors are in a dense crowd and the point is not, it is an outlier.
 {{< /panel >}}
 
 {{< panel color="navy" title="Goal 🎯" >}}
-- Compare the density of a point to the density of its neighbors.
+📌Compare the density of a point to the density of its neighbors.
 {{< /panel >}}
 
-{{< panel color="blue" title="Visual" >}}
-{{< imgproc "images/machine_learning/unsupervised/anomaly_detection/local_outlier_factor/slide_06_01.png" Resize "1400x" >}}{{< /imgproc >}}
-{{< /panel >}}
+{{< panel color="blue" title="Local Outlier Factor (LOF)" >}}
+Local Outlier Factor (LOF) is a **density-based** algorithm designed to detect anomalies by measuring the 
+**local deviation** of a data point relative to its **neighbors**.
 
-{{< panel color="orange" title="Local Outlier Factor (LOF)" >}}
-- Local Outlier Factor (LOF) is a density-based algorithm designed to detect anomalies by measuring the local deviation of a data point relative to its neighbors.
-{{< /panel >}}
-
-{{< panel color="green" title="Visual" >}}
+👉Size of the red circle represents the LOF score.
 {{< imgproc "images/machine_learning/unsupervised/anomaly_detection/local_outlier_factor/slide_08_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="red" title="LOF Score Calculation 🔢" >}}
-- K-Distance ():The distance from point ‘' to its nearest neighbor.
-- Reachability Distance ():: actual Euclidean distance between ‘‘ and ‘'.This acts as ‘smoothing' factor.If point ‘' is very close to ‘' (inside 's -neighborhood), round up distance to .
-{{< /panel >}}
+{{< panel color="green" title="LOF Score Calculation 🔢" >}}
+1. **K-Distance** (\(k\text{-dist}(p)\)):
+   - The distance from point 'p' to its k-th nearest neighbor.
+2. **Reachability Distance** (\(\text{reach-dist}_{k}(p,o)\)): 
+\[\text{reach-dist}_{k}(p,o)=\max \{k\text{-dist}(o),\text{dist}(p,o)\}\]
+   - \(\text{dist}(p,o)\): actual Euclidean distance between 'p' and 'o'. <br>
+   - This acts as '**smoothing**' factor.
+   - If point 'p' is very close to 'o' (inside o's k-neighborhood), round up distance to \(k\text{-dist}(o)\).
+3. **Local Reachability Density** (\(\text{lrd}_{k}(p)\)):
+   - The **inverse** of the **average** reachability distance from ‘p’ to its k-neighbors (\(N_{k}(p)\)).
+   \[\text{lrd}_{k}(p)=\left[\frac{1}{|N_{k}(p)|}\sum _{o\in N_{k}(p)}\text{reach-dist}_{k}(p,o)\right]^{-1}\]
+     - **High LRD**: Neighbors are very close; the point is in a dense region.
+     - **Low LRD**: Neighbors are far away; the point is in a sparse region.
+4. **Local Outlier Factor** (\(\text{LOF}_{k}(p)\)):
+   - The ratio of the **average** ‘lrd’ of p’s neighbors to p’s own ‘lrd’.
+   \[\text{LOF}_{k}(p)=\frac{1}{|N_{k}(p)|}\sum _{o\in N_{k}(p)}\frac{\text{lrd}_{k}(o)}{\text{lrd}_{k}(p)}\]
 
-{{< panel color="navy" title="Visual" >}}
 {{< imgproc "images/machine_learning/unsupervised/anomaly_detection/local_outlier_factor/slide_10_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="blue" title="LOF Score Calculation 🔢 (Continued…)" >}}
-- Local Reachability Density ():The inverse of the average reachability distance from ‘' to its -neighbors ().
-- High LRD: Neighbors are very close; the point is in a dense region.
-- Low LRD: Neighbors are far away; the point is in a sparse region.
-- Local Outlier Factor (): The ratio of the average ‘' of 's neighbors to 's own ‘'.
-{{< /panel >}}
-
-{{< panel color="orange" title="Visual" >}}
-{{< imgproc "images/machine_learning/unsupervised/anomaly_detection/local_outlier_factor/slide_12_01.png" Resize "1400x" >}}{{< /imgproc >}}
+{{< panel color="navy" title="LOF Score 🔢 Interpretation" >}}
+- LOF ≈ 1: Point ‘p’ has **similar density** to its neighbors (**inlier**).
+- LOF > 1: Point p’s **density** is much **lower** than its neighbors' density (**outlier**).
 {{< /panel >}}
 
 {{< video "https://youtu.be/8W3mTEKTORg" >}}
