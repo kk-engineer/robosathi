@@ -243,14 +243,14 @@ small effect (\(d=0.2\)), medium effect (\(d=0.5\)), and large effect (\(d\ge 0.
 {{< imgproc "images/maths/statistics/effect_size.png" Resize "800x" >}}{{< /imgproc >}}
 {{</ definition >}}
 
-For example: <br>
+{{< panel color="rust" title="Example" >}}
 - A study on drug trials finds that patients taking a new drug had statistically significant <br>
 improvement (p-value<0.05), compared to a placebo group.
 1. Small effect size: Cohen's d = 0.1 => drug had minimal effect.
 2. Large effect size: Cohen's d = 0.8 => drug produced substantial improvement.
+{{< /panel >}}
 
 {{< video "https://www.youtube.com/watch?v=AfawJHBRQOc&t=01s" >}}
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

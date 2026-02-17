@@ -148,7 +148,7 @@ _Assumption: All the first order partial derivatives exist._
 <br>
 {{< /panel >}}
 
-{{< panel color="orange" title="Hessian Matrix" >}}
+{{< panel color="blue" title="Hessian Matrix" >}}
 **Hessian Matrix:** <br>
 It is a square matrix of **second-order partial derivatives** of a **scalar-valued function**. <br>
 This is used to characterize the **curvature** of a function at a give point.

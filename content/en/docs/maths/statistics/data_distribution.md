@@ -33,11 +33,11 @@ The artihmetic average of a set of numbers i.e sum all values and divide by the 
 
 {{</ definition >}}
 
-For example: <br>
+{{< panel color="rust" title="Example" >}}
 1. mean\((1,2,3,4,5) = \frac{1+2+3+4+5}{5} = 3 \) <br>
 2. With outlier: mean\((1,2,3,4,100) = \frac{1+2+3+4+100}{5} = \frac{110}{5} = 22\) <br>
-_Note: Just a single extreme value of 100 has pushed the mean from 3 to 22._ 
-<br>
+_Note: Just a single extreme value of 100 has pushed the mean from 3 to 22._
+{{< /panel >}}
 
 {{< definition title="Median" >}}
 The middle value of a sorted list of numbers. It divides the dataset into 2 equal halves.<br>
@@ -54,12 +54,12 @@ _Calculation:_ <br>
 
 {{</ definition >}}
 
-For example: <br>
+{{< panel color="rust" title="Example" >}}
 1. median\((1,2,3,4,5) = 3\) <br>
 2. median\((1,2,3,4,5,6) = \frac{3+4}{2} = 3.5\) <br>
 3. With outlier: median\((1,2,3,4,100) = 3\) <br>
 _Note: No impact of outlier._
-<br>
+{{< /panel >}}
 
 {{< definition title="Mode" >}}
 The most frequently occurring value in a dataset. <br>
@@ -95,9 +95,10 @@ The difference between the largest and smallest values in a dataset. Simplest me
 - Only considers the the 2 extreme values of dataset and ignores the distribution of data in between.
 - Highly sensitive to outliers.
 {{</ definition >}}
-For example: <br>
-1. range\((1,2,3,4,5) = 5 - 1 = 4\) <br>
-<br>
+{{< panel color="rust" title="Example" >}}
+1. range\((1,2,3,4,5) = 5 - 1 = 4\) 
+
+{{< /panel >}}
 
 {{< definition title="Variance" >}}
 The average of the squared distance of each value from the mean. <br>
@@ -120,14 +121,15 @@ high standard deviation means that the data points are spread out over a wide ra
 \(\sigma = population ~ standard ~ deviation \) <br> 
 {{</ definition >}}
 
-For example: <br>
+{{< panel color="rust" title="Example" >}}
 1. Standard Deviation\((1,2,3,4,5) = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{x})^2} \)
 \[ 
  = \sqrt{\frac{1}{5}((1-3)^2 + (2-3)^2 + (3-3)^2 + (4-3)^2 + (5-3)^2)} \\
  =  \sqrt{\frac{1}{5}(4+1+0+1+4)} \\
  = \sqrt{\frac{10}{5}} = \sqrt{2} = 1.414
 \]
-<br>
+
+{{< /panel >}}
 
 {{< definition title="Mean Absolute Deviation" >}}
 
@@ -140,10 +142,11 @@ It is the average of absolute deviation or distance of all data points from mean
 - More intuitive and simpler to understand.
 {{</ definition >}}
 
-For example: <br>
+{{< panel color="rust" title="Example" >}}
 1. Mean Absolute Deviation\((1,2,3,4,5) = \\ \frac{1}{5}\left(\left|1-3\right| + \left|2-3\right| + \left|3-3\right| + \left|4-3\right| + \left|5-3\right|\right) = 
 \frac{1}{5}\left(2+1+0+1+2\right) = \frac{6}{5} = 1.2\)
-<br>
+
+{{< /panel >}}
 
 {{< definition title="Skewness" >}}
 It measures the asymmetry of a data distribution. <br>
@@ -166,11 +169,12 @@ Tells us whether the data is concentrated on one side of mean and is there a lon
 {{</ definition >}}
 {{< imgproc "images/maths/statistics/skewness.png" Resize "800x" >}}{{< /imgproc >}}
 
-For example: <br>
+{{< panel color="rust" title="Example" >}}
 1. Consider the salary of employees in a company. Most employees earn a very modest salary, but a few executives earn 
 extremely high salaries. This dataset will be positively skewed with the mean salary > median salary. <br>
 Median salary would be a better representation of the typical salary of employees.
-<br>
+
+{{< /panel >}}
 
 {{< definition title="Kurtosis" >}}
 It measures the "tailedness" of a data distribution. <br>
@@ -221,9 +225,10 @@ Here, the complete dataset is divided into 100 equal parts. <br>
 - It is a relative comparison, i.e, compares a score with the entire group's performance. 
 - Quartiles are basis for box plots.
 {{</ definition >}}
-For example: <br>
+{{< panel color="rust" title="Example" >}}
 1. 90th percentile => score is higher than 90% of of all other test takers.
-<br>
+
+{{< /panel >}}
 
 {{< definition title="Quartile" >}}
 They are special percentiles that divide the complete dataset into 4 equal parts. <br>
@@ -240,16 +245,16 @@ Q3 = (n+1) * 3/4
 
 {{</ definition >}}
 
-For example: <br>
+{{< panel color="rust" title="Example" >}}
 1. Data = \(\{1,2,3,4,5,6,7,8,9,10,100\}\)
 \[
 Q1 = (11+1) * 1/4 = 12*1/4 = 3 \\
 Q2 = (11+1) * 1/2 = 12*1/2 = 6 \\
 Q3 = (11+1) * 3/4 = 12*3/4 = 9
 \]
-<br>
+
 {{< imgproc "images/maths/statistics/quartiles.png" Resize "800x" >}}{{< /imgproc >}}
-<br>
+{{< /panel >}}
 
 {{< definition title="Inter Quartile Range(IQR)" >}}
 It is the single number that measures the spread of middle 50% of the data, i.e Q1-Q3.<br>
@@ -259,7 +264,7 @@ It is the single number that measures the spread of middle 50% of the data, i.e 
 
 {{</ definition >}}
 
-For example: <br>
+{{< panel color="rust" title="Example" >}}
 1. Data = \(\{1,2,3,4,5,6,7,8,9,10,100\}\)
 \[
 Q1 = (11+1) * 1/4 = 12*1/4 = 3 \\
@@ -268,7 +273,7 @@ Q3 = (11+1) * 3/4 = 12*3/4 = 9
 \]
 
 Therefore, IQR = Q3-Q1 = 9-3 = 6 <br>
-<br>
+{{< /panel >}}
 
 {{< panel color="green" title="Outlier Detection" >}}
 IQR is a standard tool for detecting outliers. <br>
@@ -277,7 +282,7 @@ Values that fall outside the '_fences_' can be considered as potential outliers.
 **Lower fence = Q1 - 1.5 * IQR <br>
 Upper fence = Q3 + 1.5 * IQR <br>**
 {{< /panel >}}
-For example: <br>
+{{< panel color="rust" title="Example" >}}
 1. Data = \(\{1,2,3,4,5,6,7,8,9,10,100\}\)
 \[
 Q1 = (11+1) * 1/4 = 12*1/4 = 3 \\
@@ -290,7 +295,8 @@ Lower fence = Q1 - 1.5 * IQR  = 3 - 9 = -6<br>
 Upper fence = Q3 + 1.5 * IQR = 9 + 9 = 18 <br>
 So, any data point that is less than  -6 or greater than 18 is considered as a potential  outlier. <br>
 As in this example, 100 can be considered as an outlier.
-<br><br>
+{{< /panel >}}
+
 {{< video "https://youtu.be/3-qQu9jNMPk?si=mxnrRIC8lrqtC2Oa" >}}
 
 {{< panel color="orange" title="Anscombe's Quartet">}}

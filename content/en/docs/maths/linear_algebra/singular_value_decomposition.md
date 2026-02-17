@@ -40,7 +40,7 @@ linked to the matrix's **singularity** and **rank**.
 {{< imgproc "images/maths/linear_algebra/singular_value_decomposition.png" Resize "800x" >}}{{< /imgproc >}}
 
 {{</ definition >}}
-<br>
+
 {{< panel color="orange" title="Properties of Singular Values" >}}
 1. All singular values are non-negative.
 2. Square roots of the eigen values of the matrix \(\mathbf{AA^T}\) or \(\mathbf{A^TA}\).
@@ -77,15 +77,12 @@ So, we need to send data corresponding to 20 (rank=1) matrices, i.e, \(u_i, v_i 
 Therefore, compression rate = (2000*20)/(10^6) = 1/25 <br>
 {{</ answer >}}
 
-<br>
-
 {{< panel color="orange" title="Applications of SVD" >}}
 1. **Image compression**.
 2. **Low Rank Approximation**: Compress data by keeping top rank singular values. 
 3. **Noise Reduction**: Capture main structure, ignore small singular values.
 4. **Recommendation Systems**: Decompose user-item rating matrix to discover underlying user preferences and make recommendations.
 {{</ panel >}}
-<br>
 
 {{< definition title="Low Rank Approximation">}}The process of **approximating** any matrix by a matrix of a lower rank, using singular value decomposition. <br>
 It is used for data compression. <br>
@@ -114,7 +111,7 @@ which is achieved by keeping only the largest singular values and corresponding 
 1. Image compression
 2. Data compression, such as, LoRA (Low Rank Adaptation)
 {{</ definition >}}
-<br>
+
 {{< video "https://www.youtube.com/watch?v=1dQap9e_tkg&t=1s" >}}
 <br><br>
 

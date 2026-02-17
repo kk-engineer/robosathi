@@ -19,7 +19,6 @@ Whenever we want to reduce the dimensionality of the data, we should aim to mini
 Since, information = variance, we should drop the feature that brings least information, i.e, has least variance. <br>
 Therefore, drop the feature 1.
 {{</ answer >}}
-<br>
 
 {{< question >}}
 What if the variance in both directions is same ? <br>
@@ -33,8 +32,6 @@ we will rotate the f1-axis in the direction of maximum spread/variance of data, 
 drop f2'-axis, which is **perpendicular** to f1'-axis.
 
 {{</ answer >}}
-
-<br>
 
 {{< definition title="Principal Component Analysis (PCA)">}}It is a **dimensionality reduction** technique that finds the direction of maximum variance in the data. <br>
 *Note: Some **loss of information** will always be there in dimensionality reduction, because there will be some variability
@@ -84,7 +81,6 @@ _Scaling of variance along new eigen basis._ <br>
 \(X_{new}\): Projected data or principal component score <br>
 
 {{</ definition >}}
-<br>
 
 {{< question >}}
 What is the variance of the projected data?
@@ -102,7 +98,7 @@ Covariance of projected data = \((XQ)^TXQ \)
 \]
 Therefore, the diagonal matrix \( \Lambda \) captures the variance along every principal component direction. <br>
 {{</ answer >}}
-<br>
+
 {{< video "https://www.youtube.com/watch?v=KvSeAzyoeCQ&t=1s" >}}
 <br><br>
 

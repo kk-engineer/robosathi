@@ -34,7 +34,7 @@ or contain the true population mean \(\mu\).
 mean is a fixed constant, NOT a random variable.
 {{< /panel >}}
 
-For example: <br>
+{{< panel color="rust" title="Example" >}}
 Let's suppose we want to measure the average weight of a certain species of dog. <br>
 We want to estimate the true population
 mean \(\mu\) using confidence interval. <br>
@@ -54,7 +54,8 @@ mean \(\mu\) using confidence interval. <br>
 - We generated 100 confidence intervals(CI) each based on different samples.
 - 95% CI guarantees that, in long run, 95 out of 100 CIs will include the true average weight, i.e, \(\mu=30kg\),
 and may be will miss 5 out of 100 times.
-<br><br>
+
+{{< /panel >}}
 
 {{< question >}}
 Suggest which company is offering a better salary? <br>

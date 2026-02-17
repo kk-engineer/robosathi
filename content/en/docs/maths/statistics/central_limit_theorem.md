@@ -82,18 +82,19 @@ Z_n \text{ converges in distribution to } N(0,1), \text{ as } n \rightarrow \inf
 
 *Note: For practical purposes, \(n \ge 30\) is considered as a sufficient sample size for the CLT to hold.* <br>
 {{</ definition >}}
-For example: <br>
+{{< panel color="rust" title="Example" >}}
 1. Let's collect the data for height of people in a city to find the average height of people in the city. <br>
 - Sample size (n) = 100 <br>
 - And then repeat this data collection process 1000 times. 
 - For each of these 1000 (k) samples, calculate the sample mean \(X_1, X_2, \dots, X_{1000(k)} \)
 - Now, when we plot these 1000(k) sample means, the resulting distribution will be very close to a normal/Gaussian distribution. <br>
-\(\bar{X_n} \sim N(\mu, \sigma^2/n)\), for large n, typically \(n \ge 30\). <br>
+\(\bar{X_n} \sim N(\mu, \sigma^2/n)\), for large n, typically \(n \ge 30\).
 
 *Note:*
 - *'k' = a large number of repetitions allows us to observe the distribution of sample means after plotting.*
 - *'n' = number of samples in each repetition is fixed for any given calculation of sample mean \(\bar{X_n}\).*
-<br><br>
+
+{{< /panel >}}
 
 {{< question >}}
 Why variance must be finite?

@@ -17,13 +17,12 @@ What is the meaning of the word "**Eigen**" ?
 **Eigen** is a **German** word that means "**Characteristic**" or "Proper". <br>
 It tells us about the characteristic properties of a matrix.
 {{</ answer >}}
-<br>
 
 {{< definition title="Linear Transformation">}}A linear transformation defined by a matrix, denoted as \(T(x)=A\mathbf{x}\), is a function that maps a vector \(\mathbf{x}\) 
 to a new vector by multiplying it by a matrix \(A\). <br>
 Multiplying a vector by a matrix can change the direction or magnitude or both of the vector. <br>
 {{</ definition >}}
-For example: <br>
+{{< panel color="rust" title="Example" >}}
 \( \mathbf{A} = \begin{bmatrix}
 2 & 1 \\
 \\
@@ -37,13 +36,13 @@ For example: <br>
 \(\mathbf{Av} = \begin{bmatrix} 3 \\  \\ 3 \\ \end{bmatrix}\)
 <br><br>
 {{< imgproc "images/maths/linear_algebra/linear_transformation.png" Resize "800x" >}}{{< /imgproc >}}
+{{< /panel >}}
 
 {{< definition title="Eigen Vector">}}
 A special non-zero vector whose direction remains unchanged after transformation by a matrix is applied. <br>
 It might get scaled up or down but does not change its direction. <br>
 Result of linear transformation, i.e, multiplying the vector by a matrix, is just a scalar multiple of the original vector. <br>
 {{</ definition >}}
-<br>
 
 {{< definition title="Eigen Value (\(\lambda\))">}}It is the scaling factor of the eigen vector, i.e, a scalar multiple \(\lambda\) of the original vector, when the vector 
 is multiplied by a matrix. <br>
@@ -139,7 +138,6 @@ Characteristic equation for identity matrix: <br>
 \(\mathbf{Iv} = \lambda \mathbf{v}\) <br>
 Therefore, identity matrix has only one eigen value \(\lambda = 1\), and all non-zero vectors can be eigen vectors. <br>
 {{</ answer >}}
-<br>
 
 {{< question >}}
 Are the eigen values of a real matrix always real?
@@ -167,7 +165,6 @@ e.g: <br>
 So, eigen values are complex.
 
 {{</ answer >}}
-<br>
 
 {{< question >}}
 What are the eigen values of a diagonal matrix? 
@@ -200,9 +197,8 @@ _{\text{n x n}}
 => \(\lambda = d_{11}, d_{22}, \cdots, d_{nn}\) <br>
 So, eigen values are the diagonal elements of the matrix.
 {{</ answer >}}
-<br>
 
-{{< panel color="green" title="Key Properties of Eigen Values and Eigen Vectors" >}}
+{{< panel color="orange" title="Key Properties of Eigen Values and Eigen Vectors" >}}
 1. For a \(n \times n\) matrix, there are \(n\) eigen values.
 2. Eigen values need NOT be **unique**, e.g, identity matrix has only one eigen value \(\lambda = 1\).
 3. **Sum** of eigen values = **trace** of matrix = sum of diagonal elements, i.e, <br>
@@ -270,7 +266,7 @@ e.g.: <br>
 \end{bmatrix}
 \)
 {{</ answer >}}
-<br>
+
 {{< question >}}
 Now, how will we calculate higher powers of a matrix i.e \(\mathbf{A}^k\)?
 {{</ question >}}
@@ -280,7 +276,6 @@ If we follow the above method, then we will have to multiply the matrix \(\mathb
 be very time consuming and cumbersome.<br>
 So, we need to find an easier way to calculate the power of a matrix. <br>
 {{</ answer >}}
-<br>
 
 {{< question >}}
 How will we calculate the power of diagonal matrix?
@@ -367,7 +362,7 @@ Just reshuffling the above equation will give us the **Eigen Value Decomposition
 **Important:** Given that \(\mathbf{V}^{-1}\) exists, i.e, all the eigen vectors are linearly independent. <br>
 
 {{< /panel >}}
-For example: <br>
+{{< panel color="rust" title="Example" >}}
 Let's revisit the example given above: <br>
 \(\mathbf{A} = \begin{bmatrix}
 2 & 1 \\
@@ -441,6 +436,7 @@ We know, \( \mathbf{V} ~and~ \mathbf{\Lambda} \), we need to calculate \(\mathbf
 \)
 <br><br>
 
+{{< /panel >}}
 {{< panel color="green" title="Spectral Decomposition" >}}
 **Spectral decomposition** is a specific type of eigendecomposition that applies to a **symmetric** matrix, 
 requiring its eigenvectors to be **orthogonal**. <br>

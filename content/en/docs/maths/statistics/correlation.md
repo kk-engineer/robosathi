@@ -44,14 +44,15 @@ E.g: Covariance between age and height will NOT be same as the covariance betwee
 *Note:It only measures the direction of the relationship, but does NOT give any information about the strength of the relationship.* <br>
 
 {{</ definition >}}
-For example: <br>
+{{< panel color="rust" title="Example" >}}
 1. \(X = [1, 2, 3] \) and \(Y = [2, 4, 6] \) <br>
 Let's calculate the covariance: <br>
 \(\text{Cov}(X, Y) = \frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})\) <br>
 \(\bar{x} = 2\) and \(\bar{y} = 4\) <br>
 \(\text{Cov}(X, Y) = \frac{1}{3-1}[(1-2)(2-4) + (2-2)(4-4) + (3-2)(6-4)]= 0\) <br>
 \( = \frac{1}{2}[2+0+2]= 2\) <br>
-=> Cov(X,Y) > 0 i.e if X increases, Y increases and vice versa. <br>
+=> Cov(X,Y) > 0 i.e if X increases, Y increases and vice versa.
+{{< /panel >}}
 
 {{< video "https://youtu.be/deAM6uPsdAQ?si=J7sZEwpA51-Jm7sJ" >}}
 
@@ -78,7 +79,7 @@ Range of \(r\) is between -1 and 1. <br>
 *Note: A correlation coefficient of 0.9 means that there is a strong linear relationship between X and Y, 
 irrespective of their units.* <br>
 {{</ definition >}}
-For example:
+{{< panel color="rust" title="Example" >}}
 1. \(X = [1, 2, 3] \) and \(Y = [2, 4, 6] \) <br>
 Let's calculate the covariance: <br>
 \(\text{Cov}(X, Y) = \frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})\) <br>
@@ -101,7 +102,7 @@ Now, we can calulate the  pearson correlation coefficient (r): <br>
 => \(r_{xy} = \frac{2}{1* 2}\) <br>
 => \(r_{xy} = 1\) <br>
 Therefore, we can say that there is a strong +ve linear relationship between X and Y.
-<br><br>
+{{< /panel >}}
 
 {{< definition title="Spearman Rank Correlation Coefficient (\(\rho\))" >}}
 It is a measure of the strength and direction of the monotonic relationship between two ranked variables \(X\) and \(Y\).<br>
@@ -115,7 +116,7 @@ meet the assumptions of linear methods, such as, Pearson's correlation.
 
 \[\rho_{xy} = 1 - \frac{6\sum_{i}d_i^2}{n(n^2-1)}\] <br>
 {{</ definition >}}
-For example:
+{{< panel color="rust" title="Example" >}}
 1. Compute the correlation of ranks awarded to a group of 5 students by 2 different teacherrs. <br>
 | Student  | Teacher A Rank | Teacher B Rank  | \(d_i\) | \(d_i^2\) |
 |----------|----------------|----------------|---------|-----------|
@@ -139,6 +140,7 @@ Therefore, we can say that there is a strong +ve correlation between the ranks g
 Here, Spearman's rank correlation coefficient \(\rho\) will be perfect 1 as there is a monotonic relationship i.e
 as X increases, Y increases and vice versa. <br>
 But, the Pearson's correlation coefficient (r) will be slightly less than 1 i.e r = 0.9662.
+{{< /panel >}}
 
 {{< video "https://youtu.be/Vsy2pH2M9F0?si=hPe9P5mS-lWR3va-" >}}
 

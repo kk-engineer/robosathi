@@ -450,7 +450,6 @@ Equating the terms, we get: <br>
 
 Therefore, the rows and columns of an orthogonal matrix are **orthonormal**.
 {{</ definition >}}
-<br>
 
 {{< question >}}
 Why multiplication of a vector with an orthogonal matrix does NOT change its size?
@@ -468,7 +467,6 @@ Let's calculate the length of \( \mathbf{Q} \mathbf{v} \) <br>
 
 Therefore, linear transformation of a vector by an orthogonal matrix does NOT change its length.
 {{</ answer >}}
-<br>
 
 {{< question >}}
 Solve the following system of equations: <br>
@@ -557,9 +555,7 @@ y
 <br><br>
 
 Therefore, \( x = 2 \) and \( y = 1 \).
-
 {{</ answer >}}
-<br>
 
 {{< video "https://www.youtube.com/watch?v=aoPJ7yzX6lE&t=1s" >}}
 

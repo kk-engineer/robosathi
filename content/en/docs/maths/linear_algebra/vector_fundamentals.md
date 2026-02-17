@@ -19,7 +19,6 @@ e.g., force, velocity, electromagnetism, etc. <br>
 It is used to describe the surrounding space, e.g, lines, planes, 3D space, etc. <br>
 And, In machine learning, vectors are used to represent data, both the input features and the output of a model.
 {{< /answer >}}
-<br>
 
 {{< definition title="Vector">}}
 It is a collection of scalars(numbers) that has both magnitude and direction. <br>
@@ -62,7 +61,6 @@ _Direction of vector:_
 \[\mathbf{v} = \frac{\vec{v}} {\|\mathbf{v}\|} \]
 
 {{</ definition >}}
-<br>
 
 {{< definition title="Vector Space">}}
 It is a collection of vectors that can be added together and scaled by numbers (scalars), such that, 
@@ -171,7 +169,6 @@ A vector \(\mathbf{v}\) is a linear combination of vectors \(\mathbf{u}_1, \math
 \(\mathbf{v} = \alpha_1 \mathbf{u}_1 + \alpha_2 \mathbf{u}_2 + \cdots + \alpha_k \mathbf{u}_k\) <br>
 where \(\alpha_1, \alpha_2, \cdots, \alpha_k\) are scalars. <br>
 {{</ definition >}}
-<br>
 
 {{< definition title="Linear Independence">}}
 A set of vectors are linearly independent if NO vector in the set can be expressed as a linear combination of 
@@ -206,7 +203,6 @@ and the feature is NOT bringing any new information. <br>
 e.g.: In 2 dimensions, 3 vectors \(\mathbf{x_1}, \mathbf{x_2}, \mathbf{x_3} \) are linearly dependent.
 
 {{</ definition >}}
-<br>
 
 {{< definition title="Span">}}
 Span of a set of vectors is the geometric shape by all possible linear combinations of those vectors, such as, 
@@ -216,8 +212,6 @@ e.g.: <br>
 2. Span of 2 vectors (1,0) and (0,1) is the entire X-Y (2D) plane, as any vector in 2D plane can be expressed as a 
 linear combination of the 2 vectors - (1,0) and (0,1).
 {{</ definition >}}
-
-<br>
 
 {{< definition title="Basis">}}It is the minimal set of linearly independent vectors that spans or defines the entire vector space, 
 providing a unique co-ordinate system for every vector within the space. <br>
@@ -229,7 +223,6 @@ e.g.:
 **_Note_: Basis = Dimensions**
 
 {{</ definition >}}
-<br>
 
 {{< definition title="Orthogonal Vectors">}}
 Two vectors are orthogonal if their dot product is 0. <br>
@@ -250,8 +243,6 @@ Since, \(\mathbf{u} \cdot \mathbf{v} = 2*1 + 3*0 = 2 ⍯ 0\). <br>
 
 {{</ definition >}}
 
-<br>
-
 {{< definition title="Orthonormal Vectors">}}Orthonormal vectors are vectors that are orthogonal and have unit length. <br>
 A set of vectors \(\mathbf{x_1}, \mathbf{x_2}, \cdots ,\mathbf{x_n} \) are said to be orthonormal if: <br>
 \(\mathbf{x_i} \cdot \mathbf{x_j} = 0 \forall i⍯j\) and \(\|\mathbf{x_i}\| = 1\), i.e, **unit vector**. <br>
@@ -261,7 +252,6 @@ e.g.: <br>
 2. \(\mathbf{u} = (1,0)\) and \(\mathbf{v} = (0,2) \) are NOT orthonormal vectors. <br>
 
 {{</ definition >}}
-<br>
 
 {{< definition title="Orthonormal Basis">}}It is a set of vectors that functions as a basis for a space while also being orthonormal, <br>
 meaning each vector is a unit vector (has a length of 1) and all vectors are mutually perpendicular (orthogonal) to each other. <br>
@@ -278,7 +268,6 @@ also form an orthonormal basis for 2-D space. <br>
 
 *Note: In a n-dimensional space, there are only \(n\) possible orthonormal bases.*
 {{</ definition >}}
-<br>
 
 {{< video "https://www.youtube.com/watch?v=LzLswBOf_vM&t=1s" >}}
 

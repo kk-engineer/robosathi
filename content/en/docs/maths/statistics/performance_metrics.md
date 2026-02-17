@@ -168,7 +168,6 @@ Plot the points on a graph to get the final ROC curve. <br>
    - Use Precision-Recall curve.
 
 {{</ definition >}}
-<br>
 
 {{< question >}}
 What is the AUC of a random binary classifier model?
@@ -179,7 +178,6 @@ AUC of a random binary classifier model = 0.5 <br>
 Since, labels are randomly generated as 0/1 for binary classification, so 50% labels from each class. <br>
 Because random number generators generate numbers uniformly in the given range.
 {{</ answer >}}
-<br>
 
 {{< question >}}
 Why ROC can be misleading for imbalanced data ?

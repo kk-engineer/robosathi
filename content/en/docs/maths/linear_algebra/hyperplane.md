@@ -22,7 +22,6 @@ To represent a **line** in 2D space, we need 2 things: <br>
 
 {{< imgproc "images/maths/linear_algebra/line.png" Resize "800x" >}}{{< /imgproc >}}
 {{</ answer >}}
-<br>
 
 {{< panel color="orange" title="Hyperplane" >}}
 A **hyperplane** is a lower (d-1) dimensional **sub-space** that **divides** a d-dimensional space into 2 **distinct** parts.
@@ -56,7 +55,7 @@ Similarly, to represent a **hyperplane** in d-dimensions, we need 2 things: <br>
 {{< imgproc "images/maths/linear_algebra/hyperplane.png" Resize "800x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="green" title="Distance from Origin" >}}
+{{< panel color="orange" title="Distance from Origin" >}}
 If a point 'x' is on the hyperplane, then it satisfies the below equation: <br>
 \[
 \pi_d = \mathbf{w}^\top \mathbf{x} + w_0 = 0 \\

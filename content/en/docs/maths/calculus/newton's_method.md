@@ -35,7 +35,7 @@ x_{new} = x_{old} - (\nabla^2 f(x_{old})^{-1} \nabla f(x_{old}) \\[10pt]
 {{< imgproc "images/maths/calculus/optimization/newton_method.png" Resize "800x" >}}{{< /imgproc >}}
 
 {{</ definition >}}
-For example: <br>
+{{< panel color="rust" title="Example" >}}
 1. Find the minima of \(f(x) = x^2 - 4x + 5\)
 To find the minima, lets calulate the first derivative and equate to zero. <br>
 \(f'(x) = 2x - 4 = 0 \) <br>
@@ -51,9 +51,9 @@ x_{new} = x_{old} - \frac{f\prime(x_{old})}{f\prime\prime(x_{old}} \\[10pt]
 \]
 
 Hence, we can see that using **Newton's Method** we can get to the minima \(x^* = 2\) in just 1 step.
-<br>
+{{< /panel >}}
 
-{{< panel color="rust" title="Limitations" >}}
+{{< panel color="cyan" title="Limitations" >}}
 Full **Newton's Method** is rarely used in Machine Learning/Deep Learning optimization, 
 because of the following limitations: <br>
 1. \(TC = O(n^2\)) for **Hessian** calculation, since for a network with \(n\) parameters <br>

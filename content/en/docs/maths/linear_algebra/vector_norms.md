@@ -44,7 +44,7 @@ It is the maximum of absolute values of all the elements of a vector; also known
 **p=\(\infty\)**: <br>
 \[ {\| x \|_\infty} = \max |x_i| = \lim_{p \to \infty}  (\sum_{i=1}^n |x_i|^p)^{1/p}\]
 {{</ definition >}}
-For example: 
+{{< panel color="rust" title="Example" >}}
 1. Let, vector \(\mathbf{x} = \begin{bmatrix} 3 \\  \\ -4 \end{bmatrix}\), then <br>
 \({\| x \|_1} = |3| + |-4| = 7\)
 <br>
@@ -53,6 +53,7 @@ For example:
 \({\| x \|_\infty} = max(|3|, |-4|) = max(3, 4) = 4\)
 <br><br>
 
+{{< /panel >}}
 {{< definition title="Matrix Norm">}}It is a function that assigns non-negative size or magnitude to a matrix. <br>
 Matrix Norm is a function that maps a matrix to a non-negative real number, i.e, \({\| \cdot \|} : \mathbb{R}^{m \times n} \rightarrow \mathbb{R}\)
 <br>
@@ -102,7 +103,7 @@ Also called **Spectral** norm, i.e, maximum factor by which the matrix can stret
 
 {{</ definition >}}
 
-For example:
+{{< panel color="rust" title="Example" >}}
 1. Let, matrix \(\mathbf{A} = \begin{bmatrix} a_{11} & a_{12} \\ \\ a_{21} & a_{22} \end{bmatrix}\), then find Frobenius norm.<br><br>
 \({\| A \|_F} = \sqrt{a_{11}^2 +  a_{12}^2 + a_{21}^2 +  a_{22}^2}\)
 <br><br>
@@ -160,6 +161,7 @@ det\begin{bmatrix} 5 - \lambda & 4 \\ \\ 4 & 5- \lambda \end{bmatrix} = 0
 => Largest Singular Value = Square root of largest eigen value = \(\sqrt{9} = 3\)  <br>
 Therefore, \({\| A \|_2} = \sigma_{max}(A) = 3\)
 <br><br>
+{{< /panel >}}
 {{< video "https://www.youtube.com/watch?v=8j4GOTM5-uY&t=1s" >}}
 <br><br>
 
