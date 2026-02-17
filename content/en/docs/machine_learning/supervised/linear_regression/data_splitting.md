@@ -24,7 +24,7 @@ To avoid over-fitting (memorize), so that, the model generalizes well, improving
 - Test Data: Evaluate model performance (Real (final) exam)
 {{< /panel >}}
 
-{{< panel color="orange" title="Data Leakage 💦" >}}
+{{< panel color="orange" title="Data Leakage" >}}
 Data leakage occurs when **information** from the validation or test set is **inadvertently used** to
 train 🏃‍♂️ the model.
 

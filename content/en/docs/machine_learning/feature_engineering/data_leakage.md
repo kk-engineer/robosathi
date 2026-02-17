@@ -11,7 +11,7 @@ math: true
 
 <br>
 
-{{< panel color="blue" title="Data Leakage 💦" >}}
+{{< panel color="blue" title="Data Leakage" >}}
 ⭐️ Occurs when **information** ℹ️ NOT available at **inference** time is used during training 🏃‍♂️, 
 leading to **good** training performance, but **poor** real‑world 🌎 performance.
 {{< /panel >}}
@@ -21,7 +21,7 @@ leading to **good** training performance, but **poor** real‑world 🌎 perform
 - e.g. Including _number_of_late_payments_ in a model to predict whether a person applying for a bank **loan** 💵 will **default** ?
 {{< /panel >}}
 
-{{< panel color="green" title="Temporal Leakage 💦" >}}
+{{< panel color="green" title="Temporal Leakage" >}}
 ⭐️ Using **future** data to **predict** the **past**.
 - **Fix**: Use **Time-Series** ⏰ Cross-Validation (**Walk-forward validation**) instead of **random** shuffling.
 {{< /panel >}}

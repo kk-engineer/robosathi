@@ -35,7 +35,7 @@ training data.
 normal data points from the **origin** (0,0) in the feature space 🚀.
 {{< /panel >}}
 
-{{< panel color="blue" title="Task 🎯" >}}
+{{< panel color="blue" title="Goal 🎯" >}}
 🦍 Define a **boundary** for a single class in **high-dimensional** space where data might be **non-linearly** distributed 
 (e.g.'U' shape).
 
