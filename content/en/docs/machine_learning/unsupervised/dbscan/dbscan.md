@@ -1,6 +1,6 @@
 ---
 title: DBSCAN
-description: DBSCAN
+description: Density Based Spatial Clustering of Application with Noise
 date: 2026-02-14
 weight: 331
 math: true
