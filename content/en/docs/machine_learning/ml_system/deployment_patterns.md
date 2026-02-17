@@ -58,7 +58,7 @@ Types of deployment (most common):
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/ml_system/retraining_strategies" >}}">Previous: Retraining Strategies</a></span>
-<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/example-page" >}}">Next: Example Page</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/probability/introduction" >}}">Next: Introduction to Probability</a></span>
 </div>
 <!-- nav-panel:end -->
 

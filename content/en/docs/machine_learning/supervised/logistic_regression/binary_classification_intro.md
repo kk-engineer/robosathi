@@ -68,7 +68,7 @@ Because, we use the logistic (sigmoid) function as the ‘link function'🔗 to 
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-<span><a href="{{< ref "/docs/machine_learning/supervised/linear_regression/assumptions_of_linear_regression" >}}">Previous: Assumptions</a></span>
+<span><a href="{{< ref "/docs/machine_learning/supervised/linear_regression/assumptions_of_linear_regression" >}}">Previous: Assumptions of Linear Regression</a></span>
 <span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/logistic_regression/log_loss" >}}">Next: Log Loss</a></span>
 </div>
 <!-- nav-panel:end -->

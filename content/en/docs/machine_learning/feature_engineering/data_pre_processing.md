@@ -74,10 +74,6 @@ We need to pre-process the data to make it:
   
 👉 **Standardization Example**
 {{< imgproc "images/machine_learning/feature_engineering/data_pre_processing/slide_07_01.png" Resize "1400x" >}}{{< /imgproc >}}
-
-{{< /panel >}}
-
-{{< panel color="orange" title="Visual" >}}
 {{< /panel >}}
 
 {{< video "https://youtu.be/1uc1S4iRCoE" >}}

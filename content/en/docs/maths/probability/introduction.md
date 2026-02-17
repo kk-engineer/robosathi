@@ -173,7 +173,7 @@ Similarly, we can say that \(P(get ~any ~number ~between ~1 ~and ~6)=1\) and \(P
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-<span><a href="{{< ref "/docs/maths/example-page" >}}">Previous: Example Page</a></span>
+<span><a href="{{< ref "/docs/machine_learning/ml_system/deployment_patterns" >}}">Previous: Deployment Patterns</a></span>
 <span style="margin-left:auto;"><a href="{{< ref "/docs/maths/probability/conditional_probability" >}}">Next: Conditional Probability</a></span>
 </div>
 <!-- nav-panel:end -->
