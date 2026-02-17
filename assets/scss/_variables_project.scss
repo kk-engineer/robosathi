@@ -422,3 +422,94 @@ footer {
 .td-content a:hover {
   color: #0f5fc0;
 }
+
+// Support page
+.support-page {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.support-card {
+  background: #ffffff;
+  border: 1px solid #e5edf8;
+  border-radius: 14px;
+  padding: 20px;
+  margin: 16px auto 20px;
+}
+
+.support-qr {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.support-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.support-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-weight: 600;
+  text-decoration: none !important;
+  border: 1px solid transparent;
+}
+
+.support-btn-primary {
+  background: #edf5ff;
+  border-color: #b8d7ff;
+  color: #0f172a !important;
+}
+
+.support-btn-gpay {
+  background: #f4f8ff;
+  border-color: #cfe0ff;
+  color: #0f172a !important;
+}
+
+.support-btn-phonepe {
+  background: #f7f4ff;
+  border-color: #ddd0ff;
+  color: #0f172a !important;
+}
+
+.support-btn:hover {
+  color: #0f172a !important;
+  transform: translateY(-1px);
+}
+
+.support-app-icon {
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.support-app-icon-gpay {
+  background: #eaf2ff;
+  color: #1a56d6;
+}
+
+.support-app-icon-phonepe {
+  background: #f0eaff;
+  color: #5b21b6;
+}
+
+.support-note {
+  color: #334155;
+}

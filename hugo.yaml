@@ -201,6 +201,10 @@ params:
         url: https://x.com/who_kkaran
         icon: fab fa-x-twitter
         desc: Follow us on X.com to get the latest news!
+      - name: Support Us
+        url: /support-us/
+        icon: fas fa-hand-holding-heart
+        desc: Support RoboSathi via UPI.
     # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 #    developer:
 #      - name: GitHub
