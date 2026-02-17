@@ -5,11 +5,11 @@ title: RoboSathi
 {{< blocks/cover title="RoboSathi" >}}
 <h1> "AI for Good"</h1>
 <br>
-<a class="btn btn-lg btn-success me-3 mb-4" href="/docs/">
-  Notes <i class="fas fa-arrow-alt-circle-right ms-2"></i>
+<a class="btn btn-lg me-3 mb-4 home-cta-btn home-cta-notes" href="/docs/">
+  Notes <i class="fas fa-book-open home-cta-icon" aria-hidden="true"></i>
 </a>
-<a class="btn btn-lg btn-secondary me-3 mb-4" href="https://www.youtube.com/@RoboSathi" target="_blank">
-  Videos <i class="fab fa-youtube"></i>
+<a class="btn btn-lg me-3 mb-4 home-cta-btn home-cta-videos" href="https://www.youtube.com/@RoboSathi" target="_blank">
+  Videos <i class="fab fa-youtube home-cta-icon" aria-hidden="true"></i>
 </a>
 <p class="lead mt-5 fw-bold text-dark">RoboSathi is an AI & ML learning platform.</p>
 {{< blocks/link-down color="dark" >}}

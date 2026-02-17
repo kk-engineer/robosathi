@@ -1,11 +1,13 @@
 {{- $color_name := .Get "color" | default (.Get 0 | default "blue") -}}
 {{- $title := .Get "title" | default (.Get 1) -}}
 {{- $icon := .Get "icon" | default (.Get 2) -}}
-{{- $colors := dict "navy" "#003366" "green" "#4F7942" "rust" "#FF4444" "grey" "#3E4551" "blue" "#007BFF" "orange" "#FF8800" "magenta" "#FF00FF" "cyan" "#00E5FF" "red" "#AA2704" -}}
+{{- $colors := dict "navy" "#2563EB" "green" "#16A34A" "rust" "#EF4444" "grey" "#475569" "blue" "#0EA5E9" "orange" "#F59E0B" "magenta" "#D946EF" "cyan" "#06B6D4" "red" "#DC2626" -}}
+{{- $title_colors := dict "navy" "#1E3A8A" "green" "#14532D" "rust" "#991B1B" "grey" "#1F2937" "blue" "#0C4A6E" "orange" "#7C2D12" "magenta" "#701A75" "cyan" "#0E7490" "red" "#991B1B" -}}
 {{- $base_hex := index $colors $color_name | default "#0066CC" -}}
-<div class="custom-panel-wrapper" style="display: block; width: 100%; margin: 10px 0; padding: 10px 15px; border-radius: 6px; background-color: {{ printf "%s30" $base_hex | safeCSS }}; border-left: 5px solid {{ $base_hex | safeCSS }}; color: {{ $base_hex | safeCSS }};">
+{{- $title_hex := index $title_colors $color_name | default "#1E3A8A" -}}
+<div class="custom-panel-wrapper" style="display: block; width: 100%; margin: 10px 0; padding: 10px 15px; border-radius: 6px; background-color: {{ printf "%s1f" $base_hex | safeCSS }}; border-left: 3px solid {{ printf "%s99" $base_hex | safeCSS }}; color: {{ $base_hex | safeCSS }};">
 {{- if or $title $icon -}}
-<div class="panel-header" style="font-size: 1.6rem; font-weight: 400; margin-bottom: 5px; line-height: 1.2; color: {{ $base_hex | safeCSS }};">
+<div class="panel-header" style="font-size: 1.6rem; font-weight: 400; margin-bottom: 5px; line-height: 1.2; color: {{ $title_hex | safeCSS }};">
 {{- with $icon }}{{ . | safeHTML }} {{ end -}}
 {{- with $title }}{{ . }}{{ end -}}
 </div>

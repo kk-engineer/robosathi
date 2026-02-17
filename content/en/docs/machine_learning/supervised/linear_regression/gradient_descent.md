@@ -85,7 +85,6 @@ Preferred in modern **deep learning** as they require less manual tuning, e.g., 
 {{< /panel >}}
 
 {{< video "https://youtu.be/I23bqvGWPEM" >}}
-<br>
 
 {{< panel color="green" title="Types of Gradient Descent 🎢">}}
 Batch, Stochastic, Mini-Batch are classified by **data usage** for gradient calculation in each iteration.

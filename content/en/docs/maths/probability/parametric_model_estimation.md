@@ -26,7 +26,8 @@ of the underlying probability distribution, assuming that the data is generated 
 *Note: Most of the time, from experience, we know the underlying probability distribution of data, 
 such as, Bernoulli, Gaussian, etc.*
 {{</ definition >}}
-<br>
+
+{{< panel color="orange" title="2 Approaches" >}}
 There are 2 philosophical approaches to estimate the parameters of a parametric model: <br>
 1. **Frequentist**: 
 - Parameters \(\Theta\) is fixed, but unknown, only data is random.
@@ -40,7 +41,7 @@ There are 2 philosophical approaches to estimate the parameters of a parametric 
  Thus, integrating prior knowledge with data to express the uncertainty about the parameters.
 - It is favoured when the sample size is small, as it uses prior belief about the data distribution too.
 - For example, Maximum A Posteriori Estimation(MAP), Minimum Mean Square Error Estimation(MMSE), etc..
-<br>
+{{< /panel >}}
 
 {{< video "https://www.youtube.com/watch?v=uGjlEjN0giM&t=1s" >}}
 
@@ -101,7 +102,6 @@ P(X_i = 0) = 1 - \theta
 \]
 Estimate the parameter \(\theta\) using Maximum Likelihood Estimation. <br>
 {{</ question >}}
-<br>
 
 {{< answer >}} 
 Let, \(n_1 = \) number of 1's in the dataset. <br>
@@ -146,8 +146,7 @@ with respect to \(\theta\) and equate it to zero. <br>
 
 Say, **e.g.**, we have 10 observations for the Bernoulli random variable as: 1,0,1,1,0,1,1,0,1,0. <br>
 Then, the parameter \(\Theta_{ML} = \frac{6}{10} = 0.6\) i.e proportion of 1's. <br>
-{{</ answer >}} 
-<br>
+{{</ answer >}}
 
 {{< question >}}
 Given \(X_1, X_2, \dots, X_n\) are I.I.D. *Gaussian* \( \sim N(\mu, \sigma^2) \)  <br>
@@ -295,8 +294,6 @@ f_{\Theta \mid X} (\theta \mid x) = \frac{\theta^{n_1} (1 - \theta)^{n - n_1}}{Î
 \]
 {{</ answer >}}
 
-<br>
-
 {{< question >}} 
 Suppose, in the above example, we are told that the parameter \(\Theta\) is closer to 1 than 0. <br>
 How will we incorporate this useful information (apriori knowledge) into our parameter estimation? <br>
@@ -358,10 +355,8 @@ practical use, such as, <br>
 - Maximum A Posteriori (MAP) Estimator
 - Minimum Mean Square Error (MMSE) Estimator
 {{</ answer >}}
-<br>
 
 {{< video "https://www.youtube.com/watch?v=ANqXXsZSeyA&t=1s" >}}
-<br>
 
 {{< definition title="Maximum A Posteriori (MAP) Estimator" >}}
 It finds the mode(peak) of the posterior distribution. <br>
@@ -468,7 +463,6 @@ From equation 3 and 4: <br>
 *Note: If the prior is uniform then \(\Theta_{MAP} = \Theta_{MLE}\), because uniform prior does NOT give any information
 about the initial bias, and all possibilities are equally likely.*
 {{</ answer >}}
-<br><br>
 
 {{< question >}}
 What if, in the above example, we know that the initial belief is not uniform but biased towards 0? <br>
@@ -512,10 +506,8 @@ Therefore, we can see that \(\Theta_{MAP}\) is extra biased towards 0. <br>
 
 *Note: For a non-uniform prior \(\Theta_{MAP}\) estimate will be pulled towards the prior's mode.*
 {{</ answer >}}
-<br>
 
 {{< video "https://www.youtube.com/watch?v=v5y5Kw221VU" >}}
-<br>
 
 {{< question >}}
 MAP estimator is good for classification like problems, such as Yes/No, True/False, etc. <br>
@@ -528,7 +520,6 @@ We also want to know that the prediction was wrong by how much, so that we can m
 {{< answer >}}
 We can use **Minimum Mean Square Error (MMSE) Estimator** to do this. <br>
 {{</ answer >}}
-<br>
 
 {{< definition title="Minimum Mean Square Error (MMSE) Estimation" >}}
 Minimizes the expected value of squared error. <br>
@@ -595,13 +586,13 @@ So, here in this case our \(\Theta_{MMSE}\) is: <br>
 \]
 {{</ answer >}}
 
-{{% alert color="orange" title="MAP vs MMSE" %}}
+{{% panel color="orange" title="MAP vs MMSE" %}}
 - MMSE is the average of the posterior distribution, whereas MAP is the mode/peak.
 - If posterior distribution is symmetric and unimodal (only 1 peak), then MAP and MMSE are very close.
 - If posterior distribution is skewed and multimodal (many peaks), then MAP and MMSE can differ a lot.
 - MMSE considers all the values of the posterior distribution; hence, it is more accurate than MAP, especially for skewed 
 or multimodal distributions.
-{{% /alert %}}
+{{% /panel %}}
 
 {{< video "https://www.youtube.com/watch?v=WXcJBbF8AvM" >}}
 

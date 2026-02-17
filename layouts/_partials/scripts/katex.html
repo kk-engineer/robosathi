@@ -1,0 +1,14 @@
+{{ $version := .Site.Params.katex.version | default "latest" -}}
+{{ $katexOptions := $.Page.Site.Params.katex.options | default $.Page.Site.Params.math.options | default dict -}}
+{{ $domElement := $.Page.Site.Params.katex.html_dom_element | default "document.body" -}}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@{{ $version }}/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@{{ $version }}/dist/katex.min.js" crossorigin="anonymous"></script>
+
+{{ if .mhchem -}}
+<script defer src="https://cdn.jsdelivr.net/npm/katex@{{ $version }}/dist/contrib/mhchem.min.js" crossorigin="anonymous"></script>
+{{ end -}}
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@{{ $version }}/dist/contrib/auto-render.min.js" crossorigin="anonymous"
+{{ printf "onload='renderMathInElement(%s, %s);'" ($domElement | safeJS) (printf "%s" ($katexOptions | jsonify)) | safeHTMLAttr -}}>
+</script>

@@ -85,6 +85,10 @@ params:
     engine: katex  # This switches the engine from mathjax to katex
     options:
       output: htmlAndMathml # This ensures the <annotation> tag is created
+  katex:
+    enable: true
+    options:
+      output: htmlAndMathml
 
   # Set this to the path of your social sharing image in the static folder.
   # The path is relative to the static folder (or the root if placed there).
@@ -226,4 +230,3 @@ module:
 services:
   googleAnalytics:
     id: 'G-P2ERDP8TT3'
-
