@@ -6,7 +6,6 @@ weight: 2
 math: true
 ---
 
-
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" 
         "Linear Algebra for AI & ML | Full Course Videos">}}
 <br>
@@ -167,7 +166,6 @@ _{\text{2×2}}\)
 
 {{< /panel >}}
 
-
 {{< definition title="Linear Combination">}}
 A vector \(\mathbf{v}\) is a linear combination of vectors \(\mathbf{u}_1, \mathbf{u}_2, \cdots, \mathbf{u}_n\) if: <br><br>
 \(\mathbf{v} = \alpha_1 \mathbf{u}_1 + \alpha_2 \mathbf{u}_2 + \cdots + \alpha_k \mathbf{u}_k\) <br>
@@ -285,9 +283,10 @@ also form an orthonormal basis for 2-D space. <br>
 {{< video "https://www.youtube.com/watch?v=LzLswBOf_vM&t=1s" >}}
 
 <br><br>
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-<span></span>
+<span><a href="{{< ref "/docs/maths/statistics/performance_metrics" >}}">Previous: Performance Metrics</a></span>
 <span style="margin-left:auto;"><a href="{{< ref "/docs/maths/linear_algebra/matrix_operations" >}}">Next: Matrix Operations</a></span>
 </div>
 <!-- nav-panel:end -->

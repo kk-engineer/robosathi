@@ -58,8 +58,8 @@ Iterative method for partitioning 'n' data points into ‘k' groups by repeatedl
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-<span><a href="{{< ref "/docs/machine_learning/unsupervised/k_means/k_means_clustering" >}}">Previous: K Means Clustering</a></span>
-<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/unsupervised/k_means/k_means_plus_plus" >}}">Next: K Means Plus Plus</a></span>
+<span><a href="{{< ref "/docs/machine_learning/unsupervised/k_means/k_means_clustering" >}}">Previous: K Means</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/unsupervised/k_means/k_means_plus_plus" >}}">Next: K Means++</a></span>
 </div>
 <!-- nav-panel:end -->
 

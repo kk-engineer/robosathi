@@ -85,7 +85,7 @@ Where,
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-<span></span>
+<span><a href="{{< ref "/docs/machine_learning/supervised/support_vector_machines/support_vector_regression" >}}">Previous: Support Vector Regression</a></span>
 <span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/naive_bayes/naive_bayes_issues" >}}">Next: Naive Bayes Issues</a></span>
 </div>
 <!-- nav-panel:end -->

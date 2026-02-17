@@ -19,7 +19,6 @@ math: true
 ✅ Ask: "How do we **automate** the decision to retrain while balancing compute cost 💰, model risk, and data freshness?"
 {{< /panel >}}
 
-
 {{< panel color="green" title="Periodic Retraining (Fixed Interval) ⏳" >}}
 👉 The model is retrained on a regular schedule (e.g., daily, weekly, or monthly).
 - **Best for**:

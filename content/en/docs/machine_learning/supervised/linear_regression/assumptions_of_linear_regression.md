@@ -28,7 +28,6 @@ Relationship between features and target 🎯 is **linear** in **parameters**.
 
 {{< /panel >}}
 
-
 {{< panel color="navy" title="Independence of Errors (No Auto-Correlation)" >}}
 Residuals (errors) should not have a visible pattern or **correlation** with one another (most common in time-series ⏰ data).
 
@@ -104,10 +103,11 @@ Error term must be uncorrelated with the features; E[ϵ|X] = 0
 
 {{< video "https://youtu.be/hNV8bWe8IdQ" >}}
 <br><br>
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/linear_regression/regression_metrics" >}}">Previous: Regression Metrics</a></span>
-<span style="margin-left:auto;"></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/logistic_regression/binary_classification_intro" >}}">Next: Binary Classification</a></span>
 </div>
 <!-- nav-panel:end -->
 

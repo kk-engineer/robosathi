@@ -85,7 +85,6 @@ math: true
 {{< imgproc "images/machine_learning/unsupervised/dbscan/dbscan/slide_14_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-
 {{< panel color="green" title="When to use DBSCAN ?" >}}
 - **Arbitrary Cluster Shapes**: 
   - When clusters are intertwined, nested, or ‘moon-shaped'; where K-Means would fail by splitting them.
@@ -96,10 +95,11 @@ math: true
 
 {{< video "https://youtu.be/5ngz0Q_7fyo" >}}
 <br><br>
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-<span><a href="{{< ref "/docs/machine_learning/unsupervised/dbscan" >}}">Previous: DBSCAN</a></span>
-<span style="margin-left:auto;"></span>
+<span><a href="{{< ref "/docs/machine_learning/unsupervised/hierarchical_clustering/hierarchical_clustering" >}}">Previous: Hierarchical Clustering</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/unsupervised/gaussian_mixture_model/introduction_gaussian_mixture_models" >}}">Next: Gaussian Mixture Models</a></span>
 </div>
 <!-- nav-panel:end -->
 

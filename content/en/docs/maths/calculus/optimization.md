@@ -6,7 +6,6 @@ weight: 3
 math: true
 ---
 
-
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfzDh2D3OqVo-piGAZQPWDj" 
         "Calculus for AI & ML | Full Course Videos">}}
 <br>
@@ -24,7 +23,6 @@ minimizing a loss function.
 **Loss Function:** <br>
 It quantifies error of a single data point in a dataset. <br>
 e.g.: Squared Loss, Hinge Loss, Absolute Loss, etc, for a single data point. <br>
-
 
 **Cost Function:** <br>
 It is the average of all losses over the entire dataset. <br>
@@ -84,7 +82,6 @@ It is always described by a convex set. <br>
 {{< imgproc "images/maths/calculus/optimization/convex.png" Resize "800x" >}}{{< /imgproc >}}
 
 {{< imgproc "images/maths/calculus/optimization/non_convex.png" Resize "800x" >}}{{< /imgproc >}}
-
 
 **Convex Set:** <br>
 A convex set is a set of points in which the straight line segment connecting any two points in the set lies 
@@ -275,6 +272,7 @@ w^* = (X^TX)^{-1}X^Ty
 {{< video "https://www.youtube.com/watch?v=OdYNB1KRwKo&t=1s" >}}
 
 <br><br>
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/maths/calculus/calculus_fundamentals" >}}">Previous: Calculus Fundamentals</a></span>

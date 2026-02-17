@@ -40,7 +40,6 @@ a '**soft**' assignment (_value between 0 and 1_).
 parameters \(\Theta\).
 \[\gamma _{ik}=E[z_{ik}\mid x_{i},\theta ]=P(z_{ik}=1\mid x_{i},\theta )\]
 
-
 **Note**: \(\gamma_{ik}\) is the **posterior probability** (or '**responsibility**') that **cluster** 'k' takes for 
 **explaining** data point \(x_{i}\).
 {{< /panel >}}
@@ -89,14 +88,13 @@ at the specific value of \(x_i\), such that \(\pi_k \ge 0\) and \(\sum _{k=1}^{K
 - where, \(N_{k}=\sum _{i=1}^{N}\gamma (z_{ik})\) is the **effective** number of points assigned to component ‘k'.
 {{< /panel >}}
 
-
 {{< video "https://youtu.be/SG_G4thCTF4" >}}
 <br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/unsupervised/gaussian_mixture_model/latent_variable_model" >}}">Previous: Latent Variable Model</a></span>
-<span style="margin-left:auto;"></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/unsupervised/anomaly_detection/anomaly_detection_introduction" >}}">Next: Anomaly Detection</a></span>
 </div>
 <!-- nav-panel:end -->
 

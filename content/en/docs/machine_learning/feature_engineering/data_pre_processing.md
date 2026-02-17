@@ -85,7 +85,7 @@ We need to pre-process the data to make it:
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-<span></span>
+<span><a href="{{< ref "/docs/machine_learning/unsupervised/dimensionality_reduction/umap" >}}">Previous: UMAP</a></span>
 <span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/feature_engineering/categorical_variables" >}}">Next: Categorical Variables</a></span>
 </div>
 <!-- nav-panel:end -->

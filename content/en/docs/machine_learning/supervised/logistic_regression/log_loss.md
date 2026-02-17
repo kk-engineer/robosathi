@@ -26,7 +26,6 @@ Combining the above 2 conditions into 1 equation gives:
 {{< imgproc "images/machine_learning/supervised/logistic_regression/log_loss/slide_04_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-
 {{< panel color="green" title="Cost Function" >}}
 \[J(w) = -\frac{1}{n}\sum [y_ilog(\hat{y_i}) + (1-y_i)log(1-\hat{y_i})]\]
 
@@ -142,7 +141,7 @@ Mean Squared Error (MSE) can not be used to quantify error/loss in binary classi
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/logistic_regression/binary_classification_intro" >}}">Previous: Binary Classification</a></span>
-<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/logistic_regression/logistic_regularization" >}}">Next: Logistic Regularization</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/logistic_regression/logistic_regularization" >}}">Next: Regularization</a></span>
 </div>
 <!-- nav-panel:end -->
 

@@ -77,7 +77,7 @@ for individuals affected by **algorithmic decisions**.
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/feature_engineering/data_leakage" >}}">Previous: Data Leakage</a></span>
-<span style="margin-left:auto;"></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/ml_system/data_distribution_shift" >}}">Next: Data Distribution Shift</a></span>
 </div>
 <!-- nav-panel:end -->
 

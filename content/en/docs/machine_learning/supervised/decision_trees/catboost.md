@@ -50,7 +50,7 @@ index (e.g 101) and **jumps directly** to that leaf 🍃 in memory 🧠.
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/lightgbm" >}}">Previous: LightGBM</a></span>
-<span style="margin-left:auto;"></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/support_vector_machines/svm_intro" >}}">Next: SVM Intro</a></span>
 </div>
 <!-- nav-panel:end -->
 

@@ -70,8 +70,8 @@ Add the new ‘correction' to the existing model, scaled by the learning rate.
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-<span><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/adaboost" >}}">Previous: AdaBoost</a></span>
-<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/gbm_intro" >}}">Next: GBM Intro</a></span>
+<span><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/gbm_intro" >}}">Previous: Gradient Boosting Machine</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/gbdt_example" >}}">Next: GBDT Example</a></span>
 </div>
 <!-- nav-panel:end -->
 

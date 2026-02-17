@@ -63,6 +63,7 @@ validation set having 99% class A.
 
 {{< video "https://youtu.be/DGM9wktXyjE" >}}
 <br><br>
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/linear_regression/polynomial_regression" >}}">Previous: Polynomial Regression</a></span>

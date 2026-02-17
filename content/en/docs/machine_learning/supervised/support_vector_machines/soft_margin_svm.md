@@ -59,7 +59,6 @@ Since, the noise 📢 point are +ve (\(y_i=1\)) labeled:
 {{< imgproc "images/machine_learning/supervised/support_vector_machines/soft_margin_svm/slide_09_01.tif" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-
 {{< panel color="orange" title="Goal 🎯" >}}
 \[\text{Maximize the width of margin: } \min_{w, w_0} \frac{1}{2} {\|w\|^2}\]
 \[\text{Minimize violation or sum of slack/error terms: } \sum \xi_i\]

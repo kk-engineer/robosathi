@@ -6,7 +6,6 @@ weight: 9
 math: true
 ---
 
-
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" 
         "Linear Algebra for AI & ML | Full Course Videos">}}
 <br>
@@ -77,7 +76,6 @@ If a point 'x' is on the hyperplane, then it satisfies the below equation: <br>
    \(w_0 = 0\) => Hyperplane passes through the **origin**. <br>
     \(w_0 < 0\) => Hyperplane is in the **same** direction of **unit** vector \(\mathbf{\widehat{w}}\) w.r.t the **origin**. <br> 
     \(w_0 > 0\) => Hyperplane is in the **opposite** direction of **unit** vector \(\mathbf{\widehat{w}}\) w.r.t the **origin**.
-
 
 {{< /panel >}}
 
@@ -157,10 +155,11 @@ The above concept of equation of hyperplane will be very helpful when we discuss
 
 {{< video "https://www.youtube.com/watch?v=VU7hUuNydUE&t=1s" >}}
 <br><br>
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/maths/linear_algebra/vector_norms" >}}">Previous: Vector Norms</a></span>
-<span style="margin-left:auto;"></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/calculus/calculus_fundamentals" >}}">Next: Calculus Fundamentals</a></span>
 </div>
 <!-- nav-panel:end -->
 

@@ -88,7 +88,7 @@ because the '**average distance**' to a **neighbor** might be small due to the *
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/unsupervised/k_means/clustering_quality_metrics" >}}">Previous: Clustering Quality Metrics</a></span>
-<span style="margin-left:auto;"></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/unsupervised/hierarchical_clustering/hierarchical_clustering" >}}">Next: Hierarchical Clustering</a></span>
 </div>
 <!-- nav-panel:end -->
 

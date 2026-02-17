@@ -77,7 +77,7 @@ we use the following formula:
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/unsupervised/anomaly_detection/isolation_forest" >}}">Previous: Isolation Forest</a></span>
-<span style="margin-left:auto;"></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/unsupervised/dimensionality_reduction/pca" >}}">Next: PCA</a></span>
 </div>
 <!-- nav-panel:end -->
 

@@ -6,7 +6,6 @@ weight: 8
 math: true
 ---
 
-
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos">}}
 <br>
@@ -47,7 +46,6 @@ E[X] = \sum_{i=1}^{n} x_i.P(X = x_i) \\
 
 Therefore, the expected value of the amount that you will win per toss is Rs. 25 in the long run.
 {{< /answer >}}
-
 
 {{< question >}}
 What is the expected value of a continuous uniform random variable distributed over the interval [a,b]?
@@ -199,6 +197,7 @@ Cov(X,X) &= E[X^2] - E[X]^2 = Var[X] \\
 {{< video "https://youtu.be/F83gibIzCho?si=PKKtqYJK5Qp69vPY&t=1" >}}
 
 <br><br>
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/maths/probability/probability_density_function" >}}">Previous: Probability Density Function</a></span>

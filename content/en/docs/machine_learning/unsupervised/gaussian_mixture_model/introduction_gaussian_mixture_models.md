@@ -75,7 +75,7 @@ Whenever we have multivariate Gaussian, then the variables may be independent or
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-<span></span>
+<span><a href="{{< ref "/docs/machine_learning/unsupervised/dbscan/dbscan" >}}">Previous: DBSCAN</a></span>
 <span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/unsupervised/gaussian_mixture_model/latent_variable_model" >}}">Next: Latent Variable Model</a></span>
 </div>
 <!-- nav-panel:end -->

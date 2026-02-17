@@ -6,7 +6,6 @@ weight: 10
 math: true
 ---
 
-
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos">}}
 <br>
@@ -316,6 +315,7 @@ For example:
 {{< video "https://www.youtube.com/watch?v=hHN1z18-Vjo&t=1s" >}}
 
 <br><br>
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/maths/probability/moment_generating_function" >}}">Previous: Moment Generating Function</a></span>

@@ -6,7 +6,6 @@ weight: 10
 math: true
 ---
 
-
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
 <br>
@@ -15,7 +14,6 @@ They are quantitative measures used to evaluate how well a machine learning mode
 E.g.: For regression models, we have - MSE, RMSE, MAE, R^2 metric, etc. <br>
 Here, we will discuss various performance metrics for classification models.
 {{</ definition >}}
-
 
 {{< definition title="Confusion Matrix" >}}
 It is a table that summarizes model's predictions against the actual class labels, detailing where the model 
@@ -191,7 +189,6 @@ Let's understand this with the below fraud detection example. <br>
 Below is a dataset from a fraud detection system for N = 10,000 transactions. <br>
 Fraud = 100, NOT fraud = 9900 <br>
 
-
 |                      | Predicted Fraud | Predicted NOT Fraud |
 |----------------------|-----------------|---------------------|
 | **Actual Fraud**     | 80 (**TP**)     | 20 (**FN**)         |
@@ -247,10 +244,11 @@ _bottom right corner_, i.e, the model performance is poor.
 {{< video "https://www.youtube.com/watch?v=vIqEUeDGAiE" >}}
 
 <br><br>
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/maths/statistics/chi_square_test" >}}">Previous: Chi-Square Test</a></span>
-<span style="margin-left:auto;"></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/linear_algebra/vector_fundamentals" >}}">Next: Vector Fundamentals</a></span>
 </div>
 <!-- nav-panel:end -->
 

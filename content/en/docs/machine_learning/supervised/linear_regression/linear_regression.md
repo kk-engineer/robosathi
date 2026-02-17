@@ -236,6 +236,7 @@ e.g:
 
 {{< video "https://youtu.be/E-1kMEymBuA" >}}
 <br><br>
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/linear_regression/meaning_of_regression" >}}">Previous: Meaning of 'Regression</a></span>

@@ -6,7 +6,6 @@ weight: 5
 math: true
 ---
 
-
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" 
         "Linear Algebra for AI & ML | Full Course Videos">}}
 <br>
@@ -34,7 +33,6 @@ we will rotate the f1-axis in the direction of maximum spread/variance of data, 
 drop f2'-axis, which is **perpendicular** to f1'-axis.
 
 {{</ answer >}}
-
 
 <br>
 
@@ -107,6 +105,7 @@ Therefore, the diagonal matrix \( \Lambda \) captures the variance along every p
 <br>
 {{< video "https://www.youtube.com/watch?v=KvSeAzyoeCQ&t=1s" >}}
 <br><br>
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/maths/linear_algebra/eigen_value_decomposition" >}}">Previous: Eigen Value Decomposition</a></span>

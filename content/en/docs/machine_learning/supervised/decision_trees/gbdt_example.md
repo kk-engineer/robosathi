@@ -90,7 +90,6 @@ F_2(x_3) &= 7.0 + 0.5(1.0) = \mathbf{7.5}\ \\
 ideally, learning rate \(\nu\) is small, say 0.1, so that we do not overshoot and converge slowly.
 {{< /panel >}}
 
-
 {{< panel color="cyan" title="Inference" >}}
 \[ F_{final}(x) = F_0 + \nu \cdot h_1(x) + \nu \cdot h_2(x) \]
  Let's predict the price of a house with area = 2000 sq. ft.
@@ -105,13 +104,12 @@ Therefore, the price of a house with area = 2000 sq. ft is Rs 4.5 crores, which 
 In just 2 iterations, although with higher learning rate (\(\nu=0.5\)), we were able to get a fairly good estimate.
 {{< /panel >}}
 
-
 {{< video "https://youtu.be/MHbyKuFfJvw" >}}
 <br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-<span><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/gbm_intro" >}}">Previous: GBM Intro</a></span>
+<span><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/gbdt_algorithm" >}}">Previous: GBDT Algorithm</a></span>
 <span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/advanced_gbdt_algorithms" >}}">Next: Advanced GBDT Algorithms</a></span>
 </div>
 <!-- nav-panel:end -->

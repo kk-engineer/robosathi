@@ -6,7 +6,6 @@ weight: 3
 math: true
 ---
 
-
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
 <br>
@@ -104,7 +103,6 @@ Now, we can calulate the  pearson correlation coefficient (r): <br>
 Therefore, we can say that there is a strong +ve linear relationship between X and Y.
 <br><br>
 
-
 {{< definition title="Spearman Rank Correlation Coefficient (\(\rho\))" >}}
 It is a measure of the strength and direction of the monotonic relationship between two ranked variables \(X\) and \(Y\).<br>
 It captures monotonic relationship, meaning the variables move in the same or opposite direction, <br>
@@ -169,6 +167,7 @@ but establishing clear causal links is difficult.
 {{< video "https://youtu.be/FH8jnYEGDzE?si=HhWImSk2PfGL_kv-" >}}
 
 <br><br>
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/maths/statistics/data_distribution" >}}">Previous: Data Distribution</a></span>

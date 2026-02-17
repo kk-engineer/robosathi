@@ -6,7 +6,6 @@ weight: 6
 math: true
 ---
 
-
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
 
@@ -155,7 +154,6 @@ So, we want \(t_{obs}\) to be very negative to confidently conclude that alterna
 => \(m_{m_1} - m_{m_2} > 0\) <br>
 Similarly, here we need to do a right sided/tailed test. <br>
 
-
 **2 Sided/Tailed Test:** <br>
 \(H_a\): Mean recovery time of medicine 1 ⍯ medicine 2, i.e,  \(m_{m_1} ⍯ ~ m_{m_2}\) <br>
 => \(m_{m_1} - m_{m_2} < 0\)  or \(m_{m_1} - m_{m_2} > 0\)<br>
@@ -262,5 +260,4 @@ improvement (p-value<0.05), compared to a placebo group.
 <!-- nav-panel:end -->
 
 ```End of Section```
-
 

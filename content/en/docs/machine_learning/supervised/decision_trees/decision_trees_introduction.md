@@ -64,7 +64,7 @@ e.g: To classify the left bottom corner red points we can write: <br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-<span></span>
+<span><a href="{{< ref "/docs/machine_learning/supervised/k_nearest_neighbors/bias_variance_tradeoff" >}}">Previous: Bias Variance Tradeoff</a></span>
 <span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/purity_metrics" >}}">Next: Purity Metrics</a></span>
 </div>
 <!-- nav-panel:end -->

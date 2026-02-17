@@ -44,7 +44,7 @@ Let's plot Error vs 'K' neighbors:
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/k_nearest_neighbors/curse_of_dimensionality" >}}">Previous: Curse Of Dimensionality</a></span>
-<span style="margin-left:auto;"></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/decision_trees_introduction" >}}">Next: Decision Trees Introduction</a></span>
 </div>
 <!-- nav-panel:end -->
 

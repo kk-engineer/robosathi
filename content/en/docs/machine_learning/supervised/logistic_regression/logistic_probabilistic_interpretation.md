@@ -66,7 +66,6 @@ log\mathcal{L}(w) &= \sum_{i=1}^n log [p_i^{y_i}(1-p_i)^{1-y_i}] \\
 
 {{< /panel >}}
 
-
 {{< panel color="cyan" title="Inference" >}}
 **Log Loss** is not chosen **arbitrarily**, but it follows directly from **Bernoulli assumption** and **MLE**.
 {{< /panel >}}
@@ -77,7 +76,7 @@ log\mathcal{L}(w) &= \sum_{i=1}^n log [p_i^{y_i}(1-p_i)^{1-y_i}] \\
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/logistic_regression/log_odds" >}}">Previous: Log Odds</a></span>
-<span style="margin-left:auto;"></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/k_nearest_neighbors/knn_intro" >}}">Next: KNN Introduction</a></span>
 </div>
 <!-- nav-panel:end -->
 

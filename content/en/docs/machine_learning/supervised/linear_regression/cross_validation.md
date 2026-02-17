@@ -54,6 +54,7 @@ Computationally 💻 expensive 💰.
 
 {{< video "https://youtu.be/7kQdsVtXbSI" >}}
 <br><br>
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/linear_regression/data_splitting" >}}">Previous: Data Splitting</a></span>

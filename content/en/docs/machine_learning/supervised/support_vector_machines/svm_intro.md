@@ -40,7 +40,7 @@ The points that lie exactly on the edges of the highway are the Support Vectors.
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-<span></span>
+<span><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/catboost" >}}">Previous: CatBoost</a></span>
 <span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/support_vector_machines/hard_margin_svm" >}}">Next: Hard Margin SVM</a></span>
 </div>
 <!-- nav-panel:end -->

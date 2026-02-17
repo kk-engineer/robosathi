@@ -6,7 +6,6 @@ weight: 5
 math: true
 ---
 
-
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfzDh2D3OqVo-piGAZQPWDj" 
         "Calculus for AI & ML | Full Course Videos">}}
 
@@ -17,7 +16,6 @@ Now, lets take a step forward and understand how to solve these optimization pro
 We will focus on two important iterative gradient based methods: <br>
 1. **Gradient Descent**: First order method, uses only the gradient.
 2. **Newton's Method**: Second order method, used both the gradient and the Hessian.
-
 
 {{< /panel >}}
 
@@ -104,6 +102,7 @@ also GPUs are the reason for the mini-batch size to be a power of 2.*
 
 {{< video "https://youtu.be/OdYNB1KRwKo?si=AzdYvM6hpkQEK9Kc&t=3350" >}}
 <br><br>
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/maths/calculus/optimization" >}}">Previous: Optimization</a></span>

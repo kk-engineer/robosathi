@@ -40,7 +40,6 @@ unlabelled data to improve accuracy. <br>
 - This trained model is then used to predict labels for the unlabelled data.These predictions are called *‘pseudo-labels’*.
 - The model is then retrained using both the original labelled data and the newly pseudo-labelled data. <br>
 
-
 **Benefit:** <br>
 It effectively expands the training data by assigning labels to previously unlabelled examples, 
 allowing the model to learn from a *larger dataset*.<br><br>
@@ -105,7 +104,7 @@ enabling them to generate more nuanced, context-aware, and ethically aligned out
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/introduction/what_is_ml" >}}">Previous: What is ML ?</a></span>
-<span style="margin-left:auto;"></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/linear_regression/meaning_of_linear" >}}">Next: Meaning of 'Linear</a></span>
 </div>
 <!-- nav-panel:end -->
 

@@ -62,7 +62,7 @@ or anomalies or **outliers** in a given dataset.
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-<span></span>
+<span><a href="{{< ref "/docs/machine_learning/unsupervised/gaussian_mixture_model/expectation_maximization" >}}">Previous: Expectation Maximization</a></span>
 <span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/unsupervised/anomaly_detection/elliptic_envelope" >}}">Next: Elliptic Envelope</a></span>
 </div>
 <!-- nav-panel:end -->

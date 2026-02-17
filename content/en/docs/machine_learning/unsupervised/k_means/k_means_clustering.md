@@ -104,7 +104,7 @@ the **Stirling number** of the second kind, which grows at a rate roughly equal 
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-<span></span>
+<span><a href="{{< ref "/docs/machine_learning/supervised/naive_bayes/naive_bayes_example" >}}">Previous: Naive Bayes Example</a></span>
 <span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/unsupervised/k_means/lloyds_algorithm" >}}">Next: Lloyds Algorithm</a></span>
 </div>
 <!-- nav-panel:end -->

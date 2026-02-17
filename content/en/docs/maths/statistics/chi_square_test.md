@@ -6,7 +6,6 @@ weight: 9
 math: true
 ---
 
-
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
 
@@ -242,6 +241,7 @@ Therefore, the gender and beverage preference are dependent.
 {{< video "https://youtu.be/yiymXqaA608" >}}
 
 <br><br>
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/maths/statistics/z_test" >}}">Previous: Z-Test</a></span>

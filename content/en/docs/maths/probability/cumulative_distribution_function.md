@@ -6,7 +6,6 @@ weight: 5
 math: true
 ---
 
-
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos">}} 
 <br>
@@ -106,7 +105,6 @@ For example:
     \end{cases}
    \]
 
-
 {{< panel title="Key properties of CDF" color="green" >}} 
 1. **Non-Decreasing**:  
 For any 2 values \(x_1\) and \(x_2\) such that \(x_1 \leq x_2\), corresponding CDF must satisfy - <br>
@@ -165,8 +163,4 @@ from \(-\infty\) to the given value \(x\).<br><br>
 ```End of Section```
 
    
-
-
-
-
 

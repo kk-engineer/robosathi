@@ -42,7 +42,6 @@ Measure ⏱ of uncertainty, randomness, or impurity in a data.
 {{< imgproc "images/machine_learning/supervised/decision_trees/purity_metrics/slide_04_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-
 {{< panel color="navy" title="Surprise 😮 Factor" >}}
 💡Entropy can also be viewed as the ‘average surprise'.
 - A highly certain event provides little information when it occurs (low surprise).
@@ -65,7 +64,6 @@ Measure ⏱ of uncertainty, randomness, or impurity in a data.
 
 **Note**: Gini is used in libraries like Scikit-Learn (as the default), because it avoids the computationally expensive 💰 log function.
 {{< /panel >}}
-
 
 {{< panel color="blue" title="Gini Impurity Vs Entropy" >}}
 - Gini Impurity is a first-order approximation of Entropy.

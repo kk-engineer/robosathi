@@ -63,7 +63,6 @@ Most common algorithm:
 - Use cross-validation to find the ‘sweet spot' \(\alpha\) that minimizes validation error.
 {{< /panel >}}
 
-
 {{< video "https://youtu.be/39F0lxpo8Hg" >}}
 <br><br>
 

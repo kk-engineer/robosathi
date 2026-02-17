@@ -55,8 +55,8 @@ and vice versa.
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-<span><a href="{{< ref "/docs/machine_learning/supervised/logistic_regression/logistic_regularization" >}}">Previous: Logistic Regularization</a></span>
-<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/logistic_regression/logistic_probabilistic_interpretation" >}}">Next: Logistic Probabilistic Interpretation</a></span>
+<span><a href="{{< ref "/docs/machine_learning/supervised/logistic_regression/logistic_regularization" >}}">Previous: Regularization</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/logistic_regression/logistic_probabilistic_interpretation" >}}">Next: Probabilistic Interpretation</a></span>
 </div>
 <!-- nav-panel:end -->
 

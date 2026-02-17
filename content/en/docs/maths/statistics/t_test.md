@@ -6,7 +6,6 @@ weight: 7
 math: true
 ---
 
-
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
 <br>
@@ -132,7 +131,6 @@ Below is the data for the existing model and the new model. <br>
 | Sample mean (\(\bar{x}\))     | 91% | 88% |
 | Sample std. dev. (s) | 4% | 3% |
 
-
 Given that the variance of accuracy scores of new and existing models are almost same.
 {{</ question >}}
 
@@ -169,6 +167,7 @@ And, accept the alternative hypothesis that the new model has better accuracy th
 {{< video "https://www.youtube.com/watch?v=MnJfCKaCYSU&t=1s" >}}
 
 <br><br>
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/maths/statistics/hypothesis_testing" >}}">Previous: Hypothesis Testing</a></span>

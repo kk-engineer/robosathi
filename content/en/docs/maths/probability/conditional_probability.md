@@ -6,7 +6,6 @@ weight: 3
 math: true
 ---
 
-
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos" >}}
 <br>

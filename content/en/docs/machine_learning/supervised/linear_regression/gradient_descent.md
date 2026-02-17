@@ -22,7 +22,6 @@ Normal Equation (Closed-form solution) jumps straight to the optimal point in on
 But it is not always feasible and computationally expensive 💰(due to inverse calculation 🧮)
 {{< /panel >}}
 
-
 {{< panel color="green" title="Gradient Descent 🎢" >}}
 An iterative optimization algorithm slowly nudges parameters ‘w' towards a value that minimize the cost💰 function.
 
@@ -65,7 +64,6 @@ An iterative optimization algorithm slowly nudges parameters ‘w' towards a val
 **Update parameter** using gradient:
 \[ w_{new} = w_{old} - \eta'. X^T(Xw - y) \]
 {{< /panel >}}
-
 
 {{< panel color="blue" title="Learning Rate" >}}
 - Most important hyper parameter of gradient descent.
@@ -136,6 +134,7 @@ Uses only 1 data point selected randomly from dataset to compute gradient for pa
 
 {{< video "https://youtu.be/3Nt-lWj4Wvs" >}}
 <br><br>
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/linear_regression/convex_function" >}}">Previous: Convex Function</a></span>

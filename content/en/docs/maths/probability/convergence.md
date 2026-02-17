@@ -6,7 +6,6 @@ weight: 12
 math: true
 ---
 
-
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos">}}
 <br>
@@ -82,7 +81,6 @@ If **n=5**; <br>
 So, if n=5, then \(|X_n - X| > (\epsilon = 0.1)\). <br>
 => \(P(|X_n - X| \ge (\epsilon=0.1)) = 1\). <br>
 
-
 if **n=20**; <br>
 \[
 |X_n - X| = \begin{cases}
@@ -151,6 +149,7 @@ Y_n = \frac{1}{n} \sum_{i=1}^{n} X_i \xrightarrow{Almost ~ Sure} \frac{1}{2}
 {{< video "https://www.youtube.com/watch?v=ZIXMVF6t834&t=1s" >}}
 
 <br><br>
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/maths/probability/independent_identically_distributed" >}}">Previous: Independent & Identically Distributed</a></span>

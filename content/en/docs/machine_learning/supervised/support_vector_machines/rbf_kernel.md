@@ -55,7 +55,6 @@ e.g. if \(x=[x_{1},x_{2}]\), then  \(x\otimes x=[x_{1}^{2},x_{1}x_{2},x_{2}x_{1}
   - Decision boundary becomes **very smooth**, essentially behaving more like a **linear** or low-degree polynomial classifier.
 {{< /panel >}}
 
-
 {{< video "https://youtu.be/TMcJxXUQxzM" >}}
 <br><br>
 

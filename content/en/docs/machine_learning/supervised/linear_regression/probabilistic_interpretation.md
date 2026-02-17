@@ -123,6 +123,7 @@ objective of the ordinary least squares (OLS) method.
 
 {{< video "https://youtu.be/qsfTfotxU_8" >}}
 <br><br>
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/linear_regression/linear_regression" >}}">Previous: Linear Regression</a></span>

@@ -54,7 +54,7 @@ math: true
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-<span></span>
+<span><a href="{{< ref "/docs/machine_learning/feature_engineering/model_interpretability" >}}">Previous: Model Interpretability</a></span>
 <span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/ml_system/retraining_strategies" >}}">Next: Retraining Strategies</a></span>
 </div>
 <!-- nav-panel:end -->

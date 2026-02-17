@@ -96,7 +96,7 @@ representing '**robust**' **majority** of the data.
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-<span><a href="{{< ref "/docs/machine_learning/unsupervised/anomaly_detection/anomaly_detection_introduction" >}}">Previous: Anomaly Detection Introduction</a></span>
+<span><a href="{{< ref "/docs/machine_learning/unsupervised/anomaly_detection/anomaly_detection_introduction" >}}">Previous: Anomaly Detection</a></span>
 <span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/unsupervised/anomaly_detection/one_class_svm" >}}">Next: One Class SVM</a></span>
 </div>
 <!-- nav-panel:end -->

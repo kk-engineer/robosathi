@@ -6,7 +6,6 @@ weight: 3
 math: true
 ---
 
-
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" 
         "Linear Algebra for AI & ML | Full Course Videos">}}
 <br>
@@ -21,7 +20,6 @@ e.g: <br>
 2. Data representation, such as images, that are stored as a matrix of pixels.
 3. When multiplied, matrix, linearly transforms a vector, i.e, its direction and magnitude, making it useful in image rotation, scaling, etc.
 {{< /answer >}}
-
 
 {{< definition title="Matrix">}}
 It is a two-dimensional array of numbers with a fixed number of rows(m) and columns(n). <br>
@@ -242,7 +240,6 @@ _{\text{n x n}}
 **Important:**  <br>
 \( \mathbf{I} \times \mathbf{A} = \mathbf{A} \times \mathbf{I} = \mathbf{A} \)
 {{< /panel >}}
-
 
 {{< panel color="orange" title="Operations of Square Matrix" >}}
 **Trace:** <br>
@@ -566,8 +563,8 @@ Therefore, \( x = 2 \) and \( y = 1 \).
 
 {{< video "https://www.youtube.com/watch?v=aoPJ7yzX6lE&t=1s" >}}
 
-
 <br><br>
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/maths/linear_algebra/vector_fundamentals" >}}">Previous: Vector Fundamentals</a></span>

@@ -6,7 +6,6 @@ weight: 8
 math: true
 ---
 
-
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
 <br>
@@ -69,7 +68,6 @@ Z = \frac{\bar{x} - \mu}{\sigma / \sqrt{n}}
 *Note: Test statistic Z follows a standard normal distribution \(Z \sim \mathcal{N}(0, 1)\).*
 
 {{</ definition >}}
-
 
 {{< definition title="2-Sample Z-Test" >}}
 It is used to test whether the sample means \(\bar{x_1}\) and \(\bar{x_2}\) of 2 independent samples are significantly different from each other. <br>
@@ -251,6 +249,7 @@ Therefore, the observed conversion rate of design B is due to random chance; thu
 {{< video "https://www.youtube.com/watch?v=ukdF4Zx7pSU" >}}
 
 <br><br>
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/maths/statistics/t_test" >}}">Previous: T-Test</a></span>

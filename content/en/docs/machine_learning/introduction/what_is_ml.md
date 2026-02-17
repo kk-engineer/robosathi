@@ -14,13 +14,11 @@ math: true
 To gain knowledge or understanding of a skill,  by study, instruction, or experience.
 {{< /definition >}}
 
-
 {{< definition title="Machine Learning">}}
 To teach computers 💻 to learn from data, find patterns 🧮, and make decisions or predictions 
 without being explicitly programmed for every task, as humans🧍‍♀️🧍 learn from experience.
 <br><br>
 {{< /definition >}}
-
 
 {{< panel color="orange" title="Phases of Machine Learning" >}}
 The machine learning lifecycle ♼ is generally divided into two main stages:

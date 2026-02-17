@@ -82,7 +82,7 @@ Naive KNN needs some improvements to fix some of its drawbacks.
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-<span><a href="{{< ref "/docs/machine_learning/supervised/k_nearest_neighbors/knn_intro" >}}">Previous: KNN Intro</a></span>
+<span><a href="{{< ref "/docs/machine_learning/supervised/k_nearest_neighbors/knn_intro" >}}">Previous: KNN Introduction</a></span>
 <span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/k_nearest_neighbors/curse_of_dimensionality" >}}">Next: Curse Of Dimensionality</a></span>
 </div>
 <!-- nav-panel:end -->

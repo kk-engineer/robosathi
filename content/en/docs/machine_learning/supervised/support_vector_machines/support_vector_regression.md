@@ -17,7 +17,6 @@ math: true
 - Points outside the tube are **penalized** based on their distance from the tube's boundary.
 {{< /panel >}}
 
-
 {{< panel color="green" title="Ignore Errors" >}}
 👉SVR ignores errors as long as they are within a certain distance (\(\epsilon\)) from the true value.
 
@@ -57,7 +56,6 @@ Subject to:
 1. \(\sum_{i=1}^n (\alpha_i - \alpha_i^*) = 0\)
 2. \(0 \leq \alpha_i, \alpha_i^* \leq C\)
 
-
 - \(\alpha_i = \alpha_i^* = 0\): point is inside the tube.
 - \(|\alpha_i - \alpha_i^*| > 0\) : support vectors; points on or outside the tube.
 
@@ -81,7 +79,7 @@ Subject to:
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/support_vector_machines/rbf_kernel" >}}">Previous: RBF Kernel</a></span>
-<span style="margin-left:auto;"></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/naive_bayes/naive_bayes_intro" >}}">Next: Naive Bayes Intro</a></span>
 </div>
 <!-- nav-panel:end -->
 

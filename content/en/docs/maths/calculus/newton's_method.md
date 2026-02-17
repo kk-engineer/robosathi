@@ -6,7 +6,6 @@ weight: 5
 math: true
 ---
 
-
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfzDh2D3OqVo-piGAZQPWDj" 
         "Calculus for AI & ML | Full Course Videos">}}
 <br>
@@ -73,6 +72,7 @@ of curvature without incurring the cost of Hessian calculation. <br>
 
 {{< video "https://www.youtube.com/watch?v=wM8bfEP12pw&t=1s" >}}
 <br><br>
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/maths/calculus/gradient_descent" >}}">Previous: Gradient Descent</a></span>

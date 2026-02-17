@@ -10,8 +10,6 @@ toc_hide: true
 draft: true
 ---
 
-
-
 Text can be **bold**, _italic_, or ~~strikethrough~~. [Links](https://gohugo.io) should be blue with no underlines (unless hovered over).
 
 There should be whitespace between paragraphs. Vape migas chillwave sriracha poutine try-hard distillery. Tattooed shabby chic small batch, pabst art party heirloom letterpress air plant pop-up. Sustainable chia skateboard art party banjo cardigan normcore affogato vexillologist quinoa meggings man bun master cleanse shoreditch readymade. Yuccie prism four dollar toast tbh cardigan iPhone, tumblr listicle live-edge VHS. Pug lyft normcore hot chicken biodiesel, actually keffiyeh thundercats photo booth pour-over twee fam food truck microdosing banh mi. Vice activated charcoal raclette unicorn live-edge post-ironic. Heirloom vexillologist coloring book, beard deep v letterpress echo park humblebrag tilde.
@@ -33,7 +31,6 @@ Deae legum paulatimque terra, non vos mutata tacet: dic. Vocant docuique me plum
 On big screens, paragraphs and headings should not take up the full container width, but we want tables, code blocks and similar to take the full width.
 
 Scenester tumeric pickled, authentic crucifix post-ironic fam freegan VHS pork belly 8-bit yuccie PBR&B. **I love this life we live in**.
-
 
 ## Second Header 2
 
@@ -125,7 +122,6 @@ Birthplace
 Color
 : Green
 
-
 ----------------
 
 Tables should have bold headings and alternating shaded rows.
@@ -198,7 +194,6 @@ Large images should always scale down and fit in the content container.
 
 _The photo above of the Spruce Picea abies shoot with foliage buds: Bjørn Erik Pedersen, CC-BY-SA._
 
-
 ## Components
 
 ### Alerts
@@ -210,7 +205,6 @@ _The photo above of the Spruce Picea abies shoot with foliage buds: Bjørn Erik 
 {{< alert color="warning" >}}This is a warning.{{< /alert >}}
 {{< alert color="warning" title="Warning" >}}This is a warning with a title.{{< /alert >}}
 
-
 ## Another Heading
 
 Add some sections here to see how the ToC looks like. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.
@@ -218,7 +212,6 @@ Add some sections here to see how the ToC looks like. Bacon ipsum dolor sit amet
 ### This Document
 
 Inguina genus: Anaphen post: lingua violente voce suae meus aetate diversi. Orbis unam nec flammaeque status deam Silenum erat et a ferrea. Excitus rigidum ait: vestro et Herculis convicia: nitidae deseruit coniuge Proteaque adiciam *eripitur*? Sitim noceat signa *probat quidem*. Sua longis *fugatis* quidem genae.
-
 
 ### Pixel Count
 
@@ -228,11 +221,9 @@ Tilde photo booth wayfarers cliche lomo intelligentsia man braid kombucha vaporw
 
 Plaid hell of cred microdosing, succulents tilde pour-over. Offal shabby chic 3 wolf moon blue bottle raw denim normcore poutine pork belly.
 
-
 ### External Links
 
 Stumptown PBR&B keytar plaid street art, forage XOXO pitchfork selvage affogato green juice listicle pickled everyday carry hashtag. Organic sustainable letterpress sartorial scenester intelligentsia swag bushwick. Put a bird on it stumptown neutra locavore. IPhone typewriter messenger bag narwhal. Ennui cold-pressed seitan flannel keytar, single-origin coffee adaptogen occupy yuccie williamsburg chillwave shoreditch forage waistcoat.
-
 
 ### Katex
 
@@ -250,7 +241,6 @@ The probability of getting \(k\) heads when flipping \(n\) coins is:
 ```math
 \tag*{(1)} P(E) = {n \choose k} p^k (1-p)^{n-k}
 ```
-
 
 This math is inline: \(a^2+b^2=c^2\).
 
@@ -276,10 +266,8 @@ $$
 \(P(\Omega \setminus \emptyset) = 1\) <br>
 \(P(\Omega \cap A) = P(A)\)
 
-
 ### Alert with Color
 {{< alert >}} {{% color "green" %}} Alert with green text {{% /color %}}{{< /alert >}}
-
 
 ### Question
 {{< question >}}
@@ -298,14 +286,13 @@ What are the steps for creating a shortcode?
 A model is a mathematical representation of a process or system used for prediction or analysis.
 {{< /definition >}}
 
-
 ```
 This is the final element on the page and there should be no margin below this.
 ```
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-<span><a href="{{< ref "/docs/maths" >}}">Previous: Maths</a></span>
-<span style="margin-left:auto;"></span>
+<span><a href="{{< ref "/docs/machine_learning/ml_system/deployment_patterns" >}}">Previous: Deployment Patterns</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/probability/introduction" >}}">Next: Introduction to Probability</a></span>
 </div>
 <!-- nav-panel:end -->
