@@ -154,10 +154,9 @@ Var[X]&= \dfrac{(b-a)^2}{12}
 \end{aligned}
 \]
 {{< /answer >}}
-<br>
+
 
 {{< definition title="Co-Variance" >}}
-
 It is the measure of how 2 variables X & Y vary together. <br>
 It gives the direction of the relationship between the variables. <br>
 

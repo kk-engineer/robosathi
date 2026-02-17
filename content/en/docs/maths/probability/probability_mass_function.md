@@ -40,12 +40,14 @@ It models a single event with two possible outcomes, _success_ (1) or _failure_ 
 **Mean** = p <br>
 **Variance** = p(1-p) <br>
 *Note: A single trial that adheres to these conditions is called a **Bernoulli trial**.* <br>
-\(PMF, P(x) = p^x(1-p)^{1-x}\), where \(x \in \{0,1\}\) <br>
+\(PMF, P(x) = p^x(1-p)^{1-x}\), where \(x \in \{0,1\}\)
 {{</ definition >}}
-For example: 
+
+{{< panel color="rust" title="Example" >}}
 1. Toss a coin, we get heads or tails. <br>
 2. Result of a test, pass or fail. <br>
 3. Machine learning, binary classification model. <br><br>
+{{< /panel >}}
 
 {{< definition title="Binomial Distribution" >}}
 It extends the Bernoulli distribution by modeling the number of successes that occur over a fixed number of 
@@ -61,10 +63,12 @@ independent trials. <br>
 *Note: Bernoulli is a special case of Binomial distribution where n = 1.* <br>
 *Also read about **Multinomial** distribution i.e where number of possible outcomes is > 2.* <br>
 {{</ definition >}}
-For example:
-- Counting number of heads(success) in 'n' coin tosses. <br>
 
-{{< panel color="rust" title="Assumptions">}}
+{{< panel color="rust" title="Example" >}}
+- Counting number of heads(success) in 'n' coin tosses. <br>
+{{< /panel >}}
+
+{{< panel color="cyan" title="Assumptions">}}
 1. Trials are independent. <br>
 2. Probability of success remains constant for every trial. <br>
 {{< /panel >}}
@@ -116,12 +120,13 @@ Given that:
 \[PMF = \lambda^ke^{-\lambda}/k!\]
 *Note: Useful to count data where total population size is large but the probability of an individual event is small.* <br>
 {{</ definition >}}
-For example: 
+{{< panel color="rust" title="Example" >}}
 1. Model the number of customers arrival at a service center per hour. <br>
 2. Number of website clicks in a given time period. <br><br>
 
 {{< imgproc "images/maths/probability/poisson_pmf.png" Resize "800x" >}}{{< /imgproc >}}
 {{< panel color="grey" title="PMF of Poisson Distribution">}}{{< /panel >}}
+{{< /panel >}}
 
 {{< question >}}
 A company receives, on an average, 5 customer emails per hour. What is the probability of receiving exactly 3 emails

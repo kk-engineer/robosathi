@@ -231,7 +231,6 @@ P(\Theta \mid X) = \frac{P(\Theta)P(X \mid \Theta)}{P(X)}
 \(P(X)\): **Evidence**: Probability of seeing the data \(X\). <br>
 
 {{</ definition >}}
-<br>
 
 {{< question >}}
 \(X_1, X_2, \dots, X_n\) are I.I.D. *Bernoulli* random variable. <br>
@@ -338,12 +337,14 @@ f_{\Theta \mid X} (\theta \mid x) &= \frac{f_{\Theta}(\theta) P_{X \mid \Theta}(
 
 *Note: If we do NOT have enough data, then we should NOT ignore our intial belief.* <br>
 *However, if we have enough data, then the data will override our initial belief and the posterior will be dominated by data.* <br>
-{{</ answer >}}
 
-{{< imgproc "images/maths/probability/mle.png" Resize "800x" >}}{{< /imgproc >}}
 {{< panel color="grey" title="Plot: Prior, Posterior & MLE">}}{{< /panel >}}
+{{< imgproc "images/maths/probability/mle.png" Resize "800x" >}}{{< /imgproc >}}
 
 *Note: Bayesian approach gives us a probability distribution of parameter \(\Theta\).*
+{{</ answer >}}
+
+
 
 {{< question >}}
 What if we want to have a single point estimate of the parameter \(\Theta\) instead of a probability distribution? <br>

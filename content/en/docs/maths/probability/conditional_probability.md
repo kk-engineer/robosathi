@@ -21,19 +21,20 @@ Allows us to update probability when additional information is revealed.
 \(P(A \cap B) = P(A)*P(B \mid A)\)
 {{< /definition >}}
 
-For example:
+{{< panel color="rust" title="Example" >}}
 1. Roll a die, sample space: \(\Omega = \{1,2,3,4,5,6\}\) <br>
     Event A = Get a 5 = \(\{5\} => P(A) = 1/6\)<br>
     Event B = Get an odd number = \(\{1, 3, 5\} => P(B) = 3/6 = 1/2\)
 
-$$
+\[
 \begin{aligned}
-\because (A \cap B) = \{5\} ~  => P(A \cap B) = 1/6 \\
+\because (A \cap B) = \{5\} & \implies  P(A \cap B) = 1/6 \\
 P(A \mid B) &= \frac{P(A \cap B)}{P(B)} \\
 &= \frac{1/6}{1/2} \\
-&= 1/3
+\implies P(A \mid B)&= 1/3
 \end{aligned}
-$$
+\]
+{{< /panel >}}
 
 {{< video "https://youtu.be/pIJ2EX2uwDI?si=QIYVlZf_gpS2FwRd" >}}
 
@@ -61,7 +62,7 @@ $$
 {{< imgproc "images/maths/probability/bayes_likelihood.png" Resize "800x" >}}{{< /imgproc >}}
 {{< /definition >}}
 
-For example:
+{{< panel color="rust" title="Example" >}}
 1. Roll a die, sample space: \(\Omega = \{1,2,3,4,5,6\}\) <br>
     Event A = Get a 5 = \(\{5\} => P(A) = 1/6\)<br>
     Event B = Get an odd number = \(\{1, 3, 5\} => P(B) = 3/6 = 1/2\)<br>
@@ -69,24 +70,24 @@ For example:
 
 \(P(B \mid A) = 1\) = Probability of getting an odd number given that we have rolled a 5. <br>
 
-$$
+\[
 \begin{aligned}
 P(A \mid B) &= \frac{P(A) * P(B \mid A)}{P(B)} \\
 &= \frac{1/6 * 1}{1/2} \\
 &= 1/3
 \end{aligned}
-$$
+\]
 
 Now, let's understand another concept called **Law of Total Probability**.<br>
 Here, we can say that the sample space \(\Omega\) is divided into 2 parts - \(A\) and \(A ^ \complement \)
 
 So, the probability of an event \(B\) is given by:
-$$
+\[
 B = B \cap A + B \cap A ^ \complement \\
 P(B) = P(B \cap A) + P(B \cap A ^ \complement ) \\
 By ~Chain ~Rule: P(B) = P(A)*P(B \mid A) + P(A ^ \complement )*P(B \mid A ^ \complement )
-$$
-<br>
+\]
+{{< /panel >}}
 
 {{<question>}}
 What if the sample space is divided into 'n' such partitions ?
@@ -97,18 +98,18 @@ Overall probability of an event B, considering all the different, mutually exclu
 If A₁, A₂, ..., Aₙ are a set of events that partition the sample space, such that they are - 
  - Mututally exclusive : \(A_i \cap A_j = \emptyset\) for all \(i, j\)
  - Exhaustive: \(A₁ \cup A₂ ... \cup Aₙ  = \Omega\) for all \(i \neq j\)
-$$
+\[
 P(B) = \sum_{i=1}^{n} P(A_i)*P(B \mid A_i)
-$$
+\]
 where \(n\) is the number of mutually exclusive partitions of the sample space \(\Omega\) .
 {{< /definition >}}
 
 *Now, we can also generalize the Bayes' Theorem using the Law of Total Probability.*
 
 {{< panel color="green" title="Generalised Bayes' Theorem">}}
-$$
+\[
 P(A_i \mid B) = \frac{P(A_i)*P(B \mid A_i)}{\sum_{j=1}^{n} P(A_j)*P(B \mid A_j)}
-$$
+\]
 {{< /panel >}}
 
 {{< video "https://youtu.be/CWnh1E8F-XU?si=7vp-yW89Cxw64P7S" >}}

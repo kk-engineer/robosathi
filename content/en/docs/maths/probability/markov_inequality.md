@@ -21,7 +21,6 @@ P(X \ge a) \le \frac{E[X]}{a}
 <br><br>
 [Read more about Expectation]({{<ref  "/docs/maths/probability/expectation" >}})
 {{</ definition >}}
-<br>
 
 {{< question >}}
 A restaurant, on an average, expects to serve 50 customers per hour. <br>
@@ -34,7 +33,6 @@ P(X \ge 200) \le \frac{E[X]}{200} = \frac{50}{200} = 0.25
 \]
 Hence, a 25% chance of serving more than 200 customers.
 {{</ answer >}}
-<br>
 
 {{< question >}}
 Consider a test where the average score is 70/100 marks. <br>
@@ -65,7 +63,6 @@ P(|X - E[X]| \ge k) \le \frac{E[(X - E[X])^2]}{k^2} \text{ ; k > 0 } \\[10pt]
 
 *Note: It gives a tighter upper bound than Markov's Inequality.*
 {{</ definition >}}
-<br>
 
 {{< question >}}
 Consider a test where the average score is 70/100 marks. <br>
@@ -85,7 +82,6 @@ P(\big|X - 70\big| \ge 20) \le \frac{100}{20^2} = \frac{1}{4} = 0.25
 \]
 Hence, Chebyshev's Inequality gives a far tighter upper bound of 25% than Markov's Inequality of 78%(approx).
 {{</ answer >}}
-<br>
 
 {{< definition title="Chernoff Bound" >}}
 It is an upper bound on the probability that a random variable deviates from its expected value. <br>

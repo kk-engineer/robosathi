@@ -27,13 +27,13 @@ but instead says that - the probability of sample mean being far away from the p
 [Read more about Limits]({{<ref  "/docs/maths/calculus/calculus_fundamentals" >}})
 {{</ definition >}}
 
-For example:
+{{< panel color="rust" title="Example" >}}
 - Toss a coin large number of times \('n'\), as \(n \rightarrow \infty\), the proportion of heads will probably be very 
 close to \(0.5\). <br>
 However, it does NOT rule out the possibility of a rare sequence, e.g., getting 10 consecutive heads. <br>
 But, the probability of such a rare event is extremely low. <br>
+{{< /panel >}}
 
-<br>
 {{< definition title="Strong Law of Large Numbers (SLLN)" >}}
 This law states that given a sequence of independent and identically distributed (IID) samples \(X_1, X_1, \dots, X_n\)
 from a random variable with finite mean, the sample mean (\(\bar{X_n}\)) **converges almost surely** to 
@@ -53,15 +53,18 @@ outcomes that has probability = 0.
 
 [Read more about Limits]({{<ref  "/docs/maths/calculus/calculus_fundamentals" >}})
 {{</ definition >}}
-For example:
+
+{{< panel color="rust" title="Example" >}}
 - Toss a coin large number of times \('n'\), as \(n \rightarrow \infty\), the proportion of heads will converge 
 to \(0.5\), with probability = 1. <br>
-This means that a sequence where the proportion of heads never settles down to 0.5, is a probability = 0 event. <br>
+This means that a sequence where the proportion of heads never settles down to 0.5, is a probability = 0 event.
+{{< /panel >}}
 
-**Application:**
+{{< panel color="cyan" title="Application" >}}
 - Almost sure convergence ensures ML model's reliability by guaranteeing that the average error on a large dataset will
 converge to the true error. <br>
 Thus, providing confidence that model will perform consistently and accurately on unseen data.
+{{< /panel >}}
 
 {{< video "https://www.youtube.com/watch?v=ZIXMVF6t834&t=1s" >}}
 

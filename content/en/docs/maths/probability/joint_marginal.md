@@ -48,17 +48,17 @@ f_{X,Y}(x,y) = \iint_{A \in \mathbb{R}^2} f_{X,Y}(x,y) dy dx
 <br>
 {{</ definition >}}
 
-For example:
+{{< panel color="rust" title="Example" >}}
 - If we consider 2 random variables, say, height(X) and weight(Y), then the joint distribution will tell us 
 the probability of finding a person having a particular height and weight.
-<br>
+{{< /panel >}}
 
 {{< question >}}
 There are 2 bags; bag_1 has 2 red balls & 3 blue balls, bag_2 has 3 red balls & 2 blue balls. <br>
 A ball is picked at random from each bag, such that both draws are independent of each other. <br>
 Let's use this example to understand joint probability. <br>
 {{</ question >}}
-<br>
+
 {{< imgproc "images/maths/probability/joint_marginal_example_1.png" Resize "800x" >}}{{< /imgproc >}}
 
 {{< answer >}}
@@ -74,7 +74,7 @@ respectively. <br>
 Since, the draws are independent, joint probability = P(A) * P(B) <br>
 Each of the 4 cells in above table shows the probability of combination of results from 2 draws or joint probability. <br>
 {{</ answer >}}
-<br>
+
 {{< video "https://youtu.be/iAaWgnrr87I?si=1o9dCg4Bg4lH55BJ&t=1" >}}
 
 {{< definition title="Marginal Probability Distribution" >}}
@@ -238,16 +238,16 @@ f_Y(y) > 0
 \]
 {{</ definition >}}
 
-**Application:** <br>
+{{< panel color="orange" title="Application" >}}
 - Generative machine learning models, such as, GANs, learn the conditional distribution of pixels, given the style of 
 input image.
+{{< /panel >}}
 
 {{< question >}}
 Let's re-visit the ball drawing example. <br>
 _Note_: _We only have information about the joint and marginal probabilities._ <br>
 What is the conditional probability of drawing a red ball in the first draw, given that a blue ball is drawn in second draw? <br>
 {{</ question >}}
-<br>
 {{< imgproc "images/maths/probability/joint_marginal_example_1.png" Resize "800x" >}}{{< /imgproc >}}
 
 {{< answer >}}
@@ -271,7 +271,6 @@ P(A \mid B) &= \frac{P(A \cap B)}{P(B)} \\
 \]
 Therefore, probability of drawing a red ball in the first draw, given that a blue ball is drawn in second draw = 2/5. <br>
 {{</ answer >}}
-<br>
 
 {{< definition title="Conditional Expectation" >}}
 
@@ -287,14 +286,14 @@ E[X \mid Y = y] = \int_{-\infty}^{\infty} x.f_{X \mid Y}(x \mid y) dx
 \]
 {{</ definition >}}
 
-For example:
+{{< panel color="rust" title="Example" >}}
 - Conditional expectation of of a person's weight, given his/her height = 165 cm, will give us the average weight
 of all people with height = 165 cm.
 
 *Applications:*
 - Linear regression algorithm is conditional expectation of target variable 'Y', given input feature variable 'X'.
 - Expectation Maximisation(EM) algorithm is built on conditional expectation.
-<br><br>
+{{< /panel >}}
 
 {{< definition title="Conditional Variance" >}}
 

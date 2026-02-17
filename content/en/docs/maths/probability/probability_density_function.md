@@ -41,38 +41,39 @@ We use a general term **Probability Distribution Function** for both **PMF**(_di
 because both describe how the probability is distributed across a random variable's entire domain.
 {{< /panel >}}
 
-For example: <br>
+{{< panel color="rust" title="Example" >}}
 Consider a line segment/interval from \(\Omega = [0,2] \) <br>
 Random variable \(X(\omega) = \omega\) <br>
 i.e \(X(1) = 1 ~and~ X(1.1) = 1.1 \) <br>
 
-$$
+\[
 F_X(x) = P(X \leq x) =
 \begin{cases}
 \frac{x}{2} & \text{if } x \in [0,2] \\
 1 & \text{if } x > 2 \\
 0 & \text{if } x < 0
 \end{cases}
-$$
+\]
 <br>
 
-$$
+\[
 \begin{aligned}
 PDF = f_X(x) = \frac{dF_X(x)}{dx} \\
 \end{aligned}
-$$
-$$
+\]
+\[
 \text{PDF } = f_X(x) =
 \begin{cases}
 \dfrac{1}{2}, & x \in [0,2] \\
 0, & \text{otherwise.}
 \end{cases}
-$$
+\]
 
 {{< imgproc "images/maths/probability/pdf_uniform.png" Resize "800x" >}}{{< /imgproc >}}
-<br>
-*Note: If we know the PDF of a continuous random variable, then we can find the probability of any given region/interval
-by calculating the area under the curve.* <br><br>
+
+**Note**: If we know the PDF of a continuous random variable, then we can find the probability of any given region/interval
+by calculating the area under the curve.
+{{< /panel >}}
 
 {{< video "https://www.youtube.com/watch?v=aa9hiJhQvvI" >}}
 
@@ -119,13 +120,14 @@ PDF = f(x) =
 $$
 
 {{</ definition >}}
-For example: <br>
+{{< panel color="rust" title="Example" >}}
 - Random number generator that generates a random number between 0 and 1. <br>
 
 {{< imgproc "images/maths/probability/uniform_pdf.png" Resize "800x" >}}{{< /imgproc >}}
 {{< panel color="grey" title="PDF of Uniform Distribution" >}}{{< /panel >}}
 {{< imgproc "images/maths/probability/uniform_cdf.png" Resize "800x" >}}{{< /imgproc >}}
 {{< panel color="grey" title="CDF of Uniform Distribution" >}}{{< /panel >}}
+{{< /panel >}}
 
 {{< video "https://youtu.be/UrLRdi88U3g?si=63sHZ1B-1kUtf4E3" >}}
 
@@ -157,14 +159,16 @@ Z = \dfrac{X-\mu}{\sigma}
 $$
 {{</ definition >}}
 
-For example:
+{{< panel color="rust" title="Example" >}}
 - Human height, IQ scores, blood-pressure etc. <br>
 - Measurement of errors in scientific experiments. <br>
 
-{{< imgproc "images/maths/probability/gaussian_pdf.png" Resize "800x" >}}{{< /imgproc >}}
 {{< panel color="grey" title="PDF of Gaussian Distribution" >}}{{< /panel >}}
-{{< imgproc "images/maths/probability/gaussian_cdf.png" Resize "800x" >}}{{< /imgproc >}}
+{{< imgproc "images/maths/probability/gaussian_pdf.png" Resize "800x" >}}{{< /imgproc >}}
+
 {{< panel color="grey" title="CDF of Gaussian Distribution" >}}{{< /panel >}}
+{{< imgproc "images/maths/probability/gaussian_cdf.png" Resize "800x" >}}{{< /imgproc >}}
+{{< /panel >}}
 
 {{< panel title="68-95-99 Rule" color="green" >}} 
 - 68.27% of the data lie within 1 standard deviation of the mean i.e \(\mu \pm \sigma\) <br>
@@ -186,18 +190,20 @@ Given that:
 **Variance** = \(\frac{1}{\lambda^2}\) <br>
 \[ \lambda = \dfrac{1}{\beta} =  \dfrac{1}{\mu}\] <br>
 
-$$
+\[
 \begin{aligned}
 PDF = f(x) = \lambda e^{-\lambda x} ~~~ \forall ~~~  x \ge 0 ~~~\&~~~  \lambda > 0 \\
 CDF = F(x) = 1 - e^{-\lambda x} ~~~ \forall ~~~  x \ge 0 ~~~\&~~~  \lambda > 0
 \end{aligned}
-$$
+\]
+
+{{< panel color="grey" title="PDF of Exponential Distribution" >}}{{< /panel >}}
+{{< imgproc "images/maths/probability/exponential_pdf.png" Resize "800x" >}}{{< /imgproc >}}
+
+{{< panel color="grey" title="CDF of Exponential Distribution" >}}{{< /panel >}}
+{{< imgproc "images/maths/probability/exponential_cdf.png" Resize "800x" >}}{{< /imgproc >}}
 {{</ definition >}}
 
-{{< imgproc "images/maths/probability/exponential_pdf.png" Resize "800x" >}}{{< /imgproc >}}
-{{< panel color="grey" title="PDF of Exponential Distribution" >}}{{< /panel >}}
-{{< imgproc "images/maths/probability/exponential_cdf.png" Resize "800x" >}}{{< /imgproc >}}
-{{< panel color="grey" title="CDF of Exponential Distribution" >}}{{< /panel >}}
 
 {{< question >}}
 At a bank, a teller spends 4 minutes, on an average, with every customer. What is the probability that a randomly 

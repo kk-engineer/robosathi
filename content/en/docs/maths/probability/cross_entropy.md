@@ -29,7 +29,6 @@ S(x) = -log(P(x)))
 - The unit of surprise factor with log base 2 is **bits**. <br>
 - with base 'e' or natural log its **nats** (natural units of information). <br>
 {{</ definition >}}
-<br>
 
 {{< definition title="Entropy" >}}
 It conveys how much 'information' we expect to gain from a random event. <br>

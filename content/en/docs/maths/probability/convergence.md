@@ -27,7 +27,7 @@ where, <br>
 [Read more about Limits]({{<ref  "/docs/maths/calculus/calculus_fundamentals" >}})
 {{< /definition >}}
 
-For example: 
+{{< panel color="rust" title="Example" >}}
 - Toss a fair coin: <br>
 Estimator:
 <br>
@@ -79,7 +79,7 @@ If **n=5**; <br>
 \end{cases} 
 \]
 So, if n=5, then \(|X_n - X| > (\epsilon = 0.1)\). <br>
-=> \(P(|X_n - X| \ge (\epsilon=0.1)) = 1\). <br>
+\( \implies P(|X_n - X| \ge (\epsilon=0.1)) = 1\). <br>
 
 if **n=20**; <br>
 \[
@@ -90,8 +90,8 @@ if **n=20**; <br>
 \end{cases} 
 \]
 So, if n=20, then \(|X_n - X| < (\epsilon=0.1)\). <br>
-=> \(P(|X_n - X| \ge (\epsilon=0.1)) = 0\). <br>
-=> \(P(|X_n - X| \ge (\epsilon=0.1)) = 0 ~\forall ~n \ge 10\) <br>
+\(\implies P(|X_n - X| \ge (\epsilon=0.1)) = 0\). <br>
+\( \implies P(|X_n - X| \ge (\epsilon=0.1)) = 0 ~\forall ~n \ge 10\) <br>
 
 Therefore, <br>
 \[
@@ -110,9 +110,9 @@ So, we can conclude that, if \(n > \frac{1}{\epsilon}\), then: <br>
 \[
 \lim_{n\rightarrow\infty} P(|X_n - X| \ge \epsilon) = 0, \forall ~ \epsilon >0 \\[10pt]
 \text{Converges in Probability } \\[10pt]
-=> X_n \xrightarrow{Probability} X
+\implies X_n \xrightarrow{Probability} X
 \]
-<br>
+{{< /panel >}}
 
 {{< definition title="Almost Sure Convergence" >}}
 A sequence of random variables \(X_1, X_2, \dots, X_n\) is said to almost surely converge to a known random variable \(X\), <br> 
@@ -121,13 +121,13 @@ for \(n \ge 1\), if the following is true:
 \[
 P(\lim_{n\rightarrow\infty} X_n = X) = 1 \\[10pt]
 \text{Almost Sure or With Probability = 1 } \\[10pt]
-=> X_n \xrightarrow{Almost ~ Sure} X
+\implies X_n \xrightarrow{Almost ~ Sure} X
 \]
 where, <br>
 \(X_n\): is the estimator or sample based random variable.<br>
 \(X\): is the known or limiting or target random variable. <br>
 
-If, \(X_n \xrightarrow{Almost ~ Sure} X \), => \(X_n \xrightarrow{Probability} X \) <br>
+If, \(X_n \xrightarrow{Almost ~ Sure} X \),  \( \implies X_n \xrightarrow{Probability} X \) <br>
 But, converse is NOT true.
 
 *Note: Almost Sure convergence is hardest to satisfy amongst all convergence, such as, convergence in probability, 
@@ -135,7 +135,8 @@ convergence in distribution, etc.
 <br><br>
 [Read more about Limits]({{<ref  "/docs/maths/calculus/calculus_fundamentals" >}})
 {{< /definition >}}
-For example:
+
+{{< panel color="rust" title="Example" >}}
 - \(X\) is random variable such that \(X = \frac{1}{2} \), a constant, i.e \(X_1 = X_2 = \dots = X_n = \frac{1}{2}\). <br>
 \(Y_1, Y_2,\dots ,Y_n \) are another sequence of random variables, such that : <br>
 \[
@@ -145,10 +146,10 @@ Y_3 = \frac{X_1 + X_2 + X_3}{3} \\[10pt]
 \dots \\
 Y_n = \frac{1}{n} \sum_{i=1}^{n} X_i \xrightarrow{Almost ~ Sure} \frac{1}{2}
 \]
+{{< /panel >}}
 
 {{< video "https://www.youtube.com/watch?v=ZIXMVF6t834&t=1s" >}}
 
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

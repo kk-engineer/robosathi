@@ -26,12 +26,12 @@ Joint probability of two events is equal to the product of the individual probab
 \(P(A \cap B)\) or \(P(A, B)\)
 {{< /definition >}}
 
-For example:
+{{< panel color="rust" title="Example" >}}
 1. Toss a coin and roll a die - <br>
     \(A\) = Get a heads; \(P(A)=1/2\) <br>
     \(B\) = Get an odd number; \(P(B)=1/2\)
 
-$$
+\[
 \begin{aligned}
 P(A \cap B) &= P(\text{Heads and Odd}) \\
 &= \frac{1}{2} * \frac{1}{2} \\
@@ -40,17 +40,17 @@ P(A \cap B) &= P(\text{Heads and Odd}) \\
 \text{also } P(A) * P(B) &= \frac{1}{2} * \frac{1}{2} \\
 &= \frac{1}{4}
 \end{aligned}
-$$
+\]
 
-    => A and B are mutually independent.
-<br>
+=> A and B are mutually independent. <br>
+{{< /panel >}}
 
 {{< definition title="Pair-Wise Independence" >}}
 Every pair of events in the set is independent.<br>
-Pair-wise independence != Mutual independence.
+_Pair-wise independence != Mutual independence._
 {{< /definition >}}
 
-For example:
+{{< panel color="rust" title="Example" >}}
 1. Toss 3 coins; <br>
     For 2 tosses, sample space: \(\Omega = \{HH,HT, TH, TT\}\) <br>
     \(A\) = First and Second toss outcomes are same i.e \(\{HH, TT\}\); \(P(A)= 2/4 = 1/2\) <br>
@@ -78,7 +78,7 @@ So, \(P(A \cap B \cap C)\) = 2/8 = 1/4 <br>
 But, \(P(A)*P(B)*P(C) = 1/2*1/2*1/2 = 1/8\) <br>
 Therefore \(P(A \cap B \cap C)\) ≠ \(P(A)*P(B)*P(C)\) <br>
 => \(A, B, C\) are **NOT** mutually independent but only **pair wise independent**. <br>
-<br>
+{{< /panel >}}
 
 {{< definition title="Conditional Independence" >}}
 Two events A & B are conditionally independent given a third event C, <br>
@@ -86,6 +86,7 @@ if they are independent given that C has occurred. <br>
 Occurrence of C changes the context, causing the events A & B to become independent of each other.
 {{< /definition >}}
 
+{{< panel color="rust" title="Example" >}}
 {{< imgproc "images/maths/probability/conditional_independence.png" Resize "800x" >}}{{< /imgproc >}}
 
 \[
@@ -112,7 +113,7 @@ P(A \cap B \mid C) &= \frac{P(A \cap B \cap C)}{P(C)} = 1/20 \\
 \]
 
 _Therefore, A & B are **conditionally independent** given C._
-<br>
+{{< /panel >}}
 
 {{< video "https://youtu.be/Rhvj1e1Q84Q?si=999FWQPg6kLnP4rE&t=1" >}}
 <br>

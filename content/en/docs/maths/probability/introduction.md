@@ -16,69 +16,71 @@ Why do we need to understand what is **Probability**?
 {{< answer >}} 
 Because the world around us is very uncertain, and **Probability** acts as - <br> the *fundamental language* 
 to *understand*, *express* and *deal* with this *uncertainty*. 
-{{</ answer >}}
 
-For example:
 1. Toss a fair coin, \(P(H) = P(T) = 1/2\) <br>
 2. Roll a die, \(P(1) = P(2) = P(3) = P(4) = P(5) = P(6) = 1/6\) <br>
 3. Email classifier, \(P(spam) = 0.95 ,~ P(not ~ spam) = 0.05\) <br><br>
+{{</ answer >}}
 
 {{< definition title="Probability" >}}
 Numerical measure of chance or likelihood that an event will occur. 
-{{</ definition >}}
-
+<br>
 Range: \([0,1]\) <br>
 \(P=0\): Highly unlikely <br>
-\(P=1\): Almost certain <br> <br>
+\(P=1\): Almost certain <br>
+{{</ definition >}}
 
 {{< video "https://www.youtube.com/watch?v=Lg4I4OqeKII&t=1s" >}}
 
 {{< definition title="Sample Space" >}}
 Set of all possible outcomes of an experiment. <br>
-Symbol: \(\Omega\)
+Symbol: \(\Omega\) <br>
+\(P(\Omega) = 1\)
 {{</ definition >}}
 
-For example:
+{{< panel color="rust" title="Example" >}}
 1. Toss a fair coin, sample space: \(\Omega = \{H,T\}\) <br>
 2. Roll a die, sample space: \(\Omega = \{1,2,3,4,5,6\}\) <br>
 3. Choose a real number \(x\) from the interval \([2,3]\), sample space: \(\Omega = [2,3]\); sample size = \(\infin\)<br>
 *Note: There can be infinitely many points between 2 and 3, e.g: 2.21, 2.211, 2.2111, 2.21111, ...*
 4. Randomly put a point in a rectangular region; sample size = \(\infin\)<br>
 *Note: There can be infinitely many points in any rectangular region.* <br>
-
-\(P(\Omega) = 1\) <br><br>
+{{< /panel >}}
 
 {{< definition title="Event" >}}
 An outcome of an experiment. A subset of all possible outcomes. <br>
 A,B,...⊆Ω
 {{</ definition >}}
 
-For example:
+{{< panel color="rust" title="Example" >}}
 1. Toss a fair coin, set of possible outcomes: \(\{H,T\}\) <br>
 2. Roll a die, set of possible outcomes: \(\{1,2,3,4,5,6\}\) <br>
 3. Roll a die, event \(A = \{1,2\} => P(A) = 2/6 = 1/3\) 
 4. Email classifier, set of possible outcomes: \(\{spam,not ~spam\}\).<br><br>
+{{< /panel >}}
 
 {{< definition title="Discrete" >}}
 Number of potential outcomes from an experiment is countable, distinct, or can be listed in a sequence,
 even if infinite i.e countably infinite.
 {{</ definition >}}
 
-For example:
+{{< panel color="rust" title="Example" >}}
 1. Toss a fair coin, possible outcomes: \(\Omega = \{H,T\}\) <br>
 2. Roll a die, possible outcomes: \(\Omega = \{1,2,3,4,5,6\}\) <br>
 3. Choose a real number \(x\) from the interval \([2,3]\) *with decimal precision*, sample space: \(\Omega = [2,3]\).<br>
 *Note: There are 99 real numbers between 2 and 3 with 2 decimal precision i.e from 2.01 to 2.99.* 
 4. Number of cars passing a specific traffic signal in 1 hour.
-<br><br>
+{{< /panel >}}
 
 {{< definition title="Continuous" >}}
 Potential outcomes from an experiment can take any value within a given range or interval,
 representing an uncountably infinite set of possibilities.
 {{</ definition >}}
-For example:
+
+{{< panel color="rust" title="Example" >}}
 1. A line segment between 2 and 3 - forms a continuum.
 2. Randomly put a point in a rectangular region. <br><br>
+{{< /panel >}}
 
 ```mermaid
 graph TD
@@ -95,22 +97,22 @@ Two or more events that cannot happen at the same time.
 <br>No overlapping or common outcomes. <br>If one event occurs, then the other event does NOT occur.
 {{</ definition >}}
 
-For example:
+{{< panel color="rust" title="Example" >}}
 1. Roll a die, sample space: \(\Omega = \{1,2,3,4,5,6\}\) <br> Odd outcome = \(A = \{1,3,5\}\) <br> 
     Even outcome = \(B = \{2,4,6\}\) are mutually exclusive.<br><br>
     \(P(A \cap B) = 0\) <br>
     Since, \(P(A \cup B) = P(A) + P(B) - (P(A \cap B)\) <br>
     Therefore, \(P(A \cup B) = P(A) + P(B)\) <br>
-    
 
-*Note: If we know that event \(A\) has occurred, then we can say for sure that the event \(B\) did NOT occur.* <br><br>
+*Note: If we know that event \(A\) has occurred, then we can say for sure that the event \(B\) did NOT occur.*
+{{< /panel >}}
 
 {{< definition title="Independent Events" >}}
 Two events are independent if the occurrence of one event does NOT impact 
 the outcome of the other event.
 {{</ definition >}}
 
-For example:<br>
+{{< panel color="rust" title="Example" >}}
 1. Roll a die twice , sample space: \(\Omega = \{1,2,3,4,5,6\}\) <br>
     Odd number in 1st throw = \(A = \{1,3,5\}\) <br> 
     Odd number in 2nd throw = \(B = \{1,3,5\}\) <br>
@@ -118,7 +120,8 @@ For example:<br>
     an odd number in second roll.* <br><br>
     \(P(A \cap B) = P(A)*P(B)\) <br> 
 
-*Note: If we know that event \(A\) has occurred, then that gives us NO new information about the event \(B\).* <br><br>
+*Note: If we know that event \(A\) has occurred, then that gives us NO new information about the event \(B\).* 
+{{< /panel >}}
 
 {{< video "https://youtu.be/aTELWJAm_WE?si=-ydM63Ex9VKR-3yb" >}}
 

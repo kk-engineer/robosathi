@@ -11,47 +11,50 @@ math: true
 <br>
 
 {{< definition title="Random Variable(RV)" >}}
-A random variable is a function that maps a the outcomes of a sample space to a real number.<br>
-Random Variable X represent as, \(X: \Omega \to \mathbb{R} \) <br>
-It maps abstract outcomes of a random experiment to concrete numerical values required for mathematical analysis.
+A random variable is a **function** that maps the outcomes of a sample space to a real number.<br>
+Random Variable X is represented as, \(X: \Omega \to \mathbb{R} \) <br>
+👉 It maps abstract outcomes of a random experiment to concrete numerical values required for mathematical analysis.
 {{< /definition >}}
 
-For example:
+{{< panel color="rust" title="Example" >}}
 1. Toss a coin 2 times, sample space: \(\Omega = \{HH,HT, TH, TT\}\) <br>
     The above random experiment of coin tosses can be mapped to a random variable \(X: \Omega \to \mathbb{R} \) <br>
     \(X: \Omega = \{HH,HT, TH, TT\} \to \mathbb{R}) \) <br>
     Say, if we count the number of heads, then  
-    $$
+    \[
     \begin{aligned}
     X(0) = \{TT\} = 1 \\
     X(1) = \{HT, TH\} = 2 \\
     X(2) = \{HH\} = 1 \\
     \end{aligned}
-    $$
+    \]
     Similar, output will be observed for number of tails. <br>
 
 *Depending upon the nature of output, random variables are of 2 types - **Discrete** and **Continuous**.* 
-<br><br>
+{{< /panel >}}
 
 {{< definition title="Discrete Random Variable">}}
 A random variable whose possible outcomes are finite or countably infinite.  
 Typically obtained by counting.  
 Discrete random variable cannot take any value between 2 consecutive values.  
 {{< /definition >}}
-For example:  
-1. The number of heads in 2 coin tosses can be 0, 1 or 2 but NOT 1.5. <br><br>
+
+{{< panel color="rust" title="Example" >}}
+👉 The number of heads in 2 coin tosses can be 0, 1 or 2 but NOT 1.5.
+{{< /panel >}}
 
 {{< definition title="Continuous Random Variable">}} 
 A random variable that can take any value between a given range/interval.  
 Possible outcomes are infinite.
 {{< /definition >}}
-For example:  
+
+{{< panel color="rust" title="Example" >}}
 1. A person's height in a given range of say 150cm-200cm.  
     Height can take any value, not just round values, e.g: 150.1cm, 167.95cm, 180.123cm etc.
 
 Now, that we have understood that how random variable can be used to map outcomes of abstract random experiment to real 
 values for mathematical analysis, we will understand its applications.  
-<br>
+{{< /panel >}}
 
 {{< question >}}
 How to calculate the probability of a random variable?
@@ -61,17 +64,15 @@ How to calculate the probability of a random variable?
 Probability of a random variable is given by something called - _Cumulative Distribution Function (CDF)_. 
 {{< /answer >}}
 
-<br>
-
 {{< definition title="Cumulative Distribution Function(CDF)">}}
 It gives the cumulative probability of a random variable \(X\).  
 CDF = \(F(X) = P(X \leq x)\) i.e Probability a random variable \(X\) will take for a value \(<=x\).
 {{< /definition >}}
-<br>
-For example:  
+
+{{< panel color="rust" title="Example" >}}
 1. **Discrete random variable** - Toss a coin 2 times, sample space: \(\Omega = \{HH,HT, TH, TT\}\) <br>
     Count the number of heads. <br>
-    $$
+    \[
     \begin{aligned}
     X(0) = \{TT\} = 1 => P(X = 0) = 1/4 \\
     X(1) = \{HT, TH\} = 2 => P(X = 1) = 1/2\\
@@ -82,20 +83,20 @@ For example:
     F(1) = P(X \leq 1) = P(X < 1) + P(X = 1) = 1/4 + 1/2 = 3/4 \\
     F(2) = P(X \leq 2) = P(X < 2) + P(X = 2) = 3/4 + 1/4 = 1 \\
     \end{aligned}
-    $$
+    \]
 
 {{< imgproc "images/maths/probability/cdf_example_1.png" Resize "800x" >}}{{< /imgproc >}}
 
 2. **Continuous random variable** - Consider a line segment/interval from \(\Omega = [0,2] \) <br>
     Random variable \(X(\omega) = \omega\) <br>
     i.e \(X(1) = 1 ~and~ X(1.1) = 1.1 \) <br>
-    $$
+    \[
     \begin{aligned}
     P[(0,1/2)] = (1/2)/2 = 1/4 \\
     P[(3/4, 2)] = (2-3/4)/2 = 5/8 \\
     P(X<=1.1) = P(-\infty, 1.1)/2 = 1.1/2
     \end{aligned}
-    $$
+    \]
     \[
     F_X(x) = P(X \leq x) =
     \begin{cases}
@@ -104,6 +105,7 @@ For example:
     0 & \text{if } x < 0
     \end{cases}
    \]
+{{< /panel >}}
 
 {{< panel title="Key properties of CDF" color="green" >}} 
 1. **Non-Decreasing**:  
@@ -139,7 +141,7 @@ Height of the jump at 'x' = Probability at that value 'x'.<br>
 e.g: Jump at (x=1) = 1/2 = Probability at (x=1). <br>
 {{< /panel >}}
 
-{{< panel color="orange" title="Continuous Case" >}}
+{{< panel color="cyan" title="Continuous Case" >}}
 For a continuous random variable, the CDF is a continuous function. <br>
 CDF for continuous random variable is calculated by integrating the probability density function (PDF)
 from \(-\infty\) to the given value \(x\).<br><br>
