@@ -425,25 +425,34 @@ footer {
 
 // Support page
 .support-page {
-  max-width: 780px;
-  margin: 72px auto 0;
+  max-width: 980px;
+  margin: 0 auto;
   text-align: center;
   width: 100%;
 }
 
 .support-banner {
   display: block;
-  margin: 8px auto 16px;
+  margin: 0 auto 18px;
   padding: 12px 16px;
   border: 1px solid #cfe0ff;
   border-left: 4px solid #5ea1ff;
   border-radius: 10px;
   background: #f5faff;
   color: #0b172a !important;
-  font-weight: 600;
-  font-size: 1.08rem;
+  font-weight: 400;
+  font-size: 1.18rem;
   line-height: 1.45;
   text-align: center;
+}
+
+.support-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+  justify-items: stretch;
 }
 
 .support-card {
@@ -451,8 +460,13 @@ footer {
   border: 1px solid #e5edf8;
   border-radius: 14px;
   padding: 20px;
-  margin: 16px auto 20px;
-  max-width: 620px;
+  margin: 0;
+  max-width: none;
+  min-height: 430px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .support-card .support-note {
@@ -461,11 +475,27 @@ footer {
   margin-right: auto;
 }
 
+.support-card-title {
+  margin-bottom: 12px;
+  min-height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .support-qr {
   width: 100%;
-  max-width: 240px;
+  max-width: 170px;
   height: auto;
   border-radius: 8px;
+}
+
+.support-media {
+  width: 100%;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .support-qr-frame {
@@ -482,7 +512,7 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
-  margin: 16px 0;
+  margin: 14px 0;
 }
 
 .support-btn {
@@ -544,6 +574,7 @@ footer {
 
 .support-note {
   color: #334155;
+  max-width: 34ch;
 }
 
 .support-razorpay-wrap {
@@ -551,13 +582,17 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 8px;
+  min-height: 0;
 }
 
 .support-razorpay-wrap form {
   display: inline-block;
-  transform: scale(1.08);
+  transform: scale(1.02);
   transform-origin: center top;
+}
+
+.support-card-intl .support-razorpay-wrap form {
+  transform: scale(1.5);
 }
 
 @media (max-width: 991.98px) {
@@ -568,12 +603,29 @@ footer {
   .support-razorpay-wrap form {
     transform: scale(1);
   }
+
+  .support-card-intl .support-razorpay-wrap form {
+    transform: scale(1);
+  }
+
+  .support-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .support-card {
+    min-height: auto;
+  }
+
+  .support-media {
+    min-height: auto;
+  }
 }
 
 @media (min-width: 992px) {
   .support-page {
-    min-height: calc(100vh - 220px);
-    margin-top: 0;
+    min-height: calc(100vh - 120px);
+    padding-top: 72px;
+    padding-bottom: 32px;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -193,6 +193,10 @@ params:
         url: https://www.linkedin.com/company/robosathi/
         icon: fab fa-linkedin
         desc: Be updated with the latest news!
+      - name: Instagram
+        url: https://www.instagram.com/robosathi/
+        icon: fab fa-instagram
+        desc: Follow us on Instagram.
       - name: Github
         url: https://github.com/kk-engineer
         icon: fab fa-github
