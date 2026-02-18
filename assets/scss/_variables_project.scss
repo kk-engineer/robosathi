@@ -428,6 +428,7 @@ footer {
   max-width: 780px;
   margin: 72px auto 0;
   text-align: center;
+  width: 100%;
 }
 
 .support-banner {
@@ -451,6 +452,13 @@ footer {
   border-radius: 14px;
   padding: 20px;
   margin: 16px auto 20px;
+  max-width: 620px;
+}
+
+.support-card .support-note {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .support-qr {
@@ -538,8 +546,37 @@ footer {
   color: #334155;
 }
 
+.support-razorpay-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.support-razorpay-wrap form {
+  display: inline-block;
+  transform: scale(1.08);
+  transform-origin: center top;
+}
+
 @media (max-width: 991.98px) {
   .support-page {
     margin-top: 16px;
+  }
+
+  .support-razorpay-wrap form {
+    transform: scale(1);
+  }
+}
+
+@media (min-width: 992px) {
+  .support-page {
+    min-height: calc(100vh - 220px);
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
