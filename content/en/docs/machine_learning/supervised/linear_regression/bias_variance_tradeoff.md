@@ -10,14 +10,17 @@ math: true
 "Linear Regression | All Videos" >}}
 <br>
 
-{{< panel color="blue" title="Total Error" >}}
+{{< panel color="blue" title="Bias-Variance Decomposition" >}}
 Mean Squared Error (MSE) = \(\frac{1}{n} \sum_{i=1}^n (y_i - \hat{y_i})^2\)
 
 **Total Error = Bias^2 + Variance + Irreducible Error**
 
 - **Bias** = Systematic Error
+  - Bias measures how far the average prediction of a model is from the true value.
 - **Variance** = Sensitivity to Data
+  - Variance measures how much the predictions of a model vary for different training datasets.
 - **Irreducible Error** = Sensor noise, Human randomness
+  - Inherent uncertainty in the data generation process itself and cannot be reduced by any model.
 {{< /panel >}}
 
 {{< panel color="green" title="Bias" >}}

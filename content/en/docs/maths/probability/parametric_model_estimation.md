@@ -335,7 +335,7 @@ f_{\Theta \mid X} (\theta \mid x) &= \frac{f_{\Theta}(\theta) P_{X \mid \Theta}(
 \end{aligned}
 \]
 
-*Note: If we do NOT have enough data, then we should NOT ignore our intial belief.* <br>
+*Note: If we do NOT have enough data, then we should NOT ignore our initial belief.* <br>
 *However, if we have enough data, then the data will override our initial belief and the posterior will be dominated by data.* <br>
 
 {{< panel color="grey" title="Plot: Prior, Posterior & MLE">}}{{< /panel >}}
