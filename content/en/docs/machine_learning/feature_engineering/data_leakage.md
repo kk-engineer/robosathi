@@ -12,24 +12,38 @@ math: true
 <br>
 
 {{< panel color="blue" title="Data Leakage" >}}
-⭐️ Occurs when **information** ℹ️ NOT available at **inference** time is used during training 🏃‍♂️, 
-leading to **good** training performance, but **poor** real‑world 🌎 performance.
+⭐️ Occurs when a model is trained using data that would not be available during real-world predictions, 
+leading to **good** training performance, but **poor** real‑world 🌎 performance. <br>
+It is essentially the model '**cheating**' by inadvertently accessing information about the target variable.
 {{< /panel >}}
 
-{{< panel color="rust" title="Target Leakage" >}}
-⭐️  **Including** features that are only **available** **after** the **event** we are trying to predict.
-- e.g. Including _number_of_late_payments_ in a model to predict whether a person applying for a bank **loan** 💵 will **default** ?
+
+{{< panel color="green" title="Types of Data Leakage" >}}
+👉Any information from the validation/test set must NOT influence training, directly or indirectly. <br>
+So, how do we prevent this leakage of information or data leakage from training to validation or test set ? <br>
+1. **Train-Test Contamination**:
+- ❌ **Wrong**: Applying preprocessing (like global StandardScaler, Mean_Imputation, Target_Encoding etc.) on the entire dataset before splitting.
+- ✅ **Right**: Compute mean, variance, etc. only on the training data and use the same for validation and test data.
+
+2. **Preventing Leakage in Cross-Validation**:
+- ❌ **Wrong**: Perform preprocessing (e.g., scaling, normalization, missing value imputation) on the entire dataset before passing it to **cross_val_score**.
+- ✅ **Right**: Use sklearn.pipeline.Pipeline; **Pipeline** ensures that the 'validation fold' remains unseen until the transformation is applied using the training fold's parameters.
+
+3. **Time Series Data**⏰:
+- ❌ **Wrong**: Use standard random CV; it allows the model to 'peek into the future'.
+- ✅ **Right**: Use Time-Series Nested Cross-Validation (Forward Chaining) instead of random shuffling.
+
+4. **Target Leakage**:
+- ❌ **Wrong**: Include features that are only available after the event we are trying to predict and are proxy for the target.
+  - e.g. Including number_of_late_payments in a model to predict whether a person applying for a bank loan will default ?
+- ✅ **Right**: Do not include such features during training.
+
+5. **Group Leakage**:
+- ❌ **Wrong**: If you have multiple rows that are correlated (same user).
+  - For the same patient or user, you put some rows in Train and others in Test.
+- ✅ **Right**: Use **GroupKFold** to ensure all data from a specific group stays together in one fold.
 {{< /panel >}}
 
-{{< panel color="green" title="Temporal Leakage" >}}
-⭐️ Using **future** data to **predict** the **past**.
-- **Fix**: Use **Time-Series** ⏰ Cross-Validation (**Walk-forward validation**) instead of **random** shuffling.
-{{< /panel >}}
-
-{{< panel color="navy" title="Train-Test Contamination" >}}
-⭐️ Applying **preprocessing** (like global **StandardScaler** or **Mean_Imputation**) on the **entire** dataset before **splitting**.
-- **Fix**: Compute mean, variance, etc. only on the training 🏃‍♂️data and use the same for validation and test data.
-{{< /panel >}}
 
 {{< video "https://youtu.be/6pP9meuusNw" >}}
 <br><br>

@@ -49,7 +49,7 @@ If there is class imbalance in the dataset, (e.g., 95% class A , 5% class B), a 
 validation set having 99% class A.
 
 **Solution**: Use stratified sampling to ensure class **proportions** are maintained across all splits 
-(train🏃‍♂️/validation📋/test🧪).
+(train️/validation/test).
 
 **Note**: Non-negotiable for imbalanced data.
 {{< /panel >}}
