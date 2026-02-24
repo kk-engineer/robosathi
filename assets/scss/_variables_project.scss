@@ -632,3 +632,8 @@ footer {
     align-items: center;
   }
 }
+
+// Make RoboSathi Title bold on home page
+.td-block-cover-title {
+    font-weight: 900; /* or font-weight: 700; */
+}
