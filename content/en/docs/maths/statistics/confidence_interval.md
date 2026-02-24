@@ -26,7 +26,7 @@ For normal distribution, confidence interval : <br>
 it is better to provide a 95% confidence interval, such as, [82.5%, 87.8%]. <br>
 {{</ definition >}}
 
-{{< panel color="rust" title="Meaning of Confidence Interval">}}
+{{< panel color="green" title="Meaning of Confidence Interval">}}
 95% confidence interval does NOT mean there is a 95% chance that the true mean lies in the specific calculated interval.<br>
 - It just means that if we repeat the sampling process many times, then 95% of of those calculated intervals will capture 
 or contain the true population mean \(\mu\).
