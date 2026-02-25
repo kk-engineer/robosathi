@@ -50,15 +50,15 @@ Measure ⏱ of uncertainty, randomness, or impurity in a data.
 {{< imgproc "images/machine_learning/supervised/decision_trees/purity_metrics/slide_06_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="green" title="Information Gain💰" >}}
-⭐️Measures ⏱ the reduction in entropy (uncertainty) achieved by splitting a dataset based on a specific attribute.
+{{< panel color="green" title="Information Gain 💰" >}}
+⭐️ Measures the reduction in entropy (uncertainty) achieved by splitting a dataset based on a specific attribute.
 \[IG=Entropy(Parent)-\left[\frac{N_{left}}{N_{parent}}Entropy(Child_{left})+\frac{N_{right}}{N_{parent}}Entropy(Child_{right})\right] \]
 
 **Note**: The goal of a decision tree algorithm is to find the split that maximizes information gain, meaning it removes the most uncertainty from the data.
 {{< /panel >}}
 
 {{< panel color="orange" title="Gini 🧞‍♂️Impurity" >}}
-⭐️Measures ⏱ the probability of an element being incorrectly classified if it were randomly labeled according to the distribution of labels in a node.
+⭐️ Measures the probability of an element being incorrectly classified if it were randomly labeled according to the distribution of labels in a node.
 \[Gini(S)=1-\sum_{i=1}^{n}(p_{i})^{2}\]
 - Range: 0 (Pure) - 0.5 (Maximum impurity)
 

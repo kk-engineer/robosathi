@@ -235,5 +235,69 @@ The relationship between them is rooted in **Bayes' Theorem**:
 [Read more about MLE & MAP]({{<ref  "/docs/maths/probability/parametric_model_estimation/" >}})
 {{</ answer >}}
 
-  <br><br>
-  ```End of Section```
+{{< question >}}
+How is entropy defined for a binary split? Derive information gain and show how it is used to choose a decision tree split.
+{{</ question >}}
+
+{{< answer >}}
+**Entropy** (H) is a measure of **impurity** or **randomness** in a dataset. <br>
+\[H(S)=-\sum _{i=1}^{n}p_{i}\log(p_{i})\]
+For binary classification, where the outcome is Yes/No, 0/1 etc., entropy will be:
+\[H(S) = -p \log_2(p) - (1-p) \log_2(1-p)\]
+- **Max Entropy**: H(S) = 1, when the classes are split 50/50 (maximum uncertainty).
+- **Min Entropy**: H(S) = 0 when the set is pure (all examples belong to one class).
+
+**Information Gain**: <br>
+️Measures the reduction in entropy (uncertainty) achieved by splitting a dataset based on a specific attribute.
+\[ IG=Entropy(Parent)-\left[\frac{N_{left}}{N_{parent}}Entropy(Child_{left})+\frac{N_{right}}{N_{parent}}Entropy(Child_{right})\right] \]
+
+**Note**: The goal of a decision tree algorithm is to find the split that maximizes information gain, meaning it removes the most uncertainty from the data.
+
+👉 To understand how a Decision Tree selects the 'best' root node, let’s use the example below: <br>
+
+**The Dataset: "Will they buy the product?"**
+| ID | Age | Income | Credit Score | Buy? (Target) |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | Youth | High | Good | No |
+| 2 | Youth | High | Excellent | No |
+| 3 | Middle | High | Good | Yes |
+| 4 | Senior | Medium | Good | Yes |
+| 5 | Senior | Low | Good | Yes |
+| 6 | Senior | Low | Excellent | No |
+
+1. Calculate **parent** node's entropy:
+- P(yes) = P(no) = 3/6 = 0.5
+- \(H(Parent) = -(0.5 \log_2 0.5 + 0.5 \log_2 0.5) = \mathbf{1.0}\)
+
+2. Evaluate feature '**Age**':
+- **Youth**: 2 samples (0 Yes, 2 No). \(H(Youth) = \mathbf{0}\)
+- **Middle**: 1 sample (1 Yes, 0 No). \(H(Middle) = \mathbf{0}\)
+- **Senior**: 3 samples (2 Yes, 1 No). \(H(Senior) = -(\frac{2}{3} \log_2 \frac{2}{3} + \frac{1}{3} \log_2 \frac{1}{3}) \approx \mathbf{0.918}\)
+- **Weighted Entropy for Age**: 
+  - \((\frac{2}{6} \times 0) + (\frac{1}{6} \times 0) + (\frac{3}{6} \times 0.918) = \mathbf{0.459}\)
+- **Information Gain (Age)**: \(1.0 - 0.459 = \mathbf{0.541}\)
+
+3. Evaluate feature '**Income**':
+- **High**: 3 samples (1 Yes, 2 No). \(H(High) \approx \mathbf{0.918}\)
+- **Medium**: 1 sample (1 Yes, 0 No). \(H(Medium) = \mathbf{0}\)
+- **Low**: 2 samples (1 Yes, 1 No). \(H(Low) = \mathbf{1.0}\)
+- **Weighted Entropy for Income**:
+  - \((\frac{3}{6} \times 0.918) + (\frac{1}{6} \times 0) + (\frac{2}{6} \times 1.0) = \mathbf{0.792}\)
+- **Information Gain (Income)**: \(1.0 - 0.792 = \mathbf{0.208}\)
+
+4. Evaluate feature '**Credit Score**'
+- **Good**: 4 samples (3 Yes, 1 No). \(H(Good) \approx \mathbf{0.811}\)
+- **Excellent**: 2 samples (0 Yes, 2 No). \(H(Excellent) = \mathbf{0}\)
+- **Weighted Entropy for Credit Score**:
+  - \((\frac{4}{6} \times 0.811) + (\frac{2}{6} \times 0) = \mathbf{0.541}\)
+- **Information Gain (Credit Score)**: \(1.0 - 0.541 = \mathbf{0.459}\)
+
+5. The Decision Tree **algorithm** compares the information gain for all the features, and splits on the feature with **maximum**
+information gain.
+- Here in our case it is "**Age**", **IG** = 0.541.
+- The algorithm chooses '**Age**' as the root node. 
+- Splits the data into **three** branches (Youth, Middle, Senior).
+{{</ answer >}}
+
+<br><br>
+```End of Section```
