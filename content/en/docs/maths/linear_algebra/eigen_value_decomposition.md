@@ -479,7 +479,7 @@ because a real symmetric matrix is guaranteed to have all real eigenvalues. <br>
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/maths/linear_algebra/matrix_operations" >}}">Previous: Matrix Operations</a></span>
-<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/linear_algebra/principal_component_analysis" >}}">Next: Principal Component Analysis</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/linear_algebra/singular_value_decomposition" >}}">Next: Singular Value Decomposition</a></span>
 </div>
 <!-- nav-panel:end -->
 

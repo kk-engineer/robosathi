@@ -2,7 +2,7 @@
 title: Singular Value Decomposition
 description: Singular Value Decomposition
 date: 2025-10-26
-weight: 6
+weight: 5
 math: true
 ---
 
@@ -117,8 +117,8 @@ which is achieved by keeping only the largest singular values and corresponding 
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-<span><a href="{{< ref "/docs/maths/linear_algebra/principal_component_analysis" >}}">Previous: Principal Component Analysis</a></span>
-<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/linear_algebra/matrix_calculus" >}}">Next: Vector & Matrix Calculus</a></span>
+<span><a href="{{< ref "/docs/maths/linear_algebra/eigen_value_decomposition" >}}">Previous: Eigen Value Decomposition</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/linear_algebra/principal_component_analysis" >}}">Next: Principal Component Analysis</a></span>
 </div>
 <!-- nav-panel:end -->
 

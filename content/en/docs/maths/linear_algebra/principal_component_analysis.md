@@ -2,7 +2,7 @@
 title: Principal Component Analysis
 description: Principal Component Analysis
 date: 2025-10-26
-weight: 5
+weight: 6
 math: true
 ---
 
@@ -41,24 +41,31 @@ in data along the direction that is dropped, and that will be lost.* <br><br>
 Fundamental goal of PCA is to find the new set of **orthogonal axes**, called the **principal components**, onto which
 the data can be projected, such that, the **variance** of the **projected** data is **maximum**. <br><br>
 
+**Note**: *Modern libraries (like sklearn.decomposition.PCA) default to Singular Value Decomposition (SVD) for PCA;
+but we will use Eigen Value Decomposition to understand the algorithm.*
+
+{{</ definition >}}
+
+{{< panel color="orange" title=" PCA Algorithm" >}}
 Say, we have data, \(D:X \in \mathbb{R}^{n \times d}\), <br>
-**n** is the number of samples <br>
-**d** is the number of features or dimensions of each data point. <br>
+- **n** is the number of samples <br>
+- **d** is the number of features or dimensions of each data point. <br>
 In order to find the directions of maximum variance in data, we will use the **covariance matrix** of data.<br>
-**Covariance matrix** (**C**) summarizes the **spread** and **relationship** of the data in the original d-dimensional space. <br>
-\(C_{d \times d} = \frac{1}{n-1}X^TX \), where \(X\) is the data matrix. <br>
-*Note: (n-1) in the denominator is for unbiased estimation(Bessel's correction) of covariance matrix.* <br>
-\(C_{ii}\) is the variance of the \(i^{th}\) feature. <br>
-\(C_{ij}\) is the co-variance between feature \(i\) and feature \(j\). <br>
-Trace(C) = Sum of diagonal elements of C = Total variance of data. <br>
+- **Covariance matrix** (**C**) summarizes the **spread** and **relationship** of the data in the original d-dimensional space. 
+  - \(C_{d \times d} = \frac{1}{n-1}X^TX \), where \(X\) is the data matrix. <br>
+
+- *Note: (n-1) in the denominator is for unbiased estimation(**Bessel's correction**) of covariance matrix.* 
+  - \(C_{ii}\) is the variance of the \(i^{th}\) feature. 
+  - \(C_{ij}\) is the co-variance between feature \(i\) and feature \(j\).
+  - Trace(C) = Sum of diagonal elements of C = Total variance of data.
 
 **Algorithm:** <br>
 1. Data is first mean centered, i.e, make mean = 0, i.e, subtract mean from each data point. <br>
-\(X = X - \mu\) <br>
+- \(X = X - \mu\) <br>
 2. Compute the covariance matrix with mean centered data. <br>
-\(C = \frac{1}{n-1}X^TX \), 
-\( \quad
-\Sigma = 
+- \(C = \frac{1}{n-1}X^TX \), 
+\( \quad 
+C ~ \text{or } \Sigma = 
 \begin{bmatrix}
 var(f_1) & cov(f_1f_2) & \cdots & cov(f_1f_d) \\
 cov(f_2f_1) & var(f_2) & \cdots & cov(f_2f_d) \\
@@ -68,19 +75,19 @@ cov(f_df_1) & cov(f_df_2) & \cdots & var(f_d)
 _{\text{d x d}}
 \)
 3. Perform the eigen value decomposition of covariance matrix. <br>
-\( C = Q \Lambda Q^T \) <br>
-\(C\): Orthogonal matrix of eigen vectors of covariance matrix. <br>
-_New rotated axes or prinicipal components of the data._ <br>
-\(\Lambda\): Diagonal matrix of eigen values of covariance matrix. <br>
-_Scaling of variance along new eigen basis._ <br>
+- \( C = Q \Lambda Q^T \) <br>
+- \(C\): Orthogonal matrix of eigen vectors of covariance matrix. <br>
+  - _New rotated axes or principal components of the data._ <br>
+- \(\Lambda\): Diagonal matrix of eigen values of covariance matrix. 
+  - _Scaling of variance along new eigen basis._ <br>
+
 *Note: Eigen values are sorted in descending order, i.e \( \lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_d \).* <br>
 
 4. Project the data onto the new axes or principal components/directions. <br>
 *Note: k < d = reduced dimensionality.* <br>
 \(X_{new} = Z = XQ_k\) <br>
-\(X_{new}\): Projected data or principal component score <br>
-
-{{</ definition >}}
+\(X_{new}\): Projected data or principal component score
+{{</ panel >}}
 
 {{< question >}}
 What is the variance of the projected data?
@@ -104,8 +111,8 @@ Therefore, the diagonal matrix \( \Lambda \) captures the variance along every p
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-<span><a href="{{< ref "/docs/maths/linear_algebra/eigen_value_decomposition" >}}">Previous: Eigen Value Decomposition</a></span>
-<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/linear_algebra/singular_value_decomposition" >}}">Next: Singular Value Decomposition</a></span>
+<span><a href="{{< ref "/docs/maths/linear_algebra/singular_value_decomposition" >}}">Previous: Singular Value Decomposition</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/maths/linear_algebra/matrix_calculus" >}}">Next: Vector & Matrix Calculus</a></span>
 </div>
 <!-- nav-panel:end -->
 

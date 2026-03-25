@@ -132,7 +132,7 @@ Weight update:
 Mean Squared Error (MSE) can not be used to quantify error/loss in binary classification because:
 - **Convexity** : MSE combined with Sigmoid is **non-convex**, so, Gradient Descent can get trapped in local minima.
 - **Penalty**: MSE does not appropriately **penalize** mis-classifications in binary classification.
-  - e.g: If actual value is class 1 but the model predicts class 0, then MSE = \((1-0)^2 = 1\), which is very low, whereas los loss = \(-log(0) = \infty\)
+  - e.g: If actual value is class 1 but the model predicts class 0, then MSE = \((1-0)^2 = 1\), which is very low, whereas log loss = \(-log(0) = \infty\)
 {{< /panel >}}
 
 {{< video "https://youtu.be/zCBnS3XT61Y" >}}
