@@ -9,8 +9,6 @@ math: true
 {{< playlist " https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfu7gGVAzvIvolLZeH8Ddb1" 
 "Machine Learning System | All Videos" >}}
 
-<br>
-
 {{< panel color="blue" title="Why Retrain 🦮 a ML Model?" >}}
 ⭐️In a production ML environment, retraining is the ‘**maintenance engine**' ⚙️ that keeps our models from becoming obsolete.
 
@@ -56,8 +54,6 @@ for the next few gradient descent steps.
 {{< /panel >}}
 
 {{< video "https://youtu.be/CR_qWTXdiEY" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/ml_system/data_distribution_shift" >}}">Previous: Data Distribution Shift</a></span>

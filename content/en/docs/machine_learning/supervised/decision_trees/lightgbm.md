@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" 
 "Decision Tree | All Videos" >}}
 
-<br>
-
 {{< panel color="navy" title="LightGBM (Light Gradient Boosting Machine)" >}}
 ⭐️Developed by **Microsoft**, this framework is designed for high speed and efficiency with large datasets.
 
@@ -43,8 +41,6 @@ math: true
 {{< /panel >}}
 
 {{< video "https://youtu.be/OTDLjYxInp0" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/xgboost" >}}">Previous: XgBoost</a></span>

@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" 
 "Decision Tree | All Videos" >}}
 
-<br>
-
 {{< panel color="navy" title="XGBoost (Extreme Gradient Boosting)" >}}
 ⭐️An optimized and highly efficient implementation of gradient boosting.
 
@@ -50,8 +48,6 @@ Let's understand this with the problem to minimize \(f(x) = x^4\), using:
 {{< /panel >}}
 
 {{< video "https://youtu.be/0YhR50u26nk" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/advanced_gbdt_algorithms" >}}">Previous: Advanced GBDT Algorithms</a></span>

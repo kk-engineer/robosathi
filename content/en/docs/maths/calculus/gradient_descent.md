@@ -101,8 +101,6 @@ also GPUs are the reason for the mini-batch size to be a power of 2.*
 {{< /panel >}}
 
 {{< video "https://youtu.be/OdYNB1KRwKo?si=AzdYvM6hpkQEK9Kc&t=3350" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/maths/calculus/optimization" >}}">Previous: Optimization</a></span>

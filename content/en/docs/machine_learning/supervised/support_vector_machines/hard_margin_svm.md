@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfFECdHEHPM6NjErmLmg2Ff" 
 "Support Vector Machine | All Videos" >}}
 
-<br>
-
 {{< panel color="red" title="Assumptions of Hard Margin SVM" >}}
 - Data is perfectly linearly separable, i.e, there must exist a hyperplane that can perfectly separate the data into two distinct classes without any misclassification.
 - No noise or outliers that fall within the margin or on the wrong side of the decision boundary. Note: Even a single outlier can prevent the algorithm from finding a valid solution or drastically affect the boundary's position, leading to poor generalization.
@@ -63,8 +61,6 @@ such that, \(y_i.(w^Tx_i + w_0) \ge 1 ~ \forall i  = 1,2,\dots, n\)
 {{< /panel >}}
 
 {{< video "https://youtu.be/uPjOC92Hcq0" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/support_vector_machines/svm_intro" >}}">Previous: SVM Intro</a></span>

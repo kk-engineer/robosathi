@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxddB_on_ZQ0pzP6C6gRHR_i" 
 "K Means Clustering | All Videos" >}}
 
-<br>
-
 {{< panel color="orange" title="Unsupervised Learning" >}}
 🌍In real-world systems, **labeled data** is scarce and expensive 💰.
 
@@ -100,8 +98,6 @@ the **Stirling number** of the second kind, which grows at a rate roughly equal 
 {{< /panel >}}
 
 {{< video "https://youtu.be/s2-eu_hjepQ" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/naive_bayes/naive_bayes_example" >}}">Previous: Naive Bayes Example</a></span>

@@ -8,8 +8,6 @@ math: true
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos">}}
-<br>
-
 {{< definition title="Surprise Factor" >}}
 It is a measure of the amount of information gained when a specific, individual event occurs, and is defined based on 
 the probability of that event. <br>
@@ -195,8 +193,6 @@ Therefore, lower JS divergence value => P and Q are more similar. <br>
 {{</ answer >}}
 
 {{< video "https://youtu.be/0wtJNYaTB-8?si=lZvH0Bk65ibb7Rqa" >}}
-
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

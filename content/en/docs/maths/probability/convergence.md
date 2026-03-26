@@ -8,8 +8,6 @@ math: true
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos">}}
-<br>
-
 {{< definition title="Convergence in Probability" >}}
 A sequence of random variables \(X_1, X_1, \dots, X_n\) is said to converge in probability 
 to a known random variable \(X\), <br> 
@@ -149,7 +147,6 @@ Y_n = \frac{1}{n} \sum_{i=1}^{n} X_i \xrightarrow{Almost ~ Sure} \frac{1}{2}
 {{< /panel >}}
 
 {{< video "https://www.youtube.com/watch?v=ZIXMVF6t834&t=1s" >}}
-
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

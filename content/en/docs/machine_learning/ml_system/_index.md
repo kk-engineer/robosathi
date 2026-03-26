@@ -8,6 +8,3 @@ weight: 5
 
 {{< playlist " https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfu7gGVAzvIvolLZeH8Ddb1" 
 "Machine Learning System | All Videos" >}}
-
-<br><br>
-```End of Section```

@@ -8,8 +8,6 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxde_X17sF7iN6rnQgFlBDC-" 
 "Linear Regression | All Videos" >}}
-<br>
-
 {{< question >}}
 What if our data is more complex than a straight line?
 {{< /question >}}
@@ -59,7 +57,6 @@ e.g:
 {{< /panel >}}
 
 {{< video "https://youtu.be/b7RYViDf9vk" >}}
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

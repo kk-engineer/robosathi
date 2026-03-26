@@ -8,8 +8,6 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxde_X17sF7iN6rnQgFlBDC-" 
 "Linear Regression | All Videos" >}}
-<br>
-
 {{< panel color="blue" title="Regression Metrics" >}}
 Quantify the difference between the actual values and the predicted values.
 {{< /panel >}}
@@ -78,7 +76,6 @@ e.g: = 95th percentile of errors or 1.35\(\sigma\) for standard Gaussian data.
 {{< /panel >}}
 
 {{< video "https://youtu.be/qh7q9M-4tls" >}}
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

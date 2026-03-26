@@ -4,8 +4,11 @@ Add styles or override variables from the theme here.
 
 */
 
-// Override Docsy's default fonts with a apple style font stack.
-$font-family-sans-serif: "SF Pro Text", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+// Override Docsy's default fonts with a cleaner docs-oriented stack.
+$font-family-sans-serif: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$font-family-monospace: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
 // Increase the default font size
 //$font-size-base: 1.125rem;
@@ -14,6 +17,85 @@ $font-family-sans-serif: "SF Pro Text", sans-serif;
 $primary: #ffffff;
 $link-color: #1473e6;
 $link-hover-color: #0f5fc0;
+
+$rs-text: #162033;
+$rs-text-muted: #5b667a;
+$rs-border: #e4e9f2;
+$rs-surface: #ffffff;
+$rs-surface-soft: #f7f9fc;
+$rs-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
+
+html {
+  font-size: 16px;
+}
+
+body {
+  color: $rs-text;
+  font-family: $font-family-sans-serif;
+  font-size: 1.04rem;
+  line-height: 1.68;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6,
+.td-content h1, .td-content h2, .td-content h3, .td-content h4, .td-content h5, .td-content h6 {
+  color: #0f172a;
+  font-family: $font-family-sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.td-content {
+  color: $rs-text;
+}
+
+.td-content p,
+.td-content li,
+.td-content dt,
+.td-content dd,
+.td-content blockquote {
+  color: $rs-text;
+}
+
+.td-content p,
+.td-content li {
+  line-height: 1.72;
+}
+
+.td-content small,
+.td-content figcaption,
+.td-page-meta,
+.td-breadcrumb {
+  color: $rs-text-muted;
+}
+
+code,
+pre,
+.highlight code {
+  font-family: $font-family-monospace;
+}
+
+.td-content pre,
+.td-content .highlight pre {
+  border: 1px solid $rs-border;
+  border-radius: 14px;
+  box-shadow: none;
+}
+
+.td-content blockquote {
+  border-left: 2px solid #cfd7e6;
+  color: $rs-text-muted;
+}
+
+.td-content table {
+  border-color: $rs-border;
+}
+
+.td-content img {
+  border-radius: 12px;
+}
 
 // ========================================
 // NAVBAR STYLES - Black text on white background
@@ -369,34 +451,87 @@ footer {
 
 // Youtube video links
 .video-link-container {
-    margin: 1.5rem 0;
+    margin: 1.25rem 0;
 }
 
 .video-btn {
-    background-color: #fff1f1;
-    border-left: 3px solid #ff3b30;
-    padding: 12px 20px;
-    border-radius: 6px;
-    font-weight: 600;
-    color: #9f1239;
+    background-color: #fff4f7;
+    border: 1px solid #f3d4dd;
+    padding: 0.9rem 1rem;
+    border-radius: 14px;
+    font-weight: 500;
+    color: $rs-text;
     display: inline-flex;
     align-items: center;
-    gap: 10px; /* Space between icon and text */
+    gap: 0.9rem;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
+    width: auto;
+    max-width: 100%;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
 }
 
 .video-btn:hover {
-    transform: translateY(-2px); /* Better visual cue than scaling */
-    background-color: #ffe3e3;
-    box-shadow: 0 4px 12px rgba(255, 59, 48, 0.12);
-    color: #9f1239;
+    transform: translateY(-1px);
+    background-color: #ffe9f0;
+    border-color: #e8bccb;
+    box-shadow: 0 12px 24px rgba(159, 18, 57, 0.1);
+    color: $rs-text;
     text-decoration: none;
 }
 
-.video-btn i {
-    font-size: 1.2rem;
-    color: #ff3b30;
+.video-btn__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  background: #fde8ef;
+  color: #dc2626;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.video-btn__icon i {
+  font-size: 1rem;
+}
+
+.video-btn__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.12rem;
+}
+
+.video-btn__eyebrow {
+  color: $rs-text-muted;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
+
+.video-btn__title {
+  color: #111827;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.video-btn-playlist .video-btn__icon {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.video-btn-playlist {
+  background-color: #f5f9ff;
+  border-color: #d6e5ff;
+}
+
+.video-btn-playlist:hover {
+  background-color: #edf5ff;
+  border-color: #c1d8ff;
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.08);
 }
 
 // Keep home/docs feeling open: hide heavy container boundaries.
@@ -423,6 +558,212 @@ footer {
   color: #0f5fc0;
 }
 
+.rs-callout {
+  --rs-callout-accent: #7db7ff;
+  --rs-callout-accent-strong: #2563eb;
+  --rs-callout-surface: #f7f9fc;
+  background: $rs-surface-soft;
+  border: 1px solid $rs-border;
+  border-radius: 16px;
+  box-shadow: none;
+  color: $rs-text;
+  display: block;
+  margin: 1.1rem 0;
+  padding: 1rem 1.1rem;
+  width: 100%;
+}
+
+.rs-callout__title,
+.rs-callout__label {
+  color: #0f172a;
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  margin-bottom: 0.45rem;
+}
+
+.rs-callout__title--panel {
+  color: var(--rs-callout-accent-strong);
+  font-size: 1.18rem;
+}
+
+.rs-callout__label {
+  color: $rs-text-muted;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+}
+
+.rs-callout__body,
+.rs-callout__body > :last-child {
+  color: $rs-text;
+}
+
+.rs-callout__body > *:last-child {
+  margin-bottom: 0;
+}
+
+.rs-callout-blue {
+  --rs-callout-accent: #93c5fd;
+  --rs-callout-accent-strong: #1d4ed8;
+  --rs-callout-surface: #eff6ff;
+}
+
+.rs-callout-green {
+  --rs-callout-accent: #86efac;
+  --rs-callout-accent-strong: #15803d;
+  --rs-callout-surface: #f0fdf4;
+}
+
+.rs-callout-magenta {
+  --rs-callout-accent: #e9d5ff;
+  --rs-callout-accent-strong: #9333ea;
+  --rs-callout-surface: #faf5ff;
+}
+
+.rs-callout-orange {
+  --rs-callout-accent: #fed7aa;
+  --rs-callout-accent-strong: #c2410c;
+  --rs-callout-surface: #fff7ed;
+}
+
+.rs-callout-red,
+.rs-callout-rust {
+  --rs-callout-accent: #fecaca;
+  --rs-callout-accent-strong: #b91c1c;
+  --rs-callout-surface: #fef2f2;
+}
+
+.rs-callout-cyan {
+  --rs-callout-accent: #a5f3fc;
+  --rs-callout-accent-strong: #0f766e;
+  --rs-callout-surface: #ecfeff;
+}
+
+.rs-callout-navy {
+  --rs-callout-accent: #c7d2fe;
+  --rs-callout-accent-strong: #3730a3;
+  --rs-callout-surface: #eef2ff;
+}
+
+.rs-callout-grey {
+  --rs-callout-accent: #cbd5e1;
+  --rs-callout-accent-strong: #475569;
+  --rs-callout-surface: #f8fafc;
+}
+
+.rs-callout-panel {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--rs-callout-surface) 92%, #ffffff 8%) 0%, var(--rs-callout-surface) 100%);
+  border-left: 3px solid var(--rs-callout-accent);
+}
+
+.rs-callout-definition {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--rs-callout-surface) 92%, #ffffff 8%) 0%, var(--rs-callout-surface) 100%);
+  border-left: 3px solid var(--rs-callout-accent);
+}
+
+.rs-callout-question {
+  background: #f6fcf8;
+  border-left: 3px solid #86efac;
+}
+
+.rs-callout-answer {
+  background: #fbf8ff;
+  border-left: 3px solid #e9d5ff;
+}
+
+.playlist-container {
+  margin-bottom: 1.5rem;
+}
+
+.youtube-lazy-load {
+  aspect-ratio: 16/9;
+  background: #0f172a;
+  border: 1px solid $rs-border;
+  border-radius: 16px;
+  box-shadow: $rs-shadow;
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.youtube-lazy-load__image {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.youtube-lazy-load__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.08), rgba(15, 23, 42, 0.2));
+  pointer-events: none;
+}
+
+.youtube-lazy-load__play-button {
+  width: 4.2rem;
+  height: 3rem;
+  background-color: rgba(220, 38, 38, 0.96);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.18);
+}
+
+.youtube-lazy-load__play-icon {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.55rem 0 0.55rem 0.95rem;
+  border-color: transparent transparent transparent #ffffff;
+  margin-left: 0.12rem;
+}
+
+.playlist-container__title {
+  color: $rs-text;
+  font-size: 0.96rem;
+  font-weight: 600;
+  margin-top: 0.7rem;
+  text-align: center;
+}
+
+.rs-figure {
+  margin: 1.75rem 0;
+  text-align: center;
+}
+
+.rs-figure__image {
+  border: 1px solid $rs-border;
+  border-radius: 14px;
+  height: auto;
+  max-width: 100%;
+}
+
+.rs-figure__caption {
+  color: $rs-text-muted;
+  font-size: 0.92rem;
+  margin-top: 0.6rem;
+}
+
+.rs-figure__caption > *:last-child {
+  margin-bottom: 0;
+}
+
+.rs-figure__error {
+  border: 1px dashed #fca5a5;
+  border-radius: 12px;
+  color: #b91c1c;
+  margin: 1rem 0;
+  padding: 0.9rem 1rem;
+}
+
 // Support page
 .support-page {
   max-width: 980px;
@@ -434,15 +775,15 @@ footer {
 .support-banner {
   display: block;
   margin: 0 auto 18px;
-  padding: 12px 16px;
-  border: 1px solid #cfe0ff;
-  border-left: 4px solid #5ea1ff;
-  border-radius: 10px;
-  background: #f5faff;
-  color: #0b172a !important;
-  font-weight: 400;
-  font-size: 1.18rem;
-  line-height: 1.45;
+  padding: 1rem 1.1rem;
+  border: 1px solid $rs-border;
+  border-left: 3px solid #8ab4ff;
+  border-radius: 16px;
+  background: #f8fbff;
+  color: $rs-text !important;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.65;
   text-align: center;
 }
 
@@ -457,8 +798,9 @@ footer {
 
 .support-card {
   background: #ffffff;
-  border: 1px solid #e5edf8;
-  border-radius: 14px;
+  border: 1px solid $rs-border;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
   padding: 20px;
   margin: 0;
   max-width: none;
@@ -476,6 +818,9 @@ footer {
 }
 
 .support-card-title {
+  color: #0f172a;
+  font-size: 1.05rem;
+  font-weight: 600;
   margin-bottom: 12px;
   min-height: 2.2rem;
   display: flex;
@@ -573,7 +918,7 @@ footer {
 }
 
 .support-note {
-  color: #334155;
+  color: $rs-text-muted;
   max-width: 34ch;
 }
 
@@ -637,4 +982,3 @@ footer {
 h1.display-1.mt-0.mt-md-5.pb-4 {
     font-weight: bold; /* Or 700, 900 for a stronger bold */
 }
-

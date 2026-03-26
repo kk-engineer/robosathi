@@ -8,8 +8,6 @@ math: true
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos">}}
-<br>
-
 {{< definition title="Joint Probability Distribution" >}}
 
 It describes the probability of 2 or more random variables occurring simultaneously. <br>
@@ -312,8 +310,6 @@ For example:
 {{</ definition >}}
 
 {{< video "https://www.youtube.com/watch?v=hHN1z18-Vjo&t=1s" >}}
-
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

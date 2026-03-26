@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" 
 "Decision Tree | All Videos" >}}
 
-<br>
-
 {{< panel color="cyan" title="Intuition 💡" >}}
 ⭐️In Bagging 🎒we trained multiple strong(over-fit, high variance) models (in parallel) and then averaged them out to reduce variance.
 
@@ -37,8 +35,6 @@ are sequentially combined to create a single strong predictive model.
 {{< /panel >}}
 
 {{< video "https://youtu.be/dzvsugSf1RY" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/extra_trees" >}}">Previous: Extra Trees</a></span>

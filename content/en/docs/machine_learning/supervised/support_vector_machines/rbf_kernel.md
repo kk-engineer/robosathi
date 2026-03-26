@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfFECdHEHPM6NjErmLmg2Ff" 
 "Support Vector Machine | All Videos" >}}
 
-<br>
-
 {{< panel color="cyan" title="Intuition 💡" >}}
 - Unlike the polynomial kernel, which looks at global 🌎 interactions, the RBF kernel acts like a similarity measure.
 - If 'x' and 'z' are identical \(K(x,z)=1\).
@@ -56,8 +54,6 @@ e.g. if \(x=[x_{1},x_{2}]\), then  \(x\otimes x=[x_{1}^{2},x_{1}x_{2},x_{2}x_{1}
 {{< /panel >}}
 
 {{< video "https://youtu.be/TMcJxXUQxzM" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/support_vector_machines/kernel_trick" >}}">Previous: Kernel Trick</a></span>

@@ -8,8 +8,6 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxeydAqz2lsSMFYinbrJy9mu" 
 "Classical Machine Learning | Full Course Videos" >}}
-<br>
-
 {{< definition title="Learn">}}
 To gain knowledge or understanding of a skill,  by study, instruction, or experience.
 {{< /definition >}}
@@ -40,7 +38,6 @@ to make predictions on new, unseen data.
 {{< /panel >}}
 
 {{< video "https://youtu.be/XL143gJmUCA" >}}
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

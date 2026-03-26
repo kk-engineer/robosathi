@@ -8,7 +8,6 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" 
         "Linear Algebra for AI & ML | Full Course Videos">}}
-<br>
 {{< definition title="Singular Value Decomposition (SVD)">}}
 It decomposes any matrix into a rotation, a scaling (based on singular values), and another rotation. <br>
 It is a generalization of the eigen value decomposition(for square matrix) to rectangular matrices. <br>
@@ -113,7 +112,6 @@ which is achieved by keeping only the largest singular values and corresponding 
 {{</ definition >}}
 
 {{< video "https://www.youtube.com/watch?v=1dQap9e_tkg&t=1s" >}}
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

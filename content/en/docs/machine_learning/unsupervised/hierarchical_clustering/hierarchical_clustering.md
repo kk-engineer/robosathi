@@ -6,6 +6,8 @@ weight: 321
 math: true
 ---
 
+{{< video "https://youtu.be/ws2lhDgplVU" >}}
+
 {{< panel color="red" title="Issues with K-Means" >}}
 - 🤷 We might **not know** in advance the **number** of distinct **clusters** 'k' in the dataset.
 - 🕸️ Also, sometimes the dataset may contain a nested structure or some inherent hierarchy, such as, file system, 
@@ -63,7 +65,6 @@ forming a bridge to outlier.
 {{< /panel >}}
 
 {{< video "https://youtu.be/ws2lhDgplVU" >}}
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

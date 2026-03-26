@@ -8,8 +8,6 @@ math: true
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos" >}}
-<br>
-
 {{<definition title="Parametric Model Estimation">}}
 It is the process of finding the best-fitting finite set of parameters \(\Theta\) for a model that assumes a 
 specific probability distribution for the data. <br>
@@ -596,8 +594,6 @@ or multimodal distributions.
 {{% /panel %}}
 
 {{< video "https://www.youtube.com/watch?v=WXcJBbF8AvM" >}}
-
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

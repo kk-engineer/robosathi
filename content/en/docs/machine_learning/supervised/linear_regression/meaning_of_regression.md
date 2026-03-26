@@ -8,8 +8,6 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxde_X17sF7iN6rnQgFlBDC-" 
 "Linear Regression | All Videos" >}}
-<br>
-
 {{< question >}}
 What is the meaning of “Regression” in Linear Regression ?
 {{</ question >}}
@@ -42,7 +40,6 @@ Over time ⏳, the name **‘regression’** got **permanently attached** to the
 {{< imgproc "images/machine_learning/supervised/linear_regression/line_of_best_fit.png" Resize "800x" >}}{{< /imgproc >}}
 
 {{< video "https://youtu.be/dDvioj-12Uw" >}}
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

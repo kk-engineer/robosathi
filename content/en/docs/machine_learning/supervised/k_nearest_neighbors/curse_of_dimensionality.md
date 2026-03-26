@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxf8kijzBo00irrF7JhvNwhZ" 
 "K Nearest Neighbors (KNN) | All Videos" >}}
 
-<br>
-
 {{< panel color="blue" title="Euclidean Distance" >}}
 While Euclidean distance(L norm) is the most frequently discussed, **‘Curse of Dimensionality'** impacts all Minkowski norms (\(L_p\))
 \[L_p = (\sum |x_i|^p)^{\frac{1}{p}} \]
@@ -93,8 +91,6 @@ Cosine similarity measures the **cosine** of the angle between 2 vectors.
 {{< /panel >}}
 
 {{< video "https://youtu.be/a2YAgbITuQM" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/k_nearest_neighbors/knn_optimizations" >}}">Previous: KNN Optimizations</a></span>

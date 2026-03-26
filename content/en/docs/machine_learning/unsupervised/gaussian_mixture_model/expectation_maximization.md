@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcF-fY0gn6FSxSgKT84rvpV" 
 "Gaussian Mixture Model (GMM) | All Videos" >}}
 
-<br>
-
 {{< panel color="cyan" title="GMM as Latent Variable Model" >}}
 ⭐️GMM is a latent variable model, where the variable \(z_i\) is a latent (hidden) variable that indicates which specific
 Gaussian component or cluster generated a particular data point.
@@ -89,8 +87,6 @@ at the specific value of \(x_i\), such that \(\pi_k \ge 0\) and \(\sum _{k=1}^{K
 {{< /panel >}}
 
 {{< video "https://youtu.be/SG_G4thCTF4" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/unsupervised/gaussian_mixture_model/latent_variable_model" >}}">Previous: Latent Variable Model</a></span>

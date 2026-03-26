@@ -8,8 +8,6 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxde_X17sF7iN6rnQgFlBDC-" 
 "Linear Regression | All Videos" >}}
-<br>
-
 {{< panel color="blue" title="Probabilistic Interpretation" >}}
 Explains why we use **ordinary least squares** error to find the model **weights/parameters**.
 {{< /panel >}}
@@ -121,7 +119,6 @@ objective of the ordinary least squares (OLS) method.
 {{< /panel >}}
 
 {{< video "https://youtu.be/qsfTfotxU_8" >}}
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

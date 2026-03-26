@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" 
 "Decision Tree | All Videos" >}}
 
-<br>
-
 {{< panel color="rust" title="Issues with Decision Tree ?" >}}
 - A single decision tree is highly **sensitive** to the specific training dataset. 
 <br> Small changes, such as, a few different rows or the presence of an outlier, can lead to a completely different tree structure.
@@ -66,8 +64,6 @@ So, the true variance of bagged ensemble is:
 {{< /panel >}}
 
 {{< video "https://youtu.be/KKPljiXurPs" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/regularization" >}}">Previous: Regularization</a></span>

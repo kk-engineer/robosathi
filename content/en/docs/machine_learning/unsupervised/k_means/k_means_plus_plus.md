@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxddB_on_ZQ0pzP6C6gRHR_i" 
 "K Means Clustering | All Videos" >}}
 
-<br>
-
 {{< panel color="orange" title="Issues with Random Initialization" >}}
 - If two initial centroids belong to the same natural cluster, the algorithm will likely split that natural cluster in half and be forced to merge two other distinct clusters elsewhere to compensate.
 - **Inconsistent**; different runs may lead to different clusters.
@@ -46,8 +44,6 @@ Do robust preprocessing to **remove outliers** or use **K-Medoids** algorithm.
 {{< /panel >}}
 
 {{< video "https://youtu.be/fkrVpuAy_LE" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/unsupervised/k_means/lloyds_algorithm" >}}">Previous: Lloyds Algorithm</a></span>

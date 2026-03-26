@@ -9,7 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxdNo7m8fKMx-pseLizEoU6Z" 
 "Logistic Regression | All Videos" >}}
 
-<br>
 {{< panel color="green" title="Why do we use Log Loss in Binary Classification?" >}}
 To understand that let's have a look 👀at the statistical assumptions.
 {{< /panel >}}
@@ -71,8 +70,6 @@ log\mathcal{L}(w) &= \sum_{i=1}^n log [p_i^{y_i}(1-p_i)^{1-y_i}] \\
 {{< /panel >}}
 
 {{< video "https://youtu.be/kb_6_SImy6A" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/logistic_regression/log_odds" >}}">Previous: Log Odds</a></span>

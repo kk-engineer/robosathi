@@ -8,8 +8,6 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxde_X17sF7iN6rnQgFlBDC-" 
 "Linear Regression | All Videos" >}}
-<br>
-
 {{< panel color="blue" title="Predict Salary" >}}
 Let's understand linear regression using an example to predict salary.
 
@@ -235,7 +233,6 @@ e.g:
 {{< /panel >}}
 
 {{< video "https://youtu.be/E-1kMEymBuA" >}}
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

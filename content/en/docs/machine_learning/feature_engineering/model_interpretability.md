@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcg0tJ0CAqPKjDk6Ry_atqu" 
 "Feature Engineering | All Videos" >}}
 
-<br>
-
 {{< panel color="grey" title="House Price Prediction" >}}
 {{< imgproc "images/machine_learning/feature_engineering/model_interpretability/slide_01_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
@@ -72,8 +70,6 @@ for individuals affected by **algorithmic decisions**.
 {{< /panel >}}
 
 {{< video "https://youtu.be/IOIM-APSCok" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/feature_engineering/data_leakage" >}}">Previous: Data Leakage</a></span>

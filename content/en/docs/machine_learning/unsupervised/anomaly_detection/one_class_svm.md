@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcQTrzlCVhQOtpvVbWsft3a" 
 "Anomaly Detection | All Videos" >}}
 
-<br>
-
 {{< panel color="green" title="Use Case (Novelty Detection)🐝" >}}
 ⭐️Only **one class** of data (normal, non-outlier) is **available** for training, making standard **supervised learning** 
 models **impossible**.
@@ -80,8 +78,6 @@ For a new data point \(x_{new}\), decision function is:
 {{< /panel >}}
 
 {{< video "https://youtu.be/E_P-IF40zrU" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/unsupervised/anomaly_detection/elliptic_envelope" >}}">Previous: Elliptic Envelope</a></span>

@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfFECdHEHPM6NjErmLmg2Ff" 
 "Support Vector Machine | All Videos" >}}
 
-<br>
-
 {{< panel color="blue" title="Intuition💡" >}}
 💡Imagine the margin is a fence 🌉.
 - **Hard Margin**: fence is made of steel. <br>
@@ -93,8 +91,6 @@ Model will ignore outliers/noise to get a ‘cleaner'(wider) boundary.
 {{< /panel >}}
 
 {{< video "https://youtu.be/LofkdQ6rCPA" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/support_vector_machines/hard_margin_svm" >}}">Previous: Hard Margin SVM</a></span>

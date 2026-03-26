@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcg0tJ0CAqPKjDk6Ry_atqu" 
 "Feature Engineering | All Videos" >}}
 
-<br>
-
 {{< panel color="blue" title="Data Leakage" >}}
 ⭐️ Occurs when a model is trained using data that would not be available during real-world predictions, 
 leading to **good** training performance, but **poor** real‑world 🌎 performance. <br>
@@ -49,8 +47,6 @@ This happens in **Time Series** ⏰ data.
 {{< /panel >}}
 
 {{< video "https://youtu.be/6pP9meuusNw" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/feature_engineering/feature_engineering" >}}">Previous: Feature Engineering</a></span>

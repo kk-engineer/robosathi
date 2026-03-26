@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" 
 "Decision Tree | All Videos" >}}
 
-<br>
-
 {{< panel color="blue" title="Advanced GBDT Algorithms" >}}
 🔴 XGBoost (Extreme Gradient Boosting) <br>
 🔵 LightGBM (Light Gradient Boosting Machine) <br>
@@ -36,8 +34,6 @@ math: true
 {{< /panel >}}
 
 {{< video "https://youtu.be/j9OFJo6kuCs" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/gbdt_example" >}}">Previous: GBDT Example</a></span>

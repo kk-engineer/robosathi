@@ -1,12 +1,7 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
-<div style="
-  background-color: #f7efff;
-  border-left: 3px solid #c7a5ff;
-  padding: 10px 15px;
-  margin: 10px 0;
-  border-radius: 6px;
-  #font-weight: bold;
-  color: #5a2a82;
-">
-  {{ .Inner | markdownify }}
+<div class="rs-callout rs-callout-answer rs-callout-magenta">
+  <div class="rs-callout__label">Answer</div>
+  <div class="rs-callout__body">
+    {{ .Inner | markdownify }}
+  </div>
 </div>

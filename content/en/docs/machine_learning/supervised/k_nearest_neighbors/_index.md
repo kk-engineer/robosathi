@@ -8,6 +8,3 @@ weight: 3
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxf8kijzBo00irrF7JhvNwhZ" 
 "K Nearest Neighbors (KNN) | All Videos" >}}
-
-<br><br>
-```End of Section```

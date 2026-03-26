@@ -8,8 +8,6 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxde_X17sF7iN6rnQgFlBDC-" 
 "Linear Regression | All Videos" >}}
-<br>
-
 {{< question >}}
 Why Data-Splitting is Required ?
 {{< /question >}}
@@ -62,7 +60,6 @@ validation set having 99% class A.
 {{< /panel >}}
 
 {{< video "https://youtu.be/DGM9wktXyjE" >}}
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

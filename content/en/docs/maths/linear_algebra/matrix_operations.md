@@ -8,7 +8,6 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" 
         "Linear Algebra for AI & ML | Full Course Videos">}}
-<br>
 {{< question >}}
 Why study Matrix?
 {{< /question >}}
@@ -558,8 +557,6 @@ Therefore, \( x = 2 \) and \( y = 1 \).
 {{</ answer >}}
 
 {{< video "https://www.youtube.com/watch?v=aoPJ7yzX6lE&t=1s" >}}
-
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

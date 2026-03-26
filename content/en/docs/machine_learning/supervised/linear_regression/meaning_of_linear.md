@@ -8,8 +8,6 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxde_X17sF7iN6rnQgFlBDC-" 
 "Linear Regression | All Videos" >}}
-<br>
-
 {{< question >}}
 What is the meaning of “linear” in Linear Regression ?
 {{</ question >}}
@@ -72,7 +70,6 @@ a set of linear equations, making estimation *straightforward*.
 {{< /panel >}}
 
 {{< video "https://youtu.be/iRioqzKpJI4" >}}
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

@@ -8,7 +8,6 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
-<br>
 {{< definition title="Performance Metrics" >}}
 They are quantitative measures used to evaluate how well a machine learning model performs on unseen data. <br>
 E.g.: For regression models, we have - MSE, RMSE, MAE, R^2 metric, etc. <br>
@@ -240,8 +239,6 @@ _bottom right corner_, i.e, the model performance is poor.
 {{</ answer >}}
 
 {{< video "https://www.youtube.com/watch?v=vIqEUeDGAiE" >}}
-
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

@@ -8,8 +8,6 @@ math: true
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos" >}}
-<br>
-
 {{< definition title="Conditional Probability" >}}
 It is the probability of an event occurring, given that another event has already occurred.<br>
 Allows us to update probability when additional information is revealed.
@@ -104,7 +102,9 @@ P(B) = \sum_{i=1}^{n} P(A_i)*P(B \mid A_i)
 where \(n\) is the number of mutually exclusive partitions of the sample space \(\Omega\) .
 {{< /definition >}}
 
+{{< panel color="red" title="Note">}}
 *Now, we can also generalize the Bayes' Theorem using the Law of Total Probability.*
+{{</ panel >}}
 
 {{< panel color="green" title="Generalised Bayes' Theorem">}}
 \[
@@ -113,7 +113,6 @@ P(A_i \mid B) = \frac{P(A_i)*P(B \mid A_i)}{\sum_{j=1}^{n} P(A_j)*P(B \mid A_j)}
 {{< /panel >}}
 
 {{< video "https://youtu.be/CWnh1E8F-XU?si=7vp-yW89Cxw64P7S" >}}
-<br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

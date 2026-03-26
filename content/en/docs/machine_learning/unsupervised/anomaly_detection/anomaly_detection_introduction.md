@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcQTrzlCVhQOtpvVbWsft3a" 
 "Anomaly Detection | All Videos" >}}
 
-<br>
-
 {{< panel color="rust" title="What is Anomaly?" >}}
 🦄 Anomaly is a **rare** item, event or observation which deviates significantly from the majority of the data and does 
 not **conform** to a well-defined notion of **normal** behavior.
@@ -58,8 +56,6 @@ or anomalies or **outliers** in a given dataset.
 {{< /panel >}}
 
 {{< video "https://youtu.be/gBP7z0Ty4Ic" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/unsupervised/gaussian_mixture_model/expectation_maximization" >}}">Previous: Expectation Maximization</a></span>

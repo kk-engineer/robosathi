@@ -168,7 +168,6 @@ so, \lim_{x \rightarrow 0^+} x^2 = \lim_{x \rightarrow 0^-} x^2 \\[10pt]
 => \text{ limit exists at } x = 0.
 \]
 {{< imgproc "images/maths/calculus/fundamentals/parabola_convex.png" Resize "800x" >}}{{< /imgproc >}}
-<br><br>
 *Note: Two-Sided Limit* <br>
 \[ \lim_{x \rightarrow a^+} f(x) = \lim_{x \rightarrow a^-} f(x) = \lim_{x \rightarrow a} f(x) \]
 <br>
@@ -389,8 +388,6 @@ Since, determinant of Hessian = -4 < 0 => (x=0, y=0) is a saddle point. <br>
 {{< /panel >}}
 
 {{< video "https://www.youtube.com/watch?v=qpAieJgrcR8&t=1s" >}}
-
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

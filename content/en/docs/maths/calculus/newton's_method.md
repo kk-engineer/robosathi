@@ -8,7 +8,6 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfzDh2D3OqVo-piGAZQPWDj" 
         "Calculus for AI & ML | Full Course Videos">}}
-<br>
 {{< definition >}}
 **Newton's Method:** <br>
 It is a **second-order** iterative gradient based optimization technique known for its **extremely fast** convergence. <br>
@@ -71,7 +70,6 @@ of curvature without incurring the cost of Hessian calculation. <br>
 {{< /panel >}}
 
 {{< video "https://www.youtube.com/watch?v=wM8bfEP12pw&t=1s" >}}
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

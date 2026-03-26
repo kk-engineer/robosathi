@@ -8,8 +8,6 @@ math: true
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos">}}
-<br>
-
 {{< panel color="green" title="I.I.D" >}}
 There are 2 parts in I.I.D, "**Independent**" and "**Identically Distributed**". <br> 
 Let's revisit and understand the **independence** of random variables first. <br>
@@ -142,8 +140,6 @@ I.I.D assumption for samples(data points) in a dataset means that the samples ar
 {{< /panel >}}
 
 {{< video "https://www.youtube.com/watch?v=vE3suVMRH0o&t=1s" >}}
-
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

@@ -8,8 +8,6 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxeydAqz2lsSMFYinbrJy9mu" 
 "Classical Machine Learning | Full Course Videos" >}}
-<br>
-
 {{< imgproc "images/machine_learning/introduction/types_of_ml.png" Resize "800x" >}}{{< /imgproc >}}
 
 {{< definition title="Supervised Learning">}}
@@ -99,7 +97,6 @@ enabling them to generate more nuanced, context-aware, and ethically aligned out
 {{< /panel >}}
 
 {{< video "https://youtu.be/6hUiPW-7Zpg" >}}
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfFECdHEHPM6NjErmLmg2Ff" 
 "Support Vector Machine | All Videos" >}}
 
-<br>
-
 {{< panel color="cyan" title="Intuition💡" >}}
 The Primal form is intuitive but computationally expensive in high dimensions.
 
@@ -101,8 +99,6 @@ subject to: \(0 \leq \alpha_i \leq C\) and \(\sum \alpha_i y_i = 0\)
 {{< /panel >}}
 
 {{< video "https://youtu.be/S7Pb--OmXII" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/support_vector_machines/soft_margin_svm" >}}">Previous: Soft Margin SVM</a></span>

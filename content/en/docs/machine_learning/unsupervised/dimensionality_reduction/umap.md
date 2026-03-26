@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxc3nlviPEjCfl5drLYy2aRF" 
 "Dimensionality Reduction Techniques | All Videos" >}}
 
-<br>
-
 {{< panel color="green" title="Use Case 🐝" >}}
 🐢Visualizing massive datasets where t-SNE is too slow.
 
@@ -96,8 +94,6 @@ and repulsive forces (edges absent in high-dimension, \(W_{ij} \approx 0\)).
 {{< /panel >}}
 
 {{< video "https://youtu.be/zmHRMXY0VJ0" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/unsupervised/dimensionality_reduction/tsne" >}}">Previous: t-SNE</a></span>

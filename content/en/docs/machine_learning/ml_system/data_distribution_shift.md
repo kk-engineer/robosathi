@@ -9,8 +9,6 @@ math: true
 {{< playlist " https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfu7gGVAzvIvolLZeH8Ddb1" 
 "Machine Learning System | All Videos" >}}
 
-<br>
-
 {{< panel color="blue" title="Distribution Shift or Data Drift 🦣" >}}
 ⭐️ The data a model works with changes over time ⏰, which causes this model's predictions to become 
 **less accurate** as time passes⏳.
@@ -50,8 +48,6 @@ math: true
 {{< /panel >}}
 
 {{< video "https://youtu.be/1hXmxGC2okE" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/feature_engineering/model_interpretability" >}}">Previous: Model Interpretability</a></span>

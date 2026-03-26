@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxddB_on_ZQ0pzP6C6gRHR_i" 
 "K Means Clustering | All Videos" >}}
 
-<br>
-
 {{< panel color="cyan" title="Idea 💡" >}}
 Since, we cannot enumerate all partitions (i.e, partitioning 'n' observations into ‘k' distinct, non-overlapping clusters), 
 Lloyd's algorithm provides a local search **heuristic** (**approximate** algorithm).
@@ -54,8 +52,6 @@ Iterative method for partitioning 'n' data points into ‘k' groups by repeatedl
 {{< /panel >}}
 
 {{< video "https://youtu.be/twGZVVPGA4E" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/unsupervised/k_means/k_means_clustering" >}}">Previous: K Means</a></span>

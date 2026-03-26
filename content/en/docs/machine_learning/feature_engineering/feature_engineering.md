@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcg0tJ0CAqPKjDk6Ry_atqu" 
 "Feature Engineering | All Videos" >}}
 
-<br>
-
 {{< panel color="rust" title="Feature Engineering" >}}
 Use domain knowledge 📕 to **create** new or **transform** existing features to **improve** model performance.
 {{< /panel >}}
@@ -43,8 +41,6 @@ Create polynomial features, such as, x^2, x^3, etc., to learn non-linear relatio
 {{< /panel >}}
 
 {{< video "https://youtu.be/YFbBCnFG2o0" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/feature_engineering/categorical_variables" >}}">Previous: Categorical Variables</a></span>

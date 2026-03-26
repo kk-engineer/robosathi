@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfFECdHEHPM6NjErmLmg2Ff" 
 "Support Vector Machine | All Videos" >}}
 
-<br>
-
 {{< panel color="cyan" title="Intuition 💡" >}}
 👉If our data is not linearly separable in its original space , we can map it to a higher-dimensional feature space 
 (where D>>d) using a transformation function .
@@ -93,8 +91,6 @@ The output of above quadratic kernel function is equivalent to the explicit dot 
 {{< /panel >}}
 
 {{< video "https://youtu.be/y-7uDAiEYpA" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/support_vector_machines/primal_dual_equivalence" >}}">Previous: Primal Dual Equivalence</a></span>

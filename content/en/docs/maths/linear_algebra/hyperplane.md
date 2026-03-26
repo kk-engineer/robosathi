@@ -8,8 +8,6 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" 
         "Linear Algebra for AI & ML | Full Course Videos">}}
-<br>
-
 {{< question >}}
 What is the equation of a **line** ?
 {{</ question >}}
@@ -153,7 +151,6 @@ The above concept of equation of hyperplane will be very helpful when we discuss
 {{< /panel >}}
 
 {{< video "https://www.youtube.com/watch?v=VU7hUuNydUE&t=1s" >}}
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

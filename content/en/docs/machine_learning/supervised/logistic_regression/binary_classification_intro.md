@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxdNo7m8fKMx-pseLizEoU6Z" 
 "Logistic Regression | All Videos" >}}
 
-<br>
-
 {{< panel color="grey" title="Binary Classification" >}}
 {{< imgproc "images/machine_learning/supervised/logistic_regression/binary_classification_intro/slide_02_01.tif" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
@@ -64,7 +62,6 @@ Because, we use the logistic (sigmoid) function as the ‘link function'🔗 to 
 {{< /panel >}}
 
 {{< video "https://youtu.be/sinmvk9LQFU" >}}
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxc3nlviPEjCfl5drLYy2aRF" 
 "Dimensionality Reduction Techniques | All Videos" >}}
 
-<br>
-
 {{< panel color="green" title="Use Case 🐝" >}}
 - **Data Compression**
 - **Noise Reduction**
@@ -103,8 +101,6 @@ formed by 'k' **eigenvectors** corresponding to 'k' largest **eigenvalues**.
 {{< /panel >}}
 
 {{< video "https://youtu.be/xJ2I0Rsu9i8" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/unsupervised/anomaly_detection/ransac" >}}">Previous: RANSAC</a></span>

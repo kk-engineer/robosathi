@@ -9,8 +9,6 @@ math: true
 {{< playlist " https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfu7gGVAzvIvolLZeH8Ddb1" 
 "Machine Learning System | All Videos" >}}
 
-<br>
-
 {{< panel color="blue" title="Deploy 🖥️" >}}
 ⭐️In a production ML environment, retraining is only half the battle, we must also safely deploy the new version.
 
@@ -53,8 +51,6 @@ Types of deployment (most common):
 {{< /panel >}}
 
 {{< video "https://youtu.be/3b-WkL1Zn5s" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/ml_system/retraining_strategies" >}}">Previous: Retraining Strategies</a></span>

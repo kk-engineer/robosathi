@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxddB_on_ZQ0pzP6C6gRHR_i" 
 "K Means Clustering | All Videos" >}}
 
-<br>
-
 {{< panel color="orange" title="Issues with K-Means" >}}
 - In K-Means, the centroid is the arithmetic mean of the cluster. The **mean** is very **sensitive** to **outliers**.
 - **Not interpretable**; centroid is the mean of cluster data points and may not be an actual data point, hence **not representative**.
@@ -50,8 +48,6 @@ for categorical or non-Euclidean data. <br>
 the output easier to explain to stakeholders.
 {{< /panel >}}
 {{< video "https://youtu.be/10n1TktedhA" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/unsupervised/k_means/k_means_plus_plus" >}}">Previous: K Means++</a></span>

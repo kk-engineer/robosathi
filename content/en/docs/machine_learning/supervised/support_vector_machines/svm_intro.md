@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfFECdHEHPM6NjErmLmg2Ff" 
 "Support Vector Machine | All Videos" >}}
 
-<br>
-
 {{< panel color="blue" title="Geometric Intuition💡" >}}
 ⭐️We have two classes of points (e.g. Cats 😸vs. Dogs 🐶) that can be separated by a straight line.
 
@@ -36,8 +34,6 @@ The points that lie exactly on the edges of the highway are the Support Vectors.
 {{< /panel >}}
 
 {{< video "https://youtu.be/Tg8TBImoOqU" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/catboost" >}}">Previous: CatBoost</a></span>

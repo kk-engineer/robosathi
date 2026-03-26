@@ -8,7 +8,6 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
-<br>
 Before we understand the Central Limit Theorem, let's understand a few related concepts. <br>
 
 {{< definition title="Population Mean" >}}
@@ -109,8 +108,6 @@ e.g: <br>
 {{</ answer >}}
 
 {{< video "https://youtu.be/GcHz8vOggnc?si=326B1_v-egzrLZDh" >}}
-
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

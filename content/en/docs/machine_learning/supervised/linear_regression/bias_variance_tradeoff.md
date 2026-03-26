@@ -8,8 +8,6 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxde_X17sF7iN6rnQgFlBDC-" 
 "Linear Regression | All Videos" >}}
-<br>
-
 {{< panel color="blue" title="Bias-Variance Decomposition" >}}
 Mean Squared Error (MSE) = \(\frac{1}{n} \sum_{i=1}^n (y_i - \hat{y_i})^2\)
 
@@ -84,7 +82,6 @@ A good model **‘generalizes'** well, i.e.,
 {{< /panel >}}
 
 {{< video "https://youtu.be/nZtRf_zqY1Y" >}}
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

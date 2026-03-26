@@ -1,23 +1,14 @@
 {{/* Handle optional title from named or first positional parameter */}}
 {{ $title := .Get "title" | default (.Get 0) }}
 
-<div style="
-  background-color: #eef6ff;
-  border-left: 3px solid #8bbfff;
-  padding: 10px 15px;
-  margin: 10px 0;
-  border-radius: 6px;
-  color: #1e3a5f;
-  display: block;
-  width: 100%;
-">
+<div class="rs-callout rs-callout-definition rs-callout-blue">
   {{ if $title }}
-    <div style="font-size: 1.6rem; font-weight: 400; margin-bottom: 5px; line-height: 1.2; color: #123a6b;">
+    <div class="rs-callout__title rs-callout__title--panel">
       {{ $title }}
     </div>
   {{ end }}
 
-  <div style="color: #1f2937;">
+  <div class="rs-callout__body">
     {{ .Inner | markdownify }}
   </div>
 </div>

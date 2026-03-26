@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcg0tJ0CAqPKjDk6Ry_atqu" 
 "Feature Engineering | All Videos" >}}
 
-<br>
-
 {{< panel color="blue" title="Categorical Variables" >}}
 💡 ML models operate on **numerical vectors**.
 
@@ -81,8 +79,6 @@ math: true
 {{< /panel >}}
 
 {{< video "https://youtu.be/RRgE1pLkApk" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/feature_engineering/data_pre_processing" >}}">Previous: Data Pre Processing</a></span>

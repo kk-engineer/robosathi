@@ -8,8 +8,6 @@ math: true
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos" >}}
-<br>
-
 {{< definition title="Moments" >}}
 They are statistical measures that describe the characteristics of a probability distribution, 
 such as its central tendency, spread/variability, and asymmetry. <br>
@@ -92,8 +90,6 @@ M_X(t) = E[e^{tX}] = \sum_{i=1}^{\infty} e^{tx} P(X=x)
 {{</ definition >}}
 
 {{< video "https://youtu.be/KEqqV54Raz8?si=6wjZKKChX9XWyEoY" >}}
-
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

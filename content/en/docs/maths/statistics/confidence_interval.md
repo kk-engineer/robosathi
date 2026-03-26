@@ -8,7 +8,6 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
-<br>
 {{< definition title="Confidence Interval" >}}
 It is a range of values that is likely to contain the true population mean, based on a sample. <br>
 Instead of giving a point estimate, it gives a range of values with confidence level. <br><br>
@@ -85,8 +84,6 @@ i.e [36.12, 37.94].
 {{</ answer >}}
 
 {{< video "https://www.youtube.com/watch?v=vQb9l9Zw3Hs&t=1s" >}}
-
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

@@ -8,6 +8,3 @@ weight: 2
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxdNo7m8fKMx-pseLizEoU6Z" 
 "Logistic Regression | All Videos" >}}
-
-<br><br>
-```End of Section```

@@ -8,8 +8,6 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxde_X17sF7iN6rnQgFlBDC-" 
 "Linear Regression | All Videos" >}}
-<br>
-
 {{< panel color="blue" title="Goal 🎯" >}}
 Minimize the cost 💰function.
 \[J(w)=\frac{1}{2n}(y-Xw)^{2}\]
@@ -132,7 +130,6 @@ Uses only 1 data point selected randomly from dataset to compute gradient for pa
 {{< /panel >}}
 
 {{< video "https://youtu.be/3Nt-lWj4Wvs" >}}
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

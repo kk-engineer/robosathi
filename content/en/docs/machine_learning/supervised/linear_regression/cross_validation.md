@@ -8,8 +8,6 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxde_X17sF7iN6rnQgFlBDC-" 
 "Linear Regression | All Videos" >}}
-<br>
-
 {{< panel color="blue" title="Core Idea 💡" >}}
 Do not trust one split of the data; validate across many splits, and average the result to reduce randomness and bias.
 
@@ -53,7 +51,6 @@ Computationally 💻 expensive 💰.
 {{< /panel >}}
 
 {{< video "https://youtu.be/7kQdsVtXbSI" >}}
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

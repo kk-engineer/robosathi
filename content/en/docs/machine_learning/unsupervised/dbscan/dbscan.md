@@ -6,6 +6,8 @@ weight: 331
 math: true
 ---
 
+{{< video "https://youtu.be/5ngz0Q_7fyo" >}}
+
 {{< panel color="red" title="Issues with K-Means" >}}
 - **Non-Convex Shapes**: K-Means can not find ‘crescent' or ‘ring' shape clusters.
 - **Noise**: K-Means forces every point into a cluster, even outliers.
@@ -94,7 +96,6 @@ math: true
 {{< /panel >}}
 
 {{< video "https://youtu.be/5ngz0Q_7fyo" >}}
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

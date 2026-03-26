@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" 
 "Decision Tree | All Videos" >}}
 
-<br>
-
 {{< panel color="navy" title="CatBoost (Categorical Boosting)" >}}
 ⭐️Developed by **Yandex**, this algorithm is specifically optimized for handling ‘categorical' features without requiring extensive preprocessing (such as, one-hot encoding).
 {{< /panel >}}
@@ -45,8 +43,6 @@ index (e.g 101) and **jumps directly** to that leaf 🍃 in memory 🧠.
 {{< /panel >}}
 
 {{< video "https://youtu.be/h_cyPNctDbY" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/lightgbm" >}}">Previous: LightGBM</a></span>

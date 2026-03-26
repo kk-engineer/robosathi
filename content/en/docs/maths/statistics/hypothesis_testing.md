@@ -200,8 +200,6 @@ when the alternative hypothesis (\(H_{a}\)) is true.
 
 {{< imgproc "images/maths/statistics/power_of_test.png" Resize "800x" >}}{{< /imgproc >}}
 {{< /definition >}}
-<br>
-
 {{< question >}}
 Does having a large sample size make a hypothesis test more powerful?
 {{< /question >}}

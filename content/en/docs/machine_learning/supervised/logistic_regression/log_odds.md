@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxdNo7m8fKMx-pseLizEoU6Z" 
 "Logistic Regression | All Videos" >}}
 
-<br>
-
 {{< panel color="green" title="What is the meaning of Odds ?" >}}
 Odds compare the likelihood of an event **happening** vs. **not happening**.
 
@@ -51,8 +49,6 @@ and vice versa.
 {{< /panel >}}
 
 {{< video "https://youtu.be/UDAhIFDxK1g" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/logistic_regression/logistic_regularization" >}}">Previous: Regularization</a></span>

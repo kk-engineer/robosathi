@@ -8,8 +8,6 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxde_X17sF7iN6rnQgFlBDC-" 
 "Linear Regression | All Videos" >}}
-<br>
-
 {{< panel color="rust" title="Over-Fitting">}}
 Over-Fitting happens when we have a complex model that creates highly erratic curve to fit 
 every single data point, including the random noise.
@@ -90,7 +88,6 @@ Why weights shrink exactly to 0 in L1 regularization but NOT in L2 regularizatio
 {{< /panel >}}
 
 {{< video "https://youtu.be/fTSqCkPyBmk" >}}
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

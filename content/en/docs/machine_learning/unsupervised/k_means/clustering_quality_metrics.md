@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxddB_on_ZQ0pzP6C6gRHR_i" 
 "K Means Clustering | All Videos" >}}
 
-<br>
-
 {{< panel color="orange" title="How to Evaluate Quality of Clustering?" >}}
 - 👉 **Elbow Method**: Quickest to compute; good for initial EDA (Exploratory Data Analysis).
 - 👉 **Dunn Index**: Focuses on the ‘gap' between the closest clusters.
@@ -55,8 +53,6 @@ quality of clustering improves as 'k' increases.
 {{< /panel >}}
 
 {{< video "https://youtu.be/zNBTK8iRyx0" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/unsupervised/k_means/k_medoid" >}}">Previous: K Medoid</a></span>

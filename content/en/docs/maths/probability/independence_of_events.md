@@ -8,8 +8,6 @@ math: true
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos">}}
-<br>
-
 {{< definition title="Independence of Events" >}}
 Two events are independent if the occurrence of one event does not affect the probability of the other event.<br>
 There are 3 types of independence of events: <br>
@@ -116,7 +114,6 @@ _Therefore, A & B are **conditionally independent** given C._
 {{< /panel >}}
 
 {{< video "https://youtu.be/Rhvj1e1Q84Q?si=999FWQPg6kLnP4rE&t=1" >}}
-<br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

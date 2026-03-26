@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" 
 "Decision Tree | All Videos" >}}
 
-<br>
-
 {{< panel color="green" title="Pure Leaf 🍃 Node ?" >}}
 Decision trees recursively partition the data based on feature values.
 {{< imgproc "images/machine_learning/supervised/decision_trees/purity_metrics/slide_02_01.tif" Resize "1400x" >}}{{< /imgproc >}}
@@ -73,8 +71,6 @@ Measure ⏱ of uncertainty, randomness, or impurity in a data.
 {{< /panel >}}
 
 {{< video "https://youtu.be/psxiSAsfFX8" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/decision_trees_introduction" >}}">Previous: Decision Trees Introduction</a></span>

@@ -70,8 +70,6 @@ Let's solve an email classification problem, below we have list of emails (token
 {{< /panel >}}
 
 {{< video "https://youtu.be/ft8eH_laPd4" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/naive_bayes/naive_bayes_issues" >}}">Previous: Naive Bayes Issues</a></span>

@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxc3nlviPEjCfl5drLYy2aRF" 
 "Dimensionality Reduction Techniques | All Videos" >}}
 
-<br>
-
 {{< panel color="green" title="Use Case 🐝" >}}
 ⭐️ Visualizing complex datasets, such as MNIST handwritten digits, text embeddings, or biological data, 
 where clusters are expected to form naturally.
@@ -126,8 +124,6 @@ pushing \(y_i\) and \(y_j\) apart.
 {{< /panel >}}
 
 {{< video "https://youtu.be/kVdMM51bfRM" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/unsupervised/dimensionality_reduction/pca" >}}">Previous: PCA</a></span>

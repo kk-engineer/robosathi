@@ -92,7 +92,6 @@ For \(k\) categories, the test statistic is: <br>
 
 Note: For very large 'n', the Pearson's chi-square (\(\chi^2\)) test statistic follows a chi-square (\(\chi^2\)) distribution. <br>
 {{</ definition >}}
-<br>
 {{< video "https://www.youtube.com/watch?v=ZvESq3cXTKo&t=1s" >}}
 
 {{< panel color="cyan" title="Name of Test">}}
@@ -239,8 +238,6 @@ Therefore, the gender and beverage preference are dependent.
 {{</ answer >}}
 
 {{< video "https://youtu.be/yiymXqaA608" >}}
-
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

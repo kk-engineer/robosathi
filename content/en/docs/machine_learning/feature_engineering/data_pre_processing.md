@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcg0tJ0CAqPKjDk6Ry_atqu" 
 "Feature Engineering | All Videos" >}}
 
-<br>
-
 {{< panel color="cyan" title="Real World 🌎 Data" >}}
 **Messy and Incomplete.** <br>
 We need to pre-process the data to make it:
@@ -77,8 +75,6 @@ We need to pre-process the data to make it:
 {{< /panel >}}
 
 {{< video "https://youtu.be/1uc1S4iRCoE" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/unsupervised/dimensionality_reduction/umap" >}}">Previous: UMAP</a></span>

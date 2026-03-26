@@ -8,8 +8,6 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
-<br>
-
 {{< definition title="Measures of Central Tendency" >}}
 A single number that describes the central, typical, or representative value of a dataset, e.g, mean, median, and mode. <br>
 The mean is the average, the median is the middle value in a sorted list, and the mode is the most frequently occurring value. <br>
@@ -316,7 +314,7 @@ yet have very different distributions and appear very different when plotted.
 
 {{< panel color="grey" title="Figure: Anscombe's Quartet">}}{{< /panel >}}
 
-<br><br>
+{{< video "https://youtu.be/vjRuMR4Fx74?si=0CQ5-dKZ13o6-uyd" >}}
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

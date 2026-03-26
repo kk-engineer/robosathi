@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" 
 "Decision Tree | All Videos" >}}
 
-<br>
-
 {{< panel color="blue" title="Adaptive Boosting (AdaBoost)" >}}
 💡Works by increasing 📈 the weight 🏋️‍♀️ of misclassified data points after each iteration, forcing the next weak learner to
 ‘pay more attention'🚨 to the difficult cases.
@@ -50,8 +48,6 @@ These are multiplied by their respective ‘**amount of say**' \(\alpha_m\) and 
 {{< /panel >}}
 
 {{< video "https://youtu.be/KPcBlWoOOZo" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/boosting" >}}">Previous: Boosting</a></span>

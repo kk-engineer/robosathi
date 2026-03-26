@@ -8,7 +8,6 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfzDh2D3OqVo-piGAZQPWDj" 
         "Calculus for AI & ML | Full Course Videos">}}
-<br>
 {{< question >}}
 Whenever we build a Machine Learning model, we try to make sure that the model makes least mistakes in its predictions.<br>
 How do we measure and minimize these mistakes in predictions made by the model? <br>
@@ -270,8 +269,6 @@ w^* = (X^TX)^{-1}X^Ty
 {{< /panel >}}
 
 {{< video "https://www.youtube.com/watch?v=OdYNB1KRwKo&t=1s" >}}
-
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

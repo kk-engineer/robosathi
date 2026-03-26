@@ -8,8 +8,6 @@ math: true
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos" >}}
-<br>
-
 {{< definition title="Probability Density Function(PDF)" >}}
 This is a function used for continuous random variables to describe the likelihood of the variable taking on a value
 within a specific range or interval. <br>
@@ -354,8 +352,6 @@ P(T>10) = e^{-(1/20) * 10} \\
 {{</ answer >}}
 
 {{< video "https://youtu.be/6TTJXMEZAKo?si=sll0sJfy1aRep3c_"  >}}
-
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

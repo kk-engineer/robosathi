@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" 
 "Decision Tree | All Videos" >}}
 
-<br>
-
 {{< panel color="green" title="Gradient Boosted Decision Tree (GBDT)" >}}
 Gradient Boosted Decision Tree (GBDT) is a decision tree based implementation of Gradient Boosting Machine (GBM).
 
@@ -105,8 +103,6 @@ In just 2 iterations, although with higher learning rate (\(\nu=0.5\)), we were 
 {{< /panel >}}
 
 {{< video "https://youtu.be/MHbyKuFfJvw" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/gbdt_algorithm" >}}">Previous: GBDT Algorithm</a></span>

@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxf8kijzBo00irrF7JhvNwhZ" 
 "K Nearest Neighbors (KNN) | All Videos" >}}
 
-<br>
-
 {{< panel color="red" title="Issues with Linear/Logistic Regression" >}}
 - **Parametric models**:
   - Rely on assumption that relationships between data points are linear.
@@ -55,8 +53,6 @@ Explanation:
 {{< /panel >}}
 
 {{< video "https://youtu.be/Ar53hEidonc" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/logistic_regression/logistic_probabilistic_interpretation" >}}">Previous: Probabilistic Interpretation</a></span>

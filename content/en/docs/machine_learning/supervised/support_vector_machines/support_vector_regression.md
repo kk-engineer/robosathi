@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfFECdHEHPM6NjErmLmg2Ff" 
 "Support Vector Machine | All Videos" >}}
 
-<br>
-
 {{< panel color="cyan" title="Intuition 💡" >}}
 👉Imagine a ‘**tube**' of radius \(\epsilon\) **surrounding** the **regression line**.
 - Points inside the tube are considered ‘**correct**' and incur zero penalty.
@@ -74,8 +72,6 @@ Subject to:
 {{< /panel >}}
 
 {{< video "https://youtu.be/hAUFhP6N0u8" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/support_vector_machines/rbf_kernel" >}}">Previous: RBF Kernel</a></span>

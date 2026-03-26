@@ -8,7 +8,6 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
-<br>
 {{< definition title="Z-Test" >}}
 It is a statistical test used to determine whether there is a significant difference between mean of 2 groups or sample and population mean. <br>
 - It is a parametric test, since it assumes data to be normally distributed.
@@ -247,8 +246,6 @@ Therefore, the observed conversion rate of design B is due to random chance; thu
 {{</ answer >}}
 
 {{< video "https://www.youtube.com/watch?v=ukdF4Zx7pSU" >}}
-
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

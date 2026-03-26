@@ -8,6 +8,3 @@ weight: 3
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcYpECFiKCRNB_ZIIFtl4E5" 
 "Unsupervised Machine Learning | All Videos" >}}
-
-<br><br>
-```End of Section```

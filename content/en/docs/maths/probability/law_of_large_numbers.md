@@ -8,8 +8,6 @@ math: true
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos">}}
-<br>
-
 {{< definition title="Weak Law of Large Numbers (WLLN)" >}}
 This law states that given a sequence of independent and identically distributed (IID) samples \(X_1, X_1, \dots, X_n\)
 from a random variable with finite mean, the sample mean (\(\bar{X_n}\)) **converges in probability** to 
@@ -67,8 +65,6 @@ Thus, providing confidence that model will perform consistently and accurately o
 {{< /panel >}}
 
 {{< video "https://www.youtube.com/watch?v=ZIXMVF6t834&t=1s" >}}
-
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

@@ -8,8 +8,6 @@ math: true
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos">}}
-<br>
-
 {{< definition title="Expectation" >}}
 
  
@@ -194,8 +192,6 @@ Cov(X,X) &= E[X^2] - E[X]^2 = Var[X] \\
 {{</ definition >}}
 
 {{< video "https://youtu.be/F83gibIzCho?si=PKKtqYJK5Qp69vPY&t=1" >}}
-
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

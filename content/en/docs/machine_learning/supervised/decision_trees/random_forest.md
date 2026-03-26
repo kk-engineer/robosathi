@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" 
 "Decision Tree | All Videos" >}}
 
-<br>
-
 {{< panel color="red" title="Problem with Bagging" >}}
 💡If one feature is extremely predictive (e.g., ‘Area' for house prices), almost every bootstrap tree will split on that feature at the root.
 
@@ -53,8 +51,6 @@ Overfitting is controlled by:
 {{< /panel >}}
 
 {{< video "https://youtu.be/Yodq6S8PtZQ" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/bagging" >}}">Previous: Bagging</a></span>

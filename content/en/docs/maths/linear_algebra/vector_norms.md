@@ -8,7 +8,6 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" 
         "Linear Algebra for AI & ML | Full Course Videos">}}
-<br>
 {{< definition title="Vector Norm">}}
 It is a measure of the size of a vector or distance from the origin. <br>
 Vector norm is a function that maps a vector to a real number, i.e, \({\| \cdot \|} : \mathbb{R}^n \rightarrow \mathbb{R}\).
@@ -163,7 +162,6 @@ Therefore, \({\| A \|_2} = \sigma_{max}(A) = 3\)
 <br><br>
 {{< /panel >}}
 {{< video "https://www.youtube.com/watch?v=8j4GOTM5-uY&t=1s" >}}
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

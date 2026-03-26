@@ -8,8 +8,6 @@ math: true
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos" >}}
-<br>
-
 {{< definition title="Markov's Inequality" >}}
 It gives an upper bound for the probability that a non-negative random variable will NOT exceed, based on its expected value. <br>
 
@@ -114,8 +112,6 @@ P(S_n \ge c) \le e^{-tc}(M_x(t))^n \\[10pt]
 {{</ definition >}}
 
 {{< video "https://youtu.be/m9Aqmnt89Tg?si=jYJREpH4arHA_m2h&t=1" >}}
-
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

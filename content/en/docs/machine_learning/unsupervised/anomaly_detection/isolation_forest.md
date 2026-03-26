@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcQTrzlCVhQOtpvVbWsft3a" 
 "Anomaly Detection | All Videos" >}}
 
-<br>
-
 {{< panel color="green" title="Use Case 🐝" >}}
 _'Large scale tabular data.'_
 
@@ -97,8 +95,6 @@ To normalize the score between 0 and 1, we define it as:
 {{< /panel >}}
 
 {{< video "https://youtu.be/HWCGTUlNgzI" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/unsupervised/anomaly_detection/local_outlier_factor" >}}">Previous: Local Outlier Factor</a></span>

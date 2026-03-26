@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcF-fY0gn6FSxSgKT84rvpV" 
 "Gaussian Mixture Model (GMM) | All Videos" >}}
 
-<br>
-
 {{< panel color="orange" title="Gaussian Mixture Model (GMM)" >}}
 ⭐️Probabilistic model that assumes data is generated from a mixture of several Gaussian (normal) distributions with unknown parameters.
 
@@ -107,8 +105,6 @@ of the **latent variables** simultaneously.
 {{< /panel >}}
 
 {{< video "https://youtu.be/PPeLhm38Bw8" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/unsupervised/gaussian_mixture_model/introduction_gaussian_mixture_models" >}}">Previous: Gaussian Mixture Models</a></span>

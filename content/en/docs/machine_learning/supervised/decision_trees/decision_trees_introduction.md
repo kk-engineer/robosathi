@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" 
 "Decision Tree | All Videos" >}}
 
-<br>
-
 {{< panel color="grey" title="How do we classify the below dataset ?" >}}
 {{< imgproc "images/machine_learning/supervised/decision_trees/decision_trees_introduction/slide_01_01.tif" Resize "1400x" >}}{{< /imgproc >}}
 
@@ -60,8 +58,6 @@ e.g: To classify the left bottom corner red points we can write: <br>
 {{< /panel >}}
 
 {{< video "https://youtu.be/yBNQERShy-A" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/k_nearest_neighbors/bias_variance_tradeoff" >}}">Previous: Bias Variance Tradeoff</a></span>

@@ -8,6 +8,3 @@ weight: 5
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcQTrzlCVhQOtpvVbWsft3a" 
 "Anomaly Detection | All Videos" >}}
-
-<br><br>
-```End of Section```

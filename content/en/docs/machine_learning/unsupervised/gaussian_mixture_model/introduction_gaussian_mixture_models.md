@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcF-fY0gn6FSxSgKT84rvpV" 
 "Gaussian Mixture Model (GMM) | All Videos" >}}
 
-<br>
-
 {{< panel color="red" title="Issue with K-Means" >}}
 - K-means uses Euclidean distance and assumes that clusters are spherical (isotropic) and have the same variance across all dimensions.
 - Places a circle or sphere around each centroid.
@@ -71,8 +69,6 @@ Whenever we have multivariate Gaussian, then the variables may be independent or
 {{< /panel >}}
 
 {{< video "https://youtu.be/-R3-LNuF_NE" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/unsupervised/dbscan/dbscan" >}}">Previous: DBSCAN</a></span>

@@ -8,7 +8,6 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
-<br>
 {{< definition title="T-Test" >}}
 It is a statistical test that is used to determine whether the sample mean is equal to a hypothesized value or <br> 
 is there a significant difference between the sample means of 2 groups. <br>
@@ -165,8 +164,6 @@ And, accept the alternative hypothesis that the new model has better accuracy th
 {{</ answer >}}
 
 {{< video "https://www.youtube.com/watch?v=MnJfCKaCYSU&t=1s" >}}
-
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

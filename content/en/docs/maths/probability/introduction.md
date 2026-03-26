@@ -7,8 +7,6 @@ math: true
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos">}}
-<br>
-
 {{< question >}}
 Why do we need to understand what is **Probability**?
 {{</question >}}
@@ -170,9 +168,6 @@ Similarly, we can say that \(P(get ~any ~number ~between ~1 ~and ~6)=1\) and \(P
 {{< /answer >}}
 
 {{< video "https://youtu.be/MEgtD7x-RyY?si=Z3QbdJiOhMCVrKU_" >}}
-<br>
-
-```End of Introduction```
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
@@ -180,3 +175,5 @@ Similarly, we can say that \(P(get ~any ~number ~between ~1 ~and ~6)=1\) and \(P
 <span style="margin-left:auto;"><a href="{{< ref "/docs/maths/probability/conditional_probability" >}}">Next: Conditional Probability</a></span>
 </div>
 <!-- nav-panel:end -->
+
+```End of Section```

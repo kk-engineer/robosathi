@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxdNo7m8fKMx-pseLizEoU6Z" 
 "Logistic Regression | All Videos" >}}
 
-<br>
-
 {{< panel color="red" title="Log Loss" >}}
 **Log Loss** = \(\begin{cases}
     -log(\hat{y_i}) & \text{if } y_i = 1 \\
@@ -136,7 +134,6 @@ Mean Squared Error (MSE) can not be used to quantify error/loss in binary classi
 {{< /panel >}}
 
 {{< video "https://youtu.be/zCBnS3XT61Y" >}}
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

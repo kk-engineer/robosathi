@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" 
 "Decision Tree | All Videos" >}}
 
-<br>
-
 {{< panel color="red" title="Issue with Decision Trees/Random Forest" >}}
 💡In a standard Decision Tree or Random Forest, the algorithm searches for the optimal split point (the threshold 's') 
 that maximizes Information Gain or minimizes MSE.
@@ -55,8 +53,6 @@ smoother and more robust to noise than a standard Random Forest.
 {{< /panel >}}
 
 {{< video "https://youtu.be/0nryszSur1A" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/random_forest" >}}">Previous: Random Forest</a></span>

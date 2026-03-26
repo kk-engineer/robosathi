@@ -61,8 +61,6 @@ e.g: Predicting the price 💰 of a house 🏡 in 2026 based on data from 2010 t
 {{< /panel >}}
 
 {{< video "https://youtu.be/HPaxpAJfyGk" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/decision_trees/purity_metrics" >}}">Previous: Purity Metrics</a></span>

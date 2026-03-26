@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcQTrzlCVhQOtpvVbWsft3a" 
 "Anomaly Detection | All Videos" >}}
 
-<br>
-
 {{< panel color="green" title="Use Case 🐝" >}}
 ⭐️Geographic fraud detection: <br>
 A $100 transaction might be '**normal**' in New York but an '**outlier**' in a small rural village.
@@ -76,8 +74,6 @@ Local Outlier Factor (LOF) is a **density-based** algorithm designed to detect a
 {{< /panel >}}
 
 {{< video "https://youtu.be/8W3mTEKTORg" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/unsupervised/anomaly_detection/one_class_svm" >}}">Previous: One Class SVM</a></span>

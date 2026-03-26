@@ -8,7 +8,6 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" 
         "Linear Algebra for AI & ML | Full Course Videos">}}
-<br>
 {{< question >}}
 In the diagram below, if we need to reduce the dimensionality of the data to 1, which feature should be dropped?
 {{< imgproc "images/maths/linear_algebra/pca_example_1.png" Resize "800x" >}}{{< /imgproc >}}
@@ -107,7 +106,6 @@ Therefore, the diagonal matrix \( \Lambda \) captures the variance along every p
 {{</ answer >}}
 
 {{< video "https://www.youtube.com/watch?v=KvSeAzyoeCQ&t=1s" >}}
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

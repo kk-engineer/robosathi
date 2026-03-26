@@ -7,6 +7,3 @@ weight: 3
 ---
 
 {{< video "https://youtu.be/5ngz0Q_7fyo" >}}
-
-<br><br>
-```End of Section```

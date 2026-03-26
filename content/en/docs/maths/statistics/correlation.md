@@ -8,7 +8,6 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 
         "Statistics for AI & ML | Full Course Videos">}}
-<br>
 {{< definition title="Covariance" >}}
 It measures the direction of linear relationship between two variables \(X\) and \(Y\). <br>
 
@@ -167,8 +166,6 @@ but establishing clear causal links is difficult.
 {{< /panel >}}
 
 {{< video "https://youtu.be/FH8jnYEGDzE?si=HhWImSk2PfGL_kv-" >}}
-
-<br><br>
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

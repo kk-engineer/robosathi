@@ -9,7 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxdNo7m8fKMx-pseLizEoU6Z" 
 "Logistic Regression | All Videos" >}}
 
-<br>
 
 {{< question >}}
 What happens to the weights of Logistic Regression if the data is perfectly linearly separable?
@@ -61,8 +60,6 @@ Adds a penalty term to the loss function, **discouraging** weights 🏋️‍♀
 {{< /panel >}}
 
 {{< video "https://youtu.be/Pmq6AH-MrSg" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/logistic_regression/log_loss" >}}">Previous: Log Loss</a></span>

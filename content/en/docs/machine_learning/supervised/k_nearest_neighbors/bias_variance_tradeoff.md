@@ -9,8 +9,6 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxf8kijzBo00irrF7JhvNwhZ" 
 "K Nearest Neighbors (KNN) | All Videos" >}}
 
-<br>
-
 {{< panel color="grey" title="KNN Dataset" >}}
 Let's use this dataset to understand the impact of number of neighbours 'k'.
 {{< imgproc "images/machine_learning/supervised/k_nearest_neighbors/bias_variance_tradeoff/slide_01_01.tif" Resize "1400x" >}}{{< /imgproc >}}
@@ -39,8 +37,6 @@ Let's plot Error vs 'K' neighbors:
 {{< /panel >}}
 
 {{< video "https://youtu.be/mti3MVcgUwA" >}}
-<br><br>
-
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/supervised/k_nearest_neighbors/curse_of_dimensionality" >}}">Previous: Curse Of Dimensionality</a></span>

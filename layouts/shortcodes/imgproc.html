@@ -25,17 +25,17 @@
     {{ $processed = $img.Resize $options }}
   {{ end }}
 
-  <figure style="margin: 1.5rem 0; text-align: center;">
+  <figure class="rs-figure">
     <img src="{{ $processed.RelPermalink }}"
          width="{{ $processed.Width }}"
          height="{{ $processed.Height }}"
          loading="{{ $loading }}"
          fetchpriority="{{ $fetchpriority }}"
          decoding="async"
-         style="max-width: 100%; height: auto; border-radius: 4px;"
+         class="rs-figure__image"
          alt="{{ $imgName }}">
     {{ if .Inner }}
-      <figcaption style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
+      <figcaption class="rs-figure__caption">
         {{ .Inner | markdownify }}
       </figcaption>
     {{ end }}
@@ -43,7 +43,7 @@
 
 {{ else }}
   {{/* 5. Error message that DOES NOT break the build */}}
-  <div style="color: red; border: 1px dashed red; padding: 10px;">
+  <div class="rs-figure__error">
     <strong>Imgproc Error:</strong> Could not find <code>{{ $imgName }}</code> in <code>assets/</code> or Page Bundle.
   </div>
 {{ end }}
