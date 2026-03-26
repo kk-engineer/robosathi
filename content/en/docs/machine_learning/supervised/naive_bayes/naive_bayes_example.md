@@ -9,10 +9,8 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxftG4rRbOU9q6nFrt-Taqi7" 
 "Naive Bayes' | All Videos" >}}
 
-<br>
-
 {{< panel color="cyan" title="Naive Bayes" >}}
-⭐️Simple, fast, and highly effective probabilistic machine learning classifier based on Bayes' theorem.
+⭐️ Simple, fast, and highly effective probabilistic machine learning classifier based on Bayes' theorem.
 \[\log(P(y| W)) \propto \sum_{i=1}^d \log(P(w_i|y)) + \log(P(y))\]
 \[P(w_{i}|y)=\frac{count(w_{i},y)+\alpha }{count(y)+\alpha \cdot |V|}\]
 {{< /panel >}}
@@ -23,7 +21,7 @@ Let's solve an email classification problem, below we have list of emails (token
 {{< /panel >}}
 
 {{< panel color="green" title="Training Phase" >}}
-🏛️**Class Priors**:
+🏛️ **Class Priors**:
 - P(Spam) = 2/4 =0.5
 - P(Not Spam) = 2/4 = 0.5
 
@@ -45,7 +43,7 @@ Let's solve an email classification problem, below we have list of emails (token
 {{< /panel >}}
 
 {{< panel color="green" title="Inference Time" >}}
-👉Say a new email 📧 arrives - "**Free money today**"; lets classify it as Spam/Not Spam.
+👉 Say a new email 📧 arrives - "**Free money today**"; lets classify it as Spam/Not Spam.
 
 **Spam**: 
 - P(‘free'| Spam) = \(\frac{2+1}{9+14} = \frac{3}{23} = 0.13\)
@@ -65,7 +63,7 @@ Let's solve an email classification problem, below we have list of emails (token
 - **Score(Not Spam)** = log(P(Not Spam)) + log(P(‘free'|NS)) + log(P(‘money'|NS)) + log(P(‘today'|NS)) 
 <br> = log(0.5) + log(0.047) + log(0.047) + log(0.095) = -0.301 -1.328 -1.328 -1.022 = **-3.979**
 
-👉Since, Score(Spam) (-3.614 )> Score(Not Spam) (-3.979) , the model chooses '**Spam**' as the label for the email.
+👉 Since, Score(Spam) (-3.614 )> Score(Not Spam) (-3.979) , the model chooses '**Spam**' as the label for the email.
 
 {{< /panel >}}
 

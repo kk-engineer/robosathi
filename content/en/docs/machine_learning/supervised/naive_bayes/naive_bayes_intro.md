@@ -9,14 +9,12 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxftG4rRbOU9q6nFrt-Taqi7" 
 "Naive Bayes' | All Videos" >}}
 
-<br>
-
 {{< panel color="orange" title="Naive Bayes" >}}
-📘Simple, fast, and highly effective probabilistic machine learning classifier based on Bayes' theorem.
+⭐️ Simple, fast, and highly effective probabilistic machine learning classifier based on Bayes' theorem.
 {{< /panel >}}
 
 {{< panel color="cyan" title="Use Case" >}}
-📌Let's understand Naive Bayes through an **Email/Text classification** example.
+📌 Let's understand Naive Bayes through an **Email/Text classification** example.
 - Number of words in an email is not fixed.
 - Remove all stop words, such as, the, is , are, if, etc.
 - Keep only relevant words, i.e, \(w_1, w_2, \dots , w_d\) words.
@@ -37,18 +35,18 @@ Let's revise Bayes' theorem first: <br>
 {{< /panel >}}
 
 {{< panel color="red" title="Challenge 🤺" >}}
-👉Likelihood = \(P(W|S)\) = \(P(w_1, w_2, \dots w_d | S)\)
+👉 Likelihood = \(P(W|S)\) = \(P(w_1, w_2, \dots w_d | S)\)
 
 ➡️ For computing the joint distribution of say d=1000 words, we need to learn from possible \(2^{1000}\) combinations.
 - \(2^{1000}\) > the atoms in the observable 🔭 universe 🌌.
 - We will never have enough training data to see every possible combination of words even once. 
   - Most combinations would have a count of zero.
 
-🦉So, how do we solve this ?
+🦉 So, how do we solve this ?
 {{< /panel >}}
 
 {{< panel color="blue" title="Naive Assumption" >}}
-💡The ‘Naive' assumption is a '**Conditional Independence**' assumption, i.e, we assume each word appears **independently** of the others, **given the class** Spam/Not Spam.
+💡 The ‘Naive' assumption is a '**Conditional Independence**' assumption, i.e, we assume each word appears **independently** of the others, **given the class** Spam/Not Spam.
 - e.g. In a spam email, the likelihood of ‘Free' and ‘Money' 💵 appearing are treated as independent events, even though they usually appear together.
 
 **Note**: The conditional independence assumption makes the probability calculations easier, i.e, the joint probability
@@ -68,9 +66,9 @@ We can generalize it for any number of class labels 'y': <br>
 {{< /panel >}}
 
 {{< panel color="green" title="Performance 🏇" >}}
-👉Space Complexity: O(d*c)
+👉 Space Complexity: O(d*c)
 
-👉Time Complexity: 
+👉 Time Complexity: 
 - Training: O(n\*d*c)
 - Inference: O(d*c)
 
