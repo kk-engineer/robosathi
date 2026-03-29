@@ -28,6 +28,14 @@ title: RoboSathi
 <br><br>
 This section commented End !-->
 
+<h2 class="text-center mb-4"><strong>Deep Learning Courses</strong></h2>
+<div class="row">
+  <div class="col-md-3 mb-4">
+    {{< youtube_playlist id="PLnpa6KP2ZQxe749nPGDV2cd6SR6zIZIJl" title="Deep Learning Full Course" 
+        thumbnail="/images/thumbnails/deep_learning/deep_learning_course.png">}}
+  </div>
+</div>
+
 <h2 class="text-center mb-4"><strong>Classical Machine Learning Courses</strong></h2>
 <div class="row">
   <div class="col-md-3 mb-4">
@@ -42,66 +50,6 @@ This section commented End !-->
   <div class="col-md-3 mb-4">
     {{< youtube_playlist id="PLnpa6KP2ZQxcYpECFiKCRNB_ZIIFtl4E5" title="Unsupervised Learning" 
         thumbnail="/images/thumbnails/machine_learning/unsupervised_learning.png">}}
-  </div>
-
-  <div class="col-md-3 mb-4">
-    {{< youtube_playlist id="PLnpa6KP2ZQxde_X17sF7iN6rnQgFlBDC-" title="Linear Regression" 
-        thumbnail="/images/thumbnails/machine_learning/linear_regression.png">}}
-  </div>
-
-  <div class="col-md-3 mb-4">
-    {{< youtube_playlist id="PLnpa6KP2ZQxcg0tJ0CAqPKjDk6Ry_atqu" title="Feature Engineering" 
-        thumbnail="/images/thumbnails/machine_learning/feature_engineering.png">}}
-  </div>
-
-  <div class="col-md-3 mb-4">
-    {{< youtube_playlist id="PLnpa6KP2ZQxdNo7m8fKMx-pseLizEoU6Z" title="Logistic Regression" 
-        thumbnail="/images/thumbnails/machine_learning/logistic_regression.png">}}
-  </div>
-
-  <div class="col-md-3 mb-4">
-    {{< youtube_playlist id="PLnpa6KP2ZQxf8kijzBo00irrF7JhvNwhZ" title="K Nearest Neighbors" 
-        thumbnail="/images/thumbnails/machine_learning/k_nearest_neighbors.png">}}
-  </div>
-
-  <div class="col-md-3 mb-4">
-    {{< youtube_playlist id="PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" title="Decision Trees" 
-        thumbnail="/images/thumbnails/machine_learning/decision_tree.png">}}
-  </div>
-
-  <div class="col-md-3 mb-4">
-    {{< youtube_playlist id="PLnpa6KP2ZQxfFECdHEHPM6NjErmLmg2Ff" title="Support Vector Machines" 
-        thumbnail="/images/thumbnails/machine_learning/support_vector_machine.png">}}
-  </div>
-
-  <div class="col-md-3 mb-4">
-    {{< youtube_playlist id="PLnpa6KP2ZQxftG4rRbOU9q6nFrt-Taqi7" title="Naive Bayes'" 
-        thumbnail="/images/thumbnails/machine_learning/naive_bayes.png">}}
-  </div>
-
-  <div class="col-md-3 mb-4">
-    {{< youtube_playlist id="PLnpa6KP2ZQxddB_on_ZQ0pzP6C6gRHR_i" title="K Means Clustering" 
-        thumbnail="/images/thumbnails/machine_learning/k_means_clustering.png">}}
-  </div>
-
-  <div class="col-md-3 mb-4">
-    {{< youtube_playlist id="PLnpa6KP2ZQxcF-fY0gn6FSxSgKT84rvpV" title="Gaussian Mixture Model" 
-        thumbnail="/images/thumbnails/machine_learning/gaussian_mixture_model.png">}}
-  </div>
-
-  <div class="col-md-3 mb-4">
-    {{< youtube_playlist id="PLnpa6KP2ZQxcQTrzlCVhQOtpvVbWsft3a" title="Anomaly_Detection" 
-        thumbnail="/images/thumbnails/machine_learning/anomaly_detection.png">}}
-  </div>
-
-  <div class="col-md-3 mb-4">
-    {{< youtube_playlist id="PLnpa6KP2ZQxc3nlviPEjCfl5drLYy2aRF" title="Dimensionality Reduction" 
-        thumbnail="/images/thumbnails/machine_learning/dimensionality_reduction_techniques.png">}}
-  </div>
-
-  <div class="col-md-3 mb-4">
-    {{< youtube_playlist id="PLnpa6KP2ZQxfu7gGVAzvIvolLZeH8Ddb1" title="ML Systems" 
-        thumbnail="/images/thumbnails/machine_learning/machine_learning_system.png">}}
   </div>
 </div>
 
