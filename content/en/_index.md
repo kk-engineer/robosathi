@@ -31,7 +31,7 @@ This section commented End !-->
 <h2 class="text-center mb-4"><strong>Deep Learning Courses</strong></h2>
 <div class="row">
   <div class="col-md-3 mb-4">
-    {{< youtube_playlist id="PLnpa6KP2ZQxe749nPGDV2cd6SR6zIZIJl" title="Deep Learning Full Course" 
+    {{< youtube_playlist id="PLnpa6KP2ZQxe749nPGDV2cd6SR6zIZIJl" title="Deep Learning Fundamentals Course" 
         thumbnail="/images/thumbnails/deep_learning/deep_learning_course.png">}}
   </div>
 </div>
@@ -43,12 +43,12 @@ This section commented End !-->
         thumbnail="/images/thumbnails/machine_learning/machine_learning.png">}}
   </div>
   <div class="col-md-3 mb-4">
-    {{< youtube_playlist id="PLnpa6KP2ZQxcJj4WZe0yuxxMr_Dm2PgHH" title="Supervised Learning" 
+    {{< youtube_playlist id="PLnpa6KP2ZQxcJj4WZe0yuxxMr_Dm2PgHH" title="Supervised Learning Course" 
         thumbnail="/images/thumbnails/machine_learning/supervised_learning.png">}}
   </div>
 
   <div class="col-md-3 mb-4">
-    {{< youtube_playlist id="PLnpa6KP2ZQxcYpECFiKCRNB_ZIIFtl4E5" title="Unsupervised Learning" 
+    {{< youtube_playlist id="PLnpa6KP2ZQxcYpECFiKCRNB_ZIIFtl4E5" title="Unsupervised Learning Course" 
         thumbnail="/images/thumbnails/machine_learning/unsupervised_learning.png">}}
   </div>
 </div>
