@@ -53,7 +53,6 @@ This section commented End !-->
   </div>
 </div>
 
-<br>
 
 <h2 class="text-center mb-4"><strong>Maths for AI & ML Courses</strong></h2>
 <div class="row">
