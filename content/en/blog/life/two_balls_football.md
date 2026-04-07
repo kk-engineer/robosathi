@@ -4,6 +4,8 @@ date: 2026-04-07T10:18:00+05:30
 ---
 
 {{< panel color="cyan" title="2 Balls - Football !" >}}
+{{< imgproc "images/blog/life/two_balls_football.png" Resize "800x" >}}{{< /imgproc >}}
+
 Imagine, how will the game of football change if we use 2 balls to play the game instead of one. <br>
 Now both the teams have 2 footballs to hit a goal. Each team can attack from both the wings(left and right) simultaneously. <br>
 Or, may be both the teams can be attacking each others goal post at the same time. <br>
@@ -40,5 +42,5 @@ Hypothetically, if ever this “2 ball—football” comes to life, then another
 with what kind of skills, will become the “stars” of the game. <br>
 And, if we speculate that even in the past football was played with 2 footballs, then will the same people be the, stars, 
 greatest of all times, or would the history be written by different people(the stars) for different people (the fans).
-
+<br>
 {{</ panel >}}
