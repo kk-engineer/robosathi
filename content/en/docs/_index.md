@@ -2,7 +2,7 @@
 title: Notes
 description: AI & ML Course Overview
 weight: 1
-menu: {main: {weight: 20}}
+menu: {main: {weight: 10}}
 ---
 
 
@@ -10,4 +10,3 @@ menu: {main: {weight: 20}}
 "Classical Machine Learning | Full Course Videos" >}}
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxen-R6NytSMigAri7piPhFp&si=JUBpWmnh7DBjhBCq" 
 "Maths for AI & ML | Full Course Videos" >}}
-

@@ -1,7 +1,7 @@
 ---
 title: About
 linkTitle: About
-menu: {main: {weight: 10}}
+menu: {main: {weight: 20}}
 ---
 
 {{% blocks/cover title="About RoboSathi" image_anchor="bottom" height="auto" %}}
