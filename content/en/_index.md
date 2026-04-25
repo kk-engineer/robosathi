@@ -34,6 +34,10 @@ This section commented End !-->
     {{< youtube_playlist id="PLnpa6KP2ZQxe749nPGDV2cd6SR6zIZIJl" title="Deep Learning Fundamentals Course" 
         thumbnail="/images/thumbnails/deep_learning/dl_course.png">}}
   </div>
+  <div class="col-md-3 mb-4">
+    {{< youtube_playlist id="PLnpa6KP2ZQxcDlHCeNiKbRhLWKVunQaxn" title="Natural Language Processing Course" 
+        thumbnail="/images/thumbnails/deep_learning/nlp_course.png">}}
+  </div>
 </div>
 
 <h2 class="text-center mb-4"><strong>Classical Machine Learning Courses</strong></h2>
