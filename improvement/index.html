@@ -1,0 +1,63 @@
+{{ define "main" -}}
+{{- $docsPage := site.GetPage "/docs" -}}
+{{- $mlPage := site.GetPage "/docs/machine_learning" -}}
+{{- $mathPage := site.GetPage "/docs/maths" -}}
+{{- $topics := slice
+  (dict
+    "step" "01"
+    "title" "Maths Foundations"
+    "description" "Build the fundamentals first with linear algebra, probability, statistics, and calculus."
+    "href" (cond $mathPage $mathPage.RelPermalink (relURL "/docs/"))
+  )
+  (dict
+    "step" "02"
+    "title" "Machine Learning"
+    "description" "Move into supervised, unsupervised, and practical machine learning concepts."
+    "href" (cond $mlPage $mlPage.RelPermalink (relURL "/docs/"))
+  )
+  (dict
+    "step" "03"
+    "title" "Deep Learning"
+    "description" "Learn neural networks and deeper model intuition through curated lessons and playlists."
+    "href" "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxe749nPGDV2cd6SR6zIZIJl"
+  )
+  (dict
+    "step" "04"
+    "title" "NLP"
+    "description" "Explore language-focused learning after the core ML and DL foundations are in place."
+    "href" "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcDlHCeNiKbRhLWKVunQaxn"
+  )
+-}}
+<div class="rs-home-simple">
+  <section class="rs-simple-hero">
+    <div class="container rs-simple-shell">
+      <div class="rs-simple-hero__content">
+        <h1>Structured AI/ML learning in one place</h1>
+        <div class="rs-simple-actions">
+          <a class="rs-simple-button rs-simple-button--primary" href="{{ if $docsPage }}{{ $docsPage.RelPermalink }}{{ else }}{{ relURL "/docs/" }}{{ end }}">Notes</a>
+          <a class="rs-simple-button rs-simple-button--secondary" href="https://www.youtube.com/@RoboSathi" target="_blank" rel="noopener">Videos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rs-simple-section">
+    <div class="container rs-simple-shell">
+      <div class="rs-simple-heading">
+        <h2>Topics &amp; Roadmap</h2>
+        <p>Start from Maths Foundations and progress through ML, DL, and NLP in a clear order.</p>
+      </div>
+
+      <div class="rs-roadmap-grid">
+        {{ range $topics }}
+        <a class="rs-roadmap-card" href="{{ .href }}">
+          <span class="rs-roadmap-card__step">{{ .step }}</span>
+          <h3>{{ .title }}</h3>
+          <p>{{ .description }}</p>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+</div>
+{{- end }}

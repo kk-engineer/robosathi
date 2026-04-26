@@ -2,7 +2,7 @@
 title: Machine Learning
 description: Classical Machine Learning
 date: 2026-02-07
-weight: 1
+weight: 3
 #categories: [Supervised, Unsupervised]
 #tags: [Regression, Classification, Clustering]
 #toc_hide: true
