@@ -101,7 +101,7 @@ enabling them to generate more nuanced, context-aware, and ethically aligned out
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/machine_learning/introduction/what_is_ml" >}}">Previous: What is ML ?</a></span>
-<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/linear_regression/meaning_of_linear" >}}">Next: Meaning of 'Linear</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/machine_learning/supervised/linear_regression/meaning_of_linear" >}}">Next: Meaning of 'Linear'</a></span>
 </div>
 <!-- nav-panel:end -->
 

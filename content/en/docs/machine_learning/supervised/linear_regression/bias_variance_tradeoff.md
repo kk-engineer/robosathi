@@ -1,4 +1,4 @@
----
+~~---
 title: Bias Variance Tradeoff
 description: Bias Variance Tradeoff
 date: 2026-02-14
@@ -7,7 +7,7 @@ math: true
 ---
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxde_X17sF7iN6rnQgFlBDC-" 
-"Linear Regression | All Videos" >}}
+"Linear Regression | All Videos" >}}~~
 {{< panel color="blue" title="Bias-Variance Decomposition" >}}
 Mean Squared Error (MSE) = \(\frac{1}{n} \sum_{i=1}^n (y_i - \hat{y_i})^2\)
 

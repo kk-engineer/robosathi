@@ -2,6 +2,7 @@
 {{- $title := .Get "title" | default (.Get 1) -}}
 {{- $icon := .Get "icon" | default (.Get 2) -}}
 {{- $panel_color_class := printf "rs-callout-%s" $color_name -}}
+<!--color options: red, orange, blue, green, magenta, navy, cyan, and grey-->
 <div class="rs-callout rs-callout-panel {{ $panel_color_class }}">
 {{- if or $title $icon -}}
 <div class="rs-callout__title rs-callout__title--panel">

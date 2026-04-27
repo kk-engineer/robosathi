@@ -3,29 +3,29 @@
 {{- $mathPage := site.GetPage "/docs/maths" -}}
 {{- $mlPage := site.GetPage "/docs/machine_learning" -}}
 {{- $dlPage := site.GetPage "/docs/deep_learning" -}}
-{{- $nlpPage := site.GetPage "/docs/natural_language_processing" -}}
+{{- $nlpPage := site.GetPage "/docs/deep_learning/natural_language_processing" -}}
 {{- $topics := slice
   (dict
     "step" "01"
-    "title" "Maths Foundations"
+    "title" "Maths Foundation Course"
     "description" "Build the fundamentals first with linear algebra, probability, statistics, and calculus."
     "href" (cond $mathPage $mathPage.RelPermalink (relURL "/docs/"))
   )
   (dict
     "step" "02"
-    "title" "Machine Learning"
+    "title" "Machine Learning Course"
     "description" "Move into supervised, unsupervised, and practical machine learning concepts."
     "href" (cond $mlPage $mlPage.RelPermalink (relURL "/docs/"))
   )
   (dict
     "step" "03"
-    "title" "Deep Learning"
+    "title" "Deep Learning Course"
     "description" "Learn neural networks and deep learning fundamental concepts."
     "href" (cond $dlPage $dlPage.RelPermalink (relURL "/docs/"))
   )
   (dict
     "step" "04"
-    "title" "Natural Language Processing"
+    "title" "Natural Language Processing Course"
     "description" "Understand the evolution and working of Large Language Models (LLMs) after the core ML and DL foundations are in place."
     "href" (cond $nlpPage $nlpPage.RelPermalink (relURL "/docs/"))
   )
@@ -52,7 +52,7 @@
   <section class="rs-simple-section">
     <div class="container rs-simple-shell">
       <div class="rs-simple-heading">
-        <h2>Topics &amp; Roadmap</h2>
+        <h2>Courses &amp; Roadmap</h2>
         <p>Start with the fundamentals, then move forward in a logical sequence.</p>
       </div>
 

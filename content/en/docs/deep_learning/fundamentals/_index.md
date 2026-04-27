@@ -1,6 +1,6 @@
 ---
-title: Deep Learning
-description: Deep Learning
+title: Fundamentals
+description: Deep Learning Fundamentals
 date: 2026-04-27
 weight: 1
 #toc_hide: true
