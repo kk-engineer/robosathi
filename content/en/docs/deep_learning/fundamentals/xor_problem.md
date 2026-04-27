@@ -1,6 +1,6 @@
 ---
 title: XOR Problem
-description: XOR Problem
+description: XOR Problem - Why Linear/Logistic Regression Can't Solve it ?
 date: 2026-04-27
 weight: 2
 math: true
@@ -25,7 +25,7 @@ and deciding whether to ‘fire’ (output 1) or stay ‘inactive’ (output 0).
 
 💡 Even Logistic Regression is a simple neural network with a sigmoid activation (instead of step function as in Perceptron).
 
-🖼️ **Logistic Regression**
+🖼️ **Logistic Regression as a Neural Network**
 {{< imgproc "images/deep_learning/fundamentals/xor_problem/logistic_regression.png" Resize "800x" >}}{{< /imgproc >}}
 {{< /definition >}}
 
@@ -65,7 +65,7 @@ Similarly logistic regression can not find a single linear decision boundary to 
 
 Therefore, a linear model is not sufficient to represent the XOR function.
 
-So we must have more than 1 neuron to solve the XOR problem (because logistic regression is a neural network with a single neuron).
+So, we need more than 1 neuron to solve the XOR problem (because logistic regression is a neural network with a single neuron).
 {{< /answer >}}
 
 {{< panel color="cyan" title="XOR Problem Solution" >}}
