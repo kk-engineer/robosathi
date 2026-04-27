@@ -8,16 +8,17 @@ math: true
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 
         "Probability for AI & ML | Full Course Videos" >}}
-{{< definition title="Moments" >}}
+
+{{< panel color="blue" title="Moment" >}}
 They are statistical measures that describe the characteristics of a probability distribution, 
 such as its central tendency, spread/variability, and asymmetry. <br>
 _Note_: We will discuss '_raw_' and '_central_' moments. <br><br>
 _Important moments:_ <br>
-1. **Mean** : Central tendency 
-2. **Variance** : Spread/variability 
-3. **Skewness** : Asymmetry 
-4. **Kurtosis** : Tailedness
-{{</ definition >}}
+1. **Mean** : _First Moment_; Measure of Central tendency 
+2. **Variance** : _Second Moment_; Measure of Spread/variability 
+3. **Skewness** : _Third Moment_; Measure of Asymmetry 
+4. **Kurtosis** : _Fourth Moment_;  Measure of Tailedness
+{{</ panel >}}
 
 {{< video "https://youtu.be/VR-yHsEGyww?si=i-JZqbPxFrErODeP" >}}
 

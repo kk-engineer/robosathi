@@ -23,10 +23,13 @@ and deciding whether to ‘fire’ (output 1) or stay ‘inactive’ (output 0).
 {{< imgproc "images/deep_learning/fundamentals/xor_problem/perceptron.png" Resize "800x" >}}{{< /imgproc >}}
 
 
-💡 Even Logistic Regression is a simple neural network with a sigmoid activation (instead of step function as in Perceptron).
+💡 Even Logistic Regression is a simple neural network with a sigmoid activation (instead of step function as in Perceptron). <br>
+
+[Read more about Logistic Regression]({{<ref  "/docs/machine_learning/supervised/logistic_regression/" >}})
 
 🖼️ **Logistic Regression as a Neural Network**
 {{< imgproc "images/deep_learning/fundamentals/xor_problem/logistic_regression.png" Resize "800x" >}}{{< /imgproc >}}
+
 {{< /definition >}}
 
 {{< question >}}
@@ -53,6 +56,8 @@ where, \(\hat{y_i} = \mathbf{w^Tx} + w_0\) <br>
 Solving the normal equations, we get: <br>
 \(\mathbf{w = 0} , w_0 = 0.5\)
 
+[Read more about Linear Regression]({{<ref  "/docs/machine_learning/supervised/linear_regression/" >}})
+
 This implies, whatever is the input, we always get 0.5 as output, 
 because linear regression is trying to fit the best line to the data, which in this case will be mid-way between the points. <br>
 And, that definitely is not the correct solution.
@@ -62,6 +67,8 @@ And, that definitely is not the correct solution.
 Similarly logistic regression can not find a single linear decision boundary to separate the 4 XOR outputs.
 
 ❌ No straight line can separate the XOR points.
+
+[Read more about Logistic Regression]({{<ref  "/docs/machine_learning/supervised/logistic_regression/" >}})
 
 Therefore, a linear model is not sufficient to represent the XOR function.
 
@@ -195,6 +202,6 @@ Input: [1. 1.] | Raw Output: 0.0079 | Rounded: 0
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/deep_learning/fundamentals/intro_to_dl" >}}">Previous: Intro to DL</a></span>
-<span style="margin-left:auto;"><a href="{{< ref "/docs/deep_learning/fundamentals/activation_function" >}}">Next: Activation Function</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/deep_learning/fundamentals/activation_function" >}}">Next: Activation Functions</a></span>
 </div>
 <!-- nav-panel:end -->

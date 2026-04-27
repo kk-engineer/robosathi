@@ -88,6 +88,8 @@ Methods to accelerate the optimization process in deep learning:
 
 {{< /panel >}}
 
+{{< video "https://youtu.be/-q5IZkJT3nE" >}}
+
 {{< panel color="blue" title="Momentum Based Optimizer" >}}
 💡 Momentum introduces velocity. <br>
 (term borrowed from Physics, where momentum = mass x velocity)
@@ -133,6 +135,8 @@ Say, if \(\gamma\)￼= 0.9, then it means to multiply the maximum velocity by 10
 
 {{< /panel >}}
 
+{{< video "https://youtu.be/8js_aRdE8Dg" >}}
+
 {{< panel color="green" title="Adaptive Gradient (AdaGrad)" >}}
 💡 Scales the learning rate for each parameter based on the historical sum of squares of its gradients.
 
@@ -171,18 +175,108 @@ Therefore, _sparse features_ get larger updates, whereas, for weights that are _
 as a result, the learning rate will start decaying.
 
 **Limitation** <br>
-**Vanishing Learning Rate:** <br>
+**Vanishing Learning Rate Problem:** <br>
 Since accumulation of gradients increases monotonically. <br> 
 This causes the effective learning rate to shrink until it becomes infinitesimally small, effectively ‘killing’ 
 the learning process before the model converges.
 
 {{< /panel >}}
 
-{{< video "https://youtu.be/CIq0lBUOz3w" >}}
+{{< video "https://youtu.be/mlNASt_0tNw" >}}
+
+{{< panel color="orange" title="Root Mean Square Propagation (RMSProp)" >}}
+💡 Instead of summing all past squared gradients, as in AdaGrad, RMSProp uses an exponentially decaying average to discard history 
+from the extreme past so that it can converge rapidly.
+
+**Algorithm**
+- For each iteration (t):
+  - Calculate gradient \(g_t\).
+  - Accumulate gradients: \[ r_{t} = \rho r_{t-1} +  (1 - \rho)g_t \odot g_t \]
+  - Update parameter: \[ w_{t+1} = w_{t} - \frac{\eta}{\sqrt{r_t} + \delta} \odot g_t \]
+    - where, \(\delta\)￼ is small smoothing term (e.g. \(10^{-8}\)) to avoid division by 0.
+    - if, \(g = \begin{bmatrix}
+    g_1 \\
+    g_2 \\
+    \vdots \\
+    g_d
+\end{bmatrix}
+\), then \( g \odot g  = \begin{bmatrix}
+    g_1^2 \\
+    g_2^2 \\
+    \vdots \\
+    g_d^2
+\end{bmatrix}
+\) (element wise dot product)
+    
+<br>
+Since, \(r_{t} = \rho r_{t-1} +  (1 - \rho)g_t \odot g_t\), say, if \(\rho = 0.9\), then 
+we trust the historical average 90% and the new gradient only 10%, i.e, \(r_t = 0.9r_{t-1} + 0.1g_t \odot g_t\).
+
+\[ r_t = (1-\rho)g_t^2 + \rho(1-\rho)g_{t-1}^2 + \rho^2(1-\rho)g_{t-2}^2 + \dots\]
+
+So, if the algorithm always observes gradient ‘g’, then \(r_t\) becomes:
+\[ r_t = (1-\rho)g^2 (1 + \rho + \rho^2 + \dots)\]
+The term inside the second bracket, is a geometric progression with the common ratio \(\rho < 1\). <br>
+_Note_: \(\rho \) is the decay rate (commonly 0.9 or 0.99). <br>
+
+\[ r_t = \cancel{(1-\rho)}g^2 \cdot \frac{1}{\cancel{1-\rho}} = g^2 \]
+
+So, the accumulation of gradient does not grow uncontrollably, as in AdaGrad. <br>
+Therefore, the "_Vanishing Learning Rate_" problem is _solved_.
+
+**Limitation** <br>
+Lacks the ‘_momentum_’ component to accelerate through flat regions or dampen oscillations.
+
+{{< /panel >}}
+
+{{< video "https://youtu.be/XOCmjScaPpw" >}}
+
+{{< panel color="cyan" title="Adaptive Moment Estimation (Adam)" >}}
+💡Adam optimizer combines:
+- Adaptive learning rates of RMSProp 
+- Accelerated convergence of Momentum
+
+Adam calculates an exponential moving average of the gradient (first moment) and the squared gradient (second moment). <br> 
+It also includes a bias-correction term to account for the fact that these averages are initialized at zero. 
+
+[Read more about Moment]({{<ref  "/docs/maths/probability/moment_generating_function/"  >}})
+
+**Algorithm**
+- For each iteration (t):
+  - Calculate gradient \(g_t\).
+  - Update biased first moment estimate: \[ m_t = \beta_1 m_{t-1} + (1 - \beta_1)g_t \]
+  - Update biased second raw moment estimate: \[ v_t = \beta_2 v_{t-1} + (1 - \beta_2)g_t^2 \]
+  - Compute bias-corrected first moment estimate: \[ \hat{m}_t = \frac{m_t}{1 - \beta_1^t} \]
+  - Compute bias-corrected second raw moment estimate: \[ \hat{v}_t = \frac{v_t}{1 - \beta_2^t} \]
+  - Update parameter: \[w_{t+1} = w_t - \frac{\eta}{\sqrt{\hat{v}_t} + \epsilon} \hat{m}_t\]
+
+Since, \(m_t = \beta_1 m_{t-1} + (1 - \beta_1)g_t\), say if, \(\beta_1 = 0.9\), then 
+we trust the historical average 90% and the new gradient only 10%, i.e, \(m_t = 0.9m_{t-1} + 0.1g_t\)
+
+Expanding the equation:
+\[ m_t = 0.1g_t + 0.9(0.9 m_{t-2} + 0.1 g_{t-1}) = 0.1g_t + 0.09 g_{t-1} + 0.081 g_{t-2} + \dots \]
+
+Because the weight drops by a factor of \(\beta_1\) for every step back, the influence of older gradients decays exponentially.
+
+**Bias Correction** <br>
+Bias correction compensates for the fact that the initial estimates of the first and second moments are biased towards zero. <br>
+Since \(m_0\) is initialized to zero, \(m_t\) will be close to zero during the initial time steps, especially when \(\beta_1\) is close to 1.
+
+_Common defaults_: \(\beta_1 = 0.9 ,~ \beta_2 = 0.999,~ \eta = 0.001\)
+
+**Advantages** <br>
+✅ Faster convergence. <br>
+✅ Require little to no adjustment of its default hyper-parameter values. <br>
+✅ It is computationally efficient, requires little memory to store moving averages. <br>
+✅ Adam is currently the ‘_default_’ optimizer for most deep learning tasks. <br> 
+
+{{< /panel >}}
+
+{{< video "https://youtu.be/esoiq-y83DU" >}}
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-<span><a href="{{< ref "/docs/deep_learning/fundamentals/activation_function" >}}">Previous: Activation_Function</a></span>
-<span style="margin-left:auto;"><a href="{{< ref "/docs/deep_learning/fundamentals/optimization_method" >}}">Next: Optimization Method</a></span>
+<span><a href="{{< ref "/docs/deep_learning/fundamentals/activation_function" >}}">Previous: Activation_Functions</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/deep_learning/fundamentals/optimization_method" >}}">Next: Optimization Methods</a></span>
 </div>
 <!-- nav-panel:end -->
