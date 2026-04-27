@@ -976,10 +976,11 @@ body.td-home .td-main {
 .rs-simple-section {
   background: #ffffff;
   padding: 0 0 1.75rem;
+  margin-top: -5rem; // Add a negative margin to pull the divs closer
 }
 
 .rs-simple-heading {
-  margin: 0 auto 1rem;
+  margin: 0 auto 0.5rem;
   max-width: 760px;
   text-align: center;
 }
@@ -1246,4 +1247,42 @@ body.td-home .td-main {
 // Make RoboSathi Title bold on home page
 h1.display-1.mt-0.mt-md-5.pb-4 {
     font-weight: bold; /* Or 700, 900 for a stronger bold */
+}
+
+// Make the notes Font readable
+html {
+  font-size: 18px; // Increased from 16px for a more modern base
+}
+
+body {
+  color: $rs-text;
+  font-family: $font-family-monospace;
+  font-size: 1.1rem; // Approx 20px
+  line-height: 1.8;   // Increased for better vertical rhythm (Medium uses ~1.8)
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+// Target the actual technical documentation / notes content
+.td-content {
+  color: $rs-text;
+  font-size: 1.15rem; // Makes the body text feel prominent and clear
+  max-width: 740px;   // CRITICAL: Medium/Substack use ~700-750px for max readability
+  margin-left: 0rem;
+  margin-right: auto;
+  padding-left: 0;
+
+  p, li {
+    line-height: 1.85; // Extra breathing room for long-form reading
+    margin-bottom: 1.55rem;
+  }
+
+  // Make headings slightly larger to match the bigger body text
+  h1 { font-size: 2.5rem; margin-bottom: 2rem; }
+  h2 { font-size: 1.8rem; margin-top: 2.5rem; }
+}
+
+// Ensure images and callouts follow the width
+.rs-figure, .rs-callout {
+  max-width: 100%;
 }
