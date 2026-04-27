@@ -42,6 +42,8 @@ What makes deep learning different ?
 **Feature Engineering**: Deep learning completely automates what used to be the most crucial step in a machine learning workflow,
  making problem-solving much easier.
 
+[Read more about Feature Engineering]({{<ref  "/docs/machine_learning/feature_engineering/feature_engineering/"  >}})
+
 **Performance**: Better performance for solving many kinds of problems, especially with unstructured data.
 
 {{< /answer >}}

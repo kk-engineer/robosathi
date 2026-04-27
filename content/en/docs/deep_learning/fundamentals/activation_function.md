@@ -1,5 +1,5 @@
 ---
-title: Activation Function
+title: Activation Functions
 description: Activation Functions - Sigmoid, TanH, ReLU, Softmax
 date: 2026-04-27
 weight: 3
@@ -76,6 +76,7 @@ Suffers from _vanishing gradient_ (gradients become near-zero for high or low in
 
 {{< imgproc "images/deep_learning/fundamentals/activation_function/sigmoid_derivative.png" Resize "800x" >}}{{< /imgproc >}}
 
+[Read more about Differentiation]({{<ref  "/docs/maths/calculus/calculus_fundamentals/#differentiation"  >}})
 {{< /panel >}}
 
 {{< panel color="red" title="Hyperbolic Tangent (TanH)" >}}
@@ -94,6 +95,7 @@ TanH also suffers from _vanishing gradient_ (gradients become near-zero for high
 
 {{< imgproc "images/deep_learning/fundamentals/activation_function/tanh_derivative.png" Resize "800x" >}}{{< /imgproc >}}
 
+[Read more about Differentiation]({{<ref  "/docs/maths/calculus/calculus_fundamentals/#differentiation"  >}})
 {{< /panel >}}
 
 {{< panel color="green" title="Rectified Linear Unit (ReLU)" >}}
@@ -112,6 +114,7 @@ _‘Dying ReLU’_ problem: negative inputs result in a zero gradient, meaning t
 
 {{< imgproc "images/deep_learning/fundamentals/activation_function/relu_derivative.png" Resize "800x" >}}{{< /imgproc >}}
 
+[Read more about Differentiation]({{<ref  "/docs/maths/calculus/calculus_fundamentals/#differentiation"  >}})
 {{< /panel >}}
 
 {{< panel color="magenta" title="Leaky Rectified Linear Unit (Leaky ReLU)" >}}
@@ -129,6 +132,7 @@ Fixes the ‘dying ReLU’ problem.
 
 {{< imgproc "images/deep_learning/fundamentals/activation_function/Leaky_relu_derivative.png" Resize "800x" >}}{{< /imgproc >}}
 
+[Read more about Differentiation]({{<ref  "/docs/maths/calculus/calculus_fundamentals/#differentiation"  >}})
 {{< /panel >}}
 
 {{< panel color="grey" title="Softmax" >}}

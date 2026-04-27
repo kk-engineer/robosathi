@@ -71,9 +71,8 @@ The **task** is to **minimize** the above **loss**. <br>
 
 {{< video "https://youtu.be/4ck0Mv6cYUU" >}}
 
-{{< panel color="orange" title="Convexity" >}}
-**Convexity:** <br>
-It refers to a property of a function where a line segment connecting any two points on its graph 
+{{< panel color="orange" title="Convexity" id="convexity" >}}
+Convexity refers to a property of a function where a line segment connecting any two points on its graph 
 lies above or on the graph itself. <br>
 A convex function is curved upwards. <br>
 It is always described by a convex set. <br>

@@ -50,7 +50,7 @@ Let's see an example: <br><br>
 
 {{< video "https://www.youtube.com/watch?v=cBY4eshEo70&t=1s" >}}
 
-{{< panel color="rust" title="Differentiation" >}}
+{{< panel color="rust" title="Differentiation" id="differentiation" >}}
 Differentiation is a mathematical tool that is used to find the **derivative** or rate of change of a function 
 at a specific point.<br>
 - \(\frac{dy}{dx} = f\prime(x) = tan\theta\) = Derivative = Slope = Gradient 
@@ -341,7 +341,7 @@ Since, determinant of Hessian = 4 > 0 and \( \frac{\partial^2 f_z}{\partial x^2}
 
 {{< video "https://youtu.be/Vl8GE7F-J7g" >}}
 
-{{< panel color="orange" title="Saddle Point" >}}
+{{< panel color="orange" title="Saddle Point" id="saddle_point">}}
 **Saddle Point** is a critical point where the function is **maximum** w.r.t one variable, <br>
 and **minimum** w.r.t to another. <br>
 <br>

@@ -17,16 +17,16 @@ Minimize the cost 💰function.
 {{< panel color="red" title="Issues with Normal Equation" >}}
 Normal Equation (Closed-form solution) jumps straight to the optimal point in one step.
 \[w=(X^{T}X)^{-1}X^{T}y\]
-But it is not always feasible and computationally expensive 💰(due to inverse calculation 🧮)
+But it is not always feasible and computationally expensive (due to inverse calculation)
 {{< /panel >}}
 
-{{< panel color="green" title="Gradient Descent 🎢" >}}
+{{< panel color="green" title="Gradient Descent" >}}
 An iterative optimization algorithm slowly nudges parameters ‘w' towards a value that minimize the cost💰 function.
 
 {{< imgproc "images/machine_learning/supervised/linear_regression/gradient_descent/slide_05_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="blue" title="Algorithm ⚙️" >}}
+{{< panel color="blue" title="Algorithm" >}}
 1. Initialize the weights/parameters with random values. 
 2. Calculate the gradient of the cost function at current parameter values. 
 3. Update the parameters using the gradient. 
@@ -84,41 +84,41 @@ Preferred in modern **deep learning** as they require less manual tuning, e.g., 
 
 {{< video "https://youtu.be/I23bqvGWPEM" >}}
 
-{{< panel color="green" title="Types of Gradient Descent 🎢">}}
+{{< panel color="green" title="Types of Gradient Descent">}}
 Batch, Stochastic, Mini-Batch are classified by **data usage** for gradient calculation in each iteration.
 - Batch Gradient Descent (BGD): *Entire Dataset*
 - Stochastic Gradient Descent (SGD): *Random Point*
 - Mini-Batch Gradient Descent (MBGD): *Subset*
 {{< /panel >}}
 
-{{< panel color="navy" title="Batch Gradient Descent 🎢 (BGD)" >}}
+{{< panel color="navy" title="Batch Gradient Descent (BGD)" >}}
 Computes the gradient using **all** the data points in the dataset for parameter update in each iteration.
 
 \[w_{new} = w_{old} - \eta.\text{(average of all ’n’ gradients)}\]
 
-🔑**Key Points**:
-- Slow 🐢 steps towards convergence, i.e, TC = O(n).
+**Key Points**:
+- Slow steps towards convergence, i.e, TC = O(n).
 - Smooth, direct path towards minima.
 - Minimum number of steps/iterations.
 - Not suitable for large datasets; impractical for Deep Learning, as n = millions/billions.
 {{< /panel >}}
 
-{{< panel color="orange" title="Stochastic Gradient Descent 🎢 (SGD)" >}}
+{{< panel color="orange" title="Stochastic Gradient Descent (SGD)" id="stochastic_gradient_descent">}}
 Uses only 1 data point selected randomly from dataset to compute gradient for parameter update in each iteration.
 \[w_{new} = w_{old} - \eta.\text{(gradient at any random data point)}\]
 
-🔑**Key Points**:
-- Computationally fastest 🐇 per step; TC = O(1).
+**Key Points**:
+- Computationally fastest per step; TC = O(1).
 - Highly noisy, zig-zag path to minima.
 - High variance in gradient estimation makes path to minima volatile, requiring a careful decay of learning rate to ensure convergence to minima.
 {{< /panel >}}
 
-{{< panel color="blue" title="Mini Batch Gradient Descent 🎢 (MBGD)" >}}
+{{< panel color="blue" title="Mini Batch Gradient Descent" >}}
 - Uses small randomly selected subsets of dataset, called mini-batch, (1<k<n), to compute gradient for parameter update in each iteration.
 \[w_{new} = w_{old} - \eta.\text{(average gradient of ‘k' data points)}\]
 
-🔑**Key Points**:
-- Moderate time ⏰ consumption per step; TC = O(k<n).
+**Key Points**:
+- Moderate time consumption per step; TC = O(k<n).
 - Less noisy, and more reliable convergence than stochastic gradient descent.
 - More efficient and faster than batch gradient descent.
 - Standard optimization algorithm for Deep Learning.Note: Vectorization on GPUs allows for parallel processing of mini-batches; also GPUs are the reason for the mini-batch size to be a power of 2.
