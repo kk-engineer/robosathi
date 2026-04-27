@@ -133,12 +133,12 @@ with respect to \(\theta\) and equate it to zero. <br>
 \[
 \begin{aligned}
 \Theta_{ML} &= \underset{\Theta}{\mathrm{argmax}}\ n_1 log \theta + (n - n_1) log (1 - \theta) \\
-=>& \frac{d}{d\theta} (n_1 log \theta + (n - n_1) log (1 - \theta))  = 0\\
-=>& \frac{n_1}{\theta} + \frac{(n - n_1)}{1 - \theta}*(-1) = 0 \\
-=>& \frac{n_1}{\theta} = \frac{(n - n_1)}{1 - \theta} \\
-=>& n_1 - n_1\theta = n\theta  - n_1\theta\\
-=>& n_1 = n\theta \\
-=>& \theta = \frac{n_1}{n} \text{ ~ i.e proportion of 1's} \\
+\implies& \frac{d}{d\theta} (n_1 log \theta + (n - n_1) log (1 - \theta))  = 0\\
+\implies& \frac{n_1}{\theta} + \frac{(n - n_1)}{1 - \theta}*(-1) = 0 \\
+\implies& \frac{n_1}{\theta} = \frac{(n - n_1)}{1 - \theta} \\
+\implies& n_1 - n_1\theta = n\theta  - n_1\theta\\
+\implies& n_1 = n\theta \\
+\implies& \theta = \frac{n_1}{n} \text{ ~ i.e proportion of 1's} \\
 \end{aligned}
 \]
 
@@ -166,7 +166,7 @@ Estimate the parameters \(\mu\) and \(\sigma\) of the *Gaussian* distribution us
 \begin{aligned}
 \bar{L}_{X_1, X_2, \dots, X_n}(\Theta) &= log [(\frac{1}{\sqrt{2\pi\sigma^2}})^n \prod_{i=1}^{n} e^{-\frac{(x_i - \mu)^2}{2\sigma^2}}] \\
 &= log (2\pi\ \sigma^2)^{\frac{-n}{2}}  - \sum_{i=1}^{n} \frac{(x_i - \mu)^2}{2\sigma^2} \\
-=> \bar{L}_{X_1, X_2, \dots, X_n}(\Theta) &= -\frac{n}{2} log (2\pi) -nlog(\sigma) - \frac{1}{2\sigma^2} \sum_{i=1}^{n} (x_i - \mu)^2 \\
+\implies \bar{L}_{X_1, X_2, \dots, X_n}(\Theta) &= -\frac{n}{2} log (2\pi) -nlog(\sigma) - \frac{1}{2\sigma^2} \sum_{i=1}^{n} (x_i - \mu)^2 \\
 \end{aligned}
 \]
 _Note: Here, the first term \( -\frac{n}{2} log (2\pi) \) is a constant wrt both \(\mu\) and \(\sigma\), so we can ignore the term._ <br>
@@ -188,10 +188,10 @@ Lets, calculate \(\mu_{ML}\) first by taking the derivative of the log-likelihoo
 \[
 \begin{aligned}
 &\frac{d}{d\mu} \bar{L}_{X_1, X_2, \dots, X_n}(\Theta) = \frac{d}{d\mu} [nlog(\sigma) + \frac{1}{2\sigma^2} \sum_{i=1}^{n} (x_i - \mu)^2] = 0 \\
-&=> 0 + \frac{2}{2\sigma^2} \sum_{i=1}^{n} (x_i - \mu)*(-1) = 0\\
-&=> \sum_{i=1}^{n} x_i - n\mu = 0 \\
-&=> n\mu = \sum_{i=1}^{n} x_i \\
-&=> \mu_{ML} = \frac{1}{n} \sum_{i=1}^{n} x_i \\
+&\implies 0 + \frac{2}{2\sigma^2} \sum_{i=1}^{n} (x_i - \mu)*(-1) = 0\\
+&\implies \sum_{i=1}^{n} x_i - n\mu = 0 \\
+&\implies n\mu = \sum_{i=1}^{n} x_i \\
+&\implies \mu_{ML} = \frac{1}{n} \sum_{i=1}^{n} x_i \\
 \end{aligned}
 \]
 
@@ -200,12 +200,12 @@ and equating it to 0. <br>
 
 \[
 \begin{aligned}
-\frac{d}{d\sigma} \bar{L}_{X_1, X_2, \dots, X_n}(\Theta) &= \frac{d}{d\sigma} [nlog(\sigma) +  \frac{1}{2\sigma^2} \sum_{i=1}^{n} (x_i - \mu)^2] = 0 \\
-=> \sigma^2_{ML} = \frac{1}{n} \sum_{i=1}^{n} (x_i - \mu_{ML})^2
+&\frac{d}{d\sigma} \bar{L}_{X_1, X_2, \dots, X_n}(\Theta) = \frac{d}{d\sigma} [nlog(\sigma) +  \frac{1}{2\sigma^2} \sum_{i=1}^{n} (x_i - \mu)^2] = 0 \\
+&\implies \sigma^2_{ML} = \frac{1}{n} \sum_{i=1}^{n} (x_i - \mu_{ML})^2
 \end{aligned}
 \]
 
-*Note: In general MLE is biased, i.e does NOT give an unbiased estimate => divides by \(n\) instead of \((n-1)\).* <br>
+*Note: In general MLE is biased, i.e does NOT give an unbiased estimate \implies divides by \(n\) instead of \((n-1)\).* <br>
 {{</ answer >}}
 
 {{< video "https://www.youtube.com/watch?v=74tLuSlmd-c" >}}
@@ -259,7 +259,7 @@ We know that we can get the marginal probability by integrating the joint probab
 Also from conditional probability, we know:
 \[
 \tag{2} f_{X \mid Y}(x \mid y) = \frac{f_{X,Y}(x,y)}{f_{Y}(y)} \\
-=> f_{X,Y}(x,y) = f_{Y}(y) f_{X \mid Y}(x \mid y)
+\implies f_{X,Y}(x,y) = f_{Y}(y) f_{X \mid Y}(x \mid y)
 \]
 From equations 1 and 2, we have:
 \[
@@ -270,12 +270,12 @@ Now let's replace the value of \(f_{X}(x) \) in the posterior from equation 3: <
 **Posterior**: 
 \[
 \begin{aligned}
-f_{\Theta \mid X} (\theta \mid x) &= \frac{f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)}{f_{X}(x)} \\[10pt]
-&= \frac{f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)}{\int_{\Theta}f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)d\theta} \\[10pt]
-&= \frac{f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)}{\int_{0}^1f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)d\theta} \\[10pt]
+f_{\Theta \mid X} (\theta \mid x) = \frac{f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)}{f_{X}(x)} \\[10pt]
+= \frac{f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)}{\int_{\Theta}f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)d\theta} \\[10pt]
+= \frac{f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)}{\int_{0}^1f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)d\theta} \\[10pt]
 \text{ We know that: } f_{\Theta}(\theta) = 1, \theta \in [0, 1] \\
-&= \frac{1* P_{X \mid \Theta}(x \mid \theta)}{\int_{0}^1 1* P_{X \mid \Theta}(x \mid \theta)d\theta} \\[10pt]
-=> f_{\Theta \mid X} (\theta \mid x) & = \frac{\theta^{n_1} (1 - \theta)^{n - n_1}}{\int_{0}^1 \theta^{n_1} (1 - \theta)^{n - n_1}} \\ 
+= \frac{1* P_{X \mid \Theta}(x \mid \theta)}{\int_{0}^1 1* P_{X \mid \Theta}(x \mid \theta)d\theta} \\[10pt]
+\implies f_{\Theta \mid X} (\theta \mid x) = \frac{\theta^{n_1} (1 - \theta)^{n - n_1}}{\int_{0}^1 \theta^{n_1} (1 - \theta)^{n - n_1}} \\ 
 \end{aligned}
 \]
 
@@ -323,13 +323,13 @@ f_{\Theta}(\theta) =
 **Posterior**: 
 \[
 \begin{aligned}
-f_{\Theta \mid X} (\theta \mid x) &= \frac{f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)}{f_{X}(x)} \\[10pt]
-&= \frac{f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)}{\int_{\Theta}f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)d\theta} \\[10pt]
-&= \frac{f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)}{\int_{0}^1f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)d\theta} \\[10pt]
+f_{\Theta \mid X} (\theta \mid x) = \frac{f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)}{f_{X}(x)} \\[10pt]
+= \frac{f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)}{\int_{\Theta}f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)d\theta} \\[10pt]
+= \frac{f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)}{\int_{0}^1f_{\Theta}(\theta) P_{X \mid \Theta}(x \mid \theta)d\theta} \\[10pt]
 \text{ We know that: } f_{\Theta}(\theta) = 2\Theta, \theta \in [0, 1] \\
-&= \frac{2\Theta * P_{X \mid \Theta}(x \mid \theta)}{\int_{0}^1 2\Theta* P_{X \mid \Theta}(x \mid \theta)d\theta} \\[10pt]
-& = \frac{2\Theta * \theta^{n_1} (1 - \theta)^{n - n_1}}{\int_{0}^1 2\Theta * \theta^{n_1} (1 - \theta)^{n - n_1}} \\[10pt]
-=> f_{\Theta \mid X} (\theta \mid x) &= \frac{\theta^{n_1+1} (1 - \theta)^{n - n_1}}{β(n_1+2, n-n_1+1)}
+= \frac{2\Theta * P_{X \mid \Theta}(x \mid \theta)}{\int_{0}^1 2\Theta* P_{X \mid \Theta}(x \mid \theta)d\theta} \\[10pt]
+ = \frac{2\Theta * \theta^{n_1} (1 - \theta)^{n - n_1}}{\int_{0}^1 2\Theta * \theta^{n_1} (1 - \theta)^{n - n_1}} \\[10pt]
+\implies f_{\Theta \mid X} (\theta \mid x) = \frac{\theta^{n_1+1} (1 - \theta)^{n - n_1}}{β(n_1+2, n-n_1+1)}
 \end{aligned}
 \]
 
@@ -375,7 +375,7 @@ Estimate the unknown parameter \(\mu\) using MAP. <br>
 {{< answer >}}
 Given that :  <br>
 \(\Theta\) is discrete, with probability 0.5 for both 0 and 1. <br>
-=> The Gaussian distribution is equally likely to be centered at 0 or 1. <br>
+\implies The Gaussian distribution is equally likely to be centered at 0 or 1. <br>
 Variance: \(\sigma^2 = 1\) <br>
 
 **Prior:** <br>
@@ -404,13 +404,13 @@ Taking log on both sides: <br>
 \tag{1}\log P_{\Theta \mid X} (\theta \mid x) = \log P_{\Theta}(\theta) + \log f_{X \mid \Theta}(x \mid \theta) - \log f_{X}(x)
 \]
 
-Let's calculate the log-likelihood function first - 
+Let's calculate the log-likelihood function first: 
 \[
 \begin{aligned}
-\log f_{X \mid \Theta}(x \mid \theta) &= \log \prod_{i=1}^n \frac{1}{\sqrt{2\pi}} e^{-\frac{(x_i-\theta)^2}{2}} \\
+&\log f_{X \mid \Theta}(x \mid \theta) = \log \prod_{i=1}^n \frac{1}{\sqrt{2\pi}} e^{-\frac{(x_i-\theta)^2}{2}} \\
 &= log(\frac{1}{\sqrt{2\pi}})^n + \sum_{i=1}^n \log (e^{-\frac{(x_i-\theta)^2}{2}}), \text{ since \(\sigma = 1\)} \\
 &= n\log(\frac{1}{\sqrt{2\pi}}) + \sum_{i=1}^n -\frac{(x_i-\theta)^2}{2} \\
-=> \tag{2} \log f_{X \mid \Theta}(x \mid \theta) &= n\log(\frac{1}{\sqrt{2\pi}}) - \sum_{i=1}^n \frac{(x_i-\theta)^2}{2}
+&\implies \tag{2} \log f_{X \mid \Theta}(x \mid \theta) = n\log(\frac{1}{\sqrt{2\pi}}) - \sum_{i=1}^n \frac{(x_i-\theta)^2}{2}
 \end{aligned}
 \]
 
@@ -436,21 +436,19 @@ Similarly, when \(\theta=0\): <br>
 \]
 
 So, we can say that \(\theta = 1\) only if : <br>
-the value of the above expression for \(\theta = 1\) > the value of the above expression for \(\theta = 0\)
-From equation 3 and 4: <br>
+the value of the above expression for \(\theta = 1\) > the value of the above expression for \(\theta = 0\) <br>
+Therefore, from equation 3 and 4: <br>
 \[
 \begin{aligned}
-&\log(1/2) + n\log(\frac{1}{\sqrt{2\pi}}) - \sum_{i=1}^n \frac{(x_i - 1)^2}{2} > 
-\log(1/2) + n\log(\frac{1}{\sqrt{2\pi}}) - \sum_{i=1}^n \frac{(x_i - 0)^2}{2} \\
-=> &\cancel{\log(1/2)} + \cancel{n\log(\frac{1}{\sqrt{2\pi}})} - \sum_{i=1}^n \frac{(x_i - 1)^2}{2} > 
-\cancel{\log(1/2)} + \cancel{n\log(\frac{1}{\sqrt{2\pi}})} - \sum_{i=1}^n \frac{(x_i - 0)^2}{2} \\
-=> &\sum_{i=1}^n \frac{(x_i - 0)^2}{2} - \sum_{i=1}^n \frac{(x_i - 1)^2}{2} > 0 \\
-=> & \sum_{i=1}^n \frac{\cancel{x_i^2} - \cancel{x_i^2} + 2x_i -1 }{2} > 0 \\
-=> & \sum_{i=1}^n [x_i - \frac{1}{2}] > 0 \\
-=> & \sum_{i=1}^n x_i  - \frac{n}{2} > 0 \\
-=> & \sum_{i=1}^n x_i  > \frac{n}{2} \\
-=> & \frac{1}{n} \sum_{i=1}^n x_i > \frac{1}{2} \\
-=> & \Theta_{MAP}(X) = 
+&\log(1/2) + n\log\left(\frac{1}{\sqrt{2\pi}}\right) - \sum_{i=1}^n \frac{(x_i - 1)^2}{2} > \log(1/2) + n\log\left(\frac{1}{\sqrt{2\pi}}\right) - \sum_{i=1}^n \frac{(x_i - 0)^2}{2} \\
+&\implies \cancel{\log(1/2)} + \cancel{n\log\left(\frac{1}{\sqrt{2\pi}}\right)} - \sum_{i=1}^n \frac{(x_i - 1)^2}{2} > \cancel{\log(1/2)} + \cancel{n\log\left(\frac{1}{\sqrt{2\pi}}\right)} - \sum_{i=1}^n \frac{(x_i - 0)^2}{2} \\
+&\implies \sum_{i=1}^n \frac{(x_i - 0)^2}{2} - \sum_{i=1}^n \frac{(x_i - 1)^2}{2} > 0 \\
+&\implies \sum_{i=1}^n \frac{\cancel{x_i^2} - \cancel{x_i^2} + 2x_i - 1}{2} > 0 \\
+&\implies \sum_{i=1}^n \left[x_i - \frac{1}{2}\right] > 0 \\
+&\implies \sum_{i=1}^n x_i - \frac{n}{2} > 0 \\
+&\implies \sum_{i=1}^n x_i > \frac{n}{2} \\
+&\implies \frac{1}{n} \sum_{i=1}^n x_i > \frac{1}{2} \\
+&\implies \Theta_{MAP}(X) = 
 \begin{cases}
 1 & \text{if } \frac{1}{n} \sum_{i=1}^n x_i > \frac{1}{2} \\
 \\
@@ -476,30 +474,28 @@ Now, let's compare the log-posterior for both the cases i.e \(\theta=0\) and \(\
 But, note that this time the probabilities for \(\theta=0\) and \(\theta=1\) are different.
 
 So, we can say that \(\theta = 1\) only if : <br>
-the value of the above expression for \(\theta = 1\) > the value of the above expression for \(\theta = 0\)
-From equation 3 and 4 above: <br>
+the value of the above expression for \(\theta = 1\) > the value of the above expression for \(\theta = 0\) <br>
+Therefore, from equation 3 and 4 above: <br>
 
-\[
+$$
 \begin{aligned}
-&\log(1/4) + n\log(\frac{1}{\sqrt{2\pi}}) - \sum_{i=1}^n \frac{(x_i - 1)^2}{2} > 
-\log(3/4) + n\log(\frac{1}{\sqrt{2\pi}}) - \sum_{i=1}^n \frac{(x_i - 0)^2}{2} \\
-=> &\log(1/4) + \cancel{n\log(\frac{1}{\sqrt{2\pi}})} - \sum_{i=1}^n \frac{(x_i - 1)^2}{2} > 
-\log(3/4) + \cancel{n\log(\frac{1}{\sqrt{2\pi}})} - \sum_{i=1}^n \frac{(x_i - 0)^2}{2} \\
-=> &\sum_{i=1}^n \frac{(x_i - 0)^2}{2} - \sum_{i=1}^n \frac{(x_i - 1)^2}{2} > \log3 -\cancel{\log4} -\log1 +\cancel{\log4} \\
-=> & \sum_{i=1}^n \frac{\cancel{x_i^2} - \cancel{x_i^2} + 2x_i -1 }{2} > \log3 - 0 \text{ , since log(1) = 0}\\
-=> & \sum_{i=1}^n [x_i - \frac{1}{2}] > \log3 \\
-=> & \sum_{i=1}^n x_i  - \frac{n}{2} > \log3 \\
-=> & \sum_{i=1}^n x_i  > \frac{n}{2} + \log3 \\
-\text{ dividing both sides by n: } \\
-=> & \frac{1}{n} \sum_{i=1}^n x_i > \frac{1}{2} + \frac{\log3}{n}\\
-=> & \Theta_{MAP}(X) = 
-\begin{cases}
-1 & \text{if } \frac{1}{n} \sum_{i=1}^n x_i > \frac{1}{2} + \frac{\log3}{n}\\
-\\
-0 & \text{otherwise.}
+&\log(1/4) + n\log\left(\frac{1}{\sqrt{2\pi}}\right) - \sum_{i=1}^n \frac{(x_i - 1)^2}{2} > \log(3/4) + n\log\left(\frac{1}{\sqrt{2\pi}}\right) - \sum_{i=1}^n \frac{(x_i - 0)^2}{2} \\
+&\implies \log(1/4) + \cancel{n\log\left(\frac{1}{\sqrt{2\pi}}\right)} - \sum_{i=1}^n \frac{(x_i - 1)^2}{2} > \log(3/4) + \cancel{n\log\left(\frac{1}{\sqrt{2\pi}}\right)} - \sum_{i=1}^n \frac{(x_i - 0)^2}{2} \\
+&\implies \sum_{i=1}^n \frac{(x_i - 0)^2}{2} - \sum_{i=1}^n \frac{(x_i - 1)^2}{2} > \log 3 - \cancel{\log 4} - \log 1 + \cancel{\log 4} \\
+&\implies \sum_{i=1}^n \frac{\cancel{x_i^2} - \cancel{x_i^2} + 2x_i - 1}{2} > \log 3 - 0 \text{, since } \log(1) = 0 \\
+&\implies \sum_{i=1}^n \left[x_i - \frac{1}{2}\right] > \log 3 \\
+&\implies \sum_{i=1}^n x_i - \frac{n}{2} > \log 3 \\
+&\implies \sum_{i=1}^n x_i > \frac{n}{2} + \log 3 \\
+&\text{dividing both sides by } n: \\
+&\implies \frac{1}{n} \sum_{i=1}^n x_i > \frac{1}{2} + \frac{\log 3}{n} \\
+&\implies \Theta_{\text{MAP}}(X) = 
+\begin{cases} 
+1 & \text{if } \frac{1}{n} \sum_{i=1}^n x_i > \frac{1}{2} + \frac{\log 3}{n} \\ \\
+0 & \text{otherwise.} 
 \end{cases}
 \end{aligned}
-\]
+$$
+
 
 Therefore, we can see that \(\Theta_{MAP}\) is extra biased towards 0. <br>
 
@@ -556,11 +552,11 @@ Let's calculate the \(\Theta_{MMSE}\): <br>
 
 \[
 \begin{aligned}
-\Theta_{MMSE}(X) &= \int_{0}^1 f_{\Theta \mid X} (\theta \mid x)d\theta \\
-& = \frac{\int_{0}^1 \theta * \theta^{n_1} (1 - \theta)^{n - n_1}}{\beta(n_1+1, n-n_1+1)} \\[10pt]
-& = \frac{ \int_{0}^1 \theta^{n_1+1} (1 - \theta)^{n - n_1}}{\beta(n_1+1, n-n_1+1)} \\[10pt]
+\Theta_{MMSE}(X) = \int_{0}^1 f_{\Theta \mid X} (\theta \mid x)d\theta \\
+ = \frac{\int_{0}^1 \theta * \theta^{n_1} (1 - \theta)^{n - n_1}}{\beta(n_1+1, n-n_1+1)} \\[10pt]
+ = \frac{ \int_{0}^1 \theta^{n_1+1} (1 - \theta)^{n - n_1}}{\beta(n_1+1, n-n_1+1)} \\[10pt]
 \text{ Since: } \beta(a, b) = \int_0^1 t^{a-1}(1-t)^{b-1}dt \\[10pt]
-=> \Theta_{MMSE}(X) &= \frac{\beta(n_1+2, n-n_1+1)}{\beta(n_1+1, n-n_1+1)}
+\implies \Theta_{MMSE}(X) = \frac{\beta(n_1+2, n-n_1+1)}{\beta(n_1+1, n-n_1+1)}
 \end{aligned}
 \]
 
