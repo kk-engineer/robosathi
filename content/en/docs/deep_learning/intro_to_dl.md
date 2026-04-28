@@ -142,6 +142,6 @@ algorithmic improvements that allowed for better gradient propagation:
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span></span>
-<span style="margin-left:auto;"><a href="{{< ref "/docs/deep_learning/fundamentals/xor_problem" >}}">Next: XOR Problem</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/deep_learning/xor_problem" >}}">Next: XOR Problem</a></span>
 </div>
 <!-- nav-panel:end -->

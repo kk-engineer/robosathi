@@ -276,7 +276,7 @@ _Common defaults_: \(\beta_1 = 0.9 ,~ \beta_2 = 0.999,~ \eta = 0.001\)
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-<span><a href="{{< ref "/docs/deep_learning/fundamentals/activation_function" >}}">Previous: Activation_Functions</a></span>
-<span style="margin-left:auto;"><a href="{{< ref "/docs/deep_learning/fundamentals/regularization" >}}">Next: Regularization Methods</a></span>
+<span><a href="{{< ref "/docs/deep_learning/activation_function" >}}">Previous: Activation_Functions</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/deep_learning/regularization" >}}">Next: Regularization Methods</a></span>
 </div>
 <!-- nav-panel:end -->

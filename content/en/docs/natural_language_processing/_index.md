@@ -1,8 +1,8 @@
 ---
 title: Natural Language Processing
 description: Natural Language Processing (NLP)
-date: 2026-04-27
-weight: 2
+date: 2026-04-28
+weight: 1
 #toc_hide: true
 #draft: true
 ---

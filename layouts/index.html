@@ -2,49 +2,98 @@
 {{- $docsPage := site.GetPage "/docs" -}}
 {{- $mathPage := site.GetPage "/docs/maths" -}}
 {{- $mlPage := site.GetPage "/docs/machine_learning" -}}
-{{- $dlPage := site.GetPage "/docs/deep_learning/fundamentals" -}}
-{{- $nlpPage := site.GetPage "/docs/deep_learning/natural_language_processing" -}}
+{{- $dlPage := site.GetPage "/docs/deep_learning" -}}
+{{- $nlpPage := site.GetPage "/docs/natural_language_processing" -}}
+{{- $courses := slice
+  (dict
+    "eyebrow" "LLMs"
+    "title" "Natural Language Processing"
+    "description" "Study language representation, sequence models, attention mechanism, transformer architecture and the foundations that lead into modern LLM systems."
+    "href" (cond $nlpPage $nlpPage.RelPermalink (relURL "/docs/"))
+    "accent" "nlp"
+  )
+  (dict
+    "eyebrow" "Neural Networks"
+    "title" "Deep Learning"
+    "description" "Learn neural networks, backpropagation, optimization, activation functions, and the core concepts behind modern deep learning systems."
+    "href" (cond $dlPage $dlPage.RelPermalink (relURL "/docs/"))
+    "accent" "dl"
+  )
+  (dict
+    "eyebrow" "Classical AI"
+    "title" "Machine Learning"
+    "description" "Build a strong grasp of supervised learning, unsupervised learning, feature engineering, and practical machine learning concepts."
+    "href" (cond $mlPage $mlPage.RelPermalink (relURL "/docs/"))
+    "accent" "ml"
+  )
+  (dict
+    "eyebrow" "Foundations"
+    "title" "Maths"
+    "description" "Strengthen the linear algebra, probability, statistics, and calculus required to understand AI and ML in depth."
+    "href" (cond $mathPage $mathPage.RelPermalink (relURL "/docs/"))
+    "accent" "maths"
+  )
+-}}
 {{- $topics := slice
   (dict
     "step" "01"
     "title" "Maths Foundation Course"
-    "description" "Build the fundamentals first with linear algebra, probability, statistics, and calculus."
+    "description" "Build the fundamentals first with probability, statistics, linear algebra, and calculus."
     "href" (cond $mathPage $mathPage.RelPermalink (relURL "/docs/"))
+    "accent" "maths"
   )
   (dict
     "step" "02"
     "title" "Machine Learning Course"
     "description" "Move into supervised, unsupervised, and practical machine learning concepts."
     "href" (cond $mlPage $mlPage.RelPermalink (relURL "/docs/"))
+    "accent" "ml"
   )
   (dict
     "step" "03"
     "title" "Deep Learning Course"
-    "description" "Learn neural networks and deep learning fundamental concepts."
+    "description" "Learn neural networks, back propagation, and other deep learning fundamental concepts."
     "href" (cond $dlPage $dlPage.RelPermalink (relURL "/docs/"))
+    "accent" "dl"
   )
   (dict
     "step" "04"
     "title" "Natural Language Processing Course"
-    "description" "Understand the evolution and working of Large Language Models (LLMs) after the core ML and DL foundations are in place."
+    "description" "Master the working of Large Language Models (LLMs) after the core ML and DL foundations are in place."
     "href" (cond $nlpPage $nlpPage.RelPermalink (relURL "/docs/"))
+    "accent" "nlp"
   )
 -}}
 <div class="rs-home-simple">
-  <section class="rs-simple-hero">
+  <section class="rs-courses-section">
     <div class="container rs-simple-shell">
-      <div class="rs-simple-hero__content">
-        <h1>RoboSathi</h1>
-          <span class="rs-simple-kicker">"AI for Good"</span>
-        <div class="rs-simple-actions">
-          <a class="rs-simple-button rs-simple-button--notes" href="{{ if $docsPage }}{{ $docsPage.RelPermalink }}{{ else }}{{ relURL "/docs/" }}{{ end }}">
-            Notes <i class="fas fa-book-open rs-simple-button__icon" aria-hidden="true"></i>
-          </a>
-          <a class="rs-simple-button rs-simple-button--videos" href="https://www.youtube.com/@RoboSathi" target="_blank" rel="noopener">
-            Videos <i class="fab fa-youtube rs-simple-button__icon" aria-hidden="true"></i>
-          </a>
-        </div>
-          <p class="rs-simple-hero__lead">AI & ML learning platform.</p>
+      <div class="rs-course-heading">
+        <h1>AI & ML Courses</h1>
+        <p>Starting from Maths foundations to Agentic AI applications.</p>
+      </div>
+
+      <div class="rs-course-list">
+        {{ range $courses }}
+        <a class="rs-course-row rs-course-row--{{ .accent }}" href="{{ .href }}">
+          <div class="rs-course-row__meta">
+            <span class="rs-course-row__eyebrow">{{ .eyebrow }}</span>
+            <h2>{{ .title }}</h2>
+          </div>
+          <p class="rs-course-row__description">{{ .description }}</p>
+          <span class="rs-course-row__cta">
+            Open Course <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </span>
+        </a>
+        {{ end }}
+      </div>
+
+      <div class="rs-home-actions">
+        <a class="rs-simple-button rs-simple-button--notes" href="{{ if $docsPage }}{{ $docsPage.RelPermalink }}{{ else }}{{ relURL "/docs/" }}{{ end }}">
+          Notes <i class="fas fa-book-open rs-simple-button__icon" aria-hidden="true"></i>
+        </a>
+        <a class="rs-simple-button rs-simple-button--videos" href="https://www.youtube.com/@RoboSathi" target="_blank" rel="noopener">
+          Videos <i class="fab fa-youtube rs-simple-button__icon" aria-hidden="true"></i>
+        </a>
       </div>
     </div>
   </section>
@@ -52,17 +101,16 @@
   <section class="rs-simple-section">
     <div class="container rs-simple-shell">
       <div class="rs-simple-heading">
-        <h2>Courses &amp; Roadmap</h2>
+        <h2>Roadmap</h2>
         <p>Start with the fundamentals, then move forward in a logical sequence.</p>
       </div>
 
       <div class="rs-roadmap-grid">
         {{ range $topics }}
-        <a class="rs-roadmap-card rs-roadmap-card--{{ lower (replace .title " " "-") }}" href="{{ .href }}">
+        <a class="rs-roadmap-card rs-roadmap-card--{{ .accent }}" href="{{ .href }}">
           <span class="rs-roadmap-card__step">{{ .step }}</span>
           <h3>{{ .title }}</h3>
           <p>{{ .description }}</p>
-<!--          <span class="rs-roadmap-card__link">Learn more</span>-->
         </a>
         {{ end }}
       </div>

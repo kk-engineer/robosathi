@@ -133,7 +133,7 @@ Model: "sequential_23"
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-<span><a href="{{< ref "/docs/deep_learning/fundamentals/regularization" >}}">Previous: Regularization Methods</a></span>
-<span style="margin-left:auto;"><a href="{{< ref "/docs/deep_learning/fundamentals/back_propagation" >}}">Next: Back Propagation</a></span>
+<span><a href="{{< ref "/docs/deep_learning/regularization" >}}">Previous: Regularization Methods</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/deep_learning/back_propagation" >}}">Next: Back Propagation</a></span>
 </div>
 <!-- nav-panel:end -->

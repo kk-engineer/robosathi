@@ -175,7 +175,7 @@ Similarly, you can calculate for negative and neutral sentiments.
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-<span><a href="{{< ref "/docs/deep_learning/fundamentals/xor_problem" >}}">Previous: XOR Problem</a></span>
-<span style="margin-left:auto;"><a href="{{< ref "/docs/deep_learning/fundamentals/optimization_method" >}}">Next: Optimization Methods</a></span>
+<span><a href="{{< ref "/docs/deep_learning/xor_problem" >}}">Previous: XOR Problem</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/deep_learning/optimization_method" >}}">Next: Optimization Methods</a></span>
 </div>
 <!-- nav-panel:end -->

@@ -2,7 +2,7 @@
 title: Deep Learning
 description: Deep Learning
 date: 2026-04-27
-weight: 1
+weight: 2
 #toc_hide: true
 #draft: true
 ---

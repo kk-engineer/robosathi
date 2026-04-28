@@ -201,7 +201,7 @@ Input: [1. 1.] | Raw Output: 0.0079 | Rounded: 0
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-<span><a href="{{< ref "/docs/deep_learning/fundamentals/intro_to_dl" >}}">Previous: Intro to DL</a></span>
-<span style="margin-left:auto;"><a href="{{< ref "/docs/deep_learning/fundamentals/activation_function" >}}">Next: Activation Functions</a></span>
+<span><a href="{{< ref "/docs/deep_learning/intro_to_dl" >}}">Previous: Intro to DL</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/deep_learning/activation_function" >}}">Next: Activation Functions</a></span>
 </div>
 <!-- nav-panel:end -->
