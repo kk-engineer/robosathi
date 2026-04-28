@@ -17,10 +17,10 @@ math: true
 noise and outliers, i.e, high variance, rather than finding general patterns.
 {{< /panel >}}
 
-{{< panel color="green" title="What does Bagging mean 🤔?" >}}
+{{< panel color="green" title="What does Bagging mean ?" >}}
 **Bagging = ‘Bootstrapped Aggregation'**
 
-Bagging 🎒is a parallel ensemble technique that reduces variance (without significantly increasing the bias) 
+Bagging is a parallel ensemble technique that reduces variance (without significantly increasing the bias) 
 by training multiple versions of the same model on different random subsets of data and then combining their results.
 
 **Note**: Bagging uses deep trees (overfit) and combines them to reduce variance.
@@ -29,7 +29,7 @@ by training multiple versions of the same model on different random subsets of d
 {{< panel color="blue" title="Bootstrapping" >}}
 **Bootstrapping = ‘Without external help'**
 
-Given a training 🏃‍♂️set D of size 'n', we create B new training sets D by sampling 'n' observations from D ‘**with replacement**'.
+Given a training️set D of size 'n', we create B new training sets D by sampling 'n' observations from D ‘**with replacement**'.
 {{< /panel >}}
 
 {{< panel color="navy" title="Bootstrapped Samples" >}}
@@ -38,18 +38,19 @@ while others may not be picked at all.
 - The probability that a specific observation is **not** selected in a bootstrap sample of size 'n' is:
 \[\lim_{n \to \infty} \left(1 - \frac{1}{n}\right)^n = \frac{1}{e} \approx 0.368\]
 
-🧐This means each tree is trained on roughly **63.2%** of the unique data, while the 
+This means each tree is trained on roughly **63.2%** of the unique data, while the 
 remaining **36.8%** (the **Out-of-Bag** or OOB set) can be used for cross validation.
 {{< /panel >}}
 
-{{< panel color="blue" title="Aggregation" >}}
-⭐️Say we train ‘B' models (base-learners), each with variance \(\sigma^2\) .
+{{< panel color="blue" title="Aggregation" id="aggregation" >}}
+Say we train 'B' models (base-learners), each with variance \(\sigma^2\) .
 
-👉Average variance of ‘B' models (trees) if all are independent:
+- Average variance of ‘B' models (trees) if all are independent:
 \[Var(X)=\frac{\sigma^{2}}{B}\]
 
-👉Since, bootstrap samples are derived from the same dataset, the trees are correlated with some 
-correlation coefficient ‘\(\rho\)'.
+[Read more about Average Variance]({{<ref  "/docs/maths/statistics/central_limit_theorem/#clt"  >}})
+- Since, bootstrap samples are derived from the same dataset, the trees are correlated with some 
+correlation coefficient '\(\rho\)'.
 
 So, the true variance of bagged ensemble is:
 \[Var(f_{bag}) = \rho \sigma^2 + \frac{1-\rho}{B} \sigma^2\]

@@ -130,7 +130,7 @@ Fixes the ‘dying ReLU’ problem.
 
 {{< imgproc "images/deep_learning/fundamentals/activation_function/leaky_relu.png" Resize "800x" >}}{{< /imgproc >}}
 
-{{< imgproc "images/deep_learning/fundamentals/activation_function/Leaky_relu_derivative.png" Resize "800x" >}}{{< /imgproc >}}
+{{< imgproc "images/deep_learning/fundamentals/activation_function/leaky_relu_derivative.png" Resize "800x" >}}{{< /imgproc >}}
 
 [Read more about Differentiation]({{<ref  "/docs/maths/calculus/calculus_fundamentals/#differentiation"  >}})
 {{< /panel >}}

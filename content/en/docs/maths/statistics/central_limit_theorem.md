@@ -33,8 +33,8 @@ the sample mean converges to the true the population mean. <br>
 In other words, a long-run average of a repeated random variable approaches the expected value. <br>
 {{</ definition >}}
 
-{{< definition title="Central Limit Theorem" >}}
-This law states that for a sequence of of I.I.D random variables \( X_1, X_2, \dots, X_n \), <br>
+{{< panel color="cyan" title="Central Limit Theorem" id="clt" >}}
+This law states that for a sequence of I.I.D random variables \( X_1, X_2, \dots, X_n \), <br>
 with finite mean and variance, the distribution of the sample mean \( \bar{X} \) approaches a normal distribution 
 as \( n \rightarrow \infty \), regardless of its original population distribution. <br>
 The distribution of the sample mean is : \( \bar{X} \sim N(\mu, \sigma^2/n)\)
@@ -60,7 +60,7 @@ Var[\bar{X_n}] &= Var[\frac{1}{n}(X_1+ X_2+ \dots+ X_n)] \\
 \text{We know that: } Var[X_i] = \sigma^2 \\
 &= \frac{1}{n^2}[\sigma^2 + \sigma^2 + \dots + \sigma^2] \\
 &= \frac{n\sigma^2}{n^2} \\
-=> Var[\bar{X_n}] &= \frac{\sigma^2}{n}
+\implies Var[\bar{X_n}] &= \frac{\sigma^2}{n}
 \end{aligned}
 \]
 
@@ -80,7 +80,8 @@ Z_n \text{ converges in distribution to } N(0,1), \text{ as } n \rightarrow \inf
 \]
 
 *Note: For practical purposes, \(n \ge 30\) is considered as a sufficient sample size for the CLT to hold.* <br>
-{{</ definition >}}
+{{< /panel >}}
+
 {{< panel color="rust" title="Example" >}}
 1. Let's collect the data for height of people in a city to find the average height of people in the city. <br>
 - Sample size (n) = 100 <br>
