@@ -42,8 +42,10 @@ Let's see an example: <br><br>
 {{< imgproc "images/maths/calculus/fundamentals/integration_parabola.png" Resize "800x" >}}{{< /imgproc >}}
 
 \[
-\text{Area under curve} = \int_{-2}^2 f(x) dx = \int_{-2}^2 x^2 dx = \frac{x^3}{3} \big|_{-2}^2
+\begin{aligned}
+\text{Area under curve} = \int_{-2}^2 f(x) dx = \int_{-2}^2 x^2 dx = \frac{x^3}{3} \big|_{-2}^2 \\[10pt]
 = \frac{(2)^3 - (-2)^3}{3} = \frac{8 - (-8)}{3} = \frac{16}{3}
+\end{aligned}
 \]
 
 {{< /panel >}}
@@ -53,11 +55,11 @@ Let's see an example: <br><br>
 {{< panel color="rust" title="Differentiation" id="differentiation" >}}
 Differentiation is a mathematical tool that is used to find the **derivative** or rate of change of a function 
 at a specific point.<br>
-- \(\frac{dy}{dx} = f\prime(x) = tan\theta\) = Derivative = Slope = Gradient 
+- \(\frac{dy}{dx} = f'(x) = tan\theta\) = Derivative = Slope = Gradient 
 - Derivative tells us how fast the function is changing at a specific point in relation to another variable.
 
 _Note: For a line, the slope is constant, but for a parabola, the slope is changing at every point._ <br><br>
-**How do we calculate the slope at a given point?** <br><br>
+**How do we calculate the slope at a given point?**
 {{< imgproc "images/maths/calculus/fundamentals/tangent_secant.png" Resize "800x" >}}{{< /imgproc >}}
 
 <br><br>
@@ -94,58 +96,63 @@ We will understand few important rules of differentiation that are most frequent
 
 1. **Sum Rule**: <br>
 \[
-\frac{d}{dx} (f(x) + g(x)) = \frac{d}{dx} f(x) + \frac{d}{dx} g(x) = f\prime(x) + g\prime(x)
+\frac{d}{dx} (f(x) + g(x)) = \frac{d}{dx} f(x) + \frac{d}{dx} g(x) = f'(x) + g'(x)
 \]
 
 2. **Product Rule**: <br>
 \[
-\frac{d}{dx} (f(x).g(x)) = \frac{d}{dx} f(x).g(x) + f(x).\frac{d}{dx} g(x) = f\prime(x).g(x) + f(x).g\prime(x)
+\frac{d}{dx} (f(x).g(x)) = \frac{d}{dx} f(x).g(x) + f(x).\frac{d}{dx} g(x) = f'(x).g(x) + f(x).g'(x)
 \]
 e.g.: <br>
 \( h(x) = x^2 sin(x) \), find the derivative of h(x) w.r.t x. <br>
-Let, \(f(x) = x^2 , g(x) = sin(x)\). <br>
+Let, \(f(x) = x^2 , g(x) = sin(x)\).
+
 \[
-h(x) = f(x).g(x) \\[10pt]
-=> h\prime(x) = f\prime(x).g(x) + f(x).g\prime(x) \\[10pt]
-=> h\prime(x) = 2x.sin(x) + x^2.cos(x) \\[10pt]
+\begin{aligned}
+h(x) &= f(x).g(x) \\[10pt]
+\implies h'(x) &= f'(x).g(x) + f(x).g'(x) \\[10pt]
+\implies h'(x) &= 2x.sin(x) + x^2.cos(x)
+\end{aligned}
 \]
 
 3. **Quotient Rule**: <br>
 \[
-\frac{d}{dx} \frac{f(x)}{g(x)} = \frac{f\prime(x).g(x) - f(x).g\prime(x)}{(g(x))^2}
+\frac{d}{dx} \frac{f(x)}{g(x)} = \frac{f'(x).g(x) - f(x).g'(x)}{(g(x))^2}
 \]
 e.g.: <br>
 \( h(x) = sin(x)/x \), find the derivative of h(x) w.r.t x. <br>
 Let, \(f(x) = sin(x) , g(x) = x\). <br>
 \[
 h(x) = \frac{f(x)}{g(x)} \\[10pt]
-=> h\prime(x) = \frac{f\prime(x).g(x) - f(x).g\prime(x)}{(g(x))^2} \\[10pt]
-=> h\prime(x) = \frac{cos(x).x - sin(x)}{x^2} \\[10pt]
+\implies h'(x) = \frac{f'(x).g(x) - f(x).g'(x)}{(g(x))^2} \\[10pt]
+\implies h'(x) = \frac{cos(x).x - sin(x)}{x^2} \\[10pt]
 \]
 
 4. **Chain Rule**: <br>
 \[
-\frac{d}{dx} (f(g(x))) = f\prime(g(x)).g\prime(x)
+\frac{d}{dx} (f(g(x))) = f'(g(x)).g'(x)
 \]
 e.g.: <br>
 \( h(x) = log(x^2) \), find the derivative of h(x) w.r.t x. <br>
 Let, \( u = x^2 \)
 \[
 h(x) = log(u) \\[10pt]
-=> h\prime(x) = \frac{d h(x)}{du} \cdot \frac{du}{dx} \\[10pt]
-=> h\prime(x) = \frac{1}{u} \cdot 2x = \frac{2x}{x^2} \\[10pt]
-=> h\prime(x) = \frac{2}{x}
+\implies h'(x) = \frac{d h(x)}{du} \cdot \frac{du}{dx} \\[10pt]
+\implies h'(x) = \frac{1}{u} \cdot 2x = \frac{2x}{x^2} \\[10pt]
+\implies h'(x) = \frac{2}{x}
 \]
 {{< /panel >}}
 
+{{< panel color="grey">}}
 Now, let's dive deeper and understand the concepts that required for differentiation, such as, **limits**, **continuity**, 
 **differentiability**, etc.
+{{< /panel >}}
 
 {{< panel color="blue" title="Limits" >}}
 Limit of a function f(x) at any point 'c' is the value that f(x) approaches, as x gets very close to 'c', <br>
 but NOT necessarily equal to 'c'. <br><br>
 **One-sided limit**: value of the function, as it approaches a point 'c' from only **one** direction, either left or right. <br>
-**Two-sided limit**: value of the function, as it approaches a point 'c' from **both** directions, left and right, simultaneously. <br>
+**Two-sided limit**: value of the function, as it approaches a point 'c' from **both** directions, left and right, simultaneously.
 <br>
 e.g.:
 1. \(f(x) = \frac{1}{x}\), find the limit of f(x) at x = 0. <br>
@@ -154,18 +161,17 @@ Let's check for one-sided limit at x=0: <br>
 \lim_{x \rightarrow 0^+} \frac{1}{x} = + \infty \\[10pt]
 \lim_{x \rightarrow 0^-} \frac{1}{x} = - \infty \\[10pt]
 so, \lim_{x \rightarrow 0^+} \frac{1}{x} ⍯ \lim_{x \rightarrow 0^-} \frac{1}{x} \\[10pt]
-=> \text{ limit does NOT exist at } x = 0.
+\implies \text{ limit does NOT exist at } x = 0.
 \]
 {{< imgproc "images/maths/calculus/fundamentals/limit_1_by_x.png" Resize "800x" >}}{{< /imgproc >}}
 
-<br><br>
 2. \(f(x) = x^2\), find the limit of f(x) at x = 0. <br>
 Let's check for one-sided limit at x=0: <br>
 \[
 \lim_{x \rightarrow 0^+} x^2 = 0 \\[10pt]
 \lim_{x \rightarrow 0^-} x^2 = 0 \\[10pt]
 so, \lim_{x \rightarrow 0^+} x^2 = \lim_{x \rightarrow 0^-} x^2 \\[10pt]
-=> \text{ limit exists at } x = 0.
+\implies \text{ limit exists at } x = 0.
 \]
 {{< imgproc "images/maths/calculus/fundamentals/parabola_convex.png" Resize "800x" >}}{{< /imgproc >}}
 *Note: Two-Sided Limit* <br>
@@ -177,7 +183,7 @@ Let's check for one-sided limit at x=0: <br>
 \lim_{x \rightarrow 0^+} |x| = x = 0 \\[10pt]
 \lim_{x \rightarrow 0^-} |x| = -x = 0 \\[10pt]
 so, \lim_{x \rightarrow 0^+} |x| = \lim_{x \rightarrow 0^-} |x| \\[10pt]
-=> \text{ limit exists at } x = 0.
+\implies \text{ limit exists at } x = 0.
 \]
 {{< imgproc "images/maths/calculus/fundamentals/abs_x.png" Resize "800x" >}}{{< /imgproc >}}
 {{< /panel >}}
@@ -213,22 +219,23 @@ A function must be **continuous** at the given point 'c' to be differentiable at
 *Note: A function can be continuous at a given point, but NOT differentiable at that point.* <br>
 
 \[ 
-f\prime(x) = \lim_{\Delta x \rightarrow 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}
+f'(x) = \lim_{\Delta x \rightarrow 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}
 \]
 
 e.g.: <br>
 We know that \( f(x) = |x| \) is continuous at x=0, but its NOT differentiable at x=0. <br>
 \[
-f\prime(x) =\lim_{\Delta x \rightarrow 0} \frac{f(x + \Delta x) - f(x)}{\Delta x} 
+f'(x) =\lim_{\Delta x \rightarrow 0} \frac{f(x + \Delta x) - f(x)}{\Delta x} 
 = \lim_{\Delta x \rightarrow 0} \frac{|x + \Delta x| - |x|}{\Delta x}  \\[10pt]
-\text{ let's calculate the one-sided limit from both left and right sides and check if they are equal: } \\[10pt]
+\text{ let's calculate the one-sided limit from both left and right sides } \\
+\text{and check if they are equal: } \\[10pt]
 if ~ x>0, \lim_{\Delta x \rightarrow 0^+} \frac{|x + \Delta x| - |x|}{\Delta x}
 = \lim_{\Delta x \rightarrow 0+} \frac{\cancel x + \Delta x - \cancel x}{\Delta x} = 1 \\[10pt]
 if ~ x<0, \lim_{\Delta x \rightarrow 0^-} \frac{|x + \Delta x| - |x|}{\Delta x}
-= \lim_{\Delta x \rightarrow 0^-} \frac{-(x + \Delta x) - (-x)}{\Delta x}
+= \lim_{\Delta x \rightarrow 0^-} \frac{-(x + \Delta x) - (-x)}{\Delta x} \\
 = \lim_{\Delta x \rightarrow 0-} \frac{\cancel {-x} - \Delta x + \cancel x}{\Delta x} = -1 \\[10pt]
-=> \text{ left hand limit (-1) ⍯ right hand limit (1) } \\[10pt]
-=> f\prime(0) \text{ does NOT exist.}
+\implies \text{ left hand limit (-1) ⍯ right hand limit (1) } \\[10pt]
+\implies f'(0) \text{ does NOT exist.}
 \]
 {{< /panel >}}
 
@@ -244,9 +251,9 @@ which are the highest and lowest points in a function's immediate neighborhood, 
 **Maxima:** <br>
 **Highest** point w.r.t immediate neighbourhood. <br>
 f'(x)/gradient/slope changes from +ve to 0 to -ve, therefore, change in f'(x) is -ve. <br>
-=> f''(x) < 0
+\(\implies\) f''(x) < 0
 <br><br>
- Let, \(f(x) = -x^2; \quad f'(x) = -2x; \quad f''(x) = -2 < 0 => maxima\) <br><br>
+ Let, \(f(x) = -x^2; \quad f'(x) = -2x; \quad f''(x) = -2 < 0 \implies maxima\) <br><br>
 |x | f'(x)|
 |---| ----|
 |-1 | 2 |
@@ -258,9 +265,9 @@ f'(x)/gradient/slope changes from +ve to 0 to -ve, therefore, change in f'(x) is
 **Minima:** <br>
 **Lowest** point w.r.t immediate neighbourhood. <br>
 f'(x)/gradient/slope changes from -ve to 0 to +ve, therefore, change in f'(x) is +ve. <br>
-=> f''(x) > 0
+\(\implies\) f''(x) > 0
 <br><br>
-Let, \(f(x) = x^2; \quad f'(x) = 2x; \quad f''(x) = 2 > 0 => minima\) <br><br>
+Let, \(f(x) = x^2; \quad f'(x) = 2x; \quad f''(x) = 2 > 0 \implies minima\) <br><br>
 |x | f'(x)|
 |---| ----|
 |-1 | -2 |
@@ -274,12 +281,14 @@ e.g.: <br>
 To find the maxima and minima, lets take the derivative of the function and equate it to zero. <br>
 \[
 f'(x) = 6x^2 + 10x  = 0\\[10pt]
-=> x(6x+10) = 0 \\[10pt]
-=> x = 0 \quad or \quad x = -10/6 = -5/3 \\[10pt]
-\text{ lets check the second order derivative to find which point is maxima and minima: } \\[10pt]
+\implies x(6x+10) = 0 \\[10pt]
+\implies x = 0 \quad or \quad x = -10/6 = -5/3 \\[10pt]
+\text{ lets check the second order derivative to find } \\
+\text{ which point is maxima and minima: } \\[10pt]
 f''(x) = 12x + 10 \\[10pt]
-=> at ~ x = 0, \quad f''(x) = 12*0 + 10 = 10 >0 \quad => minima \\[10pt]
-=> at ~ x = -5/3, \quad f''(x) = 12*(-5/3) + 10 = -20 + 10 = -10<0 \quad => maxima \\[10pt]
+\implies at ~ x = 0, \quad f''(x) = 12*0 + 10 = 10 >0 \quad \implies minima \\[10pt]
+\implies at ~ x = -5/3, \quad f''(x) = 12*(-5/3) + 10 \\ 
+= -20 + 10 = -10<0  \quad \implies maxima \\[10pt]
 \]
 {{< imgproc "images/maths/calculus/fundamentals/maxima_minima.png" Resize "800x" >}}{{< /imgproc >}}
 
@@ -302,7 +311,7 @@ Gradient = \nabla f_z =
 \\
 0
 \end{bmatrix} \\[10pt]
-=> x=0, y=0 \text{ is a point of optima for } f(x,y)
+\implies x=0, y=0 \text{ is a point of optima for } f(x,y)
 \] 
 <br>
 
@@ -327,7 +336,7 @@ Hessian = H_z =
 \end{bmatrix}
 \]
 <br>
-Since, determinant of Hessian = 4 > 0 and \( \frac{\partial^2 f_z}{\partial x^2} > 0\) => (x=0, y=0) is a point of minima.<br>
+Since, determinant of Hessian = 4 > 0 and \( \frac{\partial^2 f_z}{\partial x^2} > 0 \implies \) (x=0, y=0) is a point of minima.<br>
 
 {{< imgproc "images/maths/calculus/fundamentals/parabolloid.png" Resize "800x" >}}{{< /imgproc >}}
 
@@ -364,7 +373,7 @@ Gradient = \nabla f_z =
 \\
 0
 \end{bmatrix} \\[10pt]
-=> x=0, y=0 \text{ is a point of optima for } f(x,y)
+\implies x=0, y=0 \text{ is a point of optima for } f(x,y)
 \] 
 
 \[
@@ -381,7 +390,7 @@ Hessian = H_z =
 \end{bmatrix}
 \]
 <br>
-Since, determinant of Hessian = -4 < 0 => (x=0, y=0) is a saddle point. <br>
+Since, determinant of Hessian \( = -4 < 0 \implies (x=0, y=0) \) is a saddle point. <br>
 {{< imgproc "images/maths/calculus/fundamentals/saddle_point_1.png" Resize "800x" >}}{{< /imgproc >}}
 
 {{< imgproc "images/maths/calculus/fundamentals/saddle_point_2.png" Resize "800x" >}}{{< /imgproc >}}
