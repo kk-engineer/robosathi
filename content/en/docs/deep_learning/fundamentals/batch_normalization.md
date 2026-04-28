@@ -41,6 +41,7 @@ If the optimal state for the network is something else, it can learn the values 
 - During training, mean(\(\mu\)) and variance(\(\sigma^2\)) come from current mini-batch.
 - At inference (test) time, we use frozen running averages of the mean(\(\mu\)) and variance(\(\sigma^2\)￼) calculated during training.
 
+_Research Paper_: Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift, Ioffe & Szegedy, 2015, https://arxiv.org/pdf/1502.03167
 {{< /panel >}}
 
 {{< panel color="orange" title="Batch Normalization Benefits" >}}
@@ -133,6 +134,6 @@ Model: "sequential_23"
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/deep_learning/fundamentals/regularization" >}}">Previous: Regularization Methods</a></span>
-<span style="margin-left:auto;"><a href="{{< ref "/docs/deep_learning/fundamentals/batch_normalization" >}}">Next: Batch Normalization</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/deep_learning/fundamentals/back_propagation" >}}">Next: Back Propagation</a></span>
 </div>
 <!-- nav-panel:end -->

@@ -91,7 +91,7 @@ e.g.: <br>
 \]
 {{< /panel >}}
 
-{{< panel color="green" title="Rules of Differentiation" >}}
+{{< panel color="green" title="Rules of Differentiation" id="differentiation_rules">}}
 We will understand few important rules of differentiation that are most frequently used in Machine Learning. <br>
 
 1. **Sum Rule**: <br>
