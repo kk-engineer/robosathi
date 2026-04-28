@@ -21,7 +21,7 @@ detecting medical anomalies, or processing natural language, like LLMs.
 🐋 It is "**deep**" because it uses many layers (often hundreds) to automatically extract, transform, 
 and map data features into predictions, surpassing traditional machine learning in handling _unstructured_ data.
 
-🖼️ **A deep neural network for digit classification**
+**A deep neural network for digit classification**
 {{< imgproc "images/deep_learning/fundamentals/intro_to_dl/digit_classification.png" Resize "800x" >}}{{< /imgproc >}}
 
 📘 **Deep learning** is a multistage way to learn data representations. 
@@ -29,7 +29,7 @@ and map data features into predictions, surpassing traditional machine learning 
 💡 It’s a simple idea - but, as it turns out, very simple mechanisms, sufficiently
 scaled, can end up looking like _magic_.
 
-🖼️ **A fully connected neural network**
+**A fully connected neural network**
 {{< imgproc "images/deep_learning/fundamentals/intro_to_dl/neural_network.png" Resize "800x" >}}{{< /imgproc >}}
 
 {{< /definition >}}

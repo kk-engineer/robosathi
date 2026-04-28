@@ -19,7 +19,7 @@ Simplest form of an artificial neural network, acting as a single-layer binary c
 It serves as a mathematical model of a biological neuron, receiving multiple signals (inputs), weighting their importance, 
 and deciding whether to ‘fire’ (output 1) or stay ‘inactive’ (output 0).
 
-🖼️ **Perceptron**
+**Perceptron**
 {{< imgproc "images/deep_learning/fundamentals/xor_problem/perceptron.png" Resize "800x" >}}{{< /imgproc >}}
 
 
@@ -27,7 +27,7 @@ and deciding whether to ‘fire’ (output 1) or stay ‘inactive’ (output 0).
 
 [Read more about Logistic Regression]({{<ref  "/docs/machine_learning/supervised/logistic_regression/" >}})
 
-🖼️ **Logistic Regression as a Neural Network**
+**Logistic Regression as a Neural Network**
 {{< imgproc "images/deep_learning/fundamentals/xor_problem/logistic_regression.png" Resize "800x" >}}{{< /imgproc >}}
 
 {{< /definition >}}

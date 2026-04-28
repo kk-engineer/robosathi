@@ -266,6 +266,7 @@ Model: "sequential_21"
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/deep_learning/fundamentals/optimization_method" >}}">Previous: Optimization_Methods</a></span>
-<span style="margin-left:auto;"><a href="{{< ref "/docs/deep_learning/fundamentals/regularization" >}}">Next: Regularization Methods</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/deep_learning/fundamentals/batch_normalization" >}}">Next: Batch Normalization</a></span>
 </div>
 <!-- nav-panel:end -->
+

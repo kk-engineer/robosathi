@@ -15,7 +15,7 @@ and plateaus rather than a single, global minimum. <br>
 So, in the context of neural network training, we usually do not care about finding the exact (global) minimum of a function, 
 but seek only to reduce its value sufficiently to obtain good generalization error.
 
-🖼️ **Non-Convex Loss Surface Examples**
+**Non-Convex Loss Surface Examples**
 {{< imgproc "images/deep_learning/fundamentals/optimization_method/non_convex_loss_surface_1.png" Resize "800x" >}}{{< /imgproc >}}
 {{< imgproc "images/deep_learning/fundamentals/optimization_method/non_convex_loss_surface_2.png" Resize "800x" >}}{{< /imgproc >}}
 
@@ -126,7 +126,7 @@ where, \(0 < \gamma < 1\)
 
 Say, if \(\gamma\)￼= 0.9, then it means to multiply the maximum velocity by 10 relative to a gradient descent algorithm.
 
-🖼️ **Momentum Based Optimizer Vs SGD**
+**Momentum Based Optimizer Vs SGD**
 {{< imgproc "images/deep_learning/fundamentals/optimization_method/momentum_based.png" Resize "800x" >}}{{< /imgproc >}}
 
 **Limitations**
