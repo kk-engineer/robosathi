@@ -9,6 +9,7 @@ course_outline:
     - page_ref: /docs/natural_language_processing/text_pre_processing
     - page_ref: /docs/natural_language_processing/tokenization
     - page_ref: /docs/natural_language_processing/text_representation
+    - page_ref: /docs/natural_language_processing/recurrent_neural_network
 #toc_hide: true
 #draft: true
 ---

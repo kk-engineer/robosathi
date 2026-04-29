@@ -220,6 +220,6 @@ SentencePiece is not just a new algorithm but a subword regularization framework
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/natural_language_processing/text_pre_processing" >}}">Previous: Text Pre-Processing</a></span>
-<span style="margin-left:auto;"><a href="{{< ref "/docs/natural_language_processing/tokenization" >}}">Next: Tokenization</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/natural_language_processing/text_representation" >}}">Next: Text Representation</a></span>
 </div>
 <!-- nav-panel:end -->
