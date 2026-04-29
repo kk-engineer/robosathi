@@ -14,7 +14,7 @@ How do we measure and minimize these mistakes in predictions made by the model? 
 {{</ question >}}
 
 {{< answer >}}
-To measure, how wrong the are the predictions made by a Machine Learning model, every model is formulated as <br>
+To measure, how wrong are the predictions made by a Machine Learning model, every model is formulated as
 minimizing a loss function.
 {{</ answer >}}
 
@@ -57,7 +57,7 @@ such as, gradient descent.
 [Read more about Differentiability]({{<ref  "/docs/maths/calculus/calculus_fundamentals"  >}})
 <br><br>
 3. So, we choose **squared loss**, i.e, \( (y - \hat y)^2 \), this solves the above issues.
-<br><br>
+
 *Note: In general,  we refer to the cost function as the loss function also, the terms are used interchangeably.*
 <br><br>
 Cost = **Loss** = **Mean Squared Error**(MSE)
@@ -122,19 +122,18 @@ A symmetric matrix is positive semi-definite if and only if: <br>
 
 {{< video "https://youtu.be/apPRfDxWvbM" >}}
 
-{{< panel color="blue" title="Optimization" >}}
+{{< panel color="blue" title="Optimization" id="optimization">}}
 All machine learning algorithms minimize loss (mostly), so we need to find the **optimum parameters** for the model that
 minimizes the loss. <br>
 This is an **optimization** problem, i.e, find the **best solution** from a set of **alternatives**. <br>
-*Note: Convexity ensures that there is only 1 minima for the loss function.* 
-<br><br>
+*Note: Convexity ensures that there is only 1 minima for the loss function.*
 
 **Optimization:** <br>
 It is the iterative procedure of finding the optimum parameter \(x^*\) that minimizes the loss function f(x).
 \[
 x^* = \underset{x}{\mathrm{argmin}}\  f(x)
 \]
-<br>
+
 Let's formulate an optimization problem for a model to minimize the MSE loss function discussed above: <br>
 \[
 Loss = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat y_i)^2 \\[10pt]

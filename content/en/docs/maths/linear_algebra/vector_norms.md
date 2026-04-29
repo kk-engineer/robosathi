@@ -30,17 +30,17 @@ We can change the value of \(p\) to get different norms.
 
 **L1 Norm:** <br>
 It is the sum of absolute values of all the elements of a vector; also known as **Manhattan** distance. <br>
-**p=1**: <br>
+**p=1**:
 \[ {\| x \|_1} = \sum_{i=1}^n |x_i| = |x_1| + |x_2| + ... + |x_n| \]
 
 **L2 Norm:** <br>
 It is the square root of the sum of squares of all the elements of a vector; also known as **Euclidean** distance. <br>
-**p=2**: <br>
+**p=2**:
 \[ {\| x \|_2} =  (\sum_{i=1}^n x_i^2)^{1/2} = \sqrt{x_1^2 + x_2^2 + ... + x_n^2} \]
 
 **L-\(\infty\) Norm:** <br>
 It is the maximum of absolute values of all the elements of a vector; also known as **Chebyshev** distance. <br>
-**p=\(\infty\)**: <br>
+**p=\(\infty\)**:
 \[ {\| x \|_\infty} = \max |x_i| = \lim_{p \to \infty}  (\sum_{i=1}^n |x_i|^p)^{1/p}\]
 {{</ definition >}}
 {{< panel color="rust" title="Example" >}}
@@ -50,10 +50,11 @@ It is the maximum of absolute values of all the elements of a vector; also known
 \({\| x \|_2} = \sqrt{3^2 + (-4)^2} = \sqrt{25} = 5\)
 <br>
 \({\| x \|_\infty} = max(|3|, |-4|) = max(3, 4) = 4\)
-<br><br>
 
 {{< /panel >}}
-{{< definition title="Matrix Norm">}}It is a function that assigns non-negative size or magnitude to a matrix. <br>
+
+{{< panel color="blue" title="Matrix Norm" id="matrix_norm">}}
+It is a function that assigns non-negative size or magnitude to a matrix. <br>
 Matrix Norm is a function that maps a matrix to a non-negative real number, i.e, \({\| \cdot \|} : \mathbb{R}^{m \times n} \rightarrow \mathbb{R}\)
 <br>
 It should satisfy following 3 properties: <br>
@@ -69,15 +70,13 @@ Norm is always greater than or equal to zero, <br>
 There are 2 types of matrix norms: <br>
 1. Element wise norms, e.g,, Frobenius norm
 2. Vector induced norms Frobenius Norm: <br>
-<br><br>
 
 **Frobenius Norm:** <br>
 It is equivalent to the Euclidean norm of the matrix if it were flattened into a single vector. <br>
 If A is a matrix of size \(m \times n\), then, Frobenius norm is defined as: <br>
 \[ {\| A \|_F} = \sqrt{\sum_{i=1}^m \sum_{j=1}^n a_{ij}^2} = \sqrt{Trace(A^TA)} = \sqrt{\sum_i \sigma_i^2}\]
-<br>
+
 \(\sigma_i\) is the \(i\)th singular value of matrix A.
-<br><br>
 
 **Vector Induced Norm:** <br>
 It measures the maximum stretching a matrix can apply when multiplied with a vector, <br>
@@ -86,7 +85,7 @@ where the vector has a unit length under the chosen vector norm. <br>
 **Matrix Induced by Vector P-Norm:** <br>
 **P-Norm**: <br>
 \[ {\| A \|_p} = \max_{{\| x \|_p} =1} \frac{\| Ax \|_p}{\| x \|_p} \]
-<br>
+
 **P=1 Norm**: <br>
 \[ {\| A \|_1} = \max_{1 \le j \le n } \sum_{i=1}^m |a_{ij}| =
 \text{ max absolute column sum } \]
@@ -100,7 +99,7 @@ Also called **Spectral** norm, i.e, maximum factor by which the matrix can stret
 \[ {\| A \|_2} = \sigma_{max}(A) =
 \text{ max singular value of matrix } \]
 
-{{</ definition >}}
+{{< /panel >}}
 
 {{< panel color="rust" title="Example" >}}
 1. Let, matrix \(\mathbf{A} = \begin{bmatrix} a_{11} & a_{12} \\ \\ a_{21} & a_{22} \end{bmatrix}\), then find Frobenius norm.<br><br>

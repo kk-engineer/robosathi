@@ -8,6 +8,7 @@ course_outline:
     - page_ref: /docs/natural_language_processing/intro_to_nlp
     - page_ref: /docs/natural_language_processing/text_pre_processing
     - page_ref: /docs/natural_language_processing/tokenization
+    - page_ref: /docs/natural_language_processing/text_representation
 #toc_hide: true
 #draft: true
 ---
