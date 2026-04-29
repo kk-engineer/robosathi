@@ -12,12 +12,12 @@ math: true
 Over-Fitting happens when we have a complex model that creates highly erratic curve to fit 
 every single data point, including the random noise.
 
-- Excellent performance on training 🏃‍♂️ data, but poor performance on unseen data.
+- Excellent performance on training data, but poor performance on unseen data.
 {{< /panel >}}
 
 {{< panel color="green" title="How to Avoid Over-Fitting ?" >}}
 - Penalty for overly complex models, i.e, models with excessively large or numerous parameters.
-- Focus on learning general patterns rather than memorizing 🧠 everything, including noise in training 🏃‍♂️data.
+- Focus on learning general patterns rather than memorizing everything, including noise in training ‍♂️data.
 {{< /panel >}}
 
 {{< panel color="blue" title="Regularization" >}}

@@ -9,21 +9,21 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcQTrzlCVhQOtpvVbWsft3a" 
 "Anomaly Detection | All Videos" >}}
 
-{{< panel color="green" title="Use Case 🐝" >}}
+{{< panel color="green" title="Use Case " >}}
 Detect anomalies in **multivariate Gaussian** data, such as, biometric data (height/weight) where features 
 are **normally distributed** and **correlated**.
 
 **Assumption**: The data can be modeled by a Gaussian distribution.
 {{< /panel >}}
 
-{{< panel color="cyan" title="Intuition 💡" >}}
+{{< panel color="cyan" title="Intuition " >}}
 In a normal distribution, most data points _cluster around the mean_, and the probability density decreases 
 as we move farther away from the center.
 
 {{< imgproc "images/machine_learning/unsupervised/anomaly_detection/elliptic_envelope/slide_03_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="red" title="Issue with Euclidean Distance 🐲" >}}
+{{< panel color="red" title="Issue with Euclidean Distance " >}}
 🌍 Euclidean distance measures the simple straight-line distance from the center of the cloud.
 
 👉If the data is spherical, this works fine.
@@ -42,17 +42,17 @@ and then measures the Euclidean distance in that transformed space.
 \[D_M(x) = \sqrt{(x - \mu)^T \Sigma^{-1} (x - \mu)}\]
 {{< /panel >}}
 
-{{< panel color="red" title="Problem 🦀" >}}
+{{< panel color="red" title="Problem " >}}
 Standard methods (like Z-score \(z = \frac{x-\mu}{\sigma}\)) fail because they are easily **skewed** by the **outliers** 
 they are trying to find.
 {{< /panel >}}
 
-{{< panel color="green" title="Solution 🦉" >}}
+{{< panel color="green" title="Solution " >}}
 💡_Instead of using all data_, we find a 'clean' **subset** of the data that is most tightly packed and 
 use only that subset to define the '**normal**' ellipse.
 {{< /panel >}}
 
-{{< panel color="orange" title="Goal 🎯" >}}
+{{< panel color="orange" title="Goal " >}}
 👉Find the _most dense core_ of the data.
 \[D_M(x) = \sqrt{(x - \mu)^T \Sigma^{-1} (x - \mu)}\]
 
@@ -63,7 +63,7 @@ use only that subset to define the '**normal**' ellipse.
 👉 \(\text {Small} ~ \Sigma \rightarrow  \text {Large} ~\Sigma ^{-1}\rightarrow  \text {Large} ~ D_{M} ~\text {for outliers}\)
 {{< /panel >}}
 
-{{< panel color="blue" title="Minimum Covariance Determinant (MCD) Algorithm ⚙️" >}}
+{{< panel color="blue" title="Minimum Covariance Determinant (MCD) Algorithm" >}}
 MCD algorithm is used to find the **covariance matrix** \(\Sigma\) with minimum **determinant**, so that the 
 volume of the **ellipsoid** is **minimized**.
 
@@ -76,7 +76,7 @@ representing '**robust**' **majority** of the data.
    - **Select New Subset**: Identify the 'h' points with the smallest **Mahalanobis** distances.
      - These are the points **most centrally located** relative to the current ellipsoid.
    - **Update Estimates**: Calculate a new and based only on these 'h' most central points. 
-   - **Repeat** 🔁: The steps repeat until the determinant stops shrinking.
+   - **Repeat** : The steps repeat until the determinant stops shrinking.
 
 **Note**: Select the best subset that achieved the absolute minimum determinant.
 
@@ -86,7 +86,7 @@ representing '**robust**' **majority** of the data.
 - Assumptions
   - Gaussian data.
   - Unimodal data (single center).
-- Cost 💰of covariance matrix \(\Sigma^{-1}\) inversion is O(d^3).
+- Cost of covariance matrix \(\Sigma^{-1}\) inversion is O(d^3).
   {{< /panel >}}
 
 {{< video "https://youtu.be/XItazQ0xZUs" >}}

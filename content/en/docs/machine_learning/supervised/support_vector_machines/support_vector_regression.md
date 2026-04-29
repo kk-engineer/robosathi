@@ -9,7 +9,7 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfFECdHEHPM6NjErmLmg2Ff" 
 "Support Vector Machine | All Videos" >}}
 
-{{< panel color="cyan" title="Intuition 💡" >}}
+{{< panel color="cyan" title="Intuition " >}}
 👉Imagine a ‘**tube**' of radius \(\epsilon\) **surrounding** the **regression line**.
 - Points inside the tube are considered ‘**correct**' and incur zero penalty.
 - Points outside the tube are **penalized** based on their distance from the tube's boundary.
@@ -63,7 +63,7 @@ Subject to:
 {{< panel color="green" title="Inference & Kernel Trick" >}}
 \[f(z) = \sum_{i \in SV} (\alpha_i - \alpha_i^*) \mathbf{K(x_i, z)} + w_0\]
 
-- 👉 For non-linear SVR we replace dot product \(x_i^T x_j\) with kernel function \(K(x_i, x_j)\).
+- For non-linear SVR we replace dot product \(x_i^T x_j\) with kernel function \(K(x_i, x_j)\).
 - ✅ Model needs to store only support vectors, i.e, points where \(|\alpha_i - \alpha_i^*| > 0\).
 - ⭐️\(\xi_i =0 \) for a point that lies exactly on the boundary, so we can use that to calculate the bias (\(w_0\)):
 

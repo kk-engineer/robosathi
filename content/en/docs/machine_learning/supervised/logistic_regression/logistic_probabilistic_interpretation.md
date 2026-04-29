@@ -10,7 +10,7 @@ math: true
 "Logistic Regression | All Videos" >}}
 
 {{< panel color="green" title="Why do we use Log Loss in Binary Classification?" >}}
-To understand that let's have a look 👀at the statistical assumptions.
+To understand that let's have a look at the statistical assumptions.
 {{< /panel >}}
 
 {{< panel color="orange" title="Bernoulli Assumption" >}}
@@ -25,7 +25,7 @@ Combining above 2 into 1 equation gives:
 {{< panel color="blue" title="Maximum Likelihood Estimate (MLE)" >}}
 _'Find the most plausible explanation for what I see.'_
 
-We want to **find** the **weights** 🏋️‍♀️‘w' that **maximize** the **likelihood** of seeing the **data**.
+We want to **find** the **weights** 'w' that **maximize** the **likelihood** of seeing the **data**.
 - Data, D = \(\{ (x_i, y_i)_{i=1}^n , \quad y_i \in \{0,1\} \}\)
 
 We do this by maximizing likelihood function.
@@ -37,11 +37,11 @@ We do this by maximizing likelihood function.
 **Assumption**: Training data is I.I.D.
 {{< /panel >}}
 
-{{< panel color="red" title="Problem 🦀" >}}
+{{< panel color="red" title="Problem " >}}
 Multiplying many small probabilities is computationally difficult and prone to numerical errors.
 {{< /panel >}}
 
-{{< panel color="green" title="Solution🦉" >}}
+{{< panel color="green" title="Solution" >}}
 A common simplification is to maximize the log-likelihood function instead, which converts the product into a sum.
 
 **Note**: Log is a strictly monotonically increasing function.

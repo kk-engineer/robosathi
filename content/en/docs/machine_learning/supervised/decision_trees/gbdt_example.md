@@ -12,7 +12,7 @@ math: true
 {{< panel color="green" title="Gradient Boosted Decision Tree (GBDT)" >}}
 Gradient Boosted Decision Tree (GBDT) is a decision tree based implementation of Gradient Boosting Machine (GBM).
 
-GBM treats the final model \(F_m(x)\) as weighted 🏋️‍♀️ sum of ‘m' weak learners (decision trees):
+GBM treats the final model \(F_m(x)\) as weighted sum of 'm' weak learners (decision trees):
 \[ F_{M}(x)=\underbrace{F_{0}(x)}_{\text{Initial\ Guess}}+\nu \sum _{m=1}^{M}\underbrace{\left(\sum _{j=1}^{J_{m}}\gamma _{jm}\mathbb{I}(x\in R_{jm})\right)}_{\text{Decision\ Tree\ }h_{m}(x)}\]
 - \(F_0(x)\): The initial base model (usually a constant).
 - M: The total number of boosting iterations (number of trees).
@@ -25,10 +25,10 @@ GBM treats the final model \(F_m(x)\) as weighted 🏋️‍♀️ sum of ‘m' 
 
 {{< panel color="orange" title="Algorithm" >}}
 - Step 1: Initialization.
-- Step 2: Iterative loop 🔁 : for i=1 to m.
+- Step 2: Iterative loop : for i=1 to m.
 - 2.1: Calculate pseudo residuals ‘\(r_{im}\)'.
-- 2.2: Fit a regression tree 🌲‘\(h_m(x)\)'.
-- 2.3:Compute leaf 🍃weights 🏋️‍♀️ ‘\(\gamma_{jm}\)'.
+- 2.2: Fit a regression tree '\(h_m(x)\)'.
+- 2.3:Compute leaf weights '\(\gamma_{jm}\)'.
 - 2.4:Update the model.
 {{< /panel >}}
 

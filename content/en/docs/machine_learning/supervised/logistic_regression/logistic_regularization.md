@@ -15,10 +15,10 @@ What happens to the weights of Logistic Regression if the data is perfectly line
 {{</ question >}}
 
 {{< answer >}}
-The weights 🏋️‍♀️ will tend towards infinity, preventing a stable solution.
+The weights will tend towards infinity, preventing a stable solution.
 
 The model tries to make probabilities exactly 0 or 1, but the sigmoid function never reaches these limits, 
-leading to extreme weights 🏋️‍♀️ to push  probabilities near the extremes.
+leading to extreme weights to push probabilities near the extremes.
 
 - **Distance of Point**: \(z = \mathbf{w^Tx} + w_0\)
 - **Prediction**: \(\hat{y} = \sigma(z) = \frac{1}{1 + e^{-z}}\)
@@ -29,12 +29,12 @@ leading to extreme weights 🏋️‍♀️ to push  probabilities near the extr
 
 {{< panel color="red" title="Why is it a problem ?" >}}
 **Overfitting**: <br>
-Model becomes perfectly accurate on training 🏃‍♂️data but **fails** to **generalize**, performing poorly on unseen data.
+Model becomes perfectly accurate on training data but **fails** to **generalize**, performing poorly on unseen data.
 {{< /panel >}}
 
-{{< panel color="green" title="Solution 🦉" >}}
+{{< panel color="green" title="Solution " >}}
 **Regularization**: <br>
-Adds a penalty term to the loss function, **discouraging** weights 🏋️‍♀️ from _becoming too large_.
+Adds a penalty term to the loss function, **discouraging** weights from _becoming too large_.
 {{< /panel >}}
 
 {{< panel color="navy" title="L1 Regularization" >}}

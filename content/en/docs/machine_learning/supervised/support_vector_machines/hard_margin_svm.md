@@ -24,8 +24,8 @@ math: true
 \end{aligned}
 \]
 
-- 🐎 Distance(signed) of a hyperplane from origin = \(\frac{-w_0}{\|w\|}\)
-- 🦣 Margin width = distance(\(\pi^+, \pi^-\))
+- Distance(signed) of a hyperplane from origin = \(\frac{-w_0}{\|w\|}\)
+- Margin width = distance(\(\pi^+, \pi^-\))
 - = \(\frac{1-w_0 - (-1 -w_0)}{\|w\|}\) = \(\frac{1-\cancel{w_0} + 1 + \cancel{w_0})}{\|w\|}\)
 - distance(\(\pi^+, \pi^-\)) = \(\frac{2}{\|w\|}\)
 
@@ -34,9 +34,9 @@ math: true
 [Read more about Hyperplane]({{<ref  "/docs/maths/linear_algebra/hyperplane/"  >}}) 
 {{< /panel >}}
 
-{{< panel color="orange" title="Goal 🎯" >}}
+{{< panel color="orange" title="Goal " >}}
 - Separating hyperplane \(\pi\) is exactly equidistant from \(\pi^+\) and  \(\pi^-\).
-- We want to maximize the margin between +ve(🐶) and -ve (😸) points.
+- We want to maximize the margin between +ve() and -ve () points.
 {{< /panel >}}
 
 {{< panel color="red" title="Constraint" >}}
@@ -46,7 +46,7 @@ math: true
 \[y_{i}.(w^{T}x_{i}+w_{0})≥1\]
 {{< /panel >}}
 
-{{< panel color="green" title="Optimization ⚖️" >}}
+{{< panel color="green" title="Optimization" >}}
 \[\max_{w, w_0} \frac{2}{\|w\|}\]
 such that, \(y_i.(w^Tx_i + w_0) \ge 1\)
 {{< /panel >}}

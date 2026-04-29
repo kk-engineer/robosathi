@@ -46,7 +46,7 @@ Let's understand this by the examples below:
 {{< panel color="red" title="Problem # 2" >}}
 🦀 What happens if the number of words ‘d' is very large ?
 
-👉 Multiplying 500 times will result in a number so small a computer 💻 cannot store it (**underflow**).
+👉 Multiplying 500 times will result in a number so small a computer cannot store it (**underflow**).
 
 **Note**: Computers have a limit to store floating point numbers, e.g., 32 bit: \(1.175 x 10^{-38}\)
 {{< /panel >}}

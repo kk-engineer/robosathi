@@ -12,7 +12,7 @@ math: true
 {{< panel color="blue" title="Text Pre-Processing" >}}
 ❌ Raw text is messy and inconsistent.
 
-e.g., "WOw!!! The new iphone 18 pro is SOOO good! 😍 I luvv it... best phone ever? Check it out at someCoolSite.com
+e.g., "WOw!!! The new iphone 18 pro is SOOO good! I luvv it... best phone ever? Check it out at someCoolSite.com
 #tech #apple"
 
 So, first we need to do some pre-processing of this messy text, before it can be used for model training. <br>
@@ -25,7 +25,7 @@ There are 2 main steps:
 {{< panel color="green" title="Cleaning" >}}
 Removing punctuation, lowercasing, stop word removal and stripping special characters.
 
- - Input: “🙋‍♂️ Hello, together we will learn NLP (Natural Language Processing)!!!”:
+ - Input: “‍♂️ Hello, together we will learn NLP (Natural Language Processing)!!!”:
  - Output: “hello learn nlp natural language processing”
 {{< /panel >}}
 

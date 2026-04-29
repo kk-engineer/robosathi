@@ -9,7 +9,7 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcg0tJ0CAqPKjDk6Ry_atqu" 
 "Feature Engineering | All Videos" >}}
 
-{{< panel color="cyan" title="Real World 🌎 Data" >}}
+{{< panel color="cyan" title="Real World Data" >}}
 **Messy and Incomplete.** <br>
 We need to pre-process the data to make it:
 - Clean
@@ -29,8 +29,8 @@ We need to pre-process the data to make it:
   - e.g. In some survey, the age of many females are missing, because they may not like to disclose the information.
 - **Missing Not At Random (MNAR)**
   - The probability of missingness is directly related to the unobserved missing value itself.
-  - e.g. Individuals with very high incomes 💰may intentionally refuse to report their salary due to privacy concerns, 
-  making the missing data directly dependent on the high income 💰value itself.
+  - e.g. Individuals with very high incomes may intentionally refuse to report their salary due to privacy concerns, 
+  making the missing data directly dependent on the high income value itself.
 {{< /panel >}}
 
 {{< panel color="green" title="Handle Missing Values (Imputation)" >}}
@@ -48,7 +48,7 @@ We need to pre-process the data to make it:
   - Creates multiple datasets, using slightly different random starting points.
 {{< /panel >}}
 
-{{< panel color="blue" title="Handle Outliers 🦄" >}}
+{{< panel color="blue" title="Handle Outliers " >}}
 🦄 Outliers are **extreme** or **unusual** data points, can mislead models, causing **inaccurate** predictions.
 - **Remove** invalid or corrupted data.
 - **Replace** (**Impute**): Median or capped value to reduce impact.

@@ -11,12 +11,12 @@ math: true
 {{< panel color="blue" title="Predict Salary" >}}
 Let's understand linear regression using an example to predict salary.
 
-Predict the salary 💰 of an IT employee, based on various factors, such as, years of experience, domain, role, etc.
+Predict the salary of an IT employee, based on various factors, such as, years of experience, domain, role, etc.
 {{< imgproc "images/machine_learning/supervised/linear_regression/salary_prediction.png" Resize "400x" >}}{{< /imgproc >}}
 
 Let's start with a simple problem and predict the salary using only one input feature.
 
-**Goal** 🎯 : Find the line of best fit.
+**Goal** : Find the line of best fit.
 
 **Plot: Salary vs Years of Experience**
 \[y = mx + c = w_1x + w_0\]
@@ -24,7 +24,7 @@ Let's start with a simple problem and predict the salary using only one input fe
 **Intercept** = \(c = w_0\) <br>
 
 {{< imgproc "images/machine_learning/supervised/linear_regression/salary_yoe.png" Resize "1400x" >}}{{< /imgproc >}}
-Similarly, if we include other factors/features impacting the salary 💰, such as, domain, role, etc, 
+Similarly, if we include other factors/features impacting the salary , such as, domain, role, etc, 
 we get an equation of a fitting **hyperplane**:
 
 \[y = w_1x_1 + w_2x_2 + \dots + w_dx_d + w_0\]
@@ -61,7 +61,7 @@ where, N = number of training samples.
 
 *Note: Fitting hyperplane (\(y = w_1x_1 + w_2x_2 + \dots + w_dx_d + w_0\)) is the model.*
 <br>
-**Objective** 🎯: find the parameters/weights (\(w_0, w_1, w_2, \dots w_d \)) of the model.
+**Objective** : find the parameters/weights (\(w_0, w_1, w_2, \dots w_d \)) of the model.
 <br>
  
 \(\mathbf{w} = \begin{bmatrix} w_1 \\ w_2 \\ \vdots \\ w_d \end{bmatrix}_{\text{d x 1}}\)
@@ -84,10 +84,10 @@ _{\text{n x d}}
 **Error = Actual - Predicted**
 \[ \epsilon_i = y_i - \hat{y_i}\]
 
-**Goal** 🎯: Minimize error between actual and predicted.
+**Goal** : Minimize error between actual and predicted.
 {{< /panel >}}
 
-{{< panel color="navy" title="Loss 💸 Function" >}}
+{{< panel color="navy" title="Loss Function" >}}
 We can **quantify** the **error** for a **single** data point in following ways:
 - **Absolute error** = \(|y_i - \hat{y_i}|\)
 - **Squared error** = \((y_i - \hat{y_i})^2\)
@@ -100,7 +100,7 @@ We can **quantify** the **error** for a **single** data point in following ways:
 {{< imgproc "images/machine_learning/supervised/linear_regression/absolute_value_function.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="navy" title="Cost 💰 Function" >}}
+{{< panel color="navy" title="Cost Function" >}}
 **Average loss** across all data points. <br>
 
 **Mean Squared Error (MSE)** = \[ J(w) = \frac{1}{n} \sum_{i=1}^N (y_i - \hat{y_i})^2 \]

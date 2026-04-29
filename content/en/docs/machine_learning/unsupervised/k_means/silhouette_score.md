@@ -13,8 +13,8 @@ math: true
 - ✅ **Elbow Method**: Quickest to compute; good for initial EDA.
 - ✅ **Dunn Index**: Focuses on the ‘gap' between the closest clusters.
 <br>------- We have seen the above 2 methods in the previous section ----------
-- 👉 **Silhouette Score**: Balances compactness and separation.
-- 👉 _Domain specific knowledge and system constraints_.
+- **Silhouette Score**: Balances compactness and separation.
+- _Domain specific knowledge and system constraints_.
 {{< /panel >}}
 
 {{< panel color="orange" title="Silhouette Score [-1, 1]" >}}
@@ -60,8 +60,8 @@ showing how well each data point fits within its cluster.
 {{< /panel >}}
 
 {{< panel color="orange" title="Geometric Interpretation" >}}
-- ⛳️ Like K-Means, the Silhouette Score (when using Euclidean distance) **assumes convex clusters**.
-- 🌘 If we use it on **'Moon' shaped clusters**, it will give a **low score** even if the clusters are perfectly separated, 
+- Like K-Means, the Silhouette Score (when using Euclidean distance) **assumes convex clusters**.
+- If we use it on **'Moon' shaped clusters**, it will give a **low score** even if the clusters are perfectly separated, 
 because the '**average distance**' to a **neighbor** might be small due to the **curvature** of the manifold.
 {{< imgproc "images/machine_learning/unsupervised/k_means/silhouette_score/slide_11_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}

@@ -57,7 +57,7 @@ neighborhood information is crucial for classification.<br><br>
 Agent learns to make optimal decisions by interacting with an environment, receiving rewards (positive feedback) 
 or penalties (negative feedback) for its actions. <br>
 
-* Mimic human trial-and-error learning to achieve a goal 🎯.
+* Mimic human trial-and-error learning to achieve a goal .
 {{< /definition >}}
 
 {{< panel color="orange" title="Key Components of Reinforcement Learning" >}}
@@ -69,7 +69,7 @@ and the consequences of the agent's actions.
 - **Reward:** A numerical signal received by the agent from the environment, indicating the desirability of an action taken 
 in a specific state. <br>
 *Positive* rewards encourage certain behaviors, while *negative* rewards (penalties) discourage them.
-- **Policy:** The strategy or mapping that defines which action the agent should take in each state to maximize long-term rewards 💰.
+- **Policy:** The strategy or mapping that defines which action the agent should take in each state to maximize long-term rewards .
 
 {{< /panel >}}
 

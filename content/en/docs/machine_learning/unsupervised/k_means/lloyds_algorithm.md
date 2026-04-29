@@ -9,7 +9,7 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxddB_on_ZQ0pzP6C6gRHR_i" 
 "K Means Clustering | All Videos" >}}
 
-{{< panel color="cyan" title="Idea 💡" >}}
+{{< panel color="cyan" title="Idea " >}}
 Since, we cannot enumerate all partitions (i.e, partitioning 'n' observations into ‘k' distinct, non-overlapping clusters), 
 Lloyd's algorithm provides a local search **heuristic** (**approximate** algorithm).
 {{< /panel >}}
@@ -30,7 +30,7 @@ Iterative method for partitioning 'n' data points into ‘k' groups by repeatedl
   - For each cluster j: μⱼ = (1/|Cⱼ|) Σₓᵢ∈Cⱼ xᵢ
 {{< /panel >}}
 
-{{< panel color="red" title="Issues🚨" >}}
+{{< panel color="red" title="Issues" >}}
 - Initialization sensitive, different initialization may lead to different clusters.
 - Tries to make each cluster of same size that may not be the case in real world.
 - Tries to make each cluster with same density(variance)
@@ -46,7 +46,7 @@ Iterative method for partitioning 'n' data points into ‘k' groups by repeatedl
 {{< /panel >}}
 
 {{< panel color="green" title="Solutions" >}}
-✅ Do multiple runs 🏃‍♂️and choose the clustering with minimum error. <br>
+✅ Do multiple runs and choose the clustering with minimum error. <br>
 ✅ Do not select initial points randomly, but some logic, such as, K-means++ algorithm. <br>
 ✅ Use hierarchical clustering or density based clustering DBSCAN.
 {{< /panel >}}

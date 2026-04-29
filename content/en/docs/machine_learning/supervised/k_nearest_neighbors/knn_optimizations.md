@@ -19,7 +19,7 @@ Naive KNN needs some improvements to fix some of its drawbacks.
 {{< panel color="green" title="Standardization" >}}
 ⭐️Say one feature is ‘Annual Income' (0-1M), and another feature is ‘Years of Experience' (0-40).
 
-👉The Euclidean distance will be almost entirely dominated by income 💵.
+👉The Euclidean distance will be almost entirely dominated by income .
 
 💡So, we do standardization of each feature, such that it has a mean, \(\mu\)=0 and variance,\(\sigma\)=1.
 \[z=\frac{x-\mu}{\sigma}\]
@@ -30,13 +30,13 @@ Naive KNN needs some improvements to fix some of its drawbacks.
 
 💡A neighbor that is 0.1units away should have more influence than a neighbor that is 10 units away.
 
-👉We assign weight 🏋️‍♀️ to each neighbor; most common strategy is inverse of squared distance.
+👉We assign weight to each neighbor; most common strategy is inverse of squared distance.
 \[w_i = \frac{1}{d(x_q, x_i)^2 + \epsilon}\]
 
 **Improvements**:
 - Noise/Outlier: Reduces the impact of ‘noise' or ‘outlier' (distant neighbors).
 - Imbalanced Data: Closer points dominate, mitigating impact of imbalanced data. 
-  - e.g: If you have a query point surrounded by 2 very close ‘Class A' points and 3 distant ‘Class B' points, weighted 🏋️‍♀️ KNN will correctly pick ‘Class A'.
+  - e.g: If you have a query point surrounded by 2 very close ‘Class A' points and 3 distant ‘Class B' points, weighted ️‍♀️ KNN will correctly pick ‘Class A'.
  
 {{< /panel >}}
 
@@ -56,7 +56,7 @@ Naive KNN needs some improvements to fix some of its drawbacks.
 {{< /panel >}}
 
 {{< panel color="red" title="Runtime Issue" >}}
-🦀Naive KNN shifts all computation 💻 to inference time ⏰, and it is very slow.
+Naive KNN shifts all computation to inference time, and it is very slow.
 - To find the neighbor for one query, we must touch every single bit of the ‘nxd' matrix.
 - If n=10^9,a single query would take seconds, but we need milliseconds.
 {{< /panel >}}
@@ -64,11 +64,11 @@ Naive KNN needs some improvements to fix some of its drawbacks.
 {{< panel color="green" title="Advanced Optimizations" >}}
 - Distance Weighted KNN
   - **K-D Trees** (d<20): Recursively partitions space into axis-aligned hyper-rectangles. O(log N ) search.
-  - **Ball Trees** : High dimensional data; **Haversine** distance for geospatial 🌎 data.
+  - **Ball Trees** : High dimensional data; **Haversine** distance for geospatial data.
 - **Approximate Nearest Neighbors (ANN)**
-  - **Locality Sensitive Hashing (LSH)**: Uses ‘bucketizing' 🗑️ hashes. Points that are close have a high probability of having the same hash.
+  - **Locality Sensitive Hashing (LSH)**: Uses ‘bucketizing' ️ hashes. Points that are close have a high probability of having the same hash.
   - **Hierarchical Navigable Small World (HNSW)**; Graph of vectors; Search is a ‘greedy walk' across levels.
-- **Product Quantization** (Reduce memory 🧠 footprint 👣 of high dimensional vectors)
+- **Product Quantization** (Reduce memory footprint of high dimensional vectors)
   - **ScaNN** (Google)
   - **FAISS** (Meta)
 - **Dimensionality Reduction** (Mitigate 'Curse of Dimensionality')

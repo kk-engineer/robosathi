@@ -12,8 +12,7 @@ math: true
 {{< panel color="red" title="Issue with K-Means" >}}
 - K-means uses Euclidean distance and assumes that clusters are spherical (isotropic) and have the same variance across all dimensions.
 - Places a circle or sphere around each centroid.
-  - What if the clusters are elliptical ? 🤔
-
+  - What if the clusters are elliptical ? 
 👉K-Means Fails with Elliptical Clusters.
 {{< imgproc "images/machine_learning/unsupervised/gaussian_mixture_model/introduction_gaussian_mixture_models/slide_02_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}

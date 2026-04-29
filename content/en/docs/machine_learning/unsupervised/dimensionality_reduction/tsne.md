@@ -9,12 +9,12 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxc3nlviPEjCfl5drLYy2aRF" 
 "Dimensionality Reduction Techniques | All Videos" >}}
 
-{{< panel color="green" title="Use Case 🐝" >}}
+{{< panel color="green" title="Use Case " >}}
 ⭐️ Visualizing complex datasets, such as MNIST handwritten digits, text embeddings, or biological data, 
 where clusters are expected to form naturally.
 {{< /panel >}}
 
-{{< panel color="cyan" title="Intuition 💡" >}}
+{{< panel color="cyan" title="Intuition " >}}
 👉 PCA preserves variance, not neighborhoods. <br>
 🔬 t-SNE focuses on the '**neighborhood**' (local structure).
 
@@ -27,14 +27,14 @@ text embeddings) in a lower-dimensional space (typically 2D or 3D) by preserving
 and patterns visible.
 {{< /panel >}}
 
-{{< panel color="red" title="Problem 🦀" >}}
+{{< panel color="red" title="Problem " >}}
 👉 Map high-dimensional points to low-dimensional points , such that the pairwise similarities are preserved, while solving the ‘crowding problem' (where points collapse into a single cluster).
 
 👉 **Crowding Problem**
 {{< imgproc "images/machine_learning/unsupervised/dimensionality_reduction/tsne/slide_05_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="green" title="Solution 🦉" >}}
+{{< panel color="green" title="Solution " >}}
 📌 Convert Euclidean distances into **conditional probabilities** representing **similarities**. <br>
 ⚖️ Minimize the **divergence** between the probability distributions of the **high-dimensional (Gaussian)** 
 and **low-dimensional (t-distribution)** spaces.
@@ -42,7 +42,7 @@ and **low-dimensional (t-distribution)** spaces.
 **Note**: **Probabilistic** approach to defining neighbors is the core '**stochastic**' element of the algorithm's name.
 {{< /panel >}}
 
-{{< panel color="blue" title="High Dimensional Space 🚀(Gaussian)" >}}
+{{< panel color="blue" title="High Dimensional Space (Gaussian)" >}}
 💡The **similarity** of datapoint \(x_j\) to datapoint \(x_i\) is the conditional probability \(p_{j|i}\), 
 that \(x_i\) would pick \(x_j\) as its **neighbor**. 
 
@@ -55,8 +55,8 @@ that \(x_i\) would pick \(x_j\) as its **neighbor**.
 
 {{< /panel >}}
 
-{{< panel color="orange" title="Low Dimensional Space 🚀 (t-distribution)" >}}
-🧠 To solve the crowding problem, we use a **heavy-tailed** 🦨 distribution 
+{{< panel color="orange" title="Low Dimensional Space (t-distribution)" >}}
+🧠 To solve the crowding problem, we use a **heavy-tailed** distribution 
 (Student's-t distribution with degree of freedom \(\nu=1\)).
 \[q_{ij} = \frac{(1 + ||y_i - y_j||^2)^{-1}}{\sum_{k \neq l} (1 + ||y_k - y_l||^2)^{-1}}\]
 
@@ -65,13 +65,13 @@ mapped further apart, preventing clusters from collapsing and ensuring visual se
 {{< imgproc "images/machine_learning/unsupervised/dimensionality_reduction/tsne/slide_10_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="green" title="Optimization 🕸️" >}}
+{{< panel color="green" title="Optimization ️" >}}
 👉 Measure the difference between the distributions 'p' and 'q' using the **Kullback-Leibler (KL) divergence**,
 which we aim to minimize:
 \[C = KL(P||Q) = \sum_i \sum_j p_{ij} \log \frac{p_{ij}}{q_{ij}}\]
 {{< /panel >}}
 
-{{< panel color="orange" title="Gradient Descent 🎢" >}}
+{{< panel color="orange" title="Gradient Descent " >}}
 🏔️ Use gradient descent to iteratively adjust the positions of the low-dimensional points \(y_i\).
 
 👉 The gradient of the KL divergence is:
@@ -87,7 +87,7 @@ a Gaussian distribution.
 - \((1+||y_{i}-y_{j}||^{2})^{-1}\): term comes from the heavy-tailed Student's t-distribution, which helps mitigate the ‘crowding problem' by allowing points that are moderately far apart to have a small attractive force.
 {{< /panel >}}
 
-{{< panel color="green" title="Interpretation 🦒" >}}
+{{< panel color="green" title="Interpretation " >}}
 💡 The gradient can be understood as a force acting on each point \(y_i\) in the low-dimensional map:
 \[\frac{\partial C}{\partial y_{i}}=4\sum _{j\ne i}(p_{ij}-q_{ij})(y_{i}-y_{j})(1+||y_{i}-y_{j}||^{2})^{-1}\]
 - Attractive forces: If \(p_{ij}\) is large ⬆️ and \(q_{ij}\) is small ⬇️ (meaning two points were close in 
@@ -113,7 +113,7 @@ pushing \(y_i\) and \(y_j\) apart.
 {{< imgproc "images/machine_learning/unsupervised/dimensionality_reduction/tsne/slide_15_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="orange" title="Perplexity 😵‍💫" >}}
+{{< panel color="orange" title="Perplexity ‍" >}}
 🏘️ User-defined parameter that loosely relates to the effective number of neighbors.
 
 **Note**: Variance \(\sigma_i^2\) (Gaussian) is adjusted for each point to maintain a consistent perplexity.

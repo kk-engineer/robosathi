@@ -21,7 +21,7 @@ math: true
 - Hash Encoding
 {{< /panel >}}
 
-{{< panel color="rust" title="One Hot 🔥 Encoding (OHE)" >}}
+{{< panel color="rust" title="One Hot Encoding (OHE)" >}}
 ⭐️ When the categorical data (**nominal**) is **without** any inherent **ordering**.
 - Create binary columns per category.
   - e.g.: Colors: Red, Blue, Green.
@@ -30,7 +30,7 @@ math: true
 **Note**: Use when low cardinality, or small number of unique values (<20).
 {{< /panel >}}
 
-{{< panel color="grey" title="Label 🏷️ Encoding" >}}
+{{< panel color="grey" title="Label ️ Encoding" >}}
 ⭐️ Assigns a **unique integer** (e.g., 0, 1, 2) to each category.
 
 - **When to use** ?
@@ -47,7 +47,7 @@ math: true
 {{< imgproc "images/machine_learning/feature_engineering/categorical_variables/slide_04_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="green" title="Frequency/Count 📟 Encoding" >}}
+{{< panel color="green" title="Frequency/Count Encoding" >}}
 ⭐️ Replace categories with their **frequency** or **count** in the dataset.
 - Useful for **high-cardinality** features where many unique values exist.
 
@@ -61,7 +61,7 @@ math: true
 {{< imgproc "images/machine_learning/feature_engineering/categorical_variables/slide_06_02.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="orange" title="Target 🎯 Encoding" >}}
+{{< panel color="orange" title="Target Encoding" >}}
 ⭐️ **Replace** a category with the **mean** of the **target** variable for that specific category.
 - **When to use ?**
   - For **high-cardinality** nominal features, where one hot encoding is **inefficient**, e.g., zip code, product id, etc.
@@ -72,7 +72,7 @@ math: true
   (like K-fold or Leave-One-Out) are used.
 {{< /panel >}}
 
-{{< panel color="green" title="Hash 🌿 Encoding" >}}
+{{< panel color="green" title="Hash Encoding" >}}
 ⭐️ Maps categories to a **fixed number** of features using a **hash function**.
 - **Useful** for **high-cardinality** features where we want to limit the dimensionality.
 {{< imgproc "images/machine_learning/feature_engineering/categorical_variables/slide_09_01.png" Resize "1400x" >}}{{< /imgproc >}}

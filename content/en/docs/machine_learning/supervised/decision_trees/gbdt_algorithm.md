@@ -12,7 +12,7 @@ math: true
 {{< panel color="green" title="Gradient Boosted Decision Tree (GBDT)" >}}
 Gradient Boosted Decision Tree (GBDT) is a decision tree based implementation of Gradient Boosting Machine (GBM).
 
-GBM treats the final model \(F_m(x)\) as weighted 🏋️‍♀️ sum of ‘m' weak learners (decision trees):
+GBM treats the final model \(F_m(x)\) as weighted sum of 'm' weak learners (decision trees):
 \[ F_{M}(x)=\underbrace{F_{0}(x)}_{\text{Initial\ Guess}}+\nu \sum _{m=1}^{M}\underbrace{\left(\sum _{j=1}^{J_{m}}\gamma _{jm}\mathbb{I}(x\in R_{jm})\right)}_{\text{Decision\ Tree\ }h_{m}(x)}\]
 - \(F_0(x)\): The initial base model (usually a constant).
 - M: The total number of boosting iterations (number of trees).
@@ -25,10 +25,10 @@ GBM treats the final model \(F_m(x)\) as weighted 🏋️‍♀️ sum of ‘m' 
 
 {{< panel color="orange" title="Algorithm" >}}
 - Step 1: Initialization.
-- Step 2: Iterative loop 🔁 : for i=1 to m.
+- Step 2: Iterative loop : for i=1 to m.
 - 2.1: Calculate pseudo residuals ‘\(r_{im}\)'.
-- 2.2: Fit a regression tree 🌲‘\(h_m(x)\)'.
-- 2.3:Compute leaf 🍃weights 🏋️‍♀️ ‘\(\gamma_{jm}\)'.
+- 2.2: Fit a regression tree '\(h_m(x)\)'.
+- 2.3:Compute leaf weights ‘\(\gamma_{jm}\)'.
 - 2.4:Update the model.
 {{< /panel >}}
 
@@ -47,13 +47,13 @@ Tells us the direction and magnitude needed to reduce the loss.
 
 {{< panel color="orange" title="Step 2.2: Fit regression tree ‘\(h_m(x)\)'" >}}
 Train a tree to predict the residuals ‘\(h_m(x)\)';
-- Tree 🌲 partitions the data into leaves 🍃 (\(R_{jm}\)regions )
+- Tree partitions the data into leaves (\(R_{jm}\)regions )
 {{< /panel >}}
 
 {{< panel color="green" title="Step 2.3: Compute leaf weights ‘\(\gamma_{jm}\)'" >}}
-Within each leaf 🍃, we calculate the optimal value ‘\(\gamma_{jm}\)' that minimizes the loss for the samples in that leaf 🍃.
+Within each leaf , we calculate the optimal value ‘\(\gamma_{jm}\)' that minimizes the loss for the samples in that leaf .
 \[\gamma_{jm} = \arg\min_{\gamma} \sum_{x_i \in R_{jm}} L(y_i, F_{m-1}(x_i) + \gamma)\]
-➡️ The optimal leaf 🍃value is the ‘Mean'(MSE) of the residuals; \(\gamma = \frac{\sum r_i}{n_j}\)
+➡️ The optimal leaf value is the ‘Mean'(MSE) of the residuals; \(\gamma = \frac{\sum r_i}{n_j}\)
 {{< /panel >}}
 
 {{< panel color="grey" title="Step 2.4: Update the model." >}}

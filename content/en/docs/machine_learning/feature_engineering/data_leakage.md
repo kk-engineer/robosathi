@@ -11,7 +11,7 @@ math: true
 
 {{< panel color="blue" title="Data Leakage" >}}
 ⭐️ Occurs when a model is trained using data that would not be available during real-world predictions, 
-leading to **good** training performance, but **poor** real‑world 🌎 performance. <br>
+leading to **good** training performance, but **poor** real‑world performance. <br>
 It is essentially the model '**cheating**' by inadvertently accessing information about the target variable.
 
 👉Any information from the **validation/test** set must NOT influence **training**, _directly_ or _indirectly_. <br>
@@ -29,7 +29,7 @@ It is essentially the model '**cheating**' by inadvertently accessing informatio
 
 
 {{< panel color="rust" title="Temporal Leakage" >}}
-This happens in **Time Series** ⏰ data.
+This happens in **Time Series** data.
 - ❌ **Wrong**: Use standard random CV; it allows the model to '**peek into the future**'.
 - ✅ **Right**: Use **Time-Series Nested Cross-Validation** (Forward Chaining) instead of **random** shuffling.
 {{< /panel >}}

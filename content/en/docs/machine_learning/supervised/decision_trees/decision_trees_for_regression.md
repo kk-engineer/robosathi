@@ -42,22 +42,22 @@ Let's understand the **interpolation** and **extrapolation** cases one by one.
 {{< /answer >}}
 
 {{< panel color="navy" title="Interpolation ✅" >}}
-⭐️Predicting values **within** the range of features and targets observed during training 🏃‍♂️.
+⭐️Predicting values **within** the range of features and targets observed during training.
 - Trees capture discontinuities perfectly, because they are piece-wise constant.
 - They do not try to force a smooth line where a ‘jump' exists in reality.
 
-e.g: Predicting a house 🏡 price 💰 for a 3-BHK home when you have seen 2-BHK and 4-BHK homes in that same neighborhood.
+e.g: Predicting a house price for a 3-BHK home when you have seen 2-BHK and 4-BHK homes in that same neighborhood.
 {{< /panel >}}
 
 {{< panel color="blue" title="Extrapolation ❌" >}}
-⭐️Predicting values **outside** the range of training 🏃‍♂️data.
+⭐️Predicting values **outside** the range of training data.
 
 **Problem**: <br>
-Because a tree outputs the mean of training 🏃‍♂️ samples in a leaf, it cannot predict a value higher than the 
-**highest** ‘y' it saw during training 🏃‍♂️.
+Because a tree outputs the mean of training samples in a leaf, it cannot predict a value higher than the 
+**highest** ‘y' it saw during training.
 - **Flat-Line**: Once a feature ‘X' goes beyond the training boundaries, the tree falls into the same ‘last' leaf forever.
 
-e.g: Predicting the price 💰 of a house 🏡 in 2026 based on data from 2010 to 2025.
+e.g: Predicting the price of a house in 2026 based on data from 2010 to 2025.
 {{< /panel >}}
 
 {{< video "https://youtu.be/HPaxpAJfyGk" >}}

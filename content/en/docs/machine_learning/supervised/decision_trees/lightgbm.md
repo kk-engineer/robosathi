@@ -10,9 +10,8 @@ math: true
 "Decision Tree | All Videos" >}}
 
 {{< panel color="navy" title="LightGBM (Light Gradient Boosting Machine)" >}}
-⭐️Developed by **Microsoft**, this framework is designed for high speed and efficiency with large datasets.
-
-👉It grows trees leaf-wise rather than level-wise and uses Gradient-based One-Side Sampling (GOSS) to speed 🐇 up the finding of optimal split points.
+- Developed by **Microsoft**, this framework is designed for high speed and efficiency with large datasets.
+- It grows trees leaf-wise rather than level-wise and uses Gradient-based One-Side Sampling (GOSS) to speed up the finding of optimal split points.
 {{< /panel >}}
 
 {{< panel color="orange" title="Algorithmic Optimizations" >}}
@@ -23,14 +22,14 @@ math: true
 
 {{< panel color="green" title="Gradient-based One Side Sampling (GOSS)" >}}
 - ❌ Traditional GBDT uses all data instances for gradient calculation, which is inefficient.
-- ✅ GOSS **focuses** 🔬on instances with **larger gradients** (those that are less well-learned or have higher error).
-- 🐛 Keeps all instances with **large gradients** but randomly samples from those with small gradients.
-- 🦩This way, it prioritizes the most informative examples for training, significantly reducing the data used and speeding up 🐇 the process while maintaining accuracy.
+- ✅ GOSS **focuses** on instances with **larger gradients** (those that are less well-learned or have higher error).
+- Keeps all instances with **large gradients** but randomly samples from those with small gradients.
+- This way, it prioritizes the most informative examples for training, significantly reducing the data used and speeding up the process while maintaining accuracy.
 {{< /panel >}}
 
 {{< panel color="navy" title="Exclusive Feature Bundling (EFB)" >}}
-- 🦀 High-dimensional data often contains many sparse, mutually exclusive features (features that never take a non-zero value simultaneously, such as, One Hot Encoding (OHE)).
-- 💡 EFB bundles the **non-overlapping** features into a **single**, dense feature, reducing the number of features, without losing much information, saving computation.
+- High-dimensional data often contains many sparse, mutually exclusive features (features that never take a non-zero value simultaneously, such as, One Hot Encoding (OHE)).
+- EFB bundles the **non-overlapping** features into a **single**, dense feature, reducing the number of features, without losing much information, saving computation.
 {{< /panel >}}
 
 {{< panel color="green" title="Leaf-wise Tree Growth Strategy" >}}

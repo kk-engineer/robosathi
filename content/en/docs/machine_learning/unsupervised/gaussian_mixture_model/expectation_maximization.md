@@ -14,7 +14,7 @@ math: true
 Gaussian component or cluster generated a particular data point.
 {{< /panel >}}
 
-{{< panel color="orange" title="Chicken 🐓 & Egg 🥚 Problem" >}}
+{{< panel color="orange" title="Chicken & Egg Problem" >}}
 - If we knew the parameters (\(\mu, \Sigma, \pi\)) we could easily calculate which cluster 'z' each point belongs to (using probability).
 - If we knew the cluster assignments 'z' of each point, we could easily calculate the parameters for each cluster (using simple averages).
 
@@ -24,17 +24,17 @@ cluster indicator latent variable is hidden.
 {{< imgproc "images/machine_learning/unsupervised/gaussian_mixture_model/expectation_maximization/slide_04_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="rust" title="Break the Loop 🔁" >}}
-⛓️‍💥Guess one, i.e, cluster assignment 'z' to find the other, i.e, parameters \(\mu, \Sigma, \pi\).
+{{< panel color="rust" title="Break the Loop " >}}
+⛓️‍Guess one, i.e, cluster assignment 'z' to find the other, i.e, parameters \(\mu, \Sigma, \pi\).
 {{< /panel >}}
 
-{{< panel color="blue" title="Goal 🎯" >}}
+{{< panel color="blue" title="Goal " >}}
 ⛳️ _Find latent cluster indicator variable \(z_{ik}\)._
 
 But \(z_{ik}\) is a '**hard' assignment**' (either '0' or '1').
-- 🦆 Because we do not observe 'z', we use another variable '**Responsibility**' (\(\gamma_{ik}\)) as 
+- Because we do not observe 'z', we use another variable '**Responsibility**' (\(\gamma_{ik}\)) as 
 a '**soft**' assignment (_value between 0 and 1_).
-- 🐣 \(\gamma_{ik}\) is the **expected value** of the **latent variable** \(z_{ik}\), given the observed data \(x_{i}\) and 
+- \(\gamma_{ik}\) is the **expected value** of the **latent variable** \(z_{ik}\), given the observed data \(x_{i}\) and 
 parameters \(\Theta\).
 \[\gamma _{ik}=E[z_{ik}\mid x_{i},\theta ]=P(z_{ik}=1\mid x_{i},\theta )\]
 
@@ -58,7 +58,7 @@ by combining the **prior/weights** (\(\pi_k\)) and the **likelihood** (\(\mathca
 {{< imgproc "images/machine_learning/unsupervised/gaussian_mixture_model/expectation_maximization/slide_09_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="green" title="Expectation Maximization Algorithm ⚙️" >}}
+{{< panel color="green" title="Expectation Maximization Algorithm" >}}
 1. **Initialization**: Assign initial values to parameters (\(\mu, \Sigma, \pi\)), often using K-Means results.
 2. **Expectation Step (E)**: Calculate responsibilities; provides ‘soft' assignments of points to clusters.
 3. **Maximization Step (M)**: Update parameters using responsibilities as weights to maximize the expected log-likelihood.
@@ -74,7 +74,7 @@ at the specific value of \(x_i\), such that \(\pi_k \ge 0\) and \(\sum _{k=1}^{K
 {{< /panel >}}
 
 {{< panel color="navy" title="Maximization Step" >}}
-👉Update the parameters (\(\mu, \Sigma, \pi\)) by calculating weighted versions of the standard MLE formulas using responsibilities as weight 🏋️‍♀️.
+👉Update the parameters (\(\mu, \Sigma, \pi\)) by calculating weighted versions of the standard MLE formulas using responsibilities as weight ️‍♀️.
 
 \[
 \begin{align*}

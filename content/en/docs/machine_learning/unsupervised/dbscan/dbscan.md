@@ -6,8 +6,6 @@ weight: 331
 math: true
 ---
 
-{{< video "https://youtu.be/5ngz0Q_7fyo" >}}
-
 {{< panel color="red" title="Issues with K-Means" >}}
 - **Non-Convex Shapes**: K-Means can not find ‘crescent' or ‘ring' shape clusters.
 - **Noise**: K-Means forces every point into a cluster, even outliers.
@@ -21,7 +19,7 @@ math: true
 - _"Is this point part of a dense neighborhood?"_
 {{< /panel >}}
 
-{{< panel color="cyan" title="Intuition 💡" >}}
+{{< panel color="cyan" title="Intuition " >}}
 **Cluster** is a **contiguous region of high density** in the data space, separated from other clusters by areas of low density.
 {{< /panel >}}
 
@@ -31,7 +29,7 @@ math: true
 **Note**: Unlike K-means, DBSCAN can find arbitrarily shaped clusters and does not require the number of clusters to be specified beforehand.
 {{< /panel >}}
 
-{{< panel color="blue" title="Hyper-Parameters 🎛️" >}}
+{{< panel color="blue" title="Hyper-Parameters ️" >}}
 1. **Epsilon (eps or \(\epsilon\))**: 
 - Radius that defines the neighborhood around a data point.
 - If it's too small, many points will be noise, and if too large, distinct clusters may merge.
@@ -54,7 +52,7 @@ math: true
   - Not assigned to any cluster.
   {{< /panel >}}
 
-{{< panel color="green" title="DBSCAN Algorithm ⚙️" >}}
+{{< panel color="green" title="DBSCAN Algorithm" >}}
 1. **Random Start**: 
 - Mark all points as unvisited; pick an arbitrary unvisited point ‘P' from the dataset.
 2. **Density Check**: 
@@ -64,7 +62,7 @@ math: true
 3. **Cluster Expansion**: 
 - Recursively visit all points in P's ϵ-neighborhood. 
 - If they are also core points, their neighbors are added to the cluster.
-4. **Iteration** 🔁: 
+4. **Iteration** : 
 - This '**density-reachable**' logic continues until the cluster is fully expanded. 
 - The algorithm then picks another unvisited point and repeats the process, discovering new clusters or marking more points as noise until all points are processed.
 

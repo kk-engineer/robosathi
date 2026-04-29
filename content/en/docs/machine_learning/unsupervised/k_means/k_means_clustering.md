@@ -10,14 +10,14 @@ math: true
 "K Means Clustering | All Videos" >}}
 
 {{< panel color="orange" title="Unsupervised Learning" >}}
-🌍In real-world systems, **labeled data** is scarce and expensive 💰.
+🌍In real-world systems, **labeled data** is scarce and expensive .
 
 💡**Unsupervised learning** discovers inherent structure **without human annotation**.
 
 👉**Clustering answers**: _"Given a set of points, what natural groupings exist?"_
 {{< /panel >}}
 
-{{< panel color="navy" title="Real-World 🌍 Motivations for Clustering" >}}
+{{< panel color="navy" title="Real-World Motivations for Clustering" >}}
 - **Customer Segmentation**: Group users by behavior without predefined categories.
 - **Image Compression**: Reduce color palette by clustering pixel colors.
 - **Anomaly Detection**: Points far from any cluster are outliers.
@@ -25,13 +25,13 @@ math: true
 - **Preprocessing**: Create features from cluster assignments.
 {{< /panel >}}
 
-{{< panel color="cyan" title="Key Insight 💡" >}}
+{{< panel color="cyan" title="Key Insight " >}}
 💡Clustering assumes that '**similar**' points should be **grouped together**.
 
 👉_But what is 'similar'? This assumption drives everything._
 {{< /panel >}}
 
-{{< panel color="green" title="Problem Statement ✍️" >}}
+{{< panel color="green" title="Problem Statement" >}}
 **Given**:
 - Dataset X = {x₁, x₂, ..., xₙ} where xᵢ ∈ ℝᵈ.
 - Desired number of clusters ‘k'.
@@ -83,7 +83,7 @@ We need:
 {{< imgproc "images/machine_learning/unsupervised/k_means/k_means_clustering/slide_11_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="red" title="Combinatorial Explosion 💥" >}}
+{{< panel color="red" title="Combinatorial Explosion " >}}
 ⭐️The problem requires partitioning 'n' observations into ‘k' distinct, non-overlapping clusters, which is given by 
 the **Stirling number** of the second kind, which grows at a rate roughly equal to \(k^n/k!\).
 \[S(n,k)=\frac{1}{k!}\sum _{j=0}^{k}(-1)^{k-j}{k \choose j}j^{n}\]
@@ -93,7 +93,7 @@ the **Stirling number** of the second kind, which grows at a rate roughly equal 
 👉This large number of possible combinations makes the problem **NP-Hard**.
 
 🦉The **k-means** optimization problem is **NP-hard** because it belongs to a class of problems for which no efficient 
-(polynomial-time ⏰) algorithm is known to exist.
+(polynomial-time) algorithm is known to exist.
 
 {{< /panel >}}
 

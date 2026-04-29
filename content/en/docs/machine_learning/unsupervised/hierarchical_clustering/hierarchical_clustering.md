@@ -6,11 +6,9 @@ weight: 321
 math: true
 ---
 
-{{< video "https://youtu.be/ws2lhDgplVU" >}}
-
 {{< panel color="red" title="Issues with K-Means" >}}
-- 🤷 We might **not know** in advance the **number** of distinct **clusters** 'k' in the dataset.
-- 🕸️ Also, sometimes the dataset may contain a nested structure or some inherent hierarchy, such as, file system, 
+- We might **not know** in advance the **number** of distinct **clusters** 'k' in the dataset.
+- ️ Also, sometimes the dataset may contain a nested structure or some inherent hierarchy, such as, file system, 
 organizational chart, biological lineages, etc.
 {{< /panel >}}
 
@@ -42,7 +40,7 @@ Most common, also known as **Agglomerative Nesting** (AgNes).
   - Merges clusters to minimize the increase in the total within-cluster variance (sum of squared errors), resulting in compact, equally sized clusters.
 - **Single Linkage (MIN)**: 
   - Uses the minimum distance between any two points in different clusters. 
-  - Prone to creating long, ‘chain-like' 🔗 clusters, sensitive to outliers.
+  - Prone to creating long, ‘chain-like' clusters, sensitive to outliers.
 - **Complete Linkage (MAX)**: 
   - Uses the maximum distance between any two points in different clusters. 
   - Forms tighter, more spherical clusters, less sensitive to outliers than single linkage.

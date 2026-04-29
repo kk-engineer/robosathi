@@ -9,7 +9,7 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxde_X17sF7iN6rnQgFlBDC-" 
 "Linear Regression | All Videos" >}}
 {{< panel color="blue" title="Assumptions" >}}
-Linear Regression works **reliably** only when certain key 🔑 **assumptions** about the data are met.
+Linear Regression works **reliably** only when certain key **assumptions** about the data are met.
 - Linearity
 - Independence of Errors (No Auto-Correlation)
 - Homoscedasticity (Equal Variance)
@@ -19,7 +19,7 @@ Linear Regression works **reliably** only when certain key 🔑 **assumptions** 
 {{< /panel >}}
 
 {{< panel color="orange" title="Linearity" >}}
-Relationship between features and target 🎯 is **linear** in **parameters**.
+Relationship between features and target is **linear** in **parameters**.
 
 **Note**: Polynomial regression is linear regression. <br>
 \(y=w_0 +w_1x_1+w_2x_2^2 + w_3x_3^3\)

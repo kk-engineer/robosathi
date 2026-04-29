@@ -27,7 +27,7 @@ Combining the above 2 conditions into 1 equation gives:
 {{< panel color="green" title="Cost Function" >}}
 \[J(w) = -\frac{1}{n}\sum [y_ilog(\hat{y_i}) + (1-y_i)log(1-\hat{y_i})]\]
 
-We need to find the weights 🏋️‍♀️ ‘w' that minimize the cost 💵 function.
+We need to find the weights ️‍♀️ ‘w' that minimize the cost function.
 {{< /panel >}}
 
 {{< panel color="blue" title="Gradient Descent" >}}
@@ -46,7 +46,7 @@ Chain Rule:
 - Distance of Point: \(z = \mathbf{w^Tx} + w_0\)
 {{< /panel >}}
 
-{{< panel color="green" title="Cost 💰Function Derivative" >}}
+{{< panel color="green" title="Cost Function Derivative" >}}
 \[ J(w) = -\sum [ylog(\hat{y}) + (1-y)log(1-\hat{y})]\]
 How **loss** changes w.r.t **prediction** ?
 \[
@@ -98,7 +98,7 @@ from equations (1) & (2):
 
 {{< panel color="orange" title="Distance Derivative" >}}
 \[z=w^{T}x+w_{0}\]
-How **distance** changes w.r.t **weight** 🏋️‍♀️ ?
+How **distance** changes w.r.t **weight** ️‍♀️ ?
 \[ \frac{\partial{z}}{\partial{w}} = \mathbf{x} \]
 \[\because \frac{\partial{(a^T\mathbf{x})}}{\partial{\mathbf{x}}} = a\]
 {{< /panel >}}
@@ -114,7 +114,7 @@ Chain Rule:
 \]
 {{< /panel >}}
 
-{{< panel color="red" title="Cost 💰Function Derivative" >}}
+{{< panel color="red" title="Cost Function Derivative" >}}
 \[\frac{\partial{J(w)}}{\partial{w}} = \sum (\hat{y_i} - y_i).x_i\]
 **Gradient = Error x Input**
 - **Error** = \((\hat{y_i}-y_i)\): how far is prediction from the truth?

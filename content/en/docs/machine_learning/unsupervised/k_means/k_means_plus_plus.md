@@ -34,12 +34,12 @@ This makes it more likely that a point far from existing centroids is selected, 
 data points to the nearest centroid and iteratively updating the centroids until convergence.
 {{< /panel >}}
 
-{{< panel color="red" title="Problem 🚨" >}}
+{{< panel color="red" title="Problem " >}}
 🦀 If our data is extremely **noisy** (outliers), the **probabilistic logic** (\(\propto D(x)^2\)) might accidentally 
 **pick** an **outlier** as a **cluster center**.
 {{< /panel >}}
 
-{{< panel color="green" title="Solution ✅" >}}
+{{< panel color="green" title="Solution" >}}
 Do robust preprocessing to **remove outliers** or use **K-Medoids** algorithm.
 {{< /panel >}}
 

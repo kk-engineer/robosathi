@@ -32,7 +32,7 @@ or anomalies or **outliers** in a given dataset.
 - Cyber-security: intrusion detection, malware, or unusual user access patterns.
 {{< /panel >}}
 
-{{< panel color="navy" title="Anomaly Detection Methods 🐉" >}}
+{{< panel color="navy" title="Anomaly Detection Methods " >}}
 - Supervised
 - Semi-Supervised
 - Unsupervised (most common) ✅
@@ -40,14 +40,14 @@ or anomalies or **outliers** in a given dataset.
 **Note**: Labeled anomaly data is often unavailable in real-world scenarios.
 {{< /panel >}}
 
-{{< panel color="blue" title="Known Methods 🐈" >}}
+{{< panel color="blue" title="Known Methods " >}}
 - **Statistical Methods**: Z-Score, large value means outlier, IQR, point beyond fences (Q1 - 1.5\*IQR or Q3 + 1.5*IQR) is flagged as an outlier.
 - **Distance Based**: KNN, points far from their neighbors as potential anomalies.
 - **Density Based**: DBSCAN, points in low density regions are considered outliers.
 - **Clustering Based**: K-Means, points far from cluster centroids that do not fit any cluster are anomalies.
 {{< /panel >}}
 
-{{< panel color="green" title="Unsupervised Methods 🦅" >}}
+{{< panel color="green" title="Unsupervised Methods " >}}
 - **Elliptic Envelope** (MCD - Minimum Covariance Determinant)
 - **One-Class SVM** (OC-SVM)
 - **Local Outlier Factor** (LOF)

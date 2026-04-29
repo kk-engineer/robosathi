@@ -15,7 +15,7 @@ that maximizes Information Gain or minimizes MSE.
 
 👉This search is:
 - **computationally expensive** (sort + mid-point) and
-- tends to **follow the noise** in the training 🏃‍♂️data.
+- tends to **follow the noise** in the training data.
 {{< /panel >}}
 
 {{< panel color="navy" title="Adding Randomness" >}}
@@ -24,7 +24,7 @@ Adding randomness (right kind) in ensemble averaging **reduces** correlation/var
 {{< /panel >}}
 
 {{< panel color="green" title="Extremely Randomized (ExtRa) Trees" >}}
-- **Random Thresholds**: Instead of searching for the best split point (computationally expensive 💰) for a feature, 
+- **Random Thresholds**: Instead of searching for the best split point (computationally expensive ) for a feature, 
 it picks a threshold at random from a uniform distribution between the feature's local minimum and maximum.
 - **Entire Dataset**: Uses entire training dataset (default) for every tree; no bootstrapping.
 - **Random Feature Subsets**: Random subset of m<n features is used in each decision tree.

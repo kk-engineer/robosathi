@@ -38,14 +38,14 @@ with mean \(\mu_k\) and covariance matrix \(\Sigma_k\).
 {{< /panel >}}
 
 {{< panel color="green" title="GMM Optimization (Why MLE Fails?)" >}}
- 🎯 Goal of a GMM optimization is to find the set of parameters \(\Theta =\{(\pi _{k},\mu _{k},\Sigma _{k})\mid k=1,\dots ,K\}\) that maximize the likelihood of observing the given data.
+ Goal of a GMM optimization is to find the set of parameters \(\Theta =\{(\pi _{k},\mu _{k},\Sigma _{k})\mid k=1,\dots ,K\}\) that maximize the likelihood of observing the given data.
 
 \[L(\Theta |X)=\sum _{i=1}^{N}\log P(x_i|\Theta )=\sum _{i=1}^{N}\log \left(\sum _{k=1}^{K}\pi _{k}\mathcal{N}(x_i|\mu _{k},\Sigma _{k})\right)\]
-- 🦀 \(\log (A+B)\) cannot be simplified.
-- 🦉_So, is there any other way ?_
+- \(\log (A+B)\) cannot be simplified.
+- _So, is there any other way ?_
 {{< /panel >}}
 
-{{< panel color="orange" title="Latent Variable (Intuition 💡)" >}}
+{{< panel color="orange" title="Latent Variable (Intuition )" >}}
 ⭐️Imagine we are measuring the heights of people in a college.
 - We see a distribution with two peaks (bimodal).
 - We suspect there are two underlying groups:

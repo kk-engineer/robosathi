@@ -54,7 +54,7 @@ _Research Paper_: Batch Normalization: Accelerating Deep Network Training by Red
 
 {{< /panel >}}
 
-{{< panel color="cyan" title="Batch Normalization Code" >}}
+{{< panel color="cyan" title="Code: Batch Normalization" >}}
 ```python
 import tensorflow as tf
 from tensorflow.keras import layers, models, regularizers

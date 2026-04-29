@@ -34,7 +34,7 @@ w_j &< 0: f_j \text { is inversely proportional to target variable} \\
 \end{align*}
 \]
 
-**Note**: Weights 🏋️‍♀️ represent the **importance** of **feature** with **standardized** data.
+**Note**: Weights represent the **importance** of **feature** with **standardized** data.
 {{< /panel >}}
 
 {{< panel color="green" title="Why Model Interpretability Matters ?" >}}

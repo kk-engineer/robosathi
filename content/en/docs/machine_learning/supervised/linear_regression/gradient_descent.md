@@ -8,8 +8,8 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxde_X17sF7iN6rnQgFlBDC-" 
 "Linear Regression | All Videos" >}}
-{{< panel color="blue" title="Goal 🎯" >}}
-Minimize the cost 💰function.
+{{< panel color="blue" title="Goal " >}}
+Minimize the cost function.
 \[J(w)=\frac{1}{2n}(y-Xw)^{2}\]
 **Note**: The 1/2 term is included simply to make the derivative cleaner (it cancels out the 2 from the square).
 {{< /panel >}}
@@ -21,7 +21,7 @@ But it is not always feasible and computationally expensive (due to inverse calc
 {{< /panel >}}
 
 {{< panel color="green" title="Gradient Descent" >}}
-An iterative optimization algorithm slowly nudges parameters ‘w' towards a value that minimize the cost💰 function.
+An iterative optimization algorithm slowly nudges parameters ‘w' towards a value that minimize the costfunction.
 
 {{< imgproc "images/machine_learning/supervised/linear_regression/gradient_descent/slide_05_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
@@ -32,7 +32,7 @@ An iterative optimization algorithm slowly nudges parameters ‘w' towards a val
 3. Update the parameters using the gradient. 
 \[ w_{new} = w_{old} - \eta \frac{\partial{J(w)}}{\partial{w_{old}}} \]
 \( \eta \) = learning rate or step size to take for each parameter update. 
-4. Repeat 🔁 steps 2 and 3 iteratively until convergence (to minima).
+4. Repeat steps 2 and 3 iteratively until convergence (to minima).
 
 {{< imgproc "images/machine_learning/supervised/linear_regression/gradient_descent/slide_07_01.png" Resize "1400x" >}}{{< /imgproc >}}
 

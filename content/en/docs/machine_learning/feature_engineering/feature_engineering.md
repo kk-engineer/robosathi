@@ -10,21 +10,21 @@ math: true
 "Feature Engineering | All Videos" >}}
 
 {{< panel color="rust" title="Feature Engineering" >}}
-Use domain knowledge 📕 to **create** new or **transform** existing features to **improve** model performance.
+Use domain knowledge to **create** new or **transform** existing features to **improve** model performance.
 {{< /panel >}}
 
-{{< panel color="green" title="Polynomial 🐙 Features" >}}
+{{< panel color="green" title="Polynomial Features" >}}
 Create polynomial features, such as, x^2, x^3, etc., to learn non-linear relationship.
 {{< imgproc "images/machine_learning/feature_engineering/feature_engineering/slide_04_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="orange" title="Feature Crossing 🦓" >}}
+{{< panel color="orange" title="Feature Crossing " >}}
 ⭐️ **Combine** 2 or more features to capture **non-linear** relationship.
 - e.g. combine latitude and longitude into one location feature ‘lat-long'.
 {{< /panel >}}
 
-{{< panel color="green" title="Hash 🌿 Encoding" >}}
-⭐️ **Memory-efficient** 🧠 technique to convert categorical (string) data into a **fixed-size** **numerical** feature vector.
+{{< panel color="green" title="Hash Encoding" >}}
+⭐️ **Memory-efficient** technique to convert categorical (string) data into a **fixed-size** **numerical** feature vector.
 - **Pros**:
   - Useful for high-cardinality features where we want to limit the dimensionality.
 - **Cons**:

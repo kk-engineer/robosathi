@@ -21,17 +21,17 @@ What is the meaning of “Regression” in Linear Regression ?
 
 **Observation:** <br>
 Galton observed that - <br>
-the children 👶 of unusually tall ⬆️ parents 🧑‍🧑‍🧒‍🧒,
-tended to be shorter ⬇️ than their parents 🧑‍🧑‍🧒‍🧒, <br>
-and children 👶 of unusually short ⬇️ parents 🧑‍🧑‍🧒‍🧒,
-tended to be taller ⬆️ than their parents 🧑‍🧑‍🧒‍🧒.
+the children of unusually tall ⬆️ parents ‍‍‍,
+tended to be shorter ⬇️ than their parents ‍‍‍, <br>
+and children of unusually short ⬇️ parents ‍‍‍,
+tended to be taller ⬆️ than their parents ‍‍‍.
 
 Galton named this biological tendency - **'regression towards mediocrity/mean’**.
 
-Galton used method of *least squares* to model this relationship, by **fitting a line** to the data 📊.
+Galton used method of *least squares* to model this relationship, by **fitting a line** to the data .
 
 **Regression = Fitting a Line** <br>
-Over time ⏳, the name **‘regression’** got **permanently attached** to the method of **fitting line** to the data 📊.
+Over time, the name **‘regression’** got **permanently attached** to the method of **fitting line** to the data .
 
 **Today** in *statistics* and **machine learning**, **‘regression’** *universally* refers to the method of finding the <br>
 **‘line of best fit’** for a set of data points, NOT the concept of *‘regressing towards the mean’*.

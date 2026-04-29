@@ -13,8 +13,8 @@ To gain knowledge or understanding of a skill,  by study, instruction, or experi
 {{< /definition >}}
 
 {{< definition title="Machine Learning">}}
-To teach computers 💻 to learn from data, find patterns 🧮, and make decisions or predictions 
-without being explicitly programmed for every task, as humans🧍‍♀️🧍 learn from experience.
+To teach computers to learn from data, find patterns , and make decisions or predictions 
+without being explicitly programmed for every task, as humans‍♀️learn from experience.
 <br><br>
 {{< /definition >}}
 
@@ -30,7 +30,7 @@ of historical data.
 {{< imgproc "images/machine_learning/introduction/training.png" Resize "800x" >}}{{< /imgproc >}}
 
 **Runtime (Inference) Phase:** <br> 
-Where the fully trained and deployed model is put to practical use in a real-world 🌎 environment, i.e., 
+Where the fully trained and deployed model is put to practical use in a real-world environment, i.e., 
 to make predictions on new, unseen data.
 
 {{< imgproc "images/machine_learning/introduction/inference.png" Resize "800x" >}}{{< /imgproc >}}

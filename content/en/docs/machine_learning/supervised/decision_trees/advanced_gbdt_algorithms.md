@@ -26,7 +26,7 @@ math: true
 {{< panel color="green" title="LightGBM (Light Gradient Boosting Machine)" >}}
 ⭐️Developed by **Microsoft**, this framework is designed for high speed and efficiency with large datasets.
 
-👉It grows trees leaf-wise rather than level-wise and uses Gradient-based One-Side Sampling (GOSS) to speed 🐇 up the finding of optimal split points.
+👉It grows trees leaf-wise rather than level-wise and uses Gradient-based One-Side Sampling (GOSS) to speed up the finding of optimal split points.
 {{< /panel >}}
 
 {{< panel color="navy" title="CatBoost (Categorical Boosting)" >}}

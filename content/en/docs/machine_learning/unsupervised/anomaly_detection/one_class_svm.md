@@ -9,7 +9,7 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcQTrzlCVhQOtpvVbWsft3a" 
 "Anomaly Detection | All Videos" >}}
 
-{{< panel color="green" title="Use Case (Novelty Detection)🐝" >}}
+{{< panel color="green" title="Use Case (Novelty Detection)" >}}
 ⭐️Only **one class** of data (normal, non-outlier) is **available** for training, making standard **supervised learning** 
 models **impossible**.
 
@@ -20,7 +20,7 @@ e.g. Only normal observations are available for fraud detection, cyber attack, f
 {{< imgproc "images/machine_learning/unsupervised/anomaly_detection/one_class_svm/slide_02_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="red" title="Problem 🦀" >}}
+{{< panel color="red" title="Problem " >}}
 🦂 The core problem is to build a model that can **distinguish** between '**normal**' and '**anomalous**' data 
 when we only have examples of the '**normal**' class during training.
 
@@ -28,12 +28,12 @@ when we only have examples of the '**normal**' class during training.
 training data.
 {{< /panel >}}
 
-{{< panel color="green" title="Solution 🦉" >}}
+{{< panel color="green" title="Solution " >}}
 💡Instead of finding a **hyperplane** that separates _two different classes_, we find a hyperplane that best **separates** the 
-normal data points from the **origin** (0,0) in the feature space 🚀.
+normal data points from the **origin** (0,0) in the feature space .
 {{< /panel >}}
 
-{{< panel color="blue" title="Goal 🎯" >}}
+{{< panel color="blue" title="Goal " >}}
 🦍 Define a **boundary** for a single class in **high-dimensional** space where data might be **non-linearly** distributed 
 (e.g.'U' shape).
 
@@ -62,7 +62,7 @@ Subject to constraints:
 - \(\nu\): hyper-parameter between 0 and 1. It acts as an upper bound on the fraction of outliers (training data points outside the boundary) and a lower bound on the fraction of support vectors.
 {{< /panel >}}
 
-{{< panel color="green" title="Working 🦇" >}}
+{{< panel color="green" title="Working " >}}
 -  \(\frac{1}{2}\|\mathbf{w}\|^{2}\): aims to **maximize** the **margin/compactness** of the region.
 - \(\frac{1}{\nu N}\sum _{i=1}^{N}\xi _{i}-\rho\): **penalizes** points (outliers) that **violate** the *boundary constraints*.
 

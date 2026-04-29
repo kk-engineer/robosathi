@@ -9,14 +9,14 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfFECdHEHPM6NjErmLmg2Ff" 
 "Support Vector Machine | All Videos" >}}
 
-{{< panel color="cyan" title="Intuition💡" >}}
+{{< panel color="cyan" title="Intuition" >}}
 The Primal form is intuitive but computationally expensive in high dimensions.
 
 ➡️ Number of new features = \({d+p \choose p}\), grows roughly as \(O(d^{p})\)
 - d= number of dimensions (features)
 - p = degree of polynomial
 
-**Note**: The Dual form is what enables the Kernel Trick 🪄.
+**Note**: The Dual form is what enables the Kernel Trick.
 {{< /panel >}}
 
 {{< panel color="green" title="Optimization (Primal Formulation)" >}}
@@ -86,7 +86,7 @@ subject to: \(0 \leq \alpha_i \leq C\) and \(\sum \alpha_i y_i = 0\)
 **Note**: **Sequential Minimal Optimization (SMO)** algorithm is used to find optimal \(\alpha_i\) values.
 {{< /panel >}}
 
-{{< panel color="green" title="Inference Time ⏰" >}}
+{{< panel color="green" title="Inference Time" >}}
 🎯To classify unseen point \(x_q\) : \(f(x_q) = \text{sign}(w^T x_q + w_0)\)
 
 ✅ From the KKT stationarity condition, we know: \(\mathbf{w} = \sum_{i=1}^n \alpha_i y_i x_i\)

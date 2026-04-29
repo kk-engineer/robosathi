@@ -41,8 +41,8 @@ Quantify the difference between the actual values and the predicted values.
 \[ R^2 = 1 - \frac{SS_{res}}{SS_{tot}} = 1 - \frac{\sum_{i=1}^n (y_i - \hat{y_i})^2}{\sum_{i=1}^n (y_i - \bar{y_i})^2} \]
 
 Good R^2 value depends upon the use case, e.g. :
-- Car 🚗 sale, R =0.8 is good enough.
-- Cancer 🧪 prediction R 0.95, as life depends on it.
+- Car sale, R =0.8 is good enough.
+- Cancer prediction R 0.95, as life depends on it.
 
 Range of values:
 - Best value = 1

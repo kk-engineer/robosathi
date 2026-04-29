@@ -9,8 +9,8 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfFECdHEHPM6NjErmLmg2Ff" 
 "Support Vector Machine | All Videos" >}}
 
-{{< panel color="blue" title="Geometric Intuition💡" >}}
-⭐️We have two classes of points (e.g. Cats 😸vs. Dogs 🐶) that can be separated by a straight line.
+{{< panel color="blue" title="Geometric Intuition" >}}
+⭐️We have two classes of points (e.g. Cats vs. Dogs ) that can be separated by a straight line.
 
 👉 Many such lines exist !
 
@@ -18,10 +18,10 @@ math: true
 {{< imgproc "images/machine_learning/supervised/support_vector_machines/svm_intro/slide_01_01.tif" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="green" title="Highway 🛣️ Analogy" >}}
-💡Think of the **decision boundary** as the center-line of a highway 🛣️.
+{{< panel color="green" title="Highway ️ Analogy" >}}
+💡Think of the **decision boundary** as the center-line of a highway ️.
 
-SVM tries to make this highway 🛣️ as wide as possible without hitting any 'buildings' 🏡 (data points) on either side.
+SVM tries to make this highway ️ as wide as possible without hitting any 'buildings' (data points) on either side.
 {{< imgproc "images/machine_learning/supervised/support_vector_machines/svm_intro/slide_05_01.tif" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 

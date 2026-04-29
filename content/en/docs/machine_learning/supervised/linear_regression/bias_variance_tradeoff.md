@@ -24,23 +24,23 @@ Mean Squared Error (MSE) = \(\frac{1}{n} \sum_{i=1}^n (y_i - \hat{y_i})^2\)
 {{< panel color="green" title="Bias" >}}
 Systematic error from overly simplistic assumptions or strong opinion in the model.
 
-e.g. House 🏠 prices 💰 = Rs. 10,000 * Area (sq. ft).
+e.g. House prices = Rs. 10,000 * Area (sq. ft).
 
 **Note**: This is over simplified view, because it ignores, amenities, location, age, etc.
 {{< /panel >}}
 
 {{< panel color="orange" title="Variance" >}}
-Error from sensitivity to small fluctuations 📈 in the data.
+Error from sensitivity to small fluctuations in the data.
 
-e.g. Deep neural 🧠 network trained on a small dataset.
+e.g. Deep neural network trained on a small dataset.
 
 **Note**: Memorizes everything, including noise. <br>
 
-Say a house 🏠 in XYZ street was sold for very low price 💰.
+Say a house in XYZ street was sold for very low price .
 
 **Reason**: Distress selling (outlier), or incorrect entry (noise).
 
-**Note**: Model will make wrong(lower) price 💰predictions for all houses in XYZ street.
+**Note**: Model will make wrong(lower) price predictions for all houses in XYZ street.
 {{< /panel >}}
 
 {{< panel color="grey" title="Linear (High Bias), Polynomial(High Variance)" >}}
@@ -52,28 +52,28 @@ Say a house 🏠 in XYZ street was sold for very low price 💰.
 {{< /panel >}}
 
 {{< panel color="green" title="Bias-Variance Trade-Off" >}}
-Goal 🎯 is to minimize total error.
+Goal is to minimize total error.
 
-Find a sweet-spot balance ⚖️ between Bias and Variance.
+Find a sweet-spot balance between Bias and Variance.
 
 A good model **‘generalizes'** well, i.e.,
 - Is not too simple or has a strong opinion.
-- Does not memorize 🧠 everything in the data, including noise.
+- Does not memorize everything in the data, including noise.
 {{< /panel >}}
 
-{{< panel color="blue" title="Fix 🩹 High Bias (Under-Fitting)" >}}
+{{< panel color="blue" title="Fix High Bias (Under-Fitting)" >}}
 - Make model more complex.
   - Add more features, add polynomial features.
 - Decrease Regularization.
-- Train 🏃‍♂️longer, the model has not yet converged.
+- Train longer, the model has not yet converged.
 {{< /panel >}}
 
-{{< panel color="navy" title="Fix 🩹 High Variance (Over-Fitting)" >}}
+{{< panel color="navy" title="Fix High Variance (Over-Fitting)" >}}
 - Add more data (most effective).
-  - Harder to memorize 🧠 1 million examples than 100.
+  - Harder to memorize 1 million examples than 100.
   - Use data augmentation, if getting more data is difficult.
 - Increase Regularization.
-- Early stopping 🛑, prevents memorization 🧠.
+- Early stopping , prevents memorization .
 - Dropout (DL), randomly kill neurons, prevents co-adaptation.
 - Use Ensembles.
 - Averaging reduces variance.

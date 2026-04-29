@@ -10,9 +10,8 @@ math: true
 "Decision Tree | All Videos" >}}
 
 {{< panel color="navy" title="XGBoost (Extreme Gradient Boosting)" >}}
-⭐️An optimized and highly efficient implementation of gradient boosting.
-
-👉 Widely used in competitive data science (like **Kaggle**) due to its speed and performance.
+- An optimized and highly efficient implementation of gradient boosting.
+- Widely used in competitive data science (like **Kaggle**) due to its speed and performance.
 
 **Note**: **Research** project developed by **Tianqi Chen** during his doctoral studies at the University of Washington.
 {{< /panel >}}
@@ -24,7 +23,7 @@ math: true
 {{< /panel >}}
 
 {{< panel color="green" title="Second order Derivative" >}}
-⭐️Uses **second derivative** (Hessian), i.e, curvature, in addition to first derivative (gradient) to optimize the objective function more quickly and accurately than GBDT.
+Uses **second derivative** (Hessian), i.e, curvature, in addition to first derivative (gradient) to optimize the objective function more quickly and accurately than GBDT.
 
 Let's understand this with the problem to minimize \(f(x) = x^4\), using: 
 - Gradient descent (uses only 1st order derivative, \(f'(x) = 4x^3\))
@@ -40,11 +39,10 @@ Let's understand this with the problem to minimize \(f(x) = x^4\), using:
 {{< /panel >}}
 
 {{< panel color="blue" title="Sparsity-Aware Split Finding" >}}
-💡Real-world data often contains many missing values or zero-entries (sparse data).
+Real-world data often contains many missing values or zero-entries (sparse data). <br>
+XGBoost introduces a '**default direction**' for each node.
 
-👉 XGBoost introduces a ‘**default direction**' for each node.
-
-➡️During training, it learns the best direction (left or right) for missing values to go, making it significantly faster and more robust when dealing with sparse or missing data.
+➡️ During training, it learns the best direction (left or right) for missing values to go, making it significantly faster and more robust when dealing with sparse or missing data.
 {{< /panel >}}
 
 {{< video "https://youtu.be/0YhR50u26nk" >}}

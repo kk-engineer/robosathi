@@ -9,12 +9,12 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfYIFfsbRfK_M7gObPE_vwU" 
 "Decision Tree | All Videos" >}}
 
-{{< panel color="cyan" title="Idea 💡" >}}
-👉GBM fits new models to the ‘residual errors' (the difference between actual and predicted values) of the previous models.
+{{< panel color="cyan" title="Idea " >}}
+💡 GBM fits new models to the ‘residual errors' (the difference between actual and predicted values) of the previous models.
 {{< /panel >}}
 
 {{< panel color="green" title="Gradient Boosting Machine" >}}
-GBM treats the final model \(F_m(x)\) as weighted 🏋️‍♀️ sum of ‘m' weak learners:
+GBM treats the final model \(F_m(x)\) as weighted sum of ‘m' weak learners:
 \[ F_{M}(x)=\underbrace{F_{0}(x)}_{\text{Initial\ Guess}}+\nu \sum _{m=1}^{M}\underbrace{\left(\sum _{j=1}^{J_{m}}\gamma _{jm}\mathbb{I}(x\in R_{jm})\right)}_{\text{Weak\ Learner\ }h_{m}(x)}\]
 - \(F_0(x)\): The initial base model (usually a constant).
 - M: The total number of boosting iterations (number of trees).
@@ -25,15 +25,14 @@ GBM treats the final model \(F_m(x)\) as weighted 🏋️‍♀️ sum of ‘m' 
 {{< /panel >}}
 
 {{< panel color="navy" title="Gradient Descent in Function Space" >}}
-📍In Gradient Descent, we update parameters ‘\(\Theta\)';
+- In Gradient Descent, we update parameters ‘\(\Theta\)';
+- In GBM, we update the predictions F(x) themselves.
 
-📍In GBM, we update the predictions F(x) themselves.
+We move the predictions in the direction of the negative gradient of the loss function L(y, F(x)).
 
-🦕We move the predictions in the direction of the negative gradient of the loss function L(y, F(x)).
-
-🎯We want to minimize loss:
+We want to minimize loss:
 \[\mathcal{L}(F) = \sum_{i=1}^n L(y_i, F(x_i))\]
-✅ In parameter optimization we update weights 🏋️‍♀️:
+✅ In parameter optimization we update weights:
 \[w_{t+1} = w_t - \eta \cdot \nabla_{w}\mathcal{L}(w_t)\]
 ✅ In gradient boosting, we update the prediction function:
 \[F_m(x) = F_{m-1}(x) -\eta \cdot \nabla_F \mathcal{L}(F_{m-1}(x))\]
@@ -65,7 +64,7 @@ In GBM we can use any loss function as long as it is differentiable, such as, MS
 \]
 {{< /panel >}}
 
-{{< panel color="navy" title="Why optimal leaf 🍃value is the ‘Mean' of the residuals for MSE ?" >}}
+{{< panel color="navy" title="Why optimal leaf value is the ‘Mean' of the residuals for MSE ?" >}}
 💡To minimize cost, take derivative of cost function w.r.t ‘\(\gamma\)' and equate to 0:
 
 **Cost Function** = \(J(\gamma )\)

@@ -31,9 +31,9 @@ same cluster is the **smallest**.
 2. **Assignment**: Calculate the distance (e.g., Euclidean or Manhattan) from each non-medoid point to all medoids and assign each point to the cluster of its nearest medoid.
 3. **Update** (Swap):
 - For each cluster, swap current medoid with a non-medoid point from the same cluster.
-- For each swap, calculate the total cost 💰(sum of distances from medoid).
-- Pick the medoid with minimum cost 💰.
-4. **Repeat**🔁: Repeat the assignment and update steps until (**convergence**), i.e, medoids no longer change or 
+- For each swap, calculate the total cost (sum of distances from medoid).
+- Pick the medoid with minimum cost .
+4. **Repeat**: Repeat the assignment and update steps until (**convergence**), i.e, medoids no longer change or 
 a maximum number of iterations is reached.
 
 **Note**: Kind of brute-force algorithm, computationally expensive for large dataset.

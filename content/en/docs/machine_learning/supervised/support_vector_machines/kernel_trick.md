@@ -9,15 +9,15 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfFECdHEHPM6NjErmLmg2Ff" 
 "Support Vector Machine | All Videos" >}}
 
-{{< panel color="cyan" title="Intuition 💡" >}}
+{{< panel color="cyan" title="Intuition " >}}
 👉If our data is not linearly separable in its original space , we can map it to a higher-dimensional feature space 
 (where D>>d) using a transformation function .
 {{< imgproc "images/machine_learning/supervised/support_vector_machines/kernel_trick/slide_02_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="blue" title="Kernel Trick 🪄" >}}
+{{< panel color="blue" title="Kernel Trick" >}}
 - Bridge between Dual formulation and the geometry of high dimensional spaces.
-- It is a way to manipulate inner product spaces without the computational cost 💰 of explicit transformation.
+- It is a way to manipulate inner product spaces without the computational cost of explicit transformation.
 {{< /panel >}}
 
 {{< panel color="orange" title="(Wolfe) ‘Dual' Optimization" >}}
@@ -40,15 +40,15 @@ If our data is not linearly separable in its original space \(\mathbb{R}^d\), we
 \(\mathbb{R}^D\) feature space (where D>>d) using a transformation function \(\phi(x)\) .
 {{< /panel >}}
 
-{{< panel color="red" title="Problem 🤔" >}}
+{{< panel color="red" title="Problem " >}}
 If we choose a very high-dimensional mapping (e.g. \(D = 10^6\) or \(D = \infty\) ), calculating and then performing 
 the dot product \(\phi(x_i)^T \phi(x_j)\) becomes computationally impossible or extremely slow.
 {{< /panel >}}
 
-{{< panel color="green" title="Kernel Trick 👻" >}}
+{{< panel color="green" title="Kernel Trick " >}}
 So we define a function called '**Kernel Function**'.
 
-The ‘Kernel Trick' 🪄 is an optimization that replaces the dot product of a high-dimensional mapping with 
+The ‘Kernel Trick' is an optimization that replaces the dot product of a high-dimensional mapping with 
 a function of the dot product in the original space.
 \[(x_i, x_j) = \langle \phi(x_i), \phi(x_j) \rangle\]
 
@@ -76,9 +76,9 @@ The output of above quadratic kernel function is equivalent to the explicit dot 
 \[\phi (x)\cdot \phi (z)=x_{1}^{2}z_{1}^{2}+2x_{1}x_{2}z_{1}z_{2}+x_{2}^{2}z_{2}^{2}\]
 {{< /panel >}}
 
-{{< panel color="green" title="Advantages ⛳️" >}}
-- **Computational Efficiency**: Avoids the ‘combinatorial blowup' 💥 of generating thousands of interaction features manually.
-- **Memory Savings**: No need to store 💾 or process high-dimensional coordinates, only the scalar result of the kernel function.
+{{< panel color="green" title="Advantages of Kernel Trick" >}}
+- **Computational Efficiency**: Avoids the ‘combinatorial blowup' of generating thousands of interaction features manually.
+- **Memory Savings**: No need to store or process high-dimensional coordinates, only the scalar result of the kernel function.
 {{< /panel >}}
 
 {{< panel color="orange" title="Why Kernel SVMs are Not so Popular ?" >}}
@@ -87,7 +87,7 @@ The output of above quadratic kernel function is equivalent to the explicit dot 
   - **Note**: Deep learning does feature engineering implicitly for us.
 - **Runtime complexity** depends on number of support vectors, whose count is not easy to control.
 
-**Note**: Runtime Time Complexity ⏰ = \(O(n_{SV}\times d)\) , whereas linear SVM,\(O(d)\) .
+**Note**: Runtime Time Complexity = \(O(n_{SV}\times d)\) , whereas linear SVM,\(O(d)\) .
 {{< /panel >}}
 
 {{< video "https://youtu.be/y-7uDAiEYpA" >}}

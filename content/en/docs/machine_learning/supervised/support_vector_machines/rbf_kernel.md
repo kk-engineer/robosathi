@@ -9,8 +9,8 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfFECdHEHPM6NjErmLmg2Ff" 
 "Support Vector Machine | All Videos" >}}
 
-{{< panel color="cyan" title="Intuition 💡" >}}
-- Unlike the polynomial kernel, which looks at global 🌎 interactions, the RBF kernel acts like a similarity measure.
+{{< panel color="cyan" title="Intuition " >}}
+- Unlike the polynomial kernel, which looks at global interactions, the RBF kernel acts like a similarity measure.
 - If 'x' and 'z' are identical \(K(x,z)=1\).
   - As they move further apart in Euclidean space, the value decays exponentially towards 0.
   {{< /panel >}}
@@ -39,12 +39,12 @@ The Taylor expansion for \(e^u= \sum_{n=0}^{\infty} \frac{u^n}{n!}\)
 \[\phi(x) = e^{-\|x\|^2} \left[ 1, \sqrt{\frac{2}{1!}}x, \sqrt{\frac{2^2}{2!}}(x \otimes x), \dots, \sqrt{\frac{2^n}{n!}}(\underbrace{x \otimes \dots \otimes x}_{n \text{ times}}), \dots \right]^T\]
 
 - **Important**: The tensor product \(x\otimes x\) creates a vector (or matrix) containing all combinations of the features.
-e.g. if \(x=[x_{1},x_{2}]\), then  \(x\otimes x=[x_{1}^{2},x_{1}x_{2},x_{2}x_{1},x_{2}^{2}]\) ￼
+e.g. if \(x=[x_{1},x_{2}]\), then  \(x\otimes x=[x_{1}^{2},x_{1}x_{2},x_{2}x_{1},x_{2}^{2}]\)
 
 **Note**: Because the **Taylor series** has an **infinite number of terms**, feature map has an **infinite number of dimensions**.
 {{< /panel >}}
 
-{{< panel color="blue" title="Bias-Variance Trade-Off ⚔️" >}}
+{{< panel color="blue" title="Bias-Variance Trade-Off" >}}
 - **High Gamma(low \(\sigma\))**: **Over-Fitting**
   - Makes the kernel so ‘**peaky**' that each support vector **only** influences its **immediate neighborhood**. 
   - Decision boundary becomes **highly irregular**, ‘wrapping' tightly around individual data points to ensure they are classified correctly.

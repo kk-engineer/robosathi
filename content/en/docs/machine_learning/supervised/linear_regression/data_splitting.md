@@ -24,10 +24,10 @@ To avoid over-fitting (memorize), so that, the model generalizes well, improving
 
 {{< panel color="orange" title="Data Leakage" >}}
 Data leakage occurs when **information** from the validation or test set is **inadvertently used** to
-train 🏃‍♂️ the model.
+train the model.
 
 The model ‘**cheats**' by learning to exploit information it should not have access to, resulting in artificially 
-inflated performance metrics during testing 🧪.
+inflated performance metrics during testing .
 {{< /panel >}}
 
 {{< panel color="green" title="Typical Split Ratios" >}}
@@ -52,11 +52,11 @@ validation set having 99% class A.
 **Note**: Non-negotiable for imbalanced data.
 {{< /panel >}}
 
-{{< panel color="blue" title="Time-Series ⏳ Data" >}}
-- In time-series ⏰ data, divide the data chronologically, not randomly, i.e, training data time ⏰ should precede validation data time ⏰.
-- We always train 🏃‍♂️ on past data to predict future data.
+{{< panel color="blue" title="Time-Series Data" >}}
+- In time-series data, divide the data chronologically, not randomly, i.e, training data time should precede validation data time.
+- We always train on past data to predict future data.
 
-**Golden rule**: Never look 👀 into the future.
+**Golden rule**: Never look into the future.
 {{< /panel >}}
 
 {{< video "https://youtu.be/DGM9wktXyjE" >}}

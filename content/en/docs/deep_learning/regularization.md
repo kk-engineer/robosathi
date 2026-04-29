@@ -71,7 +71,7 @@ separate validation set during training.
 # restore_best_weights=True ensures you get the model from the best epoch.
 early_stop_callback = EarlyStopping(
     monitor='val_loss', 
- 👉 patience=3, 
+ patience=3, 
     restore_best_weights=True
 )
 
@@ -89,7 +89,7 @@ history = model.fit(
     X_train, y_train,
     epochs=100, # Set a large number of epochs
     validation_data=(X_val, y_val),
- 👉 callbacks=[early_stop_callback], # Pass the callback here 
+ callbacks=[early_stop_callback], # Pass the callback here 
     verbose=1
 )
 ```
@@ -209,18 +209,18 @@ l2_strength = 1e-4
 model = models.Sequential([
     # Add a Dense layer with L2 regularization
     layers.Dense(128, activation='relu',
-              👉 kernel_regularizer=regularizers.l2(l2_strength),
+              kernel_regularizer=regularizers.l2(l2_strength),
                  input_shape=(32,)),
     
     # Add a Dropout layer with a dropout rate of 30%
- 👉 layers.Dropout(0.3),
+ layers.Dropout(0.3),
     
     # Another Dense layer with L2 regularization
     layers.Dense(64, activation='relu',
-                 👉 kernel_regularizer=regularizers.l2(l2_strength)),
+                 kernel_regularizer=regularizers.l2(l2_strength)),
     
     # Another Dropout layer with a dropout rate of 20%
- 👉 layers.Dropout(0.2),
+ layers.Dropout(0.2),
     
     # Output layer
     layers.Dense(1, activation='linear')

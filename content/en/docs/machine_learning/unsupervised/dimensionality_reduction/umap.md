@@ -9,14 +9,14 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxc3nlviPEjCfl5drLYy2aRF" 
 "Dimensionality Reduction Techniques | All Videos" >}}
 
-{{< panel color="green" title="Use Case 🐝" >}}
+{{< panel color="green" title="Use Case " >}}
 🐢Visualizing massive datasets where t-SNE is too slow.
 
 ⭐️ Creating robust low-dimensional inputs for subsequent machine learning models.
 {{< /panel >}}
 
-{{< panel color="cyan" title="Intuition 💡" >}}
-⭐️ Using a world map 🗺️ (2D)instead of globe 🌍 for spherical(3D) earth 🌏.
+{{< panel color="cyan" title="Intuition " >}}
+⭐️ Using a world map ️ (2D)instead of globe for spherical(3D) earth .
 
 👉It preserves the neighborhood relationships of countries (e.g., India is next to China), and to a good degree, the global structure.
 {{< /panel >}}
@@ -29,12 +29,12 @@ in a lower-dimensional space (typically 2D or 3D), preserving its underlying str
 **Note**: Similar to t-SNE but often **faster** and **better** at maintaining global structure.
 {{< /panel >}}
 
-{{< panel color="red" title="Problem 🦀" >}}
+{{< panel color="red" title="Problem " >}}
 👉 Create a low-dimensional representation that preserves the topological connectivity and manifold structure of 
 the high-dimensional data **efficiently**.
 {{< /panel >}}
 
-{{< panel color="green" title="Solution 🦉" >}}
+{{< panel color="green" title="Solution " >}}
 💡 Create a **weighted graph** (**fuzzy** simplicial set) representing the data's topology and then find a low-dimensional 
 graph that is as structurally similar as possible.
 
@@ -63,12 +63,12 @@ for edge weights:
 ⭐️ Unlike t-SNE's KL divergence, UMAP minimizes the **cross-entropy** between the high-dimensional weights \(W_{ij}\) 
 and the low-dimensional weights \(Z_{ij}\).
 
-👉 Cost 💰 Function (C):
+👉 Cost Function (C):
 \[C=\sum _{i,j}\left(W_{ij}\log \frac{W_{ij}}{Z_{ij}}+(1-W_{ij})\log \frac{1-W_{ij}}{1-Z_{ij}}\right)\]
 {{< /panel >}}
 
 {{< panel color="blue" title="Cross Entropy Loss" >}}
-Cost 💰 Function (C):
+Cost Function (C):
 \[C=\sum _{i,j}\left(W_{ij}\log \frac{W_{ij}}{Z_{ij}}+(1-W_{ij})\log \frac{1-W_{ij}}{1-Z_{ij}}\right)\]
 🎯 Goal : Reduce overall Cross Entropy Loss.
 
@@ -88,7 +88,7 @@ and repulsive forces (edges absent in high-dimension, \(W_{ij} \approx 0\)).
 {{< imgproc "images/machine_learning/unsupervised/dimensionality_reduction/umap/slide_13_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="grey" title="Drawbacks 🦂" >}}
+{{< panel color="grey" title="Drawbacks " >}}
 - Mathematically complex.
 - Requires tuning (n_neighbors, min_dist).
 {{< /panel >}}

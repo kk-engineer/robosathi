@@ -9,15 +9,15 @@ math: true
 {{< playlist " https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfu7gGVAzvIvolLZeH8Ddb1" 
 "Machine Learning System | All Videos" >}}
 
-{{< panel color="blue" title="Why Retrain 🦮 a ML Model?" >}}
-⭐️In a production ML environment, retraining is the ‘**maintenance engine**' ⚙️ that keeps our models from becoming obsolete.
+{{< panel color="blue" title="Why Retrain a ML Model?" >}}
+⭐️In a production ML environment, retraining is the '**maintenance engine**' ️ that keeps our models from becoming obsolete.
 
 ❌ Don't ask: When do we retrain?
 
-✅ Ask: "How do we **automate** the decision to retrain while balancing compute cost 💰, model risk, and data freshness?"
+✅ Ask: "How do we **automate** the decision to retrain while balancing compute cost , model risk, and data freshness?"
 {{< /panel >}}
 
-{{< panel color="green" title="Periodic Retraining (Fixed Interval) ⏳" >}}
+{{< panel color="green" title="Periodic Retraining (Fixed Interval) " >}}
 👉 The model is retrained on a regular schedule (e.g., daily, weekly, or monthly).
 - **Best for**:
   - Stable environments where data changes slowly.
@@ -25,10 +25,10 @@ math: true
 - **Pros**:
   - **Highly predictable**; easy to schedule compute resources; simple to implement via a cron job or Airflow DAG.
 - **Cons**:
-  - **Inefficient**. You might retrain when not needed (wasting money 💵) or fail to retrain during a sudden market shift (losing accuracy).
+  - **Inefficient**. You might retrain when not needed (wasting money ) or fail to retrain during a sudden market shift (losing accuracy).
 {{< /panel >}}
 
-{{< panel color="orange" title="Trigger-Based Retraining (Reactive) 🔫" >}}
+{{< panel color="orange" title="Trigger-Based Retraining (Reactive) " >}}
 👉 Retraining is initiated only when a specific **performance** or data **metric** **crosses** a pre-defined **threshold**.
 - **Metric Triggers**:
   - **Performance Decay**: A drop in Precision, Recall, or RMSE (requires ground-truth labels).
@@ -36,17 +36,17 @@ math: true
 - **Pros**:
   - **Cost-effective**; reacts to the ‘reality' of the data rather than the calendar.
 - **Cons**:
-  - Requires a robust monitoring stack 📺.
+  - Requires a robust monitoring stack .
   <br> If the ‘trigger' logic is **buggy**, the model may **never update**.
 {{< /panel >}}
 
-{{< panel color="navy" title="Continual Learning (Online/Incremental) 🛜" >}}
+{{< panel color="navy" title="Continual Learning (Online/Incremental) " >}}
 👉 Instead of retraining from scratch on a massive batch, the model is **updated incrementally** as new data 
 ‘streams' into the system.
 - **Mechanism**: Using ‘**Warm Starts**' where the model weights from the previous version are used as the starting point 
 for the next few gradient descent steps.
 - **Best for**:
-  - **Recommendation engines** (Netflix/TikTok) or **High-Frequency Trading** 💰where patterns change by the minute.
+  - **Recommendation engines** (Netflix/TikTok) or **High-Frequency Trading** where patterns change by the minute.
 - **Pros**:
   - Extreme ‘**freshness**'; low latency between data arrival and model update.
 - **Cons**:

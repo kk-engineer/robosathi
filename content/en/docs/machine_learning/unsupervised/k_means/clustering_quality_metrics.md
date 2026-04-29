@@ -10,10 +10,10 @@ math: true
 "K Means Clustering | All Videos" >}}
 
 {{< panel color="orange" title="How to Evaluate Quality of Clustering?" >}}
-- 👉 **Elbow Method**: Quickest to compute; good for initial EDA (Exploratory Data Analysis).
-- 👉 **Dunn Index**: Focuses on the ‘gap' between the closest clusters.
-- 👉 **Silhouette Score**: Balances compactness and separation.
-- 👉 _Domain specific knowledge and system constraints_.
+- **Elbow Method**: Quickest to compute; good for initial EDA (Exploratory Data Analysis).
+- **Dunn Index**: Focuses on the ‘gap' between the closest clusters.
+- **Silhouette Score**: Balances compactness and separation.
+- _Domain specific knowledge and system constraints_.
 {{< /panel >}}
 
 {{< panel color="blue" title="Elbow Method" >}}

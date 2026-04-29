@@ -9,12 +9,12 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfFECdHEHPM6NjErmLmg2Ff" 
 "Support Vector Machine | All Videos" >}}
 
-{{< panel color="blue" title="Intuition💡" >}}
-💡Imagine the margin is a fence 🌉.
+{{< panel color="blue" title="Intuition" >}}
+💡Imagine the margin is a fence .
 - **Hard Margin**: fence is made of steel. <br>
 _Nothing can cross it_.
 - **Soft Margin**: fence is made of rubber(porous). <br>
-Some points can ‘push' into the margin or even **cross over** to the wrong side, but we charge them a **penalty** 💵 for doing so.
+Some points can ‘push' into the margin or even **cross over** to the wrong side, but we charge them a **penalty** for doing so.
 
 {{< imgproc "images/machine_learning/supervised/support_vector_machines/soft_margin_svm/slide_03_01.tif" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
@@ -22,7 +22,7 @@ Some points can ‘push' into the margin or even **cross over** to the wrong sid
 {{< panel color="red" title="Issue" >}}
 Distance from decision boundary:
 - Distance of positive labelled points must be  \(\ge 1\)
-- But, distance of noise 📢 points (actually positive points) \(x_1, x_2 ~\&~ x_3\) < 1
+- But, distance of noise points (actually positive points) \(x_1, x_2 ~\&~ x_3\) < 1
 {{< /panel >}}
 
 {{< panel color="green" title="Solution" >}}
@@ -47,7 +47,7 @@ also, ~ \xi_i \ge 0
 - \(\xi_i > 0\): On the **wrong side** of the decision boundary (**misclassified**).
 
 e.g.:
-Since, the noise 📢 point are +ve (\(y_i=1\)) labeled:
+Since, the noise point are +ve (\(y_i=1\)) labeled:
 \[\xi _{i}=\max (0,1-f(x_{i}))\]
 
 - \(x_1, (d=+0.5)\): \(\xi _{i}=\max (0,1-0.5) = 0.5\)
@@ -57,7 +57,7 @@ Since, the noise 📢 point are +ve (\(y_i=1\)) labeled:
 {{< imgproc "images/machine_learning/supervised/support_vector_machines/soft_margin_svm/slide_09_01.tif" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="orange" title="Goal 🎯" >}}
+{{< panel color="orange" title="Goal " >}}
 \[\text{Maximize the width of margin: } \min_{w, w_0} \frac{1}{2} {\|w\|^2}\]
 \[\text{Minimize violation or sum of slack/error terms: } \sum \xi_i\]
 {{< /panel >}}
@@ -74,7 +74,7 @@ Subject to **constraints**:
 
 {{< panel color="navy" title="Hyper-Parameter ‘C'" >}}
 - **Large ‘C'**: **Over-Fitting**; <br>
-Misclassifications are expensive 💰. <br>
+Misclassifications are expensive . <br>
 Model tries to keep the errors as low as possible. <br>
 - **Small ‘C'**: **Under-Fitting**; <br>
 Margin width is more important than individual errors. <br>

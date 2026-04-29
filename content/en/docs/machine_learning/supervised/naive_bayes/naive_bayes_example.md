@@ -43,7 +43,7 @@ Let's solve an email classification problem, below we have list of emails (token
 {{< /panel >}}
 
 {{< panel color="green" title="Inference Time" >}}
-👉 Say a new email 📧 arrives - "**Free money today**"; lets classify it as Spam/Not Spam.
+👉 Say a new email arrives - "**Free money today**"; lets classify it as Spam/Not Spam.
 
 **Spam**: 
 - P(‘free'| Spam) = \(\frac{2+1}{9+14} = \frac{3}{23} = 0.13\)
@@ -56,7 +56,7 @@ Let's solve an email classification problem, below we have list of emails (token
 - P(‘today'| Not Spam) = \(\frac{1+1}{7+14} = \frac{2}{21} = 0.095\)
 {{< /panel >}}
 
-{{< panel color="navy" title="Final Score 🏏" >}}
+{{< panel color="navy" title="Final Score " >}}
 \[\log(P(y| W)) \propto \sum_{i=1}^d \log(P(w_i|y)) + \log(P(y))\]
 - **Score(Spam)** = log(P(Spam)) + log(P(‘free'|S)) + log(P(‘money'|S)) + log(P(‘today'|S)) 
 <br> = log(0.5) + log(0.13) + log(0.087) + log(0.043) = -0.301 -0.886 -1.06 -1.366 = **-3.614**

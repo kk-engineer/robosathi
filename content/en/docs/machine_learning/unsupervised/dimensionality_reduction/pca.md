@@ -9,7 +9,7 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxc3nlviPEjCfl5drLYy2aRF" 
 "Dimensionality Reduction Techniques | All Videos" >}}
 
-{{< panel color="green" title="Use Case 🐝" >}}
+{{< panel color="green" title="Use Case " >}}
 - **Data Compression**
 - **Noise Reduction**
 - **Feature Extraction**: Create a smaller set of meaningful features from a larger one.
@@ -18,7 +18,7 @@ math: true
 **Assumption**: _Linear relationship between features_.
 {{< /panel >}}
 
-{{< panel color="cyan" title="Intuition 💡" >}}
+{{< panel color="cyan" title="Intuition " >}}
 💡_'Information = Variance'_
 
 ☁️ Imagine a cloud of points in 2D space. <br>
@@ -40,13 +40,13 @@ math: true
 because there will be some variability in data along the direction that is dropped, and that will be **lost**.
 {{< /panel >}}
 
-{{< panel color="blue" title="Goal 🎯" >}}
+{{< panel color="blue" title="Goal " >}}
 Fundamental goal of PCA is to find the new set of **orthogonal axes**, called the **principal components**, 
 onto which the data can be projected, such that, the **variance** of the projected data is **maximum**.
 {{< /panel >}}
 
-{{< panel color="grey" title="PCA as Optimization Problem 🦀" >}}
-- PCA seeks a direction 🧭, represented by a unit vector \(\hat{u}\) onto which data can be projected to maximize variance.
+{{< panel color="grey" title="PCA as Optimization Problem " >}}
+- PCA seeks a direction , represented by a unit vector \(\hat{u}\) onto which data can be projected to maximize variance.
 - The projection of a mean centered data point \(x_i\) onto \(u\) is \(u^Tx_i\).
 - The variance of these projections can be expressed as \(u^{T}\Sigma u\), where \(\Sigma\) is the data's covariance matrix.
 {{< /panel >}}
@@ -56,19 +56,19 @@ onto which the data can be projected, such that, the **variance** of the project
 - Projection of point \(x_i\) on \(u\) is \(z_i = u^Tx_i\)
 - Variance of projected points (since \(\bar{x} = 0\)):
 \[\text{Var}(z)=\frac{1}{n}\sum _{i=1}^{n}z_{i}^{2}=\frac{1}{n}\sum _{i=1}^{n}(x_{i}^{T}u)^{2}\]
-- 💡Since,  \((x_{i}^{T}u)^{2} = (u^{T}x_{i})(x_{i}^{T}u)\) \( \implies\text{Var}(z)=u^{T}\left(\frac{1}{n}\sum _{i=1}^{n}x_{i}x_{i}^{T}\right)u\)
-- 💡Since, Covariance Matrix, \(\Sigma = \left(\frac{1}{n}\sum _{i=1}^{n}x_{i}x_{i}^{T}\right)\)
-- 👉 Therefore, \(\text{Var}(z)=u^{T}\Sigma u\)
+- Since,  \((x_{i}^{T}u)^{2} = (u^{T}x_{i})(x_{i}^{T}u)\) \( \implies\text{Var}(z)=u^{T}\left(\frac{1}{n}\sum _{i=1}^{n}x_{i}x_{i}^{T}\right)u\)
+- Since, Covariance Matrix, \(\Sigma = \left(\frac{1}{n}\sum _{i=1}^{n}x_{i}x_{i}^{T}\right)\)
+- Therefore, \(\text{Var}(z)=u^{T}\Sigma u\)
 {{< /panel >}}
 
-{{< panel color="red" title="Constrained 🐣 Optimization" >}}
+{{< panel color="red" title="Constrained Optimization" >}}
 👉 To prevent infinite variance, PCA constrains \(u\) to be a unit vector (\(\|u\|=1\)).
 \[\text{maximize\ }u^{T}\Sigma u, \quad \text{subject\ to\ }u^{T}u=1\]
 **Note**: This constraint forces the optimization algorithm to focus **purely** on the _direction that maximizes variance_, 
 rather than allowing it to _artificially inflate_ the variance by increasing the length of the vector.
 {{< /panel >}}
 
-{{< panel color="green" title="Constrained Optimization Solution 🦉" >}}
+{{< panel color="green" title="Constrained Optimization Solution " >}}
 ⏲️ Lagrangian function: \(L(u,\lambda )=u^{T}\Sigma u-\lambda (u^{T}u-1)\) <br>
 🔦 To find \(u\) that maximizes above constrained optimization:
 \[\frac{\partial L}{\partial u} = 0\]
@@ -84,7 +84,7 @@ rather than allowing it to _artificially inflate_ the variance by increasing the
 🧭 Since the variance equals the eigenvalue \(\lambda\), the direction \(u\) that maximizes variance is the eigenvector associated with the largest eigenvalue.
 {{< /panel >}}
 
-{{< panel color="blue" title="PCA Algorithm ⚙️" >}}
+{{< panel color="blue" title="PCA Algorithm" >}}
 1. **Center** the data: \(X = X - \mu\)
 2. Compute the **Covariance Matrix**: \(\Sigma = \frac{1}{n-1} X^T X\)
 3. Compute **Eigenvectors** and **Eigenvalues** of \(\Sigma\) .
