@@ -3,6 +3,7 @@ title: Logistic Regression
 description: Logistic Regression
 date: 2026-02-09
 weight: 2
+auto_course_outline: true
 #draft: true
 ---
 

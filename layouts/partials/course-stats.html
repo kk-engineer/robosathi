@@ -1,0 +1,84 @@
+{{- $page := .page -}}
+{{- $leafPages := slice -}}
+{{- if eq $page.Kind "section" -}}
+  {{- $leafPages = $page.RegularPagesRecursive.ByWeight -}}
+{{- else -}}
+  {{- $leafPages = slice $page -}}
+{{- end -}}
+
+{{- $stats := newScratch -}}
+{{- $stats.Set "articleCount" 0 -}}
+{{- $stats.Set "topicCount" 0 -}}
+{{- $stats.Set "videoCount" 0 -}}
+{{- $stats.Set "articleMinutes" 0 -}}
+{{- $stats.Set "videoSeconds" 0 -}}
+{{- $stats.Set "topicTitles" (slice) -}}
+{{- $stats.Set "videoUrls" (slice) -}}
+{{- $stats.Set "videoTitles" (slice) -}}
+{{- $stats.Set "videoDurations" (slice) -}}
+
+{{- range $leafPages -}}
+  {{- $stats.Add "articleCount" 1 -}}
+  {{- $stats.Add "articleMinutes" .ReadingTime -}}
+  {{- $raw := .RawContent -}}
+  {{- $topicTitles := slice -}}
+  {{- range findRE "\\{\\{<\\s*(panel|definition)\\b[^>]*title=\"([^\"]+)\"" $raw -}}
+    {{- $topicTitles = $topicTitles | append (replaceRE ".*title=\"([^\"]+)\".*" "$1" .) -}}
+  {{- end -}}
+  {{- $stats.Add "topicCount" (len $topicTitles) -}}
+  {{- if ne $page.Kind "section" -}}
+    {{- $stats.Set "topicTitles" $topicTitles -}}
+  {{- end -}}
+
+  {{- $videoUrls := slice -}}
+  {{- $videoTitles := slice -}}
+  {{- $videoDurations := slice -}}
+  {{- range findRE "\\{\\{<\\s*video\\s+\"([^\"]+)\"" $raw -}}
+    {{- $url := replaceRE ".*\\{\\{<\\s*video\\s+\"([^\"]+)\".*" "$1" . -}}
+    {{- $videoUrls = $videoUrls | append $url -}}
+    {{- $title := printf "Video lesson %d" (add (len $videoTitles) 1) -}}
+    {{- $apiURL := printf "https://www.youtube.com/oembed?url=%s&format=json" $url -}}
+    {{- with try (resources.GetRemote $apiURL) -}}
+      {{- with .Value -}}
+        {{- with .Content -}}
+          {{- $data := unmarshal . -}}
+          {{- with $data.title }}{{ $title = . }}{{ end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $videoTitles = $videoTitles | append $title -}}
+    {{- $itemSeconds := 0 -}}
+    {{- with try (resources.GetRemote $url) -}}
+      {{- with .Value -}}
+        {{- $matches := findRE "\"lengthSeconds\":\"([0-9]+)\"" (.Content | string) 1 -}}
+        {{- with index $matches 0 -}}
+          {{- $itemSeconds = int (replaceRE ".*\"lengthSeconds\":\"([0-9]+)\".*" "$1" .) -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $stats.Add "videoSeconds" $itemSeconds -}}
+    {{- $stats.Add "videoCount" 1 -}}
+    {{- $videoDurations = $videoDurations | append (partial "course-duration.html" (dict "seconds" $itemSeconds)) -}}
+  {{- end -}}
+  {{- if ne $page.Kind "section" -}}
+    {{- $stats.Set "videoUrls" $videoUrls -}}
+    {{- $stats.Set "videoTitles" $videoTitles -}}
+    {{- $stats.Set "videoDurations" $videoDurations -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $articleMinutes := $stats.Get "articleMinutes" -}}
+{{- $readLabel := cond (eq $articleMinutes 1) "1 min" (printf "%d mins" $articleMinutes) -}}
+{{- return dict
+  "articleCount" ($stats.Get "articleCount")
+  "topicCount" ($stats.Get "topicCount")
+  "videoCount" ($stats.Get "videoCount")
+  "articleMinutes" $articleMinutes
+  "videoSeconds" ($stats.Get "videoSeconds")
+  "videoDurationLabel" (partial "course-duration.html" (dict "seconds" ($stats.Get "videoSeconds")))
+  "readLabel" $readLabel
+  "topicTitles" ($stats.Get "topicTitles")
+  "videoUrls" ($stats.Get "videoUrls")
+  "videoTitles" ($stats.Get "videoTitles")
+  "videoDurations" ($stats.Get "videoDurations")
+-}}

@@ -4,6 +4,7 @@ description: Statistics for AI & ML
 #categories: [Data Distribution, Hypothesis Testing, Performance Metrics]
 #tags: [CLT, CI, EDA, Maths]
 weight: 2
+auto_course_outline: true
 ---
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 

@@ -3,6 +3,7 @@ title: Introduction
 description: Introduction To Machine Learning
 date: 2026-02-07
 weight: 1
+auto_course_outline: true
 #draft: true
 ---
 

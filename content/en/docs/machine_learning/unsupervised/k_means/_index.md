@@ -3,6 +3,7 @@ title: K Means
 description: K Means Clustering
 date: 2026-02-09
 weight: 1
+auto_course_outline: true
 #draft: true
 ---
 

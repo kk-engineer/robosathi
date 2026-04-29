@@ -3,6 +3,7 @@ title: K Nearest Neighbors
 description: K Nearest Neighbors (KNN)
 date: 2026-02-09
 weight: 3
+auto_course_outline: true
 #draft: true
 ---
 

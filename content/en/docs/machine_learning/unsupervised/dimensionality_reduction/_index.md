@@ -3,6 +3,7 @@ title: Dimensionality Reduction
 description: Dimensionality Reduction Techniques
 date: 2026-02-09
 weight: 6
+auto_course_outline: true
 #draft: true
 ---
 

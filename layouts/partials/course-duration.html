@@ -1,0 +1,13 @@
+{{- $seconds := .seconds | default 0 -}}
+{{- if le $seconds 0 -}}
+  coming soon
+{{- else -}}
+  {{- $hours := div $seconds 3600 -}}
+  {{- $minutes := div (mod $seconds 3600) 60 -}}
+  {{- $secs := mod $seconds 60 -}}
+  {{- if gt $hours 0 -}}
+    {{- printf "%d hr %d mins %d secs" $hours $minutes $secs -}}
+  {{- else -}}
+    {{- printf "%d mins %d secs" $minutes $secs -}}
+  {{- end -}}
+{{- end -}}

@@ -3,6 +3,7 @@ title: Supervised Learning
 description: Supervised Machine Learning
 date: 2026-02-07
 weight: 2
+auto_course_outline: true
 #draft: true
 ---
 

@@ -3,6 +3,7 @@ title: Anomaly Detection
 description: Anomaly/Outlier/Novelty Detection
 date: 2026-02-09
 weight: 5
+auto_course_outline: true
 #draft: true
 ---
 

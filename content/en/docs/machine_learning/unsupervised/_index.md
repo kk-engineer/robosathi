@@ -3,6 +3,7 @@ title: Unsupervised Learning
 description: Unsupervised Machine Learning
 date: 2026-02-07
 weight: 3
+auto_course_outline: true
 #draft: true
 ---
 

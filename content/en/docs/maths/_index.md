@@ -1,6 +1,12 @@
 ---
 title: Maths
 description: Mathematics for AI & ML
+course_outline:
+  sections:
+    - page_ref: /docs/maths/probability
+    - page_ref: /docs/maths/statistics
+    - page_ref: /docs/maths/linear_algebra
+    - page_ref: /docs/maths/calculus
 #categories: [Probability, Statistics, Linear Algebra, Calculus]
 #tags: [ML, Maths]
 weight: 4

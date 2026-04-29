@@ -3,6 +3,7 @@ title: Naive Bayes'
 description: Naive Bayes'
 date: 2026-02-09
 weight: 6
+auto_course_outline: true
 #draft: true
 ---
 

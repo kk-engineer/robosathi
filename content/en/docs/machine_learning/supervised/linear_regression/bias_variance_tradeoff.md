@@ -1,4 +1,4 @@
-~~---
+---
 title: Bias Variance Tradeoff
 description: Bias Variance Tradeoff
 date: 2026-02-14

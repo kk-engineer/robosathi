@@ -3,6 +3,7 @@ title: ML System
 description: Machine Learning System
 date: 2026-02-09
 weight: 5
+auto_course_outline: true
 #draft: true
 ---
 

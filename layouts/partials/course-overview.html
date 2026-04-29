@@ -1,0 +1,132 @@
+{{- $entryPages := slice -}}
+{{- if .Params.course_outline -}}
+  {{- range .Params.course_outline.sections -}}
+    {{- with site.GetPage .page_ref -}}
+      {{- $entryPages = $entryPages | append . -}}
+    {{- end -}}
+  {{- end -}}
+{{- else if .Params.auto_course_outline -}}
+  {{- $entryPages = .Pages.ByWeight -}}
+{{- end -}}
+
+{{- $computed := slice -}}
+{{- $totals := newScratch -}}
+{{- $totals.Set "sectionCount" 0 -}}
+{{- $totals.Set "articleCount" 0 -}}
+{{- $totals.Set "topicCount" 0 -}}
+{{- $totals.Set "videoCount" 0 -}}
+{{- $totals.Set "articleMinutes" 0 -}}
+{{- $totals.Set "videoSeconds" 0 -}}
+
+{{- range $entryPages -}}
+  {{- $stats := partial "course-stats.html" (dict "page" .) -}}
+  {{- $computed = $computed | append (dict "page" . "stats" $stats) -}}
+  {{- $totals.Add "sectionCount" 1 -}}
+  {{- $totals.Add "articleCount" $stats.articleCount -}}
+  {{- $totals.Add "topicCount" $stats.topicCount -}}
+  {{- $totals.Add "videoCount" $stats.videoCount -}}
+  {{- $totals.Add "articleMinutes" $stats.articleMinutes -}}
+  {{- $totals.Add "videoSeconds" $stats.videoSeconds -}}
+{{- end -}}
+
+{{- $formatMinutes := cond (eq ($totals.Get "articleMinutes") 1) "1 min" (printf "%d mins" ($totals.Get "articleMinutes")) -}}
+{{- $videoDuration := partial "course-duration.html" (dict "seconds" ($totals.Get "videoSeconds")) -}}
+
+<section class="rs-course-overview">
+  <div class="rs-course-overview__includes">
+    <h2>This course includes</h2>
+    <div class="rs-course-overview__stats">
+      <div class="rs-course-overview__stat">
+        <span class="rs-course-overview__icon"><i class="far fa-file-alt" aria-hidden="true"></i></span>
+        <span><strong>{{ $totals.Get "articleCount" }}</strong> articles</span>
+      </div>
+      <div class="rs-course-overview__stat">
+        <span class="rs-course-overview__icon"><i class="far fa-clock" aria-hidden="true"></i></span>
+        <span><strong>{{ $formatMinutes }}</strong> reading time</span>
+      </div>
+      <div class="rs-course-overview__stat">
+        <span class="rs-course-overview__icon"><i class="fab fa-youtube" aria-hidden="true"></i></span>
+        <span><strong>{{ $totals.Get "videoCount" }}</strong> videos • <strong>{{ $videoDuration }}</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="rs-course-overview__content">
+    <div class="rs-course-overview__header">
+      <div>
+        <h2>Course content</h2>
+        <p>{{ $totals.Get "sectionCount" }} sections • {{ $totals.Get "topicCount" }} topics • Read: {{ $formatMinutes }} • Video: {{ $videoDuration }}</p>
+      </div>
+      <button
+        type="button"
+        class="rs-course-overview__expand"
+        onclick="this.closest('.rs-course-overview').querySelectorAll('details.rs-course-outline__section').forEach((el)=>{el.open=true;});">
+        Expand all sections
+      </button>
+    </div>
+
+    <div class="rs-course-outline">
+      {{- range $index, $entry := $computed -}}
+      <details class="rs-course-outline__section" {{ if eq $index 0 }}open{{ end }}>
+        <summary>
+          <span class="rs-course-outline__summary-text">{{ $entry.page.Title }}</span>
+          <span class="rs-course-outline__summary-meta">
+            {{ $entry.stats.topicCount }} Topics, Read: {{ $entry.stats.readLabel }}{{ if gt $entry.stats.videoCount 0 }}{{ printf ", %d Video" $entry.stats.videoCount }}{{ if ne $entry.stats.videoCount 1 }}s{{ end }}: {{ $entry.stats.videoDurationLabel }}{{ end }}
+          </span>
+        </summary>
+        <div class="rs-course-outline__items">
+          {{- if eq $entry.page.Kind "section" -}}
+            {{- range $child := $entry.page.Pages.ByWeight -}}
+              {{/* Check if title contains "Example" or "Note" */}}
+              {{- if not (or (in $child.Title "Example") (in $child.Title "Note")) -}}
+              {{- $childStats := partial "course-stats.html" (dict "page" $child) -}}
+              <div class="rs-course-outline__item">
+                <span class="rs-course-outline__item-main">
+                  <span class="rs-course-outline__item-icon">
+                    {{ if eq $child.Kind "section" }}<i class="far fa-folder-open" aria-hidden="true"></i>{{ else }}<i class="far fa-file-alt" aria-hidden="true"></i>{{ end }}
+                  </span>
+                  <span class="rs-course-outline__item-title">{{ $child.Title }}</span>
+                </span>
+                <span class="rs-course-outline__item-meta">
+                  <a href="{{ $child.RelPermalink }}">Open</a>
+                  <span>
+                    {{ if eq $child.Kind "section" }}{{ $childStats.articleCount }} articles • {{ end }}{{ $childStats.topicCount }} topics • Read: {{ $childStats.readLabel }}{{ if gt $childStats.videoCount 0 }} • {{ $childStats.videoCount }} video{{ if ne $childStats.videoCount 1 }}s{{ end }}: {{ $childStats.videoDurationLabel }}{{ end }}
+                  </span>
+                </span>
+              </div>
+              {{- end -}}
+            {{- end -}}
+          {{- else -}}
+            {{- range $entry.stats.topicTitles -}}
+            {{/* Check if title contains "Example" or "Note" */}}
+            {{- if not (or (in . "Example") (in . "Note")) -}}
+            <div class="rs-course-outline__item">
+              <span class="rs-course-outline__item-main">
+                <span class="rs-course-outline__item-icon"><i class="far fa-file-alt" aria-hidden="true"></i></span>
+                <span class="rs-course-outline__item-title">{{ . }}</span>
+              </span>
+            </div>
+            {{- end -}}
+            {{- end -}}
+
+            {{- range $videoIndex, $videoUrl := $entry.stats.videoUrls -}}
+            <div class="rs-course-outline__item">
+              <span class="rs-course-outline__item-main">
+                <span class="rs-course-outline__item-icon"><i class="fab fa-youtube" aria-hidden="true"></i></span>
+                <span class="rs-course-outline__item-title">{{ index $entry.stats.videoTitles $videoIndex }}</span>
+              </span>
+              <span class="rs-course-outline__item-meta">
+                <a href="{{ $videoUrl }}" target="_blank" rel="noopener">Watch</a>
+                {{ with index $entry.stats.videoDurations $videoIndex }}
+                <span>{{ . }}</span>
+                {{ end }}
+              </span>
+            </div>
+            {{- end -}}
+          {{- end -}}
+        </div>
+      </details>
+      {{- end -}}
+    </div>
+  </div>
+</section>
