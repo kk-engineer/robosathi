@@ -3,6 +3,12 @@ title: Notes
 description: AI & ML Course Overview
 weight: 1
 menu: {main: {weight: 10}}
+course_outline:
+  sections:
+    - page_ref: /docs/natural_language_processing
+    - page_ref: /docs/deep_learning
+    - page_ref: /docs/machine_learning
+    - page_ref: /docs/maths
 ---
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcDlHCeNiKbRhLWKVunQaxn" 

@@ -8,10 +8,10 @@ course_outline:
     - page_ref: /docs/deep_learning/intro_to_dl
     - page_ref: /docs/deep_learning/xor_problem
     - page_ref: /docs/deep_learning/activation_function
-    - page_ref: /docs/deep_learning/back_propagation
     - page_ref: /docs/deep_learning/optimization_method
     - page_ref: /docs/deep_learning/regularization
     - page_ref: /docs/deep_learning/batch_normalization
+    - page_ref: /docs/deep_learning/back_propagation
 #toc_hide: true
 #draft: true
 ---
