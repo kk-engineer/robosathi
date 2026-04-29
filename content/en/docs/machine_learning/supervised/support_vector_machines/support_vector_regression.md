@@ -10,18 +10,17 @@ math: true
 "Support Vector Machine | All Videos" >}}
 
 {{< panel color="cyan" title="Intuition " >}}
-👉Imagine a ‘**tube**' of radius \(\epsilon\) **surrounding** the **regression line**.
+Imagine a '**tube**' of radius \(\epsilon\) **surrounding** the **regression line**.
 - Points inside the tube are considered ‘**correct**' and incur zero penalty.
 - Points outside the tube are **penalized** based on their distance from the tube's boundary.
 {{< /panel >}}
 
-{{< panel color="green" title="Ignore Errors" >}}
-👉SVR ignores errors as long as they are within a certain distance (\(\epsilon\)) from the true value.
+{{< panel color="green" title="Support Vector Regression" >}}
+Support Vector Regression(SVR) ignores errors as long as they are within a certain distance (\(\epsilon\)) from the true value. <br>
+This makes SVR inherently robust to noise and outliers, as it does not try to fit every single point perfectly, 
+only those that '**matter**' to the structure of the data.
 
-🎯This makes SVR inherently robust to noise and outliers, as it does not try to fit every single point perfectly, 
-only those that ‘**matter**' to the structure of the data.
-
-**Note**: Standard regression (like OLS) tries to minimize the squared error between the prediction and every data point.
+_Note_: Standard regression (like OLS) tries to minimize the squared error between the prediction and every data point.
 {{< /panel >}}
 
 {{< panel color="blue" title="Optimization (Primal Formulation)" >}}
@@ -44,7 +43,7 @@ SVR uses a specific loss function that is 0 when the error<'\(\epsilon\)'.
 - The solution becomes sparse, because the loss is **zero** for points **inside** the tube.
 - Only the **Support Vectors**, i.e, points outside or on the boundary of the tube have **non-zero** Lagrange multipliers (\(\alpha_i\)).
 
-**Note**: \(\epsilon=0.1\) default value in scikit-learn.
+_Note_: \(\epsilon=0.1\) default value in scikit-learn.
 {{< /panel >}}
 
 {{< panel color="blue" title="(Wolfe) ‘Dual' Optimization" >}}
@@ -57,15 +56,15 @@ Subject to:
 - \(\alpha_i = \alpha_i^* = 0\): point is inside the tube.
 - \(|\alpha_i - \alpha_i^*| > 0\) : support vectors; points on or outside the tube.
 
-**Note**: \(\alpha_i , \alpha_i^* \) cannot both be non-zero for the same point; a point cannot be simultaneously above and below the tube.
+_Note_: \(\alpha_i , \alpha_i^* \) cannot both be non-zero for the same point; a point cannot be simultaneously above and below the tube.
 {{< /panel >}}
 
 {{< panel color="green" title="Inference & Kernel Trick" >}}
 \[f(z) = \sum_{i \in SV} (\alpha_i - \alpha_i^*) \mathbf{K(x_i, z)} + w_0\]
 
 - For non-linear SVR we replace dot product \(x_i^T x_j\) with kernel function \(K(x_i, x_j)\).
-- ✅ Model needs to store only support vectors, i.e, points where \(|\alpha_i - \alpha_i^*| > 0\).
-- ⭐️\(\xi_i =0 \) for a point that lies exactly on the boundary, so we can use that to calculate the bias (\(w_0\)):
+- Model needs to store only support vectors, i.e, points where \(|\alpha_i - \alpha_i^*| > 0\).
+- \(\xi_i =0 \) for a point that lies exactly on the boundary, so we can use that to calculate the bias (\(w_0\)):
 
 \[w_0 = y_i - \sum_{j \in SV} (\alpha_j - \alpha_j^*) K(x_j, x_i) - \epsilon\]
 \[ \text{Since, } y_i - (w^T x_i + w_0) \leq \epsilon + \xi_i\]

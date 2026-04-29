@@ -17,7 +17,7 @@ While Euclidean distance(L norm) is the most frequently discussed, **‘Curse of
 {{< /panel >}}
 
 {{< panel color="red" title="Issues with High Dimensional Data" >}}
-Coined 🪙 by mathematician **John Bellman** in the 1960s while studying _dynamic programming_.
+Coined by mathematician **John Bellman** in the 1960s while studying _dynamic programming_.
 
 High dimensional data created following challenges:
 - Distance Concentration
@@ -25,29 +25,27 @@ High dimensional data created following challenges:
 - Exponential Sample Requirement
 {{< /panel >}}
 
-{{< panel color="grey" title="Distance Concentration" >}}
-💡Consider a hypercube in d-dimensions of side length = 1; Volume = \(1^d\) = 1 <br>
-🧊 A smaller inner cube with side length = 1 - \(\epsilon\) ; Volume = \((1 -\epsilon)^d\) <br>
+{{< panel color="green" title="Distance Concentration" >}}
+Consider a hypercube in d-dimensions of side length = 1; Volume = \(1^d\) = 1 <br>
+A smaller inner cube with side length = 1 - \(\epsilon\) ; Volume = \((1 -\epsilon)^d\) <br>
 \[\lim_{d \rightarrow \infty} (1 - \epsilon)^d = 0\]
-🧐 This implies that almost all the volume of the high-dimensional cube lies near the ‘crust'. <br>
-👉e.g: if \(\epsilon\)= 0.01, d = 500; Volume of inner cube = \((1 -0.01)^{500}\) = \(0.99^{500}\) = 0.006 = 0.6% <br>
-🤔Consequently, all points become **nearly equidistant**, and the concept of ‘**nearest**' or ‘**neighborhood**' **loses** 
+This implies that almost all the volume of the high-dimensional cube lies near the ‘crust'. <br>
+e.g: if \(\epsilon\)= 0.01, d = 500; Volume of inner cube = \((1 -0.01)^{500}\) = \(0.99^{500}\) = 0.006 = 0.6% <br>
+Consequently, all points become **nearly equidistant**, and the concept of ‘**nearest**' or ‘**neighborhood**' **loses** 
 its meaning.
 
 {{< /panel >}}
 
 {{< panel color="navy" title="Data Sparsity" >}}
-⭐️The volume of the feature space increases exponentially with each added dimension.
+The volume of the feature space increases exponentially with each added dimension. <br>
+To maintain the same data density found in a 1D space with 10 points, we would need \(10^{10}\)(10 billion) points in 10D space.
 
-👉To maintain the same data density found in a 1D space with 10 points, we would need \(10^{10}\)(10 billion) points in 10D space.
-
-💡Because real-world datasets are rarely this large, the data becomes "sparse," making it difficult to find truly similar neighbors.
+Because real-world datasets are rarely this large, the data becomes "_sparse_" making it difficult to find truly similar neighbors.
 {{< /panel >}}
 
 {{< panel color="orange" title="Exponential Sample Requirement" >}}
-⭐️To maintain a reliable result, the amount of training data needed must grow exponentially with the number of dimensions.
-
-👉Without this growth, the model is highly prone to overfitting, where it learns from noise in the ‘sparse’ data 
+To maintain a reliable result, the amount of training data needed must grow exponentially with the number of dimensions. <br>
+Without this growth, the model is highly prone to overfitting, where it learns from noise in the ‘sparse’ data 
 rather than actual underlying patterns.
 
 **Note**: For modern embeddings (often 768 or 1536 dimensions), it is mathematically impossible to collect enough data 
@@ -67,13 +65,13 @@ Cosine similarity measures the **cosine** of the angle between 2 vectors.
 {{< /panel >}}
 
 {{< panel color="blue" title="Normalization" >}}
-⭐️Normalize the vector, i.e, make its length =1, a unit vector.
+Normalize the vector, i.e, make its length =1, a unit vector.
 
-💡By normalizing, we project all points onto the surface of a unit hypersphere.
+By normalizing, we project all points onto the surface of a unit hypersphere.
 - We are no longer searching in the ‘empty' high-dimensional volume of a hypercube.
 - Now, we are searching on a constrained manifold (the shell).
 
-**Note**: By normalizing, we move the data from the volume of the D-dimensional space onto the surface of a (D-1)-dimensional hypersphere.
+_Note_: By normalizing, we move the data from the volume of the D-dimensional space onto the surface of a (D-1)-dimensional hypersphere.
 
 **Euclidean Distance Squared of Normalized Vectors:**
 \[
@@ -86,7 +84,7 @@ Cosine similarity measures the **cosine** of the angle between 2 vectors.
 \end{align*}
 \]
 
-**Note**: This formula proves that **maximizing** _‘Cosine similarity’_ is identical to 
+_Note_: This formula proves that **maximizing** _‘Cosine similarity’_ is identical to 
 **minimizing** _‘Euclidean distance’_ on the hypersphere.
 {{< /panel >}}
 

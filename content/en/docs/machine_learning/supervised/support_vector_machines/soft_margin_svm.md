@@ -10,23 +10,23 @@ math: true
 "Support Vector Machine | All Videos" >}}
 
 {{< panel color="blue" title="Intuition" >}}
-💡Imagine the margin is a fence .
+Imagine the margin is a fence .
 - **Hard Margin**: fence is made of steel. <br>
 _Nothing can cross it_.
 - **Soft Margin**: fence is made of rubber(porous). <br>
 Some points can ‘push' into the margin or even **cross over** to the wrong side, but we charge them a **penalty** for doing so.
 
 {{< imgproc "images/machine_learning/supervised/support_vector_machines/soft_margin_svm/slide_03_01.tif" Resize "1400x" >}}{{< /imgproc >}}
-{{< /panel >}}
 
-{{< panel color="red" title="Issue" >}}
-Distance from decision boundary:
+**Problem** <br>
+Distance of all positive labelled points from the decision boundary are not the same:
 - Distance of positive labelled points must be  \(\ge 1\)
 - But, distance of noise points (actually positive points) \(x_1, x_2 ~\&~ x_3\) < 1
+
 {{< /panel >}}
 
-{{< panel color="green" title="Solution" >}}
-⚔️ So, we introduce a **slack** variable or allowance for **error** term, \(\xi_i\) (pronounced ‘xi') for every single data point.
+{{< panel color="green" title="Slack Variable" >}}
+So, we introduce a **slack** variable or allowance for **error** term, \(\xi_i\) (pronounced ‘xi') for every single data point.
 \[y_i.(w^Tx_i + w_0) \ge 1 - \xi_i, ~ \forall i  = 1,2,\dots, n\]
 \[
 \implies \xi_i \ge 1 - y_i.(w^Tx_i + w_0) \\
@@ -34,7 +34,7 @@ also, ~ \xi_i \ge 0
 \]
 
 \[So, ~ \xi _{i}=\max (0,1-y_{i}\cdot (w^Tx_i + w_0))\]
-**Note**: The above error term is also called '**Hinge Loss**'.
+_Note_: The above error term is also called '**Hinge Loss**'.
 {{< imgproc "images/machine_learning/supervised/support_vector_machines/soft_margin_svm/slide_06_01.png" Resize "1400x" >}}{{< /imgproc >}}
 **Hinge**
 {{< imgproc "images/machine_learning/supervised/support_vector_machines/soft_margin_svm/slide_06_02.png" Resize "200x" >}}{{< /imgproc >}}
@@ -57,7 +57,7 @@ Since, the noise point are +ve (\(y_i=1\)) labeled:
 {{< imgproc "images/machine_learning/supervised/support_vector_machines/soft_margin_svm/slide_09_01.tif" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="orange" title="Goal " >}}
+{{< panel color="orange" title="Goal of Soft Margin SVM" >}}
 \[\text{Maximize the width of margin: } \min_{w, w_0} \frac{1}{2} {\|w\|^2}\]
 \[\text{Minimize violation or sum of slack/error terms: } \sum \xi_i\]
 {{< /panel >}}
@@ -72,7 +72,7 @@ Subject to **constraints**:
 **Note**: We use a **hyper-parameter** ‘**C**' to control the trade-off.
 {{< /panel >}}
 
-{{< panel color="navy" title="Hyper-Parameter ‘C'" >}}
+{{< panel color="red" title="Hyper-Parameter 'C' Tuning" >}}
 - **Large ‘C'**: **Over-Fitting**; <br>
 Misclassifications are expensive . <br>
 Model tries to keep the errors as low as possible. <br>
@@ -81,7 +81,7 @@ Margin width is more important than individual errors. <br>
 Model will ignore outliers/noise to get a ‘cleaner'(wider) boundary.
 {{< /panel >}}
 
-{{< panel color="blue" title="Hinge Loss View" >}} 
+{{< panel color="cyan" title="Hinge Loss View" >}} 
 \[ \text{Hinge loss: } \xi _{i}=\max (0,1-y_{i}\cdot (w^Tx_i + w_0))\]
 
 \[ \min_{w, b} \frac{1}{2} \|w\|^2 + C \sum_{i=1}^n \text{HingeLoss}(y_i, f(x_i))\]

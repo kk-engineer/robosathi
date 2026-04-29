@@ -17,20 +17,18 @@ Naive KNN needs some improvements to fix some of its drawbacks.
 {{< /panel >}}
 
 {{< panel color="green" title="Standardization" >}}
-⭐️Say one feature is ‘Annual Income' (0-1M), and another feature is ‘Years of Experience' (0-40).
+Say one feature is 'Annual Income' (0-1M), and another feature is 'Years of Experience' (0-40). <br>
+The Euclidean distance will be almost entirely dominated by income .
 
-👉The Euclidean distance will be almost entirely dominated by income .
-
-💡So, we do standardization of each feature, such that it has a mean, \(\mu\)=0 and variance,\(\sigma\)=1.
+So, we do standardization of each feature, such that it has a mean, \(\mu\)=0 and variance,\(\sigma\)=1.
 \[z=\frac{x-\mu}{\sigma}\]
 {{< /panel >}}
 
-{{< panel color="grey" title="Distance-Weighted KNN" >}}
-⭐️Vanilla KNN treats the 1st nearest neighbor and the k-th nearest neighbor as equal.
+{{< panel color="cyan" title="Distance-Weighted KNN" >}}
+Vanilla KNN treats the 1st nearest neighbor and the k-th nearest neighbor as equal. <br>
+A neighbor that is 0.1units away should have more influence than a neighbor that is 10 units away.
 
-💡A neighbor that is 0.1units away should have more influence than a neighbor that is 10 units away.
-
-👉We assign weight to each neighbor; most common strategy is inverse of squared distance.
+We assign weight to each neighbor; most common strategy is inverse of squared distance.
 \[w_i = \frac{1}{d(x_q, x_i)^2 + \epsilon}\]
 
 **Improvements**:
@@ -41,13 +39,12 @@ Naive KNN needs some improvements to fix some of its drawbacks.
 {{< /panel >}}
 
 {{< panel color="orange" title="Mahalanobis Distance" >}}
-⭐️Euclidean distance makes assumption that all the features are independent and provide unique information.
+**Problem** <br>
+_Euclidean distance_ makes assumption that all the features are independent and provide unique information. <br>
+'Height' and 'Weight' are highly correlated. <br>
+So, if we use Euclidean distance, we are effectively 'double-counting' the size of the person.
 
-💡‘Height' and ‘Weight' are highly correlated.
-
-👉If we use Euclidean distance, we are effectively ‘double-counting' the size of the person.
-
-🏇Mahalanobis distance measures distance in terms of standard deviations from the mean, accounting for the covariance between features.
+**Mahalanobis distance** measures distance in terms of standard deviations from the mean, accounting for the covariance between features.
 \[d(x, y) = \sqrt{(x - y)^T \Sigma^{-1} (x - y)}\]
 \(\Sigma\): Covariance matrix of the data
 - If \(\Sigma\) is identity matrix, Mahalanobis distance reduces to Euclidean distance.

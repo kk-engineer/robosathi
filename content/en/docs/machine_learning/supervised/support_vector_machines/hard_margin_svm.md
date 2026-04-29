@@ -42,7 +42,7 @@ math: true
 {{< panel color="red" title="Constraint" >}}
 \[w^Tx_i + w_0 \ge +1 ~ for ~ y_i = +1 \]
 \[w^Tx_i + w_0 \le -1 ~ for ~ y_i = -1 \]
-👉Combining above two constraints:
+Combining above two constraints:
 \[y_{i}.(w^{T}x_{i}+w_{0})≥1\]
 {{< /panel >}}
 
@@ -52,7 +52,7 @@ such that, \(y_i.(w^Tx_i + w_0) \ge 1\)
 {{< /panel >}}
 
 {{< panel color="navy" title="Primal Problem" >}}
-👉To maximize the margin, we must minimize \(\|w\|\). <br>
+To maximize the margin, we must minimize \(\|w\|\). <br>
 Since, distance(\(\pi^+, \pi^-\)) = \(\frac{2}{\|w\|}\)
 \[\min_{w, w_0} \frac{1}{2} {\|w\|^2}\]
 such that, \(y_i.(w^Tx_i + w_0) \ge 1 ~ \forall i  = 1,2,\dots, n\)

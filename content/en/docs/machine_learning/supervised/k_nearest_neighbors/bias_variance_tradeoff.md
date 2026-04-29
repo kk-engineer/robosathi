@@ -15,12 +15,12 @@ Let's use this dataset to understand the impact of number of neighbours 'k'.
 {{< /panel >}}
 
 {{< panel color="blue" title="High Bias, Low Variance" >}}
-👉If ‘k' is very large, say, k=n,
+If 'k' is very large, say, k=n,
 - model simply predicts the **majority** class of the entire dataset for every query point , i.e, **under-fitting**.
 {{< /panel >}}
 
 {{< panel color="orange" title="High Variance, Low Bias" >}}
-👉If ‘k' is very small, say, k=1,
+If 'k' is very small, say, k=1,
 - model is highly sensitive to noise or outliers, as it looks at only 1 nearest neighbor, i.e, **over-fitting**.
 {{< /panel >}}
 

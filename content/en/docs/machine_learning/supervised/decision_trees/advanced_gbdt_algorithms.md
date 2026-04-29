@@ -16,21 +16,19 @@ math: true
 {{< /panel >}}
 
 {{< panel color="orange" title="XGBoost (Extreme Gradient Boosting)" >}}
-⭐️An optimized and highly efficient implementation of gradient boosting.
-
-👉 Widely used in competitive data science (like **Kaggle**) due to its speed and performance.
+- An optimized and highly efficient implementation of gradient boosting.
+- Widely used in competitive data science (like **Kaggle**) due to its speed and performance.
 
 **Note**: **Research** project developed by **Tianqi Chen** during his doctoral studies at the University of Washington.
 {{< /panel >}}
 
 {{< panel color="green" title="LightGBM (Light Gradient Boosting Machine)" >}}
-⭐️Developed by **Microsoft**, this framework is designed for high speed and efficiency with large datasets.
-
-👉It grows trees leaf-wise rather than level-wise and uses Gradient-based One-Side Sampling (GOSS) to speed up the finding of optimal split points.
+- Developed by **Microsoft**, this framework is designed for high speed and efficiency with large datasets.
+- It grows trees leaf-wise rather than level-wise and uses Gradient-based One-Side Sampling (GOSS) to speed up the finding of optimal split points.
 {{< /panel >}}
 
 {{< panel color="navy" title="CatBoost (Categorical Boosting)" >}}
-⭐️Developed by **Yandex**, this algorithm is specifically optimized for handling ‘categorical' features without requiring extensive preprocessing (such as, one-hot encoding).
+Developed by **Yandex**, this algorithm is specifically optimized for handling ‘categorical' features without requiring extensive preprocessing (such as, one-hot encoding).
 {{< /panel >}}
 
 {{< video "https://youtu.be/j9OFJo6kuCs" >}}

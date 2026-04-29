@@ -16,7 +16,7 @@ The Primal form is intuitive but computationally expensive in high dimensions.
 - d= number of dimensions (features)
 - p = degree of polynomial
 
-**Note**: The Dual form is what enables the Kernel Trick.
+_Note_: The Dual form is what enables the Kernel Trick.
 {{< /panel >}}
 
 {{< panel color="green" title="Optimization (Primal Formulation)" >}}
@@ -29,7 +29,7 @@ Subject to **constraints**:
 {{< /panel >}}
 
 {{< panel color="orange" title="Lagrangian" >}}
-⭐️ We start with the Soft-Margin Primal objective and incorporate its constraints using Lagrange Multipliers
+We start with the Soft-Margin Primal objective and incorporate its constraints using Lagrange Multipliers
 \((\alpha_i, \mu_i \geq 0)\)
 
 \[L(w, w_0, \xi, \alpha, \mu) = \frac{1}{2}\|w\|^2 + C \sum_{i=1}^n \xi_i - \sum_{i=1}^n \alpha_i \left[y_i(w^T x_i + w_0) - 1 + \xi_i \right] - \sum_{i=1}^n \mu_i \xi_i\]
@@ -37,7 +37,7 @@ Subject to **constraints**:
 {{< /panel >}}
 
 {{< panel color="navy" title="Lagrangian Objective" >}}
-👉The Lagrangian function has two competing objectives:
+The Lagrangian function has two competing objectives:
 \[L(w, w_0, \xi, \alpha, \mu) = \frac{1}{2}\|w\|^2 + C \sum_{i=1}^n \xi_i - \sum_{i=1}^n \alpha_i \left[y_i(w^T x_i + w_0) - 1 + \xi_i \right] - \sum_{i=1}^n \mu_i \xi_i\]
 - **Minimization**: We want to **minimize** \(L(w, w_0, \xi, \alpha, \mu)\) w.r.t **primal** variables (\(w, w_0, \xi_i \) ) to find the hyperplane with the largest possible margin.
 - **Maximization**: We want to **maximize** \(L(w, w_0, \xi, \alpha, \mu)\) w.r.t **dual** variables (\(\alpha_i, \mu_i\) ) to ensure all training constraints are satisfied.
@@ -48,7 +48,7 @@ a **saddle point**.
 {{< /panel >}}
 
 {{< panel color="rust" title="Karush–Kuhn–Tucker (KKT) Conditions" >}}
-👉To find the Dual, we find the saddle point by taking partial derivatives with respect to the primal variables \((w, w_0, \xi)\)
+To find the Dual, we find the saddle point by taking partial derivatives with respect to the primal variables \((w, w_0, \xi)\)
 and equating them to 0.
 
 \[\frac{\partial L}{\partial w} = 0 \implies \mathbf{w = \sum_{i=1}^n \alpha_i y_i x_i}\]
@@ -83,18 +83,18 @@ subject to: \(0 \leq \alpha_i \leq C\) and \(\sum \alpha_i y_i = 0\)
 - \(0 < \alpha_i < C\), for free support vectors (exactly on the margin)
 - \(\alpha_i = C\), for bounded support vectors (misclassified or inside margin)
 
-**Note**: **Sequential Minimal Optimization (SMO)** algorithm is used to find optimal \(\alpha_i\) values.
+_Note_: **Sequential Minimal Optimization (SMO)** algorithm is used to find optimal \(\alpha_i\) values.
 {{< /panel >}}
 
 {{< panel color="green" title="Inference Time" >}}
-🎯To classify unseen point \(x_q\) : \(f(x_q) = \text{sign}(w^T x_q + w_0)\)
+To classify unseen point \(x_q\) : \(f(x_q) = \text{sign}(w^T x_q + w_0)\)
 
-✅ From the KKT stationarity condition, we know: \(\mathbf{w} = \sum_{i=1}^n \alpha_i y_i x_i\)
+From the KKT stationarity condition, we know: \(\mathbf{w} = \sum_{i=1}^n \alpha_i y_i x_i\)
 
-👉 Substituting this into the equation:
+Substituting this into the equation:
 \[f(x_q) = \text{sign}\left( \sum_{i=1}^n \alpha_i y_i (x_i^T x_q) + w_0 \right)\]
 
-**Note**: Even if you have 1 million training points, if only 500 are support vectors, the summation only runs for 500 terms. 
+_Note_: Even if you have 1 million training points, if only 500 are support vectors, the summation only runs for 500 terms. 
 <br>All other points have \(\alpha_i = 0\) and vanish.
 {{< /panel >}}
 

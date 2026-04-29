@@ -25,7 +25,7 @@ math: true
 **Note**: Kernel function is the measure of **similarity** or **closeness**.
 {{< /panel >}}
 
-{{< panel color="red" title="Infinite Dimension Mapping" >}}
+{{< panel color="orange" title="Infinite Dimension Mapping" >}}
 Say \(\sigma = 1\), then Euclidean distance: \(\|x - z\|^2 = \|x\|^2 + \|z\|^2 - 2x^Tz\)
 \[K(x, z) = \exp(-( \|x\|^2 + \|z\|^2 - 2x^T z )) = \exp(-\|x\|^2) \exp(-\|z\|^2) \exp(2x^T z)\]
 
@@ -33,18 +33,18 @@ The Taylor expansion for \(e^u= \sum_{n=0}^{\infty} \frac{u^n}{n!}\)
 \[\exp(2x^T z) = \sum_{n=0}^{\infty} \frac{(2x^T z)^n}{n!} = 1 + \frac{2x^T z}{1!} + \frac{(2x^T z)^2}{2!} + \dots + \frac{(2x^T z)^n}{n!} + \dots\]
 \[K(x, z) = e^{-\|x\|^2} e^{-\|z\|^2} \left( \sum_{n=0}^{\infty} \frac{2^n (x^T z)^n}{n!} \right)\]
 
-💡If we **expand** each \((x^T z)^n\) term, it represents the dot product of all possible n-th order polynomial features.
+If we **expand** each \((x^T z)^n\) term, it represents the dot product of all possible n-th order polynomial features.
 
-👉Thus, the implicit feature map is:
+Thus, the implicit feature map is:
 \[\phi(x) = e^{-\|x\|^2} \left[ 1, \sqrt{\frac{2}{1!}}x, \sqrt{\frac{2^2}{2!}}(x \otimes x), \dots, \sqrt{\frac{2^n}{n!}}(\underbrace{x \otimes \dots \otimes x}_{n \text{ times}}), \dots \right]^T\]
 
 - **Important**: The tensor product \(x\otimes x\) creates a vector (or matrix) containing all combinations of the features.
 e.g. if \(x=[x_{1},x_{2}]\), then  \(x\otimes x=[x_{1}^{2},x_{1}x_{2},x_{2}x_{1},x_{2}^{2}]\)
 
-**Note**: Because the **Taylor series** has an **infinite number of terms**, feature map has an **infinite number of dimensions**.
+_Note_: Because the **Taylor series** has an **infinite number of terms**, feature map has an **infinite number of dimensions**.
 {{< /panel >}}
 
-{{< panel color="blue" title="Bias-Variance Trade-Off" >}}
+{{< panel color="green" title="Bias-Variance Trade-Off" >}}
 - **High Gamma(low \(\sigma\))**: **Over-Fitting**
   - Makes the kernel so ‘**peaky**' that each support vector **only** influences its **immediate neighborhood**. 
   - Decision boundary becomes **highly irregular**, ‘wrapping' tightly around individual data points to ensure they are classified correctly.
