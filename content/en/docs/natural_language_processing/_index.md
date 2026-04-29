@@ -7,6 +7,7 @@ course_outline:
   sections:
     - page_ref: /docs/natural_language_processing/intro_to_nlp
     - page_ref: /docs/natural_language_processing/text_pre_processing
+    - page_ref: /docs/natural_language_processing/tokenization
 #toc_hide: true
 #draft: true
 ---

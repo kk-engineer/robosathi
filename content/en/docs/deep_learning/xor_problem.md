@@ -22,7 +22,6 @@ and deciding whether to ‘fire’ (output 1) or stay ‘inactive’ (output 0).
 **Perceptron**
 {{< imgproc "images/deep_learning/fundamentals/xor_problem/perceptron.png" Resize "800x" >}}{{< /imgproc >}}
 
-
 💡 Even Logistic Regression is a simple neural network with a sigmoid activation (instead of step function as in Perceptron). <br>
 
 [Read more about Logistic Regression]({{<ref  "/docs/machine_learning/supervised/logistic_regression/" >}})

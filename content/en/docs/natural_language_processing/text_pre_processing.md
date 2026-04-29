@@ -52,6 +52,6 @@ When to use Lemmatization or Stemming:
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/natural_language_processing/intro_to_nlp" >}}">Previous: Intro to NLP</a></span>
-<span style="margin-left:auto;"><a href="{{< ref "/docs/natural_language_processing/text_pre_processing" >}}">Next: Text Pre-Processing</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/natural_language_processing/tokenization" >}}">Next: Tokenization</a></span>
 </div>
 <!-- nav-panel:end -->
