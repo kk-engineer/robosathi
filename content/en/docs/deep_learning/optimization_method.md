@@ -1,5 +1,5 @@
 ---
-title: Optimization Methods
+title: Optimization Method
 description: Optimization Methods - Momentum, AdaGrad, RMSProp, Adam
 date: 2026-04-27
 weight: 4

@@ -1,5 +1,5 @@
 ---
-title: Activation Functions
+title: Activation Function
 description: Activation Functions - Sigmoid, TanH, ReLU, Softmax
 date: 2026-04-27
 weight: 3
@@ -135,7 +135,7 @@ Fixes the ‘dying ReLU’ problem.
 [Read more about Differentiation]({{<ref  "/docs/maths/calculus/calculus_fundamentals/#differentiation"  >}})
 {{< /panel >}}
 
-{{< panel color="grey" title="Softmax" >}}
+{{< panel color="grey" title="Softmax"  id="softmax">}}
 Multivariate activation function that takes a vector of raw scores (logits) and converts them into a 
 probability distribution; sum of probabilities = 1.
 
@@ -143,12 +143,38 @@ probability distribution; sum of probabilities = 1.
 \[\sigma(\mathbf{z})_i = \frac{e^{z_i}}{\sum_{j=1}^K e^{z_j}}\] 
 where ‘K’ = number of classes
 
-**Usage:** <br>
-Almost exclusively used in the output layer of multi-class classification networks.
+**Winner Takes Most** <br>
+Since, the exponential function \(e^{x}\) grows rapidly. <br>
+A small lead in raw score (logit) results in a disproportionately large share of the final probability. <br>
+So, winner takes the majority share, but non-winners still retain a small, non-zero probability.
 
+**Role of Temperature (\(T\))** <br>
+The "sharpness" of the distribution is controlled by a **temperature** parameter \(T\):
+\[ \sigma (z)_{i}=\frac{e^{z_{i}/T}}{\sum _{j=1}^{K}e^{z_{j}/T}}\]
+
+- _High Temperature_ (\(T \to \infty\)): The output becomes a uniform distribution, where all classes have nearly equal probability regardless of their input scores.
+- _Low Temperature_ (\(T \to 0\)): The output becomes a "hard" max (one-hot vector), where the highest score gets a probability of \(1\) and all others \(0\).
+
+**Gradient of Softmax** 
+\[\frac{\partial \sigma_i}{\partial z_j} = 
+\begin{cases} 
+\sigma_i(1 - \sigma_i) & \text{if } i = j \\
+-\sigma_i\sigma_j & \text{if } i \neq j 
+\end{cases}
+\]
+
+Combining both cases:
+\[\frac{\partial \sigma_i}{\partial z_j} = \sigma_i (\delta_{ij} - \sigma_j)\]
+where, \(\delta_{ij}\) is the _Kronecker delta_ (1 if \(i=j\) (diagonal), 0 otherwise).
+
+**Usage:** <br>
+- Almost exclusively used in the output layer of multi-class classification networks.
+- Attention score calculation.
+
+**Softmax Graph** <br>
 {{< imgproc "images/deep_learning/fundamentals/activation_function/softmax.png" Resize "800x" >}}{{< /imgproc >}}
 
-**Example:** <br>
+**Example** <br>
 Consider an AI model reading a product review to categorize the customer's mood into three classes:
 Positive,Neutral, or Negative.
 

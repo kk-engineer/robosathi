@@ -13,6 +13,8 @@ course_outline:
     - page_ref: /docs/natural_language_processing/lstm
     - page_ref: /docs/natural_language_processing/gru
     - page_ref: /docs/natural_language_processing/attention
+    - page_ref: /docs/natural_language_processing/self_attention
+    - page_ref: /docs/natural_language_processing/transformer
 #toc_hide: true
 #draft: true
 ---

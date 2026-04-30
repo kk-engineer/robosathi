@@ -78,6 +78,8 @@ Moreover, we can apply a **softmax** on the similarity scores, so that the highe
 thus giving us better prediction. <br>
 This turns our prediction into a weighted average of the values \(v_i\).
 
+[Read more about Softmax]({{<ref  "/docs/deep_learning/activation_function/#softmax"  >}})
+
 {{< imgproc "images/natural_language_processing/attention/query_key_value_softmax.png" Resize "800x" >}}{{< /imgproc >}}
 
 _Note_: Instead of a fixed curve, the model learns the best way to represent '\(q\)' and '\(k\)'
@@ -114,6 +116,8 @@ Let us understand all the terminologies used in the diagram above in detail:
 - _Context Vector_: Weighted sum of the encoder hidden states (the Values). 
   - \(c_t = \sum_{j=1}^T \alpha_{tj} h_j\)
 
+[Read more about Softmax]({{<ref  "/docs/deep_learning/activation_function/#softmax"  >}})
+
 _Note_: Bahdanau used additive attention, which is slow because of the addition step.
 {{< /panel >}}
 
@@ -138,6 +142,6 @@ _Research Paper_: Attention Is All You Need, Vaswani et al. , 2017, https://arxi
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/natural_language_processing/gru" >}}">Previous: GRU</a></span>
-<span style="margin-left:auto;"><a href="{{< ref "/docs/natural_language_processing/attention" >}}">Next: Attention</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/natural_language_processing/self_attention" >}}">Next: Self Attention</a></span>
 </div>
 <!-- nav-panel:end -->
