@@ -16,7 +16,7 @@ LSTMs are complex, which makes them slower to train and more computationally int
 
 {{< /panel >}}
 
-{{< panel color="blue" title="Gated Recurrent Unit"  id="gru" >}}
+{{< panel color="blue" title="Gated Recurrent Unit (GRU)"  id="gru" >}}
 GRU is simplified LSTM with fewer gates, fewer parameters and simpler architecture, 
 while retaining the ability to capture long-term dependencies, often leading to faster training times and reduced computational costs.
 
@@ -169,6 +169,6 @@ _Note_: GRU essentially "forgets" the past and behaves like a standard Simple RN
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/natural_language_processing/lstm" >}}">Previous: LSTM</a></span>
-<span style="margin-left:auto;"><a href="{{< ref "/docs/natural_language_processing/attention" >}}">Next: Attention Mechanism</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/natural_language_processing/attention" >}}">Next: Attention</a></span>
 </div>
 <!-- nav-panel:end -->

@@ -18,7 +18,7 @@ By the time the RNN is processing "_not entertaining_" it forgets the subject, i
 because they are separated too far.
 {{< /panel >}}
 
-{{< panel color="blue" title="Long Short Term Memory(LSTM)"  id="lstm">}}
+{{< panel color="blue" title="Long Short Term Memory (LSTM)"  id="lstm">}}
 LSTM solves vanishing gradient problem by introducing:
 - _Cell State_ (\(C_t\)):  which acts as a "long-term" memory conveyor belt that runs parallel to the 
 - _Hidden State_ (\(h_t\)):  the "short-term" working memory (similar to RNN)
