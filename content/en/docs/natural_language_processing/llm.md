@@ -70,6 +70,8 @@ and produce functional, context-aware results.
 - Math & Reasoning (Chain of Thought)
   - Instead of training the model to give the answer directly (Prompt￼\(\rightarrow\) Answer), we train it to generate a rationale (Prompt \(\rightarrow\) Rationale \(\rightarrow\)￼ Answer); include intermediate steps, step1, step2 … to teach model “Chain of Thought” by walking through logic (also multiple turns).
 - Tool/Function Calling
+  - Enables LLMs to interact with external tools and APIs. 
+  - Transformed LLMs from passive chatbots into Agentic AI.
 
 {{< /panel >}}
 
@@ -95,6 +97,8 @@ _Research Paper_: Chain-of-Thought Prompting Elicits Reasoning in Large Language
 {{< panel color="blue" title="Tool/Function Calling" >}}
 Train the model to recognize when to pause text generation and output a specific JSON format to invoke an external tool/function. <br>
 Say, we ask some information, like weather of a city, the LLM will not have that information and need to search the web or call some external API.
+
+_Note_: Tool calling in LLMs is core enabler that transformed LLMs from passive chatbots into Agentic AI.
 
 - **Function Calling** (specific API):
   - **User Prompt**: "What is the weather in Pune?"
@@ -247,6 +251,6 @@ Across the whole model, this usually results in training ~0.1% to 1%.
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/natural_language_processing/transformer" >}}">Previous: Transformer</a></span>
-<span style="margin-left:auto;"><a href="{{< ref "/docs/natural_language_processing/llm" >}}">Next: LLM</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/natural_language_processing/bert" >}}">Next: BERT</a></span>
 </div>
 <!-- nav-panel:end -->

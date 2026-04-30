@@ -62,7 +62,7 @@ e.g., “unhappiness”, becomes: <br>
 
 {{< /panel >}}
 
-{{< panel color="cyan" title="Byte Pair Encoding" >}}
+{{< panel color="cyan" title="Byte Pair Encoding" id="bpe">}}
 Originally a _data compression_ algorithm, **Byte Pair Encoding** (BPE) was adapted for NLP to iteratively merge the most frequent adjacent pairs of characters into new tokens.
 
 **BPE Algorithm**
@@ -186,7 +186,7 @@ Source: https://platform.openai.com/tokenizer
 
 {{< /panel >}}
 
-{{< panel color="orange" title="WordPiece" >}}
+{{< panel color="orange" title="WordPiece" id="word_piece">}}
 WordPiece merges the pair that maximizes the likelihood of the training data. <br>
 It chooses the pair\((s_1, s_2)\) that maximizes:
 
