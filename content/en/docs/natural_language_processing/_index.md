@@ -5,11 +5,13 @@ date: 2026-04-28
 weight: 1
 course_outline:
   sections:
-    - page_ref: /docs/natural_language_processing/intro_to_nlp
+    - page_ref: /docs/natural_language_processing/introduction
     - page_ref: /docs/natural_language_processing/text_pre_processing
     - page_ref: /docs/natural_language_processing/tokenization
     - page_ref: /docs/natural_language_processing/text_representation
-    - page_ref: /docs/natural_language_processing/recurrent_neural_network
+    - page_ref: /docs/natural_language_processing/rnn
+    - page_ref: /docs/natural_language_processing/lstm
+    - page_ref: /docs/natural_language_processing/gru
 #toc_hide: true
 #draft: true
 ---

@@ -90,9 +90,9 @@ This '\(h_t\)' is used for predictions and as input for the next time step.
 Now let's understand how back propagation through time happens in LSTM.<br>
 It is similar to RNN as LSTM is also sequential in nature and processes words in a sentence one by one.
 
-Cell State = \(C_t = f_t \odot C_{t-1} + i_t \odot \tilde{C}_t\) <br>
-Gradient = \(\frac{\partial c_{t} } {\partial c_{t-1}} = f_t\) <br>
-Recursively (for all words at different time steps): 
+- Cell State = \(C_t = f_t \odot C_{t-1} + i_t \odot \tilde{C}_t\) 
+- Gradient = \(\frac{\partial c_{t} } {\partial c_{t-1}} = f_t\) 
+- Recursively (for all words at different time steps): 
 \[ \frac{\partial c_{t} } {\partial c_{k}} = \prod_{i=k+1}^t f_i\]
 
 Therefore, in LSTM , the gradient is determined by the forget gate \(f_t\).
@@ -101,6 +101,9 @@ Therefore, in LSTM , the gradient is determined by the forget gate \(f_t\).
 
 _Note_: Therefore, unlike RNNs, the vanishing/exploding gradient problem is significantly reduced in LSTM,
 because of the stable gradient flow, allowing LSTM to learn long range dependencies.
+
+In RNN, the gradient is given by:
+\[ \frac{\partial E_t}{\partial h_k } = \delta_t \prod_{i=k+1}^t  \sigma'(a_i).W \propto \prod \text{Activation Gradient x Weight} \]
 
 [Read more about Back Propagation Through Time in RNN]({{<ref  "/docs/natural_language_processing/rnn/#bptt"  >}}) <br>
 [Read more about Vanishing Gradient Problem]({{<ref  "/docs/natural_language_processing/rnn/#vanishing_gradient"  >}})

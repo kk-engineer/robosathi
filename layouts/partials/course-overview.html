@@ -29,8 +29,9 @@
   {{- $totals.Add "videoSeconds" $stats.videoSeconds -}}
 {{- end -}}
 
-{{- $formatMinutes := cond (eq ($totals.Get "articleMinutes") 1) "1 min" (printf "%d mins" ($totals.Get "articleMinutes")) -}}
+<!--{{- $formatMinutes := cond (eq ($totals.Get "articleMinutes") 1) "1 min" (printf "%d mins" ($totals.Get "articleMinutes")) -}}-->
 {{- $videoDuration := partial "course-duration.html" (dict "seconds" ($totals.Get "videoSeconds")) -}}
+{{- $formatHoursMinutes := partial "course-duration.html" (dict "totalMinutes" ($totals.Get "articleMinutes")) -}}
 
 <section class="rs-course-overview">
   <div class="rs-course-overview__includes">
@@ -42,7 +43,7 @@
       </div>
       <div class="rs-course-overview__stat">
         <span class="rs-course-overview__icon"><i class="far fa-clock" aria-hidden="true"></i></span>
-        <span><strong>{{ $formatMinutes }}</strong> reading time</span>
+        <span><strong>{{ $formatHoursMinutes }}</strong> reading time</span>
       </div>
       <div class="rs-course-overview__stat">
         <span class="rs-course-overview__icon"><i class="fab fa-youtube" aria-hidden="true"></i></span>
@@ -55,7 +56,7 @@
     <div class="rs-course-overview__header">
       <div>
         <h2>Course content</h2>
-        <p>{{ $totals.Get "sectionCount" }} sections • {{ $totals.Get "topicCount" }} topics • Read: {{ $formatMinutes }} • Video: {{ $videoDuration }}</p>
+        <p>{{ $totals.Get "sectionCount" }} sections • {{ $totals.Get "topicCount" }} topics • Read: {{ $formatHoursMinutes }} • Video: {{ $videoDuration }}</p>
       </div>
       <button
         type="button"

@@ -1215,7 +1215,8 @@ body.td-home .td-main {
 }
 
 .rs-course-overview__stats {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.7rem;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -1229,6 +1230,8 @@ body.td-home .td-main {
   border-radius: 14px;
   padding: 0.75rem 0.85rem;
   font-size: 0.94rem;
+  flex: 0 1 auto;
+  white-space: nowrap;
 }
 
 .rs-course-overview__icon {
