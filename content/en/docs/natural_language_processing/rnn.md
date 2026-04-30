@@ -1,5 +1,5 @@
 ---
-title: Recurrent Neural Network
+title: RNN
 description: Recurrent Neural Network
 date: 2026-04-29
 weight: 5
@@ -30,7 +30,7 @@ So, we need a model that can process an input of any length and use all the sequ
 
 {{< /panel >}}
 
-{{< panel color="green" title="Recurrent Neural Network"  id="rnn">}}
+{{< panel color="blue" title="Recurrent Neural Network(RNN)"  id="rnn">}}
 At each step, the RNN maintains a "hidden state" that captures information about the words seen so far.
 
 **Recurrent Relation** 
@@ -233,6 +233,6 @@ Stacking multiple Bi-RNN layers allows the model to learn complex patterns and h
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/natural_language_processing/text_representation" >}}">Previous: Text Representation</a></span>
-<span style="margin-left:auto;"><a href="{{< ref "/docs/natural_language_processing/recurrent_neural_network" >}}">Next: RNN</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/natural_language_processing/lstm" >}}">Next: LSTM</a></span>
 </div>
 <!-- nav-panel:end -->

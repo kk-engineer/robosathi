@@ -1,6 +1,6 @@
 ---
-title: Notes
-description: AI & ML Course Overview
+title: Courses
+description: AI & ML Courses Overview
 weight: 1
 menu: {main: {weight: 10}}
 course_outline:

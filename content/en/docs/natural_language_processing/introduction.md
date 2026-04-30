@@ -1,5 +1,5 @@
 ---
-title: Intro to NLP
+title: Introduction
 description: Introduction to Natural Language Processing
 date: 2026-04-28
 weight: 1

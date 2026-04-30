@@ -74,8 +74,8 @@ associativity, commutativity, distributivity, existence of a zero vector, and ad
 e.g.: Set of all points in 2D is a vector space. <br>
 {{</ definition >}}
 
-{{< panel color="green" title="Vector Operations" >}}
-**Addition:** <br>
+{{< panel color="green" title="Vector Operations" id="vector_operations">}}
+**Addition** <br>
 We can only add vectors of the same dimension. <br>
 - Commutative: \(a + b = b + a\)
 - Associative: \(a + (b + c) = (a + b) + c\)
@@ -86,7 +86,7 @@ e.g: lets add 2 real d-dimensional vectors, \(\mathbf{u} , \mathbf{v} \in \mathb
 \(\mathbf{u} + \mathbf{v} = \begin{bmatrix} u_1+v_1 \\ u_2+v_2 \\ \vdots \\ u_d+v_d \end{bmatrix}_{\text{d×1}}\)
 <br>
 
-**Multiplication:** <br>
+**Multiplication** <br>
 **1. Multiplication with Scalar:** <br>
 All elements of the vector are multiplied with the scalar. <br>
 - \(c(\mathbf{u} + \mathbf{v}) = c(\mathbf{u}) + c(\mathbf{v})\)
@@ -94,19 +94,18 @@ All elements of the vector are multiplied with the scalar. <br>
 - \((cd)\mathbf{v} = c(d\mathbf{v})\)
 
 e.g:
-\(\alpha\mathbf{v} = \begin{bmatrix} \alpha v_1 \\ \alpha v_2 \\ \vdots \\ \alpha v_d \end{bmatrix}_{\text{d×1}}\) <br><br>
+\[\alpha\mathbf{v} = \begin{bmatrix} \alpha v_1 \\ \alpha v_2 \\ \vdots \\ \alpha v_d \end{bmatrix}_{\text{d×1}}\]
 
-**2.Inner (Dot) Product:** <br>
+**2. Inner (Dot) Product** <br>
 Inner(dot) product \(\mathbf{u} \cdot \mathbf{v}\) of 2 vectors gives a **scalar** output. <br>
-The two vectors must be of the same dimensions. <br>
-- \(\mathbf{u} \cdot \mathbf{v} = u_1v_1 + u_2v_2 + \cdots + u_dv_d\)
+The two vectors must be of the same dimensions.
+\[\mathbf{u} \cdot \mathbf{v} = u_1v_1 + u_2v_2 + \cdots + u_dv_d\]
 
-_Dot product:_ <br>
 \(\mathbf{u} \cdot \mathbf{v} = \mathbf{u}^\mathrm{T} \mathbf{v}\)
 = \(\begin{bmatrix} u_1 & u_2 & \cdots & u_d \end{bmatrix}_{\text{1×d}} 
 \cdot 
 \begin{bmatrix} v_1 \\ v_2 \\ \vdots \\ v_d
-\end{bmatrix}_{\text{d×1}} = u_1v_1 + u_2v_2 + \cdots + u_dv_d\) <br><br>
+\end{bmatrix}_{\text{d×1}} = u_1v_1 + u_2v_2 + \cdots + u_dv_d\) 
 
 Geometrically, \(\mathbf{u} \cdot \mathbf{v}\) = \(|u||v|cos\theta\) <br>
 where \(\theta\) is the angle between \(\mathbf{u}\) and \(\mathbf{v}\).
@@ -118,11 +117,22 @@ where \(\theta\) is the angle between \(\mathbf{u}\) and \(\mathbf{v}\).
 
 \(\mathbf{u} \cdot \mathbf{v}\) = \(|u||v|cos\theta = 1 \times 3 + 2 \times 4 = 11\)
 
-**2.Outer (Tensor) Product:** <br>
+**3. Element Wise Dot Product (Hadamard product)** <br>
+An operation that multiplies corresponding elements of two vectors of the same dimension to create a new vector of the same dimension.
+
+\[\mathbf{u} \odot \mathbf{v} = \begin{bmatrix} u_1 v_1 \\ u_2 v_2 \\ \vdots \\ u_n v_n \end{bmatrix}\]
+
+e.g. <br>
+\[\mathbf{u} \odot \mathbf{v} = 
+\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} \odot \begin{bmatrix} 4 \\ 5 \\ 6 \end{bmatrix} = 
+\begin{bmatrix} 1 \times 4 \\ 2 \times 5 \\ 3 \times 6 \end{bmatrix} = 
+\begin{bmatrix} 4 \\ 10 \\ 18 \end{bmatrix}
+\]
+
+**4. Outer (Tensor) Product** <br>
 Outer (tensor) product \(\mathbf{u} \otimes \mathbf{v}\) of 2 vectors gives a **matrix** output. <br>
 The two vectors must be of the same dimensions. <br>
 
-_Tensor product:_ <br>
 \(\mathbf{u} \otimes \mathbf{v} = \mathbf{u} \mathbf{v}^\mathrm{T} \)
 = \(\begin{bmatrix} u_1 \\ u_2 \\ \vdots \\ u_d \end{bmatrix}_{\text{d×1}}
 \otimes
@@ -133,13 +143,11 @@ u_2v_1 & u_2v_2 & \cdots & u_2v_n \\
 \vdots & \vdots & \ddots & \vdots \\
 u_dv_1 & u_dv_2 & \cdots & u_dv_d
 \end{bmatrix}
-\in \mathbb{R}^{d \times d}\) <br><br>
+\in \mathbb{R}^{d \times d}\) 
 
 e.g: <br>
 \(\mathbf{u} = \begin{bmatrix} 1 \\ \\ 2 \\ \end{bmatrix}_{\text{2×1}}\), 
-\(\mathbf{v} = \begin{bmatrix} 3 \\ \\ 4 \\ \end{bmatrix}_{\text{2×1}}\) 
-
-<br><br>
+\(\mathbf{v} = \begin{bmatrix} 3 \\ \\ 4 \\ \end{bmatrix}_{\text{2×1}}\)
 
 \(\mathbf{u} \otimes \mathbf{v} = \mathbf{u} \mathbf{v}^\mathrm{T} \)
 = \(\begin{bmatrix} 1 \\ \\ 2 \\ \end{bmatrix}_{\text{2×1}}
@@ -158,8 +166,7 @@ _{\text{2×2}}
 \end{bmatrix}
 _{\text{2×2}}\)
 
-<br><br>
-*Note: We will NOT discuss about cross product \(\mathbf{u} \times \mathbf{v}\); product perpendicular to both vectors.*
+*Note*: We will NOT discuss about cross product \(\mathbf{u} \times \mathbf{v}\); product perpendicular to both vectors.
 
 {{< /panel >}}
 

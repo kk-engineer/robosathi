@@ -1,5 +1,5 @@
 ---
-title: Intro to DL
+title: Introduction
 description: Introduction to Deep Learning
 date: 2026-04-27
 weight: 1

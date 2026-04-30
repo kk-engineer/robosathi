@@ -360,7 +360,7 @@ Represent a word by the sum of the vector representations of its character n-gra
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/natural_language_processing/tokenization" >}}">Previous: Tokenization</a></span>
-<span style="margin-left:auto;"><a href="{{< ref "/docs/natural_language_processing/recurrent_neural_network" >}}">Next: RNN</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/natural_language_processing/rnn" >}}">Next: RNN</a></span>
 </div>
 <!-- nav-panel:end -->
 
