@@ -23,8 +23,7 @@ We will focus on two important iterative gradient based methods: <br>
 **Gradient Descent:** <br>
 It is a **first order** iterative optimization algorithm that is used to find the local **minimum** of a **differentiable** function. <br>
 It **iteratively** adjusts the **parameters** of the model in the direction **opposite** to the gradient of cost function,
-since moving opposite to the direction of gradient leads towards the **minima**. <br>
-<br>
+since moving opposite to the direction of gradient leads towards the **minima**. 
 
 **Algorithm:** <br>
 1. Initialize the weights/parameters with random values.
@@ -37,17 +36,17 @@ w_{new} = w_{old} - \eta \cdot \frac{\partial f}{\partial w_{old}} \\[10pt]
 
 4. Repeat steps 2 and 3 iteratively until convergence (to minima).
 
+**Gradient Descent**
 {{< imgproc "images/maths/calculus/optimization/gradient_descent.png" Resize "800x" >}}{{< /imgproc >}}
 
-{{</ definition >}}
-
-{{< panel color="green" title="Types of Gradient Descent" >}}
 There are 3 types of Gradient Descent:
 1. **Batch Gradient Descent**
 2. **Stochastic Gradient Descent**
 3. **Mini-Batch Gradient Descent**
 
-**Batch Gradient Descent (BGD):** <br>
+{{</ definition >}}
+
+{{< panel color="green" title="Batch Gradient Descent (BGD)" >}}
 Computes the gradient using **all** the data points in the dataset for parameter update in each iteration. <br>
 Say, number of data points in the dataset is \(n\). <br>
 Let, the loss function for individual data point be \(l_i(w)\) <br>
@@ -64,10 +63,9 @@ w_{new} = w_{old} - \eta \cdot (\text{average of all 'n' gradients})
 2. Smooth, **direct** path towards minima.
 3. Number of steps/iterations is **minimum**.
 4. **Not** suitable for **large** datasets; impractical for Deep Learning, as n = millions/billions.
+{{< /panel >}}
 
-<br><br>
-
-**Stochastic Gradient Descent (SGD):** <br>
+{{< panel color="orange" title="Stochastic Gradient Descent (SGD)" >}}
 It uses only 1 data point selected randomly from dataset to compute gradient for parameter update in each iteration. <br>
 \[
 \frac{\partial L}{\partial w} \approx \frac{\partial l_i}{\partial w}, \text { say i = 5} \\[10pt]
@@ -79,10 +77,9 @@ w_{new} = w_{old} - \eta \cdot (\text{gradient of i-th data point})
 2. Highly noisy, **zig-zag** path to minima.
 3. High variance in gradient estimation makes path to minima volatile, requiring a careful **decay** of learning rate
 \(\eta\) to ensure convergence to minima.
+{{< /panel >}}
 
-<br><br>
-
-**Mini Batch Gradient Descent (MBGD):** <br>
+{{< panel color="cyan" title="Mini Batch Gradient Descent (MBGD)" >}}
 It uses small **randomly** selected subsets of dataset, called **mini-batch**, (1<k<n) to compute gradient for 
 parameter update in each iteration. <br>
 \[
@@ -107,5 +104,3 @@ also GPUs are the reason for the mini-batch size to be a power of 2.*
 <span style="margin-left:auto;"><a href="{{< ref "/docs/maths/calculus/newton's_method" >}}">Next: Newton's Method</a></span>
 </div>
 <!-- nav-panel:end -->
-
-```End of Section```

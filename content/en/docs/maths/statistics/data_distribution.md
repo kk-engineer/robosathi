@@ -303,16 +303,17 @@ but still we should **always** plot the data and **visually inspect** the data d
 As these metrics may not provide the complete picture. <br>
 
 A mathematician called _Francis John Anscombe_ has illustrated this point beautifully in his _Anscombe's Quartet_. <br><br>
-**Anscombe's quartet:** <br>
+**Anscombe's Quartet** <br>
 It comprises four datasets that have nearly identical simple descriptive statistics, <br> 
 yet have very different distributions and appear very different when plotted.
-{{< /panel >}}
 
+**Data Statistics**
 {{< imgproc "images/maths/statistics/anscombe_quartet_data.png" Resize "800x" >}}{{< /imgproc >}}
-<br>
+
+**Figure: Anscombe's Quartet**
 {{< imgproc "images/maths/statistics/anscombe_quartet.png" Resize "800x" >}}{{< /imgproc >}}
 
-{{< panel color="grey" title="Figure: Anscombe's Quartet">}}{{< /panel >}}
+{{< /panel >}}
 
 {{< video "https://youtu.be/vjRuMR4Fx74?si=0CQ5-dKZ13o6-uyd" >}}
 

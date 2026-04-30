@@ -8,8 +8,8 @@ math: true
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfzDh2D3OqVo-piGAZQPWDj" 
         "Calculus for AI & ML | Full Course Videos">}}
-{{< definition >}}
-**Newton's Method:** <br>
+
+{{< panel color="blue" title="Newton's Method" >}}
 It is a **second-order** iterative gradient based optimization technique known for its **extremely fast** convergence. <br>
 When close to optimum, it achieves **quadratic** convergence, better than gradient descent's linear convergence. 
 <br><br>
@@ -33,7 +33,8 @@ x_{new} = x_{old} - (\nabla^2 f(x_{old})^{-1} \nabla f(x_{old}) \\[10pt]
 
 {{< imgproc "images/maths/calculus/optimization/newton_method.png" Resize "800x" >}}{{< /imgproc >}}
 
-{{</ definition >}}
+{{</ panel >}}
+
 {{< panel color="rust" title="Example" >}}
 1. Find the minima of \(f(x) = x^2 - 4x + 5\)
 To find the minima, lets calulate the first derivative and equate to zero. <br>
@@ -52,7 +53,7 @@ x_{new} = x_{old} - \frac{f\prime(x_{old})}{f\prime\prime(x_{old}} \\[10pt]
 Hence, we can see that using **Newton's Method** we can get to the minima \(x^* = 2\) in just 1 step.
 {{< /panel >}}
 
-{{< panel color="cyan" title="Limitations" >}}
+{{< panel color="cyan" title="Limitations of Newton's Method" >}}
 Full **Newton's Method** is rarely used in Machine Learning/Deep Learning optimization, 
 because of the following limitations: <br>
 1. \(TC = O(n^2\)) for **Hessian** calculation, since for a network with \(n\) parameters <br>
@@ -77,5 +78,3 @@ of curvature without incurring the cost of Hessian calculation. <br>
 <span style="margin-left:auto;"></span>
 </div>
 <!-- nav-panel:end -->
-
-```End of Section```

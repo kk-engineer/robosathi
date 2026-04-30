@@ -404,5 +404,3 @@ Since, determinant of Hessian \( = -4 < 0 \implies (x=0, y=0) \) is a saddle poi
 <span style="margin-left:auto;"><a href="{{< ref "/docs/maths/calculus/optimization" >}}">Next: Optimization</a></span>
 </div>
 <!-- nav-panel:end -->
-
-```End of Section```

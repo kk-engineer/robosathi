@@ -336,7 +336,7 @@ f_{\Theta \mid X} (\theta \mid x) = \frac{f_{\Theta}(\theta) P_{X \mid \Theta}(x
 *Note: If we do NOT have enough data, then we should NOT ignore our initial belief.* <br>
 *However, if we have enough data, then the data will override our initial belief and the posterior will be dominated by data.* <br>
 
-{{< panel color="grey" title="Plot: Prior, Posterior & MLE">}}{{< /panel >}}
+**Plot: Prior, Posterior & MLE**
 {{< imgproc "images/maths/probability/mle.png" Resize "800x" >}}{{< /imgproc >}}
 
 *Note: Bayesian approach gives us a probability distribution of parameter \(\Theta\).*

@@ -99,7 +99,6 @@ If a function is twice differentiable, i.e, 2nd derivative exists, then the func
 if and only if, the **Hessian** is **positive semi-definite** for all points in its domain. <br>
 
 [Read more about Hessian]({{<ref  "/docs/maths/linear_algebra/matrix_calculus"  >}})
-<br>
 
 **Positive Definite:** <br>
 A symmetric matrix is positive definite if and only if: <br>
@@ -107,7 +106,6 @@ A symmetric matrix is positive definite if and only if: <br>
 2. For any non-zero vector \(z\), the quadratic form \(z^THz > 0\)
 
 *Note: If the Hessian is positive definite, then the function is convex; has upward curvature in all directions.*
-<br><br>
 
 **Positive Semi-Definite:** <br>
 A symmetric matrix is positive semi-definite if and only if: <br>
@@ -274,5 +272,3 @@ w^* = (X^TX)^{-1}X^Ty
 <span style="margin-left:auto;"><a href="{{< ref "/docs/maths/calculus/gradient_descent" >}}">Next: Gradient Descent</a></span>
 </div>
 <!-- nav-panel:end -->
-
-```End of Section```
