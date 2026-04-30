@@ -8,9 +8,9 @@
         {{- $minutes := div (mod $seconds 3600) 60 -}}
         {{- $secs := mod $seconds 60 -}}
         {{- if gt $hours 0 -}}
-            {{- printf "%d hr %d mins %d secs" $hours $minutes $secs -}}
+            {{- printf "%d hr %d mins" $hours $minutes -}}
         {{- else -}}
-            {{- printf "%d mins %d secs" $minutes $secs -}}
+            {{- printf "%d mins" $minutes -}}
         {{- end -}}
     {{- end -}}
 {{- end -}}

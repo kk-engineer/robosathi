@@ -169,6 +169,6 @@ _Note_: GRU essentially "forgets" the past and behaves like a standard Simple RN
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/natural_language_processing/lstm" >}}">Previous: LSTM</a></span>
-<span style="margin-left:auto;"><a href="{{< ref "/docs/natural_language_processing/gru" >}}">Next: GRU</a></span>
+<span style="margin-left:auto;"><a href="{{< ref "/docs/natural_language_processing/attention" >}}">Next: Attention Mechanism</a></span>
 </div>
 <!-- nav-panel:end -->

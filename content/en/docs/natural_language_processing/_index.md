@@ -12,6 +12,7 @@ course_outline:
     - page_ref: /docs/natural_language_processing/rnn
     - page_ref: /docs/natural_language_processing/lstm
     - page_ref: /docs/natural_language_processing/gru
+    - page_ref: /docs/natural_language_processing/attention
 #toc_hide: true
 #draft: true
 ---
