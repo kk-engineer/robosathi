@@ -15,6 +15,7 @@ course_outline:
     - page_ref: /docs/natural_language_processing/attention
     - page_ref: /docs/natural_language_processing/self_attention
     - page_ref: /docs/natural_language_processing/transformer
+    - page_ref: /docs/natural_language_processing/llm
 #toc_hide: true
 #draft: true
 ---
