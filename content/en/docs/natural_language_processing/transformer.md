@@ -70,7 +70,7 @@ By averaging them, we often end up with a blurry representation that does not ca
 
 {{< /panel >}}
 
-{{< panel color="magenta" title="Multi-Head Attention">}}
+{{< panel color="magenta" title="Multi-Head Attention" id="multi_head_attention" >}}
 Allows the model to "dissect" the word. <br>
 Each head can look at different aspects of a sentence, such as, syntax (subject-verb), semantics(meaning), pronouns, etc.
 
