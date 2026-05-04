@@ -8,7 +8,7 @@ course_outline:
     - page_ref: /docs/natural_language_processing/introduction
     - page_ref: /docs/natural_language_processing/text_pre_processing
     - page_ref: /docs/natural_language_processing/tokenization
-    - page_ref: /docs/natural_language_processing/text_representation
+    - page_ref: /docs/natural_language_processing/text_embedding
     - page_ref: /docs/natural_language_processing/rnn
     - page_ref: /docs/natural_language_processing/lstm
     - page_ref: /docs/natural_language_processing/gru
