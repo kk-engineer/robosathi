@@ -232,7 +232,7 @@ Stacking multiple Bi-RNN layers allows the model to learn complex patterns and h
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
-<span><a href="{{< ref "/docs/natural_language_processing/text_representation" >}}">Previous: Text Representation</a></span>
+<span><a href="{{< ref "/docs/natural_language_processing/text_embedding" >}}">Previous: Text Embedding</a></span>
 <span style="margin-left:auto;"><a href="{{< ref "/docs/natural_language_processing/lstm" >}}">Next: LSTM</a></span>
 </div>
 <!-- nav-panel:end -->

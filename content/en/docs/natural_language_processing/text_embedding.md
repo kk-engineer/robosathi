@@ -1,6 +1,6 @@
 ---
-title: Text Representation
-description: Text Representation - OHE, BoW, TF-IDF, Word2Vec, GloVe & FastText
+title: Text Embedding
+description: Text Embeddings - OHE, BoW, TF-IDF, Word2Vec, GloVe & FastText
 date: 2026-04-29
 weight: 4
 math: true
@@ -9,15 +9,15 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcDlHCeNiKbRhLWKVunQaxn" 
 "Natural Language Processing | Full Course" >}}
 
-{{< panel color="blue" title="Text Representation" >}}
+{{< panel color="blue" title="Text Embedding" >}}
 Process of converting raw text into numerical vectors that machines can understand.
 
-We will discuss the following ways to represent text as vectors:
+We will discuss the following ways to represent(embeddings) text as vectors:
 - One Hot Encoding (OHE) (discrete)
 - Bag of Words (BoW), TF-IDF (statistical)
 - Word2Vec, GloVe, FastText (distributed)
 
-**Requirements of Good Text Representation**
+**Requirements of Good Text Representation(Embeddings)**
 - Capture meaning/similarity (semantics)
 - Capture context
 - Compact
@@ -329,7 +329,7 @@ e.g. if n = 3, (typically, n = 3, 4, 5, 6): <br>
 _Note_: FastText also uses Skip-Gram architecture, similar to Word2Vec, wo we will not discuss skip gram model and dive in 
 directly into understanding the difference between FastText and Word2Vec approaches.
 
-[Read more about Skip-Gram]({{<ref  "/docs/natural_language_processing/text_representation/#skip_gram"  >}})
+[Read more about Skip-Gram]({{<ref  "/docs/natural_language_processing/text_embedding/#skip_gram"  >}})
 
 **Word2Vec (skip-gram model)**
 \[log ~ P(w_{t+j} | w_t) = \mathbf{v}^T_{w_t}\mathbf{u}_{w_{t+j}} - log\sum_{w \in V} \mathbf{v}^T_{w_t}\mathbf{u}_{w}\]
