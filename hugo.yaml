@@ -164,7 +164,7 @@ params:
     # Enable to show the side bar menu in its compact state.
     sidebar_menu_compact: true
     # Control the level menu depth visible in the sidebar.
-    ul_show: 2
+    ul_show: 1
     # Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
     sidebar_search_disable: false
 
