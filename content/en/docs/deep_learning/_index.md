@@ -5,7 +5,7 @@ date: 2026-04-27
 weight: 2
 course_outline:
   sections:
-    - page_ref: /docs/deep_learning/intro_to_dl
+    - page_ref: /docs/deep_learning/introduction
     - page_ref: /docs/deep_learning/xor_problem
     - page_ref: /docs/deep_learning/activation_function
     - page_ref: /docs/deep_learning/optimization_method
