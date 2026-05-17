@@ -10,7 +10,7 @@ math: true
 "Natural Language Processing | Full Course" >}}
 
 {{< definition title="Natural Language Processing">}}
-📘 Natural Language Processing (NLP) is a subfield of artificial intelligence that enables computers to 
+_Natural Language Processing_ (NLP) is a subfield of artificial intelligence that enables computers to 
 understand, interpret, and generate human language. <br>
 
 e.g. Question Answering, Summary, Dialogue Generation (Chatbot), Sentiment Analysis, Spam Classification etc.
@@ -30,6 +30,8 @@ e.g. Question Answering, Summary, Dialogue Generation (Chatbot), Sentiment Analy
 Before we dive into how do we capture the context, we need to convert the human language into a form that is understandable by machines. <br>
 We know that deep learning models take vectors/matrices as input, which are collections of numbers. <br>
 So, first we need to convert the words into vectors for training the models.
+
+[Read more about Vectors]({{<ref  "/docs/maths/linear_algebra/vector_fundamentals"  >}}) 
 {{< /definition >}}
 
 {{< panel color="orange" title="Corpus to Model" >}}
@@ -51,25 +53,25 @@ Below are the steps:
 
 {{< panel color="green" title="Evolution of LLM" >}}
 👉 Let's have a look a brief history of NLP models developed for understanding sentences:
-- N-Gram (1951),  Claude Shannon
+- **N-Gram** (1951),  Claude Shannon
   - Predict the next word based on previous 'n-1' words.
-- RNN (1986),  Rumelhart, Hinton, & Williams
+- **RNN** (1986),  Rumelhart, Hinton, & Williams
   - Predict the next word in the sequence using all the past words in the sentence (hidden state).
-- LSTM (1997), Hochreiter & Schmidhuber
+- **LSTM** (1997), Hochreiter & Schmidhuber
   - Introduced long term memory, along with short term memory (as in RNN) and gates to control them.
-- GRU (2014), Cho et al. 
+- **GRU** (2014), Cho et al. 
   - Simplified LSTM architecture with fewer gates.
-- Attention (2014), Bahdanau, Cho, & Bengio
+- **Attention** (2014), Bahdanau, Cho, & Bengio
   - In machine translation instead of having a fixed context from encoder, decoder decides parts of the source sentence to pay attention, i.e, context changes for each word.
-- Self Attention (2017), Vaswani et al. 
+- **Self Attention** (2017), Vaswani et al. 
   - Every word in a sentence looks at every other word (including itself) to decide which word is most relevant to its own meaning in that specific context.
-- Transformers (2017), Vaswani et al. 
+- **Transformers** (2017), Vaswani et al. 
   - Landmark paper that replaced sequential RNN/LSTM based models completely with Self Attention, making it highly parallelizable.
-- LLM (GPT) (2018), Radford et al.  (OpenAI)
+- **LLM** (GPT) (2018), Radford et al.  (OpenAI)
   - First transformer based (decoder only) architecture that led to the birth of LLMs.
-  - SFT, RLHF (2022), Ouyang et al. (InstructGPT)
+  - _SFT_, _RLHF_ (2022), Ouyang et al. (InstructGPT)
     -  Fine-tuning approaches to make the LLMs useful, i.e, question answering, code generation, instruction following etc.
-- BERT (2018), Devlin et al. (Google)
+- **BERT** (2018), Devlin et al. (Google)
   - Transformer based (encoder only) architecture that captures the context of a word from both sides (left & right), making it useful for natural language inference tasks.
 
 {{< /panel >}}

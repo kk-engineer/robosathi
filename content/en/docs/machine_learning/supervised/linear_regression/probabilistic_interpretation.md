@@ -48,6 +48,8 @@ Why is Error terms distribution considered to be Gaussian ?
 the distribution of the sample mean(sum) approximates to a **normal distribution**, 
 *regardless* of the original population distribution.
 {{< imgproc "images/machine_learning/supervised/linear_regression/probabilistic_interpretation/slide_07_01.png" Resize "1400x" >}}{{< /imgproc >}}
+
+[Read more about Central Limit Theorem]({{<ref  "/docs/maths/statistics/central_limit_theorem/#clt" >}})
 {{< /answer >}}
 
 {{< panel color="green" title="Probability Vs Likelihood" >}}
@@ -60,9 +62,9 @@ Inverse concept used for inference (working backward from results to causes). It
 {{< panel color="navy" title="Maximum Likelihood Estimate (MLE)" >}}
 *‘Find the most plausible explanation for what I see.'*
 
-The goal of the probabilistic interpretation is to find the parameters ‘w' that maximize the probability (likelihood) of observing the given dataset.
+The goal of the probabilistic interpretation is to find the **parameters** 'w' that **maximize** the **likelihood** of observing the given dataset.
 
-**Assumption**: Training data is I.I.D.
+_Assumption_: Training data is I.I.D.
 \[
 \begin{align*}
 Likelihood &= \mathcal{L}(w) \\
@@ -71,6 +73,9 @@ Likelihood &= \mathcal{L}(w) \\
 &= \prod_{i=1}^N \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(y_i-x_i^Tw)^2}{2\sigma^2}}
 \end{align*}
 \]
+
+
+[Read more about Maximum Likelihood Estimate]({{<ref  "/docs/maths/probability/parametric_model_estimation/#mle" >}})
 {{< /panel >}}
 
 {{< panel color="red" title="Issue with Likelihood" >}}

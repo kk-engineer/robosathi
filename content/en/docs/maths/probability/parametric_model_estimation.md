@@ -43,7 +43,7 @@ There are 2 philosophical approaches to estimate the parameters of a parametric 
 
 {{< video "https://www.youtube.com/watch?v=uGjlEjN0giM&t=1s" >}}
 
-{{<definition title="Maximum Likelihood Estimation">}}
+{{<definition title="Maximum Likelihood Estimation" id="mle">}}
 It is the most popular frequentist approach to estimate the parameters of a model. <br>
 This method helps us find the parameters \(\Theta\) that make the data most probable.
 

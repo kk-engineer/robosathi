@@ -145,6 +145,7 @@ The gradient value is so low that the weights will literally have no updates, he
 **Solution**
 - Skip connections
 - ReLU activation (derivative 1)
+
 [Read more about Activation Function]({{<ref  "/docs/deep_learning/activation_function/"  >}})
 
 {{< /panel >}}
