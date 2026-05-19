@@ -9,22 +9,22 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxddB_on_ZQ0pzP6C6gRHR_i" 
 "K Means Clustering | All Videos" >}}
 
-{{< panel color="orange" title="Issues with K-Means" >}}
+{{< panel color="red" title="Issues with K-Means" >}}
 - In K-Means, the centroid is the arithmetic mean of the cluster. The **mean** is very **sensitive** to **outliers**.
 - **Not interpretable**; centroid is the mean of cluster data points and may not be an actual data point, hence **not representative**.
 {{< /panel >}}
 
-{{< panel color="blue" title="Medoid" >}}
-⭐**️Medoid** is a specific data point from a dataset that acts as the '**center**' or **most representative member** of its cluster.
+{{< panel color="cyan" title="Medoid" >}}
+**️Medoid** is a specific data point from a dataset that acts as the '**center**' or **most representative member** of its cluster.
 
-👉It is defined as the object within a cluster whose **average dissimilarity** (distance) to all other members in that 
+It is defined as the object within a cluster whose **average dissimilarity** (distance) to all other members in that 
 same cluster is the **smallest**.
 {{< /panel >}}
 
-{{< panel color="green" title="K-Medoids (PAM) Algorithm" >}}
-💡Selects actual data points from the dataset as cluster representatives, called medoids (**most centrally located**).
+{{< panel color="blue" title="K-Medoids (PAM) Algorithm" id="pam">}} 
+Selects actual data points from the dataset as cluster representatives, called medoids (**most centrally located**).
 
-👉a.k.a **Partitioning Around Medoids**(PAM).
+a.k.a **Partitioning Around Medoids**(PAM).
 
 **Steps**:
 1. **Initialization**: Select ‘k' data points from the dataset as the initial medoids using K-Means++ algorithm.
@@ -36,7 +36,7 @@ same cluster is the **smallest**.
 4. **Repeat**: Repeat the assignment and update steps until (**convergence**), i.e, medoids no longer change or 
 a maximum number of iterations is reached.
 
-**Note**: Kind of brute-force algorithm, computationally expensive for large dataset.
+_Note_: Kind of brute-force algorithm, computationally expensive for large dataset.
 {{< /panel >}}
 
 {{< panel color="cyan" title="Advantages" >}}

@@ -135,10 +135,9 @@ Fixes the ‘dying ReLU’ problem.
 [Read more about Differentiation]({{<ref  "/docs/maths/calculus/calculus_fundamentals/#differentiation"  >}})
 {{< /panel >}}
 
-{{< panel color="grey" title="Softmax"  id="softmax">}}
+{{< panel color="cyan" title="Softmax"  id="softmax">}}
 Multivariate activation function that takes a vector of raw scores (logits) and converts them into a 
 probability distribution; sum of probabilities = 1.
-
 
 \[\sigma(\mathbf{z})_i = \frac{e^{z_i}}{\sum_{j=1}^K e^{z_j}}\] 
 where ‘K’ = number of classes

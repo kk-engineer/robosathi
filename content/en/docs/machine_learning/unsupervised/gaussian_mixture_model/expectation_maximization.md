@@ -10,7 +10,7 @@ math: true
 "Gaussian Mixture Model (GMM) | All Videos" >}}
 
 {{< panel color="cyan" title="GMM as Latent Variable Model" >}}
-⭐️GMM is a latent variable model, where the variable \(z_i\) is a latent (hidden) variable that indicates which specific
+GMM is a latent variable model, where the variable \(z_i\) is a latent (hidden) variable that indicates which specific
 Gaussian component or cluster generated a particular data point.
 {{< /panel >}}
 
@@ -18,18 +18,18 @@ Gaussian component or cluster generated a particular data point.
 - If we knew the parameters (\(\mu, \Sigma, \pi\)) we could easily calculate which cluster 'z' each point belongs to (using probability).
 - If we knew the cluster assignments 'z' of each point, we could easily calculate the parameters for each cluster (using simple averages).
 
-🦉But we do not know either of them, as the parameters of the Gaussians - we aim to find and 
+But we do not know either of them, as the parameters of the Gaussians - we aim to find and 
 cluster indicator latent variable is hidden.
 {{< imgproc "images/machine_learning/unsupervised/gaussian_mixture_model/expectation_maximization/slide_03_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< imgproc "images/machine_learning/unsupervised/gaussian_mixture_model/expectation_maximization/slide_04_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
 {{< panel color="rust" title="Break the Loop " >}}
-⛓️‍Guess one, i.e, cluster assignment 'z' to find the other, i.e, parameters \(\mu, \Sigma, \pi\).
+Guess one, i.e, cluster assignment 'z' to find the other, i.e, parameters \(\mu, \Sigma, \pi\).
 {{< /panel >}}
 
 {{< panel color="blue" title="Goal " >}}
-⛳️ _Find latent cluster indicator variable \(z_{ik}\)._
+_Find latent cluster indicator variable \(z_{ik}\)._
 
 But \(z_{ik}\) is a '**hard' assignment**' (either '0' or '1').
 - Because we do not observe 'z', we use another variable '**Responsibility**' (\(\gamma_{ik}\)) as 
@@ -38,23 +38,23 @@ a '**soft**' assignment (_value between 0 and 1_).
 parameters \(\Theta\).
 \[\gamma _{ik}=E[z_{ik}\mid x_{i},\theta ]=P(z_{ik}=1\mid x_{i},\theta )\]
 
-**Note**: \(\gamma_{ik}\) is the **posterior probability** (or '**responsibility**') that **cluster** 'k' takes for 
+_Note_: \(\gamma_{ik}\) is the **posterior probability** (or '**responsibility**') that **cluster** 'k' takes for 
 **explaining** data point \(x_{i}\).
 {{< /panel >}}
 
 {{< panel color="blue" title="Indicator Variable ➡ Responsibility" >}}
 \[\gamma _{ik}=E[z_{ik}\mid x_{i},\theta ]=P(z_{ik}=1\mid x_{i},\theta )\]
-⭐️Using Bayes' Theorem, we derive **responsibility** (_posterior probability that component 'k' generated data point \(x_i\)_) 
+Using Bayes' Theorem, we derive **responsibility** (_posterior probability that component 'k' generated data point \(x_i\)_) 
 by combining the **prior/weights** (\(\pi_k\)) and the **likelihood** (\(\mathcal{N}(x_{i}\mid \mu _{k},\Sigma _{k})\)).
 
 \[\gamma _{ik}= P(z_{ik}=1\mid x_{i},\theta ) = \frac{P(z_{ik}=1)P(x_{i}\mid z_{ik}=1)}{P(x_{i})}\]
 \[\gamma _{ik}=\frac{\pi _{k}\mathcal{N}(x_{i}\mid \mu _{k},\Sigma _{k})}{\sum _{j=1}^{K}\pi _{j}\mathcal{N}(x_{i}\mid \mu _{j},\Sigma _{j})}\]
-👉**Bayes' Theorem**:  \(P(A|B)=\frac{P(B|A)\cdot P(A)}{P(B)}\)
+**Bayes' Theorem**:  \(P(A|B)=\frac{P(B|A)\cdot P(A)}{P(B)}\)
 
-👉 GMM Densities at point
+**GMM Densities at point**
 {{< imgproc "images/machine_learning/unsupervised/gaussian_mixture_model/expectation_maximization/slide_08_01.png" Resize "1400x" >}}{{< /imgproc >}}
 
-👉GMM Densities at point (different cluster weights)
+**GMM Densities at point (different cluster weights)**
 {{< imgproc "images/machine_learning/unsupervised/gaussian_mixture_model/expectation_maximization/slide_09_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
@@ -66,7 +66,7 @@ by combining the **prior/weights** (\(\pi_k\)) and the **likelihood** (\(\mathca
 {{< /panel >}}
 
 {{< panel color="orange" title="Expectation Step" >}}
-👉Given our current guess of the clusters, what is the probability that point \(x_i\) came from cluster 'k' ?
+Given our current guess of the clusters, what is the probability that point \(x_i\) came from cluster 'k' ?
 \[\gamma (z_{ik})=p(z_{i}=k|\mathbf{x}_{i},\mathbf{\theta }^{(\text{old})})=\frac{\pi _{k}^{(\text{old})}\mathcal{N}(\mathbf{x}_{i}|\mathbf{\mu }_{k}^{(\text{old})},\mathbf{\Sigma }_{k}^{(\text{old})})}{\sum _{j=1}^{K}\pi _{j}^{(\text{old})}\mathcal{N}(\mathbf{x}_{i}|\mathbf{\mu }_{j}^{(\text{old})},\mathbf{\Sigma }_{j}^{(\text{old})})}\]
 
 \(\pi_k\) : Probability that a randomly selected data point \(x_i\) belongs to the k-th component before we even look 
@@ -74,7 +74,7 @@ at the specific value of \(x_i\), such that \(\pi_k \ge 0\) and \(\sum _{k=1}^{K
 {{< /panel >}}
 
 {{< panel color="navy" title="Maximization Step" >}}
-👉Update the parameters (\(\mu, \Sigma, \pi\)) by calculating weighted versions of the standard MLE formulas using responsibilities as weight ️‍♀️.
+Update the parameters (\(\mu, \Sigma, \pi\)) by calculating weighted versions of the standard MLE formulas using responsibilities as weight ️‍♀️.
 
 \[
 \begin{align*}

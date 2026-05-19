@@ -19,28 +19,28 @@ math: true
 {{< /panel >}}
 
 {{< panel color="cyan" title="Intuition " >}}
-💡_'Information = Variance'_
+_'Information = Variance'_
 
-☁️ Imagine a cloud of points in 2D space. <br>
-👀 Look for the direction (axis) along which the data is most '**spread out**'. <br>
+Imagine a cloud of points in 2D space. <br>
+Look for the direction (axis) along which the data is most '**spread out**'. <br>
 
-🚀 By **projecting** data onto this axis, we retain the maximum amount of **information** (variance).
+By **projecting** data onto this axis, we retain the maximum amount of **information** (variance).
 
-👉**Example 1: Var(Feature 1) < Var(Feature 1)**
+**Example 1: Var(Feature 1) < Var(Feature 1)**
 {{< imgproc "images/machine_learning/unsupervised/dimensionality_reduction/pca/slide_03_01.png" Resize "1400x" >}}{{< /imgproc >}}
 
-👉**Example 2: Red line shows the direction of maximum variance**
+**Example 2: Red line shows the direction of maximum variance**
 {{< imgproc "images/machine_learning/unsupervised/dimensionality_reduction/pca/slide_04_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="orange" title="Principal Component Analysis" >}}
-🧭 _Finds the direction of maximum variance in the data._
+{{< panel color="orange" title="Principal Component Analysis" id="pca">}}
+_Finds the direction of maximum variance in the data._
 
 **Note**: Some _loss of information_ will always be there in dimensionality reduction, 
 because there will be some variability in data along the direction that is dropped, and that will be **lost**.
 {{< /panel >}}
 
-{{< panel color="blue" title="Goal " >}}
+{{< panel color="blue" title="Goal" >}}
 Fundamental goal of PCA is to find the new set of **orthogonal axes**, called the **principal components**, 
 onto which the data can be projected, such that, the **variance** of the projected data is **maximum**.
 {{< /panel >}}
@@ -62,26 +62,26 @@ onto which the data can be projected, such that, the **variance** of the project
 {{< /panel >}}
 
 {{< panel color="red" title="Constrained Optimization" >}}
-👉 To prevent infinite variance, PCA constrains \(u\) to be a unit vector (\(\|u\|=1\)).
+To prevent infinite variance, PCA constrains \(u\) to be a unit vector (\(\|u\|=1\)).
 \[\text{maximize\ }u^{T}\Sigma u, \quad \text{subject\ to\ }u^{T}u=1\]
 **Note**: This constraint forces the optimization algorithm to focus **purely** on the _direction that maximizes variance_, 
 rather than allowing it to _artificially inflate_ the variance by increasing the length of the vector.
 {{< /panel >}}
 
 {{< panel color="green" title="Constrained Optimization Solution " >}}
-⏲️ Lagrangian function: \(L(u,\lambda )=u^{T}\Sigma u-\lambda (u^{T}u-1)\) <br>
-🔦 To find \(u\) that maximizes above constrained optimization:
+Lagrangian function: \(L(u,\lambda )=u^{T}\Sigma u-\lambda (u^{T}u-1)\) <br>
+To find \(u\) that maximizes above constrained optimization:
 \[\frac{\partial L}{\partial u} = 0\]
 \[\implies 2\Sigma u - 2\lambda u = 0 \implies \Sigma u = \lambda u\]
 \[\because \frac{\partial }{\partial x}x^{T}Ax=2Ax \text{ for symmetric } A\]
 
-💎 This is the standard **Eigenvalue Equation**. <br>
-🧭 So, the optimal directions \(u\) are the eigenvectors of the covariance matrix \(\Sigma\). <br>
+This is the standard **Eigenvalue Equation**. <br>
+So, the optimal directions \(u\) are the eigenvectors of the covariance matrix \(\Sigma\). <br>
 
-👉 To see which eigenvector maximizes variance, substitute the result back into the variance equation:
+To see which eigenvector maximizes variance, substitute the result back into the variance equation:
 \[\text{Variance}=u^{T}\Sigma u=u^{T}(\lambda u)=\lambda (u^{T}u)=\lambda \]
 
-🧭 Since the variance equals the eigenvalue \(\lambda\), the direction \(u\) that maximizes variance is the eigenvector associated with the largest eigenvalue.
+Since the variance equals the eigenvalue \(\lambda\), the direction \(u\) that maximizes variance is the eigenvector associated with the largest eigenvalue.
 {{< /panel >}}
 
 {{< panel color="blue" title="PCA Algorithm" >}}

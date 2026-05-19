@@ -14,13 +14,13 @@ math: true
 - **Inconsistent**; different runs may lead to different clusters.
 - **Slow convergence**; Centroids may need to travel much farther across the feature space, requiring more iterations.
 
-👉Example for different K-Means algorithm runs give different clusters
+**Example for different K-Means algorithm runs give different clusters.**
 {{< imgproc "images/machine_learning/unsupervised/k_means/k_means_plus_plus/slide_02_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< imgproc "images/machine_learning/unsupervised/k_means/k_means_plus_plus/slide_02_02.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="green" title="K-Means++ Algorithm" >}}
-💡Addresses the issue due to **random initialization** by aiming to spread out the initial centroids across the data points.
+{{< panel color="blue" title="K-Means++ Algorithm" >}}
+Addresses the issue due to **random initialization** by aiming to spread out the initial centroids across the data points.
 
 **Steps**:
 1. **Select the first centroid**: Choose one data point randomly from the dataset to be the first centroid.
@@ -35,7 +35,7 @@ data points to the nearest centroid and iteratively updating the centroids until
 {{< /panel >}}
 
 {{< panel color="red" title="Problem " >}}
-🦀 If our data is extremely **noisy** (outliers), the **probabilistic logic** (\(\propto D(x)^2\)) might accidentally 
+If our data is extremely **noisy** (outliers), the **probabilistic logic** (\(\propto D(x)^2\)) might accidentally 
 **pick** an **outlier** as a **cluster center**.
 {{< /panel >}}
 

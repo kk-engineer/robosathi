@@ -14,14 +14,14 @@ Since, we cannot enumerate all partitions (i.e, partitioning 'n' observations in
 Lloyd's algorithm provides a local search **heuristic** (**approximate** algorithm).
 {{< /panel >}}
 
-{{< panel color="green" title="Lloyd's Algorithm ⚙️" >}}
+{{< panel color="blue" title="Lloyd's Algorithm">}}
 Iterative method for partitioning 'n' data points into ‘k' groups by repeatedly assigning data points to the nearest centroid (mean) and then recalculating centroids until assignments stabilize, aiming to minimize within-cluster variance.
 
-📥Input: X = {x₁, ..., xₙ}, ‘k' (number of clusters)
+**Input**: X = {x₁, ..., xₙ}, ‘k' (number of clusters)
 
-📤Output: ‘C' (clusters), ‘μ' (centroids)
+**Output**: ‘C' (clusters), ‘μ' (centroids)
 
-👉**Steps**:
+**Steps**:
 1. **Initialize**: Randomly choose ‘k' cluster centroids μ₁, ..., μₖ.
 2. **Repeat until convergence**, i.e, until cluster assignments and centroids no longer change significantly.
 - a) **Assignment**: Assign each data point to the cluster whose centroid is closest (usually using Euclidean distance).
@@ -36,11 +36,11 @@ Iterative method for partitioning 'n' data points into ‘k' groups by repeatedl
 - Tries to make each cluster with same density(variance)
 - Does not work well with non-globular(spherical) data.
 
-👉See how 2 different runs of K-Means algorithm gives totally different clusters.
+**See how 2 different runs of K-Means algorithm gives totally different clusters.**
 {{< imgproc "images/machine_learning/unsupervised/k_means/lloyds_algorithm/slide_06_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< imgproc "images/machine_learning/unsupervised/k_means/lloyds_algorithm/slide_06_02.png" Resize "1400x" >}}{{< /imgproc >}}
 
-👉Also, K-Means does not work well with non-spherical clusters, or clusters with different densities and sizes.
+**K-Means does not work well with non-spherical clusters, or clusters with different densities and sizes.**
 {{< imgproc "images/machine_learning/unsupervised/k_means/lloyds_algorithm/slide_07_01.png" Resize "1400x" >}}{{< /imgproc >}}
 
 {{< /panel >}}

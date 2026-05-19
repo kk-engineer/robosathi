@@ -17,24 +17,24 @@ math: true
 {{< /panel >}}
 
 {{< panel color="blue" title="Elbow Method" >}}
-⭐**️Heuristic** used to determine the **optimal** number of **clusters** (k) for clustering by visualizing how the 
+**️Heuristic** used to determine the **optimal** number of **clusters** (k) for clustering by visualizing how the 
 quality of clustering improves as 'k' increases.
 
-🎯The goal is to find a value of 'k' where adding more clusters provides a **diminishing return** in terms of variance reduction.
+The goal is to find a value of 'k' where adding more clusters provides a **diminishing return** in terms of variance reduction.
 {{< imgproc "images/machine_learning/unsupervised/k_means/clustering_quality_metrics/slide_02_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
 {{< panel color="green" title="Dunn Index [0, \(\infty\))" >}}
-⭐️Clustering quality evaluation metric that measures: **separation** (between clusters) and **compactness** (within clusters)
+Clustering quality evaluation metric that measures: **separation** (between clusters) and **compactness** (within clusters)
 
-**Note**: A higher Dunn Index value indicates better clustering, meaning clusters are well-separated from each other and compact.
+_Note_: A higher Dunn Index value indicates better clustering, meaning clusters are well-separated from each other and compact.
 
-👉**Dunn Index Formula**:
+**Dunn Index Formula**:
 \[DI = \frac{\text{Minimum Inter-Cluster Distance(between different clusters)}}{\text{Maximum Intra-Cluster Distance(within a cluster)}}\]
 \[DI = \frac{\min_{1 \le i < j \le k} \delta(C_i, C_j)}{\max_{1 \le l \le k} \Delta(C_l)}\]
 {{< imgproc "images/machine_learning/unsupervised/k_means/clustering_quality_metrics/slide_06_01.png" Resize "1400x" >}}{{< /imgproc >}}
 
-👉Let's understand the terms in the above formula:
+Let's understand the terms in the above formula:
 
 - \(\delta(C_i, C_j)\) (**Inter-Cluster Distance**):
   - Measures how ‘**far apart**’ the clusters are. 

@@ -9,8 +9,8 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcQTrzlCVhQOtpvVbWsft3a" 
 "Anomaly Detection | All Videos" >}}
 
-{{< panel color="green" title="Use Case " >}}
-⭐️Geographic fraud detection: <br>
+{{< panel color="green" title="Use Case" >}}
+Geographic fraud detection: <br>
 A $100 transaction might be '**normal**' in New York but an '**outlier**' in a small rural village.
 {{< /panel >}}
 
@@ -19,32 +19,32 @@ A $100 transaction might be '**normal**' in New York but an '**outlier**' in a s
 
 **Global distance metrics fail when density is non-uniform.**
 
-🦄 An **outlier** is a point that is '**unusual**' _relative to its immediate neighbors_, 
+An **outlier** is a point that is '**unusual**' _relative to its immediate neighbors_, 
 regardless of how far it is from the center of the entire dataset.
 {{< /panel >}}
 
-{{< panel color="red" title="Problem " >}}
-💡Traditional **distance-based** outlier detection methods, such as, **KNN**, often struggle with datasets where data 
+{{< panel color="red" title="Problem" >}}
+Traditional **distance-based** outlier detection methods, such as, **KNN**, often struggle with datasets where data 
 is clustered at **varying densities**.
 - A point in a sparse region might be considered an outlier by a global method, even if it is a normal part of that sparse cluster.
 - Conversely, a point very close to a dense cluster might be an outlier relative to that specific neighborhood.
 {{< /panel >}}
 
-{{< panel color="green" title="Solution " >}}
-👉Calculate the relative density of a point compared to its immediate neighborhood.
+{{< panel color="green" title="Solution" >}}
+Calculate the relative density of a point compared to its immediate neighborhood.
 
 e.g. If the neighbors are in a dense crowd and the point is not, it is an outlier.
 {{< /panel >}}
 
-{{< panel color="navy" title="Goal " >}}
-📌Compare the density of a point to the density of its neighbors.
+{{< panel color="navy" title="Goal" >}}
+Compare the density of a point to the density of its neighbors.
 {{< /panel >}}
 
-{{< panel color="blue" title="Local Outlier Factor (LOF)" >}}
+{{< panel color="blue" title="Local Outlier Factor (LOF)" id="lof">}}
 Local Outlier Factor (LOF) is a **density-based** algorithm designed to detect anomalies by measuring the 
 **local deviation** of a data point relative to its **neighbors**.
 
-👉Size of the red circle represents the LOF score.
+Size of the red circle represents the LOF score.
 {{< imgproc "images/machine_learning/unsupervised/anomaly_detection/local_outlier_factor/slide_08_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 

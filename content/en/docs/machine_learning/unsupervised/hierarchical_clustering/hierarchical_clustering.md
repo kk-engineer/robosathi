@@ -13,9 +13,9 @@ organizational chart, biological lineages, etc.
 {{< /panel >}}
 
 {{< panel color="green" title="Hierarchical Clustering" >}}
-⭐️ Method of cluster analysis that seeks to build a hierarchy of clusters, resulting in a _tree like structure_ called **dendrogram**.
+Method of cluster analysis that seeks to build a hierarchy of clusters, resulting in a _tree like structure_ called **dendrogram**.
 
-👉Hierarchical clustering allows us to explore different possibilities (of 'k') by **cutting** the **dendrogram** at _various levels_.
+Hierarchical clustering allows us to explore different possibilities (of 'k') by **cutting** the **dendrogram** at _various levels_.
 {{< imgproc "images/machine_learning/unsupervised/hierarchical_clustering/hierarchical_clustering/slide_03_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
@@ -50,15 +50,15 @@ Most common, also known as **Agglomerative Nesting** (AgNes).
 - **Centroid Method**: 
   - Merges clusters based on the distance between their centroids (mean points).
 
-👉**Single Linkage** is **more** **sensitive to outlier** than **Complete Linkage**, as Single Linkage can keep linking to the closest point 
+**Single Linkage** is _more sensitive to outlier_ than **Complete Linkage**, as Single Linkage can keep linking to the closest point 
 forming a bridge to outlier.
 
 {{< imgproc "images/machine_learning/unsupervised/hierarchical_clustering/hierarchical_clustering/slide_07_01.png" Resize "1400x" >}}{{< /imgproc >}}
 
-👉All cluster linkage distances.
+**All cluster linkage distances.**
 {{< imgproc "images/machine_learning/unsupervised/hierarchical_clustering/hierarchical_clustering/slide_09_01.png" Resize "1400x" >}}{{< /imgproc >}}
 
-👉We get different clustering using different linkages.
+**We get different clustering using different linkages.**
 {{< imgproc "images/machine_learning/unsupervised/hierarchical_clustering/hierarchical_clustering/slide_10_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 

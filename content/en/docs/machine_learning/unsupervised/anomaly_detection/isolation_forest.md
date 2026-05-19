@@ -18,36 +18,36 @@ Credit card fraud detection in datasets with millions of rows and hundreds of fe
 {{< /panel >}}
 
 {{< panel color="cyan" title="Intuition " >}}
-🦥 _'Flip the logic.'_
+ _'Flip the logic.'_
 
-🦄 '**Anomalies**' are **few** and **different**, so they are _much easier to isolate_ from the rest of the data than normal points.
+'**Anomalies**' are **few** and **different**, so they are _much easier to isolate_ from the rest of the data than normal points.
 {{< /panel >}}
 
-{{< panel color="red" title="Problem " >}}
-🐦‍_'Curse of dimensionality.'_
+{{< panel color="red" title="Problem" >}}
+_'Curse of dimensionality.'_
 
-🐎 Distance based (K-NN), and density based (LOF) algorithms require calculation of distance between all pair of points.
+Distance based (K-NN), and density based (LOF) algorithms require calculation of distance between all pair of points.
 
-🐙 As the number of dimensions and data points grows, these calculations become **exponentially** more **expensive** 
+As the number of dimensions and data points grows, these calculations become **exponentially** more **expensive** 
 and **less effective**.
 {{< /panel >}}
 
-{{< panel color="green" title="Solution " >}}
+{{< panel color="green" title="Solution" >}}
 Use a tree-based approach with better time complexity O(nlogn), making it highly **scalable** for massive datasets
 and robust in high-dimensional spaces without needing expensive distance metrics.
 {{< /panel >}}
 
-{{< panel color="orange" title="Goal " >}}
+{{< panel color="orange" title="Goal" >}}
  _'Randomly partition the data.'_
 
-🦄 If a point is an **outlier**, it will take **fewer partitions** (splits) to isolate it into a leaf node 
+If a point is an **outlier**, it will take **fewer partitions** (splits) to isolate it into a leaf node 
 compared to a point that is buried deep within a dense cluster of normal data.
 {{< /panel >}}
 
-{{< panel color="green" title="Isolation Forest (iForest) " >}}
-🌳Isolation Forest uses an **ensemble** of 'Isolation Trees' (iTrees) .
+{{< panel color="green" title="Isolation Forest (iForest)" id="iforest" >}}
+Isolation Forest uses an **ensemble** of '**Isolation Trees**' (iTrees) .
 
-👉**iTree (Isolation Tree)** is a proper binary tree structure specifically designed to separate individual data points through random recursive partitioning.
+**iTree (Isolation Tree)** is a proper binary tree structure specifically designed to separate individual data points through random recursive partitioning.
 {{< /panel >}}
 
 {{< panel color="blue" title="Algorithm" >}}
@@ -63,8 +63,8 @@ compared to a point that is buried deep within a dense cluster of normal data.
    - Pass a new data point through all trees, calculate the average path length, and compute the anomaly score.
 {{< /panel >}}
 
-{{< panel color="orange" title="Scoring Function " >}}
-⭐️Assign an anomaly score based on the **path length h(x)** required to **isolate** a point 'x'.
+{{< panel color="orange" title="Scoring Function" >}}
+Assign an anomaly score based on the **path length h(x)** required to **isolate** a point 'x'.
 - **Path Length (h(x))**: The number of **edges** 'x' traverses from the root node to a leaf node.
 - **Average Path Length (c(n))**: Since iTrees are structurally similar to Binary Search Trees (BST), 
 the average path length for a dataset of size 'n' is given by:
@@ -76,7 +76,7 @@ where, H(i) is the **harmonic number**, estimated as \(\ln (i)+0.5772156649\) (*
 {{< panel color="blue" title="Anomaly Score" >}}
 To normalize the score between 0 and 1, we define it as:
 \[s(x,n)=2^{-\frac{E(h(x))}{c(n)}}\]
-👉E(H(x)): is the _average path length_ of **across** a **forest** of trees .
+E(H(x)): is the _average path length_ of **across** a **forest** of trees .
 
 -  \(s\rightarrow 1\): Point is an **anomaly**; Path length is very short.
 -  \(s\approx 0.5\): Point is **normal**, path length approximately equal to c(n).

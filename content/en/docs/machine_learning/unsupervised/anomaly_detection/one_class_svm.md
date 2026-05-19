@@ -10,7 +10,7 @@ math: true
 "Anomaly Detection | All Videos" >}}
 
 {{< panel color="green" title="Use Case (Novelty Detection)" >}}
-⭐️Only **one class** of data (normal, non-outlier) is **available** for training, making standard **supervised learning** 
+Only **one class** of data (normal, non-outlier) is **available** for training, making standard **supervised learning** 
 models **impossible**.
 
 e.g. Only normal observations are available for fraud detection, cyber attack, fault detection etc.
@@ -21,31 +21,31 @@ e.g. Only normal observations are available for fraud detection, cyber attack, f
 {{< /panel >}}
 
 {{< panel color="red" title="Problem " >}}
-🦂 The core problem is to build a model that can **distinguish** between '**normal**' and '**anomalous**' data 
+The core problem is to build a model that can **distinguish** between '**normal**' and '**anomalous**' data 
 when we only have examples of the '**normal**' class during training.
 
-🦖 We need to find a **decision boundary** that is as compact as possible while still **encompassing** the **bulk** of the 
+We need to find a **decision boundary** that is as compact as possible while still **encompassing** the **bulk** of the 
 training data.
 {{< /panel >}}
 
-{{< panel color="green" title="Solution " >}}
-💡Instead of finding a **hyperplane** that separates _two different classes_, we find a hyperplane that best **separates** the 
+{{< panel color="green" title="Solution " >}} 
+Instead of finding a **hyperplane** that separates _two different classes_, we find a hyperplane that best **separates** the 
 normal data points from the **origin** (0,0) in the feature space .
 {{< /panel >}}
 
 {{< panel color="blue" title="Goal " >}}
-🦍 Define a **boundary** for a single class in **high-dimensional** space where data might be **non-linearly** distributed 
+Define a **boundary** for a single class in **high-dimensional** space where data might be **non-linearly** distributed 
 (e.g.'U' shape).
 
-🦧 Use the **Kernel Trick** to project data into a higher-dimensional space and find a **hyperplane** 
+Use the **Kernel Trick** to project data into a higher-dimensional space and find a **hyperplane** 
 that **separates** the data from the origin with the **maximum margin**.
 {{< /panel >}}
 
-{{< panel color="orange" title="One Class SVM" >}}
-⭐️OC-SVM, as introduced by Bernhard Schölkopf et al., uses a hyperplane 'H' defined by a weight vector \(\mathbf{w}\)
+{{< panel color="orange" title="One Class SVM" id="oc_svm">}}
+OC-SVM, as introduced by Bernhard Schölkopf et al., uses a hyperplane 'H' defined by a weight vector \(\mathbf{w}\)
 and a bias term \(\rho\).
 
-👉Solve the following optimization problem:
+Solve the following optimization problem:
 \[\min _{\mathbf{w},\xi _{i},\rho }\frac{1}{2}||\mathbf{w}||^{2}+\frac{1}{\nu N}\sum _{i=1}^{N}\xi _{i}-\rho \]
 
 Subject to constraints:

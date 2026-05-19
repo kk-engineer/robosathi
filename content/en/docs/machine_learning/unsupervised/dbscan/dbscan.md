@@ -12,10 +12,10 @@ math: true
 {{< /panel >}}
 
 {{< panel color="green" title="Main Question for Clustering ?" >}}
-👉K-Means asks:
+K-Means asks:
 - _"Which center is closest to this point?"_
 
-👉DBSCAN asks:
+DBSCAN asks:
 - _"Is this point part of a dense neighborhood?"_
 {{< /panel >}}
 
@@ -23,13 +23,13 @@ math: true
 **Cluster** is a **contiguous region of high density** in the data space, separated from other clusters by areas of low density.
 {{< /panel >}}
 
-{{< panel color="orange" title="DBSCAN" >}}
-⭐️Groups closely packed data points into clusters based on their density, and marks points that lie alone in low-density regions as outliers or noise.
+{{< panel color="orange" title="DBSCAN" id="dbscan">}}
+Groups closely packed data points into clusters based on their density, and marks points that lie alone in low-density regions as outliers or noise.
 
-**Note**: Unlike K-means, DBSCAN can find arbitrarily shaped clusters and does not require the number of clusters to be specified beforehand.
+_Note_: Unlike K-means, DBSCAN can find arbitrarily shaped clusters and does not require the number of clusters to be specified beforehand.
 {{< /panel >}}
 
-{{< panel color="blue" title="Hyper-Parameters ️" >}}
+{{< panel color="blue" title="Hyper-Parameters" >}}
 1. **Epsilon (eps or \(\epsilon\))**: 
 - Radius that defines the neighborhood around a data point.
 - If it's too small, many points will be noise, and if too large, distinct clusters may merge.
@@ -66,10 +66,10 @@ math: true
 - This '**density-reachable**' logic continues until the cluster is fully expanded. 
 - The algorithm then picks another unvisited point and repeats the process, discovering new clusters or marking more points as noise until all points are processed.
 
-👉DBSCAN can correctly detect non-spherical clusters.
+**DBSCAN can correctly detect non-spherical clusters.**
 {{< imgproc "images/machine_learning/unsupervised/dbscan/dbscan/slide_11_01.png" Resize "1400x" >}}{{< /imgproc >}}
 
-👉DBSCAN Points and Epsilon-Neighborhood.
+**DBSCAN Points and Epsilon-Neighborhood.**
 {{< imgproc "images/machine_learning/unsupervised/dbscan/dbscan/slide_12_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
@@ -79,9 +79,9 @@ math: true
 - **High Dimensional Data**: 
   - 'Curse of Dimensionality' - In high-dimensional space, the distance between any two points converge.
 
-**Note**: Sensitive to parameter eps and minPts; **tricky** to get it work.
+_Note_: Sensitive to parameter eps and minPts; **tricky** to get it work.
 
-👉DBSCAN Failure and Epsilon (\(\epsilon)
+**DBSCAN Failure and Epsilon (\(\epsilon)**
 {{< imgproc "images/machine_learning/unsupervised/dbscan/dbscan/slide_14_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 

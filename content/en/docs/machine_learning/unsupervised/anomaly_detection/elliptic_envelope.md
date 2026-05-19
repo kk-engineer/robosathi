@@ -24,21 +24,21 @@ as we move farther away from the center.
 {{< /panel >}}
 
 {{< panel color="red" title="Issue with Euclidean Distance " >}}
-🌍 Euclidean distance measures the simple straight-line distance from the center of the cloud.
+Euclidean distance measures the simple straight-line distance from the center of the cloud.
 
-👉If the data is spherical, this works fine.
+If the data is spherical, this works fine.
 
-🦕 However, real-world data is often **stretched** or **skewed** (e.g., taller people are generally heavier), 
+However, real-world data is often **stretched** or **skewed** (e.g., taller people are generally heavier), 
 due to **correlations** between variables, forming an **elliptical** shape.
 
 {{< imgproc "images/machine_learning/unsupervised/anomaly_detection/elliptic_envelope/slide_05_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
 {{< panel color="green" title="Mahalanobis Distance (Solution)" >}}
-⭐️Mahalanobis distance essentially re-scales the data so that the **elliptical** distribution appears spherical, 
+Mahalanobis distance essentially re-scales the data so that the **elliptical** distribution appears spherical, 
 and then measures the Euclidean distance in that transformed space.
 
-👉This way, it measures how many **standard deviations**(\(\sigma\)) away a point is from the mean, considering the data's spread and correlation (covariance).
+This way, it measures how many **standard deviations**(\(\sigma\)) away a point is from the mean, considering the data's spread and correlation (covariance).
 \[D_M(x) = \sqrt{(x - \mu)^T \Sigma^{-1} (x - \mu)}\]
 {{< /panel >}}
 
@@ -48,19 +48,19 @@ they are trying to find.
 {{< /panel >}}
 
 {{< panel color="green" title="Solution " >}}
-💡_Instead of using all data_, we find a 'clean' **subset** of the data that is most tightly packed and 
+_Instead of using all data_, we find a 'clean' **subset** of the data that is most tightly packed and 
 use only that subset to define the '**normal**' ellipse.
 {{< /panel >}}
 
 {{< panel color="orange" title="Goal " >}}
-👉Find the _most dense core_ of the data.
+Find the _most dense core_ of the data.
 \[D_M(x) = \sqrt{(x - \mu)^T \Sigma^{-1} (x - \mu)}\]
 
-🦣 **Determinant** of **covariance matrix** \(\Sigma\) represents the **volume** of the **ellipsoid**.
+**Determinant** of **covariance matrix** \(\Sigma\) represents the **volume** of the **ellipsoid**.
 
-⏲️ Therefore, minimize \(|\Sigma|\) to find the tight core.
+Therefore, minimize \(|\Sigma|\) to find the tight core.
 
-👉 \(\text {Small} ~ \Sigma \rightarrow  \text {Large} ~\Sigma ^{-1}\rightarrow  \text {Large} ~ D_{M} ~\text {for outliers}\)
+\(\text {Small} ~ \Sigma \rightarrow  \text {Large} ~\Sigma ^{-1}\rightarrow  \text {Large} ~ D_{M} ~\text {for outliers}\)
 {{< /panel >}}
 
 {{< panel color="blue" title="Minimum Covariance Determinant (MCD) Algorithm" >}}
