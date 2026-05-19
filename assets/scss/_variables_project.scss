@@ -1200,7 +1200,7 @@ body.td-home .td-main {
 }
 
 .rs-course-overview {
-  margin: 1.6rem 0 0;
+  margin: 1rem 0 0;
 }
 
 .rs-course-overview h2 {
@@ -1210,8 +1210,9 @@ body.td-home .td-main {
   margin-bottom: 0.7rem;
 }
 
-.rs-course-overview__includes {
-  margin-bottom: 1.65rem;
+.rs-course-overview__includes,
+.rs-course-overview__stats {
+  margin-bottom: 0.5rem !important; // Drastically reduced from 1.65rem to pull the next div up
 }
 
 .rs-course-overview__stats {
@@ -1251,7 +1252,8 @@ body.td-home .td-main {
   align-items: end;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 0.8rem;
+  margin-top: 0.75rem;   // Controls spacing above the "Course content" title
+  margin-bottom: 0.4rem;  // Pulls the accordion/list elements tight against the title
 }
 
 .rs-course-overview__header p {
@@ -1277,8 +1279,9 @@ body.td-home .td-main {
 }
 
 .rs-course-outline {
+  margin-top: 0rem;
   display: grid;
-  gap: 0.65rem;
+  gap: 0.45rem;           // Tightens the gap between individual accordion sections to
 }
 
 .rs-course-outline__section {
@@ -1539,40 +1542,90 @@ h1.display-1.mt-0.mt-md-5.pb-4 {
     font-weight: bold; /* Or 700, 900 for a stronger bold */
 }
 
-// Make the notes Font readable
+// ========================================
+// ROBOSATHI HIGH-DENSITY TYPOGRAPHY
+// ========================================
+
 html {
-  font-size: 16px; // Increased from 16px for a more modern base
+  font-size: 16px;
 }
 
 body {
   color: $rs-text;
-  font-family: $font-family-monospace;
-  font-size: 1.1rem; // Approx 20px
-  line-height: 1.8;   // Increased for better vertical rhythm (Medium uses ~1.8)
+  font-family: $font-family-sans-serif;
+  //font-size: 0.975rem;          // Adjusted down for compact application-UI feel
+  line-height: 1.2;             // Tighter line grouping to bring consecutive lines closer
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
-// Target the actual technical documentation / notes content
 .td-content {
   color: $rs-text;
-  font-size: 1.15rem; // Makes the body text feel prominent and clear
-  max-width: 740px;   // CRITICAL: Medium/Substack use ~700-750px for max readability
+  //font-size: 0.975rem;
+  max-width: 740px;             // Perfectly matches standard prompt container widths
   margin-left: 0rem;
   margin-right: auto;
   padding-left: 0;
 
-  p, li {
-    line-height: 1.85; // Extra breathing room for long-form reading
-    margin-bottom: 1.55rem;
+  // Paragraph Typography & Spacing
+  p {
+    font-family: $font-family-sans-serif;
+    line-height: 1.2;
+    margin-bottom: 0.85rem;     // Reduced gap between successive text paragraphs
+    color: $rs-text;
   }
 
-  // Make headings slightly larger to match the bigger body text
-  h1 { font-size: 2.5rem; margin-bottom: 2rem; }
-  h2 { font-size: 1.8rem; margin-top: 2.5rem; }
+  // Lists Styling (Matches the dense structural look in the screenshots)
+  ul, ol {
+    padding-left: 1.25rem;
+    margin-top: 0.25rem;        // Pulls the list closer to its introducing sentence
+    margin-bottom: 0.85rem;
+  }
+
+  li {
+    font-family: $font-family-sans-serif;
+    line-height: 1.1;          // Extra tight line height for bullet points
+    margin-bottom: 0.35rem;     // Drastically reduced gap between separate bullet items
+    color: $rs-text;
+
+    // Direct bold text color override for clean contrast accents
+    strong, b {
+      color: #000000;
+      font-weight: 600;
+    }
+  }
+
+  // High-Density Headings
+  h1, h2, h3, h4, h5, h6 {
+    color: #0f172a;
+    font-family: $font-family-sans-serif;
+    letter-spacing: -0.02em;
+    line-height: 1.2;          // Strict ceiling on heading lines splitting apart
+  }
+
+  h1 {
+    font-size: 1.85rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 0.95rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 1.65rem;
+    margin-bottom: 0.75rem;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-top: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
 }
 
-// Ensure images and callouts follow the width
+// Keep layout bounds steady
 .rs-figure, .rs-callout {
   max-width: 100%;
 }
