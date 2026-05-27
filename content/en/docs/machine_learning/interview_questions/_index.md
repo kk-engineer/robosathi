@@ -19,12 +19,12 @@ We should evaluate an imbalanced classification model using metrics that that fo
 
 **Why ?** <br>
 Say, we have a dataset with high imbalance, i.e, 99% of data belongs to positive class and only 1% of data belongs to the negative class. <br>
-In such a case, standard metrics, such as,  **accuracy** is **misleading**, because a model can achieve 99% _accuracy_ <br> 
+In such a case, standard metrics, such as,  **accuracy** is **misleading**, because a model can achieve 99% _accuracy_ 
 by simply predicting positive class all the time. <br>
 
 
 **So, what to do ?** <br>
-First, of all, start with the **confusion matrix**. (_focus on minority class_) <br>
+First, of all, start with the **confusion matrix** (_focus on minority class_). <br>
 It provides the raw counts of True Positives (**TP**), True Negatives (**TN**), False Positives (**FP**), and False Negatives (**FN**).
 This is the foundation for all other metrics.
 

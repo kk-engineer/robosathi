@@ -6,7 +6,7 @@
 {{- $nlpPage := site.GetPage "/docs/natural_language_processing" -}}
 {{- $courses := slice
   (dict
-    "eyebrow" "LLMs"
+    "eyebrow" "LLM"
     "title" "Natural Language Processing"
     "description" "Study language representation, sequence models, attention mechanism, transformer architecture and the foundations that lead into modern LLM systems."
     "href" (cond $nlpPage $nlpPage.RelPermalink (relURL "/docs/"))
@@ -68,8 +68,9 @@
   <section class="rs-courses-section">
     <div class="container rs-simple-shell">
       <div class="rs-course-heading">
-        <h1>AI & ML Courses</h1>
-        <p>Starting from Maths foundations to Agentic AI applications.</p>
+        <h1>RoboSathi</h1>
+        <p>Your Learning Companion for elite AI Engineering.<br>
+            From rigorous mathematical foundations to production-grade Agentic AI.</p>
       </div>
 
       <div class="rs-course-list">
@@ -81,7 +82,7 @@
           </div>
           <p class="rs-course-row__description">{{ .description }}</p>
           <span class="rs-course-row__cta">
-            Open Course <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            Start Module <i class="fas fa-arrow-right" aria-hidden="true"></i>
           </span>
         </a>
         {{ end }}
