@@ -1629,3 +1629,255 @@ body {
 .rs-figure, .rs-callout {
   max-width: 100%;
 }
+
+
+// Claude suggested changes
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=DM+Mono:wght@400;500&display=swap');
+
+// ── Typography ────────────────────────────────────────────
+$font-family-sans-serif: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+$font-family-monospace:  'DM Mono', 'Fira Code', monospace;
+$headings-font-family:   'Playfair Display', Georgia, serif;
+$headings-font-weight:   700;
+$headings-color:         #0a0a0a;
+$font-size-base:         0.9375rem;   // 15px
+$line-height-base:       1.75;
+
+// ── Navbar ────────────────────────────────────────────────
+$navbar-bg:              #ffffff;
+$navbar-dark-color:      #0a0a0a;     // override Docsy's white text on dark
+$navbar-light-color:     #0a0a0a;
+$td-navbar-color:        #0a0a0a;     // Docsy-specific var
+
+// ── Sidebar ───────────────────────────────────────────────
+$td-sidebar-bg-color:    #f7f7f5;
+$td-sidebar-border-color: #e4e4e0;
+$td-sidebar-tree-root-color: #0a0a0a;
+
+// ── Link & CTA ────────────────────────────────────────────
+$link-color:             #B8945A;
+$link-decoration:        none;
+$link-hover-decoration:  underline;
+$btn-border-radius:      2px;
+
+/* ── Navbar: white, bordered, not translucent ────────── */
+.td-navbar {
+  background: #fff !important;
+  border-bottom: 1px solid #e4e4e0;
+  box-shadow: none !important;
+}
+.td-navbar .navbar-brand__name {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #0a0a0a;
+}
+.td-navbar .nav-link {
+  color: #2c2c2c !important;
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.01em;
+}
+.td-navbar .nav-link:hover { color: #0a0a0a !important; }
+
+/* ── Remove translucency on cover ────────────────────── */
+.td-navbar.navbar-bg-onscroll {
+  background: rgba(255,255,255,0.97) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* ── Hero ──────────────────────────────────────────────── */
+.rs-hero {
+  background: #fff;
+  border-bottom: 1px solid #e4e4e0;
+  padding: 7rem 2rem 5rem;
+  text-align: center;
+}
+.rs-hero__inner { max-width: 680px; margin: 0 auto; }
+.rs-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #B8945A;
+  margin-bottom: 1.25rem;
+}
+.rs-h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: #0a0a0a;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+.rs-h1 em { font-style: italic; color: #B8945A; }
+.rs-sub {
+  font-size: 1.05rem;
+  color: #5a5a5a;
+  font-weight: 300;
+  line-height: 1.7;
+  margin-bottom: 2.25rem;
+}
+.rs-cta-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3.5rem;
+}
+.rs-btn-primary {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 2px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+  letter-spacing: 0.02em;
+}
+.rs-btn-primary:hover {
+  background: #B8945A;
+  color: #fff;
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+.rs-btn-ghost {
+  color: #0a0a0a;
+  padding: 0.8rem 1.5rem;
+  border: 1px solid #e4e4e0;
+  border-radius: 2px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: border-color 0.2s;
+}
+.rs-btn-ghost:hover { border-color: #0a0a0a; text-decoration: none; color: #0a0a0a; }
+.rs-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid #e4e4e0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.rs-stat {
+  padding: 1.1rem 0.5rem;
+  border-right: 1px solid #e4e4e0;
+  text-align: center;
+}
+.rs-stat:last-child { border-right: none; }
+.rs-stat__num {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #0a0a0a;
+}
+.rs-stat__label {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8a8a8a;
+  margin-top: 0.15rem;
+}
+@media (max-width: 600px) {
+  .rs-stats { grid-template-columns: 1fr 1fr; }
+  .rs-stat:nth-child(2) { border-right: none; }
+  .rs-stat:nth-child(3),
+  .rs-stat:nth-child(4) { border-top: 1px solid #e4e4e0; }
+}
+
+/* ── Sidebar Refinement ────────────────────────────────── */
+.td-sidebar-nav {
+  font-size: 0.8125rem;  /* 13px */
+  padding: 1.5rem 0;
+}
+/* Section-level (L1) — bold, uppercase, spaced */
+.td-sidebar-nav .td-sidebar-nav__section > li > a,
+.td-sidebar-nav .td-sidebar-nav__section > li > span {
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0a0a0a;
+  padding: 0.5rem 1.25rem;
+  margin-top: 0.5rem;
+}
+/* Active state — gold underline, not blue background */
+.td-sidebar-nav .active > a {
+  color: #0a0a0a !important;
+  font-weight: 600;
+  background: transparent !important;
+  border-left: 2px solid #B8945A;
+  padding-left: calc(1.25rem - 2px);
+}
+/* Child links — quieter */
+.td-sidebar-nav ul ul a {
+  color: #5a5a5a;
+  font-weight: 400;
+  padding: 0.2rem 1.25rem 0.2rem 2rem;
+}
+.td-sidebar-nav ul ul a:hover { color: #0a0a0a; text-decoration: none; }
+
+/* ── Content Page Typography ───────────────────────────── */
+.td-content {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #1a1a1a;
+  max-width: 72ch;       /* optimal reading width */
+  margin-left: 0;
+}
+.td-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.25rem;
+}
+.td-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e4e4e0;
+}
+.td-content h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #5a5a5a;
+  margin-top: 1.75rem;
+}
+.td-content p { margin-bottom: 1.1rem; }
+/* Code blocks — improved */
+.td-content pre {
+  background: #f4f3ef;
+  border: 1px solid #e4e4e0;
+  border-radius: 3px;
+  padding: 1.25rem 1.5rem;
+  font-size: 0.8125rem;
+  line-height: 1.7;
+}
+.td-content code {
+  background: #f0ede6;
+  color: #8a4a1a;
+  padding: 0.1em 0.35em;
+  border-radius: 2px;
+  font-size: 0.85em;
+}
+/* KaTeX math blocks — give them breathing room */
+.katex-display {
+  background: #f7f7f5;
+  border-left: 3px solid #B8945A;
+  padding: 1rem 1.5rem;
+  border-radius: 0 3px 3px 0;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+// Claude changes End !

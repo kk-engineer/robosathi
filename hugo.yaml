@@ -145,6 +145,8 @@ params:
 
   # Enable Lunr.js offline search
   offlineSearch: true
+  offlineSearchSummaryLength: 70    # trim index size
+  offlineSearchMaxResults: 8        # fewer results = smaller index
 
   # Enable syntax highlighting and copy buttons on code blocks with Prism
   prism_syntax_highlighting: false
@@ -160,9 +162,10 @@ params:
     # Set to false if you don't want to display a logo (/assets/icons/logo.png) in the top navbar
     navbar_logo: true
     # Set to true if you don't want the top navbar to be translucent when over a `block/cover`, like on the homepage.
-    navbar_translucent_over_cover_disable: false
+    navbar_translucent_over_cover_disable: true
     # Enable to show the side bar menu in its compact state.
     sidebar_menu_compact: true
+    sidebar_menu_foldable: true  #
     # Control the level menu depth visible in the sidebar.
     ul_show: 1
     # Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
@@ -223,6 +226,21 @@ params:
 #        url: https://example.org/mail
 #        icon: fa fa-envelope
 #        desc: Discuss development issues around the project
+
+build:
+  writeStats: true  # enables PurgeCSS integration
+
+minify:
+  disableXML: false
+  minifyOutput: true
+  tdewolff:
+    html:
+      keepDefaultAttrVals: false
+      keepWhitespace: false
+    css:
+      precision: 1
+    js:
+      keepVarNames: false
 
 module:
   # Uncomment the next line to build and serve using local docsy clone declared in the named Hugo workspace:
