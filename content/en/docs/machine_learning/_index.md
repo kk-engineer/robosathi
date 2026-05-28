@@ -1,6 +1,6 @@
 ---
 title: Machine Learning
-description: Classical ML — from linear regression to ensemble boosting methods.
+description: Classical ML - Supervised & Unsupervised Learning, Feature Engineering, & ML Systems.
 date: 2026-02-07
 weight: 3
 course_outline:

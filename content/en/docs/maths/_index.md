@@ -1,6 +1,6 @@
 ---
 title: Maths
-description: Mathematics for AI & ML
+description: Mathematics for AI & ML - Probability, Statistics, Linear Algebra, & Calculus.
 course_outline:
   sections:
     - page_ref: /docs/maths/probability

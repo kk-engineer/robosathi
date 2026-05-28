@@ -4,6 +4,7 @@
 {{- $mlPage := site.GetPage "/docs/machine_learning" -}}
 {{- $dlPage := site.GetPage "/docs/deep_learning" -}}
 {{- $nlpPage := site.GetPage "/docs/natural_language_processing" -}}
+
 {{- $courses := slice
   (dict
     "eyebrow" "LLM"
@@ -34,6 +35,7 @@
     "accent" "maths"
   )
 -}}
+
 {{- $topics := slice
   (dict
     "step" "01"
@@ -59,63 +61,92 @@
   (dict
     "step" "04"
     "title" "Natural Language Processing Course"
-    "description" "Master the working of Large Language Models (LLMs) after the core ML and DL foundations are in place."
+    "description" "Master the working of language models, recurrent neural networks, attention mechanisms, and transformers."
     "href" (cond $nlpPage $nlpPage.RelPermalink (relURL "/docs/"))
     "accent" "nlp"
   )
 -}}
-<div class="rs-home-simple">
-  <section class="rs-courses-section">
-    <div class="container rs-simple-shell">
-      <div class="rs-course-heading">
-        <h1>RoboSathi</h1>
-        <p>Your Learning Companion for elite AI Engineering.<br>
-            From rigorous mathematical foundations to production-grade Agentic AI.</p>
-      </div>
 
-      <div class="rs-course-list">
-        {{ range $courses }}
-        <a class="rs-course-row rs-course-row--{{ .accent }}" href="{{ .href }}">
-          <div class="rs-course-row__meta">
-            <span class="rs-course-row__eyebrow">{{ .eyebrow }}</span>
-            <h2>{{ .title }}</h2>
-          </div>
-          <p class="rs-course-row__description">{{ .description }}</p>
-          <span class="rs-course-row__cta">
-            Start Module <i class="fas fa-arrow-right" aria-hidden="true"></i>
-          </span>
-        </a>
-        {{ end }}
-      </div>
+<section class="rs-hero">
+  <div class="rs-hero__inner">
+    <p class="rs-eyebrow">Free · Open Source · Rigorous</p>
+    <h1 class="rs-h1">
+      Master AI Engineering<br>
+      <em>from first principles.</em>
+    </h1>
+    <p class="rs-sub">
+      133 articles · 71+ hours of video · a structured path from<br>
+      Maths foundations to Transformer architecture (LLMs).
+    </p>
+    <div class="rs-cta-row">
+      <a href="/docs/" class="rs-btn-primary">Start Learning — Free</a>
+        <a class="rs-btn-ghost" href="https://www.youtube.com/@RoboSathi/courses" target="_blank" rel="noopener">
+    Watch Courses <i class="fab fa-youtube ms-2" style="color: #ff0000;"></i>
+  </a>
+    </div>
 
-      <div class="rs-home-actions">
-        <a class="rs-simple-button rs-simple-button--notes" href="{{ if $docsPage }}{{ $docsPage.RelPermalink }}{{ else }}{{ relURL "/docs/" }}{{ end }}">
-          Courses <i class="fas fa-book-open rs-simple-button__icon" aria-hidden="true"></i>
-        </a>
-        <a class="rs-simple-button rs-simple-button--videos" href="https://www.youtube.com/@RoboSathi" target="_blank" rel="noopener">
-          Videos <i class="fab fa-youtube rs-simple-button__icon" aria-hidden="true"></i>
-        </a>
+    <div class="rs-stats">
+      <div class="rs-stat">
+        <span class="rs-stat__num">133</span>
+        <span class="rs-stat__label">Articles</span>
+      </div>
+      <div class="rs-stat">
+        <span class="rs-stat__num">71h+</span>
+        <span class="rs-stat__label">Video Content</span>
+      </div>
+      <div class="rs-stat">
+        <span class="rs-stat__num">881</span>
+        <span class="rs-stat__label">Topics Covered</span>
+      </div>
+      <div class="rs-stat">
+        <span class="rs-stat__num">100%</span>
+        <span class="rs-stat__label">Free</span>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="rs-simple-section">
-    <div class="container rs-simple-shell">
-      <div class="rs-simple-heading">
-        <h2>Roadmap</h2>
-        <p>Start with the fundamentals, then move forward in a logical sequence.</p>
-      </div>
-
-      <div class="rs-roadmap-grid">
-        {{ range $topics }}
-        <a class="rs-roadmap-card rs-roadmap-card--{{ .accent }}" href="{{ .href }}">
-          <span class="rs-roadmap-card__step">{{ .step }}</span>
-          <h3>{{ .title }}</h3>
-          <p>{{ .description }}</p>
-        </a>
-        {{ end }}
-      </div>
+<section class="rs-courses-section">
+  <div class="container rs-simple-shell">
+    <div class="rs-course-heading">
+      <h1>Courses</h1>
+      <p>Explore our structured pathways designed to take you from foundational mathematics to state-of-the-art AI architectures.</p>
     </div>
-  </section>
-</div>
+
+    <div class="rs-course-list">
+      {{ range $courses }}
+      <a class="rs-course-row rs-course-row--{{ .accent }}" href="{{ .href }}">
+        <div class="rs-course-row__meta">
+          <span class="rs-course-row__eyebrow">{{ .eyebrow }}</span>
+          <h2>{{ .title }}</h2>
+        </div>
+        <p class="rs-course-row__description">{{ .description }}</p>
+        <span class="rs-course-row__cta">
+          Start Module <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!--<section class="rs-simple-section">-->
+<!--  <div class="container rs-simple-shell">-->
+<!--    <div class="rs-simple-heading">-->
+<!--      <h2>Roadmap</h2>-->
+<!--      <p>Start with the fundamentals, then move forward in a logical sequence.</p>-->
+<!--    </div>-->
+
+<!--    <div class="rs-roadmap-grid">-->
+<!--      {{ range $topics }}-->
+<!--      <a class="rs-roadmap-card rs-roadmap-card&#45;&#45;{{ .accent }}" href="{{ .href }}">-->
+<!--        <span class="rs-roadmap-card__step">{{ .step }}</span>-->
+<!--        <h3 class="rs-roadmap-card__title">{{ .title }}</h3>-->
+<!--        <p class="rs-roadmap-card__description">{{ .description }}</p>-->
+<!--        <span class="rs-roadmap-card__cta">View Path →</span>-->
+<!--      </a>-->
+<!--      {{ end }}-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
 {{- end }}

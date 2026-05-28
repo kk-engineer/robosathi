@@ -1,6 +1,6 @@
 ---
 title: Natural Language Processing
-description: Natural Language Processing (NLP)
+description: Natural Language Processing (NLP) - from Tokenization, Embeddings, Transformers to LLMs.
 date: 2026-04-28
 weight: 1
 course_outline:
