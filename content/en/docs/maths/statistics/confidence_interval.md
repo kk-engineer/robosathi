@@ -33,7 +33,7 @@ or contain the true population mean \(\mu\).
 mean is a fixed constant, NOT a random variable.
 {{< /panel >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 Let's suppose we want to measure the average weight of a certain species of dog. <br>
 We want to estimate the true population
 mean \(\mu\) using confidence interval. <br>

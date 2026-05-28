@@ -25,7 +25,7 @@ where, <br>
 [Read more about Limits]({{<ref  "/docs/maths/calculus/calculus_fundamentals" >}})
 {{< /definition >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 - Toss a fair coin: <br>
 Estimator:
 <br>
@@ -134,7 +134,7 @@ convergence in distribution, etc.
 [Read more about Limits]({{<ref  "/docs/maths/calculus/calculus_fundamentals" >}})
 {{< /definition >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 - \(X\) is random variable such that \(X = \frac{1}{2} \), a constant, i.e \(X_1 = X_2 = \dots = X_n = \frac{1}{2}\). <br>
 \(Y_1, Y_2,\dots ,Y_n \) are another sequence of random variables, such that : <br>
 \[

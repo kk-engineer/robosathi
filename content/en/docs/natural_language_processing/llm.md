@@ -60,7 +60,7 @@ By starting with a model that already "understands" general patterns—like shap
 {{< imgproc "images/natural_language_processing/llm/transfer_learning.png" Resize "800x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="rust" title="Supervised Fine-Tuning (SFT)" id="sft" >}}
+{{< panel color="gold" title="Supervised Fine-Tuning (SFT)" id="sft" >}}
 While pre-training provides a broad knowledge of syntax, SFT focuses on alignment, teaching the model to follow specific instructions 
 and produce functional, context-aware results.
 

@@ -24,7 +24,7 @@ Joint probability of two events is equal to the product of the individual probab
 \(P(A \cap B)\) or \(P(A, B)\)
 {{< /definition >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 1. Toss a coin and roll a die - <br>
     \(A\) = Get a heads; \(P(A)=1/2\) <br>
     \(B\) = Get an odd number; \(P(B)=1/2\)
@@ -48,7 +48,7 @@ Every pair of events in the set is independent.<br>
 _Pair-wise independence != Mutual independence._
 {{< /definition >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 1. Toss 3 coins; <br>
     For 2 tosses, sample space: \(\Omega = \{HH,HT, TH, TT\}\) <br>
     \(A\) = First and Second toss outcomes are same i.e \(\{HH, TT\}\); \(P(A)= 2/4 = 1/2\) <br>
@@ -84,7 +84,7 @@ if they are independent given that C has occurred. <br>
 Occurrence of C changes the context, causing the events A & B to become independent of each other.
 {{< /definition >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 {{< imgproc "images/maths/probability/conditional_independence.png" Resize "800x" >}}{{< /imgproc >}}
 
 \[

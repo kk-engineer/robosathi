@@ -24,7 +24,7 @@ cluster indicator latent variable is hidden.
 {{< imgproc "images/machine_learning/unsupervised/gaussian_mixture_model/expectation_maximization/slide_04_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="rust" title="Break the Loop " >}}
+{{< panel color="gold" title="Break the Loop " >}}
 Guess one, i.e, cluster assignment 'z' to find the other, i.e, parameters \(\mu, \Sigma, \pi\).
 {{< /panel >}}
 

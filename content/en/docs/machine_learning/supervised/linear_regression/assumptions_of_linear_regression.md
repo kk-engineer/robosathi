@@ -70,7 +70,7 @@ Error terms should follow a normal distribution; (Required for small datasets.)
 {{< imgproc "images/machine_learning/supervised/linear_regression/assumptions_of_linear_regression/slide_09_01.png" Resize "1400x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="rust" title="No Multicollinearity" >}}
+{{< panel color="gold" title="No Multicollinearity" >}}
 Features should not be highly correlated with each other.
 
 **Risk**:

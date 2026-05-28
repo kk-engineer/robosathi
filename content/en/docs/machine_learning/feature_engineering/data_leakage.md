@@ -28,7 +28,7 @@ It is essentially the model '**cheating**' by inadvertently accessing informatio
 {{< /panel >}}
 
 
-{{< panel color="rust" title="Temporal Leakage" >}}
+{{< panel color="gold" title="Temporal Leakage" >}}
 This happens in **Time Series** data.
 - ❌ **Wrong**: Use standard random CV; it allows the model to '**peek into the future**'.
 - ✅ **Right**: Use **Time-Series Nested Cross-Validation** (Forward Chaining) instead of **random** shuffling.

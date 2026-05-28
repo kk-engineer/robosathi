@@ -36,7 +36,7 @@ Symbol: \(\Omega\) <br>
 \(P(\Omega) = 1\)
 {{</ definition >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 1. Toss a fair coin, sample space: \(\Omega = \{H,T\}\) <br>
 2. Roll a die, sample space: \(\Omega = \{1,2,3,4,5,6\}\) <br>
 3. Choose a real number \(x\) from the interval \([2,3]\), sample space: \(\Omega = [2,3]\); sample size = \(\infin\)<br>
@@ -50,7 +50,7 @@ An outcome of an experiment. A subset of all possible outcomes. <br>
 A,B,...⊆Ω
 {{</ definition >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 1. Toss a fair coin, set of possible outcomes: \(\{H,T\}\) <br>
 2. Roll a die, set of possible outcomes: \(\{1,2,3,4,5,6\}\) <br>
 3. Roll a die, event \(A = \{1,2\} => P(A) = 2/6 = 1/3\) 
@@ -62,7 +62,7 @@ Number of potential outcomes from an experiment is countable, distinct, or can b
 even if infinite i.e countably infinite.
 {{</ definition >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 1. Toss a fair coin, possible outcomes: \(\Omega = \{H,T\}\) <br>
 2. Roll a die, possible outcomes: \(\Omega = \{1,2,3,4,5,6\}\) <br>
 3. Choose a real number \(x\) from the interval \([2,3]\) *with decimal precision*, sample space: \(\Omega = [2,3]\).<br>
@@ -75,7 +75,7 @@ Potential outcomes from an experiment can take any value within a given range or
 representing an uncountably infinite set of possibilities.
 {{</ definition >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 1. A line segment between 2 and 3 - forms a continuum.
 2. Randomly put a point in a rectangular region. <br><br>
 {{< /panel >}}
@@ -95,7 +95,7 @@ Two or more events that cannot happen at the same time.
 <br>No overlapping or common outcomes. <br>If one event occurs, then the other event does NOT occur.
 {{</ definition >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 1. Roll a die, sample space: \(\Omega = \{1,2,3,4,5,6\}\) <br> Odd outcome = \(A = \{1,3,5\}\) <br> 
     Even outcome = \(B = \{2,4,6\}\) are mutually exclusive.<br><br>
     \(P(A \cap B) = 0\) <br>
@@ -110,7 +110,7 @@ Two events are independent if the occurrence of one event does NOT impact
 the outcome of the other event.
 {{</ definition >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 1. Roll a die twice , sample space: \(\Omega = \{1,2,3,4,5,6\}\) <br>
     Odd number in 1st throw = \(A = \{1,3,5\}\) <br> 
     Odd number in 2nd throw = \(B = \{1,3,5\}\) <br>

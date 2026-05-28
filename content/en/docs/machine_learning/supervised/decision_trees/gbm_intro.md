@@ -40,7 +40,7 @@ We want to minimize loss:
 ➡️ The gradient is calculated w.r.t. predictions, not weights.
 {{< /panel >}}
 
-{{< panel color="rust" title="Pseudo Residuals" >}}
+{{< panel color="gold" title="Pseudo Residuals" >}}
 In GBM we can use any loss function as long as it is differentiable, such as, MSE, log loss, etc.
 
 **Loss(MSE)** = \((y_i - F_m(x_i))^2\)

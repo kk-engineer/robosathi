@@ -21,7 +21,7 @@ math: true
 - Hash Encoding
 {{< /panel >}}
 
-{{< panel color="rust" title="One Hot Encoding (OHE)" >}}
+{{< panel color="gold" title="One Hot Encoding (OHE)" >}}
 ⭐️ When the categorical data (**nominal**) is **without** any inherent **ordering**.
 - Create binary columns per category.
   - e.g.: Colors: Red, Blue, Green.

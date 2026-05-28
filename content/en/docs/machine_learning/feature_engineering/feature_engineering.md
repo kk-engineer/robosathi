@@ -9,7 +9,7 @@ math: true
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcg0tJ0CAqPKjDk6Ry_atqu" 
 "Feature Engineering | All Videos" >}}
 
-{{< panel color="rust" title="Feature Engineering" >}}
+{{< panel color="gold" title="Feature Engineering" >}}
 Use domain knowledge to **create** new or **transform** existing features to **improve** model performance.
 {{< /panel >}}
 

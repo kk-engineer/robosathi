@@ -21,7 +21,7 @@ It tells us about the characteristic properties of a matrix.
 to a new vector by multiplying it by a matrix \(A\). <br>
 Multiplying a vector by a matrix can change the direction or magnitude or both of the vector. <br>
 {{</ definition >}}
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 \( \mathbf{A} = \begin{bmatrix}
 2 & 1 \\
 \\
@@ -361,7 +361,7 @@ Just reshuffling the above equation will give us the **Eigen Value Decomposition
 **Important:** Given that \(\mathbf{V}^{-1}\) exists, i.e, all the eigen vectors are linearly independent. <br>
 
 {{< /panel >}}
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 Let's revisit the example given above: <br>
 \(\mathbf{A} = \begin{bmatrix}
 2 & 1 \\

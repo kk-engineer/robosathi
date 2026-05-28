@@ -655,6 +655,12 @@ footer {
   --rs-callout-surface: #f8fafc;
 }
 
+.rs-callout-gold {
+  --rs-callout-accent: #f2c12e;        // Vibrant polished gold (bright metallic yellow)
+  --rs-callout-accent-strong: #785c00; // Deep burnished brass for razor-sharp text legibility without the muddy brown tint
+  --rs-callout-surface: #fffbe6;       // Luminous white-gold shimmer canvas
+}
+
 .rs-callout-panel {
   background: linear-gradient(180deg, color-mix(in srgb, var(--rs-callout-surface) 92%, #ffffff 8%) 0%, var(--rs-callout-surface) 100%);
   border-left: 3px solid var(--rs-callout-accent);

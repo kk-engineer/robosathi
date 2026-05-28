@@ -43,7 +43,7 @@ It is the maximum of absolute values of all the elements of a vector; also known
 **p=\(\infty\)**:
 \[ {\| x \|_\infty} = \max |x_i| = \lim_{p \to \infty}  (\sum_{i=1}^n |x_i|^p)^{1/p}\]
 {{</ definition >}}
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 1. Let, vector \(\mathbf{x} = \begin{bmatrix} 3 \\  \\ -4 \end{bmatrix}\), then <br>
 \({\| x \|_1} = |3| + |-4| = 7\)
 <br>
@@ -101,7 +101,7 @@ Also called **Spectral** norm, i.e, maximum factor by which the matrix can stret
 
 {{< /panel >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 1. Let, matrix \(\mathbf{A} = \begin{bmatrix} a_{11} & a_{12} \\ \\ a_{21} & a_{22} \end{bmatrix}\), then find Frobenius norm.<br><br>
 \({\| A \|_F} = \sqrt{a_{11}^2 +  a_{12}^2 + a_{21}^2 +  a_{22}^2}\)
 <br><br>

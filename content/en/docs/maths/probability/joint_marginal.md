@@ -46,7 +46,7 @@ f_{X,Y}(x,y) = \iint_{A \in \mathbb{R}^2} f_{X,Y}(x,y) dy dx
 <br>
 {{</ definition >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 - If we consider 2 random variables, say, height(X) and weight(Y), then the joint distribution will tell us 
 the probability of finding a person having a particular height and weight.
 {{< /panel >}}
@@ -284,7 +284,7 @@ E[X \mid Y = y] = \int_{-\infty}^{\infty} x.f_{X \mid Y}(x \mid y) dx
 \]
 {{</ definition >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 - Conditional expectation of of a person's weight, given his/her height = 165 cm, will give us the average weight
 of all people with height = 165 cm.
 

@@ -144,7 +144,7 @@ d_{\pi_d} = \frac{\mathbf{w}^\top \mathbf{x\prime} + w_0}{\Vert \mathbf{w}\Vert}
 {{< imgproc "images/maths/linear_algebra/half_spaces.png" Resize "800x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="rust" title="Applications of Equation of Hyperplane" >}}
+{{< panel color="gold" title="Applications of Equation of Hyperplane" >}}
 The above concept of equation of hyperplane will be very helpful when we discuss the following topics later:
 1. **Logistic Regression**
 2. **Support Vector Machines**

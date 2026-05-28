@@ -15,7 +15,7 @@ Random Variable X is represented as, \(X: \Omega \to \mathbb{R} \) <br>
 👉 It maps abstract outcomes of a random experiment to concrete numerical values required for mathematical analysis.
 {{< /definition >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 1. Toss a coin 2 times, sample space: \(\Omega = \{HH,HT, TH, TT\}\) <br>
     The above random experiment of coin tosses can be mapped to a random variable \(X: \Omega \to \mathbb{R} \) <br>
     \(X: \Omega = \{HH,HT, TH, TT\} \to \mathbb{R}) \) <br>
@@ -38,7 +38,7 @@ Typically obtained by counting.
 Discrete random variable cannot take any value between 2 consecutive values.  
 {{< /definition >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 👉 The number of heads in 2 coin tosses can be 0, 1 or 2 but NOT 1.5.
 {{< /panel >}}
 
@@ -47,7 +47,7 @@ A random variable that can take any value between a given range/interval.
 Possible outcomes are infinite.
 {{< /definition >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 1. A person's height in a given range of say 150cm-200cm.  
     Height can take any value, not just round values, e.g: 150.1cm, 167.95cm, 180.123cm etc.
 
@@ -68,7 +68,7 @@ It gives the cumulative probability of a random variable \(X\).
 CDF = \(F(X) = P(X \leq x)\) i.e Probability a random variable \(X\) will take for a value \(<=x\).
 {{< /definition >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 1. **Discrete random variable** - Toss a coin 2 times, sample space: \(\Omega = \{HH,HT, TH, TT\}\) <br>
     Count the number of heads. <br>
     \[

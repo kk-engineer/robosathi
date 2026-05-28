@@ -43,7 +43,7 @@ E.g: Covariance between age and height will NOT be same as the covariance betwee
 *Note:It only measures the direction of the relationship, but does NOT give any information about the strength of the relationship.* <br>
 
 {{</ definition >}}
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 1. \(X = [1, 2, 3] \) and \(Y = [2, 4, 6] \) <br>
 Let's calculate the covariance: <br>
 \(\text{Cov}(X, Y) = \frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})\) <br>
@@ -78,7 +78,7 @@ Range of \(r\) is between -1 and 1. <br>
 *Note: A correlation coefficient of 0.9 means that there is a strong linear relationship between X and Y, 
 irrespective of their units.* <br>
 {{</ definition >}}
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 1. \(X = [1, 2, 3] \) and \(Y = [2, 4, 6] \) <br>
 Let's calculate the covariance: <br>
 \(\text{Cov}(X, Y) = \frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})\) <br>
@@ -115,7 +115,7 @@ meet the assumptions of linear methods, such as, Pearson's correlation.
 
 \[\rho_{xy} = 1 - \frac{6\sum_{i}d_i^2}{n(n^2-1)}\] <br>
 {{</ definition >}}
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 1. Compute the correlation of ranks awarded to a group of 5 students by 2 different teacherrs. <br>
 | Student  | Teacher A Rank | Teacher B Rank  | \(d_i\) | \(d_i^2\) |
 |----------|----------------|----------------|---------|-----------|

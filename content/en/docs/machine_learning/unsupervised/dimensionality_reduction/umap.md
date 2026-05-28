@@ -80,7 +80,7 @@ and the low-dimensional weights \(Z_{ij}\).
 _Note_: This push and pull of 2 ‘forces' will make the data in low dimensions settle into a position that is overall a good representation of the original data in higher dimensions.
 {{< /panel >}}
 
-{{< panel color="rust" title="Stochastic Gradient Descent" >}}
+{{< panel color="gold" title="Stochastic Gradient Descent" >}}
 Optimization uses stochastic gradient descent (SGD) to minimize this cross-entropy, 
 balancing attractive forces (edges present in high-dimension, \(W_{ij} \approx 1\)) 
 and repulsive forces (edges absent in high-dimension, \(W_{ij} \approx 0\)).

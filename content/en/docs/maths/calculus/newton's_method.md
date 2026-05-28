@@ -35,7 +35,7 @@ x_{new} = x_{old} - (\nabla^2 f(x_{old})^{-1} \nabla f(x_{old}) \\[10pt]
 
 {{</ panel >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 1. Find the minima of \(f(x) = x^2 - 4x + 5\)
 To find the minima, lets calulate the first derivative and equate to zero. <br>
 \(f'(x) = 2x - 4 = 0 \) <br>

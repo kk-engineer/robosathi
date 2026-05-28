@@ -21,7 +21,7 @@ math: true
 ⭐️ Let's understand '**Feature Importance**' and why the ML model output's **interpretability** is important ?
 {{< /panel >}}
 
-{{< panel color="rust" title="Feature Importance" >}}
+{{< panel color="gold" title="Feature Importance" >}}
 \[\hat{y_i} = w_0 + w_1x_{i_1} + w_2x_{i_2} + \dots + w_dx_{i_d}\]
 
 \[w_1 > w_2 : f_1 \text{ is more important feature than } f_2\]

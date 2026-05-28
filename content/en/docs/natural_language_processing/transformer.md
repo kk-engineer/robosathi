@@ -130,7 +130,7 @@ _Note_: The dimensionality of input and output is \(d_{model}\) = 512, and the i
 {{< imgproc "images/natural_language_processing/transformer/feed_forward_network_2.png" Resize "800x" >}}{{< /imgproc >}}
 {{< /panel >}}
 
-{{< panel color="rust" title="Residual Connection">}}
+{{< panel color="gold" title="Residual Connection">}}
 - Residual connection is used to mitigate the vanishing gradient problem. <br>
 - Skip-connections allow original input features to skip layers and be preserved, 
 which helps the model avoid losing information in deep networks.

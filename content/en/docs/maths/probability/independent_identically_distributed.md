@@ -50,7 +50,7 @@ Var(X+Y) = Var(X) + Var(Y) \\
 
 {{</ definition >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 Let's go through few examples to understand the independence of random variables. <br>
 For example: <br>
 
@@ -131,7 +131,7 @@ I.I.D assumption for samples(data points) in a dataset means that the samples ar
 - Identically distributed, i.e, each sample is drawn from the same probability distribution.
 {{</ definition >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 - We take the heights of a random sample of people to estimate the average height of the population of a city.
   - Here 'independent' assumption means that the height of each person in the sample is independent of the other person.<br>
   Usually, heights of members of the same family may be highly correlated.<br> 

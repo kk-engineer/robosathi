@@ -41,7 +41,7 @@ It models a single event with two possible outcomes, _success_ (1) or _failure_ 
 \(PMF, P(x) = p^x(1-p)^{1-x}\), where \(x \in \{0,1\}\)
 {{</ definition >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 1. Toss a coin, we get heads or tails. <br>
 2. Result of a test, pass or fail. <br>
 3. Machine learning, binary classification model. <br><br>
@@ -62,7 +62,7 @@ independent trials. <br>
 *Also read about **Multinomial** distribution i.e where number of possible outcomes is > 2.* <br>
 {{</ definition >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 - Counting number of heads(success) in 'n' coin tosses. <br>
 {{< /panel >}}
 
@@ -118,7 +118,7 @@ Given that:
 \[PMF = \lambda^ke^{-\lambda}/k!\]
 *Note: Useful to count data where total population size is large but the probability of an individual event is small.* <br>
 {{</ definition >}}
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 1. Model the number of customers arrival at a service center per hour. <br>
 2. Number of website clicks in a given time period. <br><br>
 

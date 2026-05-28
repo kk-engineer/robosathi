@@ -82,7 +82,7 @@ Z_n \text{ converges in distribution to } N(0,1), \text{ as } n \rightarrow \inf
 *Note: For practical purposes, \(n \ge 30\) is considered as a sufficient sample size for the CLT to hold.* <br>
 {{< /panel >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 1. Let's collect the data for height of people in a city to find the average height of people in the city. <br>
 - Sample size (n) = 100 <br>
 - And then repeat this data collection process 1000 times. 

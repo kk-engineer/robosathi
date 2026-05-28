@@ -52,7 +52,7 @@ Let's see an example: <br><br>
 
 {{< video "https://www.youtube.com/watch?v=cBY4eshEo70&t=1s" >}}
 
-{{< panel color="rust" title="Differentiation" id="differentiation" >}}
+{{< panel color="gold" title="Differentiation" id="differentiation" >}}
 Differentiation is a mathematical tool that is used to find the **derivative** or rate of change of a function 
 at a specific point.<br>
 - \(\frac{dy}{dx} = f'(x) = tan\theta\) = Derivative = Slope = Gradient 
@@ -213,7 +213,7 @@ e.g.: <br>
 
 {{< /panel >}}
 
-{{< panel color="rust" title="Differentiability" >}}
+{{< panel color="gold" title="Differentiability" >}}
 A function is differentiable at a point 'c', if **derivative** of the function **exists** at that point. <br>
 A function must be **continuous** at the given point 'c' to be differentiable at that point. <br>
 *Note: A function can be continuous at a given point, but NOT differentiable at that point.* <br>

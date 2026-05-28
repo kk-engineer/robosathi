@@ -39,7 +39,7 @@ We use a general term **Probability Distribution Function** for both **PMF**(_di
 because both describe how the probability is distributed across a random variable's entire domain.
 {{< /panel >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 Consider a line segment/interval from \(\Omega = [0,2] \) <br>
 Random variable \(X(\omega) = \omega\) <br>
 i.e \(X(1) = 1 ~and~ X(1.1) = 1.1 \) <br>
@@ -118,7 +118,7 @@ PDF = f(x) =
 $$
 
 {{</ definition >}}
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 - Random number generator that generates a random number between 0 and 1. <br>
 
 {{< imgproc "images/maths/probability/uniform_pdf.png" Resize "800x" >}}{{< /imgproc >}}
@@ -157,7 +157,7 @@ Z = \dfrac{X-\mu}{\sigma}
 $$
 {{</ definition >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 - Human height, IQ scores, blood-pressure etc. <br>
 - Measurement of errors in scientific experiments. <br>
 

@@ -19,7 +19,7 @@ Allows us to update probability when additional information is revealed.
 \(P(A \cap B) = P(A)*P(B \mid A)\)
 {{< /definition >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 1. Roll a die, sample space: \(\Omega = \{1,2,3,4,5,6\}\) <br>
     Event A = Get a 5 = \(\{5\} => P(A) = 1/6\)<br>
     Event B = Get an odd number = \(\{1, 3, 5\} => P(B) = 3/6 = 1/2\)
@@ -60,7 +60,7 @@ $$
 {{< imgproc "images/maths/probability/bayes_likelihood.png" Resize "800x" >}}{{< /imgproc >}}
 {{< /definition >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 1. Roll a die, sample space: \(\Omega = \{1,2,3,4,5,6\}\) <br>
     Event A = Get a 5 = \(\{5\} => P(A) = 1/6\)<br>
     Event B = Get an odd number = \(\{1, 3, 5\} => P(B) = 3/6 = 1/2\)<br>

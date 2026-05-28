@@ -25,7 +25,7 @@ but instead says that - the probability of sample mean being far away from the p
 [Read more about Limits]({{<ref  "/docs/maths/calculus/calculus_fundamentals" >}})
 {{</ definition >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 - Toss a coin large number of times \('n'\), as \(n \rightarrow \infty\), the proportion of heads will probably be very 
 close to \(0.5\). <br>
 However, it does NOT rule out the possibility of a rare sequence, e.g., getting 10 consecutive heads. <br>
@@ -52,7 +52,7 @@ outcomes that has probability = 0.
 [Read more about Limits]({{<ref  "/docs/maths/calculus/calculus_fundamentals" >}})
 {{</ definition >}}
 
-{{< panel color="rust" title="Example" >}}
+{{< panel color="gold" title="Example" >}}
 - Toss a coin large number of times \('n'\), as \(n \rightarrow \infty\), the proportion of heads will converge 
 to \(0.5\), with probability = 1. <br>
 This means that a sequence where the proportion of heads never settles down to 0.5, is a probability = 0 event.

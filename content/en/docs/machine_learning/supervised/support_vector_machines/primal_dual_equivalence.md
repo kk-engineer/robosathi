@@ -47,7 +47,7 @@ a **saddle point**.
 
 {{< /panel >}}
 
-{{< panel color="rust" title="Karush–Kuhn–Tucker (KKT) Conditions" >}}
+{{< panel color="gold" title="Karush–Kuhn–Tucker (KKT) Conditions" >}}
 To find the Dual, we find the saddle point by taking partial derivatives with respect to the primal variables \((w, w_0, \xi)\)
 and equating them to 0.
 
