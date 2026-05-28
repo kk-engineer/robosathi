@@ -1888,3 +1888,11 @@ $btn-border-radius:      2px;
 }
 
 // Claude changes End !
+
+// Remove space below footer
+.td-footer {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: auto !important;
+  border: none !important;
+}
