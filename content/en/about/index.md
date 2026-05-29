@@ -17,11 +17,18 @@ RoboSathi exists to make it easy to understand, practical to learn, and exciting
 <div class="container rs-simple-shell">
 
   <div class="rs-creator-card">
-    <div class="rs-creator-card__avatar">KK</div>
+    <a href="https://www.linkedin.com/in/kk-engineer/" target="_blank" rel="noopener noreferrer" style="display: block; flex-shrink: 0;">
+    <img class="rs-creator-card__avatar" src="/images/profile/kumar_karan.png" alt="Karan">
+  </a>
     <div class="rs-creator-card__body">
       <p class="rs-eyebrow" style="text-align:left;margin-bottom:0.4rem">
         Creator & Instructor</p>
-      <h2 class="rs-creator-card__name">Kumar Karan</h2>
+      <h2 class="rs-creator-card__name">
+        Kumar Karan
+      <a href="https://www.linkedin.com/in/kk-engineer/" target="_blank" rel="noopener noreferrer" class="rs-creator-card__linkedin">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </h2>
       <p class="rs-creator-card__bio">
         I built RoboSathi because I could not find a single free resource
         that taught AI from genuine first principles — not API tutorials,
