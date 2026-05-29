@@ -55,4 +55,3 @@ These are multiplied by their respective ‘**amount of say**' \(\alpha_m\) and 
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

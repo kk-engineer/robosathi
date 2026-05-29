@@ -142,4 +142,3 @@ Mean Squared Error (MSE) can not be used to quantify error/loss in binary classi
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

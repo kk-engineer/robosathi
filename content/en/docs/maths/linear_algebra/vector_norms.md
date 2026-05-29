@@ -169,5 +169,5 @@ Therefore, \({\| A \|_2} = \sigma_{max}(A) = 3\)
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```
+
 

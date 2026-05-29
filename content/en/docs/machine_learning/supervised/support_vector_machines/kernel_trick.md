@@ -97,4 +97,3 @@ _Note_: Runtime Time Complexity = \(O(n_{SV}\times d)\) , whereas linear SVM,\(O
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

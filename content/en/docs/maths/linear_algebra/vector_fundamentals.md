@@ -284,4 +284,3 @@ also form an orthonormal basis for 2-D space. <br>
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

@@ -106,4 +106,3 @@ _Note_: Even if you have 1 million training points, if only 500 are support vect
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

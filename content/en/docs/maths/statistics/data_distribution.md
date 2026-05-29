@@ -324,5 +324,5 @@ yet have very different distributions and appear very different when plotted.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```
+
 

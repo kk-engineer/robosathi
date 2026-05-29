@@ -75,4 +75,3 @@ Gaussian Mixture (2D)
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

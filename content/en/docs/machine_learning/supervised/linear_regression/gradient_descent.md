@@ -138,4 +138,3 @@ Uses only 1 data point selected randomly from dataset to compute gradient for pa
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

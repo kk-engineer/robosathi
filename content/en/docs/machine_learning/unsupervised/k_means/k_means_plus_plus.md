@@ -51,4 +51,3 @@ Do robust preprocessing to **remove outliers** or use **K-Medoids** algorithm.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

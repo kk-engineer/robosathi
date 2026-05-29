@@ -58,4 +58,3 @@ Overfitting is controlled by:
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

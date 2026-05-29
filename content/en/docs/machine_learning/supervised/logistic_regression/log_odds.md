@@ -56,4 +56,3 @@ and vice versa.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

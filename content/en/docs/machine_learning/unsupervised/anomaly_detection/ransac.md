@@ -77,4 +77,3 @@ we use the following formula:
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

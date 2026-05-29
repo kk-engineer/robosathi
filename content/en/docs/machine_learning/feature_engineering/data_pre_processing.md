@@ -82,4 +82,3 @@ We need to pre-process the data to make it:
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

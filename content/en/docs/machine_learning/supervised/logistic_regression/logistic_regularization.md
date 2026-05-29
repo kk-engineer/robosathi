@@ -67,4 +67,3 @@ Adds a penalty term to the loss function, **discouraging** weights from _becomin
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

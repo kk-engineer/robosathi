@@ -254,4 +254,3 @@ Therefore, the observed conversion rate of design B is due to random chance; thu
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

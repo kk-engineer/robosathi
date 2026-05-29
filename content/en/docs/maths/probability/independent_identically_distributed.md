@@ -148,4 +148,3 @@ I.I.D assumption for samples(data points) in a dataset means that the samples ar
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

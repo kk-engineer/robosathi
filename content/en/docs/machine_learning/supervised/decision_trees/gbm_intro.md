@@ -92,4 +92,3 @@ Therefore, \(\gamma\) = average of all residuals in the leaf.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

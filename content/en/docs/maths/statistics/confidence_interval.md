@@ -92,4 +92,3 @@ i.e [36.12, 37.94].
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

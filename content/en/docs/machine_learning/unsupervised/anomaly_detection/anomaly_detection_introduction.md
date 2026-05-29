@@ -63,4 +63,3 @@ _Note_: Labeled anomaly data is often unavailable in real-world scenarios.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

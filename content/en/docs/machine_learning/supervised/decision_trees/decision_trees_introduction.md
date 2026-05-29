@@ -65,4 +65,3 @@ e.g: To classify the left bottom corner red points we can write: <br>
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

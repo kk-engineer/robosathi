@@ -97,4 +97,3 @@ representing '**robust**' **majority** of the data.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

@@ -78,4 +78,3 @@ a set of linear equations, making estimation *straightforward*.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

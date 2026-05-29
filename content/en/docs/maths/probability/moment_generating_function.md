@@ -99,4 +99,3 @@ M_X(t) = E[e^{tX}] = \sum_{i=1}^{\infty} e^{tx} P(X=x)
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

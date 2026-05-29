@@ -55,4 +55,3 @@ i.e, the very definition of what you are trying to predict changes.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

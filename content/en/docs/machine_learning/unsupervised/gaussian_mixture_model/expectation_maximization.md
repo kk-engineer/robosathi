@@ -94,4 +94,3 @@ Update the parameters (\(\mu, \Sigma, \pi\)) by calculating weighted versions of
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

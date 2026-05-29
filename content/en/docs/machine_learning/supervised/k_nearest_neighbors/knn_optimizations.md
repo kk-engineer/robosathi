@@ -80,4 +80,3 @@ Naive KNN shifts all computation to inference time, and it is very slow.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

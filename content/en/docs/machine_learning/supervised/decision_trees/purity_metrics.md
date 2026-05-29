@@ -78,4 +78,3 @@ Measure of uncertainty, randomness, or impurity in a data.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

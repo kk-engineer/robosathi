@@ -77,4 +77,3 @@ for individuals affected by **algorithmic decisions**.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

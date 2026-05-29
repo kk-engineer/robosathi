@@ -108,4 +108,4 @@ Error term must be uncorrelated with the features; E[ϵ|X] = 0
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```
+

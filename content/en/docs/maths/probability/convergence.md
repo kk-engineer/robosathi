@@ -155,4 +155,3 @@ Y_n = \frac{1}{n} \sum_{i=1}^{n} X_i \xrightarrow{Almost ~ Sure} \frac{1}{2}
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

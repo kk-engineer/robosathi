@@ -174,4 +174,3 @@ but establishing clear causal links is difficult.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

@@ -360,4 +360,3 @@ P(T>10) = e^{-(1/20) * 10} \\
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

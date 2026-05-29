@@ -147,4 +147,3 @@ Probability of receiving exactly k=3 emails in the next hour =  <br>
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

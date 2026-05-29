@@ -132,4 +132,3 @@ User-defined parameter that loosely relates to the effective number of neighbors
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

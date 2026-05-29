@@ -68,4 +68,3 @@ such that, \(y_i.(w^Tx_i + w_0) \ge 1 ~ \forall i  = 1,2,\dots, n\)
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

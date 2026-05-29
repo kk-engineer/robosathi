@@ -41,4 +41,3 @@ Boosting generally achieves better predictive performance because it actively re
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

@@ -90,4 +90,3 @@ because the '**average distance**' to a **neighbor** might be small due to the *
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

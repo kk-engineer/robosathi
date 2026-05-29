@@ -103,4 +103,3 @@ and repulsive forces (edges absent in high-dimension, \(W_{ij} \approx 0\)).
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

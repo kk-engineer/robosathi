@@ -44,4 +44,3 @@ Let's plot Error vs 'K' neighbors:
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

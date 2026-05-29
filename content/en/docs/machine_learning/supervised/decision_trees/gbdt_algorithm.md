@@ -71,4 +71,3 @@ Add the new ‘correction' to the existing model, scaled by the learning rate.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

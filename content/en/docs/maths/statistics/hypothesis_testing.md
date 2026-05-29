@@ -257,5 +257,5 @@ improvement (p-value<0.05), compared to a placebo group.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```
+
 

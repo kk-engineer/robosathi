@@ -43,4 +43,3 @@ For the Hessian of J(w),
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

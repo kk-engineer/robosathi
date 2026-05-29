@@ -172,4 +172,3 @@ And, accept the alternative hypothesis that the new model has better accuracy th
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

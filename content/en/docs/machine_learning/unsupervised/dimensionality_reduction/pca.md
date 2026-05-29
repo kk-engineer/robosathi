@@ -108,4 +108,3 @@ formed by 'k' **eigenvectors** corresponding to 'k' largest **eigenvalues**.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

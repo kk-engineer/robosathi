@@ -60,4 +60,3 @@ Let's understand the terms in the above formula:
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

@@ -69,4 +69,3 @@ Most common algorithm:
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

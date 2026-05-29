@@ -84,4 +84,3 @@ e.g: = 95th percentile of errors or 1.35\(\sigma\) for standard Gaussian data.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

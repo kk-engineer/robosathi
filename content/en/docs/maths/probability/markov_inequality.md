@@ -120,4 +120,3 @@ P(S_n \ge c) \le e^{-tc}(M_x(t))^n \\[10pt]
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

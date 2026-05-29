@@ -39,4 +39,3 @@ _Goal_ 🎯: Maximize the width of the 'street' (the margin) to ensure the model
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

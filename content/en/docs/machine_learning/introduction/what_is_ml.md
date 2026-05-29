@@ -46,4 +46,3 @@ to make predictions on new, unseen data.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

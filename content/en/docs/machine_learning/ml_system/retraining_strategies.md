@@ -61,4 +61,3 @@ for the next few gradient descent steps.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

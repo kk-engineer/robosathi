@@ -117,4 +117,3 @@ e.g: <br>
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

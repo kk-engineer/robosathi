@@ -70,4 +70,3 @@ Because, we use the logistic (sigmoid) function as the â€˜link function'to map ï
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

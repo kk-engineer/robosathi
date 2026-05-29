@@ -105,4 +105,3 @@ The **k-means** optimization problem is **NP-hard** because it belongs to a clas
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

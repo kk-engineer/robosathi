@@ -96,4 +96,3 @@ Why weights shrink exactly to 0 in L1 regularization but NOT in L2 regularizatio
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

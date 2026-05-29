@@ -68,4 +68,3 @@ e.g: Predicting the price of a house in 2026 based on data from 2010 to 2025.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

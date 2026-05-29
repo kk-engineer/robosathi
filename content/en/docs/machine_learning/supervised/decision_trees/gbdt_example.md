@@ -110,4 +110,3 @@ In just 2 iterations, although with higher learning rate (\(\nu=0.5\)), we were 
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

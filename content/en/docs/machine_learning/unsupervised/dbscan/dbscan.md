@@ -102,4 +102,4 @@ _Note_: Sensitive to parameter eps and minPts; **tricky** to get it work.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```
+

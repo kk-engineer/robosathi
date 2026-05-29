@@ -72,4 +72,3 @@ So, the true variance of bagged ensemble is:
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

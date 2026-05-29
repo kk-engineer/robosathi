@@ -50,4 +50,3 @@ index (e.g. 101) and **jumps directly** to that leaf in memory .
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

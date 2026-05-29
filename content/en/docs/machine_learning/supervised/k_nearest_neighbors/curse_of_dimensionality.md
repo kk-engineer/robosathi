@@ -96,4 +96,3 @@ _Note_: This formula proves that **maximizing** _‘Cosine similarity’_ is ide
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

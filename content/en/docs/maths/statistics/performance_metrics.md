@@ -247,5 +247,5 @@ _bottom right corner_, i.e, the model performance is poor.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```
+
 

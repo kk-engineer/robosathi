@@ -60,4 +60,3 @@ smoother and more robust to noise than a standard Random Forest.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

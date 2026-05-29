@@ -90,4 +90,3 @@ A good model **‘generalizes'** well, i.e.,
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

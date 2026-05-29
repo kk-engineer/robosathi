@@ -246,4 +246,3 @@ Therefore, the gender and beverage preference are dependent.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

@@ -60,4 +60,3 @@ Explanation:
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

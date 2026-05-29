@@ -48,4 +48,3 @@ Over time, the name **‘regression’** got **permanently attached** to the met
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

@@ -114,4 +114,3 @@ Therefore, the diagonal matrix \( \Lambda \) captures the variance along every p
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

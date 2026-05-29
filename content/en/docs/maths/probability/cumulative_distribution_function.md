@@ -159,7 +159,7 @@ from \(-\infty\) to the given value \(x\).<br><br>
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```
+
 
    
 

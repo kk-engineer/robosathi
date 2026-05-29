@@ -132,4 +132,4 @@ objective of the ordinary least squares (OLS) method.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```
+

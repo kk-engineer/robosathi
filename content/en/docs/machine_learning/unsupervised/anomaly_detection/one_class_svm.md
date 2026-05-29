@@ -85,4 +85,3 @@ For a new data point \(x_{new}\), decision function is:
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

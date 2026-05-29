@@ -78,4 +78,3 @@ _Note_: \(\alpha_i , \alpha_i^* \) cannot both be non-zero for the same point; a
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

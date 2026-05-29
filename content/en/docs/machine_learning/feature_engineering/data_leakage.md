@@ -54,4 +54,3 @@ This happens in **Time Series** data.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

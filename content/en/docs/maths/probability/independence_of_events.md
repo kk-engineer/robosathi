@@ -122,5 +122,5 @@ _Therefore, A & B are **conditionally independent** given C._
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```
+
 

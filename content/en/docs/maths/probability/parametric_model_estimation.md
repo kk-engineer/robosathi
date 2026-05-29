@@ -598,4 +598,3 @@ or multimodal distributions.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

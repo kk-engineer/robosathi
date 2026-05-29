@@ -77,4 +77,3 @@ log\mathcal{L}(w) &= \sum_{i=1}^n log [p_i^{y_i}(1-p_i)^{1-y_i}] \\
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

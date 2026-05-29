@@ -68,4 +68,3 @@ validation set having 99% class A.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

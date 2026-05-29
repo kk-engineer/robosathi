@@ -39,4 +39,3 @@ Developed by **Yandex**, this algorithm is specifically optimized for handling â
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

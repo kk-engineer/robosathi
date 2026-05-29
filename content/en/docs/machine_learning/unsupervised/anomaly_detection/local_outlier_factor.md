@@ -81,4 +81,3 @@ Size of the red circle represents the LOF score.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

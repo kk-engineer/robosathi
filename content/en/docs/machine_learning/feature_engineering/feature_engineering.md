@@ -48,4 +48,3 @@ Create polynomial features, such as, x^2, x^3, etc., to learn non-linear relatio
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

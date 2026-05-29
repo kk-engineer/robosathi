@@ -53,4 +53,3 @@ XGBoost introduces a '**default direction**' for each node.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

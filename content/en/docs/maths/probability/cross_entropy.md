@@ -201,4 +201,3 @@ Therefore, lower JS divergence value => P and Q are more similar. <br>
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

@@ -159,4 +159,3 @@ The above concept of equation of hyperplane will be very helpful when we discuss
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

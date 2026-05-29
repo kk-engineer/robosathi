@@ -55,4 +55,3 @@ the output easier to explain to stakeholders.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

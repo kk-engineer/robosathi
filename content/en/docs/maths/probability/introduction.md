@@ -176,4 +176,4 @@ Similarly, we can say that \(P(get ~any ~number ~between ~1 ~and ~6)=1\) and \(P
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```
+

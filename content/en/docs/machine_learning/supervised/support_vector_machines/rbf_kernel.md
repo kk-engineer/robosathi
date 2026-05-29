@@ -61,4 +61,3 @@ _Note_: Because the **Taylor series** has an **infinite number of terms**, featu
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

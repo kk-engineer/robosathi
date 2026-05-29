@@ -200,4 +200,3 @@ Cov(X,X) &= E[X^2] - E[X]^2 = Var[X] \\
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

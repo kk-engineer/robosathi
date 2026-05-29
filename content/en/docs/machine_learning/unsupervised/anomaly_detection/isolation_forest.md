@@ -102,4 +102,3 @@ E(H(x)): is the _average path length_ of **across** a **forest** of trees .
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

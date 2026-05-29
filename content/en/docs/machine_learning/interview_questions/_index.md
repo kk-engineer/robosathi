@@ -300,4 +300,3 @@ information gain.
 {{</ answer >}}
 
 <br><br>
-```End of Section```

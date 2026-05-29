@@ -112,4 +112,3 @@ Knowing 'z' provides exact counts and component assignments, leading to **direct
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

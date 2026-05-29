@@ -121,5 +121,5 @@ P(A_i \mid B) = \frac{P(A_i)*P(B \mid A_i)}{\sum_{j=1}^{n} P(A_j)*P(B \mid A_j)}
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```
+
     

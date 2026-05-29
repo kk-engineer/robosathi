@@ -67,4 +67,3 @@ Let's understand this by the examples below:
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

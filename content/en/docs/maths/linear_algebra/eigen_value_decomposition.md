@@ -480,4 +480,3 @@ because a real symmetric matrix is guaranteed to have all real eigenvalues. <br>
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

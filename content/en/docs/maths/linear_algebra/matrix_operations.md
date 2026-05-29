@@ -565,4 +565,3 @@ Therefore, \( x = 2 \) and \( y = 1 \).
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

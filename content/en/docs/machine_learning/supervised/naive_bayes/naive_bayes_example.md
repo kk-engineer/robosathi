@@ -75,4 +75,3 @@ Let's solve an email classification problem, below we have list of emails (token
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```

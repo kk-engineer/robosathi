@@ -263,4 +263,4 @@ Therefore, derivative of trace(A) w.r.t A is an identity matrix.
 </div>
 <!-- nav-panel:end -->
 
-```End of Section```
+
