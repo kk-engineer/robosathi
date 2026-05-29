@@ -5,6 +5,7 @@ description: Probability for AI & ML
 #tags: [Discrete, Continuous, Maths]
 weight: 1
 auto_course_outline: true
+hide_readingtime: true
 ---
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxde666MKUXEIGtQXHaJxpdj" 

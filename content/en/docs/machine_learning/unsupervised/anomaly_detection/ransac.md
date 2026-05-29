@@ -1,6 +1,6 @@
 ---
 title: RANSAC
-description: RANSAC
+description: RANdom SAmple Consensus
 date: 2026-02-14
 weight: 356
 math: true

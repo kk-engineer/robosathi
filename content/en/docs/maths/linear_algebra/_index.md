@@ -5,6 +5,7 @@ description: Linear Algebra for AI & ML
 #tags: [Eigen, PCA, Maths]
 weight: 3
 auto_course_outline: true
+hide_readingtime: true
 ---
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfJU-jKjugdLnNJj0GsT9kH" 

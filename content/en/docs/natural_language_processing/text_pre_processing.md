@@ -1,6 +1,6 @@
 ---
 title: Text Pre-Processing
-description: Text Pre-Processing
+description: Text Pre-Processing - Cleaning, Stemming & Lemmatization
 date: 2026-04-28
 weight: 2
 math: true
@@ -25,7 +25,7 @@ There are 2 main steps:
 {{< panel color="green" title="Cleaning" >}}
 Removing punctuation, lowercasing, stop word removal and stripping special characters.
 
- - Input: “‍♂️ Hello, together we will learn NLP (Natural Language Processing)!!!”:
+ - Input: “👋 ‍Hello, together we will learn NLP (Natural Language Processing)!!!”:
  - Output: “hello learn nlp natural language processing”
 {{< /panel >}}
 

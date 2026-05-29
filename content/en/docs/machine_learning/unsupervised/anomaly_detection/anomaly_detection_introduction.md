@@ -1,6 +1,6 @@
 ---
 title: Anomaly Detection
-description: Anomaly Detection Introduction
+description: Introduction to Anomaly Detection
 date: 2026-02-14
 weight: 351
 math: true

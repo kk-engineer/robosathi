@@ -1,6 +1,6 @@
 ---
 title: Deep Learning
-description: Deep Learning - from Neural Networks, Activation Functions, to Back Propagation.
+description: Deep Learning - from Neural Networks, Activation Functions, to Back Propagation
 date: 2026-04-27
 weight: 2
 course_outline:
@@ -14,6 +14,7 @@ course_outline:
     - page_ref: /docs/deep_learning/back_propagation
 #toc_hide: true
 #draft: true
+hide_readingtime: true
 ---
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxe749nPGDV2cd6SR6zIZIJl" 

@@ -1,7 +1,10 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
-<div class="rs-callout rs-callout-question rs-callout-green">
-  <div class="rs-callout__label">Question</div>
-  <div class="rs-callout__body">
-    {{ .Inner | markdownify }}
+<div class="rs-callout rs-callout-question rs-callout-sage">
+  <div class="rs-callout__header">
+    <span class="rs-callout__icon" aria-hidden="true">
+      <i class="fas fa-circle-question"></i>
+    </span>
+    <span class="rs-callout__label">Question</span>
   </div>
+  <div class="rs-callout__body">{{- .Inner | markdownify -}}</div>
 </div>

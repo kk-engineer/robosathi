@@ -1,6 +1,6 @@
 ---
 title: PCA
-description: PCA
+description: Principal Component Analysis
 date: 2026-02-14
 weight: 361
 math: true

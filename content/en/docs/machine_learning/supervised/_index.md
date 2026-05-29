@@ -5,6 +5,7 @@ date: 2026-02-07
 weight: 2
 auto_course_outline: true
 #draft: true
+hide_readingtime: true
 ---
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcJj4WZe0yuxxMr_Dm2PgHH" 

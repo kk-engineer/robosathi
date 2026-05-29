@@ -1,2 +1,18 @@
-{{ $script := resources.Get "js/copy-tex.js" | minify | fingerprint }}
-<script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+{{ if eq .Section "docs" }}
+<div id="rs-progress" style="
+  position:fixed;top:0;left:0;height:2px;
+  width:0%;background:#B8945A;
+  z-index:9999;transition:width 0.1s linear;
+  pointer-events:none;"></div>
+<script>
+(function(){
+  var bar = document.getElementById('rs-progress');
+  if (!bar) return;
+  window.addEventListener('scroll', function(){
+    var s = document.documentElement;
+    var pct = s.scrollTop / (s.scrollHeight - s.clientHeight) * 100;
+    bar.style.width = Math.min(pct, 100) + '%';
+  }, { passive: true });
+})();
+</script>
+{{ end }}

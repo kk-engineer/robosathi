@@ -52,7 +52,7 @@ Below are the steps:
 {{< /panel >}}
 
 {{< panel color="green" title="Evolution of LLM" >}}
-👉 Let's have a look a brief history of NLP models developed for understanding sentences:
+Let's have a look a brief history of NLP models developed for understanding sentences:
 - **N-Gram** (1951),  Claude Shannon
   - Predict the next word based on previous 'n-1' words.
 - **RNN** (1986),  Rumelhart, Hinton, & Williams

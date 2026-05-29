@@ -1,6 +1,6 @@
 ---
 title: Machine Learning
-description: Classical ML - Supervised & Unsupervised Learning, Feature Engineering, & ML Systems.
+description: Classical ML - Supervised & Unsupervised Learning, Feature Engineering, & ML Systems
 date: 2026-02-07
 weight: 3
 course_outline:
@@ -14,6 +14,7 @@ course_outline:
 #tags: [Regression, Classification, Clustering]
 #toc_hide: true
 #draft: true
+hide_readingtime: true
 ---
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxeydAqz2lsSMFYinbrJy9mu" 

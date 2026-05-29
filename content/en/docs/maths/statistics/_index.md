@@ -5,6 +5,7 @@ description: Statistics for AI & ML
 #tags: [CLT, CI, EDA, Maths]
 weight: 2
 auto_course_outline: true
+hide_readingtime: true
 ---
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfGbwZaKtx_nIi_DNWMK8mX" 

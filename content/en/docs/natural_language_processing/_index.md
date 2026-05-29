@@ -1,6 +1,6 @@
 ---
 title: Natural Language Processing
-description: Natural Language Processing (NLP) - from Tokenization, Embeddings, Transformers to LLMs.
+description: Natural Language Processing (NLP) - from Tokenization, Embeddings, Transformers to LLMs
 date: 2026-04-28
 weight: 1
 course_outline:
@@ -19,6 +19,7 @@ course_outline:
     - page_ref: /docs/natural_language_processing/bert
 #toc_hide: true
 #draft: true
+hide_readingtime: true
 ---
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcDlHCeNiKbRhLWKVunQaxn" 

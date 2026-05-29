@@ -233,7 +233,7 @@ This turns a massive multiclass classification problem into a series of simple b
 
 _Benefit_: If we have a vocabulary of 10,000 words and use￼￼ , we only update weights for 6 output neurons (1 positive + 5 negative) instead of all 10,000.
 
-**How  Negative Sampling Works ?** <br>
+{{< panel color="green" title="How Negative Sampling Works ?">}}
 **Cost Function**
 \[log ~ \hat{P}(w_{t+j} | w_t) = \underbrace{log(\sigma(\mathbf{v}^T_{w_t}\mathbf{u}_{w_{t+j}}))}_{Positive Pair} + \sum_{k=1}^K \underbrace{log(\sigma(-\mathbf{v}^T_{w_t}\mathbf{u}_{w}))}_{Negative Pair}\]
 
@@ -248,6 +248,7 @@ Let's see how the values of \( x, \sigma(x)\), and  \(log(\sigma(x))\) vary toge
 - _Negative Pair_: as \(x \rightarrow -\infty, ~ \sigma(x) \rightarrow 0, ~ and  ~ log(x) \rightarrow -\infty\)
 
 _Note_: \(\sigma(-x) = 1 - \sigma(x)\)
+{{< /panel >}}
 {{< /panel >}}
 
 {{< video "https://youtu.be/zBpili1p2Io" >}}

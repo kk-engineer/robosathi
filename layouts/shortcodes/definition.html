@@ -1,14 +1,13 @@
-{{/* Handle optional title from named or first positional parameter */}}
-{{ $title := .Get "title" | default (.Get 0) }}
-
-<div class="rs-callout rs-callout-definition rs-callout-blue">
-  {{ if $title }}
-    <div class="rs-callout__title rs-callout__title--panel">
-      {{ $title }}
-    </div>
-  {{ end }}
-
-  <div class="rs-callout__body">
-    {{ .Inner | markdownify }}
+{{- $title := .Get "title" | default (.Get 0) -}}
+<div class="rs-callout rs-callout-definition rs-callout-slate">
+  <div class="rs-callout__header">
+    <span class="rs-callout__icon" aria-hidden="true">
+      <i class="fas fa-book-open"></i>
+    </span>
+    <span class="rs-callout__label"></span>
+    {{- with $title -}}
+    <span class="rs-callout__title rs-callout__title--panel">{{ . }}</span>
+    {{- end -}}
   </div>
+  <div class="rs-callout__body">{{- .Inner | markdownify -}}</div>
 </div>

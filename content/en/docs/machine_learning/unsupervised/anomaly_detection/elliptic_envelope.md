@@ -1,6 +1,6 @@
 ---
 title: Elliptic Envelope
-description: Elliptic Envelope
+description: Elliptic Envelope & Minimum Covariance Determinant (MCD)
 date: 2026-02-14
 weight: 352
 math: true

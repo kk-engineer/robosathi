@@ -5,6 +5,7 @@ description: Calculus for AI & ML
 #tags: [Integration, Derivative, Maths]
 weight: 4
 auto_course_outline: true
+hide_readingtime: true
 ---
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfzDh2D3OqVo-piGAZQPWDj" 
