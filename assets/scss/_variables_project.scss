@@ -2030,3 +2030,84 @@ $btn-border-radius:      2px;
     gap: 1.25rem;
   }
 }
+
+// ==========================================================================
+// Robust Widescreen Documentation Layout Framework
+// ==========================================================================
+
+@media (min-width: 1200px) {
+  /* Targets ONLY documentation pages (single & list views) that contain `.td-content`.
+     This completely protects your Home page and About page from layout distortion.
+  */
+  body:has(.td-content) {
+
+    /* 1. Open up the outermost shell to utilize full widescreen real estate */
+    .container-fluid.td-outer {
+      max-width: 100% !important;
+      width: 100% !important;
+      padding-left: 2rem !important;
+      padding-right: 2rem !important;
+    }
+
+    /* 2. Convert primary theme rows into an unconstrained flex system */
+    .td-main,
+    .td-main > .row.flex-xl-nowrap {
+      display: flex !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    /* 3. Keep the Left Navigation Sidebar clean and compact */
+    .td-sidebar {
+      flex: 0 0 240px !important;
+      max-width: 240px !important;
+      width: 240px !important;
+      padding-left: 0 !important;
+      padding-right: 1rem !important;
+    }
+
+    /* 4. SHATTER THE COL-XL-8 CONSTRAINT: Force main block to take ALL remaining space */
+    main.col-xl-8,
+    main.col-md-7,
+    main[role="main"] {
+      flex: 1 !important;
+      max-width: calc(100% - 240px) !important;
+      width: auto !important;
+      padding-left: 2.5rem !important;
+      padding-right: 0 !important;
+    }
+
+    /* 5. Remove internal structural restrictions */
+    .td-content {
+      max-width: 100% !important;
+      width: 100% !important;
+      padding-right: 0 !important;
+    }
+
+    /* 6. Clean split arrangement with an optimized layout gap */
+    .rs-page-split-layout {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: flex-start !important;
+      width: 100% !important;
+      gap: 2.5rem !important;
+    }
+
+    /* 7. MAXIMUM VISUAL PRIORITY: Center track expands to capture all available space */
+    .rs-main-reading-track {
+      flex: 1 !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+    }
+
+    /* 8. Keep the right tracking panel locked in place perfectly */
+    .rs-right-performance-panel {
+      flex: 0 0 260px !important;
+      width: 260px !important;
+      max-width: 260px !important;
+      margin-left: auto !important;
+    }
+  }
+}

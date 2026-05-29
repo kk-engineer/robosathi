@@ -1,0 +1,540 @@
+{{ define "main" }}
+<style>
+  /* ── Layout engine ───────────────────────────────────────── */
+  @media (min-width: 1200px) {
+    .td-main > .row.flex-xl-nowrap {
+      display: flex !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    .td-sidebar { padding-right: 2rem !important; }
+    main.col-xl-8 {
+      flex: 1 0 0% !important;
+      max-width: none !important;
+      width: auto !important;
+      padding-left: 3rem !important;
+      padding-right: 1.5rem !important;
+    }
+    .rs-page-split-layout {
+      display: flex !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+      gap: 4rem !important;
+    }
+    .rs-main-reading-track {
+      flex: 1 !important;
+      max-width: 820px !important;
+      min-width: 0 !important;
+      margin: 0 auto !important;
+    }
+    .rs-right-performance-panel {
+      width: 310px !important;
+      flex-shrink: 0 !important;
+    }
+  }
+
+  /* ── Quest card hover ────────────────────────────────────── */
+  .rs-quest-card {
+    transition: transform 0.2s cubic-bezier(0.4,0,0.2,1),
+                box-shadow 0.2s cubic-bezier(0.4,0,0.2,1),
+                border-color 0.2s ease;
+  }
+  .rs-quest-card:hover {
+    transform: translateY(-2px);
+    border-color: #B8945A !important;
+    box-shadow: 0 10px 25px rgba(184,148,90,0.08) !important;
+  }
+
+  /* ════════════════════════════════════════════════════════════
+     FEATURE 1 — Mark as Read Button
+  ════════════════════════════════════════════════════════════ */
+  .rs-mark-btn {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    border: 1.5px solid #e1dacb;
+    background: #faf8f5;
+    color: #8a7a60;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.22s ease;
+    text-transform: uppercase;
+  }
+  .rs-mark-btn:hover:not(.rs-mark-btn--done) {
+    background: #fff9f0;
+    border-color: #B8945A;
+    color: #B8945A;
+    box-shadow: 0 4px 14px rgba(184,148,90,0.1);
+  }
+  .rs-mark-btn--done {
+    background: linear-gradient(135deg, #f9f3e8, #fffdf6);
+    border-color: #B8945A;
+    color: #7a5c28;
+    box-shadow: 0 4px 16px rgba(184,148,90,0.12);
+    cursor: default;
+  }
+  .rs-mark-btn__icon {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1.5px solid currentColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.22s ease;
+  }
+  .rs-mark-btn--done .rs-mark-btn__icon {
+    background: #B8945A;
+    border-color: #B8945A;
+    color: #fff;
+  }
+  /* Confetti burst keyframes */
+  @keyframes rs-pop {
+    0%   { transform: scale(1); }
+    40%  { transform: scale(1.06); }
+    70%  { transform: scale(0.97); }
+    100% { transform: scale(1); }
+  }
+  .rs-mark-btn--pop { animation: rs-pop 0.35s cubic-bezier(0.4,0,0.2,1); }
+
+  /* ════════════════════════════════════════════════════════════
+     FEATURE 2 — Lesson Dot Map
+  ════════════════════════════════════════════════════════════ */
+  .rs-dot-map {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 0.85rem 1rem;
+    background: #ffffff;
+    border: 1px solid #eae6df;
+    border-radius: 12px;
+    margin-bottom: 0.75rem;
+  }
+  .rs-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: transform 0.15s ease;
+    cursor: default;
+    position: relative;
+  }
+  .rs-dot--done   { background: #B8945A; }
+  .rs-dot--active { background: #B8945A; box-shadow: 0 0 0 2.5px #fffdf6, 0 0 0 4px #B8945A; }
+  .rs-dot--locked { background: #e8e4dc; }
+  .rs-dot:hover   { transform: scale(1.4); }
+
+  /* ════════════════════════════════════════════════════════════
+     FEATURE 3 — Chapter Complete Banner
+  ════════════════════════════════════════════════════════════ */
+  .rs-chapter-complete {
+    display: none; /* shown by JS when last lesson is marked done */
+    margin-top: 3rem;
+    padding: 2rem 1.5rem;
+    background: linear-gradient(135deg, #fdf8ef 0%, #ffffff 60%);
+    border: 1px solid #e8ddd0;
+    border-radius: 16px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .rs-chapter-complete::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 18px,
+      rgba(184,148,90,0.03) 18px,
+      rgba(184,148,90,0.03) 19px
+    );
+    pointer-events: none;
+  }
+  .rs-chapter-complete__seal {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.4rem;
+  }
+  .rs-chapter-complete__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0a0a0a;
+    margin-bottom: 0.35rem;
+    letter-spacing: -0.02em;
+  }
+  .rs-chapter-complete__sub {
+    font-size: 0.88rem;
+    color: #8a8a8a;
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+  }
+  .rs-chapter-complete__cta {
+    display: inline-block;
+    padding: 0.65rem 1.5rem;
+    background: #0a0a0a;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: background 0.2s;
+  }
+  .rs-chapter-complete__cta:hover {
+    background: #B8945A;
+    color: #fff;
+    text-decoration: none;
+  }
+  /* Badge row inside the banner */
+  .rs-badge-row {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+  }
+  .rs-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: rgba(184,148,90,0.1);
+    color: #7a5c28;
+    border: 1px solid rgba(184,148,90,0.25);
+  }
+
+  /* ── Reading progress bar ────────────────────────────────── */
+  #rs-read-bar {
+    position: fixed;
+    top: 0; left: 0;
+    height: 2.5px;
+    width: 0%;
+    background: linear-gradient(90deg, #D4AF37, #B8945A);
+    z-index: 9999;
+    transition: width 0.08s linear;
+    pointer-events: none;
+  }
+</style>
+
+{{/* ── Hugo data ─────────────────────────────────────────── */}}
+{{ $pages := .CurrentSection.Pages.ByWeight }}
+{{ $totalLessons := len $pages }}
+{{ $currentLessonIndex := 0 }}
+{{ $prevPage := "" }}
+{{ $nextPage := "" }}
+{{ $foundCurrent := false }}
+{{ $isLastLesson := false }}
+
+{{ range $index, $page := $pages }}
+  {{ if eq $page.Permalink $.Permalink }}
+    {{ $currentLessonIndex = add $index 1 }}
+    {{ $foundCurrent = true }}
+  {{ else if not $foundCurrent }}
+    {{ $prevPage = $page }}
+  {{ else }}
+    {{ if not $nextPage }}
+      {{ $nextPage = $page }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if eq $currentLessonIndex $totalLessons }}{{ $isLastLesson = true }}{{ end }}
+
+{{ $completionPct := 0 }}
+{{ if gt $totalLessons 0 }}
+  {{ $completionPct = mul (div (float $currentLessonIndex) (float $totalLessons)) 100 }}
+{{ end }}
+
+{{/* Stable page key for localStorage */}}
+{{ $pageKey := .RelPermalink | urlize }}
+{{ $sectionKey := .CurrentSection.RelPermalink | urlize }}
+{{ $nextHref := "" }}
+{{ with $nextPage }}{{ $nextHref = .RelPermalink }}{{ end }}
+{{ $sectionTitle := .CurrentSection.Title }}
+
+{{/* Build JSON array of all lesson permalinks for the dot map */}}
+{{ $permalinks := slice }}
+{{ range $pages }}{{ $permalinks = $permalinks | append .RelPermalink }}{{ end }}
+
+<div id="rs-read-bar"></div>
+
+<div class="td-content">
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.description }}<div class="lead">{{ . | markdownify }}</div>{{ end }}
+  {{ if .Site.Params.ui.readingtime }}{{ partial "reading-time.html" . }}{{ end }}
+
+  <div class="rs-page-split-layout" style="margin-top: 2rem;">
+
+    {{/* ── Main reading column ─────────────────────────── */}}
+    <div class="rs-main-reading-track">
+      {{ .Content }}
+
+      {{/* ════ FEATURE 3: Chapter Complete Banner (injected after content) ═ */}}
+      {{ if $isLastLesson }}
+      <div class="rs-chapter-complete" id="rs-chapter-banner">
+        <div class="rs-chapter-complete__seal">🎖</div>
+        <div class="rs-chapter-complete__title">{{ $sectionTitle }} — Complete</div>
+        <p class="rs-chapter-complete__sub">
+          You've worked through all {{ $totalLessons }} lessons in this module.<br>
+          Mark this lesson as read to earn your chapter seal.
+        </p>
+        <div class="rs-badge-row">
+          <span class="rs-badge">{{ $totalLessons }} lessons</span>
+          <span class="rs-badge">{{ $sectionTitle }}</span>
+          <span class="rs-badge">100% Done</span>
+        </div>
+        {{ with .Site.GetPage "/docs" }}
+        <a href="{{ .RelPermalink }}" class="rs-chapter-complete__cta">
+          Browse Next Course →
+        </a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+
+    {{/* ── Right performance panel ──────────────────────── */}}
+    <aside class="d-none d-xl-block rs-right-performance-panel"
+           style="position: sticky; top: 7rem; margin-top: 0.5rem;">
+
+      {{/* ── Module progress header ──────────────────── */}}
+      <div style="background:#ffffff; border:1px solid #eae6df; border-radius:14px; padding:1.25rem; margin-bottom:0.75rem; box-shadow:0 4px 20px rgba(184,148,90,0.03);">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem;">
+          <span style="font-size:0.72rem; font-weight:700; text-transform:uppercase; color:#8e8e93; letter-spacing:0.06em;">Module Progress</span>
+          <span id="rs-pct-label" style="font-size:0.85rem; font-weight:700; color:#B8945A;">{{ printf "%.0f" $completionPct }}%</span>
+        </div>
+        <div style="width:100%; height:6px; background:#f4f0e6; border-radius:10px; overflow:hidden; margin-bottom:0.5rem;">
+          <div id="rs-prog-fill" style="width:{{ printf "%.0f" $completionPct }}%; height:100%; background:linear-gradient(90deg,#D4AF37,#B8945A); border-radius:10px; transition:width 0.5s ease-out;"></div>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.5rem;">
+          <span style="font-size:0.78rem; color:#48484a;">
+            Step <strong>{{ $currentLessonIndex }}</strong> of {{ $totalLessons }}
+          </span>
+          <span style="font-size:0.72rem; background:rgba(184,148,90,0.08); color:#B8945A; padding:2px 8px; border-radius:20px; font-weight:600; border:1px solid rgba(184,148,90,0.15);">
+            Core Track
+          </span>
+        </div>
+      </div>
+
+      {{/* ════ FEATURE 2: Lesson Dot Map ════════════════════ */}}
+      <div class="rs-dot-map" id="rs-dot-map" style="margin-bottom:0.75rem;">
+        {{ range $index, $page := $pages }}
+        {{ $dotIndex := add $index 1 }}
+        {{ if eq $page.Permalink $.Permalink }}
+        <div class="rs-dot rs-dot--active"
+             title="You are here: {{ $page.LinkTitle }}"
+             data-idx="{{ $dotIndex }}"></div>
+        {{ else }}
+        <a href="{{ $page.RelPermalink }}"
+           class="rs-dot rs-dot--locked"
+           title="{{ $page.LinkTitle }}"
+           data-idx="{{ $dotIndex }}"
+           data-href="{{ $page.RelPermalink }}"
+           style="text-decoration:none;"></a>
+        {{ end }}
+        {{ end }}
+        <div style="width:100%; margin-top:0.45rem; display:flex; justify-content:space-between;">
+          <span style="font-size:0.65rem; color:#b0a898; letter-spacing:0.05em; text-transform:uppercase;">Lesson map</span>
+          <span id="rs-dot-done-count" style="font-size:0.65rem; color:#B8945A; font-weight:700; letter-spacing:0.04em; text-transform:uppercase;">0 read</span>
+        </div>
+      </div>
+
+      {{/* ── Nav stack ──────────────────────────────── */}}
+      <div style="display:flex; flex-direction:column; gap:0.75rem;">
+
+        {{ if $prevPage }}
+        <a href="{{ $prevPage.RelPermalink }}" class="rs-quest-card"
+           style="display:flex; flex-direction:column; gap:0.5rem; padding:1rem; background:#faf8f5; border:1px solid #e1dacb; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.01); position:relative; overflow:hidden; text-decoration:none;">
+          <div style="position:absolute; right:-12px; top:-12px; width:40px; height:40px; background:rgba(184,148,90,0.04); transform:rotate(45deg);"></div>
+          <span style="font-size:0.62rem; font-weight:800; color:#8a8a8a; text-transform:uppercase; letter-spacing:0.05em;">Previous</span>
+          <div style="display:flex; align-items:flex-start; gap:0.6rem;">
+            <div style="width:18px; height:18px; background:rgba(184,148,90,0.15); border:1px solid rgba(184,148,90,0.3); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px;">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#B8945A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span style="font-size:0.92rem; font-weight:600; color:#2c2c2e; line-height:1.3;">{{ $prevPage.LinkTitle }}</span>
+          </div>
+        </a>
+        {{ end }}
+
+        {{/* Current objective */}}
+        <div class="rs-quest-card" style="display:flex; flex-direction:column; gap:0.25rem; padding:1rem; background:#fffdf9; border:2px solid #B8945A; border-radius:12px; box-shadow:0 4px 20px rgba(184,148,90,0.06); position:relative; overflow:hidden;">
+          <div style="position:absolute; right:-12px; top:-12px; width:40px; height:40px; background:rgba(184,148,90,0.06); transform:rotate(45deg);"></div>
+          <span style="font-size:0.62rem; font-weight:800; color:#B8945A; text-transform:uppercase; letter-spacing:0.05em;">Reading Now</span>
+          <span style="font-size:0.92rem; font-weight:700; color:#1c1c1e; line-height:1.3;">{{ .LinkTitle }}</span>
+        </div>
+
+        {{ if $nextPage }}
+        <a href="{{ $nextPage.RelPermalink }}" class="rs-quest-card"
+           style="display:flex; flex-direction:column; gap:0.25rem; padding:1rem; background:#ffffff; border:1px solid #eae6df; border-radius:12px; text-decoration:none; box-shadow:0 4px 15px rgba(0,0,0,0.015);">
+          <span style="font-size:0.62rem; font-weight:700; color:#8e8e93; text-transform:uppercase; letter-spacing:0.05em;">Next Milestone</span>
+          <div style="display:flex; justify-content:space-between; align-items:center; gap:0.5rem;">
+            <span style="font-size:0.9rem; font-weight:600; color:#2c2c2e; line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ $nextPage.LinkTitle }}</span>
+            <span style="color:#B8945A; font-weight:700; flex-shrink:0;">→</span>
+          </div>
+        </a>
+        {{ end }}
+
+        {{/* ════ FEATURE 1: Mark as Read Button ════════════ */}}
+        <button id="rs-mark-btn" class="rs-mark-btn" onclick="rsMarkRead()">
+          <span class="rs-mark-btn__icon" id="rs-mark-icon">
+            <svg width="9" height="9" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="3.5"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </span>
+          <span id="rs-mark-label">Mark as Read</span>
+        </button>
+
+      </div>
+
+    </aside>
+
+  </div>
+
+  {{ if (.Site.Params.DisqusShortname) }}
+    <br />{{ partial "disqus-comment.html" . }}<br />
+  {{ end }}
+
+  {{ partial "page-meta-lastmod.html" . }}
+</div>
+
+{{/* ══════════════════════════════════════════════════════════
+     JAVASCRIPT — All three features
+═════════════════════════════════════════════════════════════ */}}
+<script>
+(function () {
+
+  /* ── Constants ──────────────────────────────────────────── */
+  var PAGE_KEY    = {{ $pageKey | jsonify }};
+  var SECTION_KEY = {{ $sectionKey | jsonify }};
+  var IS_LAST     = {{ $isLastLesson | jsonify }};
+  var NEXT_HREF   = {{ $nextHref | jsonify }};
+  var PERMALINKS  = {{ $permalinks | jsonify }};
+  var TOTAL       = {{ $totalLessons }};
+  var CURRENT_IDX = {{ $currentLessonIndex }};  /* 1-based */
+
+  /* ── localStorage helpers ───────────────────────────────── */
+  function storageKey(path) { return 'rs_read_' + path.replace(/\//g, '_'); }
+  function isRead(path)     { try { return localStorage.getItem(storageKey(path)) === '1'; } catch(e) { return false; } }
+  function markRead(path)   { try { localStorage.setItem(storageKey(path), '1'); } catch(e) {} }
+
+  function countDone() {
+    var n = 0;
+    PERMALINKS.forEach(function(p) { if (isRead(p)) n++; });
+    return n;
+  }
+
+  /* ── Reading progress bar ───────────────────────────────── */
+  var bar = document.getElementById('rs-read-bar');
+  if (bar) {
+    window.addEventListener('scroll', function () {
+      var s = document.documentElement;
+      var pct = s.scrollTop / (s.scrollHeight - s.clientHeight) * 100;
+      bar.style.width = Math.min(pct, 100) + '%';
+    }, { passive: true });
+  }
+
+  /* ════════════════════════════════════════════════════════════
+     FEATURE 2 — Dot Map colouring (uses localStorage)
+  ════════════════════════════════════════════════════════════ */
+  function refreshDots() {
+    var dots = document.querySelectorAll('#rs-dot-map .rs-dot');
+    var done = 0;
+    dots.forEach(function (dot) {
+      var idx   = parseInt(dot.dataset.idx, 10);
+      var href  = dot.dataset.href;
+      /* active dot has no href — always the current page */
+      if (!href) { /* current — style already applied via Hugo */ return; }
+      if (isRead(href)) {
+        dot.classList.remove('rs-dot--locked');
+        dot.classList.add('rs-dot--done');
+        done++;
+      }
+    });
+    /* count the current page too if marked */
+    if (isRead(window.location.pathname)) done++;
+    var lbl = document.getElementById('rs-dot-done-count');
+    if (lbl) lbl.textContent = done + ' read';
+  }
+  refreshDots();
+
+  /* ════════════════════════════════════════════════════════════
+     FEATURE 1 — Mark as Read + progress bar update
+  ════════════════════════════════════════════════════════════ */
+  function syncMarkButton() {
+    var btn   = document.getElementById('rs-mark-btn');
+    var lbl   = document.getElementById('rs-mark-label');
+    var icon  = document.getElementById('rs-mark-icon');
+    if (!btn) return;
+    if (isRead(window.location.pathname)) {
+      btn.classList.add('rs-mark-btn--done');
+      if (lbl)  lbl.textContent  = 'Lesson Complete ✓';
+      if (icon) icon.style.background = '#B8945A';
+    }
+  }
+  syncMarkButton();
+
+  window.rsMarkRead = function () {
+    var btn  = document.getElementById('rs-mark-btn');
+    var lbl  = document.getElementById('rs-mark-label');
+    if (!btn || btn.classList.contains('rs-mark-btn--done')) return;
+
+    markRead(window.location.pathname);
+    btn.classList.add('rs-mark-btn--done', 'rs-mark-btn--pop');
+    if (lbl) lbl.textContent = 'Lesson Complete ✓';
+    btn.removeEventListener('click', window.rsMarkRead);
+
+    /* Recompute progress */
+    var done    = countDone();
+    var newPct  = Math.round((done / TOTAL) * 100);
+    var fill    = document.getElementById('rs-prog-fill');
+    var pctLbl  = document.getElementById('rs-pct-label');
+    if (fill)   fill.style.width = newPct + '%';
+    if (pctLbl) pctLbl.textContent = newPct + '%';
+
+    refreshDots();
+
+    /* ════ FEATURE 3 — reveal chapter banner on last lesson ═ */
+    if (IS_LAST) {
+      var banner = document.getElementById('rs-chapter-banner');
+      if (banner) {
+        banner.style.display = 'block';
+        /* smooth scroll down to banner */
+        setTimeout(function () {
+          banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 300);
+      }
+    }
+
+    /* pop animation cleanup */
+    btn.addEventListener('animationend', function () {
+      btn.classList.remove('rs-mark-btn--pop');
+    }, { once: true });
+  };
+
+})();
+</script>
+
+{{ end }}
