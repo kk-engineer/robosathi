@@ -137,7 +137,7 @@ Say, if \(\gamma\)￼= 0.9, then it means to multiply the maximum velocity by 10
 
 {{< video "https://youtu.be/8js_aRdE8Dg" >}}
 
-{{< panel color="green" title="Adaptive Gradient (AdaGrad)" >}}
+{{< panel color="green" title="Adaptive Gradient (AdaGrad)" id="adagrad" >}}
 💡 Scales the learning rate for each parameter based on the historical sum of squares of its gradients.
 
 **Problem** <br>
@@ -184,7 +184,7 @@ the learning process before the model converges.
 
 {{< video "https://youtu.be/mlNASt_0tNw" >}}
 
-{{< panel color="orange" title="Root Mean Square Propagation (RMSProp)" >}}
+{{< panel color="orange" title="Root Mean Square Propagation (RMSProp)" id="rmsprop">}}
 💡 Instead of summing all past squared gradients, as in AdaGrad, RMSProp uses an exponentially decaying average to discard history 
 from the extreme past so that it can converge rapidly.
 
@@ -231,7 +231,7 @@ Lacks the ‘_momentum_’ component to accelerate through flat regions or dampe
 
 {{< video "https://youtu.be/XOCmjScaPpw" >}}
 
-{{< panel color="cyan" title="Adaptive Moment Estimation (Adam)" >}}
+{{< panel color="cyan" title="Adaptive Moment Estimation (Adam)" id="adam">}}
 💡Adam optimizer combines:
 - Adaptive learning rates of RMSProp 
 - Accelerated convergence of Momentum

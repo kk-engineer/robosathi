@@ -60,7 +60,7 @@ Effectively, both the linear functions _g(f(x))_ can be represented by another s
 - Softmax
 {{< /panel >}}
 
-{{< panel color="blue" title="Sigmoid" >}}
+{{< panel color="blue" title="Sigmoid" id="sigmoid">}}
 A mathematical function with a characteristic "S"-shaped curve (sigmoid curve) that maps any real-valued number 
 into a range between 0 and 1.
 
@@ -79,7 +79,7 @@ Suffers from _vanishing gradient_ (gradients become near-zero for high or low in
 [Read more about Differentiation]({{<ref  "/docs/maths/calculus/calculus_fundamentals/#differentiation"  >}})
 {{< /panel >}}
 
-{{< panel color="red" title="Hyperbolic Tangent (TanH)" >}}
+{{< panel color="red" title="Hyperbolic Tangent (TanH)" id="tanh">}}
 A mathematical function with a S-shaped curve that maps any real-valued number into a range between -1 and 1. <br>
 It is zero-centered, making it more effective than the sigmoid function for hidden layers in neural networks.
 
@@ -98,7 +98,7 @@ TanH also suffers from _vanishing gradient_ (gradients become near-zero for high
 [Read more about Differentiation]({{<ref  "/docs/maths/calculus/calculus_fundamentals/#differentiation"  >}})
 {{< /panel >}}
 
-{{< panel color="green" title="Rectified Linear Unit (ReLU)" >}}
+{{< panel color="green" title="Rectified Linear Unit (ReLU)" id="relu">}}
 A mathematical function that outputs the input value directly if it is positive, and zero otherwise. <br>
 Computationally simple; very fast to compute; does not saturate in the positive direction.
 
@@ -117,7 +117,7 @@ _‘Dying ReLU’_ problem: negative inputs result in a zero gradient, meaning t
 [Read more about Differentiation]({{<ref  "/docs/maths/calculus/calculus_fundamentals/#differentiation"  >}})
 {{< /panel >}}
 
-{{< panel color="magenta" title="Leaky Rectified Linear Unit (Leaky ReLU)" >}}
+{{< panel color="magenta" title="Leaky Rectified Linear Unit (Leaky ReLU)" id="leaky_relu">}}
 Instead of setting negative input values to zero like a standard ReLU, Leaky ReLU allows a small, 
 non-zero gradient (slope) for negative values. <br>
 This ensures that neurons continue learning (even for negative values).
