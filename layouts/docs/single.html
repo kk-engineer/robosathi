@@ -11,12 +11,14 @@
       margin-right: 0 !important;
     }
     .td-sidebar { padding-right: 2rem !important; }
+    /* 3. Blow past the col-xl-8 limitation so the workspace runs edge-to-edge */
     main.col-xl-8 {
-      flex: 1 0 0% !important;
+      flex: 1 1 auto !important; /* Allow natural distribution without layout snapping */
       max-width: none !important;
       width: auto !important;
       padding-left: 3rem !important;
       padding-right: 1.5rem !important;
+      contain: layout paint;      /* Optimizes rendering performance during async Turbo updates */
     }
     .rs-page-split-layout {
       display: flex !important;

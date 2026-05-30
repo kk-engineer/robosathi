@@ -157,6 +157,8 @@ params:
 
   # User interface configuration
   ui:
+    # Enables modern async transitions so the sidebar container state remains static
+    turbo: true
     # Set to true to disable breadcrumb navigation.
     breadcrumb_disable: false
     # Set to false if you don't want to display a logo (/assets/icons/logo.png) in the top navbar
