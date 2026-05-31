@@ -1,0 +1,24 @@
+<!-- layouts/interview/baseof.html -->
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}" class="no-js">
+<head>
+  {{ partial "head.html" . }}
+  {{ partial "head-css.html" . }}
+</head>
+<body class="td-{{ .Kind }}">
+  <header>
+    {{ partial "navbar.html" . }}
+  </header>
+  <div class="container-fluid td-outer">
+    <div class="td-main">
+      <main role="main" class="td-content">
+        {{ block "main" . }}{{ end }}
+      </main>
+    </div>
+  </div>
+  <footer>
+    {{ partial "footer.html" . }}
+  </footer>
+  {{ partial "scripts.html" . }}
+</body>
+</html>

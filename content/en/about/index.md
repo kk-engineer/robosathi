@@ -1,7 +1,7 @@
 ---
 title: About
 linkTitle: About
-menu: {main: {weight: 20}}
+menu: {main: {weight: 30}}
 ---
 
 <section class="rs-hero" style="min-height: auto !important; height: auto !important; padding-bottom: 0 !important; margin-bottom: 0 !important;">

@@ -1,0 +1,260 @@
+{{ define "main" }}
+<div class="iq-dashboard-layout">
+
+  {{/* --- Collect all questions from yaml files --- */}}
+  {{ $allQ := slice }}
+  {{ range site.Data.interview }}
+    {{ if reflect.IsSlice . }}
+      {{ range . }}{{ $allQ = $allQ | append . }}{{ end }}
+    {{ else if .questions }}
+      {{ range .questions }}{{ $allQ = $allQ | append . }}{{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{/* --- Process Tag Arrays for the Left Nav Sidebar Panels --- */}}
+  {{ $rawConcepts := slice }}
+  {{ range $allQ }}
+    {{ if reflect.IsSlice .concept }}
+      {{ range .concept }}{{ $rawConcepts = $rawConcepts | append . }}{{ end }}
+    {{ else if .concept }}
+      {{/* Splits potential comma-separated string declarations cleanly */}}
+      {{ range (split .concept ",") }}
+        {{ $rawConcepts = $rawConcepts | append (trim . " ") }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ $uniqueConcepts := $rawConcepts | uniq | sort }}
+
+  <aside class="iq-sidebar-left">
+    <div class="iq-sidebar-block">
+      <h6 class="iq-sidebar-title">Interview Questions</h6>
+      <input type="text" id="iq-search" class="iq-search-input" placeholder="Search questions..." />
+    </div>
+
+    <div class="iq-sidebar-block">
+      <h6 class="iq-sidebar-title">BY TOPIC</h6>
+      <nav class="iq-sidebar-nav">
+        <a class="iq-topic-link active" data-topic="all">
+          All questions <span class="badge">{{ len $allQ }}</span>
+        </a>
+        {{ range $uniqueConcepts }}
+          {{ $count := 0 }}
+          {{ $currentTopic := . }}
+          {{ range $allQ }}
+            {{ $hasTopic := false }}
+            {{ if reflect.IsSlice .concept }}
+              {{ if in .concept $currentTopic }}{{ $hasTopic = true }}{{ end }}
+            {{ else }}
+              {{ if in (split .concept ",") $currentTopic }}{{ $hasTopic = true }}{{ end }}
+            {{ end }}
+            {{ if $hasTopic }}{{ $count = add $count 1 }}{{ end }}
+          {{ end }}
+          <a class="iq-topic-link" data-topic="{{ $currentTopic }}">
+            {{ $currentTopic }} <span class="badge">{{ $count }}</span>
+          </a>
+        {{ end }}
+      </nav>
+    </div>
+  </aside>
+
+  <main class="iq-main-content">
+
+    <div class="iq-content-header">
+      <div class="iq-difficulty-pills">
+        <button class="pill active" data-difficulty="all">All</button>
+        <button class="pill" data-difficulty="Easy">Easy</button>
+        <button class="pill" data-difficulty="Medium">Medium</button>
+        <button class="pill" data-difficulty="Hard">Hard</button>
+        <span class="count-text">Showing <span id="iq-visible-count">{{ len $allQ }}</span> questions</span>
+      </div>
+      <div class="iq-sort-wrapper">
+        <select id="iq-sort" class="iq-sort-select">
+          <option value="default">Sort: Default</option>
+          <option value="az">Alphabetical (A-Z)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="iq-table-container">
+      <div class="iq-table-header">
+        <div>QUESTION</div>
+        <div>DIFFICULTY</div>
+        <div>CONCEPT</div>
+        <div>COMPANIES</div>
+        <div>LESSON</div>
+      </div>
+
+      <div class="iq-table-body" id="iq-table-body">
+        {{ range $allQ }}
+
+        {{/* Format values consistently to handle array conversions securely */}}
+        {{ $companiesList := slice }}
+        {{ range .companies }}{{ $companiesList = $companiesList | append (trim . " ") }}{{ end }}
+
+        {{ $conceptsList := slice }}
+        {{ if reflect.IsSlice .concept }}
+          {{ range .concept }}{{ $conceptsList = $conceptsList | append (trim . " ") }}{{ end }}
+        {{ else }}
+          {{ range (split .concept ",") }}{{ $conceptsList = $conceptsList | append (trim . " ") }}{{ end }}
+        {{ end }}
+
+        <div class="iq-row-wrapper"
+             data-difficulty="{{ .difficulty }}"
+             data-concepts="{{ delimit $conceptsList "," }}"
+             data-companies="{{ delimit $companiesList "," }}">
+
+          <div class="iq-table-row" onclick="toggleDrawer(this)">
+            <div class="cell-question">
+              <span class="status-check">✓</span> <span class="q-text-target">{{ .question }}</span>
+            </div>
+
+            <div class="cell-difficulty">
+              <span class="iq-badge iq-diff-{{ lower .difficulty }}">{{ .difficulty }}</span>
+            </div>
+
+            <div class="cell-concept">
+              {{ range $conceptsList }}
+                <span class="iq-badge iq-concept">{{ . }}</span>
+              {{ end }}
+            </div>
+
+            <div class="cell-companies">
+              {{ range $companiesList }}
+                <span class="iq-badge iq-company">{{ . }}</span>
+              {{ end }}
+            </div>
+
+            <div class="cell-lesson">
+              {{ if .linked_lesson }}
+                <a href="{{ .linked_lesson }}" class="icon-book" title="Study Concept">📖</a>
+              {{ else }}
+                <span style="color:#ccc">-</span>
+              {{ end }}
+            </div>
+          </div>
+
+          <div class="iq-row-expanded-panel" style="display: none;">
+            {{ if .hint }}
+            <details class="iq-disclosure iq-hint">
+              <summary>▶ View Hint</summary>
+              <div class="iq-disclosure-body">{{ .hint }}</div>
+            </details>
+            {{ end }}
+
+            {{ if .solution }}
+            <details class="iq-disclosure iq-solution">
+              <summary>👁 Reveal Full Solution</summary>
+              <div class="iq-disclosure-body">{{ .solution | markdownify }}</div>
+            </details>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+// Toggle expanding row disclosure visibility state directly
+function toggleDrawer(rowElement) {
+  const panel = rowElement.nextElementSibling;
+  if (panel && panel.classList.contains('iq-row-expanded-panel')) {
+    panel.style.display = (panel.style.display === 'none') ? 'block' : 'none';
+  }
+}
+
+(function () {
+  // Application Filter Registry State
+  const state = {
+    searchQuery: '',
+    difficulty: 'all',
+    topic: 'all'
+  };
+
+  const searchInput = document.getElementById('iq-search');
+  const difficultyButtons = document.querySelectorAll('.iq-difficulty-pills .pill');
+  const topicLinks = document.querySelectorAll('.iq-topic-link');
+  const rowWrappers = Array.from(document.querySelectorAll('.iq-row-wrapper'));
+  const sortSelect = document.getElementById('iq-sort');
+  const tableBody = document.getElementById('iq-table-body');
+
+  // Text Selection Lookup Event
+  searchInput.addEventListener('input', function(e) {
+    state.searchQuery = e.target.value.toLowerCase().trim();
+    applyFiltersAndSorting();
+  });
+
+  // Top Level Difficulty Button Multi-Pills Selector Mapping
+  difficultyButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      difficultyButtons.forEach(b => b.classList.remove('active'));
+      button.classList.add('active');
+      state.difficulty = button.dataset.difficulty;
+      applyFiltersAndSorting();
+    });
+  });
+
+  // Sidebar Left Navigation Anchor Items Event Wireup
+  topicLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      topicLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+      state.topic = link.dataset.topic;
+      applyFiltersAndSorting();
+    });
+  });
+
+  // Client Side Presentation Alpha Sorter Event Execution
+  sortSelect.addEventListener('change', function() {
+    applyFiltersAndSorting();
+  });
+
+  function applyFiltersAndSorting() {
+    let visibleCount = 0;
+
+    rowWrappers.forEach(function(wrapper) {
+      // 1. Evaluate Text Term Search Query matching
+      const questionText = wrapper.querySelector('.q-text-target').textContent.toLowerCase();
+      const searchMatch = questionText.includes(state.searchQuery);
+
+      // 2. Evaluate Exact Single Value Difficulty matching
+      const difficultyValue = wrapper.dataset.difficulty;
+      const difficultyMatch = (state.difficulty === 'all' || difficultyValue === state.difficulty);
+
+      // 3. Evaluate List Containment Array matching for Multi-Tags Topic Concepts
+      const conceptValues = wrapper.dataset.concepts.split(',');
+      const topicMatch = (state.topic === 'all' || conceptValues.includes(state.topic));
+
+      // Final Compound Logical Intersect Assertion Check
+      if (searchMatch && difficultyMatch && topicMatch) {
+        wrapper.style.display = '';
+        visibleCount++;
+      } else {
+        wrapper.style.display = 'none';
+        // Clean close drawer panel if hidden to preserve layout consistency on recalculation
+        const innerPanel = wrapper.querySelector('.iq-row-expanded-panel');
+        if (innerPanel) innerPanel.style.display = 'none';
+      }
+    });
+
+    // Handle Client View Alphabetic Dom Re-ordering Array manipulations
+    if (sortSelect.value === 'az') {
+      const sortedRows = rowWrappers.slice().sort(function(a, b) {
+        const textA = a.querySelector('.q-text-target').textContent.trim().toLowerCase();
+        const textB = b.querySelector('.q-text-target').textContent.trim().toLowerCase();
+        return textA.localeCompare(textB);
+      });
+      sortedRows.forEach(row => tableBody.appendChild(row));
+    } else {
+      // Restore natural parsed DOM initialization sort sequence tracking template loop positions
+      rowWrappers.forEach(row => tableBody.appendChild(row));
+    }
+
+    // Refresh dynamic summary indicator string tokens
+    document.getElementById('iq-visible-count').textContent = visibleCount;
+  }
+})();
+</script>
+{{ end }}

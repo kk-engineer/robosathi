@@ -1,0 +1,562 @@
+questions:
+
+  - id: q001
+    question: "What is tokenization and why is it required before training language models?"
+    difficulty: Easy
+    companies: [Google, Meta, OpenAI]
+    concept: NLP
+    linked_lesson: "/docs/natural_language_processing/tokenization/"
+    hint: "How does text become input for a neural network?"
+    solution: |
+      Tokenization is the process of breaking text into smaller units called tokens.
+
+      Examples:
+      "Machine learning is fun"
+      → ["Machine", "learning", "is", "fun"]
+
+      Since neural networks operate on numbers rather than raw text, tokenization
+      converts text into discrete units that can later be mapped to token IDs
+      and embeddings.
+
+      Modern language models commonly use subword tokenization such as BPE,
+      WordPiece, or SentencePiece because they can efficiently handle rare
+      words, spelling variations, and multilingual text.
+
+      Tokenization is the first step in almost every NLP pipeline.
+
+  - id: q002
+    question: "What is stemming and how is it different from lemmatization?"
+    difficulty: Easy
+    companies: [Amazon, Google]
+    concept: NLP
+    linked_lesson: "/docs/natural_language_processing/text_preprocessing/"
+    hint: "Rule-based reduction versus linguistic reduction."
+    solution: |
+      Stemming reduces words to their root form using heuristic rules.
+
+      Examples:
+      running → run
+      studies → studi
+
+      Lemmatization reduces words to their dictionary form using linguistic
+      knowledge and vocabulary.
+
+      Examples:
+      running → run
+      better → good
+
+      Stemming is faster but less accurate.
+      Lemmatization is more accurate but computationally more expensive.
+
+      Most modern transformer systems perform minimal stemming or lemmatization
+      because tokenization and embeddings already capture much of the semantic
+      information.
+
+  - id: q003
+    question: "What is TF-IDF and why was it widely used before embeddings?"
+    difficulty: Easy
+    companies: [Google, Microsoft]
+    concept: NLP
+    linked_lesson: "/docs/natural_language_processing/tf-idf/"
+    hint: "Importance of a word relative to a corpus."
+    solution: |
+      TF-IDF stands for Term Frequency-Inverse Document Frequency.
+
+      TF measures how often a word appears in a document.
+
+      IDF reduces the importance of words that appear in many documents.
+
+      TF-IDF assigns higher importance to words that are frequent within a
+      document but relatively rare across the corpus.
+
+      Advantages:
+      - Simple
+      - Fast
+      - Interpretable
+
+      Limitations:
+      - Cannot capture semantics
+      - Ignores word order
+      - Produces sparse vectors
+
+      Dense embeddings and transformers have largely replaced TF-IDF in modern NLP.
+
+  - id: q004
+    question: "What are word embeddings and how do they differ from one-hot encodings?"
+    difficulty: Easy
+    companies: [OpenAI, Google]
+    concept: NLP
+    linked_lesson: "/docs/natural_language_processing/word_embeddings/"
+    hint: "Dense vectors versus sparse vectors."
+    solution: |
+      Word embeddings represent words as dense continuous vectors.
+
+      One-hot encoding:
+      - Sparse
+      - Very high dimensional
+      - No semantic information
+
+      Word embeddings:
+      - Dense
+      - Lower dimensional
+      - Capture semantic relationships
+
+      Example:
+
+      king - man + woman ≈ queen
+
+      Similar words tend to appear close together in embedding space.
+
+      Embeddings allow machine learning models to learn semantic relationships
+      between words.
+
+  - id: q005
+    question: "What is Word2Vec and what problem does it solve?"
+    difficulty: Easy
+    companies: [Google]
+    concept: NLP
+    linked_lesson: "/docs/natural_language_processing/word_embeddings/word2vec/"
+    hint: "Learning semantic representations."
+    solution: |
+      Word2Vec is a neural network-based algorithm that learns vector
+      representations of words.
+
+      Main variants:
+      - CBOW (Continuous Bag of Words)
+      - Skip-Gram
+
+      It solves the problem of representing words in a semantic vector space.
+
+      Words appearing in similar contexts receive similar embeddings.
+
+      Word2Vec was one of the first major breakthroughs showing that semantic
+      relationships can emerge from unsupervised training on text.
+
+  - id: q006
+    question: "What is the difference between CBOW and Skip-Gram?"
+    difficulty: Easy
+    companies: [Google]
+    concept: NLP
+    linked_lesson: "/docs/natural_language_processing/word_embeddings/word2vec/"
+    hint: "Prediction direction."
+    solution: |
+      CBOW predicts the center word using surrounding context words.
+
+      Example:
+      Context → Word
+
+      Skip-Gram predicts surrounding context words from the center word.
+
+      Example:
+      Word → Context
+
+      CBOW:
+      - Faster training
+      - Works well for frequent words
+
+      Skip-Gram:
+      - Better at learning rare words
+      - Often produces better embeddings
+
+  - id: q007
+    question: "Why do static embeddings struggle with polysemous words?"
+    difficulty: Medium
+    companies: [OpenAI, Anthropic]
+    concept: NLP
+    linked_lesson: "/docs/natural_language_processing/word_embeddings/"
+    hint: "One vector for many meanings."
+    solution: |
+      Static embeddings assign exactly one vector to each word.
+
+      Example:
+      bank
+
+      Meaning 1:
+      river bank
+
+      Meaning 2:
+      financial bank
+
+      Both meanings receive the same vector representation.
+
+      This causes ambiguity and reduces model understanding.
+
+      Contextual models such as BERT generate different embeddings depending
+      on surrounding context and largely solve this issue.
+
+  - id: q008
+    question: "Why did transformers replace RNNs and LSTMs for NLP tasks?"
+    difficulty: Medium
+    companies: [OpenAI, Google, Meta]
+    concept: NLP
+    linked_lesson: "/docs/natural_language_processing/transformers/"
+    hint: "Think about parallelization and long-range dependencies."
+    solution: |
+      RNNs process tokens sequentially.
+
+      This creates training bottlenecks and makes it difficult to capture
+      long-range dependencies.
+
+      Transformers use self-attention.
+
+      Advantages:
+      - Parallel computation
+      - Better long-context understanding
+      - More scalable
+      - Better hardware utilization
+
+      These advantages allowed transformers to scale to billions of parameters,
+      enabling modern LLMs.
+
+  - id: q009
+    question: "What is the purpose of the attention mechanism?"
+    difficulty: Medium
+    companies: [OpenAI, Anthropic, Google]
+    concept: NLP
+    linked_lesson: "/docs/natural_language_processing/attention/"
+    hint: "Focus on important information."
+    solution: |
+      Attention allows a model to focus on relevant tokens while processing
+      a sequence.
+
+      Instead of compressing all information into a single hidden state,
+      attention provides direct access to all tokens.
+
+      Benefits:
+      - Captures long-range dependencies
+      - Improves contextual understanding
+      - Enables parallelization
+
+      Attention is the fundamental building block of transformer architectures.
+
+  - id: q010
+    question: "Explain positional encoding and why transformers need it."
+    difficulty: Medium
+    companies: [OpenAI, Anthropic]
+    concept: NLP
+    linked_lesson: "/docs/natural_language_processing/transformers/positional_encoding/"
+    hint: "Attention alone does not understand order."
+    solution: |
+      Self-attention treats tokens as a set and does not inherently understand
+      token order.
+
+      Positional encodings inject information about the position of tokens.
+
+      Example:
+
+      Dog bites man
+      Man bites dog
+
+      The same words appear but meaning changes due to order.
+
+      Positional encodings allow transformers to capture sequence information.
+
+      Common approaches:
+      - Sinusoidal encodings
+      - Learned positional embeddings
+
+  - id: q011
+    question: "What is masked language modeling and why was it used in BERT?"
+    difficulty: Medium
+    companies: [ Google, NVIDIA ]
+    category: NLP
+    concept: BERT
+    linked_lesson: "/docs/natural_language_processing/bert/"
+    hint: "Predict missing words using both left and right context."
+    solution: |
+      Masked Language Modeling (MLM) is the pretraining objective used by BERT.
+
+      During training, some tokens are randomly replaced with a special [MASK] token.
+
+      Example:
+
+      "The capital of France is [MASK]."
+
+      The model must predict:
+      Paris
+
+      Unlike autoregressive language models, MLM allows the model to use both
+      left and right context simultaneously.
+
+      Benefits:
+      - Learns bidirectional representations
+      - Produces strong language understanding capabilities
+      - Works well for classification and retrieval tasks
+
+      MLM is one of the main reasons BERT achieved significant improvements
+      across many NLP benchmarks.
+  - id: q012
+    question: "How does BERT differ from GPT architecturally and in training objectives?"
+    difficulty: Medium
+    companies: [ Google, OpenAI ]
+    category: NLP
+    concept: Transformers
+    linked_lesson: "/docs/natural_language_processing/transformers/"
+    hint: "Encoder versus decoder."
+    solution: |
+      BERT is an encoder-only transformer.
+
+      GPT is a decoder-only transformer.
+
+      BERT:
+      - Bidirectional attention
+      - Uses Masked Language Modeling
+      - Designed primarily for understanding tasks
+
+      GPT:
+      - Causal attention
+      - Next-token prediction
+      - Designed primarily for generation
+
+      BERT excels in:
+      - Classification
+      - Retrieval
+      - Search
+
+      GPT excels in:
+      - Text generation
+      - Chatbots
+      - Code generation
+
+      Modern LLMs such as GPT, Claude, and Llama are decoder-based architectures.
+      
+  - id: q013
+    question: "What are sentence embeddings and how do they differ from token embeddings?"
+    difficulty: Medium
+    companies: [ OpenAI, Cohere ]
+    category: NLP
+    concept: Embeddings
+    linked_lesson: "/docs/natural_language_processing/embeddings/"
+    hint: "Representing an entire sentence."
+    solution: |
+      Token embeddings represent individual tokens.
+
+      Sentence embeddings represent the semantic meaning of an entire sentence
+      using a single vector.
+
+      Example:
+
+      "Machine learning is amazing"
+
+      Token embeddings:
+      [Machine], [learning], [is], [amazing]
+
+      Sentence embedding:
+      One vector representing the entire sentence.
+
+      Applications:
+      - Semantic search
+      - Retrieval
+      - Clustering
+      - Recommendation systems
+
+      Modern RAG systems rely heavily on sentence embeddings.
+
+  - id: q014
+    question: "How would you evaluate a text classification model?"
+    difficulty: Medium
+    companies: [ Amazon, Meta ]
+    category: NLP
+    concept: Evaluation Metrics
+    linked_lesson: "/docs/machine_learning/model_evaluation/"
+    hint: "Accuracy is not always enough."
+    solution: |
+      Evaluation depends on the dataset and business objective.
+
+      Common metrics:
+
+      Accuracy:
+      Percentage of correct predictions.
+
+      Precision:
+      Out of predicted positives, how many were correct?
+
+      Recall:
+      Out of actual positives, how many were found?
+
+      F1 Score:
+      Harmonic mean of precision and recall.
+
+      ROC-AUC:
+      Measures ranking performance.
+
+      For imbalanced datasets, F1 score and Precision-Recall curves are often
+      preferred over accuracy.
+      
+  - id: q015
+    question: "Why do large language models hallucinate?"
+    difficulty: Hard
+    companies: [ OpenAI, Anthropic ]
+    category: NLP
+    concept: Hallucinations
+    linked_lesson: "/docs/large_language_models/hallucinations/"
+    hint: "Prediction versus factual retrieval."
+    solution: |
+      LLMs are trained to predict likely next tokens rather than retrieve
+      verified facts.
+
+      Hallucinations occur because:
+
+      - Missing information in training data
+      - Ambiguous prompts
+      - Distribution shifts
+      - Lack of grounding
+
+      Example:
+      A model may generate a convincing but nonexistent research paper citation.
+
+      Mitigation techniques include:
+
+      - RAG
+      - Tool calling
+      - Verification systems
+      - Better prompting
+      - Fine tuning
+
+      Hallucinations cannot currently be eliminated completely.
+
+  - id: q016
+    question: "What is Retrieval Augmented Generation (RAG) and why is it useful?"
+    difficulty: Hard
+    companies: [ OpenAI, Anthropic, Databricks ]
+    category: NLP
+    concept: RAG
+    linked_lesson: "/docs/rag/introduction/"
+    hint: "Combine retrieval with generation."
+    solution: |
+      RAG combines retrieval systems with language models.
+
+      Workflow:
+
+      User Query
+        ↓
+      Retriever
+        ↓
+      Relevant Documents
+        ↓
+      LLM
+        ↓
+      Final Answer
+
+      Benefits:
+
+      - Reduces hallucinations
+      - Improves factual accuracy
+      - Allows access to private data
+      - Avoids expensive retraining
+
+      RAG is one of the most common enterprise AI architectures today.
+
+  - id: q017
+    question: "What challenges arise when building multilingual language models?"
+    difficulty: Hard
+    companies: [ Meta, Google ]
+    category: NLP
+    concept: Multilingual NLP
+    linked_lesson: "/docs/natural_language_processing/multilingual_models/"
+    hint: "Languages are not equally represented."
+    solution: |
+      Major challenges include:
+
+      - Data imbalance
+      - Different scripts
+      - Vocabulary fragmentation
+      - Cultural differences
+      - Code switching
+
+      High-resource languages often dominate training.
+
+      Models must balance performance across both high-resource and
+      low-resource languages.
+
+      Examples:
+      mBERT
+      XLM-R
+      NLLB
+
+  - id: q018
+    question: "How would you detect and mitigate bias in an NLP system?"
+    difficulty: Hard
+    companies: [ Google, OpenAI, Anthropic ]
+    category: NLP
+    concept: AI Safety
+    linked_lesson: "/docs/ai_ethics/bias_and_fairness/"
+    hint: "Measure first, then mitigate."
+    solution: |
+      Bias detection methods:
+
+      - Benchmark datasets
+      - Fairness metrics
+      - Human audits
+      - Counterfactual testing
+
+      Mitigation methods:
+
+      - Better data collection
+      - Debiasing algorithms
+      - RLHF
+      - Safety layers
+      - Continuous monitoring
+
+      Bias management is an ongoing process rather than a one-time activity.
+
+  - id: q019
+    question: "How would you evaluate a summarization model beyond ROUGE?"
+    difficulty: Hard
+    companies: [ Google DeepMind, OpenAI ]
+    category: NLP
+    concept: Evaluation
+    linked_lesson: "/docs/natural_language_processing/evaluation/"
+    hint: "Lexical overlap is insufficient."
+    solution: |
+      ROUGE primarily measures lexical similarity.
+
+      Important additional metrics include:
+
+      - Factual correctness
+      - Faithfulness
+      - Coherence
+      - Fluency
+      - Human preference scores
+
+      Modern systems increasingly use:
+
+      - LLM-as-a-Judge
+      - Human evaluation
+      - Task completion metrics
+
+      Production evaluation requires combining multiple signals.
+
+  - id: q020
+    question: "Design an evaluation framework for a production conversational AI system."
+    difficulty: Hard
+    companies: [ OpenAI, Anthropic ]
+    category: NLP
+    concept: AI Evaluation
+    linked_lesson: "/docs/large_language_models/evaluation/"
+    hint: "Think offline, online, and safety metrics."
+    solution: |
+      A complete evaluation framework contains:
+
+      Offline Evaluation:
+      - Accuracy
+      - Hallucination rate
+      - Ground-truth benchmarks
+
+      Online Evaluation:
+      - User satisfaction
+      - Task completion rate
+      - Retention
+
+      Operational Metrics:
+      - Latency
+      - Cost
+      - Throughput
+
+      Safety Metrics:
+      - Toxicity
+      - Bias
+      - Jailbreak resistance
+
+      The strongest production systems combine automated evaluation,
+      human review, and continuous monitoring.

@@ -1,0 +1,302 @@
+// assets/scss/_interview.scss
+
+// Theme variable fallbacks to prevent pipeline compilation errors
+$rs-background: #fafafa !default;
+$rs-surface: #ffffff !default;
+$rs-surface-soft: #f8f9fa !default;
+$rs-border: #e9ecef !default;
+$rs-text: #212529 !default;
+$rs-text-muted: #6c757d !default;
+
+.iq-dashboard-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr; // Left fixed column sidebar, right flexible workspace
+  min-height: 100vh;
+  background: $rs-background;
+}
+
+// ── Left Sidebar Styles ──────────────────────────────────────────────────
+
+.iq-sidebar-left {
+  background: $rs-surface;
+  border-right: 1px solid $rs-border;
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+
+  .iq-sidebar-block {
+    .iq-sidebar-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: lighten($rs-text-muted, 10%);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  .iq-search-input {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid $rs-border;
+    background: $rs-background;
+    font-size: 13px;
+    color: $rs-text;
+
+    &:focus {
+      outline: none;
+      border-color: #B8945A;
+    }
+  }
+
+  .iq-sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .iq-topic-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-size: 13px;
+      color: $rs-text;
+      text-decoration: none;
+      font-weight: 400;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+
+      &:hover {
+        background: $rs-surface-soft;
+        color: #B8945A;
+      }
+
+      &.active {
+        background: #F4EFE6; // Muted sand accent
+        color: #854F0B;
+        font-weight: 500;
+
+        .badge {
+          background: #854F0B;
+          color: #ffffff;
+        }
+      }
+
+      .badge {
+        font-size: 11px;
+        background: $rs-surface-soft;
+        color: $rs-text-muted;
+        padding: 2px 6px;
+        border-radius: 10px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+// ── Main Workspace Content ───────────────────────────────────────────────
+
+.iq-main-content {
+  padding: 1.5rem 2rem;
+  background: #ffffff;
+}
+
+.iq-content-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $rs-border;
+
+  .iq-difficulty-pills {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .pill {
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      border: 1px solid $rs-border;
+      background: #ffffff;
+      color: $rs-text-muted;
+      cursor: pointer;
+      transition: all 0.15s;
+
+      &:hover {
+        border-color: #B8945A;
+        color: #B8945A;
+      }
+
+      &.active {
+        border-color: #B8945A;
+        background: #B8945A;
+        color: #ffffff;
+        font-weight: 600;
+      }
+    }
+
+    .count-text {
+      margin-left: 12px;
+      font-size: 13px;
+      color: $rs-text-muted;
+    }
+  }
+
+  .iq-sort-wrapper {
+    .iq-sort-select {
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid $rs-border;
+      font-size: 13px;
+      background: #ffffff;
+      color: $rs-text;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+        border-color: #B8945A;
+      }
+    }
+  }
+}
+
+// ── Data Table Structure & Badges ─────────────────────────────────────────
+
+.iq-table-container {
+  width: 100%;
+
+  .iq-table-header, .iq-table-row {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1.2fr 1.6fr 0.6fr; // Adaptive layout column fractions
+    gap: 16px;
+    align-items: center;
+  }
+
+  .iq-table-header {
+    padding: 0.75rem 0.5rem;
+    border-bottom: 2px solid $rs-border;
+    font-size: 11px;
+    font-weight: 600;
+    color: lighten($rs-text-muted, 15%);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .iq-row-wrapper {
+    border-bottom: 1px solid $rs-border;
+    transition: background 0.15s;
+
+    &:hover {
+      background: scale-color($rs-surface-soft, $lightness: 40%);
+    }
+  }
+
+  .iq-table-row {
+    padding: 1rem 0.5rem;
+    cursor: pointer;
+
+    .cell-question {
+      font-size: 14px;
+      font-weight: 500;
+      color: $rs-text;
+      line-height: 1.45;
+      display: flex;
+      align-items: flex-start;
+
+      .status-check {
+        color: #3B6D11;
+        margin-right: 6px;
+        font-weight: bold;
+      }
+    }
+
+    .cell-difficulty, .cell-concept, .cell-companies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .cell-lesson {
+      text-align: center;
+      .icon-book {
+        color: $rs-text-muted;
+        text-decoration: none;
+        font-size: 14px;
+
+        &:hover {
+          color: #B8945A;
+        }
+      }
+    }
+  }
+
+  .iq-row-expanded-panel {
+    padding: 0.5rem 1rem 1.25rem 1rem;
+    border-top: 1px dashed dashed scale-color($rs-border, $lightness: 20%);
+    background: scale-color($rs-surface-soft, $lightness: 60%);
+
+    .iq-disclosure {
+      margin-bottom: 8px;
+      border-radius: 6px;
+      overflow: hidden;
+      border: none;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      summary {
+        padding: 8px 14px;
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+        user-select: none;
+        list-style: none;
+
+        &::-webkit-details-marker { display: none; }
+        &::marker { display: none; }
+      }
+
+      .iq-disclosure-body {
+        padding: 12px 14px;
+        font-size: 14px;
+        line-height: 1.7;
+      }
+    }
+
+    .iq-hint {
+      summary { background: #FAEEDA; color: #854F0B; }
+      .iq-disclosure-body { background: #fdf6ec; color: #5a3800; }
+    }
+
+    .iq-solution {
+      summary { background: #EEEDFE; color: #3C3489; }
+      .iq-disclosure-body { background: #f5f4fe; color: #26215c; }
+    }
+  }
+}
+
+.iq-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+.iq-diff-easy   { background: #eaf3de; color: #3B6D11; }
+.iq-diff-medium { background: #FAEEDA; color: #854F0B; }
+.iq-diff-hard   { background: #FCEBEB; color: #A32D2D; }
+.iq-company     { background: $rs-surface-soft; color: $rs-text-muted; border: 1px solid $rs-border; }
+.iq-concept     { background: #EEEDFE; color: #3C3489; }

@@ -1,0 +1,50 @@
+{{- $id := .Get "id" -}}
+{{- $q := dict -}}
+
+{{- range site.Data.interview -}}
+  {{- if reflect.IsSlice . -}}
+    {{- range . -}}
+      {{- if eq .id $id -}}{{- $q = . -}}{{- end -}}
+    {{- end -}}
+  {{- else if .questions -}}
+    {{- range .questions -}}
+      {{- if eq .id $id -}}{{- $q = . -}}{{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if $q.id -}}
+<div class="iq-card" id="{{ $q.id }}">
+
+  <div class="iq-tags">
+    <span class="iq-badge iq-diff-{{ lower $q.difficulty }}">{{ $q.difficulty }}</span>
+    {{- range $q.companies -}}
+    <span class="iq-badge iq-company">{{ . }}</span>
+    {{- end -}}
+    <span class="iq-badge iq-concept">{{ $q.concept }}</span>
+  </div>
+
+  <p class="iq-question">{{ $q.question }}</p>
+
+  {{- if $q.hint -}}
+  <details class="iq-disclosure iq-hint">
+    <summary>▶ View Hint</summary>
+    <div class="iq-disclosure-body">{{ $q.hint }}</div>
+  </details>
+  {{- end -}}
+
+  {{- if $q.solution -}}
+  <details class="iq-disclosure iq-solution">
+    <summary>👁 Reveal Full Solution</summary>
+    <div class="iq-disclosure-body">{{ $q.solution | markdownify }}</div>
+  </details>
+  {{- end -}}
+
+  {{- if $q.linked_lesson -}}
+  <div class="iq-linked">
+    <a href="{{ $q.linked_lesson }}">📖 Study the concept →</a>
+  </div>
+  {{- end -}}
+
+</div>
+{{- end -}}
