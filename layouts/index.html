@@ -7,66 +7,40 @@
 
 {{- $courses := slice
   (dict
-    "eyebrow" "LLM"
+    "eyebrow" "Large Language Model (LLM)"
     "title" "Natural Language Processing"
-    "description" "Study language representation, sequence models, attention mechanism, transformer architecture and the foundations that lead into modern LLM systems."
+    "description" "Study tokenization, text embedding, sequence models, attention mechanism, transformer, and LLM."
     "href" (cond $nlpPage $nlpPage.RelPermalink (relURL "/docs/"))
     "accent" "nlp"
+    "icon" "fa-solid fa-language"
   )
   (dict
     "eyebrow" "Neural Networks"
-    "title" "Deep Learning"
-    "description" "Learn neural networks, backpropagation, optimization, activation functions, and the core concepts behind modern deep learning systems."
+    "title" "Deep Learning Fundamentals"
+    "description" "Learn neural networks, backpropagation, optimization, activation functions, and other core concepts in deep learning."
     "href" (cond $dlPage $dlPage.RelPermalink (relURL "/docs/"))
     "accent" "dl"
+    "icon" "fa-solid fa-brain"
   )
   (dict
-    "eyebrow" "Classical AI"
-    "title" "Machine Learning"
+    "eyebrow" "Classical ML"
+    "title" "Machine Learning Mastery"
     "description" "Build a strong grasp of supervised learning, unsupervised learning, feature engineering, and practical machine learning concepts."
     "href" (cond $mlPage $mlPage.RelPermalink (relURL "/docs/"))
     "accent" "ml"
+    "icon" "fa-solid fa-gear"
   )
   (dict
-    "eyebrow" "Foundations"
-    "title" "Maths"
+    "eyebrow" "Maths Foundations"
+    "title" "Mathematics For AI & ML"
     "description" "Strengthen the linear algebra, probability, statistics, and calculus required to understand AI and ML in depth."
     "href" (cond $mathPage $mathPage.RelPermalink (relURL "/docs/"))
     "accent" "maths"
+    "icon" "fa-calculator"
   )
--}}
+}}
 
-{{- $topics := slice
-  (dict
-    "step" "01"
-    "title" "Maths Foundation Course"
-    "description" "Build the fundamentals first with probability, statistics, linear algebra, and calculus."
-    "href" (cond $mathPage $mathPage.RelPermalink (relURL "/docs/"))
-    "accent" "maths"
-  )
-  (dict
-    "step" "02"
-    "title" "Machine Learning Course"
-    "description" "Move into supervised, unsupervised, and practical machine learning concepts."
-    "href" (cond $mlPage $mlPage.RelPermalink (relURL "/docs/"))
-    "accent" "ml"
-  )
-  (dict
-    "step" "03"
-    "title" "Deep Learning Course"
-    "description" "Learn neural networks, back propagation, and other deep learning fundamental concepts."
-    "href" (cond $dlPage $dlPage.RelPermalink (relURL "/docs/"))
-    "accent" "dl"
-  )
-  (dict
-    "step" "04"
-    "title" "Natural Language Processing Course"
-    "description" "Master the working of language models, recurrent neural networks, attention mechanisms, and transformers."
-    "href" (cond $nlpPage $nlpPage.RelPermalink (relURL "/docs/"))
-    "accent" "nlp"
-  )
--}}
-
+<!-- Hero Section -->
 <section class="rs-hero">
   <div class="rs-hero__inner">
     <p class="rs-eyebrow">Free · Open Source · Rigorous</p>
@@ -80,9 +54,9 @@
     </p>
     <div class="rs-cta-row">
       <a href="/docs/" class="rs-btn-primary">Start Learning — Free</a>
-        <a class="rs-btn-ghost" href="https://www.youtube.com/@RoboSathi/courses" target="_blank" rel="noopener">
-    Watch Courses <i class="fab fa-youtube ms-2" style="color: #ff0000;"></i>
-  </a>
+      <a class="rs-btn-ghost" href="https://www.youtube.com/@RoboSathi/courses" target="_blank" rel="noopener">
+        Watch Courses <i class="fab fa-youtube ms-2" style="color: #ff0000;"></i>
+      </a>
     </div>
 
     <div class="rs-stats">
@@ -106,47 +80,34 @@
   </div>
 </section>
 
+<!-- Modern Grid Courses Section -->
 <section class="rs-courses-section">
   <div class="container rs-simple-shell">
+    <!-- Centered Heading Block with Sub-description Context -->
     <div class="rs-course-heading">
       <h1>Courses</h1>
-      <p>Explore our structured pathways designed to take you from foundational mathematics to state-of-the-art AI architectures.</p>
+      <p>Structured courses designed to take you from foundational mathematics to state-of-the-art AI architectures.</p>
     </div>
 
-    <div class="rs-course-list">
+    <div class="rs-course-grid">
       {{ range $courses }}
-      <a class="rs-course-row rs-course-row--{{ .accent }}" href="{{ .href }}">
-        <div class="rs-course-row__meta">
-          <span class="rs-course-row__eyebrow">{{ .eyebrow }}</span>
-          <h2>{{ .title }}</h2>
+      <a class="rs-udemy-card" href="{{ .href }}">
+        <!-- Thumbnail Graphic Box with Golden Context Accents -->
+        <div class="rs-card-thumb">
+          <span class="rs-thumb-eyebrow">{{ .eyebrow }}</span>
+          <div class="rs-thumb-graphic-wrapper">
+            <i class="fas {{ .icon }} rs-thumb-icon"></i>
+          </div>
         </div>
-        <p class="rs-course-row__description">{{ .description }}</p>
-        <span class="rs-course-row__cta">
-          Start Learning <i class="fas fa-arrow-right" aria-hidden="true"></i>
-        </span>
+
+        <!-- Meta Content Details Area -->
+        <div class="rs-card-content">
+          <h3 class="rs-card-title">{{ .title }}</h3>
+          <p class="rs-card-brief">{{ .description }}</p>
+        </div>
       </a>
       {{ end }}
     </div>
   </div>
 </section>
-
-<!--<section class="rs-simple-section">-->
-<!--  <div class="container rs-simple-shell">-->
-<!--    <div class="rs-simple-heading">-->
-<!--      <h2>Roadmap</h2>-->
-<!--      <p>Start with the fundamentals, then move forward in a logical sequence.</p>-->
-<!--    </div>-->
-
-<!--    <div class="rs-roadmap-grid">-->
-<!--      {{ range $topics }}-->
-<!--      <a class="rs-roadmap-card rs-roadmap-card&#45;&#45;{{ .accent }}" href="{{ .href }}">-->
-<!--        <span class="rs-roadmap-card__step">{{ .step }}</span>-->
-<!--        <h3 class="rs-roadmap-card__title">{{ .title }}</h3>-->
-<!--        <p class="rs-roadmap-card__description">{{ .description }}</p>-->
-<!--        <span class="rs-roadmap-card__cta">View Path →</span>-->
-<!--      </a>-->
-<!--      {{ end }}-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
 {{- end }}

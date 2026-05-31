@@ -724,132 +724,6 @@ body.td-home .td-main {
   max-width: 1280px;
 }
 
-.rs-courses-section {
-  background: #ffffff;
-  padding: 0rem 0 0.5rem;
-}
-
-.rs-course-heading {
-  margin: 0 auto 1.5rem;
-  max-width: 780px;
-  text-align: center;
-}
-
-.rs-course-heading h1 {
-  color: #0f172a;
-  font-size: clamp(2.3rem, 4vw, 3.8rem);
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  line-height: 1.02;
-  margin: 0 0 0.6rem;
-}
-
-.rs-course-heading p {
-  color: #5b667a;
-  font-size: 1.04rem;
-  line-height: 1.72;
-  margin: 0 auto;
-  max-width: 46rem;
-}
-
-.rs-course-list {
-  display: grid;
-  gap: 0.95rem;
-}
-
-.rs-course-row {
-  display: grid;
-  grid-template-columns: minmax(220px, 0.9fr) minmax(0, 1.8fr) auto;
-  gap: 1.25rem;
-  align-items: center;
-  background: #ffffff;
-  border: 1px solid #e7ecf3;
-  border-radius: 1.5rem;
-  color: inherit;
-  padding: 1.25rem 1.35rem;
-  text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.rs-course-row:hover {
-  color: inherit;
-  text-decoration: none;
-  transform: translateY(-1px);
-  box-shadow: 0 14px 26px rgba(15, 23, 42, 0.04);
-}
-
-.rs-course-row__meta h2 {
-  color: #0f172a;
-  font-size: 1.5rem;
-  margin: 0.2rem 0 0;
-}
-
-.rs-course-row__eyebrow {
-  display: inline-block;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.rs-course-row__description {
-  color: #5b667a;
-  font-size: 1rem;
-  line-height: 1.72;
-  margin: 0;
-}
-
-.rs-course-row__cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.65rem;
-  color: #0f172a;
-  font-size: 0.96rem;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-// Gemini suggested
-/* ── Course rows: unified gold-tan family ───────── */
-
-/* NLP - Warm Amber Gold Accent */
-.rs-course-row--nlp {
-  background: linear-gradient(90deg, #fffbf2 0%, #fff 28%);
-  border-color: #ebdcb9;
-}
-.rs-course-row--nlp .rs-course-row__eyebrow {
-  color: #b58925;
-}
-
-/* DL - Rich Ochre Gold Accent */
-.rs-course-row--dl {
-  background: linear-gradient(90deg, #fffaf0 0%, #fff 28%);
-  border-color: #e6d3a8;
-}
-.rs-course-row--dl .rs-course-row__eyebrow {
-  color: #a87f1e;
-}
-
-/* ML - Soft Champagne Gold Accent */
-.rs-course-row--ml {
-  background: linear-gradient(90deg, #fffcf5 0%, #fff 28%);
-  border-color: #eedfb8;
-}
-.rs-course-row--ml .rs-course-row__eyebrow {
-  color: #bd922b;
-}
-
-/* MATHS - Deep Earthy Tan Accent */
-.rs-course-row--maths {
-  background: linear-gradient(90deg, #fff9ee 0%, #fff 28%);
-  border-color: #e3ce9c;
-}
-.rs-course-row--maths .rs-course-row__eyebrow {
-  color: #9e7517;
-}
-
-// Gemini changes end
-
 .rs-home-actions {
   display: flex;
   flex-wrap: wrap;
@@ -1889,4 +1763,160 @@ $btn-border-radius:      2px;
       margin-left: auto !important;
     }
   }
+}
+
+// Change course layout on home page
+// ──  MONOCHROMATIC GOLDEN CARD GRID SYSTEM ─────────────────────────
+.rs-courses-section {
+  background: #ffffff;
+  padding: 0.5rem 0 1rem;
+}
+
+// Center-aligned title cluster matching your hero footprint
+.rs-course-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+
+  h1 {
+    color: #1c1d1f;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.6rem;
+  }
+
+  p {
+    color: #5b667a;
+    font-size: 1.1rem;
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+}
+
+// Complete 4-Column Auto Grid Matrix Track
+.rs-course-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+// Individual Structured Content Block Card Element
+.rs-udemy-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  color: #1c1d1f !important;
+  text-decoration: none !important;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:hover {
+    transform: translateY(-4px);
+
+    // Shifts title to exact golden link variable color on focus/hover
+    .rs-card-title {
+      color: #9a7340 !important;
+    }
+
+    // Smooth image area elevation feedback
+    .rs-card-thumb {
+      border-color: #9a7340;
+      background: linear-gradient(135deg, #fdfaf3 0%, #f5ecd8 100%);
+    }
+
+    .rs-thumb-icon {
+      transform: scale(1.08);
+      color: #9a7340;
+      opacity: 0.85;
+    }
+  }
+}
+
+// Streamlined Pure Golden Thumbnail Banners
+.rs-card-thumb {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eef0f4;
+  border-radius: 8px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #fefdfa 0%, #f9f5eb 100%);
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.rs-thumb-eyebrow {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9a7340;
+  z-index: 2;
+}
+
+.rs-thumb-graphic-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.rs-thumb-icon {
+  font-size: 2.3rem;
+  color: #bfa37a;
+  opacity: 0.65;
+  transition: transform 0.25s ease, color 0.25s ease, opacity 0.25s ease;
+}
+
+// Inner Meta Content Wrappers
+.rs-card-content {
+  padding: 0.85rem 0 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.rs-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #1c1d1f;
+  margin: 0 0 0.4rem 0;
+  transition: color 0.15s ease;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 2.7rem; // Protects layout rows from uneven title wraps
+}
+
+.rs-card-brief {
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: #5b667a;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// ── RESPONSIVE COMPACT MEDIA BREAKPOINTS ──────────────────────────────────
+@media (max-width: 1140px) {
+  .rs-course-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+}
+@media (max-width: 640px) {
+  .rs-course-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .rs-card-thumb { height: 150px; }
+  .rs-course-heading h1 { font-size: 2rem; }
 }
