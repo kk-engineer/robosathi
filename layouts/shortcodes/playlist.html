@@ -1,3 +1,13 @@
 {{- $_hugo_config := `{ "version": 1 }` -}}
+{{- $playlistUrl := .Get 0 -}}
 {{- $playlistTitle := .Get 1 | default "Complete Course" -}}
-<div class="video-link-container"><a href="{{ .Get 0 }}" target="_blank" rel="noopener" class="video-btn video-btn-playlist"><span class="video-btn__icon" aria-hidden="true"><i class="fab fa-youtube"></i></span><span class="video-btn__content"><span class="video-btn__eyebrow">Playlist</span><span class="video-btn__title">{{- $playlistTitle -}}</span></span></a></div>
+
+<div class="video-link-container">
+  <a href="{{ $playlistUrl }}" target="_blank" rel="noopener" class="video-btn video-btn-playlist" aria-label="View {{ $playlistTitle }} Playlist">
+    <span class="video-btn__icon" aria-hidden="true"><i class="fab fa-youtube"></i></span>
+    <span class="video-btn__content">
+      <span class="video-btn__eyebrow">Playlist</span>
+      <span class="video-btn__title">{{ $playlistTitle }}</span>
+    </span>
+  </a>
+</div>

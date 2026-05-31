@@ -25,137 +25,6 @@ $rs-surface: #ffffff;
 $rs-surface-soft: #f7f9fc;
 $rs-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
 
-html {
-  font-size: 16px;
-}
-
-body {
-  color: $rs-text;
-  font-family: $font-family-sans-serif;
-  font-size: 1.07rem;
-  line-height: 1.68;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
-h1, h2, h3, h4, h5, h6,
-.td-content h1, .td-content h2, .td-content h3, .td-content h4, .td-content h5, .td-content h6 {
-  color: #0f172a;
-  font-family: $font-family-sans-serif;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-}
-
-.td-content {
-  color: $rs-text;
-  font-size: 1.05rem;
-}
-
-.td-content p,
-.td-content li,
-.td-content dt,
-.td-content dd,
-.td-content blockquote {
-  color: $rs-text;
-}
-
-.td-content p,
-.td-content li {
-  line-height: 1.72;
-}
-
-.td-content small,
-.td-content figcaption,
-.td-page-meta,
-.td-breadcrumb {
-  color: $rs-text-muted;
-}
-
-code,
-pre,
-.highlight code {
-  font-family: $font-family-monospace;
-}
-
-.td-content pre,
-.td-content .highlight pre {
-  border: 1px solid $rs-border;
-  border-radius: 14px;
-  box-shadow: none;
-}
-
-.td-content blockquote {
-  border-left: 2px solid #cfd7e6;
-  color: $rs-text-muted;
-}
-
-.td-content table {
-  border-color: $rs-border;
-}
-
-.td-content img {
-  border-radius: 12px;
-}
-
-// ========================================
-// NAVBAR STYLES - Black text on white background
-// ========================================
-
-// Navbar background
-.td-navbar {
-  background-color: #ffffff !important;
-  border-bottom: none !important;
-  box-shadow: none !important;
-
-  // Navbar links (About, Notes)
-  .nav-link {
-    color: #000000 !important;
-    text-shadow: none !important; // Remove shadow
-
-    &:hover,
-    &:focus {
-      color: #1473e6 !important;
-      text-shadow: none !important; // Remove shadow on hover
-    }
-  }
-
-  // Navbar brand/logo text
-  .navbar-brand {
-    color: #000000 !important;
-
-    // // Make logo bigger
-    // img,
-    // svg {
-    //   height: 40px !important; // Increased from default ~30px
-    //   width: auto !important;
-    // }
-  }
-
-  // // Dropdown menu items
-  // .dropdown-menu {
-  //   background-color: #ffffff !important;
-
-  //   .dropdown-item {
-  //     color: #000000 !important;
-
-  //     &:hover {
-  //       background-color: #f8f9fa !important;
-  //       color: #000000 !important;
-  //     }
-  //   }
-  // }
-
-  // Mobile menu toggle
-  // .navbar-toggler {
-  //   border-color: #000000 !important;
-
-  //   .navbar-toggler-icon {
-  //     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-  //   }
-  // }
-}
-
 // ========================================
 // SEARCH BAR STYLES - Dark/visible styling
 // ========================================
@@ -416,7 +285,8 @@ footer {
 
 // Youtube video links
 .video-link-container {
-    margin: 1.25rem 0;
+    margin-top: 0.2rem;
+    margin-bottom: 1rem;
 }
 
 .video-btn {
@@ -483,22 +353,6 @@ footer {
   line-height: 1.35;
 }
 
-.video-btn-playlist .video-btn__icon {
-  background: #eff6ff;
-  color: #2563eb;
-}
-
-.video-btn-playlist {
-  background-color: #f5f9ff;
-  border-color: #d6e5ff;
-}
-
-.video-btn-playlist:hover {
-  background-color: #edf5ff;
-  border-color: #c1d8ff;
-  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.08);
-}
-
 // Keep home/docs feeling open: hide heavy container boundaries.
 .td-main,
 .td-content,
@@ -510,14 +364,6 @@ footer {
   box-shadow: none !important;
   background-color: #ffffff !important;
 }
-
-.td-sidebar .td-sidebar-nav__section-title .td-sidebar-link:hover {
-  color: #1473e6 !important;
-}
-
-.td-content a { color: #B8945A; }
-.td-content a:hover { color: #9a7340; text-decoration: underline; }
-.td-sidebar .td-sidebar-nav__section-title .td-sidebar-link:hover { color: #9a7340 !important; }
 
 .rs-callout {
   --rs-callout-accent: #7db7ff;
@@ -1530,80 +1376,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-.td-content {
-  color: $rs-text;
-  //font-size: 0.975rem;
-  max-width: 740px;             // Perfectly matches standard prompt container widths
-  margin-left: 0rem;
-  margin-right: auto;
-  padding-left: 0;
-
-  // Paragraph Typography & Spacing
-  p {
-    font-family: $font-family-sans-serif;
-    line-height: 1.2;
-    margin-bottom: 0.85rem;     // Reduced gap between successive text paragraphs
-    color: $rs-text;
-  }
-
-  // Lists Styling (Matches the dense structural look in the screenshots)
-  ul, ol {
-    padding-left: 1.25rem;
-    margin-top: 0.25rem;        // Pulls the list closer to its introducing sentence
-    margin-bottom: 0.85rem;
-  }
-
-  li {
-    font-family: $font-family-sans-serif;
-    line-height: 1.1;          // Extra tight line height for bullet points
-    margin-bottom: 0.35rem;     // Drastically reduced gap between separate bullet items
-    color: $rs-text;
-
-    // Direct bold text color override for clean contrast accents
-    strong, b {
-      color: #000000;
-      font-weight: 600;
-    }
-  }
-
-  // High-Density Headings
-  h1, h2, h3, h4, h5, h6 {
-    color: #0f172a;
-    font-family: $font-family-sans-serif;
-    letter-spacing: -0.02em;
-    line-height: 1.2;          // Strict ceiling on heading lines splitting apart
-  }
-
-  h1 {
-    font-size: 1.85rem;
-    font-weight: 700;
-    margin-top: 1.5rem;
-    margin-bottom: 0.95rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-top: 1.65rem;
-    margin-bottom: 0.75rem;
-  }
-
-  h3 {
-    font-size: 1.15rem;
-    font-weight: 600;
-    margin-top: 1.4rem;
-    margin-bottom: 0.5rem;
-  }
-}
-
-// Keep layout bounds steady
-.rs-figure, .rs-callout {
-  max-width: 100%;
-}
-
-// Claude suggested changes
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=DM+Mono:wght@400;500&display=swap');
-
 // ── Typography ────────────────────────────────────────────
 $font-family-sans-serif: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 $font-family-monospace:  'DM Mono', 'Fira Code', monospace;
@@ -1630,31 +1402,24 @@ $link-decoration:        none;
 $link-hover-decoration:  underline;
 $btn-border-radius:      2px;
 
-/* ── Navbar: white, bordered, not translucent ────────── */
-.td-navbar {
-  background: #fff !important;
-  border-bottom: 1px solid #e4e4e0;
-  box-shadow: none !important;
-}
-.td-navbar .navbar-brand__name {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: #0a0a0a;
-}
+/* ── Top left hyperlinks visible ────────── */
 .td-navbar .nav-link {
   color: #2c2c2c !important;
   font-weight: 500;
   font-size: 0.875rem;
   letter-spacing: 0.01em;
 }
-.td-navbar .nav-link:hover { color: #0a0a0a !important; }
 
-/* ── Remove translucency on cover ────────────────────── */
-.td-navbar.navbar-bg-onscroll {
-  background: rgba(255,255,255,0.97) !important;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+/* RoboSathi brand text - top right */
+.td-navbar .navbar-brand__name {
+  color: #0a0a0a !important;
+  opacity: 1 !important;
+  font-size: 0.875rem;
+}
+
+.td-navbar .navbar-brand:hover,
+.td-navbar .navbar-brand:focus {
+  color: #B8945A !important;
 }
 
 /* ── Hero ──────────────────────────────────────────────── */
@@ -1760,38 +1525,6 @@ $btn-border-radius:      2px;
   .rs-stat:nth-child(4) { border-top: 1px solid #e4e4e0; }
 }
 
-/* ── Sidebar Refinement ────────────────────────────────── */
-.td-sidebar-nav {
-  font-size: 0.8125rem;  /* 13px */
-  padding: 1.5rem 0;
-}
-/* Section-level (L1) — bold, uppercase, spaced */
-.td-sidebar-nav .td-sidebar-nav__section > li > a,
-.td-sidebar-nav .td-sidebar-nav__section > li > span {
-  font-weight: 600;
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #0a0a0a;
-  padding: 0.5rem 1.25rem;
-  margin-top: 0.5rem;
-}
-/* Active state — gold underline, not blue background */
-.td-sidebar-nav .active > a {
-  color: #0a0a0a !important;
-  font-weight: 600;
-  background: transparent !important;
-  border-left: 2px solid #B8945A;
-  padding-left: calc(1.25rem - 2px);
-}
-/* Child links — quieter */
-.td-sidebar-nav ul ul a {
-  color: #5a5a5a;
-  font-weight: 400;
-  padding: 0.2rem 1.25rem 0.2rem 2rem;
-}
-.td-sidebar-nav ul ul a:hover { color: #0a0a0a; text-decoration: none; }
-
 /* ── Content Page Typography ───────────────────────────── */
 .td-content {
   font-size: 1rem;
@@ -1824,7 +1557,16 @@ $btn-border-radius:      2px;
   color: #5a5a5a;
   margin-top: 1.75rem;
 }
-.td-content p { margin-bottom: 1.1rem; }
+.td-content p {
+    margin-bottom: 1.1rem;
+    line-height: 1.25;
+}
+
+.td-content li {
+  line-height: 1.05;
+  margin-bottom: 0.2rem;
+}
+
 /* Code blocks — improved */
 .td-content pre {
   background: #f4f3ef;
@@ -1886,10 +1628,10 @@ $btn-border-radius:      2px;
 
 /* Section title (L1 headings like "COURSES") */
 .td-sidebar-nav .td-sidebar-nav__section-title a {
-  font-size: 0.72rem !important;
-  font-weight: 700 !important;
+  font-size: 0.84rem !important;
+  //font-weight: 700 !important;
   letter-spacing: 0.1em !important;
-  text-transform: uppercase !important;
+  //text-transform: uppercase !important;
   color: #5a5a5a !important;
 }
 
