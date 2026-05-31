@@ -1768,9 +1768,11 @@ $btn-border-radius:      2px;
 
 // Change course layout on home page
 // ──  MONOCHROMATIC GOLDEN CARD GRID SYSTEM ─────────────────────────
-.rs-courses-section {
+.rs-courses-section .container {
   background: #ffffff;
   padding: 0.5rem 0 1rem;
+  max-width: 1600px !important;
+  width: 80% !important;
 }
 
 // Center-aligned title cluster matching your hero footprint
@@ -1854,14 +1856,14 @@ $btn-border-radius:      2px;
 
 .rs-thumb-eyebrow {
   position: absolute;
-  top: 12px;
-  left: 14px;
-  font-size: 0.65rem;
-  font-weight: 800;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.82rem;
+  font-weight: 700;
   letter-spacing: 0.08em;
-  //text-transform: uppercase;
   color: #9a7340;
-  z-index: 2;
+  white-space: nowrap;
 }
 
 .rs-thumb-graphic-wrapper {
@@ -1870,6 +1872,7 @@ $btn-border-radius:      2px;
   justify-content: center;
   width: 100%;
   height: 100%;
+  padding-top: 20px; // Pushes the icon downwards a bit
 }
 
 .rs-thumb-icon {
@@ -1885,6 +1888,8 @@ $btn-border-radius:      2px;
   display: flex;
   flex-direction: column;
   flex: 1;
+  align-items: center;
+  text-align: center;
 }
 
 .rs-card-title {
@@ -1898,7 +1903,7 @@ $btn-border-radius:      2px;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  height: 2.7rem; // Protects layout rows from uneven title wraps
+  height: 1.7rem; // Protects layout rows from uneven title wraps
 }
 
 .rs-card-brief {
