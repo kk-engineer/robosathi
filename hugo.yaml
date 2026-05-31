@@ -51,6 +51,7 @@ languages:
     title: RoboSathi
     params:
       description: RoboSathi - AI for Good
+      googleFonts: []
 
 markup:
   goldmark:
