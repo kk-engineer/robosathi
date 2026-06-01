@@ -1,302 +1,458 @@
-// assets/scss/_interview.scss
+// RoboSathi Interview Prep — white + #B8945A gold theme
 
-// Theme variable fallbacks to prevent pipeline compilation errors
-$rs-background: #fafafa !default;
-$rs-surface: #ffffff !default;
-$rs-surface-soft: #f8f9fa !default;
-$rs-border: #e9ecef !default;
-$rs-text: #212529 !default;
-$rs-text-muted: #6c757d !default;
+// ── Page layout ──────────────────────────────────────────────────────────────
 
-.iq-dashboard-layout {
+.iq-layout {
   display: grid;
-  grid-template-columns: 280px 1fr; // Left fixed column sidebar, right flexible workspace
-  min-height: 100vh;
-  background: $rs-background;
+  grid-template-columns: 220px 1fr;
+  gap: 0;
+  align-items: start;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
 }
 
-// ── Left Sidebar Styles ──────────────────────────────────────────────────
+// ── Left sidebar ──────────────────────────────────────────────────────────────
 
-.iq-sidebar-left {
-  background: $rs-surface;
-  border-right: 1px solid $rs-border;
-  padding: 1.5rem 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.75rem;
+.iq-sidebar {
   position: sticky;
-  top: 0;
-  height: 100vh;
+  top: 80px;
+  padding-right: 1.5rem;
+  max-height: calc(100vh - 100px);
   overflow-y: auto;
+}
 
-  .iq-sidebar-block {
-    .iq-sidebar-title {
-      font-size: 11px;
-      font-weight: 700;
-      color: lighten($rs-text-muted, 10%);
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      margin-bottom: 0.75rem;
-    }
+.iq-sidebar-section {
+  margin-bottom: 2rem;
+}
+
+.iq-sidebar-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: $rs-text-muted;
+  margin-bottom: .75rem;
+}
+
+.iq-search {
+  width: 100%;
+  padding: 4px 10px;
+  border: 1px solid $rs-border;
+  border-radius: 8px;
+  font-size: 14px;
+  color: $rs-text;
+  background: #fff;
+  outline: none;
+  transition: border-color .15s;
+
+  &:focus {
+    border-color: #B8945A;
+    box-shadow: 0 0 0 3px rgba(#B8945A, .1);
   }
 
-  .iq-search-input {
-    width: 100%;
-    padding: 8px 12px;
-    border-radius: 6px;
-    border: 1px solid $rs-border;
-    background: $rs-background;
-    font-size: 13px;
+  &::placeholder { color: $rs-text-muted; }
+}
+
+.iq-concept-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 10px;
+  border-radius: 7px;
+  font-size: 14px;
+  color: $rs-text-muted;
+  text-decoration: none;
+  transition: background .1s, color .1s;
+  margin-bottom: 1px;
+
+  &:hover {
+    background: #f7f3ee;
     color: $rs-text;
-
-    &:focus {
-      outline: none;
-      border-color: #B8945A;
-    }
+    text-decoration: none;
   }
 
-  .iq-sidebar-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+  &.active {
+    background: rgba(#B8945A, .1);
+    color: #7a5c28;
+    font-weight: 500;
 
-    .iq-topic-link {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 8px 10px;
-      border-radius: 6px;
-      font-size: 13px;
-      color: $rs-text;
-      text-decoration: none;
-      font-weight: 400;
-      cursor: pointer;
-      transition: background 0.15s, color 0.15s;
-
-      &:hover {
-        background: $rs-surface-soft;
-        color: #B8945A;
-      }
-
-      &.active {
-        background: #F4EFE6; // Muted sand accent
-        color: #854F0B;
-        font-weight: 500;
-
-        .badge {
-          background: #854F0B;
-          color: #ffffff;
-        }
-      }
-
-      .badge {
-        font-size: 11px;
-        background: $rs-surface-soft;
-        color: $rs-text-muted;
-        padding: 2px 6px;
-        border-radius: 10px;
-        font-weight: 500;
-      }
+    .iq-concept-count {
+      background: rgba(#B8945A, .18);
+      color: #7a5c28;
     }
   }
 }
 
-// ── Main Workspace Content ───────────────────────────────────────────────
-
-.iq-main-content {
-  padding: 1.5rem 2rem;
-  background: #ffffff;
+.iq-concept-count {
+  font-size: 11px;
+  background: #f0f2f5;
+  color: $rs-text-muted;
+  border-radius: 10px;
+  padding: 1px 7px;
+  flex-shrink: 0;
 }
 
-.iq-content-header {
+// ── Toolbar ───────────────────────────────────────────────────────────────────
+
+.iq-toolbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid $rs-border;
+}
 
-  .iq-difficulty-pills {
+.iq-toolbar-count {
+  font-size: 12px;
+  color: $rs-text-muted;
+  strong { color: $rs-text; font-weight: 600; }
+}
+
+.iq-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.iq-per-page-label {
+  font-size: 12px;
+  color: $rs-text-muted;
+}
+
+.iq-select {
+  padding: 5px 10px;
+  border: 1px solid $rs-border;
+  border-radius: 7px;
+  font-size: 13px;
+  color: $rs-text;
+  background: #fff;
+  cursor: pointer;
+  outline: none;
+
+  &:focus { border-color: #B8945A; }
+}
+
+// ── Question cards — three parts ─────────────────────────────────────────────
+
+.iq-card {
+  background: #fff;
+  border: 1px solid $rs-border;
+  border-radius: 12px;
+  padding: 1rem 0.5rem 0.5rem 0.5rem;
+  margin-bottom: 1rem;
+  transition: border-color .15s, box-shadow .15s;
+
+  &:hover {
+    border-color: rgba(#B8945A, .35);
+    box-shadow: 0 2px 16px rgba(#B8945A, .06);
+  }
+}
+
+// Part 1: Question text
+.iq-card-question {
+  font-size: 19px;
+  font-weight: 900;
+  line-height: 1.6;
+  color: $rs-text;
+  margin-bottom: 1.25rem;
+}
+
+// Part 2: Reveal Answer toggle
+.iq-details {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+
+  summary {
     display: flex;
     align-items: center;
-    gap: 8px;
-
-    .pill {
-      padding: 6px 14px;
-      border-radius: 6px;
-      font-size: 13px;
-      font-weight: 500;
-      border: 1px solid $rs-border;
-      background: #ffffff;
-      color: $rs-text-muted;
-      cursor: pointer;
-      transition: all 0.15s;
-
-      &:hover {
-        border-color: #B8945A;
-        color: #B8945A;
-      }
-
-      &.active {
-        border-color: #B8945A;
-        background: #B8945A;
-        color: #ffffff;
-        font-weight: 600;
-      }
-    }
-
-    .count-text {
-      margin-left: 12px;
-      font-size: 13px;
-      color: $rs-text-muted;
-    }
-  }
-
-  .iq-sort-wrapper {
-    .iq-sort-select {
-      padding: 6px 12px;
-      border-radius: 6px;
-      border: 1px solid $rs-border;
-      font-size: 13px;
-      background: #ffffff;
-      color: $rs-text;
-      cursor: pointer;
-
-      &:focus {
-        outline: none;
-        border-color: #B8945A;
-      }
-    }
-  }
-}
-
-// ── Data Table Structure & Badges ─────────────────────────────────────────
-
-.iq-table-container {
-  width: 100%;
-
-  .iq-table-header, .iq-table-row {
-    display: grid;
-    grid-template-columns: 3fr 1fr 1.2fr 1.6fr 0.6fr; // Adaptive layout column fractions
-    gap: 16px;
-    align-items: center;
-  }
-
-  .iq-table-header {
-    padding: 0.75rem 0.5rem;
-    border-bottom: 2px solid $rs-border;
-    font-size: 11px;
-    font-weight: 600;
-    color: lighten($rs-text-muted, 15%);
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-
-  .iq-row-wrapper {
-    border-bottom: 1px solid $rs-border;
-    transition: background 0.15s;
-
-    &:hover {
-      background: scale-color($rs-surface-soft, $lightness: 40%);
-    }
-  }
-
-  .iq-table-row {
-    padding: 1rem 0.5rem;
+    gap: 10px;
+    padding: 11px 18px;
+    background: #f6fcf8;
+    border: 1px solid #B8945A;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #B8945A;
     cursor: pointer;
+    list-style: none;
+    user-select: none;
+    transition: background .1s;
 
-    .cell-question {
+    &::-webkit-details-marker { display: none; }
+    &::marker { display: none; }
+
+    &:hover { background: #f0ede8; }
+  }
+
+  // Rotate arrow when open
+  &[open] summary .iq-details-arrow {
+    display: inline-block;
+    transform: rotate(90deg);
+  }
+
+  .iq-details-arrow {
+    font-size: 11px;
+    transition: transform .2s;
+  }
+    // Answer label
+  .iq-details-label {
+    font-size: 12px;
+  }
+
+  .iq-details-body {
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    border: 1px solid #B8945A;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    background: #faf9ff;
+    font-size: 16px;
+    line-height: 0.5;
+    color: $rs-text;
+
+    // Markdown rendered output
+     p {
+        margin-bottom: 1.1rem;
+        line-height: 1.25;
+    }
+
+    li {
+      line-height: 1.05;
+      margin-bottom: 0.2rem;
+    }
+
+    ul, ol {
+      padding-left: 1.4rem;
+      margin-bottom: .85rem;
+      li { margin-bottom: .3rem; }
+    }
+
+    // Inline code
+    code {
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
       font-size: 14px;
-      font-weight: 500;
-      color: $rs-text;
-      line-height: 1.45;
-      display: flex;
-      align-items: flex-start;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: rgba(#B8945A, .08);
+      color: #7a5c28;
+    }
 
-      .status-check {
-        color: #3B6D11;
-        margin-right: 6px;
-        font-weight: bold;
+    // Code blocks
+    pre {
+      background: #f4f3f8;
+      border: 1px solid #B8945A;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+      font-size: 13.5px;
+      line-height: 1.65;
+
+      code {
+        background: none;
+        padding: 0;
+        color: #2d2557;
       }
     }
 
-    .cell-difficulty, .cell-concept, .cell-companies {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 4px;
-    }
+    // Tables from markdownify
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 14px;
 
-    .cell-lesson {
-      text-align: center;
-      .icon-book {
-        color: $rs-text-muted;
-        text-decoration: none;
-        font-size: 14px;
-
-        &:hover {
-          color: #B8945A;
-        }
-      }
-    }
-  }
-
-  .iq-row-expanded-panel {
-    padding: 0.5rem 1rem 1.25rem 1rem;
-    border-top: 1px dashed dashed scale-color($rs-border, $lightness: 20%);
-    background: scale-color($rs-surface-soft, $lightness: 60%);
-
-    .iq-disclosure {
-      margin-bottom: 8px;
-      border-radius: 6px;
-      overflow: hidden;
-      border: none;
-
-      &:last-child {
-        margin-bottom: 0;
+      th {
+        background: #EEEDFE;
+        color: #3C3489;
+        font-weight: 600;
+        padding: 8px 12px;
+        text-align: left;
+        border: 1px solid #B8945A;
       }
 
-      summary {
-        padding: 8px 14px;
-        font-size: 13px;
-        font-weight: 500;
-        cursor: pointer;
-        user-select: none;
-        list-style: none;
-
-        &::-webkit-details-marker { display: none; }
-        &::marker { display: none; }
+      td {
+        padding: 8px 12px;
+        border: 1px solid #B8945A;
+        vertical-align: top;
       }
 
-      .iq-disclosure-body {
-        padding: 12px 14px;
-        font-size: 14px;
-        line-height: 1.7;
-      }
+      tr:nth-child(even) td { background: #faf9ff; }
     }
 
-    .iq-hint {
-      summary { background: #FAEEDA; color: #854F0B; }
-      .iq-disclosure-body { background: #fdf6ec; color: #5a3800; }
-    }
-
-    .iq-solution {
-      summary { background: #EEEDFE; color: #3C3489; }
-      .iq-disclosure-body { background: #f5f4fe; color: #26215c; }
-    }
+    strong { font-weight: 600; color: $rs-text; }
+    em { font-style: italic; }
   }
 }
 
-.iq-badge {
+// Part 3: Concept tags — clickable
+.iq-card-concepts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.iq-tag {
   display: inline-block;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 11px;
+  padding: 4px 11px;
+  border-radius: 5px;
+  font-size: 12px;
   font-weight: 500;
-  line-height: 1.6;
-  white-space: nowrap;
+  background: #f0ede8;
+  color: #B8945A;
+  text-decoration: none;
+  transition: background .12s, color .12s;
+
+  &:hover {
+    background: #534AB7;
+    color: #fff;
+    text-decoration: none;
+  }
 }
-.iq-diff-easy   { background: #eaf3de; color: #3B6D11; }
-.iq-diff-medium { background: #FAEEDA; color: #854F0B; }
-.iq-diff-hard   { background: #FCEBEB; color: #A32D2D; }
-.iq-company     { background: $rs-surface-soft; color: $rs-text-muted; border: 1px solid $rs-border; }
-.iq-concept     { background: #EEEDFE; color: #3C3489; }
+
+// This handles instances where a concept does not have an accompanying lesson path without breaking the design
+
+.iq-tag-static {
+  display: inline-block;
+  padding: 4px 11px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  background: #f0f2f5;
+  color: $rs-text-muted;
+  text-decoration: none;
+  cursor: default;
+}
+
+// ── Empty state ───────────────────────────────────────────────────────────────
+
+.iq-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: $rs-text-muted;
+  font-size: 15px;
+  border: 1px dashed $rs-border;
+  border-radius: 12px;
+}
+
+// ── Pagination ────────────────────────────────────────────────────────────────
+
+.iq-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid $rs-border;
+}
+
+.iq-page-btn {
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: 1px solid $rs-border;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  color: $rs-text;
+  cursor: pointer;
+  transition: all .15s;
+
+  &:hover:not(:disabled) {
+    border-color: #B8945A;
+    color: #B8945A;
+  }
+
+  &:disabled { opacity: .35; cursor: not-allowed; }
+}
+
+.iq-page-info {
+  font-size: 14px;
+  color: $rs-text-muted;
+  min-width: 100px;
+  text-align: center;
+}
+
+// Append these rules inside the Pagination section of your _interview_4.scss file
+
+.iq-page-numbers {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.iq-page-num-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 4px;
+  border-radius: 6px;
+  border: 1px solid $rs-border; // Uses standard theme framework boundaries
+  background: #ffffff;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: $rs-text;
+  cursor: pointer;
+  transition: all 0.15s ease;
+
+  &:hover {
+    border-color: #B8945A;
+    color: #B8945A;
+    background: #fdfbfa;
+  }
+
+  &.active {
+    background: #B8945A; // Premium brand golden anchor fill
+    border-color: #B8945A;
+    color: #ffffff;      // Crisp white contrast text
+    font-weight: 600;
+  }
+}
+
+// ── Responsive ────────────────────────────────────────────────────────────────
+
+@media (max-width: 768px) {
+  .iq-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .iq-sidebar {
+    position: static;
+    padding-right: 0;
+    border-bottom: 1px solid $rs-border;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    max-height: none;
+    overflow-y: visible;
+  }
+
+  .iq-card {
+    padding: 1.25rem 1.25rem;
+  }
+
+  .iq-card-question {
+    font-size: 16px;
+  }
+
+  .iq-details .iq-details-body {
+    padding: 1rem 1rem;
+    font-size: 14.5px;
+  }
+}
+
+/* ── Reading Progress Bar ────────────────────────────────────────────────── */
+.rs-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;                  // Dainty premium accent line
+  background: #B8945A;          // RoboSathi signature brand gold
+  z-index: 99999;               // Floats safely over the top of sticky headers
+  pointer-events: none;         // Allows you to click right through it to hit buttons underneath
+  transition: width 0.05s ease-out;
+}

@@ -1,0 +1,3151 @@
+questions:
+- id: nlp-001
+  question: What is tokenization and why is it required?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-002
+  question: What are word embeddings?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-003
+  question: How does Word2Vec work?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-004
+  question: CBOW vs Skip-Gram?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-005
+  question: Word2Vec vs GloVe vs FastText?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-006
+  question: Why do static embeddings fail for polysemous words?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-007
+  question: What are contextual embeddings?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-008
+  question: What is attention?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-009
+  question: How does self-attention work?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-010
+  question: Why did Transformers replace RNNs and LSTMs?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-011
+  question: Why do Transformers need positional encoding?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-012
+  question: What is multi-head attention?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-013
+  question: BERT vs GPT?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-014
+  question: What is masked language modeling?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-015
+  question: What is next-token prediction?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-016
+  question: What are sentence embeddings?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-017
+  question: What is semantic similarity?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-018
+  question: How would you evaluate a text classification model?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-019
+  question: What metrics are used for NLP classification?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-020
+  question: What is BLEU?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-021
+  question: What is ROUGE?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-022
+  question: BLEU vs ROUGE?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-023
+  question: How would you evaluate a summarization model?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-024
+  question: How would you evaluate a translation model?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-025
+  question: Why do LLMs hallucinate?
+  difficulty: Hard
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-026
+  question: What is RAG?
+  difficulty: Hard
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-027
+  question: When should you use RAG instead of fine-tuning?
+  difficulty: Hard
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-028
+  question: How would you evaluate a RAG system?
+  difficulty: Hard
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-029
+  question: What causes retrieval failures in RAG?
+  difficulty: Hard
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: nlp-030
+  question: How do vector embeddings enable semantic search?
+  difficulty: Hard
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-001
+  question: What is a neural network?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-002
+  question: What is an activation function?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-003
+  question: Why do neural networks need non-linearity?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-004
+  question: Explain ReLU and its advantages.
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-005
+  question: Sigmoid vs Tanh vs ReLU?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-006
+  question: What is a loss function?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-007
+  question: What is gradient descent?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-008
+  question: What is backpropagation?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-009
+  question: What causes vanishing gradients?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-010
+  question: What causes exploding gradients?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-011
+  question: How do residual connections help training?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-012
+  question: What is Batch Normalization?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-013
+  question: Why does dropout reduce overfitting?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-014
+  question: What is overfitting?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-015
+  question: What is underfitting?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-016
+  question: What is early stopping?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-017
+  question: How does learning rate affect convergence?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-018
+  question: What are learning rate schedules?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-019
+  question: What is weight initialization?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-020
+  question: Xavier vs He initialization?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-021
+  question: CNNs vs Transformers?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-022
+  question: How do convolutional neural networks work?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-023
+  question: What is transfer learning?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-024
+  question: How does fine-tuning work?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-025
+  question: What are foundation models?
+  difficulty: Hard
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-026
+  question: Why do larger models perform better?
+  difficulty: Hard
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-027
+  question: What are scaling laws?
+  difficulty: Hard
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-028
+  question: What is FlashAttention?
+  difficulty: Hard
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-029
+  question: What are Mixture-of-Experts models?
+  difficulty: Hard
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: dl-030
+  question: How would you diagnose training instability?
+  difficulty: Hard
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [DL]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-001
+  question: What is supervised learning?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-002
+  question: What is unsupervised learning?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-003
+  question: What is the bias-variance tradeoff?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-004
+  question: What is regularization?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-005
+  question: L1 vs L2 regularization?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-006
+  question: What is cross-validation?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-007
+  question: What is data leakage?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-008
+  question: Classification vs regression?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-009
+  question: What is precision and recall?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-010
+  question: What is F1 score?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-011
+  question: When can accuracy be misleading?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-012
+  question: What is ROC-AUC?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-013
+  question: What is class imbalance?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-014
+  question: How do you handle class imbalance?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-015
+  question: What is feature engineering?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-016
+  question: What is feature selection?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-017
+  question: Random Forest vs XGBoost?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-018
+  question: Bagging vs boosting?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-019
+  question: How does Gradient Boosting work?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-020
+  question: Why does XGBoost perform well?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-021
+  question: What is concept drift?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-022
+  question: What is data drift?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-023
+  question: How do you detect drift in production?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-024
+  question: How would you evaluate a recommendation system?
+  difficulty: Medium
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-025
+  question: How would you design a fraud detection system?
+  difficulty: Hard
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-026
+  question: What metrics matter in production ML systems?
+  difficulty: Hard
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-027
+  question: Offline vs online evaluation?
+  difficulty: Hard
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-028
+  question: What is model calibration?
+  difficulty: Hard
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-029
+  question: How do you choose between more data and a larger model?
+  difficulty: Hard
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'
+- id: ml-030
+  question: How would you debug a poorly performing ML model?
+  difficulty: Hard
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ML]
+  linked_lesson: /docs/natural_language_processing/tokenization/
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: '## Short Answer
+
+    Placeholder answer.
+
+
+    ## Key Concepts
+
+    - Definition
+
+    - Intuition
+
+    - Advantages
+
+    - Limitations
+
+
+    ## Common Follow-ups
+
+    - Trade-offs?
+
+    - Production considerations?
+
+    - Alternatives?'

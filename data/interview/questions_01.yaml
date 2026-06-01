@@ -1,0 +1,544 @@
+questions:
+  - id: ml-031
+    question: "What is machine learning, and how is it different from explicitly programmed software?"
+    difficulty: easy
+    companies: [Google, Meta, Amazon, Microsoft, OpenAI]
+    concept: [ML, Fundamentals]
+    linked_lesson: ["/docs/machine_learning/", "/docs/machine_learning/introduction/what-is-ml/"]
+    hint: "Contrast rule-writing with learning patterns from data during training and using them during inference."
+    solution: |
+      ## Short Answer
+      Machine learning teaches computers to learn patterns from data and use those patterns to make predictions or decisions on new examples. In explicitly programmed software, humans write the rules directly; in machine learning, the model learns the rules indirectly by optimizing parameters from data.
+
+      ## Key Concepts
+
+      ### 1. Mathematical Formulation & Definition
+      A supervised ML dataset is usually represented as:
+
+      \[
+      D = \{(x_i, y_i)\}_{i=1}^{n}
+      \]
+
+      where \(x_i\) is an input, \(y_i\) is the target, and the model learns a function:
+
+      \[
+      f_\theta(x) \approx y
+      \]
+
+      Training means finding parameters \(\theta\) that minimize a loss:
+
+      \[
+      \theta^* = \arg\min_\theta \frac{1}{n}\sum_{i=1}^{n} L(f_\theta(x_i), y_i)
+      \]
+
+      ### 2. Deep Intuition & Core Architecture
+      Explicit programming says: "If these conditions happen, execute these rules." Machine learning says: "Here are many examples; find the statistical pattern that maps inputs to outputs."
+
+      The ML lifecycle has two major phases:
+
+      * **Training phase**: The model learns parameters from historical data.
+      * **Runtime or inference phase**: The trained model makes predictions on new, unseen data.
+
+      For example, a salary predictor does not need a developer to write every possible salary rule. Instead, it learns relationships between years of experience, role, domain, and salary from examples.
+
+      ### 3. Core Trade-offs
+      * **Advantages**: ML can model patterns too complex for hand-written rules, adapt when retrained on new data, and scale to high-dimensional signals.
+      * **Limitations**: It depends heavily on data quality, can learn spurious correlations, and may fail silently when production data differs from training data.
+
+      ## Common Follow-ups
+
+      ### 1. Production Considerations & Engineering Realities
+      Production ML requires data pipelines, feature validation, model versioning, monitoring, rollback plans, and latency budgets. A model that performs well offline can still be unusable if it is too slow, expensive, unstable, or hard to monitor.
+
+      ### 2. System Failure Modes & Mitigation Strategies
+      Common failures include data leakage, distribution shift, missing features, biased labels, and training-serving skew. Engineers mitigate these with strict train/validation/test separation, feature schema checks, drift monitoring, shadow deployments, and periodic retraining.
+
+      ### 3. Alternative Paradigms & Modern Alternatives
+      Classical ML often uses manually engineered features and models such as linear regression, decision trees, random forests, and gradient boosting. Deep learning learns more of the representation automatically, while foundation-model systems often combine pretraining, fine-tuning, retrieval, prompting, and evaluation pipelines.
+
+  - id: ml-032
+    question: "What is the difference between training and inference in machine learning?"
+    difficulty: easy
+    companies: [Google, Amazon, Apple, Uber, Airbnb]
+    concept: [ML, Training, Inference]
+    linked_lesson: ["/docs/machine_learning/introduction/what-is-ml/"]
+    hint: "Training updates parameters; inference uses fixed parameters."
+    solution: |
+      ## Short Answer
+      Training is the phase where a model learns parameters from data by minimizing a loss function. Inference is the phase where the trained model is frozen and used to make predictions on new inputs.
+
+      ## Key Concepts
+
+      ### 1. Mathematical Formulation & Definition
+      During training, parameters are updated:
+
+      \[
+      \theta_{t+1} = \theta_t - \eta \nabla_\theta J(\theta_t)
+      \]
+
+      During inference, parameters are fixed:
+
+      \[
+      \hat{y} = f_{\theta^*}(x_{new})
+      \]
+
+      where \(\theta^*\) is the learned parameter set.
+
+      ### 2. Deep Intuition & Core Architecture
+      Training is like studying from examples: the model sees inputs, compares predictions against known answers, calculates error, and adjusts its weights. Inference is like taking the real exam: the model receives an unseen input and produces an output without seeing the correct answer.
+
+      Training usually needs more compute because it stores activations, computes gradients, and updates weights. Inference is typically lighter because it only performs the forward computation.
+
+      ### 3. Core Trade-offs
+      * **Advantages**: Separating training and inference lets teams train expensive models offline and serve efficient predictions online.
+      * **Limitations**: A model trained on old or biased data may produce poor inference results when user behavior, sensors, labels, or business rules change.
+
+      ## Common Follow-ups
+
+      ### 1. Production Considerations & Engineering Realities
+      Training is usually optimized for throughput and reproducibility; inference is optimized for latency, availability, cost, and observability. In production, teams often use batching, caching, model quantization, feature stores, and autoscaling to make inference reliable.
+
+      ### 2. System Failure Modes & Mitigation Strategies
+      Training can fail through bad labels, unstable optimization, leakage, or overfitting. Inference can fail through schema mismatches, missing features, timeouts, drift, or mismatched preprocessing. Use model signatures, pipeline tests, canary deployments, and monitoring on input distributions and output distributions.
+
+      ### 3. Alternative Paradigms & Modern Alternatives
+      In online learning, training and inference are closer together because the model updates continuously or frequently from fresh data. In retrieval-augmented generation and many LLM systems, part of "adaptation" happens at inference time through retrieved context or prompts rather than parameter updates.
+
+  - id: ml-033
+    question: "How do supervised, unsupervised, semi-supervised, and reinforcement learning differ?"
+    difficulty: easy
+    companies: [Google, Meta, Amazon, LinkedIn, NVIDIA]
+    concept: [ML, Learning Paradigms]
+    linked_lesson: ["/docs/machine_learning/introduction/types-of-ml/"]
+    hint: "Focus on what feedback signal the learner receives: labels, no labels, partial labels, or rewards."
+    solution: |
+      ## Short Answer
+      Supervised learning uses labeled input-output pairs, unsupervised learning finds structure in unlabeled data, semi-supervised learning combines a small labeled set with a large unlabeled set, and reinforcement learning learns actions through rewards from an environment. The key difference is the feedback signal available to the learner.
+
+      ## Key Concepts
+
+      ### 1. Mathematical Formulation & Definition
+      Supervised learning uses:
+
+      \[
+      D_L = \{(x_i, y_i)\}_{i=1}^{n}
+      \]
+
+      Unsupervised learning uses:
+
+      \[
+      D_U = \{x_i\}_{i=1}^{n}
+      \]
+
+      Semi-supervised learning uses both:
+
+      \[
+      D = D_L \cup D_U
+      \]
+
+      Reinforcement learning optimizes expected return:
+
+      \[
+      \pi^* = \arg\max_\pi \mathbb{E}\left[\sum_{t=0}^{T} \gamma^t r_t\right]
+      \]
+
+      where \(\pi\) is a policy, \(r_t\) is reward, and \(\gamma\) discounts future rewards.
+
+      ### 2. Deep Intuition & Core Architecture
+      Supervised learning is used when the desired answer is known, such as house prices, fraud labels, or spam labels. Unsupervised learning is used when there are no labels and the goal is to discover hidden structure, such as clusters or lower-dimensional representations.
+
+      Semi-supervised learning is useful when labels are expensive but unlabeled data is abundant. Techniques like pseudo-labeling train a model on labeled data, use it to label unlabeled examples, and retrain using the expanded dataset.
+
+      Reinforcement learning is different because the model is an agent that acts in an environment. It must balance exploration of new actions with exploitation of actions that already appear rewarding.
+
+      ### 3. Core Trade-offs
+      * **Advantages**: Each paradigm matches a different data reality: labeled data, unlabeled data, scarce labels, or sequential decision-making.
+      * **Limitations**: Supervised learning needs reliable labels, unsupervised learning can be hard to evaluate, semi-supervised learning can amplify wrong pseudo-labels, and reinforcement learning can be sample-inefficient and unstable.
+
+      ## Common Follow-ups
+
+      ### 1. Production Considerations & Engineering Realities
+      Choose the paradigm based on the available feedback signal and business objective. A fraud system may be supervised, customer segmentation may be unsupervised, search relevance may use semi-supervised signals, and ad bidding or robotics may involve reinforcement learning.
+
+      ### 2. System Failure Modes & Mitigation Strategies
+      Supervised models fail when labels are stale or biased. Unsupervised systems fail when clusters are mathematically clean but operationally meaningless. Semi-supervised systems fail when confident wrong predictions are fed back into training. Reinforcement learning systems fail when rewards are misspecified or encourage unintended behavior.
+
+      ### 3. Alternative Paradigms & Modern Alternatives
+      Self-supervised learning is now central in deep learning and NLP. It creates training signals from raw data itself, such as predicting masked words or next tokens, and then adapts the model with supervised fine-tuning or human feedback.
+
+  - id: ml-034
+    question: "What is the difference between regression and classification?"
+    difficulty: easy
+    companies: [Google, Amazon, Meta, Uber, Stripe]
+    concept: [ML, Supervised Learning, Classification]
+    linked_lesson: ["/docs/machine_learning/introduction/types-of-ml/", "/docs/machine_learning/supervised/linear-regression/", "/docs/machine_learning/supervised/logistic_regression/binary-classification/"]
+    hint: "Regression predicts continuous values; classification predicts discrete classes or class probabilities."
+    solution: |
+      ## Short Answer
+      Regression predicts a continuous numerical value, such as salary, demand, or temperature. Classification predicts a discrete class label or class probability, such as spam vs not spam, fraud vs legitimate, or churn vs retained.
+
+      ## Key Concepts
+
+      ### 1. Mathematical Formulation & Definition
+      Regression usually models:
+
+      \[
+      \hat{y} = f_\theta(x), \quad y \in \mathbb{R}
+      \]
+
+      A common regression loss is mean squared error:
+
+      \[
+      J(\theta) = \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2
+      \]
+
+      Binary classification often models a probability:
+
+      \[
+      \hat{p} = P(y=1|x) = \sigma(z)
+      \]
+
+      where \(\sigma(z) = \frac{1}{1 + e^{-z}}\), and the prediction is a class after thresholding:
+
+      \[
+      \hat{y} = 1[\hat{p} \ge \tau]
+      \]
+
+      ### 2. Deep Intuition & Core Architecture
+      In regression, the distance between prediction and target has numeric meaning. Predicting 80 when the true value is 100 is usually closer than predicting 20.
+
+      In classification, the labels are categories. The model often learns a decision boundary that separates classes. For binary classification, logistic regression maps a linear score through a sigmoid so the output can be interpreted as a probability.
+
+      ### 3. Core Trade-offs
+      * **Advantages**: Regression is natural for forecasting continuous quantities; classification is natural when the business action depends on class membership.
+      * **Limitations**: Regression can be sensitive to outliers; classification can hide uncertainty if only hard labels are reported instead of probabilities and calibration.
+
+      ## Common Follow-ups
+
+      ### 1. Production Considerations & Engineering Realities
+      Regression systems need error tolerances in the units of the target. Classification systems need threshold selection based on costs: false positives and false negatives rarely have equal business impact.
+
+      ### 2. System Failure Modes & Mitigation Strategies
+      Regression can fail through outliers, heteroscedasticity, extrapolation, or target drift. Classification can fail through class imbalance, poor calibration, threshold mismatch, and changing base rates. Use residual analysis, calibration curves, confusion matrices, and business-cost-aware evaluation.
+
+      ### 3. Alternative Paradigms & Modern Alternatives
+      Some problems can be framed either way. Age prediction can be regression, but age-band prediction is classification. Ranking, survival analysis, ordinal regression, and quantile regression are often better fits for specialized target structures.
+
+  - id: ml-035
+    question: "Why do we split data into training, validation, and test sets?"
+    difficulty: easy
+    companies: [Google, Meta, Amazon, Airbnb, LinkedIn]
+    concept: [ML, Evaluation, Data Splitting]
+    linked_lesson: ["/docs/machine_learning/supervised/linear_regression/data-splitting/"]
+    hint: "Each split has a different job: learn parameters, tune choices, and estimate final generalization."
+    solution: |
+      ## Short Answer
+      We split data so the model is trained, tuned, and evaluated on separate evidence. The training set learns parameters, the validation set guides model and hyperparameter choices, and the test set estimates performance on unseen data after decisions are locked.
+
+      ## Key Concepts
+
+      ### 1. Mathematical Formulation & Definition
+      A dataset is partitioned into disjoint subsets:
+
+      \[
+      D = D_{train} \cup D_{val} \cup D_{test}
+      \]
+
+      with:
+
+      \[
+      D_{train} \cap D_{val} = D_{train} \cap D_{test} = D_{val} \cap D_{test} = \emptyset
+      \]
+
+      The model parameters are learned on \(D_{train}\), hyperparameters are selected using \(D_{val}\), and final generalization is estimated on \(D_{test}\).
+
+      ### 2. Deep Intuition & Core Architecture
+      If a model is evaluated on the same data it trained on, it may look strong because it memorized patterns and noise. A validation set acts like mock tests during development, while the test set is the final exam.
+
+      Typical split ratios can be 60/20/20, 70/15/15, or 80/10/10 for small and medium datasets. For very large datasets, even 1 percent may provide enough validation or test examples.
+
+      ### 3. Core Trade-offs
+      * **Advantages**: Splitting gives a more honest estimate of generalization and reduces the chance of selecting a model that only performs well by accident on one sample.
+      * **Limitations**: Small datasets may suffer because holding out data reduces training examples; a single split can also be noisy.
+
+      ## Common Follow-ups
+
+      ### 1. Production Considerations & Engineering Realities
+      Splitting must respect the data-generating process. Use stratified splits for imbalanced classification, group-aware splits when multiple rows come from the same user or entity, and chronological splits for time-series problems.
+
+      ### 2. System Failure Modes & Mitigation Strategies
+      Data leakage happens when validation or test information influences training. This can occur through preprocessing before splitting, duplicate users across splits, future data in time-series training, or target proxies. Mitigate it with pipelines, group splits, time-based splits, and strict feature availability checks.
+
+      ### 3. Alternative Paradigms & Modern Alternatives
+      Cross-validation is often used when data is limited. In production ML, teams may also use backtesting, shadow deployments, online A/B tests, and canary releases because offline test scores do not capture every real-world behavior.
+
+  - id: ml-036
+    question: "What is overfitting, underfitting, and the bias-variance tradeoff?"
+    difficulty: easy
+    companies: [Google, Meta, Amazon, Apple, Databricks]
+    concept: [ML, Generalization, Bias Variance]
+    linked_lesson: ["/docs/machine_learning/supervised/linear_regression/bias-variance-tradeoff/", "/docs/machine_learning/supervised/linear_regression/regularization/"]
+    hint: "Bias is error from overly simple assumptions; variance is sensitivity to the training sample."
+    solution: |
+      ## Short Answer
+      Underfitting happens when a model is too simple and misses real patterns; overfitting happens when a model is too complex and memorizes noise. The bias-variance tradeoff explains this tension: simple models tend to have high bias, while overly flexible models tend to have high variance.
+
+      ## Key Concepts
+
+      ### 1. Mathematical Formulation & Definition
+      For squared error, expected prediction error can be decomposed as:
+
+      \[
+      \mathbb{E}[(y - \hat{f}(x))^2] =
+      Bias[\hat{f}(x)]^2 + Var[\hat{f}(x)] + \sigma^2
+      \]
+
+      where \(\sigma^2\) is irreducible noise.
+
+      * **Bias**: Systematic error from assumptions that are too simple.
+      * **Variance**: Sensitivity of predictions to the particular training dataset.
+      * **Irreducible error**: Noise no model can remove.
+
+      ### 2. Deep Intuition & Core Architecture
+      A high-bias model is like fitting a straight line to a curved pattern: it performs poorly on both training and validation data. A high-variance model is like fitting a very wiggly curve through every training point: it performs extremely well on training data but poorly on unseen data.
+
+      The goal is not to minimize training error alone. The goal is to minimize generalization error.
+
+      ### 3. Core Trade-offs
+      * **Advantages**: Understanding bias and variance gives a practical diagnostic framework for model selection, regularization, and data collection.
+      * **Limitations**: The decomposition is clearest for squared error and does not fully capture all modern ML failure modes, such as distribution shift or poor calibration.
+
+      ## Common Follow-ups
+
+      ### 1. Production Considerations & Engineering Realities
+      If both training and validation error are high, increase model capacity, improve features, train longer, or reduce regularization. If training error is low but validation error is high, add regularization, get more data, simplify the model, use early stopping, or improve cross-validation.
+
+      ### 2. System Failure Modes & Mitigation Strategies
+      Overfit models often fail on new users, new geographies, new time periods, or rare segments. Mitigate with proper splits, regularization, validation by segment, drift monitoring, and post-deployment evaluation.
+
+      ### 3. Alternative Paradigms & Modern Alternatives
+      Ensembling, bagging, dropout, data augmentation, early stopping, Bayesian priors, and weight decay are all ways to control variance or improve generalization. In deep learning, larger models can sometimes generalize well despite low training error, but they still require strong validation and monitoring.
+
+  - id: ml-037
+    question: "What is linear regression, and what objective does it optimize?"
+    difficulty: easy
+    companies: [Google, Amazon, Meta, Uber, Snowflake]
+    concept: [ML, Supervised Learning, Linear Regression]
+    linked_lesson: ["/docs/machine_learning/supervised/linear_regression/linear-regression/"]
+    hint: "Write the prediction as a weighted sum of features and define the squared-error objective."
+    solution: |
+      ## Short Answer
+      Linear regression models a continuous target as a weighted sum of input features plus an intercept. It usually optimizes mean squared error, choosing parameters that make predictions as close as possible to the observed targets.
+
+      ## Key Concepts
+
+      ### 1. Mathematical Formulation & Definition
+      For one example:
+
+      \[
+      \hat{y}_i = x_i^T w + w_0
+      \]
+
+      For \(n\) examples in matrix form:
+
+      \[
+      \hat{y} = Xw
+      \]
+
+      The mean squared error objective is:
+
+      \[
+      J(w) = \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2
+      \]
+
+      The ordinary least squares solution, when \(X^TX\) is invertible, is:
+
+      \[
+      w = (X^TX)^{-1}X^Ty
+      \]
+
+      ### 2. Deep Intuition & Core Architecture
+      Linear regression finds the best-fitting line, plane, or hyperplane through the data. With one feature, it fits \(y = mx + c\). With many features, it fits a hyperplane where each weight represents how much the prediction changes with that feature, assuming other features are fixed.
+
+      Squared error penalizes large mistakes more heavily than small mistakes and gives a smooth convex objective for ordinary least squares.
+
+      ### 3. Core Trade-offs
+      * **Advantages**: Linear regression is simple, interpretable, fast, and often a strong baseline.
+      * **Limitations**: It assumes a roughly linear relationship, is sensitive to outliers under MSE, and can become unstable when features are highly correlated.
+
+      ## Common Follow-ups
+
+      ### 1. Production Considerations & Engineering Realities
+      Linear regression is useful when interpretability, latency, and debuggability matter. Feature scaling, missing-value handling, categorical encoding, and outlier treatment often matter more than the model code itself.
+
+      ### 2. System Failure Modes & Mitigation Strategies
+      Failures include multicollinearity, extrapolation beyond the training range, non-linear relationships, heteroscedastic residuals, and target leakage. Use residual plots, regularization, robust losses, feature transformations, and careful validation.
+
+      ### 3. Alternative Paradigms & Modern Alternatives
+      Polynomial regression, generalized linear models, regression trees, random forests, gradient boosting, Gaussian processes, and neural networks can capture more complex relationships when linear assumptions are too restrictive.
+
+  - id: ml-038
+    question: "What is gradient descent, and how do learning rate choices affect convergence?"
+    difficulty: medium
+    companies: [Google, OpenAI, Anthropic, Meta, NVIDIA]
+    concept: [ML, Optimization, Gradient Descent]
+    linked_lesson: ["/docs/machine_learning/supervised/linear_regression/gradient_descent/"]
+    hint: "Gradient descent updates parameters in the negative-gradient direction; the learning rate controls step size."
+    solution: |
+      ## Short Answer
+      Gradient descent is an iterative optimization algorithm that updates model parameters in the direction that most reduces the loss locally. The learning rate controls the step size: too small converges slowly, while too large can overshoot, diverge, or oscillate.
+
+      ## Key Concepts
+
+      ### 1. Mathematical Formulation & Definition
+      For parameters \(w\) and cost function \(J(w)\), the update is:
+
+      \[
+      w_{new} = w_{old} - \eta \nabla_w J(w_{old})
+      \]
+
+      For linear regression with:
+
+      \[
+      J(w) = \frac{1}{2n}(y - Xw)^2
+      \]
+
+      the gradient is:
+
+      \[
+      \nabla_w J(w) = \frac{1}{n}X^T(Xw - y)
+      \]
+
+      ### 2. Deep Intuition & Core Architecture
+      The gradient points in the direction of steepest increase, so gradient descent moves in the opposite direction. The learning rate \(\eta\) decides how far to move at each step.
+
+      Batch gradient descent uses the full dataset per update, stochastic gradient descent uses one example, and mini-batch gradient descent uses a subset. Mini-batch training is the standard in deep learning because it balances noisy but frequent updates with efficient vectorized computation on GPUs.
+
+      ### 3. Core Trade-offs
+      * **Advantages**: Gradient descent scales to large datasets and models where closed-form solutions are unavailable or too expensive.
+      * **Limitations**: It requires learning-rate tuning, can be slow on poorly conditioned objectives, and can struggle with noisy gradients, saddle points, and non-convex loss surfaces.
+
+      ## Common Follow-ups
+
+      ### 1. Production Considerations & Engineering Realities
+      In large-scale training, convergence depends on learning-rate schedules, batch size, optimizer choice, feature scaling, initialization, hardware throughput, and numerical precision. Teams monitor training loss, validation loss, gradient norms, throughput, and checkpoint quality.
+
+      ### 2. System Failure Modes & Mitigation Strategies
+      If loss explodes, reduce the learning rate, check feature scaling, inspect labels, use gradient clipping, or debug the loss implementation. If loss decreases too slowly, increase learning rate carefully, use momentum or Adam, normalize features, or improve initialization.
+
+      ### 3. Alternative Paradigms & Modern Alternatives
+      Classical convex problems may use closed-form solvers, coordinate descent, L-BFGS, or Newton methods. Modern deep learning commonly uses SGD with momentum, RMSprop, Adam, AdamW, warmup schedules, cosine decay, and adaptive gradient clipping.
+
+  - id: ml-039
+    question: "What is cross-validation, and when would you prefer it over a single validation split?"
+    difficulty: medium
+    companies: [Google, Meta, Amazon, Databricks, Airbnb]
+    concept: [ML, Evaluation, Cross Validation]
+    linked_lesson: ["/docs/machine_learning/supervised/linear_regression/cross_validation/"]
+    hint: "Cross-validation averages performance across multiple train-validation partitions."
+    solution: |
+      ## Short Answer
+      Cross-validation evaluates a model across multiple train-validation splits and averages the results. It is preferred when the dataset is small or when a single split may give a noisy or misleading estimate of generalization.
+
+      ## Key Concepts
+
+      ### 1. Mathematical Formulation & Definition
+      In k-fold cross-validation, split data into \(k\) folds. For fold \(j\), train on all folds except \(j\), validate on fold \(j\), and compute score \(S_j\). The final estimate is:
+
+      \[
+      S_{CV} = \frac{1}{k}\sum_{j=1}^{k} S_j
+      \]
+
+      Leave-one-out cross-validation is the extreme case where:
+
+      \[
+      k = n
+      \]
+
+      ### 2. Deep Intuition & Core Architecture
+      A single train-validation split can be lucky or unlucky. Cross-validation asks: "Does this model perform well across many different holdout subsets?" That makes the estimate more stable and helps compare model choices more fairly.
+
+      In 5-fold cross-validation, the model trains five times. Each fold gets one turn as validation data, and the other four folds are training data.
+
+      ### 3. Core Trade-offs
+      * **Advantages**: Better use of limited data, more stable model comparison, and less dependence on one random split.
+      * **Limitations**: More computationally expensive, more complex with grouped or time-dependent data, and still vulnerable to leakage if preprocessing is done incorrectly.
+
+      ## Common Follow-ups
+
+      ### 1. Production Considerations & Engineering Realities
+      Use stratified k-fold for imbalanced classification, GroupKFold when examples from the same user or entity are correlated, and time-series cross-validation for chronological data. Preprocessing must be fit inside each training fold, not on the full dataset.
+
+      ### 2. System Failure Modes & Mitigation Strategies
+      Leakage is the biggest failure mode. Scaling, imputation, feature selection, or target encoding before cross-validation can leak validation information into training. Use sklearn-style pipelines or equivalent workflow isolation so every fold is treated as truly unseen.
+
+      ### 3. Alternative Paradigms & Modern Alternatives
+      For large datasets, a single validation set may be enough and far cheaper. For temporal systems, backtesting is often better. For final product decisions, offline cross-validation should be complemented with online experiments or shadow evaluations.
+
+  - id: ml-040
+    question: "How do MAE, MSE, RMSE, R-squared, and Huber loss differ for regression evaluation?"
+    difficulty: medium
+    companies: [Google, Amazon, Meta, Uber, Stripe]
+    concept: [ML, Regression Metrics, Evaluation]
+    linked_lesson: ["/docs/machine_learning/supervised/linear_regression/regression_metrics/"]
+    hint: "Compare interpretability, outlier sensitivity, differentiability, and whether the metric is relative to a baseline."
+    solution: |
+      ## Short Answer
+      MAE measures average absolute error and is robust to outliers; MSE squares errors and heavily penalizes large mistakes; RMSE is the square root of MSE and returns to target units. R-squared measures improvement over predicting the mean, while Huber loss combines MSE-like behavior for small errors with MAE-like behavior for large errors.
+
+      ## Key Concepts
+
+      ### 1. Mathematical Formulation & Definition
+      Mean absolute error:
+
+      \[
+      MAE = \frac{1}{n}\sum_{i=1}^{n}|y_i - \hat{y}_i|
+      \]
+
+      Mean squared error:
+
+      \[
+      MSE = \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2
+      \]
+
+      Root mean squared error:
+
+      \[
+      RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2}
+      \]
+
+      R-squared:
+
+      \[
+      R^2 = 1 - \frac{\sum_{i=1}^{n}(y_i - \hat{y}_i)^2}{\sum_{i=1}^{n}(y_i - \bar{y})^2}
+      \]
+
+      Huber loss:
+
+      \[
+      L_{\delta}(y, \hat{y}) =
+      \begin{cases}
+      \frac{1}{2}(y - \hat{y})^2 & \text{if } |y - \hat{y}| \le \delta \\
+      \delta(|y - \hat{y}| - \frac{1}{2}\delta) & \text{otherwise}
+      \end{cases}
+      \]
+
+      ### 2. Deep Intuition & Core Architecture
+      MAE treats every unit of error equally, so it is easier to interpret and less dominated by outliers. MSE squares errors, so one large mistake can dominate the metric. RMSE preserves MSE's outlier sensitivity but is easier to explain because it has the same unit as the target.
+
+      R-squared asks how much better the model is than a baseline that predicts the mean. Huber loss is a robust compromise: quadratic near zero for smooth optimization, linear for large residuals to reduce outlier dominance.
+
+      ### 3. Core Trade-offs
+      * **Advantages**: Different metrics reveal different behavior: robustness, large-error sensitivity, interpretability, and baseline-relative performance.
+      * **Limitations**: No single metric captures all business costs. R-squared can be misleading outside standard regression settings, and average metrics can hide poor performance on important segments.
+
+      ## Common Follow-ups
+
+      ### 1. Production Considerations & Engineering Realities
+      Pick the metric that matches the business cost of errors. For delivery-time prediction, MAE may be intuitive. For safety-critical forecasting where large errors are very bad, RMSE or tail metrics may matter more. For noisy targets with outliers, Huber or quantile losses may be better.
+
+      ### 2. System Failure Modes & Mitigation Strategies
+      Metrics can look good globally while failing for rare segments, high-value users, or extreme target values. Always break down regression metrics by segment, target range, geography, time period, and data source.
+
+      ### 3. Alternative Paradigms & Modern Alternatives
+      Quantile loss predicts intervals rather than only point estimates. Pinball loss, prediction intervals, conformal prediction, and probabilistic regression can communicate uncertainty better than a single scalar prediction.

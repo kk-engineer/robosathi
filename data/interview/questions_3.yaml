@@ -1,0 +1,346 @@
+questions:
+- id: nlp-031
+  question: What is tokenization and why is it required?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP, Tokenization]
+  linked_lesson: ["/docs/natural_language_processing/", "/docs/natural_language_processing/tokenization/"]
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: |
+    ## Short Answer
+    Tokenization is the preprocessing step that breaks raw text into smaller units called tokens: words, characters, bytes, or subwords. It is required because neural networks operate on numeric IDs and embeddings, not raw strings, and because the tokenization strategy determines vocabulary size, sequence length, out-of-vocabulary behavior, and compute cost.
+
+    ## Key Concepts
+
+    ### 1. Mathematical Formulation & Definition
+    Given raw text \(x\), a tokenizer is a mapping:
+    \[
+    T(x) = (t_1, t_2, \dots, t_n), \quad t_i \in V
+    \]
+    where \(V\) is the tokenizer vocabulary and each token \(t_i\) is mapped to an integer ID:
+    \[
+    \text{id}(t_i) \in \{1, \dots, |V|\}
+    \]
+    The model then learns or looks up embeddings:
+    \[
+    e_i = E[\text{id}(t_i)], \quad E \in \mathbb{R}^{|V| \times d}
+    \]
+    Word-level tokenization splits by whitespace or punctuation, character-level tokenization splits into individual symbols, and subword tokenization uses units such as BPE, WordPiece, or SentencePiece.
+
+    Byte Pair Encoding starts from characters and repeatedly merges the most frequent adjacent symbol pair. WordPiece chooses merges that improve likelihood, commonly using a score like:
+    \[
+    \text{Score}(s_1, s_2) = \frac{P(s_1, s_2)}{P(s_1)P(s_2)}
+    \]
+    SentencePiece treats the input as a raw Unicode stream, including spaces, which makes it useful for multilingual text and languages without whitespace segmentation.
+
+    ### 2. Deep Intuition & Core Architecture
+    Tokenization is the contract between messy human text and the model's discrete input space. A model cannot directly process `"unhappiness"` or `"GPU memory"` as semantic strings; it sees integer IDs that index vectors. If the tokenizer splits `"unhappiness"` into `["un", "happi", "ness"]`, the model can share statistical strength across related words such as `"happy"`, `"unhappy"`, and `"happiness"`.
+
+    Word-level tokenization is intuitive but brittle: unseen plurals, spelling variants, names, and multilingual words become unknown tokens or explode the vocabulary. Character-level tokenization avoids out-of-vocabulary failures but makes sequences very long, which is expensive for Transformers because attention is roughly \(O(n^2)\) in sequence length. Subword tokenization is the practical middle ground: fixed vocabulary, decomposable rare words, and reasonable sequence lengths.
+
+    In modern LLMs, tokenization also affects billing, latency, context-window utilization, retrieval chunking, safety filters, and multilingual quality. Two prompts with the same number of characters can have very different token counts depending on language, whitespace, symbols, and tokenizer design.
+
+    ### 3. Core Trade-offs
+    * **Advantages**: Subword tokenization reduces out-of-vocabulary failures, controls vocabulary size, and lets rare or compound words share reusable components.
+    * **Advantages**: Token IDs make text compatible with embedding tables, batching, GPU kernels, and autoregressive next-token training.
+    * **Limitations**: Token boundaries may not align with semantic boundaries, especially for code, math, names, emojis, low-resource languages, and noisy user text.
+    * **Limitations**: Smaller vocabularies create longer sequences; larger vocabularies increase embedding-table size and can reduce sharing across related forms.
+
+    ## Common Follow-ups
+
+    ### 1. Production Considerations & Engineering Realities
+    Tokenization is often a hidden production bottleneck. CPU tokenization can dominate latency for short prompts if GPU inference is highly optimized. Long tokenized sequences increase KV-cache memory, attention compute, and request cost. For RAG systems, chunk sizes should be measured in tokens rather than characters because retrieval, truncation, and context packing operate at token granularity.
+
+    Tokenizer compatibility is also critical. A model trained with one tokenizer cannot safely be served with another unless embeddings and positional assumptions are handled. Even small tokenizer mismatches can silently degrade quality or produce invalid IDs.
+
+    ### 2. System Failure Modes & Mitigation Strategies
+    Common failures include excessive token inflation for non-English languages, broken handling of whitespace-sensitive code, unexpected splitting of domain terms, and prompt truncation that removes important instructions. Engineers mitigate this by measuring token distributions on real traffic, adding domain-specific vocabulary during tokenizer training when training from scratch, validating truncation behavior, and testing multilingual and adversarial inputs.
+
+    In deployed LLM applications, tokenization bugs often appear as unexplained latency spikes, retrieval chunks that cut through important spans, or models failing on identifiers and rare names. Logging token counts, not just character counts, is essential.
+
+    ### 3. Alternative Paradigms & Modern Alternatives
+    Modern systems mostly use subword or byte-level tokenization. Byte-level BPE reduces unknown-token issues because any string can be represented as bytes. SentencePiece-style tokenization is common in multilingual settings because it does not require whitespace pre-tokenization. Research alternatives include character-level Transformers, byte-level models, tokenizer-free models, and hybrid architectures, but subword tokenization remains dominant because it balances compute, vocabulary size, and generalization.
+
+- id: nlp-032
+  question: What are word embeddings?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [NLP, Text Embedding]
+  linked_lesson: ["/docs/natural_language_processing/", "/docs/natural_language_processing/text-embedding/"]
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: |
+    ## Short Answer
+    Word embeddings are dense numerical vectors that represent words or tokens in a continuous vector space where geometric similarity roughly corresponds to semantic or syntactic similarity. They replace sparse symbolic encodings like one-hot vectors with compact learned representations that models can optimize end to end.
+
+    ## Key Concepts
+
+    ### 1. Mathematical Formulation & Definition
+    For a vocabulary \(V\) and embedding dimension \(d\), an embedding matrix is:
+    \[
+    E \in \mathbb{R}^{|V| \times d}
+    \]
+    A token \(w\) with index \(i\) is represented as:
+    \[
+    \mathbf{v}_w = E_i
+    \]
+    where \(\mathbf{v}_w \in \mathbb{R}^d\).
+
+    Similarity is often measured using cosine similarity:
+    \[
+    \cos(\mathbf{u}, \mathbf{v}) =
+    \frac{\mathbf{u}^{\top}\mathbf{v}}{\|\mathbf{u}\|\|\mathbf{v}\|}
+    \]
+    Static embedding methods such as Word2Vec, GloVe, and FastText learn one vector per word or subword unit. Contextual embedding models such as BERT and modern Transformers produce representations that depend on the surrounding sequence:
+    \[
+    \mathbf{h}_i = f_\theta(t_1, t_2, \dots, t_n)_i
+    \]
+
+    ### 2. Deep Intuition & Core Architecture
+    The central idea is distributional semantics: words that occur in similar contexts tend to have related meanings. Instead of representing `"king"`, `"queen"`, and `"banana"` as unrelated one-hot vectors, embeddings learn dimensions that encode useful latent factors such as gender, plurality, topic, tense, sentiment, or domain.
+
+    In a neural model, embeddings are usually the first layer. A token ID retrieves a row from the embedding table; that vector then flows through the rest of the network. During training, gradients update the embedding matrix so tokens useful for similar predictions move closer together.
+
+    Compared with one-hot encoding, embeddings are dense and low-dimensional. Compared with Bag of Words or TF-IDF, they can capture semantic similarity even when exact terms differ. For example, `"car"` and `"vehicle"` can have nearby vectors even if they are different vocabulary entries.
+
+    ### 3. Core Trade-offs
+    * **Advantages**: Dense embeddings are compact, differentiable, and capture semantic similarity better than sparse count-based encodings.
+    * **Advantages**: They allow transfer learning: embeddings trained on large corpora can help downstream tasks with less labeled data.
+    * **Limitations**: Static embeddings collapse all senses of a word into one vector, so `"bank"` as a financial institution and `"bank"` as a river edge share the same representation.
+    * **Limitations**: Embeddings can encode corpus bias, domain drift, and spurious correlations learned from training data.
+
+    ## Common Follow-ups
+
+    ### 1. Production Considerations & Engineering Realities
+    Embedding tables can be large. Memory scales as:
+    \[
+    |V| \times d \times \text{bytes per parameter}
+    \]
+    For recommenders, search, and retrieval systems, storing billions of embeddings introduces memory, indexing, quantization, and refresh problems. Approximate nearest neighbor indexes, vector databases, product quantization, and periodic re-embedding pipelines are common production tools.
+
+    In LLM systems, embeddings appear in two major places: token embeddings inside the model and sentence/document embeddings for retrieval. These have different requirements. Token embeddings are optimized for language modeling; retrieval embeddings are optimized so semantically related texts are close under a similarity metric.
+
+    ### 2. System Failure Modes & Mitigation Strategies
+    Failure modes include out-of-domain vocabulary, embedding collapse, anisotropy where vectors cluster in narrow cones, stale embeddings after content changes, and biased nearest neighbors. Engineers debug these with embedding visualization, nearest-neighbor audits, retrieval evaluation sets, slice-based metrics, and drift monitoring.
+
+    Another common production issue is inconsistent preprocessing. If documents are embedded with one tokenizer, cleaning pipeline, or model version and queries use another, retrieval quality can degrade silently. Versioning the embedding model and indexing pipeline is mandatory.
+
+    ### 3. Alternative Paradigms & Modern Alternatives
+    Static word embeddings are rarely the final representation in modern NLP systems. Transformer contextual embeddings, sentence embeddings, instruction-tuned embedding models, contrastive dual encoders, and multimodal embeddings are now common. For lexical precision, sparse retrieval methods like BM25 or learned sparse encoders are often combined with dense embeddings in hybrid retrieval systems.
+
+- id: nlp-033
+  question: How does Word2Vec work?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ NLP, Text Embedding ]
+  linked_lesson: [ "/docs/natural_language_processing/", "/docs/natural_language_processing/text-embedding/#word2vec" ]
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: |
+    ## Short Answer
+    Word2Vec learns word vectors by training a shallow neural model on local context prediction. CBOW predicts a target word from surrounding words, while Skip-Gram predicts surrounding context words from a target word; the learned hidden weights become dense word embeddings.
+
+    ## Key Concepts
+
+    ### 1. Mathematical Formulation & Definition
+    Word2Vec is based on the distributional hypothesis: meaning comes from context. In Skip-Gram, for a center word \(w_t\), the objective is to maximize the probability of nearby context words:
+    \[
+    \max_\theta \sum_{t=1}^{T} \sum_{\substack{-c \le j \le c \\ j \ne 0}}
+    \log P(w_{t+j} \mid w_t)
+    \]
+    A full softmax parameterization is:
+    \[
+    P(w_o \mid w_i) =
+    \frac{\exp(\mathbf{u}_{w_o}^{\top}\mathbf{v}_{w_i})}
+    {\sum_{w \in V} \exp(\mathbf{u}_w^{\top}\mathbf{v}_{w_i})}
+    \]
+    where \(\mathbf{v}_{w_i}\) is the input embedding and \(\mathbf{u}_{w_o}\) is the output embedding.
+
+    Because the denominator sums over the full vocabulary, Word2Vec commonly uses negative sampling:
+    \[
+    \log \sigma(\mathbf{u}_{w_o}^{\top}\mathbf{v}_{w_i}) + \sum_{k=1}^{K} \mathbb{E}_{w_k \sim P_n(w)}
+    \left[\log \sigma(-\mathbf{u}_{w_k}^{\top}\mathbf{v}_{w_i})\right]
+    \]
+    This trains the model to distinguish observed word-context pairs from sampled noise pairs.
+
+    ### 2. Deep Intuition & Core Architecture
+    Word2Vec moved NLP from manually counted sparse features toward predictive distributed representation. If `"doctor"` often appears near `"hospital"`, `"patient"`, and `"medicine"`, its vector is updated to be useful for predicting those contexts. Words with similar neighborhoods receive similar updates and end up close in vector space.
+
+    The architecture is intentionally simple. A one-hot input selects a row from an embedding matrix. The model scores candidate output words using dot products. After training, the input embedding matrix is used as the learned word representation. There is no deep sequence model, no attention, and no explicit syntax parser; the power comes from massive co-occurrence statistics compressed into dense vectors.
+
+    Skip-Gram tends to work well for rare words because each center word creates several context-prediction examples. CBOW averages or sums context vectors to predict the center word and is usually faster and smoother on smaller datasets.
+
+    ### 3. Core Trade-offs
+    * **Advantages**: Word2Vec is simple, efficient, scalable, and produces high-quality semantic vectors from unlabeled text.
+    * **Advantages**: Negative sampling avoids the full-vocabulary softmax cost, making training practical for large vocabularies.
+    * **Limitations**: Each word gets a single static vector, so polysemous words collapse multiple meanings.
+    * **Limitations**: Local context windows miss long-range syntax, discourse structure, and task-specific reasoning.
+
+    ## Common Follow-ups
+
+    ### 1. Production Considerations & Engineering Realities
+    Word2Vec is cheap compared with Transformers and can still be useful for lightweight semantic features, cold-start recommenders, query expansion, clustering, and initialization. Training quality depends heavily on corpus size, domain match, window size, negative sampling distribution, subsampling of frequent words, and embedding dimension.
+
+    Large vocabularies require memory planning. The model usually maintains both input and output embedding matrices:
+    \[
+    2 \times |V| \times d
+    \]
+    parameters before any optimizer state. In production systems, embeddings may need pruning, quantization, or approximate nearest neighbor indexing.
+
+    ### 2. System Failure Modes & Mitigation Strategies
+    Common failures include poor rare-word vectors, noisy vectors for ambiguous terms, domain mismatch, and memorization of societal bias. Engineers mitigate this by training on domain-specific corpora, setting minimum frequency thresholds, using subword models such as FastText, evaluating nearest neighbors manually and quantitatively, and debiasing or filtering sensitive downstream uses.
+
+    Another failure mode is treating cosine similarity as truth. Word2Vec similarity is a corpus-derived association measure, not guaranteed factual or causal meaning. Retrieval or recommendation systems should validate embeddings against task-level metrics.
+
+    ### 3. Alternative Paradigms & Modern Alternatives
+    GloVe uses global co-occurrence matrix factorization rather than only local prediction. FastText represents words using character n-grams, improving rare and morphologically rich words. Contextual models such as ELMo, BERT, and modern Transformers produce token representations conditioned on the full sentence, solving many static-embedding limitations at higher compute cost.
+
+- id: nlp-034
+  question: CBOW vs Skip-Gram?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ NLP, Text Embedding ]
+  linked_lesson: [ "/docs/natural_language_processing/", "/docs/natural_language_processing/text-embedding/#word2vec" ]
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: |
+    ## Short Answer
+    CBOW predicts the center word from its surrounding context, while Skip-Gram predicts surrounding context words from the center word. CBOW is typically faster and smoother for frequent words and smaller datasets; Skip-Gram is more expensive but often better for rare words and richer semantic relationships.
+
+    ## Key Concepts
+
+    ### 1. Mathematical Formulation & Definition
+    For a target position \(t\) and context window size \(c\), CBOW maximizes:
+    \[
+    \log P(w_t \mid w_{t-c}, \dots, w_{t-1}, w_{t+1}, \dots, w_{t+c})
+    \]
+    A common context representation is the average of context embeddings:
+    \[
+    \mathbf{h}_t = \frac{1}{2c}\sum_{\substack{-c \le j \le c \\ j \ne 0}} \mathbf{v}_{w_{t+j}}
+    \]
+    followed by:
+    \[
+    P(w_t \mid \text{context}) =
+    \frac{\exp(\mathbf{u}_{w_t}^{\top}\mathbf{h}_t)}
+    {\sum_{w \in V}\exp(\mathbf{u}_w^{\top}\mathbf{h}_t)}
+    \]
+
+    Skip-Gram reverses the direction:
+    \[
+    \sum_{\substack{-c \le j \le c \\ j \ne 0}}
+    \log P(w_{t+j} \mid w_t)
+    \]
+    It trains one center word to predict multiple surrounding words.
+
+    ### 2. Deep Intuition & Core Architecture
+    CBOW asks: given `"the cat sat on the ___"`, what is the missing word? It compresses several context words into one representation and predicts the center. This averaging makes CBOW robust to noise but can blur fine-grained signals.
+
+    Skip-Gram asks: given `"cat"`, what words are likely nearby? It creates multiple learning signals from one center word, which is especially useful for rare words because every occurrence contributes several context predictions. That extra signal can produce better rare-word embeddings but costs more training time.
+
+    Architecturally, both use shallow embedding lookups and softmax or negative sampling objectives. The difference is the direction of prediction and how many training examples are induced from each token occurrence.
+
+    ### 3. Core Trade-offs
+    * **Advantages**: CBOW is computationally efficient, stable, and effective when the corpus is smaller or frequent-word quality matters most.
+    * **Advantages**: Skip-Gram captures rare-word semantics better and often learns sharper relationships from large corpora.
+    * **Limitations**: CBOW can wash out word order and individual context-word importance because it aggregates the context.
+    * **Limitations**: Skip-Gram is slower because each center word predicts multiple context positions and can overfit noisy rare contexts.
+
+    ## Common Follow-ups
+
+    ### 1. Production Considerations & Engineering Realities
+    Choose CBOW when training speed, memory efficiency, and broad frequent-term quality matter. Choose Skip-Gram when rare entities, specialized vocabulary, product names, medical terms, or long-tail search queries matter. In both cases, negative sampling, subsampling of frequent words, and minimum-count thresholds often matter more than the architecture choice alone.
+
+    For large corpora, Skip-Gram's additional examples increase CPU or GPU training time. Distributed training pipelines must handle vocabulary construction, shuffling, negative-sample generation, and checkpointing efficiently.
+
+    ### 2. System Failure Modes & Mitigation Strategies
+    CBOW may underrepresent rare words because rare targets receive fewer direct updates. Skip-Gram may learn unstable vectors for rare words if their contexts are noisy. Engineers mitigate this with larger corpora, domain-specific data, character n-gram features, careful frequency cutoffs, and qualitative nearest-neighbor review.
+
+    Both methods ignore word order within the context window. This can cause semantically different phrases with similar local words to be represented too similarly. Downstream sequence models or contextual embeddings are preferred when syntax matters.
+
+    ### 3. Alternative Paradigms & Modern Alternatives
+    FastText extends Word2Vec with subword character n-grams, improving rare and morphologically complex words. GloVe uses global co-occurrence statistics. Transformer encoders and decoder-only LLMs produce contextual embeddings that distinguish meaning by sentence context, making them more suitable for modern NLP tasks despite higher compute cost.
+
+- id: nlp-035
+  question: Word2Vec vs GloVe vs FastText?
+  difficulty: Easy
+  companies:
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+  - NVIDIA
+  concept: [ NLP, Text Embedding ]
+  linked_lesson: [ "/docs/natural_language_processing/", "/docs/natural_language_processing/text-embedding/#word2vec" ]
+  hint: Explain intuition, fundamentals, tradeoffs, limitations, and production implications.
+  solution: |
+    ## Short Answer
+    Word2Vec learns embeddings by predicting local context, GloVe learns embeddings by factorizing global word co-occurrence statistics, and FastText extends Word2Vec by representing words as bags of character n-grams. Word2Vec is simple and predictive, GloVe captures corpus-level co-occurrence structure, and FastText handles rare and morphologically rich words better.
+
+    ## Key Concepts
+
+    ### 1. Mathematical Formulation & Definition
+    Word2Vec Skip-Gram optimizes local context prediction:
+    \[
+    \max_\theta \sum_t \sum_{\substack{-c \le j \le c \\ j \ne 0}}
+    \log P(w_{t+j} \mid w_t)
+    \]
+    often with negative sampling rather than a full softmax.
+
+    GloVe builds a word-word co-occurrence matrix \(X\), where \(X_{ij}\) counts how often word \(j\) appears in the context of word \(i\). It minimizes:
+    \[
+    J = \sum_{i,j=1}^{|V|} f(X_{ij})
+    \left(\mathbf{w}_i^\top \tilde{\mathbf{w}}_j + b_i + \tilde{b}_j - \log X_{ij}\right)^2
+    \]
+    where \(f(X_{ij})\) downweights extremely rare or extremely frequent co-occurrences.
+
+    FastText represents a word as the sum of its character n-gram vectors:
+    \[
+    \mathbf{v}_w = \sum_{g \in G(w)} \mathbf{z}_g
+    \]
+    where \(G(w)\) is the set of subword n-grams for word \(w\). This lets related forms share parameters.
+
+    ### 2. Deep Intuition & Core Architecture
+    Word2Vec learns by asking a predictive question: can a word predict its neighbors, or can neighbors predict the word? It does not explicitly store the full co-occurrence matrix, but its training process extracts local distributional structure.
+
+    GloVe starts from a more global view. It assumes ratios of co-occurrence probabilities contain semantic information. For example, a word related to ice but not steam should have different co-occurrence ratios with `"solid"`, `"gas"`, and `"water"`. By fitting dot products to log co-occurrence counts, GloVe tries to preserve global corpus statistics in vector geometry.
+
+    FastText addresses a major weakness of word-level static embeddings: rare and unseen forms. The words `"run"`, `"running"`, and `"runner"` share character n-grams, so FastText can transfer information across morphology. It can also produce vectors for out-of-vocabulary words if their subword n-grams were observed.
+
+    ### 3. Core Trade-offs
+    * **Advantages**: Word2Vec is efficient, scalable, and strong for local semantic similarity.
+    * **Advantages**: GloVe captures global co-occurrence structure and can produce stable embeddings from large corpora.
+    * **Advantages**: FastText is robust for rare words, misspellings, morphology, and many non-English languages.
+    * **Limitations**: All three are static embedding methods, so they assign one representation per word form and struggle with context-dependent meaning.
+    * **Limitations**: GloVe requires building or streaming co-occurrence statistics, while FastText increases memory and compute through subword vectors.
+
+    ## Common Follow-ups
+
+    ### 1. Production Considerations & Engineering Realities
+    Word2Vec is often easiest to train incrementally on large text streams. GloVe can be attractive when global corpus statistics are available and stable, but co-occurrence matrix construction can be expensive. FastText is a strong practical choice for search, classification, and recommendation systems with long-tail vocabulary, user-generated text, misspellings, or multilingual data.
+
+    The best choice depends on the failure mode. If rare words and morphology dominate, FastText usually wins. If the corpus is clean and large with stable vocabulary, Word2Vec or GloVe may be sufficient. If downstream quality depends on sentence meaning, static embeddings should usually be replaced or augmented with contextual models.
+
+    ### 2. System Failure Modes & Mitigation Strategies
+    Word2Vec and GloVe fail on unseen words unless fallback logic exists. FastText mitigates this but can produce misleading vectors for strings whose character n-grams resemble known words without sharing meaning. All three can encode bias and outdated associations from the training corpus.
+
+    Production mitigation includes domain-specific evaluation sets, nearest-neighbor audits, bias checks, frequency thresholds, text normalization, vector versioning, and monitoring downstream metrics after re-training. For retrieval systems, use task-level evaluation rather than relying only on intrinsic analogy benchmarks.
+
+    ### 3. Alternative Paradigms & Modern Alternatives
+    Contextual embeddings from BERT-style encoders and modern embedding models largely replace static embeddings for semantic search, RAG, clustering, reranking, and classification. Hybrid systems still use static or lexical features when latency, interpretability, or exact-match behavior matters. In high-scale systems, dense contextual embeddings are often compressed with quantization or paired with sparse retrieval for precision.
