@@ -27,7 +27,7 @@
   .rs-mark-btn--done .rs-mark-btn__icon { background:#B8945A; border-color:#B8945A; color:#fff; }
   @keyframes rs-pop { 0%{transform:scale(1)} 40%{transform:scale(1.06)} 70%{transform:scale(0.97)} 100%{transform:scale(1)} }
   .rs-mark-btn--pop { animation:rs-pop 0.35s cubic-bezier(0.4,0,0.2,1); }
-  .rs-dot-map { display:flex; flex-wrap:wrap; gap:5px; padding:0.85rem 1rem; background:#ffffff; border:1px solid #eae6df; border-radius:12px; margin-bottom:0.75rem; }
+  .rs-dot-map { display:flex; flex-wrap:wrap; gap:5px; padding:0.85rem 1rem; background:#ffffff; border:1px solid #B8945A; border-radius:12px; margin-bottom:0.75rem; }
   .rs-dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; transition:transform 0.15s ease; cursor:default; box-sizing: border-box; }
   .rs-dot--done { background:#B8945A; border: none !important; box-shadow: none; }
   /* Active but NOT YET read: A sharp hollow target pulse layout */
@@ -47,10 +47,10 @@
   #rs-read-bar { position:fixed; top:0; left:0; height:2.5px; width:0%; background:linear-gradient(90deg,#D4AF37,#B8945A); z-index:9999; pointer-events:none; }
 
   /* ── Capsule write card ──────────────────────────────────── */
-  .rs-capsule { border: 1px solid #e8ddd0; border-radius: 14px; overflow: hidden; margin-bottom: 0.75rem; background: #ffffff; }
-  .rs-capsule__header { padding: 0.7rem 1rem; background: linear-gradient(135deg, #fdf8ef, #fdfaf5); border-bottom: 1px solid #f0e8d8; display: flex; align-items: center; justify-content: space-between; }
+  .rs-capsule { border: 1px solid #B8945A; border-radius: 14px; overflow: hidden; margin-bottom: 0.75rem; background: #ffffff; }
+  .rs-capsule__header { padding: 0.7rem 1rem; background: linear-gradient(135deg, #fdf8ef, #fdfaf5); border-bottom: 1px solid #B8945A; display: flex; align-items: center; justify-content: space-between; }
   .rs-capsule__title { font-size: 0.68rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: #B8945A; }
-  .rs-capsule__note-count { font-size: 0.62rem; color: #b0a898; font-style: italic; }
+  .rs-capsule__note-count { font-size: 0.62rem; color: #B8945A; font-style: italic; }
 
   /* Past note ──────────────────────────────────────────────── */
   .rs-capsule__past { display: none; padding: 0.85rem 1rem; border-bottom: 1px solid #f4f0e8; position: relative; }
@@ -63,25 +63,25 @@
 
   /* Write area ─────────────────────────────────────────────── */
   .rs-capsule__write { padding: 0.75rem 1rem; }
-  .rs-capsule__prompt { font-size: 0.75rem; color: #8a8a8a; margin-bottom: 0.45rem; line-height: 1.5; }
+  .rs-capsule__prompt { font-size: 0.75rem; color: #1c1d1f; margin-bottom: 0.45rem; line-height: 1.5; }
   .rs-capsule__prompt em { color: #B8945A; font-style: normal; font-weight: 500; }
   .rs-capsule__textarea { width: 100%; min-height: 68px; border: 1px solid #e8ddd0; border-radius: 8px; padding: 0.6rem 0.75rem; font-size: 0.84rem; font-family: 'DM Sans', sans-serif; color: #1c1c1e; background: #fdfcfa; resize: vertical; line-height: 1.55; outline: none; transition: border-color 0.2s, box-shadow 0.2s; display: block; }
-  .rs-capsule__textarea::placeholder { color: #c4b8a8; font-style: italic; }
+  .rs-capsule__textarea::placeholder { color: #B8945A; font-style: italic; }
   .rs-capsule__textarea:focus { border-color: #B8945A; box-shadow: 0 0 0 3px rgba(184,148,90,0.08); background: #ffffff; }
   .rs-capsule__save-row { display: flex; align-items: center; justify-content: space-between; margin-top: 0.5rem; }
-  .rs-capsule__char-count { font-size: 0.65rem; color: #c4b8a8; font-variant-numeric: tabular-nums; }
-  .rs-capsule__save-btn { padding: 0.4rem 1rem; background: #0a0a0a; color: #fff; border: none; border-radius: 7px; font-size: 0.78rem; font-weight: 600; cursor: pointer; letter-spacing: 0.03em; transition: background 0.2s, transform 0.15s; }
-  .rs-capsule__save-btn:hover { background: #B8945A; transform: translateY(-1px); }
+  .rs-capsule__char-count { font-size: 0.65rem; color: #1c1d1f; font-variant-numeric: tabular-nums; }
+  .rs-capsule__save-btn { padding: 0.4rem 1rem; background: #B8945A; color: #fff; border: none; border-radius: 7px; font-size: 0.78rem; font-weight: 600; cursor: pointer; letter-spacing: 0.03em; transition: background 0.2s, transform 0.15s; }
+  .rs-capsule__save-btn:hover { background: #0a0a0a; transform: translateY(-1px); }
   .rs-capsule__save-btn:disabled { background: #e8e4dc; color: #b0a898; cursor: default; transform: none; }
   .rs-capsule__saved-msg { font-size: 0.72rem; color: #2d7a4f; font-weight: 500; opacity: 0; transition: opacity 0.3s; pointer-events: none; }
   .rs-capsule__saved-msg.show { opacity: 1; }
 
   /* ── Learning trail ──────────────────────────────────────── */
-  .rs-trail { border: 1px solid #eae6df; border-radius: 14px; overflow: hidden; margin-bottom: 0.75rem; background: #ffffff; }
-  .rs-trail__header { padding: 0.65rem 1rem; border-bottom: 1px solid #f0ede8; display: flex; align-items: center; justify-content: space-between; }
-  .rs-trail__title { font-size: 0.68rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: #8e8e93; }
+  .rs-trail { border: 1px solid #B8945A; border-radius: 14px; overflow: hidden; margin-bottom: 0.75rem; background: #ffffff; }
+  .rs-trail__header { padding: 0.65rem 1rem; border-bottom: 1px solid #B8945A; display: flex; align-items: center; justify-content: space-between; }
+  .rs-trail__title { font-size: 0.68rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: #B8945A; }
   .rs-trail__count { font-size: 0.62rem; color: #B8945A; font-weight: 700; }
-  .rs-trail__empty { padding: 0.85rem 1rem; font-size: 0.8rem; color: #c4b8a8; font-style: italic; text-align: center; line-height: 1.6; }
+  .rs-trail__empty { padding: 0.85rem 1rem; font-size: 0.8rem; color: #1c1d1f; font-style: italic; text-align: center; line-height: 1.6; }
   .rs-trail__list { list-style: none; padding: 0; margin: 0; }
   @keyframes rs-trail-in { from{ opacity:0; transform:translateX(-6px); } to{ opacity:1; transform:translateX(0); } }
   .rs-trail__item--new { animation: rs-trail-in 0.35s ease; }
@@ -144,7 +144,7 @@
     <aside class="d-none d-xl-block rs-right-performance-panel" style="position:sticky; top:7rem; margin-top:0.5rem;">
 
       {{/* Module progress */}}
-      <div style="background:#ffffff; border:1px solid #eae6df; border-radius:14px; padding:1.25rem; margin-bottom:0.75rem; box-shadow:0 4px 20px rgba(184,148,90,0.03);">
+      <div style="background:#ffffff; border:1px solid #b8945a; border-radius:14px; padding:1.25rem; margin-bottom:0.75rem; box-shadow:0 4px 20px rgba(184,148,90,0.03);">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem;">
           <span style="font-size:0.72rem; font-weight:700; text-transform:uppercase; color:#8e8e93; letter-spacing:0.06em;">Module Progress</span>
           <span id="rs-pct-label" style="font-size:0.85rem; font-weight:700; color:#B8945A;">{{ printf "%.0f" $completionPct }}%</span>
@@ -216,7 +216,7 @@
         {{ end }}
         {{ end }}
         <div style="width:100%; margin-top:0.45rem; display:flex; justify-content:space-between;">
-          <span style="font-size:0.65rem; color:#b0a898; letter-spacing:0.05em; text-transform:uppercase;">Lesson map</span>
+          <span style="font-size:0.65rem; color:#B8945A; letter-spacing:0.05em; text-transform:uppercase;">Lesson map</span>
           <span id="rs-dot-done-count" style="font-size:0.65rem; color:#B8945A; font-weight:700;">0/{{ $totalLessons }} read</span>
         </div>
       </div>
@@ -225,8 +225,8 @@
       <div style="display:flex; flex-direction:column; gap:0.75rem;">
         {{ if $prevPage }}
         <a href="{{ $prevPage.RelPermalink }}" class="rs-quest-card" style="display:flex; flex-direction:column; gap:0.5rem; padding:1rem; background:#faf8f5; border:1px solid #e1dacb; border-radius:12px; text-decoration:none;">
-          <span style="font-size:0.62rem; font-weight:800; color:#8a8a8a; text-transform:uppercase; letter-spacing:0.05em;">Previous</span>
-          <span style="font-size:0.92rem; font-weight:600; color:#2c2c2e; line-height:1.3;">{{ $prevPage.LinkTitle }}</span>
+          <span style="font-size:0.62rem; font-weight:800; color:#B8945A; text-transform:uppercase; letter-spacing:0.05em;">Previous</span>
+          <span style="font-size:0.92rem; font-weight:600; color:#1c1d1f; line-height:1.3;">{{ $prevPage.LinkTitle }}</span>
         </a>
         {{ end }}
         <div class="rs-quest-card" style="display:flex; flex-direction:column; gap:0.25rem; padding:1rem; background:#fffdf9; border:2px solid #B8945A; border-radius:12px;">
@@ -234,12 +234,9 @@
           <span style="font-size:0.92rem; font-weight:700; color:#1c1c1e; line-height:1.3;">{{ .LinkTitle }}</span>
         </div>
         {{ if $nextPage }}
-        <a href="{{ $nextPage.RelPermalink }}" class="rs-quest-card" style="display:flex; flex-direction:column; gap:0.25rem; padding:1rem; background:#ffffff; border:1px solid #eae6df; border-radius:12px; text-decoration:none;">
-          <span style="font-size:0.62rem; font-weight:700; color:#8e8e93; text-transform:uppercase; letter-spacing:0.05em;">Next</span>
-          <div style="display:flex; justify-content:space-between; align-items:center; gap:0.5rem;">
-            <span style="font-size:0.9rem; font-weight:600; color:#2c2c2e; line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ $nextPage.LinkTitle }}</span>
-            <span style="color:#B8945A; font-weight:700; flex-shrink:0;">→</span>
-          </div>
+        <a href="{{ $nextPage.RelPermalink }}" class="rs-quest-card" style="display:flex; flex-direction:column; gap:0.25rem; padding:1rem; background:#fcfaf8; border:1px solid #eae6df; border-radius:12px; text-decoration:none;">
+          <span style="font-size:0.62rem; font-weight:800; color:#B8945A; text-transform:uppercase; letter-spacing:0.05em;">Next</span>
+            <span style="font-size:0.92rem; font-weight:600; color:#1c1d1f; line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ $nextPage.LinkTitle }}</span>
         </a>
         {{ end }}
         <button id="rs-mark-btn" class="rs-mark-btn" onclick="rsMarkRead()">
