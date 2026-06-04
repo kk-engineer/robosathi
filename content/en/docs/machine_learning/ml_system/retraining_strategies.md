@@ -6,11 +6,11 @@ weight: 502
 math: true
 ---
 
-{{< playlist " https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfu7gGVAzvIvolLZeH8Ddb1" 
-"Machine Learning System | All Videos" >}}
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfu7gGVAzvIvolLZeH8Ddb1" 
+"Machine Learning Systems | All Videos" >}}
 
 {{< panel color="blue" title="Why Retrain a ML Model?" >}}
-⭐️In a production ML environment, retraining is the '**maintenance engine**' ️ that keeps our models from becoming obsolete.
+In a production ML environment, retraining is the '**maintenance engine**' ️ that keeps our models from becoming obsolete.
 
 ❌ Don't ask: When do we retrain?
 
@@ -18,7 +18,7 @@ math: true
 {{< /panel >}}
 
 {{< panel color="green" title="Periodic Retraining (Fixed Interval) " >}}
-👉 The model is retrained on a regular schedule (e.g., daily, weekly, or monthly).
+The model is retrained on a regular schedule (e.g., daily, weekly, or monthly).
 - **Best for**:
   - Stable environments where data changes slowly.
     <br> (e.g. long-term demand forecast or a credit scoring model).
@@ -29,7 +29,7 @@ math: true
 {{< /panel >}}
 
 {{< panel color="orange" title="Trigger-Based Retraining (Reactive) " >}}
-👉 Retraining is initiated only when a specific **performance** or data **metric** **crosses** a pre-defined **threshold**.
+Retraining is initiated only when a specific **performance** or data **metric** **crosses** a pre-defined **threshold**.
 - **Metric Triggers**:
   - **Performance Decay**: A drop in Precision, Recall, or RMSE (requires ground-truth labels).
   - **Drift Detection**: A high PSI (Population Stability Index) or K-S test score indicating covariate shift.
@@ -41,7 +41,7 @@ math: true
 {{< /panel >}}
 
 {{< panel color="navy" title="Continual Learning (Online/Incremental) " >}}
-👉 Instead of retraining from scratch on a massive batch, the model is **updated incrementally** as new data 
+Instead of retraining from scratch on a massive batch, the model is **updated incrementally** as new data 
 ‘streams' into the system.
 - **Mechanism**: Using ‘**Warm Starts**' where the model weights from the previous version are used as the starting point 
 for the next few gradient descent steps.

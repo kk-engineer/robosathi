@@ -6,8 +6,8 @@ weight: 503
 math: true
 ---
 
-{{< playlist " https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfu7gGVAzvIvolLZeH8Ddb1" 
-"Machine Learning System | All Videos" >}}
+{{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxfu7gGVAzvIvolLZeH8Ddb1" 
+"Machine Learning Systems | All Videos" >}}
 
 {{< panel color="blue" title="Deploy" >}}
 In a production ML environment, retraining is only half the battle, we must also safely deploy the new version.

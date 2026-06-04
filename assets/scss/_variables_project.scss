@@ -1275,7 +1275,7 @@ h1.display-1.mt-0.mt-md-5.pb-4 {
 // ========================================
 
 html {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 body {
@@ -1352,7 +1352,7 @@ $btn-border-radius:      2px;
 }
 .rs-h1 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2.6rem, 5vw, 4rem);
+  font-size: clamp(2.1rem, 4vw, 4rem);
   font-weight: 900;
   line-height: 1.1;
   color: #0a0a0a;
@@ -1446,14 +1446,14 @@ $btn-border-radius:      2px;
 }
 .td-content h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 900;
   letter-spacing: -0.025em;
-  //margin-bottom: 0.25rem;
+  margin-bottom: 0.25rem !important;
 }
 .td-content h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   letter-spacing: -0.02em;
 //   margin-top: 1.5rem;
@@ -1462,7 +1462,7 @@ $btn-border-radius:      2px;
 }
 .td-content h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   letter-spacing: -0.015em;
   //text-transform: uppercase;
@@ -1495,6 +1495,12 @@ $btn-border-radius:      2px;
   border-radius: 2px;
   font-size: 0.85em;
 }
+
+.td-content .lead {
+    margin-bottom: 0.5rem !important;
+    margin-top: 0.2rem !important;
+  }
+
 /* KaTeX math blocks — give them breathing room */
 .katex-display {
   background: #f7f7f5;
@@ -1715,11 +1721,11 @@ $btn-border-radius:      2px;
 
     /* 3. Keep the Left Navigation Sidebar clean and compact */
     .td-sidebar {
-      flex: 0 0 280px !important;      // Expanded default space for deep AI terms
-      max-width: 320px !important;
+      flex: 0 0 260px !important;      // Expanded default space for deep AI terms
+      max-width: 300px !important;
       width: auto !important;
       padding-left: 0 !important;
-      padding-right: 1.25rem !important;
+      padding-right: 1rem !important;
       word-wrap: break-word;           // Prevents layout blowing out if text is huge
     }
 
@@ -1728,10 +1734,10 @@ $btn-border-radius:      2px;
     main.col-md-7,
     main[role="main"] {
       flex: 1 !important;
-      max-width: calc(100% - 280px) !important;
+      max-width: calc(100% - 260px) !important;
       width: auto !important;
-      padding-left: 1.5rem !important;
-      padding-right: 0 !important;
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
     }
 
     /* 5. Remove internal structural restrictions */
@@ -1747,7 +1753,8 @@ $btn-border-radius:      2px;
       justify-content: space-between !important;
       align-items: flex-start !important;
       width: 100% !important;
-      gap: 1.5rem !important;
+      gap: 1rem !important;
+      margin-top: 0.2 rem !important;
     }
 
     /* 7. MAXIMUM VISUAL PRIORITY: Center track expands to capture all available space */
