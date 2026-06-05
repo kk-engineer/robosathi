@@ -1,6 +1,6 @@
-{{ $version := .Site.Params.katex.version | default "latest" -}}
-{{ $katexOptions := $.Page.Site.Params.katex.options | default $.Page.Site.Params.math.options | default dict -}}
-{{ $domElement := $.Page.Site.Params.katex.html_dom_element | default "document.body" -}}
+{{ $version := site.Params.katex.version | default "latest" -}}
+{{ $katexOptions := site.Params.katex.options | default site.Params.math.options | default dict -}}
+{{ $domElement := site.Params.katex.html_dom_element | default "document.body" -}}
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@{{ $version }}/dist/katex.min.css" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@{{ $version }}/dist/katex.min.js" crossorigin="anonymous"></script>
@@ -10,5 +10,58 @@
 {{ end -}}
 
 <script defer src="https://cdn.jsdelivr.net/npm/katex@{{ $version }}/dist/contrib/auto-render.min.js" crossorigin="anonymous"
-{{ printf "onload='renderMathInElement(%s, %s);'" ($domElement | safeJS) (printf "%s" ($katexOptions | jsonify)) | safeHTMLAttr -}}>
+{{ printf "onload='renderMathInElement(%s, %s); window.rsInitCopyTex && window.rsInitCopyTex();'" ($domElement | safeJS) (printf "%s" ($katexOptions | jsonify)) | safeHTMLAttr -}}>
+</script>
+<script>
+window.rsInitCopyTex = function () {
+  var equations = document.querySelectorAll('.katex-display, .katex:not(.katex-display .katex)');
+  equations.forEach(function (eq) {
+    if (eq.querySelector('.copy-tex-button')) return;
+
+    var annotation = eq.querySelector('annotation');
+    if (!annotation || !annotation.textContent.trim()) return;
+
+    var button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'copy-tex-button';
+    button.textContent = 'Copy';
+
+    if (!eq.classList.contains('katex-display')) {
+      button.classList.add('copy-inline');
+    }
+
+    var timer;
+    eq.appendChild(button);
+
+    eq.addEventListener('mouseenter', function () {
+      clearTimeout(timer);
+      button.style.display = 'flex';
+    });
+
+    eq.addEventListener('mouseleave', function () {
+      timer = setTimeout(function () {
+        button.style.display = 'none';
+      }, 300);
+    });
+
+    button.addEventListener('mouseenter', function () {
+      clearTimeout(timer);
+    });
+
+    button.addEventListener('click', function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      navigator.clipboard.writeText(annotation.textContent).then(function () {
+        button.textContent = 'Copied!';
+        button.classList.add('copied');
+
+        setTimeout(function () {
+          button.textContent = 'Copy';
+          button.classList.remove('copied');
+        }, 2000);
+      });
+    });
+  });
+};
 </script>

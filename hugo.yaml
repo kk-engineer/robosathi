@@ -87,7 +87,8 @@ params:
     options:
       output: htmlAndMathml # This ensures the <annotation> tag is created
   katex:
-    enable: true
+    enable: false
+    version: "0.16.11"
     options:
       output: htmlAndMathml
 
