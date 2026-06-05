@@ -18,8 +18,8 @@ RoboSathi exists to make it easy to understand, practical to learn, and exciting
 
   <div class="rs-creator-card">
     <a href="https://www.linkedin.com/in/kk-engineer/" target="_blank" rel="noopener noreferrer" style="display: block; flex-shrink: 0;">
-    <img class="rs-creator-card__avatar" src="/images/profile/kumar_karan.png" alt="Karan">
-  </a>
+  {{< imgproc "images/about/kumar_karan.png" Resize "60x" "lazy" "high" >}}{{< /imgproc >}}
+    </a>
     <div class="rs-creator-card__body">
       <p class="rs-eyebrow" style="text-align:left;margin-bottom:0.4rem">
         Creator & Instructor</p>
