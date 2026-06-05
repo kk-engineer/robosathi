@@ -1,4 +1,4 @@
-{{ if eq .Section "docs" }}
+{{ if or (eq .Section "docs") (eq .Section "blog") }}
 <div id="rs-progress" style="
   position:fixed;top:0;left:0;height:2px;
   width:0%;background:#B8945A;
@@ -13,6 +13,45 @@
     var pct = s.scrollTop / (s.scrollHeight - s.clientHeight) * 100;
     bar.style.width = Math.min(pct, 100) + '%';
   }, { passive: true });
+})();
+</script>
+{{ end }}
+
+{{ if hugo.IsProduction }}
+<script>
+(function() {
+  const gaId = 'G-P2ERDP8TT3';
+  let initialized = false;
+
+  function loadGA() {
+    if (initialized) return;
+    initialized = true;
+
+    // Clean up event listeners immediately so they only fire once
+    window.removeEventListener('scroll', loadGA);
+    window.removeEventListener('mousemove', loadGA);
+    window.removeEventListener('touchstart', loadGA);
+
+    // Dynamically inject the Google Tag Manager script
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaId;
+    document.head.appendChild(script);
+
+    // Initialize GA4 tracking
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', gaId, { 'anonymize_ip': true });
+  }
+
+  // Listen for user interactions to load GA
+  window.addEventListener('scroll', loadGA, { passive: true });
+  window.addEventListener('mousemove', loadGA, { passive: true });
+  window.addEventListener('touchstart', loadGA, { passive: true });
+
+  // Fallback: Force load after 4 seconds if the user stays completely idle
+  setTimeout(loadGA, 4000);
 })();
 </script>
 {{ end }}

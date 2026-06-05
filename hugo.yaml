@@ -259,4 +259,4 @@ module:
 # Add Google Analytics
 services:
   googleAnalytics:
-    id: 'G-P2ERDP8TT3'
+    #id: '' # Leave blank or comment out to prevent native render-blocking injection; moved to body-end.html
