@@ -1589,19 +1589,19 @@ $btn-border-radius:      2px;
 
 // About section changes
 .rs-about-section {
-  padding: 0.2rem 0 4rem;
+  padding: 0.1rem 0 0.5rem 0;
 }
 
 .rs-creator-card {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 2rem;
+  gap: 0.5rem;
   align-items: flex-start;
-  max-width: 760px;
+  max-width: 720px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0.5rem;
   border: 1px solid #b8945a;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   background: linear-gradient(135deg, #fffdf9 0%, #ffffff 60%);
 }
 
@@ -1622,18 +1622,18 @@ $btn-border-radius:      2px;
 
 .rs-creator-card__name {
   font-family: 'Playfair Display', serif;
-  font-size: 1.65rem;
+  font-size: 22px;
   font-weight: 700;
   color: #0a0a0a;
   letter-spacing: -0.02em;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.2rem;
 }
 
 .rs-creator-card__bio {
-  font-size: 0.85rem;
+  font-size: 16px;
   color: #1c1d1f;
-  line-height: 1.75;
-  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
   font-style: italic;
 }
 
@@ -1648,9 +1648,10 @@ $btn-border-radius:      2px;
   gap: 0.2rem;
   align-items: flex-start;
   padding: 0.5rem 0.5rem;
-  border: 1px solid #b8945a;
+  border: 0.5px solid #b8945a;
   border-radius: 8px;
   background: #ffffff;
+  max-width: 350px;
 }
 
 .rs-cred__icon {
@@ -1661,7 +1662,7 @@ $btn-border-radius:      2px;
 
 .rs-cred__label {
   display: block;
-  font-size: 0.68rem;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1671,15 +1672,15 @@ $btn-border-radius:      2px;
 
 .rs-cred__text {
   display: block;
-  font-size: 0.9rem;
+  font-size: 16px;
   font-weight: 600;
   color: #0f172a;
-  line-height: 1.3;
+  line-height: 1.1;
 }
 
 .rs-cred__sub {
   display: block;
-  font-size: 0.8rem;
+  font-size: 14px;
   color: #8a8a8a;
   margin-top: 0.1rem;
 }
