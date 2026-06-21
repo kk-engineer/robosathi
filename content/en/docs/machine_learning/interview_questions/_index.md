@@ -3,6 +3,7 @@ title: Interview Questions
 description: Machine Learning Interview Questions
 date: 2026-02-24
 weight: 6
+math: true
 ---
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxeydAqz2lsSMFYinbrJy9mu" 
@@ -77,7 +78,7 @@ Describe how to avoid data leakage when performing feature engineering and cross
 {{</ question >}}
 
 {{< answer >}}
-👉Any information from the validation/test set must NOT influence training, directly or indirectly. <br>
+Any information from the validation/test set must NOT influence training, directly or indirectly. <br>
 So, how do we prevent this leakage of information or data leakage from training to validation or test set ? <br>
 1. **Train-Test Contamination**:
 - ❌ **Wrong**: Applying preprocessing (like global StandardScaler, Mean_Imputation, Target_Encoding etc.) on the entire dataset before splitting.
@@ -153,24 +154,24 @@ What is heteroscedasticity and how does it affect OLS? How would you test for it
 {{< answer >}}
 💡 **Heteroscedasticity = Variance NOT Constant**
 
-**Note**: **Linear regression** **assumes** that the data has **homoscedasticity** (constant variance).
+_Note_: **Linear regression** **assumes** that the data has **homoscedasticity** (constant variance).
 
 **Ordinary Least Squares (OLS)** is an **unweighted estimator**. It treats every data point as **equally** '**informative**'.
 - **Under Homoscedasticity**: Every point has the same amount of noise, so giving them equal weight is logical.
 - **Under Heteroscedasticity**: Some points have very low variance (high certainty) and some have very high variance (lots of noise).
 
-👉 By treating all the points **equally**, **OLS** is 'wasting' the precision of the low-variance points and being 'skewed' by the high-variance points. <br>
+By treating all the points **equally**, **OLS** is 'wasting' the precision of the low-variance points and being 'skewed' by the high-variance points. <br>
 This is why OLS is no longer efficient; does not produce the smallest possible **standard errors**. <br>
 Which means:
 - **t-tests** become unreliable.
 - **p-values** become misleading.
 - **Confidence intervals** are wrong.
 
-👉 **OLS** is **NO** longer **B.L.U.E.** (_Best Linear Unbiased Estimator_). 
+**OLS** is **NO** longer **B.L.U.E.** (_Best Linear Unbiased Estimator_). 
 - While the **coefficients** remain **unbiased**, <br>
 they are **no** longer the '**best**' because there is another estimator (like **Weighted Least Squares**) that could provide a lower variance.
 
-👉 **How to Test for Heteroscedasticity** ?
+**How to Test for Heteroscedasticity** ?
 - **Visual (Residual Plot)**: 
   - **Heteroscedasticity**: The points form a '**fan**' or '**funnel**' shape, widening or narrowing as values increase.
   - **Homoscedasticity**: The points look like a random 'cloud' with **consistent** thickness.
@@ -211,11 +212,11 @@ The relationship between them is rooted in **Bayes' Theorem**:
 - **MLE** maximizes only the Likelihood: \(P(\text{data} \mid \theta)\)
 - **MAP** maximizes the Posterior: \(P(\text{data} \mid \theta) P(\theta)\)
 
-**Note**:
+_Note_:
 1. P(data) is a constant (a 'normalizing factor'), so we ignore it during maximization.
 2. For a **prior** with **uniform** distribution where every value is equally likely, **MAP** becomes **MLE**.
 
-👉 **Coin Toss Example**: <br>
+**Coin Toss Example**: <br>
 - Data: Toss the coin 3 times, 2H + 1T.
   - **MLE**: Probability of heads (\(\theta\))
     - \(\theta_{MLE}\) = 2/3 = 0.67
@@ -251,9 +252,9 @@ For binary classification, where the outcome is Yes/No, 0/1 etc., entropy will b
 ️Measures the reduction in entropy (uncertainty) achieved by splitting a dataset based on a specific attribute.
 \[ IG=Entropy(Parent)-\left[\frac{N_{left}}{N_{parent}}Entropy(Child_{left})+\frac{N_{right}}{N_{parent}}Entropy(Child_{right})\right] \]
 
-**Note**: The goal of a decision tree algorithm is to find the split that maximizes information gain, meaning it removes the most uncertainty from the data.
+_Note_: The goal of a decision tree algorithm is to find the split that maximizes information gain, meaning it removes the most uncertainty from the data.
 
-👉 To understand how a Decision Tree selects the 'best' root node, let’s use the example below: <br>
+To understand how a Decision Tree selects the 'best' root node, let’s use the example below: <br>
 
 **The Dataset: "Will they buy the product?"**
 | ID | Age | Income | Credit Score | Buy? (Target) |
