@@ -1,10 +1,14 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
+{{- $title := .Get "title" -}}
 <div class="rs-callout rs-callout-question rs-callout-sage">
   <div class="rs-callout__header">
     <span class="rs-callout__icon" aria-hidden="true">
       <i class="fas fa-circle-question"></i>
     </span>
     <span class="rs-callout__label">Question</span>
+    {{- with $title -}}
+    <span class="rs-callout__title rs-callout__title--panel">{{ . }}</span>
+    {{- end -}}
   </div>
   <div class="rs-callout__body">{{- .Inner | markdownify -}}</div>
 </div>

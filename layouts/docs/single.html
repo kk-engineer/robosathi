@@ -1,41 +1,15 @@
 {{/*
   ╔══════════════════════════════════════════════════════════════╗
-  ║  FEATURE: THE TIME CAPSULE — Letters to your future self     ║
+  ║  Lesson reading panel                                       ║
   ║                                                              ║
-  ║  After reading a lesson, you write one sentence: what you    ║
-  ║  understood, what confused you, or what you felt.            ║
-  ║  When you return, you see your past note with a timestamp:   ║
-  ║  "You, 4 days ago: 'I finally get why gradients vanish.'"    ║
-  ║                                                              ║
-  ║  The right pane also shows a "Learning Trail" — your last    ║
-  ║  5 notes across all lessons in the course, forming a         ║
-  ║  beautiful, personal memory scroll through the curriculum.   ║
+  ║  The right pane stays intentionally minimal: it provides     ║
+  ║  scroll-aware links for sections on the current page and     ║
+  ║  a page-level reading progress indicator.                   ║
   ╚══════════════════════════════════════════════════════════════╝
 */}}
 {{ define "main" }}
 <style>
-  /* ── Layout ──────────────────────────────────────────────── */
-  /* -------Request Card --------- */
-  .rs-quest-card { transition:transform 0.2s cubic-bezier(0.4,0,0.2,1), box-shadow 0.2s cubic-bezier(0.4,0,0.2,1), border-color 0.2s ease; }
-  .rs-quest-card:hover { transform:translateY(-2px); border-color:#B8945A !important; box-shadow:0 10px 25px rgba(184,148,90,0.08) !important; }
-  .rs-mark-btn { width:100%; padding:0.7rem 1rem; border-radius:10px; border:1.5px solid #e1dacb; background:#faf8f5; color:#8a7a60; font-size:0.82rem; font-weight:600; letter-spacing:0.03em; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:0.5rem; transition:all 0.22s ease; text-transform:uppercase; }
-  /* Allow hover properties on both active states, but keep them distinct */
-  .rs-mark-btn:hover { background:#fff9f0; border-color:#B8945A; color:#B8945A; }
-  .rs-mark-btn--done { background:linear-gradient(135deg,#f9f3e8,#fffdf6); border-color:#B8945A; color:#7a5c28; cursor:pointer; }
-  .rs-mark-btn--done:hover { background:#fdf2df; border-color:#c47b5a; color:#c47b5a; }
-  .rs-mark-btn__icon { width:18px; height:18px; border-radius:50%; border:1.5px solid currentColor; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-  .rs-mark-btn--done .rs-mark-btn__icon { background:#B8945A; border-color:#B8945A; color:#fff; }
-  @keyframes rs-pop { 0%{transform:scale(1)} 40%{transform:scale(1.06)} 70%{transform:scale(0.97)} 100%{transform:scale(1)} }
-  .rs-mark-btn--pop { animation:rs-pop 0.35s cubic-bezier(0.4,0,0.2,1); }
-  .rs-dot-map { display:flex; flex-wrap:wrap; gap:5px; padding:0.85rem 1rem; background:#ffffff; border:1px solid #B8945A; border-radius:12px; margin-bottom:0.75rem; }
-  .rs-dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; transition:transform 0.15s ease; cursor:default; box-sizing: border-box; }
-  .rs-dot--done { background:#B8945A; border: none !important; box-shadow: none; }
-  /* Active but NOT YET read: A sharp hollow target pulse layout */
-  .rs-dot--active { background:#ffffff; border: 2px solid #B8945A; box-shadow: 0 0 0 3px rgba(184,148,90,0.2); }
-  /* Active AND marked read: Solid dark gold with an elegant halo accent frame */
-  .rs-dot--active.rs-dot--done { background:#B8945A; border: none; box-shadow:0 0 0 2.5px #fffdf6, 0 0 0 4px #B8945A; }
-  .rs-dot--locked { background:#e8e4dc; border: none; box-shadow: none; }
-  .rs-dot:hover { transform:scale(1.4); }
+  /* ── Lesson completion ──────────────────────────────────── */
   .rs-chapter-complete { display:none; margin-top:3rem; padding:2rem 1.5rem; background:linear-gradient(135deg,#fdf8ef 0%,#ffffff 60%); border:1px solid #e8ddd0; border-radius:16px; text-align:center; }
   .rs-chapter-complete__seal { width:56px; height:56px; border-radius:50%; background:#0a0a0a; display:flex; align-items:center; justify-content:center; margin:0 auto 1rem; font-size:1.4rem; }
   .rs-chapter-complete__title { font-family:'Playfair Display',serif; font-size:1.35rem; font-weight:700; color:#0a0a0a; margin-bottom:0.35rem; }
@@ -44,81 +18,129 @@
   .rs-chapter-complete__cta:hover { background:#B8945A; color:#fff; text-decoration:none; }
   .rs-badge-row { display:flex; justify-content:center; gap:0.5rem; flex-wrap:wrap; margin-bottom:1.25rem; }
   .rs-badge { font-size:0.7rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:3px 10px; border-radius:20px; background:rgba(184,148,90,0.1); color:#7a5c28; border:1px solid rgba(184,148,90,0.25); }
+
+  /* ── Reading progress ────────────────────────────────────── */
   #rs-read-bar { position:fixed; top:0; left:0; height:2.5px; width:0%; background:linear-gradient(90deg,#D4AF37,#B8945A); z-index:9999; pointer-events:none; }
+  .rs-reading-panel {
+    display:flex;
+    flex-direction:column;
+    gap:1.75rem;
+    padding-top:0.25rem;
+  }
+  .rs-reading-panel__section { min-width:0; }
+  .rs-reading-panel__label {
+    margin:0 0 0.8rem;
+    font-size:0.68rem;
+    font-weight:800;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:#9a7340;
+  }
 
-  /* ── Capsule write card ──────────────────────────────────── */
-  .rs-capsule { border: 1px solid #B8945A; border-radius: 14px; overflow: hidden; margin-bottom: 0.75rem; background: #ffffff; }
-  .rs-capsule__header { padding: 0.7rem 1rem; background: linear-gradient(135deg, #fdf8ef, #fdfaf5); border-bottom: 1px solid #B8945A; display: flex; align-items: center; justify-content: space-between; }
-  .rs-capsule__title { font-size: 0.68rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: #B8945A; }
-  .rs-capsule__note-count { font-size: 0.62rem; color: #B8945A; font-style: italic; }
+  /* ── On this page / scroll-aware TOC ────────────────────── */
+  .rs-page-toc__list {
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  .rs-page-toc__item { margin:0; padding:0; }
+  .rs-page-toc__link {
+    display:grid;
+    grid-template-columns:1rem minmax(0,1fr);
+    align-items:start;
+    column-gap:0.45rem;
+    width:100%;
+    padding:0.22rem 0;
+    border-left:1px solid transparent;
+    color:#5b667a;
+    font-size:0.8rem;
+    font-weight:500;
+    line-height:1.45;
+    text-decoration:none !important;
+    transition:color 0.15s ease, border-color 0.15s ease, padding-left 0.15s ease;
+  }
+  .rs-page-toc__link:hover { color:#7a5c28; }
+  .rs-page-toc__marker {
+    display:block;
+    width:1rem;
+    color:#b8b1a5;
+    font-size:0.78rem;
+    line-height:1.45;
+    text-align:center;
+  }
+  .rs-page-toc__item--past .rs-page-toc__marker { color:#B8945A; }
+  .rs-page-toc__item--active .rs-page-toc__link {
+    color:#7a5c28;
+    font-weight:700;
+    border-left-color:#B8945A;
+    padding-left:0.45rem;
+  }
+  .rs-page-toc__item--active .rs-page-toc__marker { color:#B8945A; font-weight:800; }
+  .rs-page-toc__item--sub .rs-page-toc__link {
+    padding-left:0.85rem;
+    font-size:0.76rem;
+  }
+  .rs-page-toc__item--sub.rs-page-toc__item--active .rs-page-toc__link { padding-left:1.3rem; }
+  .rs-page-toc--empty { display:none; }
 
-  /* Past note ──────────────────────────────────────────────── */
-  .rs-capsule__past { display: none; padding: 0.85rem 1rem; border-bottom: 1px solid #f4f0e8; position: relative; }
-  .rs-capsule__past.has-note { display: block; }
-  .rs-capsule__past-from { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #B8945A; margin-bottom: 0.3rem; display: flex; align-items: center; gap: 0.4rem; }
-  .rs-capsule__past-from::before { content: '📜'; font-size: 0.75rem; }
-  .rs-capsule__past-text { font-size: 0.88rem; color: #3c2c1a; font-style: italic; line-height: 1.6; font-family: 'Playfair Display', serif; padding: 0.5rem 0.75rem; background: #fdf8ef; border-left: 2px solid #D4AF37; border-radius: 0 6px 6px 0; }
-  .rs-capsule__past-clear { position: absolute; top: 0.7rem; right: 0.85rem; background: none; border: none; color: #d0c8b8; font-size: 0.75rem; cursor: pointer; padding: 0; line-height: 1; transition: color 0.15s; }
-  .rs-capsule__past-clear:hover { color: #c47b5a; }
+  /* ── Page-level progress ───────────────────────────────── */
+  .rs-reading-progress__row {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:0.75rem;
+    margin-bottom:0.45rem;
+  }
+  .rs-reading-progress__bar {
+    width:100%;
+    height:4px;
+    overflow:hidden;
+    border-radius:999px;
+    background:#f1ece3;
+  }
+  .rs-reading-progress__fill {
+    width:0%;
+    height:100%;
+    border-radius:999px;
+    background:linear-gradient(90deg,#D4AF37,#B8945A);
+    transition:width 0.18s ease-out;
+  }
+  .rs-reading-progress__value {
+    flex-shrink:0;
+    font-size:0.75rem;
+    font-weight:700;
+    color:#B8945A;
+    font-variant-numeric:tabular-nums;
+  }
+  .rs-reading-progress__meta {
+    margin:0.4rem 0 0;
+    font-size:0.68rem;
+    color:#8e8e93;
+  }
 
-  /* Write area ─────────────────────────────────────────────── */
-  .rs-capsule__write { padding: 0.75rem 1rem; }
-  .rs-capsule__prompt { font-size: 0.75rem; color: #1c1d1f; margin-bottom: 0.45rem; line-height: 1.5; }
-  .rs-capsule__prompt em { color: #B8945A; font-style: normal; font-weight: 500; }
-  .rs-capsule__textarea { width: 100%; min-height: 68px; border: 1px solid #e8ddd0; border-radius: 8px; padding: 0.6rem 0.75rem; font-size: 0.84rem; font-family: 'DM Sans', sans-serif; color: #1c1c1e; background: #fdfcfa; resize: vertical; line-height: 1.55; outline: none; transition: border-color 0.2s, box-shadow 0.2s; display: block; }
-  .rs-capsule__textarea::placeholder { color: #B8945A; font-style: italic; }
-  .rs-capsule__textarea:focus { border-color: #B8945A; box-shadow: 0 0 0 3px rgba(184,148,90,0.08); background: #ffffff; }
-  .rs-capsule__save-row { display: flex; align-items: center; justify-content: space-between; margin-top: 0.5rem; }
-  .rs-capsule__char-count { font-size: 0.65rem; color: #1c1d1f; font-variant-numeric: tabular-nums; }
-  .rs-capsule__save-btn { padding: 0.4rem 1rem; background: #B8945A; color: #fff; border: none; border-radius: 7px; font-size: 0.78rem; font-weight: 600; cursor: pointer; letter-spacing: 0.03em; transition: background 0.2s, transform 0.15s; }
-  .rs-capsule__save-btn:hover { background: #0a0a0a; transform: translateY(-1px); }
-  .rs-capsule__save-btn:disabled { background: #e8e4dc; color: #b0a898; cursor: default; transform: none; }
-  .rs-capsule__saved-msg { font-size: 0.72rem; color: #2d7a4f; font-weight: 500; opacity: 0; transition: opacity 0.3s; pointer-events: none; }
-  .rs-capsule__saved-msg.show { opacity: 1; }
-
-  /* ── Learning trail ──────────────────────────────────────── */
-  .rs-trail { border: 1px solid #B8945A; border-radius: 14px; overflow: hidden; margin-bottom: 0.75rem; background: #ffffff; }
-  .rs-trail__header { padding: 0.65rem 1rem; border-bottom: 1px solid #B8945A; display: flex; align-items: center; justify-content: space-between; }
-  .rs-trail__title { font-size: 0.68rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: #B8945A; }
-  .rs-trail__count { font-size: 0.62rem; color: #B8945A; font-weight: 700; }
-  .rs-trail__empty { padding: 0.85rem 1rem; font-size: 0.8rem; color: #1c1d1f; font-style: italic; text-align: center; line-height: 1.6; }
-  .rs-trail__list { list-style: none; padding: 0; margin: 0; }
-  @keyframes rs-trail-in { from{ opacity:0; transform:translateX(-6px); } to{ opacity:1; transform:translateX(0); } }
-  .rs-trail__item--new { animation: rs-trail-in 0.35s ease; }
+  /* Keep in-page jumps clear of the fixed navbar. */
+  .rs-main-reading-track h2,
+  .rs-main-reading-track h3,
+  .rs-main-reading-track .rs-callout-panel .rs-callout__title--panel,
+  .rs-main-reading-track .rs-callout-definition .rs-callout__title--panel,
+  .rs-main-reading-track .rs-callout-question .rs-callout__title--panel,
+  .rs-main-reading-track .rs-callout-answer .rs-callout__title--panel {
+    scroll-margin-top:6.5rem;
+  }
 </style>
 
 {{/* ── Hugo data ──────────────────────────────────────────── */}}
 {{ $pages := .CurrentSection.Pages.ByWeight }}
 {{ $totalLessons := len $pages }}
 {{ $currentLessonIndex := 0 }}
-{{ $prevPage := "" }}
-{{ $nextPage := "" }}
-{{ $foundCurrent := false }}
 {{ $isLastLesson := false }}
 {{ range $index, $page := $pages }}
   {{ if eq $page.Permalink $.Permalink }}
     {{ $currentLessonIndex = add $index 1 }}
-    {{ $foundCurrent = true }}
-  {{ else if not $foundCurrent }}
-    {{ $prevPage = $page }}
-  {{ else }}
-    {{ if not $nextPage }}{{ $nextPage = $page }}{{ end }}
   {{ end }}
 {{ end }}
 {{ if eq $currentLessonIndex $totalLessons }}{{ $isLastLesson = true }}{{ end }}
-{{ $completionPct := 0 }}
-{{ if gt $totalLessons 0 }}{{ $completionPct = mul (div (float $currentLessonIndex) (float $totalLessons)) 100 }}{{ end }}
-{{ $nextHref := "" }}
-{{ with $nextPage }}{{ $nextHref = .RelPermalink }}{{ end }}
 {{ $sectionTitle := .CurrentSection.Title }}
-{{ $pageTitle := .LinkTitle }}
-{{ $permalink := .RelPermalink }}
-{{ $permalinks := slice }}
-{{ $pageTitles := slice }}
-{{ range $pages }}
-  {{ $permalinks = $permalinks | append .RelPermalink }}
-  {{ $pageTitles = $pageTitles | append .LinkTitle }}
-{{ end }}
 
 <div id="rs-read-bar"></div>
 
@@ -142,109 +164,25 @@
     </div>
 
     <aside class="d-none d-xl-block rs-right-performance-panel" style="position:sticky; top:7rem; margin-top:0.5rem;">
+      <div class="rs-reading-panel">
+        <section class="rs-reading-panel__section rs-page-toc" id="rs-page-toc">
+          <div class="rs-reading-panel__label">On This Page</div>
+          <nav aria-label="On this page">
+            <ul class="rs-page-toc__list" id="rs-page-toc-list"></ul>
+          </nav>
+        </section>
 
-      {{/* Module progress */}}
-      <div style="background:#ffffff; border:1px solid #b8945a; border-radius:14px; padding:1.25rem; margin-bottom:0.75rem; box-shadow:0 4px 20px rgba(184,148,90,0.03);">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem;">
-          <span style="font-size:0.72rem; font-weight:700; text-transform:uppercase; color:#8e8e93; letter-spacing:0.06em;">Module Progress</span>
-          <span id="rs-pct-label" style="font-size:0.85rem; font-weight:700; color:#B8945A;">{{ printf "%.0f" $completionPct }}%</span>
-        </div>
-        <div style="width:100%; height:6px; background:#f4f0e6; border-radius:10px; overflow:hidden; margin-bottom:0.5rem;">
-          <div id="rs-prog-fill" style="width:{{ printf "%.0f" $completionPct }}%; height:100%; background:linear-gradient(90deg,#D4AF37,#B8945A); border-radius:10px; transition:width 0.5s ease-out;"></div>
-        </div>
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.5rem; gap:0.5rem;">
-          {{/* Keeps the step counter intact and prevents it from shrinking or wrapping */}}
-          <span style="font-size:0.78rem; color:#48484a; white-space:nowrap; flex-shrink:0;">Step <strong>{{ $currentLessonIndex }}</strong> of {{ $totalLessons }}</span>
-
-          {{/* Centers wrapped text perfectly with professional multi-line line spacing */}}
-          <span style="font-size:0.72rem; background:rgba(184,148,90,0.08); color:#B8945A; padding:4px 10px; border-radius:12px; font-weight:600; border:1px solid rgba(184,148,90,0.15); text-align:center; line-height:1.3; max-width:65%;">{{ $sectionTitle }}</span>
-        </div>
-      </div>
-
-      {{/* ════ TIME CAPSULE — write ════ */}}
-      <div class="rs-capsule" id="rs-capsule">
-        <div class="rs-capsule__header">
-          <span class="rs-capsule__title">🗒️ Take Notes</span>
-          <span class="rs-capsule__note-count" id="rs-total-notes-label">0 notes written</span>
-        </div>
-        <div class="rs-capsule__past" id="rs-past-note">
-          <div class="rs-capsule__past-from" id="rs-past-from">You, some time ago</div>
-          <button class="rs-capsule__past-clear" onclick="rsClearNote()" title="Clear this note">✕</button>
-          <div class="rs-capsule__past-text" id="rs-past-text"></div>
-        </div>
-        <div class="rs-capsule__write">
-          <p class="rs-capsule__prompt">
-            Make your own <em>notes</em> here — what clicked, what confused you, or how you'd explain it to a friend.
-          </p>
-          <textarea
-            class="rs-capsule__textarea"
-            id="rs-note-input"
-            maxlength="200"
-            placeholder="e.g. I finally understand why gradients vanish in deep networks."
-            oninput="rsCapsuleInput()"
-          ></textarea>
-          <div class="rs-capsule__save-row">
-            <span class="rs-capsule__saved-msg" id="rs-saved-msg">Noted ✓</span>
-            <div style="display:flex; align-items:center; gap:0.75rem;">
-              <span class="rs-capsule__char-count" id="rs-char-count">0 / 200</span>
-              <button class="rs-capsule__save-btn" id="rs-save-btn" onclick="rsSaveNote()" disabled>Note Down</button>
+        <section class="rs-reading-panel__section" aria-label="Reading progress">
+          <div class="rs-reading-panel__label">Reading Progress</div>
+          <div class="rs-reading-progress__row">
+            <div class="rs-reading-progress__bar" aria-hidden="true">
+              <div class="rs-reading-progress__fill" id="rs-page-progress-fill"></div>
             </div>
+            <span class="rs-reading-progress__value" id="rs-page-progress-label">0%</span>
           </div>
-        </div>
+          <p class="rs-reading-progress__meta" id="rs-page-progress-meta">Start of page</p>
+        </section>
       </div>
-
-      {{/* ════ LEARNING TRAIL ════ */}}
-      <div class="rs-trail" id="rs-trail">
-        <div class="rs-trail__header">
-          <span class="rs-trail__title">All Notes</span>
-          <span class="rs-trail__count" id="rs-trail-count">0 notes</span>
-        </div>
-        <div id="rs-trail-body">
-          <div class="rs-trail__empty" id="rs-trail-empty">All your notes will appear here.</div>
-          <ul class="rs-trail__list" id="rs-trail-list" style="display:none;"></ul>
-        </div>
-      </div>
-
-      {{/* Dot map */}}
-      <div class="rs-dot-map" id="rs-dot-map" style="margin-bottom:0.75rem;">
-        {{ range $index, $page := $pages }}
-        {{ $dotIndex := add $index 1 }}
-        {{ if eq $page.Permalink $.Permalink }}
-        <div class="rs-dot rs-dot--active" title="{{ $page.LinkTitle }}" data-idx="{{ $dotIndex }}" data-href="{{ $page.RelPermalink }}"></div>
-        {{ else }}
-        <a href="{{ $page.RelPermalink }}" class="rs-dot rs-dot--locked" title="{{ $page.LinkTitle }}" data-idx="{{ $dotIndex }}" data-href="{{ $page.RelPermalink }}" style="text-decoration:none;"></a>
-        {{ end }}
-        {{ end }}
-        <div style="width:100%; margin-top:0.45rem; display:flex; justify-content:space-between;">
-          <span style="font-size:0.65rem; color:#B8945A; letter-spacing:0.05em; text-transform:uppercase;">Lesson map</span>
-          <span id="rs-dot-done-count" style="font-size:0.65rem; color:#B8945A; font-weight:700;">0/{{ $totalLessons }} read</span>
-        </div>
-      </div>
-
-      {{/* Nav stack */}}
-      <div style="display:flex; flex-direction:column; gap:0.75rem;">
-        {{ if $prevPage }}
-        <a href="{{ $prevPage.RelPermalink }}" class="rs-quest-card" style="display:flex; flex-direction:column; gap:0.5rem; padding:1rem; background:#faf8f5; border:1px solid #e1dacb; border-radius:12px; text-decoration:none;">
-          <span style="font-size:0.62rem; font-weight:800; color:#B8945A; text-transform:uppercase; letter-spacing:0.05em;">Previous</span>
-          <span style="font-size:0.92rem; font-weight:600; color:#1c1d1f; line-height:1.3;">{{ $prevPage.LinkTitle }}</span>
-        </a>
-        {{ end }}
-        <div class="rs-quest-card" style="display:flex; flex-direction:column; gap:0.25rem; padding:1rem; background:#fffdf9; border:2px solid #B8945A; border-radius:12px;">
-          <span style="font-size:0.62rem; font-weight:800; color:#B8945A; text-transform:uppercase; letter-spacing:0.05em;">Reading Now</span>
-          <span style="font-size:0.92rem; font-weight:700; color:#1c1c1e; line-height:1.3;">{{ .LinkTitle }}</span>
-        </div>
-        {{ if $nextPage }}
-        <a href="{{ $nextPage.RelPermalink }}" class="rs-quest-card" style="display:flex; flex-direction:column; gap:0.25rem; padding:1rem; background:#fcfaf8; border:1px solid #eae6df; border-radius:12px; text-decoration:none;">
-          <span style="font-size:0.62rem; font-weight:800; color:#B8945A; text-transform:uppercase; letter-spacing:0.05em;">Next</span>
-            <span style="font-size:0.92rem; font-weight:600; color:#1c1d1f; line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ $nextPage.LinkTitle }}</span>
-        </a>
-        {{ end }}
-        <button id="rs-mark-btn" class="rs-mark-btn" onclick="rsMarkRead()">
-          <span class="rs-mark-btn__icon" id="rs-mark-icon"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-          <span id="rs-mark-label">Mark as Read</span>
-        </button>
-      </div>
-
     </aside>
   </div>
 
@@ -254,283 +192,150 @@
 
 <script>
 (function(){
-  var TOTAL        = {{ $totalLessons }};
-  var CURRENT_HREF = {{ $permalink | jsonify }};
-  var PAGE_TITLE   = {{ $pageTitle | jsonify }};
-  var IS_LAST      = {{ $isLastLesson | jsonify }};
-  var PERMALINKS   = {{ $permalinks | jsonify }};
+  var readingTrack = document.querySelector('.rs-main-reading-track');
+  var toc = document.getElementById('rs-page-toc');
+  var tocList = document.getElementById('rs-page-toc-list');
+  var progressFill = document.getElementById('rs-page-progress-fill');
+  var progressLabel = document.getElementById('rs-page-progress-label');
+  var progressMeta = document.getElementById('rs-page-progress-meta');
+  var topBar = document.getElementById('rs-read-bar');
 
-  /* ── Key helpers ────────────────────────────────────────── */
-  function sk(p)   { return 'rs_read_'+p.replace(/\//g,'_'); }
-  function nk(p)   { return 'rs_note_'+p.replace(/\//g,'_'); }
-  function isRead(p){ try{ return localStorage.getItem(sk(p))==='1'; }catch(e){ return false; } }
-  function markReadLS(p){ try{ localStorage.setItem(sk(p),'1'); }catch(e){} }
-  function getNote(p){ try{ return JSON.parse(localStorage.getItem(nk(p))||'null'); }catch(e){ return null; } }
+  if (!readingTrack) return;
 
-  function saveNoteLS(p, text){
-    try{
-      var cleanHref = p.replace(/^"|"$/g, '');
-      if (cleanHref.charAt(0) !== '/') cleanHref = '/' + cleanHref;
-      localStorage.setItem(nk(p), JSON.stringify({ text: text, ts: Date.now(), title: PAGE_TITLE, href: cleanHref }));
-    }catch(e){}
-  }
+  /* ── Scroll-aware section navigation ───────────────────── */
+  /*
+     Lesson content uses custom panel shortcodes heavily. Their titles are
+     spans rather than Markdown headings, so include panel titles as TOC
+     targets without changing the other shortcode markup. Standard h2/h3
+     headings are included only when they are outside another callout, which
+     keeps the TOC from filling up with internal headings such as "Example".
+  */
+  var headings = Array.prototype.slice.call(
+    readingTrack.querySelectorAll(
+      'h2, h3, .rs-callout-panel .rs-callout__title--panel, ' +
+      '.rs-callout-definition .rs-callout__title--panel, ' +
+      '.rs-callout-question .rs-callout__title--panel, ' +
+      '.rs-callout-answer .rs-callout__title--panel'
+    )
+  ).filter(function(heading){
+    if (!heading.textContent.trim().length) return false;
+    if (!heading.classList.contains('rs-callout__title--panel')) {
+      return !heading.closest('.rs-callout');
+    }
+    return !!heading.closest(
+      '.rs-callout-panel, .rs-callout-definition, .rs-callout-question, .rs-callout-answer'
+    );
+  });
 
-  function clearNoteLS(p){ try{ localStorage.removeItem(nk(p)); }catch(e){} }
-  function countDone(){ return PERMALINKS.filter(function(p){ return isRead(p); }).length; }
-
-  /* ── Relative time helper ───────────────────────────────── */
-  function relTime(ts){
-    var diff = Date.now() - ts;
-    var s=diff/1000, m=s/60, h=m/60, d=h/24;
-    if(d>=1)  return Math.round(d)+' day'+(Math.round(d)>1?'s':'')+' ago';
-    if(h>=1)  return Math.round(h)+' hour'+(Math.round(h)>1?'s':'')+' ago';
-    if(m>=1)  return Math.round(m)+' min ago';
-    return 'just now';
-  }
-
-  /* ── Reading bar ────────────────────────────────────────── */
-  var bar=document.getElementById('rs-read-bar');
-  if(bar) window.addEventListener('scroll',function(){ var s=document.documentElement; bar.style.width=Math.min(s.scrollTop/(s.scrollHeight-s.clientHeight)*100,100)+'%'; },{passive:true});
-
-  /* ── Dot map ────────────────────────────────────────────── */
-  function refreshDots(){
-    var dots = document.querySelectorAll('#rs-dot-map .rs-dot'), done = 0;
-    dots.forEach(function(d){
-      if(d.dataset.href && isRead(d.dataset.href)){
-        d.classList.remove('rs-dot--locked');
-        d.classList.add('rs-dot--done');
-        done++;
-      } else {
-        d.classList.remove('rs-dot--done');
-        if(!d.classList.contains('rs-dot--active')){
-          d.classList.add('rs-dot--locked');
+  if (tocList && headings.length) {
+    headings.forEach(function(heading, index){
+      if (!heading.id) {
+        var base = heading.textContent.trim().toLowerCase()
+          .replace(/[^a-z0-9\s-]/g, '')
+          .replace(/\s+/g, '-')
+          .replace(/-+/g, '-') || ('section-' + (index + 1));
+        var id = base;
+        var suffix = 2;
+        while (document.getElementById(id)) {
+          id = base + '-' + suffix;
+          suffix += 1;
         }
+        heading.id = id;
+      }
+
+      var li = document.createElement('li');
+      li.className = 'rs-page-toc__item' + (heading.tagName === 'H3' ? ' rs-page-toc__item--sub' : '');
+
+      var link = document.createElement('a');
+      link.className = 'rs-page-toc__link';
+      link.href = '#' + heading.id;
+      link.setAttribute('data-heading-id', heading.id);
+
+      var marker = document.createElement('span');
+      marker.className = 'rs-page-toc__marker';
+      marker.setAttribute('aria-hidden', 'true');
+
+      var label = document.createElement('span');
+      label.className = 'rs-page-toc__text';
+      label.textContent = heading.textContent.trim();
+
+      link.appendChild(marker);
+      link.appendChild(label);
+      li.appendChild(link);
+      tocList.appendChild(li);
+
+      link.addEventListener('click', function(event){
+        event.preventDefault();
+        heading.scrollIntoView({behavior:'smooth', block:'start'});
+        if (window.history && window.history.replaceState) {
+          window.history.replaceState(null, '', '#' + heading.id);
+        }
+      });
+    });
+  } else if (toc) {
+    toc.classList.add('rs-page-toc--empty');
+  }
+
+  var tocItems = tocList ? Array.prototype.slice.call(tocList.querySelectorAll('.rs-page-toc__item')) : [];
+
+  function updateTocState(){
+    if (!headings.length || !tocItems.length) return;
+
+    var markerY = window.scrollY + Math.min(180, window.innerHeight * 0.22);
+    var activeIndex = 0;
+
+    headings.forEach(function(heading, index){
+      if (heading.getBoundingClientRect().top + window.scrollY <= markerY) {
+        activeIndex = index;
       }
     });
-    var lbl = document.getElementById('rs-dot-done-count');
-    if(lbl) lbl.textContent = done + '/' + TOTAL + ' read';
-  }
-  refreshDots();
 
-  /* ── Mark as read (Refactored to Toggle Engine) ───────────────────────── */
-  function syncBtn(){
-    var btn = document.getElementById('rs-mark-btn');
-    var lbl = document.getElementById('rs-mark-label');
-    if (!btn) return;
+    tocItems.forEach(function(item, index){
+      var isPast = index < activeIndex;
+      var isActive = index === activeIndex;
+      item.classList.toggle('rs-page-toc__item--past', isPast);
+      item.classList.toggle('rs-page-toc__item--active', isActive);
 
-    if (isRead(window.location.pathname)) {
-      btn.classList.add('rs-mark-btn--done');
-      if (lbl) lbl.textContent = 'Lesson Complete ✓';
-    } else {
-      btn.classList.remove('rs-mark-btn--done');
-      if (lbl) lbl.textContent = 'Mark as Read';
-    }
-  }
-  syncBtn();
-
-  window.rsMarkRead = function(){
-    var btn = document.getElementById('rs-mark-btn');
-    if (!btn) return;
-
-    var currentPath = window.location.pathname;
-    var wasRead = isRead(currentPath);
-
-    if (wasRead) {
-      // Toggle OFF: Remove tracking signature from memory
-      try { localStorage.removeItem(sk(currentPath)); } catch(e){}
-      btn.classList.remove('rs-mark-btn--done');
-    } else {
-      // Toggle ON: Commit signature and play key animations
-      markReadLS(currentPath);
-      btn.classList.add('rs-mark-btn--done', 'rs-mark-btn--pop');
-      btn.addEventListener('animationend', function(){
-        btn.classList.remove('rs-mark-btn--pop');
-      }, {once: true});
-    }
-
-    // Synchronize current button display state
-    syncBtn();
-
-    // Recompute progress values and metrics dynamically
-    var done = countDone();
-    var pct = Math.round((done / TOTAL) * 100);
-
-    var fill = document.getElementById('rs-prog-fill');
-    var pctLbl = document.getElementById('rs-pct-label');
-    if (fill) fill.style.width = pct + '%';
-    if (pctLbl) pctLbl.textContent = pct + '%';
-
-    // Synchronize the fractional counts and colors across the dot map grid
-    refreshDots();
-
-    // Toggle the visible state of the final graduation celebration layout card
-    if (IS_LAST) {
-      var b = document.getElementById('rs-chapter-banner');
-      if (b) {
-        if (isRead(currentPath)) {
-          b.style.display = 'block';
-          setTimeout(function(){ b.scrollIntoView({behavior:'smooth', block:'center'}); }, 300);
-        } else {
-          b.style.display = 'none';
-        }
+      var link = item.querySelector('.rs-page-toc__link');
+      var marker = item.querySelector('.rs-page-toc__marker');
+      if (marker) marker.textContent = isActive ? '→' : (isPast ? '✓' : '');
+      if (link) {
+        if (isActive) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
       }
-    }
-  };
-
-
-  /* ════════════════════════════════════════════════════════
-     TIME CAPSULE ENGINE
-  ════════════════════════════════════════════════════════ */
-
-  function loadPastNote(){
-    var note = getNote(CURRENT_HREF);
-    var pastEl = document.getElementById('rs-past-note');
-    var pastFrom = document.getElementById('rs-past-from');
-    var pastText = document.getElementById('rs-past-text');
-    var inputEl  = document.getElementById('rs-note-input');
-    var prompt   = document.querySelector('.rs-capsule__prompt');
-    if(note && note.text){
-      if(pastEl) pastEl.classList.add('has-note');
-      if(pastFrom) pastFrom.textContent = 'You, ' + relTime(note.ts);
-      if(pastText) pastText.textContent = '"' + note.text + '"';
-      if(inputEl) inputEl.placeholder = 'Update your note…';
-      if(prompt) prompt.innerHTML = 'Want to <em>update your note</em> for this lesson?';
-    }
+    });
   }
 
-  function getAllNotes() {
-    var notes = [];
-    try {
-      for (var i = 0; i < localStorage.length; i++) {
-        var key = localStorage.key(i);
-        if (key && key.indexOf('rs_note_') === 0) {
-          var raw = localStorage.getItem(key);
-          if (raw) {
-            var n = JSON.parse(raw);
-            if (n && n.text) {
-              var href = n.href || key.replace('rs_note_', '').replace(/_/g, '/');
-              href = href.replace(/^"|"$/g, '');
-              if (href.charAt(0) !== '/') href = '/' + href;
+  /* ── Page reading progress (same source as the top bar) ─── */
+  function updateProgress(){
+    var doc = document.documentElement;
+    var maxScroll = doc.scrollHeight - doc.clientHeight;
+    var pct = maxScroll <= 0 ? 100 : Math.round((doc.scrollTop / maxScroll) * 100);
+    pct = Math.max(0, Math.min(100, pct));
 
-              notes.push({
-                href: href,
-                title: n.title ? n.title.replace(/^"|"$/g, '') : 'Lesson',
-                text: n.text,
-                ts: n.ts || 0
-              });
-            }
-          }
-        }
-      }
-    } catch(e) {}
-    return notes;
-  }
-
-  function updateNotesLabel(){
-    var notes = getAllNotes();
-    var lbl = document.getElementById('rs-total-notes-label');
-    if(lbl) lbl.textContent = notes.length === 0 ? '0 notes written' : notes.length + ' note' + (notes.length>1?'s':'') + ' made';
-  }
-
-  function buildTrail(){
-    var notes = getAllNotes();
-    notes.sort(function(a, b) { return b.ts - a.ts; });
-    var recent = notes;
-
-    var empty = document.getElementById('rs-trail-empty');
-    var list  = document.getElementById('rs-trail-list');
-    var count = document.getElementById('rs-trail-count');
-
-    if (count) count.textContent = notes.length + ' note' + (notes.length !== 1 ? 's' : '');
-
-    if (recent.length === 0) {
-      if (empty) empty.style.display = '';
-      if (list)  list.style.display  = 'none';
-      return;
+    if (topBar) topBar.style.width = pct + '%';
+    if (progressFill) progressFill.style.width = pct + '%';
+    if (progressLabel) progressLabel.textContent = pct + '%';
+    if (progressMeta) {
+      progressMeta.textContent = pct <= 0 ? 'Start of page' : (pct >= 100 ? 'Page complete' : pct + '% read');
     }
 
-    if (empty) empty.style.display = 'none';
-    if (list) {
-      list.style.display = '';
-      list.innerHTML = '';
-      recent.forEach(function(n, idx) {
-        var normHref = n.href.replace(/\/$/, "");
-        var normCurrent = CURRENT_HREF.replace(/\/$/, "");
-        var isCurrent = normHref === normCurrent;
-
-        var li = document.createElement('li');
-        li.className = 'rs-trail__item' + (idx === 0 ? ' rs-trail__item--new' : '');
-        li.style.padding = '0.65rem 1rem';
-        li.style.borderBottom = '1px solid #f7f4f0';
-
-        var safeText = n.text.substring(0, 70) + (n.text.length > 70 ? '…' : '');
-
-        li.innerHTML =
-          '<div style="font-size:0.76rem; font-weight:600; color:#3c3020; margin-bottom:0.2rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; padding-right:1rem;">' +
-            (isCurrent ? '<span style="color:#B8945A; margin-right:4px;">▶</span> ' : '') + n.title +
-          '</div>' +
-          '<div style="font-size:0.76rem; color:#7a6a50; font-style:italic; line-height:1.5; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">"' + safeText + '"</div>' +
-          '<div style="font-size:0.62rem; color:#c4b8a8; margin-top:0.15rem; display:flex; align-items:center; gap:0.35rem;"><span style="width:5px; height:5px; border-radius:50%; background:#B8945A; flex-shrink:0;"></span>' + relTime(n.ts) + '</div>';
-
-        if (!isCurrent) {
-          li.style.cursor = 'pointer';
-          li.addEventListener('click', function() {
-            window.location.href = window.location.origin + n.href;
-          });
-          li.addEventListener('mouseenter', function() { li.style.background = '#fdf8ef'; });
-          li.addEventListener('mouseleave', function() { li.style.background = ''; });
-        } else {
-          li.style.background = '#fffdf9';
-          li.style.borderLeft = '2px solid #B8945A';
-        }
-        list.appendChild(li);
-      });
-    }
+    updateTocState();
   }
 
-  window.rsCapsuleInput = function(){
-    var inp = document.getElementById('rs-note-input');
-    var btn = document.getElementById('rs-save-btn');
-    var cnt = document.getElementById('rs-char-count');
-    var val = inp ? inp.value.trim() : '';
-    if(cnt) cnt.textContent = (inp ? inp.value.length : 0) + ' / 200';
-    if(btn) btn.disabled = val.length < 3;
-  };
+  var ticking = false;
+  function onScroll(){
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(function(){
+      ticking = false;
+      updateProgress();
+    });
+  }
 
-  window.rsSaveNote = function(){
-    var inp  = document.getElementById('rs-note-input');
-    var btn  = document.getElementById('rs-save-btn');
-    var msg  = document.getElementById('rs-saved-msg');
-    var text = inp ? inp.value.trim() : '';
-    if(text.length < 3) return;
-    saveNoteLS(CURRENT_HREF, text);
-    if(btn) btn.disabled = true;
-    if(msg){ msg.classList.add('show'); setTimeout(function(){ msg.classList.remove('show'); },2000); }
-    if(inp) inp.value = '';
-    loadPastNote();
-    updateNotesLabel();
-    buildTrail();
-  };
-
-  window.rsClearNote = function(){
-    clearNoteLS(CURRENT_HREF);
-    var pastEl = document.getElementById('rs-past-note');
-    if(pastEl) pastEl.classList.remove('has-note');
-
-    var inputEl  = document.getElementById('rs-note-input');
-    var prompt   = document.querySelector('.rs-capsule__prompt');
-    if(inputEl) inputEl.placeholder = 'e.g. I finally understand why gradients vanish in deep networks.';
-    if(prompt) prompt.innerHTML = 'Make your own <em>notes</em> here — what clicked, what confused you, or how you\'d explain it to a friend.';
-
-    loadPastNote();
-    updateNotesLabel();
-    buildTrail();
-  };
-
-  /* Unified Thread Initialization */
-  loadPastNote();
-  updateNotesLabel();
-  buildTrail();
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+  updateProgress();
 
 })();
 </script>
