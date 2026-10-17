@@ -28,6 +28,7 @@ Recall [the forged-approval attack]({{<ref "/docs/agentic_ai/what_is_an_ai_agent
 The trace shows each layer in turn: the **PII** screen, the **prompt-injection** screen (phrase rules + a hosted classifier), **content safety**, and finally the **Gatekeeper**,
 which treats the claimed authority as **untrusted content** (the lowest rank). The refund is over the limit → **ESCALATE**, standing **RATIFIABLE**.
 Each layer it passes through is one of the topics of these notes.
+
 {{< /panel >}}
 
 {{< definition title="Why Agents Are Different" >}}
@@ -114,6 +115,9 @@ Inside the harness (grounding, guardrails, tools) everything works on real value
 A token the model invents isn't in the map, so it stays a token: nothing is restored that this request didn't send.
 
 {{< keyidea >}}**The vendor sees tokens; your code sees values.**{{< /keyidea >}}
+
+
+[Read more about BERT]({{<ref "/docs/natural_language_processing/bert/#bert" >}})
 {{< /panel >}}
 
 {{< panel color="orange" title="Prompt Injection: Direct and Indirect" id="prompt_injection" >}}
@@ -137,6 +141,8 @@ Indirect injection is _the_ agent problem: **the more an agent reads and acts, t
 | 6 | **Standing** | Every action's legal [standing]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#four_standings" >}}): VOID · RATIFIABLE · VOIDABLE · VALID |
 
 {{< keyidea >}}**Detect what you can; never grant what you can't detect.** Phrase lists are English and evadable by paraphrase, which is exactly why they are layer 2 of 6 and not _the_ defence.{{< /keyidea >}}
+
+[Read more about Binary Classification]({{<ref "/docs/machine_learning/supervised/logistic_regression/binary_classification_intro/" >}})
 {{< /panel >}}
 
 {{< panel color="magenta" title="Authority Comes From the Source" id="authority_hierarchy" >}}
@@ -238,14 +244,6 @@ It has the full **lethal trifecta**: private data (the inbox), untrusted content
 - 🔐 **RBAC + Gatekeeper**: deny by default; limits, mandates; models only advise.
 
 💡 _The strongest layer was never a detector._
-{{< /panel >}}
-
-{{< panel color="gold" title="Related Notes" id="related_notes" >}}
-Concepts used in these notes are developed in the other courses on this site:
-
-- Machine Learning: [Binary Classification]({{<ref "/docs/machine_learning/supervised/logistic_regression/binary_classification_intro/" >}})
-- NLP: [BERT]({{<ref "/docs/natural_language_processing/bert/#bert" >}})
-- NLP: [Large Language Models]({{<ref "/docs/natural_language_processing/llm/" >}})
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}

@@ -52,6 +52,7 @@ A good reference library gives you three ways to find something, and a good RAG 
 | **Reading the shortlist** | Slow and careful, so you only do it for a handful of books | **Cross-encoder reranking** |
 
 The catalogue finds, the librarian understands, and reading decides.
+
 {{< /panel >}}
 
 {{< panel color="orange" title="The Anatomy of a RAG Pipeline" id="anatomy" >}}
@@ -71,8 +72,8 @@ graph TB
     direction LR
     A["assemble context"] --> G["generate"] --> GR["ground"] --> ANS[answer]
     end
-    I --> R
-    RR --> A
+    Offline --> Retrieve
+    Retrieve --> Answer
 ```
 
 Each box is a separate component that can be tested on its own, and each exists because the previous one has a characteristic weakness. The rest of these notes takes them in order.
@@ -117,6 +118,11 @@ It handles paraphrase well ("_money back_" ≈ "_refund_") and is poor at exact 
 A useful refinement is **asymmetric** embedding, in which queries and passages are embedded with different instructions, because questions and answers don't look alike.
 
 Because each fails where the other succeeds, a production system runs **both** and combines the results.
+
+
+[Read more about TF-IDF]({{<ref "/docs/natural_language_processing/text_embedding/#tfidf" >}})  
+[Read more about Word2Vec]({{<ref "/docs/natural_language_processing/text_embedding/#word2vec" >}})  
+[Read more about Cosine Similarity]({{<ref "/docs/machine_learning/supervised/k_nearest_neighbors/curse_of_dimensionality/#cosine-similarity" >}})
 {{< /panel >}}
 
 {{< panel color="red" title="Combining Results: Reciprocal Rank Fusion" id="rrf" >}}
@@ -166,6 +172,11 @@ Bi-encoders handle retrieval and chunk boundaries; cross-encoders handle relevan
 sequence classifiers route intents; token classifiers find personal data for the [PII filter]({{<ref "/docs/agentic_ai/agent_security_principles/#pii" >}}).
 
 {{< keyidea >}}**Bi-encoders recall from millions. Cross-encoders decide among ten.**{{< /keyidea >}}
+
+
+[Read more about BERT]({{<ref "/docs/natural_language_processing/bert/#bert" >}})  
+[Read more about Sentence-BERT]({{<ref "/docs/natural_language_processing/bert/#sbert" >}})  
+[Read more about Self-Attention]({{<ref "/docs/natural_language_processing/self_attention/#self_attention" >}})
 {{< /panel >}}
 
 {{< panel color="green" title="Retrieved Is Not Prompted" id="retrieved_not_prompted" >}}
@@ -258,17 +269,6 @@ Also inspect the chunks: the error code and its explanation may have been split 
 - RAG is the **read path of semantic memory**; policies, rules and per-customer data belong elsewhere.
 
 💡 _Retrieve what can be ranked. Never rank what must never be missed._
-{{< /panel >}}
-
-{{< panel color="gold" title="Related Notes" id="related_notes" >}}
-Concepts used in these notes are developed in the other courses on this site:
-
-- NLP: [TF-IDF]({{<ref "/docs/natural_language_processing/text_embedding/#tfidf" >}})
-- NLP: [Word2Vec]({{<ref "/docs/natural_language_processing/text_embedding/#word2vec" >}})
-- NLP: [Sentence-BERT]({{<ref "/docs/natural_language_processing/bert/#sbert" >}})
-- NLP: [BERT]({{<ref "/docs/natural_language_processing/bert/#bert" >}})
-- Machine Learning: [Cosine Similarity]({{<ref "/docs/machine_learning/supervised/k_nearest_neighbors/curse_of_dimensionality/#cosine-similarity" >}})
-- NLP: [Self-Attention]({{<ref "/docs/natural_language_processing/self_attention/#self_attention" >}})
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}

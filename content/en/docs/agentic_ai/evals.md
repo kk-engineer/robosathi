@@ -26,6 +26,7 @@ The earlier chapters each made a claim: "_no refund over the limit_" ([the Gatek
 **Evals** are how we check those claims, on every change, against a real model.
 
 Two artefacts make this concrete: a colour-coded table of **30 golden cases** with every invariant checked per case, and a red-team report of **20 attacks** plus one benign control that must still be answered.
+
 {{< /panel >}}
 
 {{< definition title="Tests Are Not Evals" >}}
@@ -62,6 +63,7 @@ On **graders** (principle 2): code before NLI, NLI before a judge, a judge befor
 On **gates** (principle 4): **safety invariants are hard gates at 100%**: one over-limit refund fails the run, and no amount of good tone can average it away. **Quality** is a soft gate at a threshold.
 
 On **regression sets** (principle 5): a freshly generated set changes every time, so a score change can't tell you whether the agent changed or the questions did.
+
 {{< /panel >}}
 
 {{< panel color="green" title="Grade the Outcome, Not the Path" id="outcome_not_path" >}}
@@ -100,6 +102,10 @@ A spam filter that flags every email has perfect [recall]({{<ref "/docs/maths/st
 {{< /panel >}}
 
 {{< keyidea >}}**If refusing everything passes your suite, your suite is broken.**{{< /keyidea >}}
+
+
+[Read more about Performance Metrics]({{<ref "/docs/maths/statistics/performance_metrics/#confusion-matrix" >}})  
+[Read more about Precision-Recall Curve]({{<ref "/docs/maths/statistics/performance_metrics/#precision-recall-curve" >}})
 {{< /panel >}}
 
 {{< panel color="magenta" title="pass@k vs pass^k" id="pass_k" >}}
@@ -120,6 +126,9 @@ With \(p = 0.9\) and \(k = 5\): pass@5 ≈ 0.99999, but pass^5 ≈ **0.59**.
 For a money-moving agent, **pass^k is the one that matters**.
 
 {{< keyidea >}}**Right 9 times in 10 means wrong for one customer in ten.**{{< /keyidea >}}
+
+[Read more about Binomial Distribution]({{<ref "/docs/maths/probability/probability_mass_function/#binomial-distribution" >}})  
+[Read more about Confidence Interval]({{<ref "/docs/maths/statistics/confidence_interval/#confidence-interval" >}})
 {{< /panel >}}
 
 {{< panel color="orange" title="Three Graders, Three Questions" id="graders" >}}
@@ -262,16 +271,6 @@ Grade the **outcome** in the database (a valid refund that didn't happen is a fa
 - 🔁 **One pipeline**: run once, grade twice, cache by fingerprint.
 
 💡 _If refusing everything passes your suite, your suite is broken._
-{{< /panel >}}
-
-{{< panel color="gold" title="Related Notes" id="related_notes" >}}
-Concepts used in these notes are developed in the other courses on this site:
-
-- Maths: [Binomial Distribution]({{<ref "/docs/maths/probability/probability_mass_function/#binomial-distribution" >}})
-- Maths: [Performance Metrics: Confusion Matrix, Precision & Recall]({{<ref "/docs/maths/statistics/performance_metrics/#confusion-matrix" >}})
-- Maths: [Precision-Recall Curve]({{<ref "/docs/maths/statistics/performance_metrics/#precision-recall-curve" >}})
-- Maths: [Confidence Interval]({{<ref "/docs/maths/statistics/confidence_interval/#confidence-interval" >}})
-- Maths: [Central Limit Theorem]({{<ref "/docs/maths/statistics/central_limit_theorem/#clt" >}})
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}

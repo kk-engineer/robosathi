@@ -29,6 +29,7 @@ Press **Stop** while a refund runs and the stop report shows the saga **compensa
 And if a backup model answered any call, the trace says which, and why.
 
 👉 The model is the least reliable thing in this system, and it's surrounded by networks, quotas and databases that fail too.
+
 {{< /panel >}}
 
 {{< definition title="Why Agents Need Resilience More" >}}
@@ -43,6 +44,7 @@ And if a backup model answered any call, the trace says which, and why.
 3. 🔁 **Duplicates by nature**: a model re-proposes a call after a timeout, a [resumed run]({{<ref "/docs/agentic_ai/guardrails_loop_control_state/#run_lifecycle" >}}) re-executes a node, a customer types "_refund it!_" twice. Without protection, each is a second payment.
 
 {{< keyidea >}}**Failures aren't exceptions. At scale they are the normal case; design for them.**{{< /keyidea >}}
+
 {{< /definition >}}
 
 {{< panel color="red" title="Failures Crack and Spread" id="cascades" >}}
@@ -167,6 +169,7 @@ Each model, each search provider and each hosted guard gets its **own** pool (4 
 By default a caller **queues**; with a wait budget it is **rejected** instead: shedding load is a choice the caller makes, not a default.
 
 ⚠️ A single global concurrency limit looks like protection but isn't: one stalled dependency takes every permit.
+
 {{< /panel >}}
 
 {{< panel color="orange" title="Idempotency" id="idempotency" >}}
@@ -261,6 +264,8 @@ Each model has its own full stack; the chain decides which model answers, and ea
 | Blocked messages | Dead-letter queue → review |
 
 Turn-level [budgets and deadlines]({{<ref "/docs/agentic_ai/guardrails_loop_control_state/#loop_control" >}}) sit above all of this. **No agent composes resilience itself: it's built once, in the platform.**
+
+[Read more about Large Language Models]({{<ref "/docs/natural_language_processing/llm/" >}})
 {{< /panel >}}
 
 {{< question >}}
@@ -279,14 +284,6 @@ Fix: full-jitter backoff with a cap, a breaker per dependency, retries counted a
 - 🧱 **One fixed order**: bulkhead → breaker → retry → timeout, one stack per dependency.
 
 💡 _The dangerous failure is not the call that errors; it's the call that never returns._
-{{< /panel >}}
-
-{{< panel color="gold" title="Related Notes" id="related_notes" >}}
-Concepts used in these notes are developed in the other courses on this site:
-
-- Maths: [Binomial Distribution]({{<ref "/docs/maths/probability/probability_mass_function/#binomial-distribution" >}})
-- Maths: [Central Limit Theorem]({{<ref "/docs/maths/statistics/central_limit_theorem/#clt" >}})
-- NLP: [Large Language Models]({{<ref "/docs/natural_language_processing/llm/" >}})
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}

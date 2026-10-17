@@ -27,6 +27,7 @@ The third is a refund for $118.84. The model proposes it in exactly the same way
 
 So is this agent autonomous? For the first request the question doesn't even apply (no model was involved); for the second, yes; for the third, no. The same agent sits at three different points on a spectrum within minutes.
 The useful question is not "_is the agent autonomous?_" but "**which decision runs at which level, and why?**"
+
 {{< /panel >}}
 
 {{< definition title="Autonomy Is a Dial, Not a Switch" >}}
@@ -138,6 +139,8 @@ The last row is the important one. When a decision is both open-ended and high-s
 That split is exactly the [Gatekeeper pattern]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#gatekeeper" >}}) from the first notes.
 
 {{< keyidea >}}**Certify the rule, measure the model: the model proposes, the rule authorises.**{{< /keyidea >}}
+
+[Read more about Performance Metrics]({{<ref "/docs/maths/statistics/performance_metrics/#confusion-matrix" >}})
 {{< /panel >}}
 
 {{< panel color="navy" title="Worked Example: An Insurance Claim" id="insurance_example" >}}
@@ -155,6 +158,8 @@ Consider a car-insurance claims pipeline, outside our codebase but typical of ho
 
 Two lessons stand out. First, the level describes the **human's role**, not the technology: deterministic code that pays a claim and then notifies is level 7, exactly like a model doing the same.
 Second, the same step, estimating the payout, runs at **two different levels depending on the amount**. That is the same move as the support agent's $50 refund limit.
+
+[Read more about Binary Classification]({{<ref "/docs/machine_learning/supervised/logistic_regression/binary_classification_intro/" >}})
 {{< /panel >}}
 
 {{< panel color="green" title="Recording the Decision: The Autonomy Decision Record" id="adr" >}}
@@ -210,14 +215,6 @@ A better design allocates per decision: small, reversible refunds at **level 7**
 - **Human oversight must be meaningful** to be a control, and every level should be written down, evidenced, and held in configuration.
 
 💡 _Don't ask whether your agent is autonomous. Ask which decisions are, at what level, and who moves the dial._
-{{< /panel >}}
-
-{{< panel color="gold" title="Related Notes" id="related_notes" >}}
-Concepts used in these notes are developed in the other courses on this site:
-
-- Machine Learning: [Binary Classification]({{<ref "/docs/machine_learning/supervised/logistic_regression/binary_classification_intro/" >}})
-- Maths: [Performance Metrics: Confusion Matrix, Precision & Recall]({{<ref "/docs/maths/statistics/performance_metrics/#confusion-matrix" >}})
-- NLP: [Large Language Models]({{<ref "/docs/natural_language_processing/llm/" >}})
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}

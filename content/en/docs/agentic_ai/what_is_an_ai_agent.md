@@ -36,6 +36,7 @@ Before the second request, the Gatekeeper is switched off. The customer asks for
 
 The model, the prompt and the limit in the prompt were identical in both runs. Notice what this tells us: the refund in run 2 was not stopped by the model's "knowledge" of the policy, and the refund in run 1 was not allowed _because_ the model behaved well.
 In both runs, the decision that mattered was made, or not made, **outside the model**. The rest of these notes explains why that is the right design, and why it generalises.
+
 {{< /panel >}}
 
 {{< definition title="What Is an Agent?" >}}
@@ -49,6 +50,7 @@ The word comes from the Latin _agere_, "to do" or "to act": an agent is, literal
 
 The first two definitions describe **capacity**: what the system is able to do. Neither says anything about **permission**: what it is allowed to do, and on whose behalf.
 The third definition, the oldest, points at exactly that gap, and it is the one that matters once an agent can move money or data.
+
 {{< /definition >}}
 
 {{< panel color="green" title="Agent = Model + Harness" id="model_harness" >}}
@@ -66,6 +68,9 @@ This decomposition explains the motivating example. The Gatekeeper is part of th
 It also explains the structure of this course: [loop control]({{<ref "/docs/agentic_ai/guardrails_loop_control_state" >}}), [context management]({{<ref "/docs/agentic_ai/context_management" >}}), [memory]({{<ref "/docs/agentic_ai/memory_management" >}}), [hallucination checks]({{<ref "/docs/agentic_ai/hallucination_checks" >}}), [security]({{<ref "/docs/agentic_ai/agent_security_principles" >}}) and [evals]({{<ref "/docs/agentic_ai/evals" >}}) are all parts of the harness.
 
 {{< keyidea >}}**Almost everything that makes an agent production-ready lives in the harness, not the model.**{{< /keyidea >}}
+
+[Read more about Large Language Models]({{<ref "/docs/natural_language_processing/llm/" >}})  
+[Read more about The Transformer]({{<ref "/docs/natural_language_processing/transformer/#transformer" >}})
 {{< /panel >}}
 
 {{< panel color="magenta" title="Agency Is Not Authority" id="agency_authority" >}}
@@ -245,14 +250,6 @@ A control is deterministic code that evaluates the **exact proposal**, **before*
 - The **Gatekeeper** puts these ideas into the control flow: between propose and execute, deterministic, policy from the database, every decision audited.
 
 💡 _Don't ask what your agent can do. Ask who decides what it may do, and show me the code._
-{{< /panel >}}
-
-{{< panel color="gold" title="Related Notes" id="related_notes" >}}
-Concepts used in these notes are developed in the other courses on this site:
-
-- NLP: [Large Language Models]({{<ref "/docs/natural_language_processing/llm/" >}})
-- NLP: [The Transformer]({{<ref "/docs/natural_language_processing/transformer/#transformer" >}})
-- Deep Learning: [Introduction to Deep Learning]({{<ref "/docs/deep_learning/introduction/" >}})
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}

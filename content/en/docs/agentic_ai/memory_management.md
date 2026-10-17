@@ -30,6 +30,7 @@ Then the operator runs a **dream**: an offline consolidation job. Its report sho
 - **Procedural · QUEUED**: a learned **skill candidate** ("_check whether the order has shipped before proposing a refund_"), waiting for a curator.
 
 👉 The agent didn't learn _during_ the conversations. It learned **afterwards**, while it "slept", and even then it only **proposed**.
+
 {{< /panel >}}
 
 {{< definition title="Two Kinds of Remembering" >}}
@@ -162,6 +163,10 @@ Recall is also **scoped**: the CSA only ever recalls the _verified_ customer's m
 {{< keyidea >}}**A verified fact from March outranks a self-reported one from today.**{{< /keyidea >}}
 
 [Read more about the Context Score]({{<ref "/docs/agentic_ai/context_management/#context_score" >}})
+
+
+[Read more about Text Embeddings]({{<ref "/docs/natural_language_processing/text_embedding/" >}})  
+[Read more about Sentence-BERT]({{<ref "/docs/natural_language_processing/bert/#sbert" >}})
 {{< /panel >}}
 
 {{< panel color="red" title="Writing Memory: Every Write Is Governed" id="governed_writes" >}}
@@ -296,14 +301,6 @@ It must also not slip back in through a session summary, which is why the dream 
 - 🛡️ **Everything governed**: no self-granted authority, no unsupervised skills, no back doors.
 
 💡 _What an agent remembers, it acts on. Govern memory like an action._
-{{< /panel >}}
-
-{{< panel color="gold" title="Related Notes" id="related_notes" >}}
-Concepts used in these notes are developed in the other courses on this site:
-
-- NLP: [Text Embeddings]({{<ref "/docs/natural_language_processing/text_embedding/" >}})
-- NLP: [Sentence-BERT]({{<ref "/docs/natural_language_processing/bert/#sbert" >}})
-- NLP: [The Transformer]({{<ref "/docs/natural_language_processing/transformer/#transformer" >}})
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}

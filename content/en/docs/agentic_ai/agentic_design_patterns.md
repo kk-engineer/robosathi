@@ -32,6 +32,7 @@ There are three kinds of decision a model can be given:
 
 This is also the order of these notes: from one model in a loop, to a model checking work, to a model organising other model calls.
 Each step up hands over more control, so each needs a stronger fence.
+
 {{< /definition >}}
 
 {{< panel color="orange" title="1 · The Tool-Use Loop" id="tool_use_loop" >}}
@@ -54,6 +55,8 @@ A different request would produce a different sequence of calls, and that is pre
 
 **How it fails.** Runaway loops, the same call repeated, and unsafe actions. The fence sits in the middle of the diagram: a guard that **caps the number of steps**, **suppresses repeated identical calls**, and **checks whether this particular call is allowed**.
 That last check is exactly [the Gatekeeper]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#gatekeeper" >}}) from the first notes.
+
+[Read more about Large Language Models]({{<ref "/docs/natural_language_processing/llm/" >}})
 {{< /panel >}}
 
 {{< panel color="green" title="2 · ReAct: Reasoning and Acting" id="react" >}}
@@ -96,6 +99,8 @@ The model drafts a policy memo, then is asked to critique it ("_which claims are
 
 **How it fails.** The limitation is in the name: **the critic is the author**. It shares the author's blind spots, and models tend to approve their own work.
 Cap the rounds, and when the stakes are high, prefer an **outside** check, which is the next pattern.
+
+[Read more about Reinforcement Learning from Human Feedback (RLHF)]({{<ref "/docs/natural_language_processing/llm/#rlhf" >}})
 {{< /panel >}}
 
 {{< panel color="magenta" title="4 · Evaluator–Optimizer" id="evaluator_optimizer" >}}
@@ -116,6 +121,7 @@ A translator model drafts a translation. A reviewer model, ideally from a differ
 An evaluator that is the same model, merely prompted to "_be strict_", still has the same blind spots.
 
 **How it fails.** A judge that is not independent, criteria that move, or a loop with no cap. Judges are themselves models with known biases, which we study in [LLM as a Judge]({{<ref "/docs/agentic_ai/llm_as_a_judge" >}}).
+
 {{< /panel >}}
 
 {{< panel color="orange" title="5 · Planning and Decomposition" id="planning" >}}
@@ -210,14 +216,6 @@ The support agent moves money, so every extra decision handed to the model would
 - **Blast radius sets how many patterns to use**, and **every loop needs a fence** held in configuration.
 
 💡 _An agentic pattern is a decision you hand to the model. The fence is the part you're responsible for._
-{{< /panel >}}
-
-{{< panel color="gold" title="Related Notes" id="related_notes" >}}
-Concepts used in these notes are developed in the other courses on this site:
-
-- NLP: [Large Language Models]({{<ref "/docs/natural_language_processing/llm/" >}})
-- NLP: [Reinforcement Learning from Human Feedback (RLHF)]({{<ref "/docs/natural_language_processing/llm/#rlhf" >}})
-- NLP: [Self-Attention]({{<ref "/docs/natural_language_processing/self_attention/#self_attention" >}})
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}

@@ -32,6 +32,7 @@ By the end of these notes you should be able to:
 Zheng et al. (MT-Bench, 2023) found that strong judges agree with human experts about **as often as experts agree with each other**, and in the same paper documented position, verbosity and self-preference biases.
 
 {{< keyidea >}}**A judge is an instrument. Calibrate it before you trust its readings.**{{< /keyidea >}}
+
 {{< /definition >}}
 
 {{< panel color="red" title="Four Known Biases" id="biases" >}}
@@ -96,6 +97,8 @@ Other fields work the same way. Radiologists reading the same scans are routinel
 Large-scale essay scoring pairs a human and an automated scorer and checks their agreement before the machine score counts (Williamson, Xi & Breyer, 2012).
 
 {{< keyidea >}}**A judge needn't beat people. It must agree as well as people agree with each other.**{{< /keyidea >}}
+
+[Read more about Performance Metrics]({{<ref "/docs/maths/statistics/performance_metrics/#confusion-matrix" >}})
 {{< /panel >}}
 
 {{< panel color="orange" title="Psychometrics: Treat the Judge Like a Test Instrument" id="psychometrics" >}}
@@ -118,6 +121,9 @@ Large-scale essay scoring pairs a human and an automated scorer and checks their
 2. 🎯 **One construct per item**: "_accurate and well-written_" is two questions. Split them.
 3. ✅ **Binary where you can**: "_Does the report state at least one trade-off?_" (yes/no) agrees far better than "_rate the trade-off discussion 1–10_".
 4. 🧾 **Reason before verdict, and cite the evidence**: the rationale first, then the score, quoting the words that earned it.
+
+
+[Read more about Hypothesis Testing]({{<ref "/docs/maths/statistics/hypothesis_testing/" >}})
 {{< /panel >}}
 
 {{< panel color="magenta" title="Why A vs B Beats a Score" id="pairwise" >}}
@@ -144,6 +150,10 @@ For a pairwise win rate \(\hat{w}\) over \(n\) consistent comparisons, report it
 | **Absolute, graded** | How much? (rarely) | Only with anchored levels |
 
 {{< keyidea >}}**Rank variants pairwise. Gate a single output against a criterion.**{{< /keyidea >}}
+
+
+[Read more about Binomial Distribution]({{<ref "/docs/maths/probability/probability_mass_function/#binomial-distribution" >}})  
+[Read more about Confidence Interval]({{<ref "/docs/maths/statistics/confidence_interval/#confidence-interval" >}})
 {{< /panel >}}
 
 {{< panel color="green" title="Our Judges: One Skeleton for the Platform" id="our_judges" >}}
@@ -214,15 +224,6 @@ Judge every pair **both ways**, count only **consistent** preferences as wins (i
 - ⚖️ **Rank pairwise, gate absolutely**; the RA's auditor is last, isolated and independent.
 
 💡 _A judge that has never been measured against another rater is an opinion with a temperature setting._
-{{< /panel >}}
-
-{{< panel color="gold" title="Related Notes" id="related_notes" >}}
-Concepts used in these notes are developed in the other courses on this site:
-
-- Maths: [Performance Metrics: Confusion Matrix, Precision & Recall]({{<ref "/docs/maths/statistics/performance_metrics/#confusion-matrix" >}})
-- Maths: [Binomial Distribution]({{<ref "/docs/maths/probability/probability_mass_function/#binomial-distribution" >}})
-- Maths: [Confidence Interval]({{<ref "/docs/maths/statistics/confidence_interval/#confidence-interval" >}})
-- Maths: [Hypothesis Testing]({{<ref "/docs/maths/statistics/hypothesis_testing/" >}})
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}

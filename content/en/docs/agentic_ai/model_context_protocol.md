@@ -25,6 +25,7 @@ Consider an **ops agent** connecting to an **analytics MCP server**: the trace s
 Asked "_Which agent had the worst p95 turn latency in the last 7 days?_", it lists the metrics, computes one per agent in a single step, answers, and the [hallucination check]({{<ref "/docs/agentic_ai/hallucination_checks" >}}) finds every figure in the returned rows.
 
 The same server could be added, unchanged, to an IDE assistant or the MCP Inspector. **One server, any client.**
+
 {{< /panel >}}
 
 {{< definition title="Model Context Protocol (MCP)" >}}
@@ -87,6 +88,8 @@ Messages are **JSON-RPC 2.0**: requests with ids, responses, and notifications.
 Client-side features exist too: a server can ask the client for model **sampling** or for **user input** (elicitation).
 
 {{< keyidea >}}**One client per server; the host decides what's allowed.**{{< /keyidea >}}
+
+[Read more about Large Language Models]({{<ref "/docs/natural_language_processing/llm/" >}})
 {{< /panel >}}
 
 {{< panel color="green" title="Discover, List, Call" id="lifecycle" >}}
@@ -294,13 +297,6 @@ So `delete_records` needs explicit configuration and, being destructive, human a
 - 🌐 **stdio → HTTP**: OAuth, scopes and limits move into the server.
 
 💡 _A server describing its tool as harmless has asserted it, not established it._
-{{< /panel >}}
-
-{{< panel color="gold" title="Related Notes" id="related_notes" >}}
-Concepts used in these notes are developed in the other courses on this site:
-
-- NLP: [Large Language Models]({{<ref "/docs/natural_language_processing/llm/" >}})
-- NLP: [The Transformer]({{<ref "/docs/natural_language_processing/transformer/#transformer" >}})
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}

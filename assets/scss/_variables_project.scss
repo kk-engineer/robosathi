@@ -3144,11 +3144,10 @@ $rs-badge-border-hover: #B8945A;
 }
 
 // End-of-note panels: distinct look
-#related_notes.rs-callout,
 #further_reading.rs-callout {
-  background: #fbf8f2 !important;
-  border: 1px dashed #d2b583 !important;
-  border-left: 1px dashed #d2b583 !important;
+  background: #f6f7f9 !important;
+  border: 1px dashed #b8c0cc !important;
+  border-left: 1px dashed #b8c0cc !important;
   border-radius: 10px;
   font-size: 0.9rem;
 
@@ -3156,7 +3155,7 @@ $rs-badge-border-hover: #B8945A;
     font-size: 0.72rem !important;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: #9a7340 !important;
+    color: #475569 !important;
     font-family: "Inter", sans-serif !important;
   }
 
@@ -3164,7 +3163,6 @@ $rs-badge-border-hover: #B8945A;
   li { margin-bottom: 0.25rem; line-height: 1.5; }
 }
 
-#related_notes .rs-callout__title::before { content: "\2197  "; }
 #further_reading .rs-callout__title::before { content: "\1F4D6  "; }
 
 // About: full width, but vertically slim

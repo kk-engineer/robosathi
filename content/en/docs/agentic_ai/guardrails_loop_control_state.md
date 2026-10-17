@@ -42,6 +42,10 @@ A hosted chat API that returns only text gives you no logits, and some hosted en
 The course's agents therefore validate on the hosted path and constrain only on a local path where a grammar is available, with the choice held in configuration rather than assumed.
 
 {{< keyidea >}}**Validate when you can't control the decoder. Constrain when you can.**{{< /keyidea >}}
+
+
+[Read more about Softmax]({{<ref "/docs/deep_learning/activation_function/#softmax" >}})  
+[Read more about Tokenization]({{<ref "/docs/natural_language_processing/tokenization/" >}})
 {{< /panel >}}
 
 {{< panel color="green" title="Pydantic: The Schema Is the Code" id="pydantic" >}}
@@ -200,14 +204,6 @@ An agent crashes after 4 of its 5 allowed tool iterations, one of which was a re
 - **Checkpoint the loop's memory** so stop, resume and abort are safe, and make every re-run harmless with idempotent side effects.
 
 💡 _A guardrail that forgets on restart isn't a guardrail._
-{{< /panel >}}
-
-{{< panel color="gold" title="Related Notes" id="related_notes" >}}
-Concepts used in these notes are developed in the other courses on this site:
-
-- Deep Learning: [Softmax]({{<ref "/docs/deep_learning/activation_function/#softmax" >}})
-- NLP: [Tokenization]({{<ref "/docs/natural_language_processing/tokenization/" >}})
-- NLP: [Byte Pair Encoding]({{<ref "/docs/natural_language_processing/tokenization/#bpe" >}})
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}

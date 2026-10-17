@@ -37,6 +37,7 @@ The choice between them follows directly from the [three questions]({{<ref "/doc
 High cardinality with a bounded blast radius is where it pays to let the model choose.
 
 {{< keyidea >}}**Most production systems are mostly workflow. That is the design, not a compromise.**{{< /keyidea >}}
+
 {{< /definition >}}
 
 {{< panel color="orange" title="1 · Sequential Pipeline" id="sequential" >}}
@@ -79,6 +80,8 @@ A support ticket is classified, first by keyword rules and then by a small class
 
 **What goes wrong.** Every misroute is a silent failure, so the **misroute rate becomes your error budget**. Always keep a **fallback branch**, and watch its volume: when it grows, your classes need updating.
 Note that a classifier may well be a model, but it is still a workflow: the classifier produces a _label_, and code maps the label to a branch.
+
+[Read more about Binary Classification]({{<ref "/docs/machine_learning/supervised/logistic_regression/binary_classification_intro/" >}})
 {{< /panel >}}
 
 {{< panel color="orange" title="3 · Parallel Fan-out / Fan-in" id="fan_out" >}}
@@ -200,9 +203,8 @@ graph TB
     FN[finalize] --> AW[await approval] --> E((END))
     RI[read intent] --> E
     end
-    CI -->|plain read| RI
-    CI --> AC
-    PR --> FN
+    FD --> Core
+    Core --> Close
 ```
 
 Read it as four workflow patterns. The screens from PII filtering to context assembly form a **sequential pipeline**. _Classify intent_ **branches** a plain read away with no model call.
@@ -220,6 +222,7 @@ graph LR
 
 Inside the run graph, a model fills the steps but **code decides where the run goes next**: map-reduce over sub-questions, capped research and gap-filling loops, and a branch after an [independent audit]({{<ref "/docs/agentic_ai/llm_as_a_judge/#auditor" >}}) (gap fill, revise, or finalize).
 A scope is a conversation; a run is a job.
+
 {{< /panel >}}
 
 {{< question >}}
@@ -237,14 +240,6 @@ That is a good thing. It is predictable, testable and cheap, and it should only 
 - The support agent is **mostly workflow**: one model-driven loop in fifteen nodes. The research agent branches, maps and stops by code; the model fills the steps.
 
 💡 _Before you call it an agent, draw the graph. If code picks every next step, it's a workflow, and that's usually what you want._
-{{< /panel >}}
-
-{{< panel color="gold" title="Related Notes" id="related_notes" >}}
-Concepts used in these notes are developed in the other courses on this site:
-
-- Machine Learning: [Binary Classification]({{<ref "/docs/machine_learning/supervised/logistic_regression/binary_classification_intro/" >}})
-- NLP: [Large Language Models]({{<ref "/docs/natural_language_processing/llm/" >}})
-- NLP: [The Transformer]({{<ref "/docs/natural_language_processing/transformer/#transformer" >}})
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}

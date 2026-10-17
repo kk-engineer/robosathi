@@ -41,6 +41,7 @@ Run one customer turn and copy its **trace id**. Then:
 **Monitoring** answers questions you knew to ask in advance. **Observability** lets you ask _new_ questions after the fact, which, for a non-deterministic agent, is most of them.
 
 {{< keyidea >}}**You can't reproduce a non-deterministic turn. You can only record it.**{{< /keyidea >}}
+
 {{< /definition >}}
 
 {{< panel color="gold" title="What a Trace Is" id="trace" >}}
@@ -70,8 +71,8 @@ graph TB
     direction LR
     H[Hallucination check] --> R["Repair call (maybe)"]
     end
-    I --> M1
-    M2 --> H
+    Before --> Loop
+    Loop --> After
 ```
 
 Some calls retry; some fall back to a backup model; and **the same input may take a different path tomorrow**.
@@ -155,6 +156,8 @@ And because every fact is written at **one choke point**, adding OTel is one ada
 6. **Keep the facts**: they remain the analytics contract.
 
 {{< keyidea >}}**Keep the facts for analytics; add spans for interoperability.**{{< /keyidea >}}
+
+[Read more about Retraining Strategies]({{<ref "/docs/machine_learning/ml_system/retraining_strategies/" >}})
 {{< /panel >}}
 
 {{< panel color="magenta" title="Analytics Is a Platform Contract" id="analytics_contract" >}}
@@ -191,6 +194,9 @@ graph LR
 | `tokens_per_resolved_task` | Tokens of resolved ÷ resolved tasks | Lower |
 
 {{< keyidea >}}**A formula written twice drifts. Write it once, in the semantic layer.**{{< /keyidea >}}
+
+
+[Read more about Central Limit Theorem]({{<ref "/docs/maths/statistics/central_limit_theorem/#clt" >}})
 {{< /panel >}}
 
 {{< panel color="green" title="Dashboards as Code: From a Turn to a Tile" id="dashboards" >}}
@@ -233,6 +239,7 @@ One project per agent; thread = session. Settings: off by default; a **sample ra
 | Which model call was slow in this turn? | Run tree · spans |
 | Has groundedness dropped since Tuesday's deploy? | The dashboard |
 | Ask the data a question in English | An ops agent over the [analytics MCP server]({{<ref "/docs/agentic_ai/model_context_protocol" >}}) |
+
 {{< /panel >}}
 
 {{< question >}}
@@ -251,14 +258,6 @@ Then pick a slow turn and follow its **trace id**: the run tree shows which span
 - 📊 **Facts → Parquet → generated dashboards**; the tracing UI is a redacted view of a turn.
 
 💡 _Record at choke points, and every view is one adapter away._
-{{< /panel >}}
-
-{{< panel color="gold" title="Related Notes" id="related_notes" >}}
-Concepts used in these notes are developed in the other courses on this site:
-
-- Maths: [Central Limit Theorem]({{<ref "/docs/maths/statistics/central_limit_theorem/#clt" >}})
-- Maths: [Confidence Interval]({{<ref "/docs/maths/statistics/confidence_interval/#confidence-interval" >}})
-- Machine Learning: [Retraining Strategies]({{<ref "/docs/machine_learning/ml_system/retraining_strategies/" >}})
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}

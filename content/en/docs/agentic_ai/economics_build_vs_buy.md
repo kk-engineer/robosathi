@@ -22,6 +22,7 @@ By the end of these notes you should be able to:
 {{< panel color="green" title="A Motivating Question" id="cold_open" >}}
 This course built a Gatekeeper, guardrails, memory governance, hallucination checks, an eval harness. Should _you_ build all of that?
 **Mostly, no. Some of it, absolutely.** These notes are about telling which, with numbers.
+
 {{< /panel >}}
 
 {{< definition title="Four Options, Per Component" >}}
@@ -118,6 +119,7 @@ _Illustrative_: build at $48k/month fixed + $0.125 per resolution; buy at $15k/m
 - ❌ **Don't build** what the curve will commoditise, e.g. a custom-trained or [fine-tuned]({{<ref "/docs/natural_language_processing/llm/#sft" >}}) model to save tokens: it competes with a price that falls 10× a year.
 - ✅ **Do build** what the curve doesn't touch: **rules, data, evals, authority**. Their value _rises_ as tokens get cheaper, because cheaper tokens mean more agent traffic to govern.
 - 🔁 Keep switching cheap: models and judges behind configuration, so you can ride the curve.
+
 {{< /panel >}}
 
 {{< panel color="orange" title="Eight Factors Beyond Price" id="factors" >}}
@@ -201,6 +203,10 @@ Keep deterministic rules underneath and [fail closed]({{<ref "/docs/agentic_ai/a
 | Talent gap | You can't staff it well |
 
 Whatever you buy, **negotiate the exit**: data export, price caps, an adapter on your side.
+
+[Read more about Supervised Fine-Tuning (SFT)]({{<ref "/docs/natural_language_processing/llm/#sft" >}})  
+[Read more about Parameter-Efficient Fine-Tuning (PEFT)]({{<ref "/docs/natural_language_processing/llm/#peft" >}})  
+[Read more about Large Language Models]({{<ref "/docs/natural_language_processing/llm/" >}})
 {{< /panel >}}
 
 {{< panel color="grey" title="A Worked Example: A Support Agent" id="worked_example" >}}
@@ -261,15 +267,6 @@ A team wants to fine-tune its own model to save inference cost on a support agen
 - 🛒 **Buy the commodity**, behind adapters, with the exit negotiated.
 
 💡 _You can rent intelligence. You can't rent accountability._
-{{< /panel >}}
-
-{{< panel color="gold" title="Related Notes" id="related_notes" >}}
-Concepts used in these notes are developed in the other courses on this site:
-
-- NLP: [Supervised Fine-Tuning (SFT)]({{<ref "/docs/natural_language_processing/llm/#sft" >}})
-- NLP: [Parameter-Efficient Fine-Tuning (PEFT)]({{<ref "/docs/natural_language_processing/llm/#peft" >}})
-- NLP: [Reinforcement Learning from Human Feedback (RLHF)]({{<ref "/docs/natural_language_processing/llm/#rlhf" >}})
-- NLP: [Large Language Models]({{<ref "/docs/natural_language_processing/llm/" >}})
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}

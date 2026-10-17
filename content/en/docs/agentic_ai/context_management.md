@@ -35,6 +35,7 @@ Everything in the window falls into one of three kinds:
 
 **Context engineering** is deciding, on every call, **what goes into the window, in what order, and at what size**.
 In an agent this decision is made many times per task, because every turn of the [agent loop]({{<ref "/docs/agentic_ai/agentic_design_patterns/#tool_use_loop" >}}) is a fresh call with a fresh window.
+
 {{< /definition >}}
 
 {{< panel color="orange" title="Why Manage It?" id="why_manage" >}}
@@ -46,6 +47,8 @@ Filling the window is easy: append everything and let the model sort it out. The
 4. 🕵️ **Attack surface**: anything in the window can be read as an instruction. A retrieved web page or an email is _data_, but the model can't tell unless the harness makes it tell ([Agent Security]({{<ref "/docs/agentic_ai/agent_security_principles" >}})).
 
 {{< keyidea >}}**Context is the model's whole world for one call. Curate it.**{{< /keyidea >}}
+
+[Read more about Tokenization]({{<ref "/docs/natural_language_processing/tokenization/" >}})
 {{< /panel >}}
 
 {{< panel color="green" title="Position Matters: Lost in the Middle" id="lost_in_middle" >}}
@@ -61,6 +64,8 @@ So **order is a design decision**:
 | **Last** | History, then **the task** | The most recent thing the model reads |
 
 {{< keyidea >}}**Put what frames the task first, and the task itself last.** This is exactly the order the last stage of our pipeline enforces.{{< /keyidea >}}
+
+[Read more about Self-Attention]({{<ref "/docs/natural_language_processing/self_attention/#self_attention" >}})
 {{< /panel >}}
 
 {{< panel color="orange" title="Six Strategies, Six Prices" id="strategies" >}}
@@ -101,6 +106,7 @@ Put the long policy and tool definitions first, in a fixed order, and every call
 **🧹 Consolidate.** Deduplicate: exact copies are easy; near-copies (word overlap) and paraphrases (embedding similarity) need thresholds.
 One returns policy appears three times (help centre, PDF, an old email). Three copies spend budget and, worse, read to the model as **emphasis**.
 ⚠️ Which copy survives matters: keep the one from the **more trusted** source.
+
 {{< /panel >}}
 
 {{< panel color="magenta" title="How the Strategies Compose" id="compose" >}}
@@ -191,6 +197,8 @@ Both reference agents share one context package; only their **sources** differ.
 
 The **order of the stages is load-bearing**: scoring _before_ fitting means the budget cuts the least relevant, not the last to arrive; ordering _after_ fitting means position is decided over what survived.
 A health check then runs the five failure detectors, mitigates, and the trace's **CONTEXT card** says what changed ("_N of 3000 tokens · K chunks kept · D dropped_").
+
+[Read more about Text Embeddings]({{<ref "/docs/natural_language_processing/text_embedding/" >}})
 {{< /panel >}}
 
 {{< panel color="green" title="The Context Score" id="context_score" >}}
@@ -268,15 +276,6 @@ and **isolate** exploratory sub-tasks into fresh windows. Measure answer quality
 - 🧱 **One pipeline for both agents**: trust-ranked, budgeted, health-checked, shown in the trace.
 
 💡 _Decide what the model reads, or arrival order will._
-{{< /panel >}}
-
-{{< panel color="gold" title="Related Notes" id="related_notes" >}}
-Concepts used in these notes are developed in the other courses on this site:
-
-- NLP: [Tokenization]({{<ref "/docs/natural_language_processing/tokenization/" >}})
-- NLP: [Self-Attention]({{<ref "/docs/natural_language_processing/self_attention/#self_attention" >}})
-- NLP: [Multi-Head Attention]({{<ref "/docs/natural_language_processing/transformer/#multi_head_attention" >}})
-- NLP: [Text Embeddings]({{<ref "/docs/natural_language_processing/text_embedding/" >}})
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}

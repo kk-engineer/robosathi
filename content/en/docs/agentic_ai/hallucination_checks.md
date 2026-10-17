@@ -71,6 +71,7 @@ graph LR
 5. **Trim or withhold**: whatever is still refuted is removed; if nothing survives, a withheld reply goes instead.
 
 {{< keyidea >}}**Check each claim, not the reply: one false sentence hides in five true ones.**{{< /keyidea >}}
+
 {{< /panel >}}
 
 {{< panel color="green" title="NLI: Premise, Hypothesis, Verdict" id="nli" >}}
@@ -93,6 +94,9 @@ Three verdicts, not two: "_I can't confirm this_" is different from "_this is fa
 - **NLI decides**: a [cross-encoder]({{<ref "/docs/agentic_ai/rag/#bi_cross" >}}) (a local DeBERTa-v3 NLI model, a [BERT]({{<ref "/docs/natural_language_processing/bert/#bert" >}})-family encoder) reads claim and evidence **together** and sees the negation. Entailment ≥ 0.6 → supported.
 
 {{< keyidea >}}**Embeddings never decide whether a claim is true. NLI does.**{{< /keyidea >}}
+
+
+[Read more about BERT]({{<ref "/docs/natural_language_processing/bert/#bert" >}})
 {{< /panel >}}
 
 {{< panel color="orange" title="Atomic Claims, Three Classes" id="claim_classes" >}}
@@ -174,6 +178,10 @@ Otherwise a sentence is merely **marked** LOW (mean under 0.6, or more than 25% 
 | **Reasoning tokens** are generated too | Only the tokens that wrote the sentence are scored |
 
 {{< keyidea >}}**Confidence is not truth. It is a reason to look harder.**{{< /keyidea >}}
+
+
+[Read more about Softmax]({{<ref "/docs/deep_learning/activation_function/#softmax" >}})  
+[Read more about Log Loss]({{<ref "/docs/machine_learning/supervised/logistic_regression/log_loss/" >}})
 {{< /panel >}}
 
 {{< panel color="grey" title="Methods We Didn't Use, and Why" id="other_methods" >}}
@@ -233,14 +241,6 @@ The guardrail **repairs once** with the evidence in front of the model ("_Your r
 - ✂️ **Repair once, trim, withhold.** Never ask the author to grade itself.
 
 💡 _Check each claim against what the agent saw, not how sure it sounded._
-{{< /panel >}}
-
-{{< panel color="gold" title="Related Notes" id="related_notes" >}}
-Concepts used in these notes are developed in the other courses on this site:
-
-- Deep Learning: [Softmax]({{<ref "/docs/deep_learning/activation_function/#softmax" >}})
-- NLP: [BERT]({{<ref "/docs/natural_language_processing/bert/#bert" >}})
-- Machine Learning: [Log Loss]({{<ref "/docs/machine_learning/supervised/logistic_regression/log_loss/" >}})
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}
