@@ -41,7 +41,7 @@ Both share one requirement: you must be able to touch the model's **logits on ev
 A hosted chat API that returns only text gives you no logits, and some hosted endpoints reject guided-decoding parameters outright. In those cases validation is the only option.
 The course's agents therefore validate on the hosted path and constrain only on a local path where a grammar is available, with the choice held in configuration rather than assumed.
 
-💡 **Validate when you can't control the decoder. Constrain when you can.**
+{{< keyidea >}}**Validate when you can't control the decoder. Constrain when you can.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="green" title="Pydantic: The Schema Is the Code" id="pydantic" >}}
@@ -81,7 +81,7 @@ Anything cleverer would be guessing what the model meant, which is exactly the f
 The research agent goes further: every model call passes through a single structured door, with a schema per role and tokens charged to the run's budget.
 Its **contract** (brief, rubric and budget) is frozen and hashed when you approve it, and its plan is validated for dependency cycles before any search runs, so "_the run used what you approved_" is something you can check, not merely a promise.
 
-💡 **A schema constrains the shape of a reply. The [hallucination check]({{<ref "/docs/agentic_ai/hallucination_checks" >}}) constrains its facts.**
+{{< keyidea >}}**A schema constrains the shape of a reply. The [hallucination check]({{<ref "/docs/agentic_ai/hallucination_checks" >}}) constrains its facts.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="orange" title="Part 2 · Loop Control: One Governor, One Verdict" id="loop_control" >}}
@@ -182,7 +182,7 @@ Only **completed** and **aborted** are endings; every other state can be picked 
 2. **Clean interrupts.** The node that waits for a person does nothing else, because on resume it is re-run in full.
 3. **A person resumes money.** A run paused before a refund is not resumed automatically at start-up; it is re-entered by a reviewer's decision.
 
-💡 **Stop is safe, resume is exact, abort is a decision.** Durability is not just saving state; it is making every re-run harmless.
+{{< keyidea >}}**Stop is safe, resume is exact, abort is a decision.** Durability is not just saving state; it is making every re-run harmless.{{< /keyidea >}}
 {{< /panel >}}
 
 {{< question >}}

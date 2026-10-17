@@ -36,7 +36,7 @@ A vendor describing a product as "fully autonomous" has told you nothing about i
 The alternative is to treat autonomy as a **dial**, set separately for each decision. The vocabulary for the dial comes from **Thomas Sheridan** and **William Verplank** at MIT's Man-Machine Systems Laboratory,
 whose 1978 report for the US Office of Naval Research studied how much a human operator should delegate to a remotely operated undersea vehicle.
 
-💡 **Autonomy is not a property of an agent. It is a property of each decision.**
+{{< keyidea >}}**Autonomy is not a property of an agent. It is a property of each decision.**{{< /keyidea >}}
 {{< /definition >}}
 
 {{< panel color="green" title="Sheridan's Ten Levels of Automation" id="sheridan_levels" >}}
@@ -96,7 +96,7 @@ Bainbridge's central irony is that automating a system leaves the human with the
 The design response is to make human oversight **meaningful** rather than ubiquitous. In the support agent, only above-limit refunds reach the review queue, so the queue stays small and each item matters.
 Each escalation carries its **reason and amount**, so the reviewer receives evidence, not just a yes/no button. And the system **measures how often reviewers override** the agent: an override rate of zero does not indicate a safe system; it indicates a rubber stamp.
 
-💡 **A human in the loop is a control only if the human can really say no.**
+{{< keyidea >}}**A human in the loop is a control only if the human can really say no.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="magenta" title="Function Allocation: Code, Model or Person?" id="function_allocation" >}}
@@ -135,7 +135,7 @@ Applying the three questions yields a decision rule:
 The last row is the important one. When a decision is both open-ended and high-stakes, no single owner works, so we split it: the open-ended part (estimating the amount) goes to the model and is measured; the limit check goes to code and is proven.
 That split is exactly the [Gatekeeper pattern]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#gatekeeper" >}}) from the first notes.
 
-💡 **Certify the rule, measure the model: the model proposes, the rule authorises.**
+{{< keyidea >}}**Certify the rule, measure the model: the model proposes, the rule authorises.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="navy" title="Worked Example: An Insurance Claim" id="insurance_example" >}}
@@ -182,7 +182,7 @@ Refunds up to $50 are proposed by the model and allowed by code (level 7); refun
 The **research agent (RA)** reads the web, so its blast radius is bounded but its choices are vast. Its human sits **before the run**: you approve a contract (the brief and the acceptance rubric), which is then frozen (level 5).
 After that it plans, searches and writes on its own, within budgets (level 7). Whether the result is COMPLETE or PARTIAL is decided by code, not by the model.
 
-💡 **Approve the action when acts are costly. Approve the contract when the search is vast.**
+{{< keyidea >}}**Approve the action when acts are costly. Approve the contract when the search is vast.**{{< /keyidea >}}
 
 Finally, a level is only real if it lives in **configuration**. Three kinds of setting move the dial:
 - a **threshold** (auto-pay under $2,000) moves the line between levels 7 and 5;

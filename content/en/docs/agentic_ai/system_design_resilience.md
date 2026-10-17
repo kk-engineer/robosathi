@@ -42,7 +42,7 @@ And if a backup model answered any call, the trace says which, and why.
    20 calls at 99% each means **one turn in five** hits a failure somewhere.
 3. 🔁 **Duplicates by nature**: a model re-proposes a call after a timeout, a [resumed run]({{<ref "/docs/agentic_ai/guardrails_loop_control_state/#run_lifecycle" >}}) re-executes a node, a customer types "_refund it!_" twice. Without protection, each is a second payment.
 
-💡 **Failures aren't exceptions. At scale they are the normal case; design for them.**
+{{< keyidea >}}**Failures aren't exceptions. At scale they are the normal case; design for them.**{{< /keyidea >}}
 {{< /definition >}}
 
 {{< panel color="red" title="Failures Crack and Spread" id="cascades" >}}
@@ -68,7 +68,7 @@ graph LR
 | ↩️ **Saga** | A half-applied change | Undo in reverse |
 | 🧩 Hedge · rate limit · dead-letter queue | Slowness · quotas · bad input | Supporting patterns |
 
-💡 **Name the failure first; the pattern follows from it.**
+{{< keyidea >}}**Name the failure first; the pattern follows from it.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="blue" title="Timeout, and Little's Law" id="timeout" >}}
@@ -105,7 +105,7 @@ delay = random.uniform(0, min(max_delay, base_delay * 2 ** (attempt - 1)))   # f
 # ours: base 0.2 s · cap 2.0 s · 3 attempts
 ```
 
-💡 **Jitter is not a refinement: it's what stops the retry storm** that keeps a recovering service down.
+{{< keyidea >}}**Jitter is not a refinement: it's what stops the retry storm** that keeps a recovering service down.{{< /keyidea >}}
 
 **When _not_ to retry**:
 
@@ -149,8 +149,8 @@ Give each dependency its own limited pool of capacity, so one can't use up every
 
 ```mermaid
 graph LR
-    A["llm:ultra · 4 permits"]
-    B["llm:super · 4 permits"]
+    A["primary LLM · 4 permits"]
+    B["backup LLM · 4 permits"]
     C["hosted guard · 4 permits"]
     D["web search · 4 permits"]
 ```
@@ -175,7 +175,7 @@ The technique is an **idempotency key**: the server records the first result und
 
 **Four sources of duplicates in an agent**: retries (the stack re-sends a timed-out call) · the model (it re-proposes the same tool call) · resume (a re-run node) · the person ("_Refund it!_" ... "_Refund it!_").
 
-💡 **In an agent, duplicates are the default, not an edge case.**
+{{< keyidea >}}**In an agent, duplicates are the default, not an edge case.**{{< /keyidea >}}
 
 **Our keys**:
 
@@ -186,7 +186,7 @@ refund:<order_id>:<cents>                                          # the refund 
 
 A durable, per-agent guard runs a call **once** and replays its recorded result afterwards, surviving restarts. When a refund is voided before it settles, its key is **forgotten**: the effect was reversed, so the next identical request is a new one.
 
-💡 **Remember what happened; forget it when it's undone.**
+{{< keyidea >}}**Remember what happened; forget it when it's undone.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="navy" title="Saga" id="saga" >}}
@@ -215,7 +215,7 @@ A conditional update replaced a re-read because, unlike a read, it can't go stal
 **The shared skeleton**: precondition → idempotency replay → run steps (compensate on failure) → **remember successes only** (a remembered failure would make a transient fault permanent for that key).
 A failing compensation is recorded and the unwinding **continues**. A **Stop** is a failure too: the saga compensates (shielded so the same Stop can't cut the undo short), then lets the cancellation through.
 
-💡 **A saga's promise isn't "all succeed"; it's "never half-applied".**
+{{< keyidea >}}**A saga's promise isn't "all succeed"; it's "never half-applied".**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="cyan" title="Putting It Together: The Order Is the Design" id="composition" >}}
@@ -229,7 +229,7 @@ graph LR
 Get the order wrong and the layers fight: "_a timeout outside retry cuts off the retries instead of the call, and a breaker inside retry counts one logical call as three failures and trips at a third of the intended threshold._"
 And **one stack per dependency**: the breaker's count and the bulkhead's permits are per-dependency state.
 
-💡 **Timeout inside retry; breaker outside it.**
+{{< keyidea >}}**Timeout inside retry; breaker outside it.**{{< /keyidea >}}
 
 **Hedging the model.** "_A slow dependency is a worse failure than a dead one_": a dead one fails fast; a slow one holds the caller for its whole timeout and then usually fails anyway.
 From Dean & Barroso's _The Tail at Scale_ (2013): start the primary at once; if it hasn't finished after a hedge delay, or as soon as it fails, start a backup **beside** it; the first success wins and the rest are cancelled.

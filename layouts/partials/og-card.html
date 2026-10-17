@@ -1,0 +1,21 @@
+{{- /* Branded 1200×630 share card for one page: base card + course label + title + footer.
+       Returns the image resource. */ -}}
+{{- $base := resources.Get "images/social/og_base.png" -}}
+{{- $serif := resources.Get "fonts/PlayfairDisplay.ttf" -}}
+{{- $sans := resources.Get "fonts/Inter.ttf" -}}
+{{- $label := "ROBOSATHI · AGENTIC AI SYSTEMS ARCHITECTURE" -}}
+{{- if and (eq .Section "docs") (not .IsHome) -}}
+  {{- $course := "" -}}
+  {{- range .Ancestors -}}{{- if and (eq .Section "docs") (eq .Parent.RelPermalink (relURL "/docs/")) -}}{{- $course = .Title -}}{{- end -}}{{- end -}}
+  {{- if and (eq .Kind "section") (eq .Parent.RelPermalink (relURL "/docs/")) -}}{{- $course = .Title -}}{{- end -}}
+  {{- $label = upper (printf "RoboSathi · %s" (cond (ne $course "") $course "Courses")) -}}
+{{- end -}}
+{{- $title := .Title | default site.Title -}}
+{{- if .IsHome -}}{{- $title = "Agentic AI, architected for production" -}}{{- end -}}
+{{- $title = $title | plainify | truncate 90 | string | htmlUnescape -}}
+{{- $img := $base.Filter
+    (images.Text $label (dict "color" "#9a7340" "size" 24 "x" 116 "y" 168 "font" $sans))
+    (images.Text $title (dict "color" "#0a0a0a" "size" 66 "linespacing" 14 "x" 116 "y" 214 "font" $serif))
+    (images.Text "robosathi.com" (dict "color" "#5b667a" "size" 26 "x" 152 "y" 526 "font" $sans))
+-}}
+{{- return $img -}}

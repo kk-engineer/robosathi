@@ -45,7 +45,7 @@ Then the operator runs a **dream**: an offline consolidation job. Its report sho
 
 Long-term memory must be **governed** because what an agent remembers next month is what it will **act on** next month.
 
-💡 [Context Management]({{<ref "/docs/agentic_ai/context_management" >}}) managed one window. Memory decides what survives between windows.
+{{< keyidea >}}[Context Management]({{<ref "/docs/agentic_ai/context_management" >}}) managed one window. Memory decides what survives between windows.{{< /keyidea >}}
 {{< /definition >}}
 
 {{< panel color="gold" title="Four Memories" id="four_memories" >}}
@@ -58,7 +58,7 @@ The map comes from **CoALA** (_Cognitive Architectures for Language Agents_, Sum
 | 📚 **Semantic** | What is true? | "_Prefers email over calls_" |
 | 🛠️ **Procedural** | How do I act? | "_Refund: check the status first_" |
 
-💡 Three long-term stores, three questions: **what happened, what is true, how to act.**
+{{< keyidea >}}Three long-term stores, three questions: **what happened, what is true, how to act.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="green" title="Working Memory" id="working_memory" >}}
@@ -81,7 +81,7 @@ Working memory is small, but it is the one the model reads on **every** turn. It
 ⚠️ Working memory is replayed into every prompt **and** saved in [checkpoints]({{<ref "/docs/agentic_ai/guardrails_loop_control_state/#durable_state" >}}).
 So it holds the customer's _redacted_ words, never their personal data.
 
-💡 **Working memory is replayed every turn: bound it, redact it, and let it forget.**
+{{< keyidea >}}**Working memory is replayed every turn: bound it, redact it, and let it forget.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="orange" title="Episodic and Semantic Memory" id="episodic_semantic" >}}
@@ -136,7 +136,7 @@ tools: [get_order_status, get_refund_status, process_refund, list_orders]
 
 This mirrors the `AGENTS.md` / `CLAUDE.md` files coding agents use for standing instructions. A token budget caps the profile plus the largest skills, so procedural memory can't crowd out the [context window]({{<ref "/docs/agentic_ai/context_management/#failure_modes" >}}).
 
-💡 **The profile says who it is; skills say how, only when needed.**
+{{< keyidea >}}**The profile says who it is; skills say how, only when needed.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="cyan" title="Reading Memory: Which Memory Comes Back?" id="recall" >}}
@@ -155,7 +155,7 @@ Recall is a **weighted score**, not just similarity. It extends Generative Agent
 
 Recall is also **scoped**: the CSA only ever recalls the _verified_ customer's memories.
 
-💡 **A verified fact from March outranks a self-reported one from today.**
+{{< keyidea >}}**A verified fact from March outranks a self-reported one from today.**{{< /keyidea >}}
 
 [Read more about the Context Score]({{<ref "/docs/agentic_ai/context_management/#context_score" >}})
 {{< /panel >}}
@@ -202,7 +202,7 @@ class DreamEvent(BaseModel):
     consolidated_at: datetime | None       # None while it waits
 ```
 
-💡 **An event makes no memory decision. It records; the dream decides.**
+{{< keyidea >}}**An event makes no memory decision. It records; the dream decides.**{{< /keyidea >}}
 
 **Signals** are typed findings in each agent's own vocabulary, recorded **in code from verdicts, never by a model**:
 
@@ -244,13 +244,13 @@ Reconciling before writing means a dream can run **twice safely**: nothing doubl
 - **Outcomes from a template**, built from the structured actions (what was called, with what, and what it returned). It **cannot state an outcome that didn't happen**.
 - **Intent from a model, checked**: one sentence of what the customer wanted, from a small local summariser, kept only if a local **NLI** model finds the conversation entails it.
 
-💡 A summary that misremembers is worse than none: recall would feed it back as fact.
+{{< keyidea >}}A summary that misremembers is worse than none: recall would feed it back as fact.{{< /keyidea >}}
 
 **Learned skills.** A signal recurring in **≥ 3 distinct sessions** becomes a `SKILL.md` candidate, written from configured wording so it never claims more than the signal recorded, e.g.
 "_'Order N is already shipped' was refused in 3 sessions. Check that condition first and tell the customer before proposing the action._"
 A curator approves it before it is ever active; then it is selected like any other skill, by its trigger.
 
-💡 **Every write still goes through governance. The agent proposes a skill; a person activates it.**
+{{< keyidea >}}**Every write still goes through governance. The agent proposes a skill; a person activates it.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="orange" title="What a Turn Leaves Behind, and Why This Design" id="design" >}}

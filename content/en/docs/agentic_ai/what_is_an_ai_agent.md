@@ -65,7 +65,7 @@ Vivek Trivedy's essay at LangChain puts it in one line: _if you're not the model
 This decomposition explains the motivating example. The Gatekeeper is part of the harness; switching it off changed the agent's behaviour without changing the model at all.
 It also explains the structure of this course: [loop control]({{<ref "/docs/agentic_ai/guardrails_loop_control_state" >}}), [context management]({{<ref "/docs/agentic_ai/context_management" >}}), [memory]({{<ref "/docs/agentic_ai/memory_management" >}}), [hallucination checks]({{<ref "/docs/agentic_ai/hallucination_checks" >}}), [security]({{<ref "/docs/agentic_ai/agent_security_principles" >}}) and [evals]({{<ref "/docs/agentic_ai/evals" >}}) are all parts of the harness.
 
-💡 **Almost everything that makes an agent production-ready lives in the harness, not the model.**
+{{< keyidea >}}**Almost everything that makes an agent production-ready lives in the harness, not the model.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="magenta" title="Agency Is Not Authority" id="agency_authority" >}}
@@ -80,7 +80,7 @@ It has to be held, and checked, somewhere the model cannot reach.
 This has a practical corollary. Writing "_never refund more than $50_" into the system prompt does not give you a limit; it gives you a **request** that the model will usually honour. A request can be ignored, misunderstood, or talked away by a persuasive user (we see an example below).
 A **control** is something that holds whatever the model proposes.
 
-💡 **A rule in the prompt is a request. A check in code, before the action, is a control.**
+{{< keyidea >}}**A rule in the prompt is a request. A check in code, before the action, is a control.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="orange" title="Borrowing from Law: The Agency Principle" id="agency_principle" >}}
@@ -143,7 +143,7 @@ There are three possible verdicts. **ALLOW** lets the tool execute. **ESCALATE**
 Two properties make this a control rather than a request. First, the policy is read from the **database**, not from the prompt: the number may also appear in the prompt, but the prompt is not where the Gatekeeper gets it.
 Second, every decision is **audited**, so the principal can later see what was decided and why. We develop the Gatekeeper further in [Guardrails, Loop Control & State]({{<ref "/docs/agentic_ai/guardrails_loop_control_state" >}}) and [Agent Security]({{<ref "/docs/agentic_ai/agent_security_principles/#gatekeeper" >}}).
 
-💡 **Authority is judged on the exact proposal, by code, before the side effect, and every decision is audited.**
+{{< keyidea >}}**Authority is judged on the exact proposal, by code, before the side effect, and every decision is audited.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="red" title="Delegation Has a Price: Agency Costs" id="agency_costs" >}}

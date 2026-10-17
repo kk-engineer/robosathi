@@ -45,7 +45,7 @@ Filling the window is easy: append everything and let the model sort it out. The
 3. 📉 **Degrades**: more is not better. Quality drops as windows grow, even when nothing in them is wrong (see _rot_ below).
 4. 🕵️ **Attack surface**: anything in the window can be read as an instruction. A retrieved web page or an email is _data_, but the model can't tell unless the harness makes it tell ([Agent Security]({{<ref "/docs/agentic_ai/agent_security_principles" >}})).
 
-💡 **Context is the model's whole world for one call. Curate it.**
+{{< keyidea >}}**Context is the model's whole world for one call. Curate it.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="green" title="Position Matters: Lost in the Middle" id="lost_in_middle" >}}
@@ -60,7 +60,7 @@ So **order is a design decision**:
 | **Middle** | Memory, retrieved passages, tool results | Supporting material; read least well, so keep it relevant and short |
 | **Last** | History, then **the task** | The most recent thing the model reads |
 
-💡 **Put what frames the task first, and the task itself last.** This is exactly the order the last stage of our pipeline enforces.
+{{< keyidea >}}**Put what frames the task first, and the task itself last.** This is exactly the order the last stage of our pipeline enforces.{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="orange" title="Six Strategies, Six Prices" id="strategies" >}}
@@ -75,7 +75,7 @@ There are six ways to manage a window. They are **not interchangeable**: each on
 | 💾 **Cache** | Hold the stable prefix byte-identical | **Freedom to reorder** |
 | 🧹 **Consolidate** | Say each thing once | **The signal that it was repeated** |
 
-💡 **Choosing a strategy means naming what you are willing to lose.**
+{{< keyidea >}}**Choosing a strategy means naming what you are willing to lose.**{{< /keyidea >}}
 
 **📦 Offload.** The text leaves the window but not the system: a file, a scratchpad, a store, plus a short **handle** the model can use to fetch it back.
 A coding agent's build produces a 2,000-line log; it writes `build.log` and keeps one line in context. If it needs the error, it reads the file.
@@ -120,7 +120,7 @@ graph LR
 2. **Under pressure**: retrieve, offload and reduce run **only while over budget**, cheapest loss first: leave out the least relevant, then move bulk out (still fetchable), and only then shorten.
 3. **Then cut**: whatever still doesn't fit is dropped, lowest score first.
 
-💡 **A strategy decides what the model loses, not arrival order.**
+{{< keyidea >}}**A strategy decides what the model loses, not arrival order.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="red" title="Five Ways a Window Fails" id="failure_modes" >}}
@@ -156,7 +156,7 @@ Google's Gemini 2.5 report describes a long-running Pokémon-playing agent that,
 A support bot applies a policy exception correctly in turn 5 and misses it in turn 60, with the same policy still in the window.
 You can't see rot in one window, only **across a session**: score answers against window size, and compact (or start fresh, isolated windows) when the score falls.
 
-💡 **The window you can fill is not the window you should.**
+{{< keyidea >}}**The window you can fill is not the window you should.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="cyan" title="Protecting the Window" id="protecting" >}}
@@ -173,7 +173,7 @@ graph LR
 4. **Decide**: when two sides disagree, the more trusted wins; equal trust is flagged, not guessed.
 5. **Show**: the window is never silently fixed. What was removed, and why, is visible in the trace.
 
-💡 **Never fix a window silently. Say what you removed.**
+{{< keyidea >}}**Never fix a window silently. Say what you removed.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="navy" title="Our Implementation: One Window, Five Stages" id="five_stages" >}}
@@ -223,7 +223,7 @@ The paper sets \(\alpha = \beta = \gamma = 1\); the weights are the tuning knob.
 
 Why: importance by category is free and deterministic, whereas an LLM rating every write costs a call and drifts. Authority and validity stop a self-reported or outdated claim from outranking the record.
 
-💡 **The weights are a product decision: keep them in config, not code.**
+{{< keyidea >}}**The weights are a product decision: keep them in config, not code.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="orange" title="Strategies and Detectors in Code" id="in_code" >}}

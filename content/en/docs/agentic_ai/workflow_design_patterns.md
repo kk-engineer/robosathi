@@ -36,7 +36,7 @@ In an **agent**, the **model** decides. The path emerges at run time from the mo
 The choice between them follows directly from the [three questions]({{<ref "/docs/agentic_ai/levels_of_automation/#three_questions" >}}) of the previous notes. Low cardinality (the situations can be enumerated) points to a workflow.
 High cardinality with a bounded blast radius is where it pays to let the model choose.
 
-💡 **Most production systems are mostly workflow. That is the design, not a compromise.**
+{{< keyidea >}}**Most production systems are mostly workflow. That is the design, not a compromise.**{{< /keyidea >}}
 {{< /definition >}}
 
 {{< panel color="orange" title="1 · Sequential Pipeline" id="sequential" >}}

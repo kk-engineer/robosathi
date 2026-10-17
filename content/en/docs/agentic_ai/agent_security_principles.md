@@ -42,7 +42,7 @@ graph TD
 
 Any text the model reads can steer what it does with the other two, and **the model can't reliably tell instruction from data**.
 
-💡 **The defences can't live in the model.** They must live in the [harness]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#model_harness" >}}).
+{{< keyidea >}}**The defences can't live in the model.** They must live in the [harness]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#model_harness" >}}).{{< /keyidea >}}
 {{< /definition >}}
 
 {{< panel color="gold" title="Six Principles" id="principles" >}}
@@ -55,7 +55,7 @@ Any text the model reads can steer what it does with the other two, and **the mo
 | 🧮 **Deterministic first** | A control that can be argued with in natural language isn't a control |
 | 🧾 **Audit everything** | Every decision, reveal and override, written down |
 
-💡 **A detector that misses fails open. A permission never granted has nothing to miss.**
+{{< keyidea >}}**A detector that misses fails open. A permission never granted has nothing to miss.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="red" title="OWASP Top 10 for LLM Applications (2025)" id="owasp" >}}
@@ -74,7 +74,7 @@ The industry's shared vocabulary for what goes wrong, and what security teams wi
 | 09 | **Misinformation** | Confident falsehoods ([Hallucination Checks]({{<ref "/docs/agentic_ai/hallucination_checks" >}})) |
 | 10 | **Unbounded Consumption** | Runaway cost, "denial of wallet" ([Loop Control]({{<ref "/docs/agentic_ai/guardrails_loop_control_state/#loop_control" >}})) |
 
-💡 Half the list is about **what the agent may do**, not what the model says.
+{{< keyidea >}}Half the list is about **what the agent may do**, not what the model says.{{< /keyidea >}}
 
 **Where our reference agents stand**, honestly:
 
@@ -88,7 +88,7 @@ The industry's shared vocabulary for what goes wrong, and what security teams wi
 | 07 Prompt leakage | Controls live in code, so a leaked prompt grants nothing | Covered |
 | 09 · 10 | Hallucination checks · budgets | Covered |
 
-💡 **Put the control in code, and a leaked prompt grants nothing.**
+{{< keyidea >}}**Put the control in code, and a leaked prompt grants nothing.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="green" title="Personal Data: Four Places PII Leaks" id="pii" >}}
@@ -113,7 +113,7 @@ Redacting only the visible response leaves the same data in three places that ou
 Inside the harness (grounding, guardrails, tools) everything works on real values; only the vendor sees tokens.
 A token the model invents isn't in the map, so it stays a token: nothing is restored that this request didn't send.
 
-💡 **The vendor sees tokens; your code sees values.**
+{{< keyidea >}}**The vendor sees tokens; your code sees values.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="orange" title="Prompt Injection: Direct and Indirect" id="prompt_injection" >}}
@@ -136,7 +136,7 @@ Indirect injection is _the_ agent problem: **the more an agent reads and acts, t
 | 5 | **Anomaly detection** | In evals |
 | 6 | **Standing** | Every action's legal [standing]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#four_standings" >}}): VOID · RATIFIABLE · VOIDABLE · VALID |
 
-💡 **Detect what you can; never grant what you can't detect.** Phrase lists are English and evadable by paraphrase, which is exactly why they are layer 2 of 6 and not _the_ defence.
+{{< keyidea >}}**Detect what you can; never grant what you can't detect.** Phrase lists are English and evadable by paraphrase, which is exactly why they are layer 2 of 6 and not _the_ defence.{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="magenta" title="Authority Comes From the Source" id="authority_hierarchy" >}}
@@ -151,7 +151,7 @@ Only the top ranks can grant or expand authority. Everything below them is **inp
 That single rule is why a prompt injected into a retrieved document can't authorise a refund: it arrives as `untrusted_content`, the weakest rank, however imperative its grammar.
 The forged "_Priya from the refunds team_" approval is `user_task` at best, so it can't outrank the organisation's refund limit.
 
-💡 **However imperative its grammar, untrusted text has no authority.**
+{{< keyidea >}}**However imperative its grammar, untrusted text has no authority.**{{< /keyidea >}}
 
 [Read more about trust classes in the context window]({{<ref "/docs/agentic_ai/context_management/#protecting" >}})
 {{< /panel >}}
@@ -166,7 +166,7 @@ Moderation screens for **harmful content**, as opposed to hostile **instructions
 
 And the moderator has, by its interface, **no path to an authorisation decision**: it can flag and escalate, never permit or block an action.
 
-💡 **When the safety check can't run, the answer is no.**
+{{< keyidea >}}**When the safety check can't run, the answer is no.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="navy" title="RBAC: Roles Are What You Are, Permissions Are What You May Do" id="rbac" >}}
@@ -192,7 +192,7 @@ Nobody's permission comes from what they say in the conversation.
 
 Permission strings have segments with per-segment wildcards (`memory:*:erase:*`), so a permission that merely _contains_ "_erase_" can never satisfy them.
 
-💡 **Deny by default: an action nobody mapped is an action nobody may take.**
+{{< keyidea >}}**Deny by default: an action nobody mapped is an action nobody may take.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="green" title="Beyond RBAC: The Gatekeeper" id="gatekeeper" >}}
@@ -207,7 +207,7 @@ graph LR
 - **Mandate**: the target record is issued from what the person supplied and what the record holds, never from model output. "_A proposal that supplies its own target authorizes itself._"
 - A semantic, model-based **advisor** may add context or raise an escalation, but its interface has no field that can permit or refuse an action.
 
-💡 **A control that can be talked out of its verdict is not a control.**
+{{< keyidea >}}**A control that can be talked out of its verdict is not a control.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="grey" title="Where We're Thinner" id="gaps" >}}
@@ -218,7 +218,7 @@ graph LR
 | **Hosted guards** | Fail closed means a provider outage quarantines ordinary messages; fallbacks reduce it |
 | **End-user identity** | A verified customer, not a role in an enterprise identity provider; a multi-tenant deployment would need that |
 
-💡 **Name your gaps, or an attacker will name them for you.**
+{{< keyidea >}}**Name your gaps, or an attacker will name them for you.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< question >}}

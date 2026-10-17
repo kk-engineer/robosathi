@@ -1,0 +1,2 @@
+{{- /* Overrides Hugo's embedded helper: every page shares a generated, branded card. */ -}}
+{{- return (slice (partialCached "og-card.html" . .RelPermalink)) -}}

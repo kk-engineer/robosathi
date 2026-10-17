@@ -40,7 +40,7 @@ Two artefacts make this concrete: a colour-coded table of **30 golden cases** wi
 
 Because evals are non-deterministic and costly, they need their own principles.
 
-💡 **A green test suite says nothing about whether the model refunds the wrong order.**
+{{< keyidea >}}**A green test suite says nothing about whether the model refunds the wrong order.**{{< /keyidea >}}
 {{< /definition >}}
 
 {{< panel color="gold" title="Eight Principles" id="principles" >}}
@@ -78,7 +78,7 @@ Outcomes are decided by **side effects**:
 
 📌 An airline rebooking agent: whether it searched flights first or checked fare rules first doesn't matter; whether the passenger ended up on a valid flight at the right fare does.
 
-💡 **The one path rule: a forbidden tool must never _execute_. Asking is not acting.**
+{{< keyidea >}}**The one path rule: a forbidden tool must never _execute_. Asking is not acting.**{{< /keyidea >}}
 (A refund the [Gatekeeper]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#gatekeeper" >}}) escalated was _proposed_, not executed, and that's correct behaviour.)
 {{< /panel >}}
 
@@ -95,7 +95,7 @@ A suite of refusals alone would reward refusing everything.
 
 📌 A spam filter that flags every email has perfect recall. **Precision** is what a balanced set measures.
 
-💡 **If refusing everything passes your suite, your suite is broken.**
+{{< keyidea >}}**If refusing everything passes your suite, your suite is broken.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="magenta" title="pass@k vs pass^k" id="pass_k" >}}
@@ -113,7 +113,7 @@ One run of a non-deterministic system proves little. Run each case \(k\) times. 
 
 For a money-moving agent, **pass^k is the one that matters**.
 
-💡 **Right 9 times in 10 means wrong for one customer in ten.**
+{{< keyidea >}}**Right 9 times in 10 means wrong for one customer in ten.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="cyan" title="Three Graders, Three Questions" id="graders" >}}
@@ -137,7 +137,7 @@ Alongside these, component evals test pieces in isolation, e.g. an intent-classi
 | No other customer named | [Scoped corpus]({{<ref "/docs/agentic_ai/rag/#out_of_index" >}}) · [PII]({{<ref "/docs/agentic_ai/agent_security_principles/#pii" >}}) |
 | The refund limit is never disclosed | [Prompt leakage]({{<ref "/docs/agentic_ai/agent_security_principles/#owasp" >}}) |
 
-💡 **Only code reads ground truth.**
+{{< keyidea >}}**Only code reads ground truth.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="navy" title="DeepEval: Judged Quality, the pytest Way" id="deepeval" >}}
@@ -173,7 +173,7 @@ honesty:
 - **Core** = task resolution, honesty, faithfulness (~12 min); **full** adds policy communication, tone, relevancy (~35–40 min).
 - The judge is a different model from the agent's, and **κ against the runtime hallucination guard** is printed on every run.
 
-💡 **The provider budget, not the code, sets an eval's pace. Design for it.**
+{{< keyidea >}}**The provider budget, not the code, sets an eval's pace. Design for it.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="red" title="Promptfoo: Red-Team the Agent with the Same Rules" id="promptfoo" >}}
@@ -194,7 +194,7 @@ honesty:
 
 **Wired to the real agent**: the provider builds a fresh agent per test on a private fixture copy; the assertions **reuse the oracle's rules** (`no_refund_paid`, `forbidden_tools_not_executed`, `no_foreign_personal_data`, `no_prompt_leak`), so "_unsafe_" is defined **once**, for golden cases and attacks alike. `llm-rubric` is graded by the platform judge.
 
-💡 **One attack through fails the suite. Every assertion is hard.**
+{{< keyidea >}}**One attack through fails the suite. Every assertion is hard.**{{< /keyidea >}}
 
 | | **DeepEval** | **Promptfoo** |
 |---|---|---|
@@ -223,7 +223,7 @@ graph LR
 Each case states the expected outcome for the oracle, and in prose, what a good reply delivers for the judge.
 **Labels are tested**: every money-moving label is cross-checked against the refund and cancellation policy code, so a mislabelled case fails before any run.
 
-💡 **A mislabelled golden case is a bug. Test the labels.**
+{{< keyidea >}}**A mislabelled golden case is a bug. Test the labels.**{{< /keyidea >}}
 
 **Cheap enough to run**:
 
@@ -235,7 +235,7 @@ Each case states the expected outcome for the oracle, and in prose, what a good 
 | A failed gate is a result | Every section runs; reports are always written |
 | One store | Pass rates, failures, cost and trends over runs |
 
-💡 **An eval nobody runs protects nobody.**
+{{< keyidea >}}**An eval nobody runs protects nobody.**{{< /keyidea >}}
 
 [Read more about tracing what the agent did in Observability]({{<ref "/docs/agentic_ai/observability_analytics" >}})
 {{< /panel >}}

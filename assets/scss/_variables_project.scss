@@ -2990,5 +2990,118 @@ $rs-badge-border-hover: #B8945A;
   }
 }
 
+// ========================================
+// Reading-notes layout (all courses)
+// ========================================
+// A comfortable measure: about 70 characters per line of body text.
+.td-content { max-width: 72ch; }
+
+// Most panels read as plain sections: a heading and flowing text.
+.rs-callout.rs-callout--section {
+  background: transparent !important;
+  border: none !important;
+  border-left: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 2.2rem 0 1.2rem !important;
+  border-radius: 0 !important;
+
+  .rs-callout__header {
+    display: block;
+    padding-bottom: 0.35rem;
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid #e8ddd0;
+  }
+
+  .rs-callout__icon { display: none; }
+
+  .rs-callout__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    color: #0a0a0a !important;
+  }
+
+  .rs-callout__body { padding: 0 !important; }
+}
+
+// Key idea: a small boxed takeaway.
+.rs-keyidea {
+  margin: 1rem 0;
+  padding: 0.7rem 1rem;
+  border-left: 3px solid #B8945A;
+  border-radius: 0 8px 8px 0;
+  background: #fdf9f4;
+  font-size: 0.97em;
+
+  p:last-child { margin-bottom: 0; }
+}
+
+.rs-keyidea__label {
+  display: block;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9a7340;
+  margin-bottom: 0.2rem;
+}
+
+// Wide content inside the narrow column scrolls rather than overflows.
+.td-content table { display: block; overflow-x: auto; }
+
+// Course landing page: numbered chapters
+.rs-chapters { margin: 1.2rem 0 2rem; }
+
+.td-content h2.rs-chapters__heading {
+  font-size: 1.3rem;
+  margin: 0 0 0.6rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid #e8ddd0;
+}
+
+.rs-chapters__list { list-style: none; margin: 0; padding: 0; }
+
+.rs-chapter {
+  display: grid;
+  grid-template-columns: 2.4rem 1fr auto;
+  gap: 0.75rem;
+  align-items: baseline;
+  padding: 0.7rem 0;
+  border-bottom: 1px dashed #e8ddd0;
+  margin: 0 !important;
+}
+
+.rs-chapter__num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 900;
+  font-size: 1.05rem;
+  color: #B8945A;
+}
+
+.rs-chapter__title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1c1d1f !important;
+  text-decoration: none !important;
+
+  &:hover { color: #9a7340 !important; }
+}
+
+.td-content p.rs-chapter__desc {
+  margin: 0.15rem 0 0;
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: #5b667a;
+}
+
+.rs-chapter__meta { font-size: 0.78rem; color: #8a8a8a; white-space: nowrap; }
+
+@media (max-width: 640px) {
+  .rs-chapter { grid-template-columns: 2rem 1fr; }
+  .rs-chapter__meta { grid-column: 2; }
+}
+
 // Interview Section scss
 @import "interview";

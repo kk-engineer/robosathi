@@ -1,0 +1,23 @@
+{{- /* Numbered chapter list for a course landing page, built from course_outline.
+       Shows each chapter's one-line description and reading time. */ -}}
+{{- with .Params.course_outline -}}
+<section class="rs-chapters" aria-label="Chapters">
+  <h2 class="rs-chapters__heading">Chapters</h2>
+  <ol class="rs-chapters__list">
+  {{- range $i, $s := .sections -}}
+    {{- with site.GetPage $s.page_ref -}}
+    {{- $stats := partial "course-stats.html" (dict "page" .) -}}
+    {{- $mins := $stats.articleMinutes -}}
+    <li class="rs-chapter">
+      <span class="rs-chapter__num">{{ printf "%02d" (add $i 1) }}</span>
+      <div class="rs-chapter__body">
+        <a class="rs-chapter__title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{- with .Description }}<p class="rs-chapter__desc">{{ . }}</p>{{ end }}
+      </div>
+      <span class="rs-chapter__meta">{{ if eq .Kind "section" }}{{ $stats.articleCount }} articles · {{ end }}{{ $mins }} min read</span>
+    </li>
+    {{- end -}}
+  {{- end -}}
+  </ol>
+</section>
+{{- end -}}

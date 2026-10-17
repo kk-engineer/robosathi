@@ -40,7 +40,7 @@ Run one customer turn and copy its **trace id**. Then:
 
 **Monitoring** answers questions you knew to ask in advance. **Observability** lets you ask _new_ questions after the fact, which, for a non-deterministic agent, is most of them.
 
-💡 **You can't reproduce a non-deterministic turn. You can only record it.**
+{{< keyidea >}}**You can't reproduce a non-deterministic turn. You can only record it.**{{< /keyidea >}}
 {{< /definition >}}
 
 {{< panel color="gold" title="What a Trace Is" id="trace" >}}
@@ -89,7 +89,7 @@ An id is only as useful as the number of places it joins. Ours appears in four:
 **Logging rules**: structured, one rotating file per subsystem (llm, tools, gatekeeper, memory, context, security, hallucination check...), written independently of any UI, and **redacted** before anything is exported.
 Decorators log a call/return pair around functions; failures are **always re-raised**.
 
-💡 **A tracer that hides an exception hides the one event worth tracing.**
+{{< keyidea >}}**A tracer that hides an exception hides the one event worth tracing.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="orange" title="OpenTelemetry and the GenAI Conventions" id="otel" >}}
@@ -116,7 +116,7 @@ graph LR
 | `gen_ai.operation.name` · span names | Roles (answerer, planner) and tool stages | Different |
 | Guardrails, retries, cost | Check rows, attempt numbers, cost | **Beyond the spec** |
 
-💡 **Mostly the same data under our names; the gap is the wire, not the content.**
+{{< keyidea >}}**Mostly the same data under our names; the gap is the wire, not the content.**{{< /keyidea >}}
 
 **The real gaps**, named precisely:
 
@@ -139,7 +139,7 @@ And because every fact is written at **one choke point**, adding OTel is one ada
 5. OTLP to a Collector, exporting to whatever backend the team uses.
 6. **Keep the facts**: they remain the analytics contract.
 
-💡 **Keep the facts for analytics; add spans for interoperability.**
+{{< keyidea >}}**Keep the facts for analytics; add spans for interoperability.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="magenta" title="Analytics Is a Platform Contract" id="analytics_contract" >}}
@@ -160,7 +160,7 @@ graph LR
 - **NULL ≠ 0**: NULL means _not observed_ (the feature was off); 0 means _observed, and none happened_. Every formula ignores NULLs.
 - Tiers: **1** the platform catalogue · **2** an agent's own tables and metrics · **3** eval scores ([Evals]({{<ref "/docs/agentic_ai/evals" >}})).
 
-💡 **A new agent appears on the dashboard by running turns.**
+{{< keyidea >}}**A new agent appears on the dashboard by running turns.**{{< /keyidea >}}
 
 **Metrics, defined once** (name, SQL, direction, default SLO target), read by dashboards, the analytics MCP server and an ops agent alike:
 
@@ -175,7 +175,7 @@ graph LR
 | `block_rate` | Screened messages blocked, by check ([Agent Security]({{<ref "/docs/agentic_ai/agent_security_principles" >}})) | Context |
 | `tokens_per_resolved_task` | Tokens of resolved ÷ resolved tasks | Lower |
 
-💡 **A formula written twice drifts. Write it once, in the semantic layer.**
+{{< keyidea >}}**A formula written twice drifts. Write it once, in the semantic layer.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="cyan" title="Dashboards as Code: From a Turn to a Tile" id="dashboards" >}}
@@ -195,7 +195,7 @@ graph LR
 3. **Generate** the dashboard project from the semantic layer: one fleet page, plus a page per agent with its Tier-2 metrics.
 4. **Serve**, and refresh by re-exporting.
 
-💡 **Dashboards are generated, never hand-written: a hand-written measure is a second copy of a formula.**
+{{< keyidea >}}**Dashboards are generated, never hand-written: a hand-written measure is a second copy of a formula.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="navy" title="LangSmith: One Run per Turn" id="langsmith" >}}
@@ -208,7 +208,7 @@ One project per agent; thread = session. Settings: off by default; a **sample ra
 1. 🔐 **Nothing unredacted leaves the machine**: input and output hooks run the [PII redactor]({{<ref "/docs/agentic_ai/agent_security_principles/#pii" >}}) over every string of every run. The local log keeps the full payload.
 2. 🛟 **Export never fails a turn**: a missing key, a dead endpoint, a rejected batch is logged, and the turn carries on.
 
-💡 **The local trace is the record; the tracing UI is a view of it.**
+{{< keyidea >}}**The local trace is the record; the tracing UI is a view of it.**{{< /keyidea >}}
 
 **Which tool, which question**:
 

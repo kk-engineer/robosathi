@@ -31,7 +31,7 @@ By the end of these notes you should be able to:
 
 Zheng et al. (MT-Bench, 2023) found that strong judges agree with human experts about **as often as experts agree with each other**, and in the same paper documented position, verbosity and self-preference biases.
 
-💡 **A judge is an instrument. Calibrate it before you trust its readings.**
+{{< keyidea >}}**A judge is an instrument. Calibrate it before you trust its readings.**{{< /keyidea >}}
 {{< /definition >}}
 
 {{< panel color="red" title="Four Known Biases" id="biases" >}}
@@ -42,7 +42,7 @@ Zheng et al. (MT-Bench, 2023) found that strong judges agree with human experts 
 | 🪞 **Self-preference** | Rates its own outputs (or its family's) higher | The judge is a **different model** from the author |
 | 📊 **Leniency / central tendency** | Absolute scales bunch up: everything is a 7 or an 8 | Anchored rubrics, **binary** criteria, or pairwise comparison |
 
-💡 **Every bias has a design fix, not a prompt fix.** "_Please be unbiased_" in the prompt changes nothing; swapping order, changing the judge model and narrowing the question do.
+{{< keyidea >}}**Every bias has a design fix, not a prompt fix.** "_Please be unbiased_" in the prompt changes nothing; swapping order, changing the judge model and narrowing the question do.{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="blue" title="Why Raw Agreement Lies" id="raw_agreement" >}}
@@ -59,7 +59,7 @@ Chance agreement for these label mixes:
 
 The judge's agreement is exactly what chance predicts. Its real skill is **zero**.
 
-💡 **On skewed labels, accuracy flatters. Kappa removes the luck.**
+{{< keyidea >}}**On skewed labels, accuracy flatters. Kappa removes the luck.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="green" title="Cohen's Kappa" id="kappa" >}}
@@ -93,7 +93,7 @@ Our bar is **κ ≥ 0.6** (substantial) before a judge's verdicts gate anything.
 Other fields work the same way. Radiologists reading the same scans are routinely reported at moderate-to-substantial kappa, which is why a second read exists.
 Large-scale essay scoring pairs a human and an automated scorer and checks their agreement before the machine score counts (Williamson, Xi & Breyer, 2012).
 
-💡 **A judge needn't beat people. It must agree as well as people agree with each other.**
+{{< keyidea >}}**A judge needn't beat people. It must agree as well as people agree with each other.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="orange" title="Psychometrics: Treat the Judge Like a Test Instrument" id="psychometrics" >}}
@@ -109,7 +109,7 @@ Large-scale essay scoring pairs a human and an automated scorer and checks their
 - **Criterion**: does it agree with a trusted reference (human labels, or an independent check)?
 - **Construct**: does it respond to the thing itself, not a proxy like length, confidence or politeness?
 
-💡 **A reliable judge can be reliably wrong. You need both.**
+{{< keyidea >}}**A reliable judge can be reliably wrong. You need both.**{{< /keyidea >}}
 
 **Write the rubric like a test.** Most judge disagreement is a rubric problem, not a model problem:
 1. 🪜 **Anchor every level**: a 1–10 scale without definitions is ten guesses. Define what each level looks like, and prefer fewer levels.
@@ -141,7 +141,7 @@ For a pairwise win rate \(\hat{w}\) over \(n\) consistent comparisons, report it
 | **Absolute, binary** | Does this output meet this criterion? | "_Trade-offs stated?_" as a gate |
 | **Absolute, graded** | How much? (rarely) | Only with anchored levels |
 
-💡 **Rank variants pairwise. Gate a single output against a criterion.**
+{{< keyidea >}}**Rank variants pairwise. Gate a single output against a criterion.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="cyan" title="Our Judges: One Skeleton for the Platform" id="our_judges" >}}
@@ -165,14 +165,14 @@ Every grader (eval metrics, rubric checks, agent judges) asks **one** judge clie
 
 **An outage is not a verdict.** If every model in the chain is down, or the answer fails its schema after the bounded repair, the judge **abstains**: the item is "_not judged_", never a pass and never a silent fail.
 
-💡 **A zero is a verdict; an outage is not. Never a silent zero.**
+{{< keyidea >}}**A zero is a verdict; an outage is not. Never a silent zero.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="navy" title="Kappa in Every Eval Run, and the Independent Auditor" id="auditor" >}}
 **Kappa in every eval run.** Two independent raters grade the same cases: the eval judge's faithfulness verdict (after the fact, reading the whole conversation) and the runtime [hallucination guard]({{<ref "/docs/agentic_ai/hallucination_checks/#nli" >}}) (local NLI, in the request path).
 Neither is ground truth. The report line reads "_N cases · observed agreement x% · Cohen's κ y · k disagreements_", and the disagreements are where to look: where they disagree, one of them is wrong.
 
-💡 **κ says whether to trust either; disagreements say where to look.**
+{{< keyidea >}}**κ says whether to trust either; disagreements say where to look.**{{< /keyidea >}}
 
 **The RA's independent auditor** is the most demanding judge use ([evaluator–optimizer]({{<ref "/docs/agentic_ai/agentic_design_patterns/#evaluator_optimizer" >}}) in the run graph):
 
@@ -191,7 +191,7 @@ graph LR
 3. **A different model**: the judge must resolve to a different model than the writer, **checked at start-up**; writers can't fall back onto the judge's model.
 4. **Told it's independent**: "_You did not write this report and have no stake in it._"
 
-💡 **An auditor who read the author's drafts is not independent.**
+{{< keyidea >}}**An auditor who read the author's drafts is not independent.**{{< /keyidea >}}
 
 **Why this design**: judge **last** (the most expensive, least reliable check), **measured** not trusted (κ on every eval run), **independent** by construction, and **abstain, never guess**.
 {{< /panel >}}

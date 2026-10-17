@@ -54,7 +54,7 @@ graph LR
 
 📌 An engineering org with three AI tools and five systems: fifteen bespoke integrations, or eight protocol implementations. And the sixth system costs **one server**, not three integrations.
 
-💡 **The next tool costs one server, not one integration per app.**
+{{< keyidea >}}**The next tool costs one server, not one integration per app.**{{< /keyidea >}}
 {{< /definition >}}
 
 {{< panel color="gold" title="Host, Client, Server" id="architecture" >}}
@@ -84,7 +84,7 @@ Messages are **JSON-RPC 2.0**: requests with ids, responses, and notifications.
 
 Client-side features exist too: a server can ask the client for model **sampling** or for **user input** (elicitation).
 
-💡 **One client per server; the host decides what's allowed.**
+{{< keyidea >}}**One client per server; the host decides what's allowed.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="green" title="Discover, List, Call" id="lifecycle" >}}
@@ -117,7 +117,7 @@ A robust client uses `server/discover` for newer servers and **falls back** to `
 | Knowledge | Drive, Notion, Confluence | search · fetch |
 | Operations | Incidents, dashboards, runbooks | timeline · fetch |
 
-💡 **The server owns the system's meaning; the host owns trust.**
+{{< keyidea >}}**The server owns the system's meaning; the host owns trust.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="red" title="The Protocol Connects; It Doesn't Trust" id="mcp_security" >}}
@@ -130,7 +130,7 @@ MCP's security model in one sentence: **the protocol connects; it doesn't decide
 | 🎭 **Confused deputy** | A server holding broad credentials acts for whoever asks |
 | 🔄 **Rug pull** | The tool list changes after you approved it |
 
-💡 **Annotations are claims. The host decides what a tool may do.**
+{{< keyidea >}}**Annotations are claims. The host decides what a tool may do.**{{< /keyidea >}}
 
 [Read more about tool supply-chain risks in Agent Security]({{<ref "/docs/agentic_ai/agent_security_principles/#prompt_injection" >}})
 {{< /panel >}}
@@ -157,14 +157,14 @@ graph LR
     end
 ```
 
-💡 **Prefer `compute_metric`: a formula re-derived by a model drifts.**
+{{< keyidea >}}**Prefer `compute_metric`: a formula re-derived by a model drifts.**{{< /keyidea >}}
 
 **The graph**: propose ⇄ execute (governed MCP tools) → **review** (only if the model wrote SQL: one more call reads the question, the SQL and a few rows, and says accept or revise, catching the wrong view, an unasked-for filter, a count meant to be distinct) → **ground** (every figure in the answer must be found in the returned rows, within 1% for rounding).
 Reviewing the SQL _before_ the answer is written means the answer is written once, from reviewed rows ([reflection]({{<ref "/docs/agentic_ai/agentic_design_patterns/#reflection" >}})).
 
 📌 "_Worst p95 turn latency, 7 days_" → `list_metrics` → `compute_metric` × each agent, in parallel → an answer quoting the figures → each figure found in a row. No SQL was written, so there was nothing to review.
 
-💡 **Every number in the answer is a number a tool returned.**
+{{< keyidea >}}**Every number in the answer is a number a tool returned.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="magenta" title="Two Walls Around run_query" id="two_walls" >}}
@@ -180,7 +180,7 @@ Reviewing the SQL _before_ the answer is written means the answer is written onc
 A refusal is a **tool error whose message says what to change**, so the model fixes its SQL instead of guessing.
 And `run_query` needs **its own permission**, so a policy that grants only the catalogue tools has it refused by the Gatekeeper.
 
-💡 **A query the parser misjudges still can't reach a file or the network.** (Defence in depth: [Agent Security]({{<ref "/docs/agentic_ai/agent_security_principles/#principles" >}}).)
+{{< keyidea >}}**A query the parser misjudges still can't reach a file or the network.** (Defence in depth: [Agent Security]({{<ref "/docs/agentic_ai/agent_security_principles/#principles" >}}).){{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="cyan" title="Our Server and a Governed Client" id="server_client" >}}
@@ -231,7 +231,7 @@ Arguments are validated by a Pydantic model **built from the server's input sche
 **One task owns the session**: the SDK client's cancel scopes belong to the task that opened it, but tool calls arrive from whichever task runs the turn. So one task owns the client and callers hand it requests through a **queue** (the Active Object pattern).
 A call **fails, never hangs**, when the server has gone away. Every protocol event (handshake, listing, each call, notifications, close) is logged in full under the turn's [trace id]({{<ref "/docs/agentic_ai/observability_analytics/#trace_id" >}}).
 
-💡 **A server describing its own tool as harmless has asserted it, not established it.**
+{{< keyidea >}}**A server describing its own tool as harmless has asserted it, not established it.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="navy" title="stdio vs Streamable HTTP" id="transports" >}}
@@ -253,7 +253,7 @@ Authorization is **OAuth 2.1**: the MCP server is a resource server, and clients
 | Scale · ops | Per session; dies with it | Replicas, health checks, rate limits |
 | Use when | Local, single user, dev tools | Shared, remote, multi-client |
 
-💡 **stdio trusts the machine; HTTP must trust no one by default.**
+{{< keyidea >}}**stdio trusts the machine; HTTP must trust no one by default.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="cyan" title="Moving Our Server to HTTP" id="move_to_http" >}}

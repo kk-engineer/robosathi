@@ -42,7 +42,7 @@ This course built a Gatekeeper, guardrails, memory governance, hallucination che
 | **Adopted** | LangGraph · MCP SDK · DuckDB · Presidio · NLI and intent models · DeepEval · Promptfoo · Rill · Pydantic · sqlglot |
 | **Bought** | Hosted foundation models · hosted safety classifiers · a tracing UI (optional) |
 
-💡 **Decide per component, never per "agent".** We built the control plane and the data; we adopted or bought the runtime.
+{{< keyidea >}}**Decide per component, never per "agent".** We built the control plane and the data; we adopted or bought the runtime.{{< /keyidea >}}
 {{< /definition >}}
 
 {{< panel color="gold" title="What the Data Says (and Doesn't)" id="data" >}}
@@ -54,7 +54,7 @@ One data point the industry argues about: MIT NANDA's _The GenAI Divide: State o
 
 ⚠️ It is survey- and interview-based, and its definition of "_success_" has been debated. But the direction matches practice.
 
-💡 **Building should be a deliberate choice, not the default.**
+{{< keyidea >}}**Building should be a deliberate choice, not the default.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="green" title="ROI, Payback, NPV" id="roi" >}}
@@ -72,7 +72,7 @@ The three numbers a CFO will ask for, over a stated horizon (e.g. 3 years):
 - 📈 **Revenue**: conversion, retention.
 - 🛡️ **Risk avoided**: losses prevented.
 
-💡 **Risk avoided is real money, and the benefit most often left out.**
+{{< keyidea >}}**Risk avoided is real money, and the benefit most often left out.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="orange" title="Total Cost of Ownership" id="tco" >}}
@@ -96,7 +96,7 @@ The three numbers a CFO will ask for, over a stated horizon (e.g. 3 years):
 | **Trace volume** | Per-trace fees grow with traffic ([Observability]({{<ref "/docs/agentic_ai/observability_analytics/#langsmith" >}})) |
 | **Human review** | Escalations need people ([Levels of Automation]({{<ref "/docs/agentic_ai/levels_of_automation/#ironies" >}})) |
 
-💡 **An agent shifts work to review and maintenance; it rarely deletes it.**
+{{< keyidea >}}**An agent shifts work to review and maintenance; it rarely deletes it.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="magenta" title="Break-Even Volume" id="break_even" >}}
@@ -110,7 +110,7 @@ The one formula that settles most cost arguments. **Build** has a high fixed cos
 
 \[Q^* = \frac{48{,}000 - 15{,}000}{1.00 - 0.125} \approx 37{,}700 \text{ resolutions/month} \approx 94\text{k tickets at a 40\% resolution rate}\]
 
-💡 **Know your Q**, now and in two years.
+{{< keyidea >}}**Know your Q**, now and in two years.{{< /keyidea >}}
 
 **Plan for the price curve.** The cost of a given level of model capability has been falling roughly **10× per year** (a16z, _LLMflation_, 2024):
 - ❌ **Don't build** what the curve will commoditise, e.g. a custom-trained model to save tokens: it competes with a price that falls 10× a year.
@@ -137,7 +137,7 @@ The one formula that settles most cost arguments. **Build** has a high fixed cos
 | **Mature market** | **Buy / adopt** (a database, a BI tool, a safety classifier) | **Buy the core, build the edge** (a bought model; your prompts, skills, evals around it) |
 | **Immature market** | **Adopt open source, stay thin**, and wait for the market | **Build** (your authority rules, your grounding rules) |
 
-💡 **Build only where you're different and nobody sells it well.**
+{{< keyidea >}}**Build only where you're different and nobody sells it well.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="navy" title="What to Build: The Control Plane and the Data" id="what_to_build" >}}
@@ -148,11 +148,11 @@ The liability is yours, and no vendor knows your refund policy, limits or escala
 
 📌 _Illustrative_: 0.1% × $80 × 1,000,000 refunds/year ≈ **$80,000/year** in direct loss, before chargebacks, regulators or the press.
 A deterministic Gatekeeper is a few engineer-weeks to build and near-zero marginal cost per call.
-💡 **You can rent intelligence. You can't rent accountability.**
+{{< keyidea >}}**You can rent intelligence. You can't rent accountability.**{{< /keyidea >}}
 
 **2 · Your evaluation data.** Adopt the frameworks (DeepEval, Promptfoo); **build the data**: golden cases labelled from your policy, oracle rules, attacks against your tools. Nobody can sell you that.
 A core eval run costs minutes and a few dollars; one bad model upgrade that refunds the wrong order for a day can cost more than a year of runs.
-💡 **Without evals you can't switch to the cheaper model safely.**
+{{< keyidea >}}**Without evals you can't switch to the cheaper model safely.**{{< /keyidea >}}
 
 **3 · Domain checks.**
 
@@ -162,11 +162,11 @@ A core eval run costs minutes and a few dollars; one bad model upgrade that refu
 | Prose grounding | A hosted call per reply | Local NLI · ~0 per call |
 | Jailbreak · safety | A maintained classifier | **Bought** |
 
-💡 **Build checks that need your knowledge; buy ones that need a dataset.**
+{{< keyidea >}}**Build checks that need your knowledge; buy ones that need a dataset.**{{< /keyidea >}}
 
 **4 · Facts and adapters.** The [analytics contract]({{<ref "/docs/agentic_ai/observability_analytics/#analytics_contract" >}}) is cheap to build, near-free to run and vendor-neutral (sample the vendor's trace view; keep the full record yourself).
 **Thin adapters** around every bought service (model chain, judge client, guard chain) make switching a configuration change, not a rewrite.
-💡 **An adapter buys you a cheap exit: it keeps every "buy" reversible.**
+{{< keyidea >}}**An adapter buys you a cheap exit: it keeps every "buy" reversible.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="red" title="What to Buy or Adopt" id="what_to_buy" >}}
@@ -183,7 +183,7 @@ Small local models (intent classifiers, NLI, summarisers) are the exception wort
 **Buy specialised classifiers and trace UIs**: a safety classifier's value is an adversarial dataset that keeps up with new attacks; building that means labelling and retraining forever.
 Keep deterministic rules underneath and [fail closed]({{<ref "/docs/agentic_ai/agent_security_principles/#moderation" >}}). A trace UI pays when debugging hours are real; sample it.
 
-💡 **Buy what needs a dataset you'd have to maintain forever.**
+{{< keyidea >}}**Buy what needs a dataset you'd have to maintain forever.**{{< /keyidea >}}
 
 **When buying pays**:
 
@@ -223,7 +223,7 @@ At this volume, **buy wins on money**. Now change one input, volume:
 
 The crossover is the break-even from earlier, about 94k tickets a month.
 
-💡 **The money answer moves with volume; the control answer doesn't.** The authority rules, the evals and the facts are yours to build **either way**, even when you buy the agent.
+{{< keyidea >}}**The money answer moves with volume; the control answer doesn't.** The authority rules, the evals and the facts are yours to build **either way**, even when you buy the agent.{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="cyan" title="The Recommendation" id="recommendation" >}}
@@ -236,7 +236,7 @@ This course built most things because it is a **teaching platform**: you can't e
 | 🛒 **Buy** | Models, safety classifiers, trace UIs, **behind adapters**, with the exit negotiated |
 | 🔄 **Revisit** | At every order-of-magnitude change in volume or price |
 
-💡 **Build what makes you accountable and different; rent the rest.**
+{{< keyidea >}}**Build what makes you accountable and different; rent the rest.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< question >}}

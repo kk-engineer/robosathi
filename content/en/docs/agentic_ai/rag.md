@@ -124,7 +124,7 @@ B wins: a passage both retrievers rank decently beats a passage only one of them
 
 A typical configuration takes the top 20 from each retriever, fuses them, and passes a shortlist of about 10 to the next stage.
 
-💡 **Don't compare scores from different models. Compare ranks.**
+{{< keyidea >}}**Don't compare scores from different models. Compare ranks.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="navy" title="Reranking: Bi-Encoders vs Cross-Encoders" id="bi_cross" >}}
@@ -156,7 +156,7 @@ Cross-encoding a corpus of a million passages would cost about 5,000 seconds, ro
 Bi-encoders handle retrieval and chunk boundaries; cross-encoders handle relevance (the reranker) and **entailment** (the NLI model behind [hallucination checks]({{<ref "/docs/agentic_ai/hallucination_checks/#nli" >}}));
 sequence classifiers route intents; token classifiers find personal data for the [PII filter]({{<ref "/docs/agentic_ai/agent_security_principles/#pii" >}}).
 
-💡 **Bi-encoders recall from millions. Cross-encoders decide among ten.**
+{{< keyidea >}}**Bi-encoders recall from millions. Cross-encoders decide among ten.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="green" title="Retrieved Is Not Prompted" id="retrieved_not_prompted" >}}
@@ -186,7 +186,7 @@ graph LR
 Most claims are settled in the first tiers, for free. A claim the passages do not support is cut, and the reply is referred to a person.
 This is where the **heading paths** from chunking pay off again: "_according to our refunds article_" becomes verifiable rather than decorative. The full method is in [Hallucination Checks]({{<ref "/docs/agentic_ai/hallucination_checks" >}}).
 
-💡 **Retrieval finds the evidence. Grounding proves the answer stayed inside it.**
+{{< keyidea >}}**Retrieval finds the evidence. Grounding proves the answer stayed inside it.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="blue" title="RAG as Semantic Memory" id="semantic_memory" >}}
@@ -216,7 +216,7 @@ Deciding what **not** to retrieve is as important as deciding what to retrieve. 
 | **Facts about a customer** | A keyed store: exact lookup first | Keyed, versioned and erasable on request |
 | **Help articles** | The RAG knowledge base | General, long-tail, citable |
 
-💡 **Retrieve what can be ranked. Never rank what must never be missed.**
+{{< keyidea >}}**Retrieve what can be ranked. Never rank what must never be missed.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="grey" title="How RAG Fails, and the Guards" id="rag_failures" >}}
