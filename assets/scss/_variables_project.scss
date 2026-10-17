@@ -3356,5 +3356,25 @@ $ab-line: #e8ddd0; $ab-gold: #B8945A; $ab-gold-d: #9a7340; $ab-muted: #5b667a;
   .rs-audit-card { flex: 0 0 360px; max-width: 360px; justify-self: auto; }
 }
 
+// About photo: face centred in the circle
+.ab-person__photo {
+  flex-shrink: 0;
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #e8ddd0;
+  background: #2f6fd6;
+  display: block;
+}
+.ab-person__photo .rs-figure { margin: 0; width: 100%; height: 100%; }
+.ab-person__photo img {
+  width: 100% !important; height: 100% !important; max-width: none;
+  border: none !important; border-radius: 0 !important;
+  object-fit: cover;
+  object-position: 50% 22%;
+  transform: scale(1.55);
+  transform-origin: 50% 30%;
+}
+
 // Interview Section scss
 @import "interview";

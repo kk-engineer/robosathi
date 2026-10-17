@@ -59,8 +59,8 @@ Sheridan's scale describes, for a single decision, how the work is divided betwe
 The interesting boundaries are not the extremes. Between **4 and 5**, the question changes from "_who chooses?_" to "_who approves?_": at level 4 the human still chooses; at level 5 the computer chooses and the human approves.
 Between **6 and 7**, the question is whether a human sees the action **before** it happens or only **after**. Most real risk decisions live at those two boundaries.
 
-{{< panel color="cyan" title="Example" >}}
-one inbox, ten levels.** Consider an email assistant doing the same job, handling your inbox, at every level.
+{{< panel color="cyan" title="Example: One Inbox, Ten Levels" >}}
+Consider an email assistant doing the same job, handling your inbox, at every level.
 At level 1 you write every email yourself. At level 2 it shows your saved reply templates. At level 3 it offers three short replies and you pick one, which is exactly Gmail's **Smart Reply** (Kannan et al., 2016).
 At level 4 it drafts one reply for you to edit. At level 5 it sends its draft when you click _Approve_. At level 6 it sends in ten seconds unless you press _Undo_, which is **Undo Send**.
 At level 7 it auto-replies and then shows you what it sent. At level 8 it files mail to spam, and you only see it if you go and look. At level 9 it sends you a digest of only what it thinks matters. At level 10 it silently deletes mail it dislikes.
@@ -73,10 +73,26 @@ Ask yourself at which rung you would stop being comfortable. Most people answer 
 The ten levels group naturally into four bands, according to what the human actually does. Industry language describes the first three as being _in_, _on_ and _out of_ the loop:
 
 ```mermaid
-graph LR
-    A["In the loop · levels 1–4<br/>the machine advises; the human chooses"] --> B["On the loop · levels 5–6<br/>the machine chooses; the human approves or vetoes"]
-    B --> C["Out of the loop · levels 7–9<br/>the machine acts, then reports"]
-    C --> D["Off the loop · level 10<br/>the machine ignores the human"]
+graph TB
+    subgraph Top [" "]
+    direction LR
+    A["<b>In the loop</b><br/>levels 1–4<br/>machine advises · human chooses"] --> B["<b>On the loop</b><br/>levels 5–6<br/>machine chooses · human approves or vetoes"]
+    end
+    subgraph Bottom [" "]
+    direction LR
+    C["<b>Out of the loop</b><br/>levels 7–9<br/>machine acts, then reports"] --> D["<b>Off the loop</b><br/>level 10<br/>machine ignores the human"]
+    end
+    Top --> Bottom
+    classDef inloop fill:#dcfce7,stroke:#15803d,stroke-width:2px,color:#14532d,font-size:16px
+    classDef onloop fill:#dbeafe,stroke:#1d4ed8,stroke-width:2px,color:#1e3a8a,font-size:16px
+    classDef outloop fill:#ffedd5,stroke:#c2410c,stroke-width:2px,color:#7c2d12,font-size:16px
+    classDef offloop fill:#fee2e2,stroke:#b91c1c,stroke-width:2px,color:#7f1d1d,font-size:16px
+    class A inloop
+    class B onloop
+    class C outloop
+    class D offloop
+    style Top fill:none,stroke:none
+    style Bottom fill:none,stroke:none
 ```
 
 - **In the loop**: Smart Reply; a maps app offering three routes and letting you choose.
