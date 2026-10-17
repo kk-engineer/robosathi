@@ -3016,11 +3016,11 @@ $rs-badge-border-hover: #B8945A;
   .rs-callout__icon { display: none; }
 
   .rs-callout__title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 1.35rem;
-    font-weight: 900;
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
     letter-spacing: -0.01em;
-    color: #0a0a0a !important;
+    color: var(--rs-callout-accent-strong) !important;
   }
 
   .rs-callout__body { padding: 0 !important; }
@@ -3134,13 +3134,7 @@ $rs-badge-border-hover: #B8945A;
   padding: 1rem 1.25rem 0.6rem !important;
   margin: 1.4rem 0 !important;
 
-  .rs-callout__header {
-    border-bottom: 1px solid color-mix(in srgb, var(--rs-callout-accent) 45%, #ffffff 55%);
-    margin-bottom: 0.7rem;
-    padding-bottom: 0.4rem;
-  }
-
-  .rs-callout__title { font-size: 1.25rem; color: var(--rs-callout-accent-strong) !important; }
+  .rs-callout__header { border-bottom: none; margin-bottom: 0.2rem; padding-bottom: 0; }
 }
 
 // End-of-note panels: distinct look
@@ -3151,19 +3145,11 @@ $rs-badge-border-hover: #B8945A;
   border-radius: 10px;
   font-size: 0.9rem;
 
-  .rs-callout__title {
-    font-size: 0.72rem !important;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: #475569 !important;
-    font-family: "Inter", sans-serif !important;
-  }
 
   ul { margin-bottom: 0.2rem; }
   li { margin-bottom: 0.25rem; line-height: 1.5; }
 }
 
-#further_reading .rs-callout__title::before { content: "\1F4D6  "; }
 
 // About: full width, but vertically slim
 .rs-about-grid, .rs-principles, .rs-about-note { max-width: 1080px; }
@@ -3194,6 +3180,17 @@ $rs-badge-border-hover: #B8945A;
 }
 .rs-about-note { margin: 0.8rem auto 0.4rem; font-size: 0.82rem; }
 .rs-about-cta { margin: 0.2rem auto 1.5rem; font-size: 0.85rem; }
+
+// One heading style for every panel in every course: Inter, semibold, accent colour.
+.td-content .rs-callout .rs-callout__title,
+.td-content .rs-callout .rs-callout__title--panel {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em;
+  color: var(--rs-callout-accent-strong) !important;
+  text-transform: none !important;
+}
 
 // Interview Section scss
 @import "interview";

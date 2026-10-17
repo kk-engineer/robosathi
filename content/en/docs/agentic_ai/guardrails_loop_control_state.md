@@ -21,7 +21,7 @@ By the end of these notes you should be able to:
 - explain how checkpointed state makes stop, resume and abort safe, including for actions that move money.
 {{< /panel >}}
 
-{{< panel color="blue" title="Part 1 · Type Safety: Validate After, or Constrain During?" id="validate_constrain" >}}
+{{< panel color="blue" title="Type Safety: Validate After, or Constrain During?" id="validate_constrain" >}}
 There are two quite different ways to guarantee the shape of a model's output, and they are often confused.
 
 **Validating after generation.** The model writes whatever it writes; afterwards, you parse the result against a schema. If it fails, you reject it, repair it, or ask again.
@@ -88,7 +88,7 @@ Its **contract** (brief, rubric and budget) is frozen and hashed when you approv
 {{< keyidea >}}**A schema constrains the shape of a reply. The [hallucination check]({{<ref "/docs/agentic_ai/hallucination_checks" >}}) constrains its facts.**{{< /keyidea >}}
 {{< /panel >}}
 
-{{< panel color="orange" title="Part 2 · Loop Control: One Governor, One Verdict" id="loop_control" >}}
+{{< panel color="orange" title="Loop Control: One Governor, One Verdict" id="loop_control" >}}
 The second failure mode is a loop that runs too long. Early agent code tends to grow its controls piecemeal: a step cap in one place, a duplicate check in another, a budget in one agent but not the next.
 The cleaner design is a single **loop governor** that every check goes through, answering every question in the same shape, a **verdict**:
 
@@ -146,7 +146,7 @@ The support agent's loop is short and expensive per step (it can move money), so
 The research agent's loop is long, cheap per step and parallel, so reserved budgets and convergence matter most. Both use the same governor; only the caps differ.
 {{< /panel >}}
 
-{{< panel color="red" title="Part 3 · State: A Guardrail That Forgets Isn't One" id="durable_state" >}}
+{{< panel color="red" title="State: A Guardrail That Forgets Isn't One" id="durable_state" >}}
 Every mechanism in Part 2 has memory: how many steps were taken, how much budget is spent, which actions were already tried and what they returned. If that memory lives only in a running process, a crash or a restart **quietly resets every fence**: a fresh step cap, a fresh deadline, and a refused refund that is no longer recognised as a duplicate.
 
 The fix is to make the loop's memory part of the agent's state and **checkpoint it after every step**. When a run resumes, the step count continues, the clock and budget continue, and an action that was refused or already completed is still recognised.

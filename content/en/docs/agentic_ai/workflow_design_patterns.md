@@ -40,7 +40,7 @@ High cardinality with a bounded blast radius is where it pays to let the model c
 
 {{< /definition >}}
 
-{{< panel color="orange" title="1 · Sequential Pipeline" id="sequential" >}}
+{{< panel color="orange" title="Sequential Pipeline" id="sequential" >}}
 The simplest and most common pattern: each step's output is the next step's input, in a fixed order.
 
 ```mermaid
@@ -59,7 +59,7 @@ The order never changes. Models work inside two of the four steps, but none of t
 The guard is a cheap **validation between steps**. If extraction returned an empty page, stop there instead of paying for two model calls to translate and summarise it.
 {{< /panel >}}
 
-{{< panel color="green" title="2 · Conditional Branching" id="branching" >}}
+{{< panel color="green" title="Conditional Branching" id="branching" >}}
 Code inspects the input and picks **exactly one branch from a closed set**. This pattern is also called **routing**.
 
 ```mermaid
@@ -84,7 +84,7 @@ Note that a classifier may well be a model, but it is still a workflow: the clas
 [Read more about Binary Classification]({{<ref "/docs/machine_learning/supervised/logistic_regression/binary_classification_intro/" >}})
 {{< /panel >}}
 
-{{< panel color="orange" title="3 · Parallel Fan-out / Fan-in" id="fan_out" >}}
+{{< panel color="orange" title="Parallel Fan-out / Fan-in" id="fan_out" >}}
 A **fixed** set of independent branches runs at the same time, and their results are joined.
 
 ```mermaid
@@ -107,7 +107,7 @@ A contract goes to three reviewers at once (legal, finance and security), and a 
 These questions must be answered explicitly. Parallel calls also hit provider rate limits sooner ([Resilience]({{<ref "/docs/agentic_ai/system_design_resilience" >}})).
 {{< /panel >}}
 
-{{< panel color="magenta" title="4 · Map-Reduce" id="map_reduce" >}}
+{{< panel color="magenta" title="Map-Reduce" id="map_reduce" >}}
 The **same step over N items**, where N is known only at run time, followed by one aggregation.
 
 ```mermaid
@@ -129,7 +129,7 @@ This looks like fan-out, with one important difference: the number of branches i
 **What goes wrong.** Two things. First, **bound N and the concurrency**, or one large input becomes one large bill. Second, test the **reduce** step hardest: it is where contradictions between items get silently averaged away.
 {{< /panel >}}
 
-{{< panel color="orange" title="5 · Iterative Loop with a Fixed Cap" id="fixed_loop" >}}
+{{< panel color="orange" title="Iterative Loop with a Fixed Cap" id="fixed_loop" >}}
 Repeat a step until a check passes, **at most N times**, with the cap set in code.
 
 ```mermaid
@@ -149,7 +149,7 @@ A model generates a function; the test suite runs; the failures are fed back; th
 **What goes wrong.** A loop without a cap is a runaway bill. Good loops also detect **no progress**: the same failure twice in a row is a reason to stop early. We formalise this as [loop control]({{<ref "/docs/agentic_ai/guardrails_loop_control_state/#loop_control" >}}).
 {{< /panel >}}
 
-{{< panel color="red" title="6 · Human-in-the-Loop" id="human_in_loop" >}}
+{{< panel color="red" title="Human-in-the-Loop" id="human_in_loop" >}}
 The run **pauses, saves its state, and resumes** when a person decides. This is [level 5]({{<ref "/docs/agentic_ai/levels_of_automation/#sheridan_levels" >}}) of the automation scale, expressed as a workflow shape.
 
 ```mermaid

@@ -35,7 +35,7 @@ Each step up hands over more control, so each needs a stronger fence.
 
 {{< /definition >}}
 
-{{< panel color="orange" title="1 · The Tool-Use Loop" id="tool_use_loop" >}}
+{{< panel color="orange" title="The Tool-Use Loop" id="tool_use_loop" >}}
 This is the base pattern every other one builds on. The model's output is not prose but a **structured tool call**: a tool name and JSON arguments. Code validates the call, runs it, and hands the result back to the model, which decides what to do next.
 
 ```mermaid
@@ -59,7 +59,7 @@ That last check is exactly [the Gatekeeper]({{<ref "/docs/agentic_ai/what_is_an_
 [Read more about Large Language Models]({{<ref "/docs/natural_language_processing/llm/" >}})
 {{< /panel >}}
 
-{{< panel color="green" title="2 · ReAct: Reasoning and Acting" id="react" >}}
+{{< panel color="green" title="ReAct: Reasoning and Acting" id="react" >}}
 **ReAct** (Yao et al., 2022) interleaves **reasoning** with **acting**: before each action, the model writes a short thought explaining what it is about to do, then acts, then observes the result.
 
 ```mermaid
@@ -81,7 +81,7 @@ graph LR
 The final answer must be grounded in the **observations** (what the tools actually returned), not in the reasoning; we develop this in [Hallucination Checks]({{<ref "/docs/agentic_ai/hallucination_checks" >}}).
 {{< /panel >}}
 
-{{< panel color="orange" title="3 · Reflection and Self-Critique" id="reflection" >}}
+{{< panel color="orange" title="Reflection and Self-Critique" id="reflection" >}}
 In **reflection**, the model reviews its own output, names what is missing or wrong, and revises it. Two well-known variants are **Self-Refine** (Madaan et al., 2023), which critiques and rewrites an output, and **Reflexion** (Shinn et al., 2023), which writes a lesson from a failed attempt into memory before retrying.
 
 ```mermaid
@@ -103,7 +103,7 @@ Cap the rounds, and when the stakes are high, prefer an **outside** check, which
 [Read more about Reinforcement Learning from Human Feedback (RLHF)]({{<ref "/docs/natural_language_processing/llm/#rlhf" >}})
 {{< /panel >}}
 
-{{< panel color="magenta" title="4 · Evaluator–Optimizer" id="evaluator_optimizer" >}}
+{{< panel color="magenta" title="Evaluator–Optimizer" id="evaluator_optimizer" >}}
 A **producer** drafts; a separate **evaluator** judges the draft against criteria fixed in advance and returns specific findings; the producer revises; repeat until the draft passes or a cap is reached.
 
 ```mermaid
@@ -124,7 +124,7 @@ An evaluator that is the same model, merely prompted to "_be strict_", still has
 
 {{< /panel >}}
 
-{{< panel color="orange" title="5 · Planning and Decomposition" id="planning" >}}
+{{< panel color="orange" title="Planning and Decomposition" id="planning" >}}
 ReAct decides one step at a time. **Planning** decides the shape of the whole job **first**, then executes the steps. Plan-and-Solve (Wang et al., 2023) and ReWOO (Xu et al., 2023) showed that planning up front can save a large share of the tokens step-by-step reasoning would use.
 
 ```mermaid
@@ -144,7 +144,7 @@ Notice the dependencies: the hotel depends on the flight dates, while the three 
 **How it fails.** Plans grow and go stale. Bound the size of the plan, and **replan on new facts, not by habit**.
 {{< /panel >}}
 
-{{< panel color="red" title="6 · Orchestrator–Subagent" id="orchestrator_subagent" >}}
+{{< panel color="red" title="Orchestrator–Subagent" id="orchestrator_subagent" >}}
 An **orchestrator** model splits the work at run time and hands each piece to a **subagent** with its own context, then merges the results. Anthropic calls this pattern _orchestrator–workers_.
 
 ```mermaid
