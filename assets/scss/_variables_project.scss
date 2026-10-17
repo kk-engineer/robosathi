@@ -3330,5 +3330,18 @@ $ab-line: #e8ddd0; $ab-gold: #B8945A; $ab-gold-d: #9a7340; $ab-muted: #5b667a;
 .rs-audit-card__label small { font-size: 0.68rem; }
 .rs-audit-card__chip { width: 18px; height: 18px; font-size: 0.55rem; }
 
+// Hero: a centred group aligned with the sections below
+@media (min-width: 992px) {
+  .rs-hero-split {
+    max-width: 1120px;               /* same width as the service grid below */
+    grid-template-columns: minmax(0, 1fr) 360px;
+    column-gap: 4rem;
+    padding: 0 1rem;
+    align-items: center;
+  }
+  .rs-hero-split__text { max-width: 620px; justify-self: start; width: 100%; }
+  .rs-audit-card { justify-self: end; max-width: 360px; }
+}
+
 // Interview Section scss
 @import "interview";
