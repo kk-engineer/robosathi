@@ -230,7 +230,7 @@ A better design allocates per decision: small, reversible refunds at **level 7**
 - **Split high-stakes, open-ended decisions**: the model proposes, code authorises, a person decides above a threshold.
 - **Human oversight must be meaningful** to be a control, and every level should be written down, evidenced, and held in configuration.
 
-💡 _Don't ask whether your agent is autonomous. Ask which decisions are, at what level, and who moves the dial._
+_Don't ask whether your agent is autonomous. Ask which decisions are, at what level, and who moves the dial._
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}

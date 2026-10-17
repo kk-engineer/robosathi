@@ -28,20 +28,20 @@ Then the customer asks again: "_Refund order 10535._" It **does not pay twice**:
 Press **Stop** while a refund runs and the stop report shows the saga **compensated** what had committed: nothing is half-applied.
 And if a backup model answered any call, the trace says which, and why.
 
-👉 The model is the least reliable thing in this system, and it's surrounded by networks, quotas and databases that fail too.
+The model is the least reliable thing in this system, and it's surrounded by networks, quotas and databases that fail too.
 
 {{< /panel >}}
 
 {{< definition title="Why Agents Need Resilience More" >}}
-📘 **Resilience** is a system's ability to keep delivering acceptable service when its dependencies fail or slow down. Agents are more fragile than a typical web request, for three reasons:
+**Resilience** is a system's ability to keep delivering acceptable service when its dependencies fail or slow down. Agents are more fragile than a typical web request, for three reasons:
 
-1. 🕸️ **Many dependencies per turn**: screens, a safety model, an intent model, the main model two or three times, tools, the database, the grounding check. Each is a network call that can be slow, throttled or down.
-2. ✖️ **Reliability multiplies**: in series, the whole succeeds only if every part does:
+1. **Many dependencies per turn**: screens, a safety model, an intent model, the main model two or three times, tools, the database, the grounding check. Each is a network call that can be slow, throttled or down.
+2. **Reliability multiplies**: in series, the whole succeeds only if every part does:
 
 \[R_{\text{turn}} = \prod_{i=1}^{n} r_i \qquad 0.99^{20} \approx 0.82\]
 
    20 calls at 99% each means **one turn in five** hits a failure somewhere.
-3. 🔁 **Duplicates by nature**: a model re-proposes a call after a timeout, a [resumed run]({{<ref "/docs/agentic_ai/guardrails_loop_control_state/#run_lifecycle" >}}) re-executes a node, a customer types "_refund it!_" twice. Without protection, each is a second payment.
+3. **Duplicates by nature**: a model re-proposes a call after a timeout, a [resumed run]({{<ref "/docs/agentic_ai/guardrails_loop_control_state/#run_lifecycle" >}}) re-executes a node, a customer types "_refund it!_" twice. Without protection, each is a second payment.
 
 {{< keyidea >}}**Failures aren't exceptions. At scale they are the normal case; design for them.**{{< /keyidea >}}
 
@@ -72,13 +72,13 @@ graph TD
 
 | Pattern | Protects against | In one line |
 |---|---|---|
-| ⏱️ **Timeout** | A call that never returns | Bound every wait |
-| 🔁 **Retry** | A transient failure | Try again, carefully |
-| 🔌 **Circuit breaker** | A dependency that's down | Stop calling; fail fast |
-| 🚢 **Bulkhead** | One failure starving the rest | Separate pools |
-| 🔑 **Idempotency** | A duplicate request | Same key, same result |
-| ↩️ **Saga** | A half-applied change | Undo in reverse |
-| 🧩 Hedge · rate limit · dead-letter queue | Slowness · quotas · bad input | Supporting patterns |
+| **Timeout** | A call that never returns | Bound every wait |
+| **Retry** | A transient failure | Try again, carefully |
+| **Circuit breaker** | A dependency that's down | Stop calling; fail fast |
+| **Bulkhead** | One failure starving the rest | Separate pools |
+| **Idempotency** | A duplicate request | Same key, same result |
+| **Saga** | A half-applied change | Undo in reverse |
+| Hedge · rate limit · dead-letter queue | Slowness · quotas · bad input | Supporting patterns |
 
 {{< keyidea >}}**Name the failure first; the pattern follows from it.**{{< /keyidea >}}
 {{< /panel >}}
@@ -101,7 +101,7 @@ A checkout page waits on a fraud-scoring service with no deadline. The fraud ser
 
 A timeout caps \(W\), and therefore caps everything waiting behind it.
 
-⚠️ Two subtleties: the timeout bounds **each attempt** (so retries still get their chance), and time spent **queued for a rate-limit slot** doesn't count against it.
+Two subtleties: the timeout bounds **each attempt** (so retries still get their chance), and time spent **queued for a rate-limit slot** doesn't count against it.
 Otherwise a throttled call times out, is retried, queues again, and times out again.
 {{< /panel >}}
 
@@ -156,7 +156,7 @@ A store's recommendations service fails repeatedly. The page stops calling it an
 **Implemented as an explicit state machine**: only the legal transitions above are allowed; anything else is a bug and is rejected.
 **Which errors count is a decision**: a timeout-only breaker trips on silence, not on prompt errors, because "_a dependency returning errors is answering_", and tripping on those would hide a bug behind an outage.
 
-⚠️ **One breaker per dependency**: a shared breaker couples unrelated failures.
+**One breaker per dependency**: a shared breaker couples unrelated failures.
 {{< /panel >}}
 
 {{< panel color="magenta" title="Bulkhead" id="bulkhead" >}}
@@ -178,7 +178,7 @@ graph LR
 Each model, each search provider and each hosted guard gets its **own** pool (4 permits by default). "_Pools are separate objects rather than one shared counter: that separation is the isolation._"
 By default a caller **queues**; with a wait budget it is **rejected** instead: shedding load is a choice the caller makes, not a default.
 
-⚠️ A single global concurrency limit looks like protection but isn't: one stalled dependency takes every permit.
+A single global concurrency limit looks like protection but isn't: one stalled dependency takes every permit.
 
 {{< /panel >}}
 
@@ -190,9 +190,9 @@ From algebra: an operation is **idempotent** when applying it twice equals apply
 Setting a value is idempotent; adding to it is not. In systems, a request is idempotent when repeating it has no further effect.
 The technique is an **idempotency key**: the server records the first result under the key, and returns it for any repeat.
 
-- 💳 **Payments**: Stripe accepts an `Idempotency-Key` header; a retried charge returns the first result instead of charging twice.
-- 🛗 **Lift button**: pressed five times, the lift comes once.
-- 🔑 **Key design**: key the **intent** (this refund, of this order, for this amount), not the **attempt**. A random key per attempt protects nothing.
+- **Payments**: Stripe accepts an `Idempotency-Key` header; a retried charge returns the first result instead of charging twice.
+- **Lift button**: pressed five times, the lift comes once.
+- **Key design**: key the **intent** (this refund, of this order, for this amount), not the **attempt**. A random key per attempt protects nothing.
 
 **Four sources of duplicates in an agent**: retries (the stack re-sends a timed-out call) · the model (it re-proposes the same tool call) · resume (a re-run node) · the person ("_Refund it!_" ... "_Refund it!_").
 
@@ -223,7 +223,7 @@ graph LR
 No distributed transaction spans an airline, a hotel chain and a car-rental firm. Book in order; if the car fails, cancel the hotel, then the flight.
 {{< /panel >}}
 
-⚠️ Compensation is a **semantic undo** (a cancellation, a reversal), not a database rollback; it can fail too, and must be recorded for a person. **Put irreversible steps last.**
+Compensation is a **semantic undo** (a cancellation, a reversal), not a database rollback; it can fail too, and must be recorded for a person. **Put irreversible steps last.**
 
 **The CSA's refund saga**: issuing a refund touches two things that can't share a transaction (the order's refund state and the refund ledger).
 
@@ -299,12 +299,12 @@ Fix: full-jitter backoff with a cap, a breaker per dependency, retries counted a
 {{< /answer >}}
 
 {{< panel color="magenta" title="Summary" id="recap" >}}
-- ⏱️ **Bound every wait** (Little's law); retry with jitter, never without a key.
-- 🔌 **Breakers and bulkheads** stop one failing dependency from taking the rest.
-- 🔑 **Idempotency keys the intent**; sagas undo in reverse, irreversible steps last.
-- 🧱 **One fixed order**: bulkhead → breaker → retry → timeout, one stack per dependency.
+- **Bound every wait** (Little's law); retry with jitter, never without a key.
+- **Breakers and bulkheads** stop one failing dependency from taking the rest.
+- **Idempotency keys the intent**; sagas undo in reverse, irreversible steps last.
+- **One fixed order**: bulkhead → breaker → retry → timeout, one stack per dependency.
 
-💡 _The dangerous failure is not the call that errors; it's the call that never returns._
+_The dangerous failure is not the call that errors; it's the call that never returns._
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}

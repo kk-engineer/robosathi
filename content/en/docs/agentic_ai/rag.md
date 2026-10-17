@@ -291,7 +291,7 @@ Also inspect the chunks: the error code and its explanation may have been split 
 - Retrieved text is **evidence, not instruction**, and the answer must be **grounded** against it.
 - RAG is the **read path of semantic memory**; policies, rules and per-customer data belong elsewhere.
 
-💡 _Retrieve what can be ranked. Never rank what must never be missed._
+_Retrieve what can be ranked. Never rank what must never be missed._
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}

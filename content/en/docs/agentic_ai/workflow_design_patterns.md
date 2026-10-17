@@ -249,7 +249,7 @@ That is a good thing. It is predictable, testable and cheap, and it should only 
 - Six workflow shapes cover most needs: **pipeline, branching, fan-out, map-reduce, capped loop, human-in-the-loop**. Each has a characteristic failure and guard.
 - The support agent is **mostly workflow**: one model-driven loop in fifteen nodes. The research agent branches, maps and stops by code; the model fills the steps.
 
-💡 _Before you call it an agent, draw the graph. If code picks every next step, it's a workflow, and that's usually what you want._
+_Before you call it an agent, draw the graph. If code picks every next step, it's a workflow, and that's usually what you want._
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}

@@ -30,13 +30,13 @@ Run one customer turn and copy its **trace id**. Then:
 {{< /panel >}}
 
 {{< definition title="Observability" >}}
-📘 One agent, three questions, three tools:
+One agent, three questions, three tools:
 
 | Question | Tool | What it shows |
 |---|---|---|
-| 🔎 **What happened in _this_ turn?** | A **trace** | Every model call, tool, check, retry and fallback, in order, with timings |
-| 🧾 **Why did it happen?** | The **logs** | Full structured detail from every subsystem: the authoritative record |
-| 📈 **How is the fleet doing?** | **Analytics** | Aggregates over thousands of turns: resolution rate, groundedness, p95 latency |
+| **What happened in _this_ turn?** | A **trace** | Every model call, tool, check, retry and fallback, in order, with timings |
+| **Why did it happen?** | The **logs** | Full structured detail from every subsystem: the authoritative record |
+| **How is the fleet doing?** | **Analytics** | Aggregates over thousands of turns: resolution rate, groundedness, p95 latency |
 
 **Monitoring** answers questions you knew to ask in advance. **Observability** lets you ask _new_ questions after the fact, which, for a non-deterministic agent, is most of them.
 
@@ -124,7 +124,7 @@ graph LR
 
 | OTel GenAI | Ours | Status |
 |---|---|---|
-| Trace id (W3C) | 32-hex trace id | ✅ Aligned |
+| Trace id (W3C) | 32-hex trace id | Aligned |
 | `gen_ai.provider.name` · `gen_ai.request.model` | Provider and model per attempt | Renamed |
 | `gen_ai.usage.input_tokens` / `output_tokens` | Prompt / completion (+ cached) tokens | Renamed |
 | `gen_ai.response.finish_reasons` | Finish reason | Renamed |
@@ -226,8 +226,8 @@ How we use it: **one root run per turn, whose id _is_ the turn's trace id**. Eve
 One project per agent; thread = session. Settings: off by default; a **sample rate** (lower in production); graph steps sent as **what changed**, not the whole state again.
 
 **Two rules for every export**:
-1. 🔐 **Nothing unredacted leaves the machine**: input and output hooks run the [PII redactor]({{<ref "/docs/agentic_ai/agent_security_principles/#pii" >}}) over every string of every run. The local log keeps the full payload.
-2. 🛟 **Export never fails a turn**: a missing key, a dead endpoint, a rejected batch is logged, and the turn carries on.
+1. **Nothing unredacted leaves the machine**: input and output hooks run the [PII redactor]({{<ref "/docs/agentic_ai/agent_security_principles/#pii" >}}) over every string of every run. The local log keeps the full payload.
+2. **Export never fails a turn**: a missing key, a dead endpoint, a rejected batch is logged, and the turn carries on.
 
 {{< keyidea >}}**The local trace is the record; the tracing UI is a view of it.**{{< /keyidea >}}
 
@@ -253,11 +253,11 @@ Then pick a slow turn and follow its **trace id**: the run tree shows which span
 
 {{< panel color="magenta" title="Summary" id="recap" >}}
 - 🆔 **One turn, one trace id**: W3C-shaped, on every log line, fact, run and audit row.
-- 🧾 **Logs are the record**: per subsystem, structured, never swallowing a failure.
-- 🔌 **OTel**: the same data under our names; the gaps are the wire and propagation.
-- 📊 **Facts → Parquet → generated dashboards**; the tracing UI is a redacted view of a turn.
+- **Logs are the record**: per subsystem, structured, never swallowing a failure.
+- **OTel**: the same data under our names; the gaps are the wire and propagation.
+- **Facts → Parquet → generated dashboards**; the tracing UI is a redacted view of a turn.
 
-💡 _Record at choke points, and every view is one adapter away._
+_Record at choke points, and every view is one adapter away._
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}

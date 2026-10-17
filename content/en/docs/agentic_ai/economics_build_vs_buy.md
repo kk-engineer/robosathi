@@ -26,14 +26,14 @@ This course built a Gatekeeper, guardrails, memory governance, hallucination che
 {{< /panel >}}
 
 {{< definition title="Four Options, Per Component" >}}
-📘 "_Should we build or buy an AI agent?_" is the **wrong grain**. An agent is a dozen components, and the right answer differs per component. And there are **four** options, not two:
+"_Should we build or buy an AI agent?_" is the **wrong grain**. An agent is a dozen components, and the right answer differs per component. And there are **four** options, not two:
 
 | Option | Means | The catch |
 |---|---|---|
-| 🔨 **Build** | Write and own it | You own every upgrade and every on-call page |
-| 📦 **Adopt** | Open source | **Free to license, not free to own**: integration, upgrades, maintenance |
-| 🛒 **Buy** | A vendor's product or API | You pay for someone else's scale and roadmap |
-| 🤝 **Partner** | A vendor builds with you, on your data | Shared control |
+| **Build** | Write and own it | You own every upgrade and every on-call page |
+| **Adopt** | Open source | **Free to license, not free to own**: integration, upgrades, maintenance |
+| **Buy** | A vendor's product or API | You pay for someone else's scale and roadmap |
+| **Partner** | A vendor builds with you, on your data | Shared control |
 
 **Our own stack, by source**:
 
@@ -53,7 +53,7 @@ One data point the industry argues about: MIT NANDA's _The GenAI Divide: State o
 - Purchases from specialised vendors and partnerships succeeded about **67%** of the time; **internal builds about a third as often**.
 - More than half of budgets went to sales and marketing tools, while the biggest ROI was in **back-office** automation.
 
-⚠️ It is survey- and interview-based, and its definition of "_success_" has been debated. But the direction matches practice.
+It is survey- and interview-based, and its definition of "_success_" has been debated. But the direction matches practice.
 
 {{< keyidea >}}**Building should be a deliberate choice, not the default.**{{< /keyidea >}}
 {{< /panel >}}
@@ -68,10 +68,10 @@ The three numbers a CFO will ask for, over a stated horizon (e.g. 3 years):
 - **NPV**: money later is worth less than money now; discounting at rate \(r\) says by how much.
 
 **Where an agent's benefit comes from**:
-- 👩‍💼 **Labour**: deflected tickets, shorter handle time.
+- ‍**Labour**: deflected tickets, shorter handle time.
 - ⏩ **Cycle time**: faster refunds, faster research.
-- 📈 **Revenue**: conversion, retention.
-- 🛡️ **Risk avoided**: losses prevented.
+- **Revenue**: conversion, retention.
+- **Risk avoided**: losses prevented.
 
 {{< keyidea >}}**Risk avoided is real money, and the benefit most often left out.**{{< /keyidea >}}
 {{< /panel >}}
@@ -116,23 +116,23 @@ _Illustrative_: build at $48k/month fixed + $0.125 per resolution; buy at $15k/m
 {{< keyidea >}}**Know your Q**, now and in two years.{{< /keyidea >}}
 
 **Plan for the price curve.** The cost of a given level of model capability has been falling roughly **10× per year** (a16z, _LLMflation_, 2024):
-- ❌ **Don't build** what the curve will commoditise, e.g. a custom-trained or [fine-tuned]({{<ref "/docs/natural_language_processing/llm/#sft" >}}) model to save tokens: it competes with a price that falls 10× a year.
-- ✅ **Do build** what the curve doesn't touch: **rules, data, evals, authority**. Their value _rises_ as tokens get cheaper, because cheaper tokens mean more agent traffic to govern.
-- 🔁 Keep switching cheap: models and judges behind configuration, so you can ride the curve.
+- **Don't build** what the curve will commoditise, e.g. a custom-trained or [fine-tuned]({{<ref "/docs/natural_language_processing/llm/#sft" >}}) model to save tokens: it competes with a price that falls 10× a year.
+- **Do build** what the curve doesn't touch: **rules, data, evals, authority**. Their value _rises_ as tokens get cheaper, because cheaper tokens mean more agent traffic to govern.
+- Keep switching cheap: models and judges behind configuration, so you can ride the curve.
 
 {{< /panel >}}
 
 {{< panel color="orange" title="Eight Factors Beyond Price" id="factors" >}}
 | Factor | The question to ask |
 |---|---|
-| 🏆 **Differentiation** | Does it make us better than competitors, or is it plumbing? |
-| ⚖️ **Liability · control** | If it's wrong, who pays, and can we explain the decision to a regulator? |
-| 🔒 **Data sensitivity** | May this data leave our boundary at all? |
-| ⏱️ **Time-to-value** | What does a six-month build cost in delayed benefit? |
-| 🧑‍💻 **Talent** | Can we hire and keep the people to run it? |
-| 📈 **Volume** | Where are we relative to \(Q^*\), now and later? |
-| 🌊 **Rate of change** | Is the field moving faster than we can keep up? |
-| 🚪 **Exit cost** | If the vendor triples its price, what does leaving cost? |
+| **Differentiation** | Does it make us better than competitors, or is it plumbing? |
+| **Liability · control** | If it's wrong, who pays, and can we explain the decision to a regulator? |
+| **Data sensitivity** | May this data leave our boundary at all? |
+| **Time-to-value** | What does a six-month build cost in delayed benefit? |
+| ‍**Talent** | Can we hire and keep the people to run it? |
+| **Volume** | Where are we relative to \(Q^*\), now and later? |
+| **Rate of change** | Is the field moving faster than we can keep up? |
+| **Exit cost** | If the vendor triples its price, what does leaving cost? |
 
 **Differentiation × maturity** sorts most components:
 
@@ -241,10 +241,10 @@ This course built most things because it is a **teaching platform**: you can't e
 
 | | |
 |---|---|
-| 🔨 **Build** | The **control plane and the data**: authority, domain checks, the analytics contract, golden sets, attacks, policies |
-| 📦 **Adopt** | Open-source plumbing, **wrapped at the domain edge** |
-| 🛒 **Buy** | Models, safety classifiers, trace UIs, **behind adapters**, with the exit negotiated |
-| 🔄 **Revisit** | At every order-of-magnitude change in volume or price |
+| **Build** | The **control plane and the data**: authority, domain checks, the analytics contract, golden sets, attacks, policies |
+| **Adopt** | Open-source plumbing, **wrapped at the domain edge** |
+| **Buy** | Models, safety classifiers, trace UIs, **behind adapters**, with the exit negotiated |
+| **Revisit** | At every order-of-magnitude change in volume or price |
 
 {{< keyidea >}}**Build what makes you accountable and different; rent the rest.**{{< /keyidea >}}
 {{< /panel >}}
@@ -261,12 +261,12 @@ A team wants to fine-tune its own model to save inference cost on a support agen
 {{< /answer >}}
 
 {{< panel color="magenta" title="Summary" id="recap" >}}
-- 🧩 **Decide per component**: build, adopt, buy or partner.
-- 🧮 **Know the arithmetic**: ROI, payback, NPV, TCO, and break-even \(Q^*\).
-- 🔨 **Build the control plane and the data**: their value rises as tokens get cheaper.
-- 🛒 **Buy the commodity**, behind adapters, with the exit negotiated.
+- **Decide per component**: build, adopt, buy or partner.
+- **Know the arithmetic**: ROI, payback, NPV, TCO, and break-even \(Q^*\).
+- **Build the control plane and the data**: their value rises as tokens get cheaper.
+- **Buy the commodity**, behind adapters, with the exit negotiated.
 
-💡 _You can rent intelligence. You can't rent accountability._
+_You can rent intelligence. You can't rent accountability._
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}

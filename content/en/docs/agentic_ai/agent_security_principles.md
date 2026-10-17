@@ -32,13 +32,21 @@ Each layer it passes through is one of the topics of these notes.
 {{< /panel >}}
 
 {{< definition title="Why Agents Are Different" >}}
-📘 Agent security isn't web security with a chatbot on top. An agent combines three things that are each manageable alone, and dangerous together, which Simon Willison calls the **lethal trifecta**:
+Agent security isn't web security with a chatbot on top. An agent combines three things that are each manageable alone, and dangerous together, which Simon Willison calls the **lethal trifecta**:
 
 ```mermaid
 graph TD
-    A["🔒 Private data · customer records, order history, policy"] --- X(("⚠️ Exploitable"))
-    B["🕵️ Untrusted content · messages, web pages, emails, tool results"] --- X
-    C["📤 Power to act or communicate · refund, cancel, send, fetch a URL"] --- X
+    A["<b>Private data</b><br/>customer records,<br/>order history, policy"] --> X(("<b>Exploitable</b>"))
+    B["<b>Untrusted content</b><br/>messages, web pages,<br/>emails, tool results"] --> X
+    C["<b>Power to act</b><br/>refund, cancel, send,<br/>fetch a URL"] --> X
+    classDef data fill:#dbeafe,stroke:#1d4ed8,stroke-width:2px,color:#1e3a8a,font-size:16px
+    classDef untrusted fill:#ffedd5,stroke:#c2410c,stroke-width:2px,color:#7c2d12,font-size:16px
+    classDef act fill:#f3e8ff,stroke:#7e22ce,stroke-width:2px,color:#581c87,font-size:16px
+    classDef risk fill:#fee2e2,stroke:#b91c1c,stroke-width:2px,color:#7f1d1d,font-size:16px
+    class A data
+    class B untrusted
+    class C act
+    class X risk
 ```
 
 Any text the model reads can steer what it does with the other two, and **the model can't reliably tell instruction from data**.
@@ -49,12 +57,12 @@ Any text the model reads can steer what it does with the other two, and **the mo
 {{< panel color="gold" title="Six Principles" id="principles" >}}
 | Principle | In one line |
 |---|---|
-| 🔑 **Least privilege** | Each agent, tool and role gets only what it needs |
-| 🧱 **Defence in depth** | No single layer is trusted to be perfect |
-| 🚪 **Fail closed** | A check that can't run says **no**, not yes |
-| ⚖️ **Authority ≠ agency** | The model may propose anything; what it may _do_ is [decided outside it]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#agency_authority" >}}) |
-| 🧮 **Deterministic first** | A control that can be argued with in natural language isn't a control |
-| 🧾 **Audit everything** | Every decision, reveal and override, written down |
+| **Least privilege** | Each agent, tool and role gets only what it needs |
+| **Defence in depth** | No single layer is trusted to be perfect |
+| **Fail closed** | A check that can't run says **no**, not yes |
+| **Authority ≠ agency** | The model may propose anything; what it may _do_ is [decided outside it]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#agency_authority" >}}) |
+| **Deterministic first** | A control that can be argued with in natural language isn't a control |
+| **Audit everything** | Every decision, reveal and override, written down |
 
 {{< keyidea >}}**A detector that misses fails open. A permission never granted has nothing to miss.**{{< /keyidea >}}
 {{< /panel >}}
@@ -114,11 +122,11 @@ A common failure in healthcare and finance chatbots: the reply is carefully reda
 Redacting only the visible response leaves the same data in three places that outlive it.
 
 **Tokenise, don't erase.**
-- 🔎 **Detect**: an NER-based detector (Presidio + spaCy) plus configured patterns (emails, phones, cards, IBANs, IPs, SSNs).
-- 🏷️ **Tokens, not masks**: "_Maryam Khan_" → `[PERSON:3f9a1c2b7e10]`. The same value always gets the same token, so traces stay **joinable** ("_the same person called twice_").
-- 🔐 **Keyed**: the token is an **HMAC** under a vault key. A plain hash of a phone number is brute-forced in seconds; a keyed one isn't.
-- 🗄️ **The vault**: the real value is kept AES-GCM encrypted, per agent, deleted after 30 days.
-- 🧾 **Reveal is audited**: revealing a token writes an audit entry (who, which token, why) **before** printing anything.
+- **Detect**: an NER-based detector (Presidio + spaCy) plus configured patterns (emails, phones, cards, IBANs, IPs, SSNs).
+- **Tokens, not masks**: "_Maryam Khan_" → `[PERSON:3f9a1c2b7e10]`. The same value always gets the same token, so traces stay **joinable** ("_the same person called twice_").
+- **Keyed**: the token is an **HMAC** under a vault key. A plain hash of a phone number is brute-forced in seconds; a keyed one isn't.
+- **The vault**: the real value is kept AES-GCM encrypted, per agent, deleted after 30 days.
+- **Reveal is audited**: revealing a token writes an audit entry (who, which token, why) **before** printing anything.
 
 **The provider boundary.** A wrapper around the LLM client tokenises every message on the way **out** (system, user, assistant, tool results, tool-call arguments) and restores tokens in what comes **back**, from _this request's own_ map.
 Inside the harness (grounding, guardrails, tools) everything works on real values; only the vendor sees tokens.
@@ -133,9 +141,9 @@ A token the model invents isn't in the map, so it stays a token: nothing is rest
 {{< panel color="orange" title="Prompt Injection: Direct and Indirect" id="prompt_injection" >}}
 OWASP's number one, in two kinds:
 
-- 🎯 **Direct**: the user types it. In December 2023, users of a car dealership's ChatGPT-based website chatbot got it to "_agree_" to sell a new SUV for $1 and call the offer legally binding.
+- **Direct**: the user types it. In December 2023, users of a car dealership's ChatGPT-based website chatbot got it to "_agree_" to sell a new SUV for $1 and call the offer legally binding.
   Funny, and also a demonstration that the bot had **no authority boundary at all**.
-- 🕵️ **Indirect**: the instruction arrives inside **content the agent reads**: a web page, an email, a PDF, a tool result. Greshake et al. (2023) showed it against real LLM-integrated apps: the attacker never talks to the model; they plant text where it will be read.
+- **Indirect**: the instruction arrives inside **content the agent reads**: a web page, an email, a PDF, a tool result. Greshake et al. (2023) showed it against real LLM-integrated apps: the attacker never talks to the model; they plant text where it will be read.
 
 Indirect injection is _the_ agent problem: **the more an agent reads and acts, the bigger the surface.**
 
@@ -179,7 +187,7 @@ Moderation screens for **harmful content**, as opposed to hostile **instructions
 1. **Deterministic term list**, matched on **word boundaries**. Substring matching produces the classic false positives (the "_Scunthorpe problem_"); word boundaries cost nothing and remove that class of error.
 2. **Hosted safety classifier**, with fallbacks. Personal-data categories are advisory only (the PII screen handles personal data), so a phone number isn't a safety block.
 
-🚪 **Fail closed**: if every model in the chain is unavailable, the message is **quarantined**, not waved through.
+**Fail closed**: if every model in the chain is unavailable, the message is **quarantined**, not waved through.
 
 And the moderator has, by its interface, **no path to an authorisation decision**: it can flag and escalate, never permit or block an action.
 
@@ -190,7 +198,7 @@ And the moderator has, by its interface, **no path to an authorisation decision*
 **Role-based access control**: a **principal** (who is asking) has a **role** (what they are: a bundle of permissions); a **permission** is a capability name (what they may do).
 Keeping roles and permissions apart is what makes least privilege **reviewable**: you can read a role definition and say whether it's too broad.
 
-| 🏦 Bank role | May |
+| Bank role | May |
 |---|---|
 | Teller | View balances · process deposits |
 | Manager | + approve large withdrawals |
@@ -259,12 +267,12 @@ It has the full **lethal trifecta**: private data (the inbox), untrusted content
 {{< /answer >}}
 
 {{< panel color="magenta" title="Summary" id="recap" >}}
-- ☠️ **The lethal trifecta**: private data + untrusted content + power to act.
-- 🏷️ **PII**: four surfaces; tokenise at the provider boundary; reveals audited.
-- 🛡️ **Injection**: six layers; authority from the source, never the grammar.
-- 🔐 **RBAC + Gatekeeper**: deny by default; limits, mandates; models only advise.
+- **The lethal trifecta**: private data + untrusted content + power to act.
+- **PII**: four surfaces; tokenise at the provider boundary; reveals audited.
+- **Injection**: six layers; authority from the source, never the grammar.
+- **RBAC + Gatekeeper**: deny by default; limits, mandates; models only advise.
 
-💡 _The strongest layer was never a detector._
+_The strongest layer was never a detector._
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}

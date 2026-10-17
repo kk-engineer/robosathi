@@ -225,7 +225,7 @@ An agent crashes after 4 of its 5 allowed tool iterations, one of which was a re
 - Govern every loop through **one authority** that returns **one verdict**: step caps, reserved budgets, deadlines, four tiers of duplicate detection, and convergence.
 - **Checkpoint the loop's memory** so stop, resume and abort are safe, and make every re-run harmless with idempotent side effects.
 
-💡 _A guardrail that forgets on restart isn't a guardrail._
+_A guardrail that forgets on restart isn't a guardrail._
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}

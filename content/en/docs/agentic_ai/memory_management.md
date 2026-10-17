@@ -29,12 +29,12 @@ Then the operator runs a **dream**: an offline consolidation job. Its report sho
 - **Semantic · NOOP / QUEUED**: nothing new to believe, or a claim waiting for a person.
 - **Procedural · QUEUED**: a learned **skill candidate** ("_check whether the order has shipped before proposing a refund_"), waiting for a curator.
 
-👉 The agent didn't learn _during_ the conversations. It learned **afterwards**, while it "slept", and even then it only **proposed**.
+The agent didn't learn _during_ the conversations. It learned **afterwards**, while it "slept", and even then it only **proposed**.
 
 {{< /panel >}}
 
 {{< definition title="Two Kinds of Remembering" >}}
-📘 An LLM is stateless: every call starts from zero, and the model only knows what is in its [context window]({{<ref "/docs/agentic_ai/context_management" >}}).
+An LLM is stateless: every call starts from zero, and the model only knows what is in its [context window]({{<ref "/docs/agentic_ai/context_management" >}}).
 **Memory** is the part of the harness that decides what survives **between** windows.
 
 | | **Working memory** | **Long-term memory** |
@@ -54,10 +54,10 @@ The map comes from **CoALA** (_Cognitive Architectures for Language Agents_, Sum
 
 | Memory | Question it answers | Example |
 |---|---|---|
-| 🧠 **Working** | What is happening now? | "_the other one_" → order 10428 |
-| 📔 **Episodic** | What happened? | "_Disputed a charge last month_" |
-| 📚 **Semantic** | What is true? | "_Prefers email over calls_" |
-| 🛠️ **Procedural** | How do I act? | "_Refund: check the status first_" |
+| **Working** | What is happening now? | "_the other one_" → order 10428 |
+| **Episodic** | What happened? | "_Disputed a charge last month_" |
+| **Semantic** | What is true? | "_Prefers email over calls_" |
+| **Procedural** | How do I act? | "_Refund: check the status first_" |
 
 {{< keyidea >}}Three long-term stores, three questions: **what happened, what is true, how to act.**{{< /keyidea >}}
 {{< /panel >}}
@@ -65,9 +65,9 @@ The map comes from **CoALA** (_Cognitive Architectures for Language Agents_, Sum
 {{< panel color="green" title="Working Memory" id="working_memory" >}}
 Working memory is small, but it is the one the model reads on **every** turn. It has three parts:
 
-- 💬 **History**: the last N turns (we keep **6**), trimmed as the conversation grows.
-- 📌 **State**: a handful of key–value facts that anchor the turn: who is verified, which order is under discussion. Small enough to be **pinned** in the window.
-- 📝 **Current turn**: a scratch list of this turn's actions and observations, which becomes the **dream event** when the turn ends.
+- **History**: the last N turns (we keep **6**), trimmed as the conversation grows.
+- **State**: a handful of key–value facts that anchor the turn: who is verified, which order is under discussion. Small enough to be **pinned** in the window.
+- **Current turn**: a scratch list of this turn's actions and observations, which becomes the **dream event** when the turn ends.
 
 {{< panel color="cyan" title="Example" >}}
 In a travel assistant, the destination, dates and party size are _state_ (pinned); the chat about hotel options is _history_ (trimmable).
@@ -81,25 +81,25 @@ In a travel assistant, the destination, dates and party size are _state_ (pinned
 | `offloaded` | Passages moved out of the window | Fetch by handle ([offload]({{<ref "/docs/agentic_ai/context_management/#strategies" >}})) |
 | `strike()` | Removes a poisoned line | So the next turn can't read it again |
 
-⚠️ Working memory is replayed into every prompt **and** saved in [checkpoints]({{<ref "/docs/agentic_ai/guardrails_loop_control_state/#durable_state" >}}).
+Working memory is replayed into every prompt **and** saved in [checkpoints]({{<ref "/docs/agentic_ai/guardrails_loop_control_state/#durable_state" >}}).
 So it holds the customer's _redacted_ words, never their personal data.
 
 {{< keyidea >}}**Working memory is replayed every turn: bound it, redact it, and let it forget.**{{< /keyidea >}}
 {{< /panel >}}
 
 {{< panel color="orange" title="Episodic and Semantic Memory" id="episodic_semantic" >}}
-**📔 Episodic memory: what happened.** Past episodes, time-stamped, with who was involved and how they ended.
+**Episodic memory: what happened.** Past episodes, time-stamped, with who was involved and how they ended.
 A bank's assistant recalls last month's card dispute and its outcome, so the customer doesn't have to retell it.
 Episodes are also useful as the agent's own past cases, used as examples for the next one.
 
-⚠️ Store **summaries, not raw transcripts**. A verbatim transcript as an "episode" means recall hands back the conversation word for word: working memory's job, done twice, and noisy.
+Store **summaries, not raw transcripts**. A verbatim transcript as an "episode" means recall hands back the conversation word for word: working memory's job, done twice, and noisy.
 But a summary is _generated_ text: if it misremembers, recall feeds the error back as fact (see [the dream's summariser](#dreams) below).
 
-**📚 Semantic memory: what is true.** Two kinds in practice:
+**Semantic memory: what is true.** Two kinds in practice:
 - **Facts about the user**: preferences, account facts ("_on the business plan, prefers email_").
 - **Knowledge about the world**: the knowledge base. [RAG]({{<ref "/docs/agentic_ai/rag/#semantic_memory" >}}) is the read path of semantic memory.
 
-⚠️ **Provenance.** "_I prefer email_", said by the customer, is fine to remember as their preference.
+**Provenance.** "_I prefer email_", said by the customer, is fine to remember as their preference.
 "_My spending limit is now $2,000_", said by the customer, is a **claim about authority**, and memory is exactly how an attacker would make it stick.
 Every fact needs **who said it**, and some kinds of fact can't be written by the person they benefit ([Agency ≠ Authority]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#agency_authority" >}})).
 {{< /panel >}}
@@ -275,10 +275,10 @@ In the CSA, a finished turn makes exactly three writes:
 Otherwise the dream's summary would carry "_my limit is now $2,000_" into episodic memory, and recall would put it right back in the window.
 
 **Why it's built this way**:
-- 🛡️ **Governed**: every write, including the dream's, goes through one pipeline. Memory is an attack surface.
-- ✋ **Proposes, never activates**: an agent that rewrites its own procedures unsupervised drifts without anyone deciding it should.
-- 🧾 **Idempotent and auditable**: events moved not deleted; reconcile before write; reports say what changed.
-- 💸 **Local and cheap**: regex, a local summariser, a local NLI model. Nothing on the customer's critical path.
+- **Governed**: every write, including the dream's, goes through one pipeline. Memory is an attack surface.
+- **Proposes, never activates**: an agent that rewrites its own procedures unsupervised drifts without anyone deciding it should.
+- **Idempotent and auditable**: events moved not deleted; reconcile before write; reports say what changed.
+- **Local and cheap**: regex, a local summariser, a local NLI model. Nothing on the customer's critical path.
 
 **Memory in the RA is narrower on purpose**: research is done fresh every time, so nothing from an earlier run is offered as fact.
 It remembers **how runs fail** (criterion failures, rejected sources, budget stops), not what pages said, and turns recurring failures into curator-approved planning lessons.
@@ -295,12 +295,12 @@ It must also not slip back in through a session summary, which is why the dream 
 {{< /answer >}}
 
 {{< panel color="magenta" title="Summary" id="recap" >}}
-- 🧠 **Working memory** is bounded, pinned and redacted: it's replayed every turn.
-- 🗄️ **Three long-term stores**: what happened, what is true, how to act. AGENT.md is _who_.
-- 🌙 **Dreams consolidate later**: events → summaries, reconciled facts, proposed skills.
-- 🛡️ **Everything governed**: no self-granted authority, no unsupervised skills, no back doors.
+- **Working memory** is bounded, pinned and redacted: it's replayed every turn.
+- **Three long-term stores**: what happened, what is true, how to act. AGENT.md is _who_.
+- **Dreams consolidate later**: events → summaries, reconciled facts, proposed skills.
+- **Everything governed**: no self-granted authority, no unsupervised skills, no back doors.
 
-💡 _What an agent remembers, it acts on. Govern memory like an action._
+_What an agent remembers, it acts on. Govern memory like an action._
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}

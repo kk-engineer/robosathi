@@ -249,7 +249,7 @@ A control is deterministic code that evaluates the **exact proposal**, **before*
 - The **law of agency** gives us the vocabulary (actual and apparent authority, ratification, the duty of scope, the four standings), and **agency-cost economics** tells us what delegation costs (monitoring, bonding, residual loss).
 - The **Gatekeeper** puts these ideas into the control flow: between propose and execute, deterministic, policy from the database, every decision audited.
 
-💡 _Don't ask what your agent can do. Ask who decides what it may do, and show me the code._
+_Don't ask what your agent can do. Ask who decides what it may do, and show me the code._
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}

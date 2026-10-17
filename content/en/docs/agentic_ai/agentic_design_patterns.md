@@ -215,7 +215,7 @@ The support agent moves money, so every extra decision handed to the model would
 - Self-critique shares the author's blind spots; an **independent** evaluator does not.
 - **Blast radius sets how many patterns to use**, and **every loop needs a fence** held in configuration.
 
-💡 _An agentic pattern is a decision you hand to the model. The fence is the part you're responsible for._
+_An agentic pattern is a decision you hand to the model. The fence is the part you're responsible for._
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}

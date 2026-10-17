@@ -31,7 +31,7 @@ In the [CSA]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#cold_open" >}}), ever
 {{< /panel >}}
 
 {{< definition title="Hallucination" >}}
-📘 A working definition from the summarisation literature (Maynez et al., 2020; Ji et al.'s survey, 2023):
+A working definition from the summarisation literature (Maynez et al., 2020; Ji et al.'s survey, 2023):
 a hallucination is output that is **not supported by the source**. It comes in two kinds:
 
 | | **Intrinsic** (contradicted) | **Extrinsic** (unsupported) |
@@ -47,10 +47,10 @@ A hallucination check asks, for each thing the reply asserts: **is it entailed b
 {{< panel color="red" title="Why It Costs" id="why_it_costs" >}}
 Three real-world shapes of the same failure:
 
-- ✈️ **Airline**: in _Moffatt v. Air Canada_ (2024), the airline's website chatbot told a customer he could claim a bereavement fare refund **after** travel. The policy said otherwise.
+- **Airline**: in _Moffatt v. Air Canada_ (2024), the airline's website chatbot told a customer he could claim a bereavement fare refund **after** travel. The policy said otherwise.
   The tribunal held the airline responsible for what its chatbot said.
-- ⚖️ **Law**: in _Mata v. Avianca_ (2023), lawyers filed a brief citing cases ChatGPT had **invented**, complete with invented quotes. The court sanctioned them.
-- 🎧 **Support agents**: a refund was queued for review, but the draft says "_your refund has been issued_". A customer told money is coming plans around it.
+- **Law**: in _Mata v. Avianca_ (2023), lawyers filed a brief citing cases ChatGPT had **invented**, complete with invented quotes. The court sanctioned them.
+- **Support agents**: a refund was queued for review, but the draft says "_your refund has been issued_". A customer told money is coming plans around it.
 
 The common thread: the reply was **fluent, specific and confident**. Nothing in its tone said "_guess_".
 That's why a hallucination can't be caught by reading the reply; it has to be checked against the evidence.
@@ -90,9 +90,9 @@ graph TD
 
 | Premise: "_The forecast for Pune on 2 October is light drizzle with a high of 32.5 °C._" | Verdict |
 |---|---|
-| "_It will drizzle in Pune on 2 October._" | ✅ Entailment |
-| "_It will be dry in Pune on 2 October._" | ❌ Contradiction |
-| "_Pune's railway station has six platforms._" | ➖ Neutral: not about this |
+| "_It will drizzle in Pune on 2 October._" | Entailment |
+| "_It will be dry in Pune on 2 October._" | Contradiction |
+| "_Pune's railway station has six platforms._" | Neutral: not about this |
 
 For a hallucination check, **premise = evidence** and **hypothesis = the claim**: entailed → **supported**; contradicted → **refuted**; neutral → **unverified**.
 Three verdicts, not two: "_I can't confirm this_" is different from "_this is false_".
@@ -120,9 +120,9 @@ Splitting at semicolons and conjunctions makes each piece checkable on its own.
 
 | Class | Example | Grounded by |
 |---|---|---|
-| 🧾 **record** | "_$18.70 has been refunded._" | **Tool results only**: only a record can show what happened to this case |
-| 📜 **rule** | "_You'll hear back soon._" | The **policy** that makes the promise |
-| 💬 **conversational** | "_Thanks for reaching out._" | Nothing: it asserts nothing, so it isn't checked |
+| **record** | "_$18.70 has been refunded._" | **Tool results only**: only a record can show what happened to this case |
+| **rule** | "_You'll hear back soon._" | The **policy** that makes the promise |
+| **conversational** | "_Thanks for reaching out._" | Nothing: it asserts nothing, so it isn't checked |
 
 Checking conversational sentences is how a courteous reply once got flagged as a hallucination.
 
@@ -246,12 +246,12 @@ The guardrail **repairs once** with the evidence in front of the model ("_Your r
 {{< /answer >}}
 
 {{< panel color="magenta" title="Summary" id="recap" >}}
-- 🔍 **Hallucination** = not supported by what the turn observed: contradicted or unsupported.
-- ⚖️ **NLI decides; embeddings only retrieve.** Records are read, not inferred.
-- 🎲 **Logprobs are level 1**: cheap doubt, two deterministic cuts, never the whole check.
-- ✂️ **Repair once, trim, withhold.** Never ask the author to grade itself.
+- **Hallucination** = not supported by what the turn observed: contradicted or unsupported.
+- **NLI decides; embeddings only retrieve.** Records are read, not inferred.
+- **Logprobs are level 1**: cheap doubt, two deterministic cuts, never the whole check.
+- **Repair once, trim, withhold.** Never ask the author to grade itself.
 
-💡 _Check each claim against what the agent saw, not how sure it sounded._
+_Check each claim against what the agent saw, not how sure it sounded._
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}

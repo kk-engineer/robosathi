@@ -22,12 +22,12 @@ By the end of these notes you should be able to:
 {{< /panel >}}
 
 {{< definition title="LLM as a Judge" >}}
-📘 **LLM-as-a-judge** means asking a model to decide something about another model's output: does it meet a criterion, is it faithful to its evidence, which of two answers is better?
+**LLM-as-a-judge** means asking a model to decide something about another model's output: does it meet a criterion, is it faithful to its evidence, which of two answers is better?
 
 | | |
 |---|---|
-| ✅ **Why: scalable** | Some qualities have no deterministic check ("_are the trade-offs stated?_", "_is the explanation accurate?_"). People can grade them, but slowly and expensively; a judge grades thousands in minutes. |
-| ⚠️ **The catch: biased** | A judge is itself a model. It has biases, it drifts between versions, and it can [hallucinate]({{<ref "/docs/agentic_ai/hallucination_checks" >}}) too. |
+| **Why: scalable** | Some qualities have no deterministic check ("_are the trade-offs stated?_", "_is the explanation accurate?_"). People can grade them, but slowly and expensively; a judge grades thousands in minutes. |
+| **The catch: biased** | A judge is itself a model. It has biases, it drifts between versions, and it can [hallucinate]({{<ref "/docs/agentic_ai/hallucination_checks" >}}) too. |
 
 Zheng et al. (MT-Bench, 2023) found that strong judges agree with human experts about **as often as experts agree with each other**, and in the same paper documented position, verbosity and self-preference biases.
 
@@ -38,10 +38,10 @@ Zheng et al. (MT-Bench, 2023) found that strong judges agree with human experts 
 {{< panel color="red" title="Four Known Biases" id="biases" >}}
 | Bias | What it looks like | Design fix |
 |---|---|---|
-| ↔️ **Position** | In a pairwise comparison, prefers whichever answer it reads first (or second), regardless of quality | Ask twice with the **order swapped**; count only consistent preferences |
-| 📜 **Verbosity** | Longer answers score higher | The rubric says length is not quality; compare at similar length |
-| 🪞 **Self-preference** | Rates its own outputs (or its family's) higher | The judge is a **different model** from the author |
-| 📊 **Leniency / central tendency** | Absolute scales bunch up: everything is a 7 or an 8 | Anchored rubrics, **binary** criteria, or pairwise comparison |
+| **Position** | In a pairwise comparison, prefers whichever answer it reads first (or second), regardless of quality | Ask twice with the **order swapped**; count only consistent preferences |
+| **Verbosity** | Longer answers score higher | The rubric says length is not quality; compare at similar length |
+| **Self-preference** | Rates its own outputs (or its family's) higher | The judge is a **different model** from the author |
+| **Leniency / central tendency** | Absolute scales bunch up: everything is a 7 or an 8 | Anchored rubrics, **binary** criteria, or pairwise comparison |
 
 {{< keyidea >}}**Every bias has a design fix, not a prompt fix.** "_Please be unbiased_" in the prompt changes nothing; swapping order, changing the judge model and narrowing the question do.{{< /keyidea >}}
 {{< /panel >}}
@@ -117,10 +117,10 @@ Large-scale essay scoring pairs a human and an automated scorer and checks their
 {{< keyidea >}}**A reliable judge can be reliably wrong. You need both.**{{< /keyidea >}}
 
 **Write the rubric like a test.** Most judge disagreement is a rubric problem, not a model problem:
-1. 🪜 **Anchor every level**: a 1–10 scale without definitions is ten guesses. Define what each level looks like, and prefer fewer levels.
-2. 🎯 **One construct per item**: "_accurate and well-written_" is two questions. Split them.
-3. ✅ **Binary where you can**: "_Does the report state at least one trade-off?_" (yes/no) agrees far better than "_rate the trade-off discussion 1–10_".
-4. 🧾 **Reason before verdict, and cite the evidence**: the rationale first, then the score, quoting the words that earned it.
+1. **Anchor every level**: a 1–10 scale without definitions is ten guesses. Define what each level looks like, and prefer fewer levels.
+2. **One construct per item**: "_accurate and well-written_" is two questions. Split them.
+3. **Binary where you can**: "_Does the report state at least one trade-off?_" (yes/no) agrees far better than "_rate the trade-off discussion 1–10_".
+4. **Reason before verdict, and cite the evidence**: the rationale first, then the score, quoting the words that earned it.
 
 
 [Read more about Hypothesis Testing]({{<ref "/docs/maths/statistics/hypothesis_testing/" >}})
@@ -218,12 +218,12 @@ Judge every pair **both ways**, count only **consistent** preferences as wins (i
 {{< /answer >}}
 
 {{< panel color="magenta" title="Summary" id="recap" >}}
-- 🔭 **A judge is an instrument**: biased, drifting; calibrate before you trust it.
-- 🎲 **Cohen's κ removes chance**: 90% agreement can be κ = 0. Our bar: 0.6.
-- 📐 **Psychometrics**: reliability and validity; write the rubric like a test.
-- ⚖️ **Rank pairwise, gate absolutely**; the RA's auditor is last, isolated and independent.
+- **A judge is an instrument**: biased, drifting; calibrate before you trust it.
+- **Cohen's κ removes chance**: 90% agreement can be κ = 0. Our bar: 0.6.
+- **Psychometrics**: reliability and validity; write the rubric like a test.
+- **Rank pairwise, gate absolutely**; the RA's auditor is last, isolated and independent.
 
-💡 _A judge that has never been measured against another rater is an opinion with a temperature setting._
+_A judge that has never been measured against another rater is an opinion with a temperature setting._
 {{< /panel >}}
 
 {{< panel color="grey" title="Further Reading" id="further_reading" >}}
