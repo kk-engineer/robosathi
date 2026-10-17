@@ -6,7 +6,7 @@
   <ol class="rs-chapters__list">
   {{- range $i, $s := .sections -}}
     {{- with site.GetPage $s.page_ref -}}
-    {{- $stats := partial "course-stats.html" (dict "page" .) -}}
+    {{- $stats := partial "course-stats.html" (dict "page" . "noRemote" true) -}}
     {{- $mins := $stats.articleMinutes -}}
     <li class="rs-chapter">
       <span class="rs-chapter__num">{{ printf "%02d" (add $i 1) }}</span>

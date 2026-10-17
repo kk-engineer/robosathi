@@ -4,7 +4,7 @@
 <div class="rs-docs-tiles">
 {{- range .Page.Params.course_outline.sections -}}
   {{- with site.GetPage .page_ref -}}
-  {{- $stats := partial "course-stats.html" (dict "page" .) -}}
+  {{- $stats := partial "course-stats.html" (dict "page" . "noRemote" true) -}}
   {{- $playlist := "" -}}
   {{- with findRE `playlist\s+"([^"]+)"` .RawContent 1 -}}
     {{- $playlist = replaceRE `playlist\s+"([^"]+)"` "$1" (index . 0) -}}

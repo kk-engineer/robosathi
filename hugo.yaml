@@ -13,6 +13,9 @@ enableMissingTranslationPlaceholders: true
 
 enableRobotsTXT: true
 
+# Course pages fetch YouTube metadata at build time; CI starts with a cold cache.
+timeout: 300s
+
 # Will give values to .Lastmod etc.
 enableGitInfo: true
 
