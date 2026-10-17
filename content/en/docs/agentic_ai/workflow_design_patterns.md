@@ -44,8 +44,18 @@ High cardinality with a bounded blast radius is where it pays to let the model c
 The simplest and most common pattern: each step's output is the next step's input, in a fixed order.
 
 ```mermaid
-graph LR
+graph TD
     A[Extract text] --> B[Translate] --> C[Summarise] --> D[Format brief]
+    classDef c1 fill:#dcfce7,stroke:#15803d,stroke-width:2px,color:#14532d
+    classDef c2 fill:#dbeafe,stroke:#1d4ed8,stroke-width:2px,color:#1e3a8a
+    classDef c3 fill:#ffedd5,stroke:#c2410c,stroke-width:2px,color:#7c2d12
+    classDef c4 fill:#f3e8ff,stroke:#7e22ce,stroke-width:2px,color:#581c87
+    classDef c5 fill:#fee2e2,stroke:#b91c1c,stroke-width:2px,color:#7f1d1d
+    classDef c6 fill:#ccfbf1,stroke:#0f766e,stroke-width:2px,color:#134e4a
+    class A c1
+    class B c2
+    class C c3
+    class D c4
 ```
 
 {{< panel color="cyan" title="Example" >}}

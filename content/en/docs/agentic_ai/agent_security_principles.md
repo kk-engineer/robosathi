@@ -96,8 +96,18 @@ The industry's shared vocabulary for what goes wrong, and what security teams wi
 The part usually missed: **PII leaks through four surfaces, not one.**
 
 ```mermaid
-graph LR
+graph TD
     I["Input · what the person typed"] --> P["Provider · tool results sent to the model vendor"] --> M["Memory · what persists"] --> L["Logs & traces · what outlives the session"]
+    classDef c1 fill:#dcfce7,stroke:#15803d,stroke-width:2px,color:#14532d
+    classDef c2 fill:#dbeafe,stroke:#1d4ed8,stroke-width:2px,color:#1e3a8a
+    classDef c3 fill:#ffedd5,stroke:#c2410c,stroke-width:2px,color:#7c2d12
+    classDef c4 fill:#f3e8ff,stroke:#7e22ce,stroke-width:2px,color:#581c87
+    classDef c5 fill:#fee2e2,stroke:#b91c1c,stroke-width:2px,color:#7f1d1d
+    classDef c6 fill:#ccfbf1,stroke:#0f766e,stroke-width:2px,color:#134e4a
+    class I c1
+    class P c2
+    class M c3
+    class L c4
 ```
 
 A common failure in healthcare and finance chatbots: the reply is carefully redacted, but the full transcript (names and all) sits in a third-party logging or analytics tool.
@@ -206,8 +216,19 @@ Permission strings have segments with per-segment wildcards (`memory:*:erase:*`)
 RBAC answers "_may this role do this **kind** of thing?_". It doesn't answer "_**this much**?_" or "_to **this record**?_". The [Gatekeeper]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#gatekeeper" >}}) adds both, deterministically, right before the side effect:
 
 ```mermaid
-graph LR
+graph TD
     A["Authority · RBAC + hierarchy"] --> L["Limits · per action + per window"] --> M["Mandate · which record"] --> B["Business rules · ownership, eligibility"] --> V{"ALLOW · DENY · ESCALATE"}
+    classDef c1 fill:#dcfce7,stroke:#15803d,stroke-width:2px,color:#14532d
+    classDef c2 fill:#dbeafe,stroke:#1d4ed8,stroke-width:2px,color:#1e3a8a
+    classDef c3 fill:#ffedd5,stroke:#c2410c,stroke-width:2px,color:#7c2d12
+    classDef c4 fill:#f3e8ff,stroke:#7e22ce,stroke-width:2px,color:#581c87
+    classDef c5 fill:#fee2e2,stroke:#b91c1c,stroke-width:2px,color:#7f1d1d
+    classDef c6 fill:#ccfbf1,stroke:#0f766e,stroke-width:2px,color:#134e4a
+    class A c1
+    class L c2
+    class M c3
+    class B c4
+    class V c5
 ```
 
 - **Limits per window** defeat a **structuring attack**: eighty individually permitted actions summing to one that was never permitted.

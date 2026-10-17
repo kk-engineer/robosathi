@@ -184,8 +184,19 @@ A retrieved passage is not automatically shown to the model. It is a **candidate
 A context pipeline decides what the model actually sees:
 
 ```mermaid
-graph LR
+graph TD
     G["gather: every source offers candidates"] --> S["score: cheap ranker, then cross-encoder"] --> F["fit: pack into the token budget"] --> FM["format: label source and trust"] --> O["order: most important where models attend best"]
+    classDef c1 fill:#dcfce7,stroke:#15803d,stroke-width:2px,color:#14532d
+    classDef c2 fill:#dbeafe,stroke:#1d4ed8,stroke-width:2px,color:#1e3a8a
+    classDef c3 fill:#ffedd5,stroke:#c2410c,stroke-width:2px,color:#7c2d12
+    classDef c4 fill:#f3e8ff,stroke:#7e22ce,stroke-width:2px,color:#581c87
+    classDef c5 fill:#fee2e2,stroke:#b91c1c,stroke-width:2px,color:#7f1d1d
+    classDef c6 fill:#ccfbf1,stroke:#0f766e,stroke-width:2px,color:#134e4a
+    class G c1
+    class S c2
+    class F c3
+    class FM c4
+    class O c5
 ```
 
 Two details matter. First, every chunk is labelled with its **source and a trust class** (system › verified › retrieved › user › model). A knowledge-base passage enters as _retrieved_: it is **evidence, never an instruction**.
@@ -199,8 +210,20 @@ Retrieval is only half the job. The other half is proving that the answer **stay
 The course's agents check each claim in the drafted reply using a cascade that resolves claims **cheapest first**:
 
 ```mermaid
-graph LR
+graph TD
     X["exact match"] --> EM["embedding similarity"] --> N["NLI entailment (local)"] --> J["an LLM judge"] --> H["a person"]
+    classDef c1 fill:#dcfce7,stroke:#15803d,stroke-width:2px,color:#14532d
+    classDef c2 fill:#dbeafe,stroke:#1d4ed8,stroke-width:2px,color:#1e3a8a
+    classDef c3 fill:#ffedd5,stroke:#c2410c,stroke-width:2px,color:#7c2d12
+    classDef c4 fill:#f3e8ff,stroke:#7e22ce,stroke-width:2px,color:#581c87
+    classDef c5 fill:#fee2e2,stroke:#b91c1c,stroke-width:2px,color:#7f1d1d
+    classDef c6 fill:#ccfbf1,stroke:#0f766e,stroke-width:2px,color:#134e4a
+    class X c1
+    class EM c2
+    class N c3
+    class entailment c4
+    class J c5
+    class H c6
 ```
 
 Most claims are settled in the first tiers, for free. A claim the passages do not support is cut, and the reply is referred to a person.

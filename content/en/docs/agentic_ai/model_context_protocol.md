@@ -229,8 +229,19 @@ An **unknown server gets the most restrictive envelope** by default: human-contr
 **A server's tool, governed like ours**:
 
 ```mermaid
-graph LR
+graph TD
     L["tools/list · name, schemas"] --> TD["ToolDefinition · args model built from inputSchema"] --> G["Gatekeeper · envelope from OUR config"] --> E["Executor · deadline, idempotency"] --> A["Audit · facts, like any tool"]
+    classDef c1 fill:#dcfce7,stroke:#15803d,stroke-width:2px,color:#14532d
+    classDef c2 fill:#dbeafe,stroke:#1d4ed8,stroke-width:2px,color:#1e3a8a
+    classDef c3 fill:#ffedd5,stroke:#c2410c,stroke-width:2px,color:#7c2d12
+    classDef c4 fill:#f3e8ff,stroke:#7e22ce,stroke-width:2px,color:#581c87
+    classDef c5 fill:#fee2e2,stroke:#b91c1c,stroke-width:2px,color:#7f1d1d
+    classDef c6 fill:#ccfbf1,stroke:#0f766e,stroke-width:2px,color:#134e4a
+    class L c1
+    class TD c2
+    class G c3
+    class E c4
+    class A c5
 ```
 
 Arguments are validated by a Pydantic model **built from the server's input schema**, before the call leaves. The envelope (surface, reversibility, side effects, permission) comes from **this deployment's config, never from the server**.

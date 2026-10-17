@@ -30,8 +30,20 @@ This works with any model and any API, but each retry costs a full round trip an
 **Constraining during decoding.** At every token, the tokens that would break the schema are removed before sampling from the [softmax]({{<ref "/docs/deep_learning/activation_function/#softmax" >}}), so invalid output is not merely unlikely; it is **unrepresentable**. This is what **Outlines** and **LMQL** do, as do grammar-based decoders such as llama.cpp's.
 
 ```mermaid
-graph LR
+graph TD
     L["The model scores every token (logits)"] --> S["Schema state: which tokens are legal next?"] --> M["Mask the illegal ones (probability → 0)"] --> V["Sample: always valid"]
+    classDef c1 fill:#dcfce7,stroke:#15803d,stroke-width:2px,color:#14532d
+    classDef c2 fill:#dbeafe,stroke:#1d4ed8,stroke-width:2px,color:#1e3a8a
+    classDef c3 fill:#ffedd5,stroke:#c2410c,stroke-width:2px,color:#7c2d12
+    classDef c4 fill:#f3e8ff,stroke:#7e22ce,stroke-width:2px,color:#581c87
+    classDef c5 fill:#fee2e2,stroke:#b91c1c,stroke-width:2px,color:#7f1d1d
+    classDef c6 fill:#ccfbf1,stroke:#0f766e,stroke-width:2px,color:#134e4a
+    class L c1
+    class token c2
+    class S c3
+    class M c4
+    class ones c5
+    class V c6
 ```
 
 Outlines (Willard & Louf, 2023) compiles a regular expression or JSON Schema into a **finite-state machine** once, so that at each step the set of legal tokens is a lookup rather than a search.
@@ -93,8 +105,18 @@ The second failure mode is a loop that runs too long. Early agent code tends to 
 The cleaner design is a single **loop governor** that every check goes through, answering every question in the same shape, a **verdict**:
 
 ```mermaid
-graph LR
+graph TD
     B["begin_step: may we go on?"] --> BA["before_action: run it, or suppress?"] --> AA["after_action: what did it add?"] --> V{verdict}
+    classDef c1 fill:#dcfce7,stroke:#15803d,stroke-width:2px,color:#14532d
+    classDef c2 fill:#dbeafe,stroke:#1d4ed8,stroke-width:2px,color:#1e3a8a
+    classDef c3 fill:#ffedd5,stroke:#c2410c,stroke-width:2px,color:#7c2d12
+    classDef c4 fill:#f3e8ff,stroke:#7e22ce,stroke-width:2px,color:#581c87
+    classDef c5 fill:#fee2e2,stroke:#b91c1c,stroke-width:2px,color:#7f1d1d
+    classDef c6 fill:#ccfbf1,stroke:#0f766e,stroke-width:2px,color:#134e4a
+    class B c1
+    class BA c2
+    class AA c3
+    class V c4
 ```
 
 | Verdict | Meaning |

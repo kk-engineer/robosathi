@@ -169,8 +169,19 @@ You can't see rot in one window, only **across a session**: score answers agains
 Five layers, in order:
 
 ```mermaid
-graph LR
+graph TD
     P["1 · Provenance: source + trust on every chunk"] --> S["2 · Screen: instructions in data"] --> V["3 · Verify: claims vs the record"] --> D["4 · Decide: higher trust wins; ties flagged"] --> SH["5 · Show: what was removed, and why"]
+    classDef c1 fill:#dcfce7,stroke:#15803d,stroke-width:2px,color:#14532d
+    classDef c2 fill:#dbeafe,stroke:#1d4ed8,stroke-width:2px,color:#1e3a8a
+    classDef c3 fill:#ffedd5,stroke:#c2410c,stroke-width:2px,color:#7c2d12
+    classDef c4 fill:#f3e8ff,stroke:#7e22ce,stroke-width:2px,color:#581c87
+    classDef c5 fill:#fee2e2,stroke:#b91c1c,stroke-width:2px,color:#7f1d1d
+    classDef c6 fill:#ccfbf1,stroke:#0f766e,stroke-width:2px,color:#134e4a
+    class P c1
+    class S c2
+    class V c3
+    class D c4
+    class SH c5
 ```
 
 1. **Provenance**: every chunk carries its source and a **trust class** (system › verified › retrieved › user › model).

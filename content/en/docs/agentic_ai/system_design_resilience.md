@@ -52,8 +52,18 @@ The intellectual source for these notes is Michael Nygard's _Release It!_ (2007;
 a failure in one place **cracks** into others (cascading failures); and **the worst failure is not the error but the hang**.
 
 ```mermaid
-graph LR
+graph TD
     S["Slow dependency · no timeout"] --> W["Callers wait · threads held"] --> P["Pool exhausted · nothing left to serve"] --> D["Everything down · a cascade"]
+    classDef c1 fill:#dcfce7,stroke:#15803d,stroke-width:2px,color:#14532d
+    classDef c2 fill:#dbeafe,stroke:#1d4ed8,stroke-width:2px,color:#1e3a8a
+    classDef c3 fill:#ffedd5,stroke:#c2410c,stroke-width:2px,color:#7c2d12
+    classDef c4 fill:#f3e8ff,stroke:#7e22ce,stroke-width:2px,color:#581c87
+    classDef c5 fill:#fee2e2,stroke:#b91c1c,stroke-width:2px,color:#7f1d1d
+    classDef c6 fill:#ccfbf1,stroke:#0f766e,stroke-width:2px,color:#134e4a
+    class S c1
+    class W c2
+    class P c3
+    class D c4
 ```
 
 > "_The dangerous failure is not the call that errors; it is the call that never returns. An unbounded wait converts a slow dependency into an exhausted thread pool, and then into an outage of everything sharing it._"
@@ -235,8 +245,19 @@ A failing compensation is recorded and the unwinding **continues**. A **Stop** i
 Every call to a dependency goes through one fixed stack, **outermost first**:
 
 ```mermaid
-graph LR
+graph TD
     B["Bulkhead · admitted at all?"] --> CB["Circuit breaker · worth calling?"] --> R["Retry · try again?"] --> T["Timeout · this attempt's deadline"] --> O[Operation]
+    classDef c1 fill:#dcfce7,stroke:#15803d,stroke-width:2px,color:#14532d
+    classDef c2 fill:#dbeafe,stroke:#1d4ed8,stroke-width:2px,color:#1e3a8a
+    classDef c3 fill:#ffedd5,stroke:#c2410c,stroke-width:2px,color:#7c2d12
+    classDef c4 fill:#f3e8ff,stroke:#7e22ce,stroke-width:2px,color:#581c87
+    classDef c5 fill:#fee2e2,stroke:#b91c1c,stroke-width:2px,color:#7f1d1d
+    classDef c6 fill:#ccfbf1,stroke:#0f766e,stroke-width:2px,color:#134e4a
+    class B c1
+    class CB c2
+    class R c3
+    class T c4
+    class O c5
 ```
 
 Get the order wrong and the layers fight: "_a timeout outside retry cuts off the retries instead of the call, and a breaker inside retry counts one logical call as three failures and trips at a third of the intended threshold._"

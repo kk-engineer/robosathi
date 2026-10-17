@@ -60,8 +60,19 @@ That's why a hallucination can't be caught by reading the reply; it has to be ch
 
 {{< panel color="blue" title="Where the Check Sits: After the Model, Before the User" id="pipeline" >}}
 ```mermaid
-graph LR
+graph TD
     D["Decompose · atomic claims"] --> L1["L1 · Confidence · token logprobs"] --> L2["L2 · Grounding · records, then NLI"] --> R["Repair once · with the evidence"] --> T["Trim · withhold · what still fails goes"]
+    classDef c1 fill:#dcfce7,stroke:#15803d,stroke-width:2px,color:#14532d
+    classDef c2 fill:#dbeafe,stroke:#1d4ed8,stroke-width:2px,color:#1e3a8a
+    classDef c3 fill:#ffedd5,stroke:#c2410c,stroke-width:2px,color:#7c2d12
+    classDef c4 fill:#f3e8ff,stroke:#7e22ce,stroke-width:2px,color:#581c87
+    classDef c5 fill:#fee2e2,stroke:#b91c1c,stroke-width:2px,color:#7f1d1d
+    classDef c6 fill:#ccfbf1,stroke:#0f766e,stroke-width:2px,color:#134e4a
+    class D c1
+    class L1 c2
+    class L2 c3
+    class R c4
+    class T c5
 ```
 
 1. **Decompose** the reply into **atomic claims**: sentences, then split again at conjunctions and semicolons.
