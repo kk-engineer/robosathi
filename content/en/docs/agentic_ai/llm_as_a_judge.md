@@ -48,7 +48,9 @@ Zheng et al. (MT-Bench, 2023) found that strong judges agree with human experts 
 {{< panel color="blue" title="Why Raw Agreement Lies" id="raw_agreement" >}}
 How do you know whether a judge is any good? Compare its labels with a trusted rater's. But **raw agreement lies** on skewed labels.
 
-📌 100 claims. A human expert labels **90 supported, 10 unsupported**. A lazy judge says "_supported_" to **everything**.
+{{< panel color="cyan" title="Example" >}}
+100 claims. A human expert labels **90 supported, 10 unsupported**. A lazy judge says "_supported_" to **everything**.
+{{< /panel >}}
 
 - Observed agreement: **90%**. Looks great.
 - But the judge learned nothing: it agrees 90% of the time **purely because** 90% of the labels are "_supported_".
@@ -129,7 +131,7 @@ The same holds for models: "_rate this out of 10_" drifts between runs and betwe
 | Price | Leniency, central tendency | **Position bias** (judge twice, swapped); many pairs for n candidates |
 
 **Chatbot Arena** (Chiang et al., 2024) ranks models from millions of pairwise human votes, fitted with a **Bradley–Terry** model (1952). MT-Bench showed pairwise judging by strong models tracks those human preferences.
-For a pairwise win rate \(\hat{w}\) over \(n\) consistent comparisons, report its binomial standard error so you can tell a real win from sample-size noise:
+For a pairwise win rate \(\hat{w}\) over \(n\) consistent comparisons, report its [binomial]({{<ref "/docs/maths/probability/probability_mass_function/#binomial-distribution" >}}) standard error so you can tell a real win from sample-size noise:
 
 \[\text{SE} = \sqrt{\frac{\hat{w}(1-\hat{w})}{n}}\]
 
@@ -214,7 +216,16 @@ Judge every pair **both ways**, count only **consistent** preferences as wins (i
 💡 _A judge that has never been measured against another rater is an opinion with a temperature setting._
 {{< /panel >}}
 
-**Further reading**
+{{< panel color="gold" title="Related Notes" id="related_notes" >}}
+Concepts used in these notes are developed in the other courses on this site:
+
+- Maths: [Performance Metrics: Confusion Matrix, Precision & Recall]({{<ref "/docs/maths/statistics/performance_metrics/#confusion-matrix" >}})
+- Maths: [Binomial Distribution]({{<ref "/docs/maths/probability/probability_mass_function/#binomial-distribution" >}})
+- Maths: [Confidence Interval]({{<ref "/docs/maths/statistics/confidence_interval/#confidence-interval" >}})
+- Maths: [Hypothesis Testing]({{<ref "/docs/maths/statistics/hypothesis_testing/" >}})
+{{< /panel >}}
+
+{{< panel color="grey" title="Further Reading" id="further_reading" >}}
 - Zheng et al., [_Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena_](https://arxiv.org/abs/2306.05685) NeurIPS (2023).
 - Wang et al., [_Large Language Models are not Fair Evaluators_](https://arxiv.org/abs/2305.17926) (2023): position bias.
 - Panickssery et al., [_LLM Evaluators Recognize and Favor Their Own Generations_](https://arxiv.org/abs/2404.13076) (2024).
@@ -226,6 +237,7 @@ Judge every pair **both ways**, count only **consistent** preferences as wins (i
 - Chiang et al., [_Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference_](https://arxiv.org/abs/2403.04132) (2024).
 - Bradley & Terry, [_Rank Analysis of Incomplete Block Designs_](https://doi.org/10.2307/2334029) Biometrika (1952).
 - Liu et al., [_G-Eval: NLG Evaluation using GPT-4 with Better Human Alignment_](https://arxiv.org/abs/2303.16634) EMNLP (2023).
+{{< /panel >}}
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

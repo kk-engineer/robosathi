@@ -76,7 +76,9 @@ Outcomes are decided by **side effects**:
 | `queued_for_review` | Exactly one new review |
 | `refused` · `answered` · `clarification` · `out_of_scope` | No money moved, no review created |
 
-📌 An airline rebooking agent: whether it searched flights first or checked fare rules first doesn't matter; whether the passenger ended up on a valid flight at the right fare does.
+{{< panel color="cyan" title="Example" >}}
+An airline rebooking agent: whether it searched flights first or checked fare rules first doesn't matter; whether the passenger ended up on a valid flight at the right fare does.
+{{< /panel >}}
 
 {{< keyidea >}}**The one path rule: a forbidden tool must never _execute_. Asking is not acting.**{{< /keyidea >}}
 (A refund the [Gatekeeper]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#gatekeeper" >}}) escalated was _proposed_, not executed, and that's correct behaviour.)
@@ -93,7 +95,9 @@ An agent that refuses every refund is perfectly safe, and useless. If your golde
 
 A suite of refusals alone would reward refusing everything.
 
-📌 A spam filter that flags every email has perfect recall. **Precision** is what a balanced set measures.
+{{< panel color="cyan" title="Example" >}}
+A spam filter that flags every email has perfect [recall]({{<ref "/docs/maths/statistics/performance_metrics/#confusion-matrix" >}}). **Precision** is what a balanced set measures.
+{{< /panel >}}
 
 {{< keyidea >}}**If refusing everything passes your suite, your suite is broken.**{{< /keyidea >}}
 {{< /panel >}}
@@ -108,8 +112,10 @@ One run of a non-deterministic system proves little. Run each case \(k\) times. 
 | **pass@k** | **At least one** of the k trials was clean | _Can_ it do this? (capability) |
 | **pass^k** | **Every one** of the k trials was clean | _Will_ it do this every time? (reliability) |
 
-**τ-bench** (Yao et al., 2024) introduced pass^k for agents and showed it falling steeply as \(k\) grows, even for strong models.
-📌 With \(p = 0.9\) and \(k = 5\): pass@5 ≈ 0.99999, but pass^5 ≈ **0.59**.
+Both follow from the [binomial distribution]({{<ref "/docs/maths/probability/probability_mass_function/#binomial-distribution" >}}). **τ-bench** (Yao et al., 2024) introduced pass^k for agents and showed it falling steeply as \(k\) grows, even for strong models.
+{{< panel color="cyan" title="Example" >}}
+With \(p = 0.9\) and \(k = 5\): pass@5 ≈ 0.99999, but pass^5 ≈ **0.59**.
+{{< /panel >}}
 
 For a money-moving agent, **pass^k is the one that matters**.
 
@@ -258,12 +264,23 @@ Grade the **outcome** in the database (a valid refund that didn't happen is a fa
 💡 _If refusing everything passes your suite, your suite is broken._
 {{< /panel >}}
 
-**Further reading**
+{{< panel color="gold" title="Related Notes" id="related_notes" >}}
+Concepts used in these notes are developed in the other courses on this site:
+
+- Maths: [Binomial Distribution]({{<ref "/docs/maths/probability/probability_mass_function/#binomial-distribution" >}})
+- Maths: [Performance Metrics: Confusion Matrix, Precision & Recall]({{<ref "/docs/maths/statistics/performance_metrics/#confusion-matrix" >}})
+- Maths: [Precision-Recall Curve]({{<ref "/docs/maths/statistics/performance_metrics/#precision-recall-curve" >}})
+- Maths: [Confidence Interval]({{<ref "/docs/maths/statistics/confidence_interval/#confidence-interval" >}})
+- Maths: [Central Limit Theorem]({{<ref "/docs/maths/statistics/central_limit_theorem/#clt" >}})
+{{< /panel >}}
+
+{{< panel color="grey" title="Further Reading" id="further_reading" >}}
 - Yao et al., [_τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains_](https://arxiv.org/abs/2406.12045) (2024): pass^k.
 - Chen et al., [_Evaluating Large Language Models Trained on Code_](https://arxiv.org/abs/2107.03374) (2021): pass@k.
 - Liu et al., [_G-Eval: NLG Evaluation using GPT-4 with Better Human Alignment_](https://arxiv.org/abs/2303.16634) EMNLP (2023).
 - Confident AI, [_DeepEval documentation_](https://deepeval.com/docs/getting-started)
 - Promptfoo, [_Red teaming documentation_](https://www.promptfoo.dev/docs/red-team/)
+{{< /panel >}}
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

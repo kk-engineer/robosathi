@@ -106,14 +106,16 @@ The one formula that settles most cost arguments. **Build** has a high fixed cos
 
 **Below \(Q^*\), buy is cheaper; above it, build is.**
 
-📌 _Illustrative_: build at $48k/month fixed + $0.125 per resolution; buy at $15k/month + $1.00 per resolution:
+{{< panel color="cyan" title="Example" >}}
+_Illustrative_: build at $48k/month fixed + $0.125 per resolution; buy at $15k/month + $1.00 per resolution:
+{{< /panel >}}
 
 \[Q^* = \frac{48{,}000 - 15{,}000}{1.00 - 0.125} \approx 37{,}700 \text{ resolutions/month} \approx 94\text{k tickets at a 40\% resolution rate}\]
 
 {{< keyidea >}}**Know your Q**, now and in two years.{{< /keyidea >}}
 
 **Plan for the price curve.** The cost of a given level of model capability has been falling roughly **10× per year** (a16z, _LLMflation_, 2024):
-- ❌ **Don't build** what the curve will commoditise, e.g. a custom-trained model to save tokens: it competes with a price that falls 10× a year.
+- ❌ **Don't build** what the curve will commoditise, e.g. a custom-trained or [fine-tuned]({{<ref "/docs/natural_language_processing/llm/#sft" >}}) model to save tokens: it competes with a price that falls 10× a year.
 - ✅ **Do build** what the curve doesn't touch: **rules, data, evals, authority**. Their value _rises_ as tokens get cheaper, because cheaper tokens mean more agent traffic to govern.
 - 🔁 Keep switching cheap: models and judges behind configuration, so you can ride the curve.
 {{< /panel >}}
@@ -146,8 +148,10 @@ The liability is yours, and no vendor knows your refund policy, limits or escala
 
 \[\text{expected loss} = P(\text{wrong action}) \times \text{cost per wrong action} \times \text{volume}\]
 
-📌 _Illustrative_: 0.1% × $80 × 1,000,000 refunds/year ≈ **$80,000/year** in direct loss, before chargebacks, regulators or the press.
+{{< panel color="cyan" title="Example" >}}
+_Illustrative_: 0.1% × $80 × 1,000,000 refunds/year ≈ **$80,000/year** in direct loss, before chargebacks, regulators or the press.
 A deterministic Gatekeeper is a few engineer-weeks to build and near-zero marginal cost per call.
+{{< /panel >}}
 {{< keyidea >}}**You can rent intelligence. You can't rent accountability.**{{< /keyidea >}}
 
 **2 · Your evaluation data.** Adopt the frameworks (DeepEval, Promptfoo); **build the data**: golden cases labelled from your policy, oracle rules, attacks against your tools. Nobody can sell you that.
@@ -259,10 +263,20 @@ A team wants to fine-tune its own model to save inference cost on a support agen
 💡 _You can rent intelligence. You can't rent accountability._
 {{< /panel >}}
 
-**Further reading**
+{{< panel color="gold" title="Related Notes" id="related_notes" >}}
+Concepts used in these notes are developed in the other courses on this site:
+
+- NLP: [Supervised Fine-Tuning (SFT)]({{<ref "/docs/natural_language_processing/llm/#sft" >}})
+- NLP: [Parameter-Efficient Fine-Tuning (PEFT)]({{<ref "/docs/natural_language_processing/llm/#peft" >}})
+- NLP: [Reinforcement Learning from Human Feedback (RLHF)]({{<ref "/docs/natural_language_processing/llm/#rlhf" >}})
+- NLP: [Large Language Models]({{<ref "/docs/natural_language_processing/llm/" >}})
+{{< /panel >}}
+
+{{< panel color="grey" title="Further Reading" id="further_reading" >}}
 - MIT NANDA, [_The GenAI Divide: State of AI in Business 2025_](https://www.artificialintelligence-news.com/wp-content/uploads/2025/08/ai_report_2025.pdf) (2025), preliminary and survey-based.
 - Fortune, [_MIT report: 95% of generative AI pilots at companies are failing_](https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/) (18 Aug 2025).
 - Appenzeller (a16z), [_Welcome to LLMflation: LLM inference cost is going down fast_](https://a16z.com/llmflation-llm-inference-cost/) (Nov 2024).
+{{< /panel >}}
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

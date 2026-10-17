@@ -45,8 +45,10 @@ graph LR
     M --> A[Answer]
 ```
 
-**Example.** A calendar assistant is asked to "_book 30 minutes with Priya and Arun next week_". The model calls `find_free_slots`, then `check_rooms` for the chosen slot, then `send_invite`.
+{{< panel color="cyan" title="Example" >}}
+A calendar assistant is asked to "_book 30 minutes with Priya and Arun next week_". The model calls `find_free_slots`, then `check_rooms` for the chosen slot, then `send_invite`.
 A different request would produce a different sequence of calls, and that is precisely what makes this agentic rather than a workflow.
+{{< /panel >}}
 
 **When to use it.** When the steps cannot be known in advance, but every action can be expressed as a typed tool call.
 
@@ -66,7 +68,9 @@ graph LR
     T --> F[Answer, grounded in the observations]
 ```
 
-**Example.** "_Which is older, the Eiffel Tower or the Statue of Liberty?_" The model thinks that it needs both construction dates, searches for the Eiffel Tower (completed 1889), thinks again, searches for the Statue of Liberty (dedicated 1886), compares, and answers that the Statue of Liberty is older.
+{{< panel color="cyan" title="Example" >}}
+"_Which is older, the Eiffel Tower or the Statue of Liberty?_" The model thinks that it needs both construction dates, searches for the Eiffel Tower (completed 1889), thinks again, searches for the Statue of Liberty (dedicated 1886), compares, and answers that the Statue of Liberty is older.
+{{< /panel >}}
 
 **Why it helps.** The visible trace makes the model's choices **inspectable**: when something goes wrong, you can read why the agent did what it did. It also tends to improve performance on multi-step questions.
 
@@ -84,7 +88,9 @@ graph LR
     C --> F[Final memo]
 ```
 
-**Example.** The model drafts a policy memo, then is asked to critique it ("_which claims are unsupported? what is missing for the CFO?_"), then rewrites it using the critique, stopping after two rounds.
+{{< panel color="cyan" title="Example" >}}
+The model drafts a policy memo, then is asked to critique it ("_which claims are unsupported? what is missing for the CFO?_"), then rewrites it using the critique, stopping after two rounds.
+{{< /panel >}}
 
 **When to use it.** When a first pass reliably leaves gaps and a second look is cheap.
 
@@ -102,7 +108,9 @@ graph LR
     R -->|passes| PB[Publish]
 ```
 
-**Example.** A translator model drafts a translation. A reviewer model, ideally from a different model family, scores it against the company's style guide and glossary and lists specific problems. The translator revises only what was flagged.
+{{< panel color="cyan" title="Example" >}}
+A translator model drafts a translation. A reviewer model, ideally from a different model family, scores it against the company's style guide and glossary and lists specific problems. The translator revises only what was flagged.
+{{< /panel >}}
 
 **What makes it different from reflection** is **independence**. The evaluator did not write the work, reads it with fresh context, and judges it against criteria that were fixed before the work began.
 An evaluator that is the same model, merely prompted to "_be strict_", still has the same blind spots.
@@ -120,8 +128,10 @@ graph LR
     E -->|"replan only on new facts"| P
 ```
 
-**Example.** "_Plan three days in Kyoto on a mid-range budget._" The planner writes: book flights; book a hotel near Kyoto Station; day 1 Higashiyama; day 2 Arashiyama; day 3 Fushimi Inari and Nara. An executor carries out each step.
+{{< panel color="cyan" title="Example" >}}
+"_Plan three days in Kyoto on a mid-range budget._" The planner writes: book flights; book a hotel near Kyoto Station; day 1 Higashiyama; day 2 Arashiyama; day 3 Fushimi Inari and Nara. An executor carries out each step.
 If the flights turn out to be sold out for those dates, that is **new information**, and the plan is revised.
+{{< /panel >}}
 
 Notice the dependencies: the hotel depends on the flight dates, while the three days do not depend on each other. **A good plan is a small graph, not a list**, and independent steps can run in parallel.
 
@@ -143,8 +153,10 @@ graph LR
 
 It looks like [map-reduce]({{<ref "/docs/agentic_ai/workflow_design_patterns/#map_reduce" >}}), with one difference: here **a model decides how many sub-tasks there are and what each one is**.
 
-**Example.** "_How are our three main competitors pricing their enterprise tier?_" The orchestrator decides which competitors to cover and sends one subagent per competitor, each with only that brief.
+{{< panel color="cyan" title="Example" >}}
+"_How are our three main competitors pricing their enterprise tier?_" The orchestrator decides which competitors to cover and sends one subagent per competitor, each with only that brief.
 Each subagent has its own clean context and never sees the others' pages, which keeps contexts small and stops one bad source from contaminating everything ([context isolation]({{<ref "/docs/agentic_ai/context_management/#strategies" >}})).
+{{< /panel >}}
 
 **How it fails.** This is the most expensive pattern: coordination cost, duplicated work and budget blow-outs. Cap the number of subagents and the total budget, and make the merge step check for overlap and contradiction.
 {{< /panel >}}
@@ -200,13 +212,22 @@ The support agent moves money, so every extra decision handed to the model would
 💡 _An agentic pattern is a decision you hand to the model. The fence is the part you're responsible for._
 {{< /panel >}}
 
-**Further reading**
+{{< panel color="gold" title="Related Notes" id="related_notes" >}}
+Concepts used in these notes are developed in the other courses on this site:
+
+- NLP: [Large Language Models]({{<ref "/docs/natural_language_processing/llm/" >}})
+- NLP: [Reinforcement Learning from Human Feedback (RLHF)]({{<ref "/docs/natural_language_processing/llm/#rlhf" >}})
+- NLP: [Self-Attention]({{<ref "/docs/natural_language_processing/self_attention/#self_attention" >}})
+{{< /panel >}}
+
+{{< panel color="grey" title="Further Reading" id="further_reading" >}}
 - Yao et al., [_ReAct: Synergizing Reasoning and Acting in Language Models_](https://arxiv.org/abs/2210.03629) (2022).
 - Shinn et al., [_Reflexion: Language Agents with Verbal Reinforcement Learning_](https://arxiv.org/abs/2303.11366) (2023).
 - Madaan et al., [_Self-Refine: Iterative Refinement with Self-Feedback_](https://arxiv.org/abs/2303.17651) (2023).
 - Wang et al., [_Plan-and-Solve Prompting_](https://arxiv.org/abs/2305.04091) (2023).
 - Xu et al., [_ReWOO: Decoupling Reasoning from Observations for Efficient Augmented Language Models_](https://arxiv.org/abs/2305.18323) (2023).
 - Anthropic, [_Building Effective Agents_](https://www.anthropic.com/research/building-effective-agents) (2024): orchestrator–workers and evaluator–optimizer, with guidance on when to use them.
+{{< /panel >}}
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

@@ -49,14 +49,29 @@ The **trace id** is shared by every span in it.
 
 **W3C Trace Context** standardises how the id travels between services: the `traceparent` header carries a version, a **32-hex-character trace id**, a 16-hex span id, and flags.
 
-📌 An e-commerce checkout touches the web tier, cart, pricing, payments, inventory and email. When checkout is slow, the trace shows which of six services spent the time.
+{{< panel color="cyan" title="Example" >}}
+An e-commerce checkout touches the web tier, cart, pricing, payments, inventory and email. When checkout is slow, the trace shows which of six services spent the time.
 **Without a shared id: six logs and a guess. With one: the slow span.**
+{{< /panel >}}
 
 **Agents need tracing more than ordinary services.** One customer turn can be:
 
 ```mermaid
-graph LR
-    S["Screens · PII, injection, safety"] --> C[Context assembly] --> I[Intent] --> M1[Model call] --> G[Gatekeeper] --> E[Execute tool] --> M2[Model call] --> H[Hallucination check] --> R["Repair call (maybe)"]
+graph TB
+    subgraph Before ["Before the model"]
+    direction LR
+    S["Screens: PII, injection, safety"] --> C[Context assembly] --> I[Intent]
+    end
+    subgraph Loop ["Model and tools"]
+    direction LR
+    M1[Model call] --> G[Gatekeeper] --> E[Execute tool] --> M2[Model call]
+    end
+    subgraph After ["Before the user"]
+    direction LR
+    H[Hallucination check] --> R["Repair call (maybe)"]
+    end
+    I --> M1
+    M2 --> H
 ```
 
 Some calls retry; some fall back to a backup model; and **the same input may take a different path tomorrow**.
@@ -238,12 +253,21 @@ Then pick a slow turn and follow its **trace id**: the run tree shows which span
 💡 _Record at choke points, and every view is one adapter away._
 {{< /panel >}}
 
-**Further reading**
+{{< panel color="gold" title="Related Notes" id="related_notes" >}}
+Concepts used in these notes are developed in the other courses on this site:
+
+- Maths: [Central Limit Theorem]({{<ref "/docs/maths/statistics/central_limit_theorem/#clt" >}})
+- Maths: [Confidence Interval]({{<ref "/docs/maths/statistics/confidence_interval/#confidence-interval" >}})
+- Machine Learning: [Retraining Strategies]({{<ref "/docs/machine_learning/ml_system/retraining_strategies/" >}})
+{{< /panel >}}
+
+{{< panel color="grey" title="Further Reading" id="further_reading" >}}
 - W3C, [_Trace Context_](https://www.w3.org/TR/trace-context/) Recommendation.
 - OpenTelemetry, [_Traces and spans_](https://opentelemetry.io/docs/concepts/signals/traces/)
 - OpenTelemetry, [_Semantic Conventions for Generative AI_](https://opentelemetry.io/docs/specs/semconv/gen-ai/)
 - Rill Data, [_Rill_](https://www.rilldata.com/) BI-as-code dashboards on DuckDB.
 - LangChain, [_LangSmith documentation_](https://docs.smith.langchain.com/)
+{{< /panel >}}
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

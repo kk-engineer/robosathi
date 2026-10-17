@@ -1,5 +1,11 @@
 {{- $title := .Get "title" | default (.Get 0) -}}
-<div class="rs-callout rs-callout-definition rs-callout-slate">
+{{- $id := .Get "id" -}}
+{{- if and (not $id) $title -}}
+  {{- $id = anchorize (string $title) -}}
+  {{- if index (.Page.Store.Get "rsAnchors" | default dict) $id }}{{ $id = printf "%s-def" $id }}{{ end -}}
+  {{- .Page.Store.SetInMap "rsAnchors" $id true -}}
+{{- end -}}
+<div {{ with $id }}id="{{ . }}" {{ end }}class="rs-callout rs-callout-definition rs-callout-slate">
   <div class="rs-callout__header">
     <span class="rs-callout__icon" aria-hidden="true">
       <i class="fas fa-book-open"></i>

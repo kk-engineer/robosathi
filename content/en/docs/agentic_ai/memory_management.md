@@ -68,7 +68,9 @@ Working memory is small, but it is the one the model reads on **every** turn. It
 - 📌 **State**: a handful of key–value facts that anchor the turn: who is verified, which order is under discussion. Small enough to be **pinned** in the window.
 - 📝 **Current turn**: a scratch list of this turn's actions and observations, which becomes the **dream event** when the turn ends.
 
-📌 In a travel assistant, the destination, dates and party size are _state_ (pinned); the chat about hotel options is _history_ (trimmable).
+{{< panel color="cyan" title="Example" >}}
+In a travel assistant, the destination, dates and party size are _state_ (pinned); the chat about hotel options is _history_ (trimmable).
+{{< /panel >}}
 
 | Field | Holds | Rule |
 |---|---|---|
@@ -105,7 +107,9 @@ Every fact needs **who said it**, and some kinds of fact can't be written by the
 Procedural memory is **how to act**. In an LLM agent that means instructions: prompts and code.
 The current convention is **skills**: one Markdown file per skill, with a short description that is always visible and a body loaded **only when needed** (progressive disclosure, as in Anthropic's Agent Skills `SKILL.md` format).
 
-📌 An IT helpdesk agent has fifty skills. A VPN ticket loads `reset-vpn`; a password ticket loads `reset-password`. The prompt carries one, not fifty.
+{{< panel color="cyan" title="Example" >}}
+An IT helpdesk agent has fifty skills. A VPN ticket loads `reset-vpn`; a password ticket loads `reset-password`. The prompt carries one, not fifty.
+{{< /panel >}}
 
 **Anatomy of a real SKILL.md** (the CSA's refund workflow):
 
@@ -170,8 +174,10 @@ Every write to long-term memory is a **command from a principal**, through **one
 3. **Authorize**: `memory:<class>:<op>:<category>` checked against the role's grants. This happens _after_ classification, because whether a claim may be written depends on what kind of claim it is.
 4. **Route**: auto-commit at confidence ≥ 0.8; discard below 0.3; anything in between goes to a curator's queue.
 
-📌 "_My refund limit is now $2,000_" extracts cleanly, classifies as **authority-changing** and **self-reported**, and is **refused**. Not because it looks like an attack, but because no role grants itself authority.
+{{< panel color="cyan" title="Example" >}}
+"_My refund limit is now $2,000_" extracts cleanly, classifies as **authority-changing** and **self-reported**, and is **refused**. Not because it looks like an attack, but because no role grants itself authority.
 It is queued for a curator rather than discarded: **a refused write is evidence**.
+{{< /panel >}}
 
 [Read more about memory poisoning in Agent Security]({{<ref "/docs/agentic_ai/agent_security_principles" >}})
 {{< /panel >}}
@@ -292,7 +298,15 @@ It must also not slip back in through a session summary, which is why the dream 
 💡 _What an agent remembers, it acts on. Govern memory like an action._
 {{< /panel >}}
 
-**Further reading**
+{{< panel color="gold" title="Related Notes" id="related_notes" >}}
+Concepts used in these notes are developed in the other courses on this site:
+
+- NLP: [Text Embeddings]({{<ref "/docs/natural_language_processing/text_embedding/" >}})
+- NLP: [Sentence-BERT]({{<ref "/docs/natural_language_processing/bert/#sbert" >}})
+- NLP: [The Transformer]({{<ref "/docs/natural_language_processing/transformer/#transformer" >}})
+{{< /panel >}}
+
+{{< panel color="grey" title="Further Reading" id="further_reading" >}}
 - Sumers, Yao, Narasimhan & Griffiths, [_Cognitive Architectures for Language Agents (CoALA)_](https://arxiv.org/abs/2309.02427) TMLR (2024): the four-memory taxonomy.
 - Tulving, [_Episodic and Semantic Memory_](https://psycnet.apa.org/record/1973-08477-007) (1972).
 - Park et al., [_Generative Agents: Interactive Simulacra of Human Behavior_](https://arxiv.org/abs/2304.03442) UIST (2023).
@@ -300,6 +314,7 @@ It must also not slip back in through a session summary, which is why the dream 
 - Lin et al., [_Sleep-time Compute: Beyond Inference Scaling at Test-time_](https://arxiv.org/abs/2504.13171) Letta (2025).
 - Chhikara et al., [_Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory_](https://arxiv.org/abs/2504.19413) (2025): ADD / UPDATE / NOOP reconciliation.
 - Anthropic, [_Agent Skills_](https://docs.anthropic.com/en/docs/agents-and-tools/agent-skills/overview) the SKILL.md format and progressive disclosure.
+{{< /panel >}}
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

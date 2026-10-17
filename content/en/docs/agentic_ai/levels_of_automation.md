@@ -58,10 +58,12 @@ Sheridan's scale describes, for a single decision, how the work is divided betwe
 The interesting boundaries are not the extremes. Between **4 and 5**, the question changes from "_who chooses?_" to "_who approves?_": at level 4 the human still chooses; at level 5 the computer chooses and the human approves.
 Between **6 and 7**, the question is whether a human sees the action **before** it happens or only **after**. Most real risk decisions live at those two boundaries.
 
-**Example: one inbox, ten levels.** Consider an email assistant doing the same job, handling your inbox, at every level.
+{{< panel color="cyan" title="Example" >}}
+one inbox, ten levels.** Consider an email assistant doing the same job, handling your inbox, at every level.
 At level 1 you write every email yourself. At level 2 it shows your saved reply templates. At level 3 it offers three short replies and you pick one, which is exactly Gmail's **Smart Reply** (Kannan et al., 2016).
 At level 4 it drafts one reply for you to edit. At level 5 it sends its draft when you click _Approve_. At level 6 it sends in ten seconds unless you press _Undo_, which is **Undo Send**.
 At level 7 it auto-replies and then shows you what it sent. At level 8 it files mail to spam, and you only see it if you go and look. At level 9 it sends you a digest of only what it thinks matters. At level 10 it silently deletes mail it dislikes.
+{{< /panel >}}
 
 Ask yourself at which rung you would stop being comfortable. Most people answer somewhere between 6 and 7, and the reason is never "_the model isn't smart enough_". It is **blast radius**: an email you can't take back.
 {{< /panel >}}
@@ -210,13 +212,22 @@ A better design allocates per decision: small, reversible refunds at **level 7**
 💡 _Don't ask whether your agent is autonomous. Ask which decisions are, at what level, and who moves the dial._
 {{< /panel >}}
 
-**Further reading**
+{{< panel color="gold" title="Related Notes" id="related_notes" >}}
+Concepts used in these notes are developed in the other courses on this site:
+
+- Machine Learning: [Binary Classification]({{<ref "/docs/machine_learning/supervised/logistic_regression/binary_classification_intro/" >}})
+- Maths: [Performance Metrics: Confusion Matrix, Precision & Recall]({{<ref "/docs/maths/statistics/performance_metrics/#confusion-matrix" >}})
+- NLP: [Large Language Models]({{<ref "/docs/natural_language_processing/llm/" >}})
+{{< /panel >}}
+
+{{< panel color="grey" title="Further Reading" id="further_reading" >}}
 - Sheridan & Verplank, [_Human and Computer Control of Undersea Teleoperators_](https://apps.dtic.mil/sti/citations/ADA057655), MIT Man-Machine Systems Laboratory (1978): the original ten-level scale.
 - Parasuraman, Sheridan & Wickens, [_A Model for Types and Levels of Human Interaction with Automation_](https://doi.org/10.1109/3468.844354), IEEE Trans. SMC-A (2000): the table most people cite.
 - Bainbridge, [_Ironies of Automation_](https://doi.org/10.1016/0005-1098%2883%2990046-8), Automatica (1983): why human oversight can fail.
 - Fitts (ed.), [_Human Engineering for an Effective Air-Navigation and Traffic-Control System_](https://skybrary.aero/bookshelf/human-engineering-effective-air-navigation-and-traffic-control-system), National Research Council (1951): the origin of function allocation.
 - Kannan et al., [_Smart Reply: Automated Response Suggestion for Email_](https://arxiv.org/abs/1606.04870), KDD (2016): a real level-3 system.
 - RTCA, [_DO-178C: Software Considerations in Airborne Systems and Equipment Certification_](https://www.rtca.org/do-178/) (2011); see also the [overview on Wikipedia](https://en.wikipedia.org/wiki/DO-178C).
+{{< /panel >}}
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

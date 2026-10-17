@@ -27,7 +27,7 @@ There are two quite different ways to guarantee the shape of a model's output, a
 **Validating after generation.** The model writes whatever it writes; afterwards, you parse the result against a schema. If it fails, you reject it, repair it, or ask again.
 This works with any model and any API, but each retry costs a full round trip and adds to tail latency. This is what libraries such as **Pydantic** do.
 
-**Constraining during decoding.** At every token, the tokens that would break the schema are removed before sampling, so invalid output is not merely unlikely; it is **unrepresentable**. This is what **Outlines** and **LMQL** do, as do grammar-based decoders such as llama.cpp's.
+**Constraining during decoding.** At every token, the tokens that would break the schema are removed before sampling from the [softmax]({{<ref "/docs/deep_learning/activation_function/#softmax" >}}), so invalid output is not merely unlikely; it is **unrepresentable**. This is what **Outlines** and **LMQL** do, as do grammar-based decoders such as llama.cpp's.
 
 ```mermaid
 graph LR
@@ -37,7 +37,7 @@ graph LR
 Outlines (Willard & Louf, 2023) compiles a regular expression or JSON Schema into a **finite-state machine** once, so that at each step the set of legal tokens is a lookup rather than a search.
 LMQL (Beurer-Kellner et al., 2023) is a query language in which you write a prompt with typed "holes" and constraints, and the runtime enforces them while decoding.
 
-Both share one requirement: you must be able to touch the model's **logits on every token**. That means running the model yourself, or using a server that exposes guided decoding.
+Both share one requirement: you must be able to touch the model's **logits on every token** (the scores the [softmax]({{<ref "/docs/deep_learning/activation_function/#softmax" >}}) turns into probabilities). That means running the model yourself, or using a server that exposes guided decoding.
 A hosted chat API that returns only text gives you no logits, and some hosted endpoints reject guided-decoding parameters outright. In those cases validation is the only option.
 The course's agents therefore validate on the hosted path and constrain only on a local path where a grammar is available, with the choice held in configuration rather than assumed.
 
@@ -202,11 +202,20 @@ An agent crashes after 4 of its 5 allowed tool iterations, one of which was a re
 💡 _A guardrail that forgets on restart isn't a guardrail._
 {{< /panel >}}
 
-**Further reading**
+{{< panel color="gold" title="Related Notes" id="related_notes" >}}
+Concepts used in these notes are developed in the other courses on this site:
+
+- Deep Learning: [Softmax]({{<ref "/docs/deep_learning/activation_function/#softmax" >}})
+- NLP: [Tokenization]({{<ref "/docs/natural_language_processing/tokenization/" >}})
+- NLP: [Byte Pair Encoding]({{<ref "/docs/natural_language_processing/tokenization/#bpe" >}})
+{{< /panel >}}
+
+{{< panel color="grey" title="Further Reading" id="further_reading" >}}
 - Pydantic, [_Documentation_](https://docs.pydantic.dev/): schemas, validation and JSON Schema generation.
 - Willard & Louf, [_Efficient Guided Generation for Large Language Models_](https://arxiv.org/abs/2307.09702) (2023): the method behind Outlines.
 - Beurer-Kellner, Fischer & Vechev, [_Prompting Is Programming: A Query Language for Large Language Models_](https://arxiv.org/abs/2212.06094), PLDI (2023): LMQL.
 - LangGraph, [_Persistence_](https://langchain-ai.github.io/langgraph/concepts/persistence/): checkpointers, threads and human-in-the-loop interrupts.
+{{< /panel >}}
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

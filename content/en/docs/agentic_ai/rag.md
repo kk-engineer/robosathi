@@ -58,14 +58,21 @@ The catalogue finds, the librarian understands, and reading decides.
 A production RAG system has two lanes. The **offline** lane prepares the index; the **online** lane answers a query.
 
 ```mermaid
-graph LR
-    subgraph Offline
-    D["documents"] --> C["chunk by meaning"] --> E["embed"] --> I[("index: vectors + text")]
+graph TB
+    subgraph Offline ["Offline: build the index"]
+    direction LR
+    D["documents"] --> C["chunk by meaning"] --> E["embed"] --> I[("index")]
     end
-    subgraph Online
-    Q[query] --> R["retrieve: sparse + dense"] --> F["fuse ranks"] --> RR["rerank: cross-encoder"] --> A["assemble the context"] --> G["generate"] --> GR["ground: check the answer"] --> ANS[answer]
+    subgraph Retrieve ["Online: find candidates"]
+    direction LR
+    Q[query] --> R["sparse + dense"] --> F["fuse ranks"] --> RR["rerank"]
+    end
+    subgraph Answer ["Online: answer and check"]
+    direction LR
+    A["assemble context"] --> G["generate"] --> GR["ground"] --> ANS[answer]
     end
     I --> R
+    RR --> A
 ```
 
 Each box is a separate component that can be tested on its own, and each exists because the previous one has a characteristic weakness. The rest of these notes takes them in order.
@@ -88,14 +95,16 @@ A better approach uses two signals, cheapest first:
 
 Then enforce size bounds: fold fragments that are too short into a neighbour, and split runs that are too long at sentence boundaries.
 
-**Example.** In the support agent's help articles, the passage "_5 to 10 business days_" only answers the customer's question because it carries its heading path, `Refunds › When the money arrives`.
+{{< panel color="cyan" title="Example" >}}
+In the support agent's help articles, the passage "_5 to 10 business days_" only answers the customer's question because it carries its heading path, `Refunds › When the money arrives`.
 Stripped of its heading, the same sentence could be about delivery times, or anything else. A chunk without its heading is an answer without its question.
+{{< /panel >}}
 {{< /panel >}}
 
 {{< panel color="cyan" title="Sparse and Dense Retrieval" id="sparse_dense" >}}
 There are two families of retriever, and they fail on **different** queries, which is the whole case for using both.
 
-**Sparse retrieval (BM25)** scores passages by exact term overlap, weighting rare terms more heavily and normalising for length. It descends from the Okapi system and TF-IDF. Its score for a query \(q\) and document \(d\) is
+**Sparse retrieval (BM25)** scores passages by exact term overlap, weighting rare terms more heavily and normalising for length. It descends from the Okapi system and [TF-IDF]({{<ref "/docs/natural_language_processing/text_embedding/#tfidf" >}}). Its score for a query \(q\) and document \(d\) is
 
 \[\text{BM25}(q, d) = \sum_{t \in q} \text{IDF}(t)\cdot\frac{f(t,d)\,(k_1 + 1)}{f(t,d) + k_1\left(1 - b + b\,\frac{|d|}{\text{avgdl}}\right)}\]
 
@@ -103,7 +112,7 @@ where \(f(t,d)\) is the count of term \(t\) in \(d\), \(|d|\) is the document le
 Two parameters fix TF-IDF's two flaws. \(k_1\) controls **saturation**: the tenth mention of a word adds much less than the first (a common default is 1.2; 1.5 lets a repeated error code count slightly more). \(b\) (typically 0.75) controls **length normalisation**, so a ten-page manual does not outrank a two-line ticket just because a word appears more often.
 BM25 is excellent at identifiers (order numbers, SKUs, error codes) and poor at synonyms: a customer asking for "_money back_" will not match a passage that says "_refund_".
 
-**Dense retrieval** embeds the query and each passage as vectors and returns the nearest neighbours by cosine similarity (Karpukhin et al., 2020).
+**Dense retrieval** embeds the query and each passage as vectors and returns the nearest neighbours by [cosine similarity]({{<ref "/docs/machine_learning/supervised/k_nearest_neighbors/curse_of_dimensionality/#cosine-similarity" >}}) (Karpukhin et al., 2020).
 It handles paraphrase well ("_money back_" ≈ "_refund_") and is poor at exact identifiers: "_10023_" and "_10032_" sit very close together in vector space.
 A useful refinement is **asymmetric** embedding, in which queries and passages are embedded with different instructions, because questions and answers don't look alike.
 
@@ -143,10 +152,10 @@ graph LR
     end
 ```
 
-A **bi-encoder** (Sentence-BERT; Reimers & Gurevych, 2019) encodes the query and each passage **separately**. Because a passage never needs to see the query, every passage can be encoded once, offline, and stored.
+A **bi-encoder** ([Sentence-BERT]({{<ref "/docs/natural_language_processing/bert/#sbert" >}}); Reimers & Gurevych, 2019) encodes the query and each passage **separately**. Because a passage never needs to see the query, every passage can be encoded once, offline, and stored.
 At query time you encode only the query and run a fast vector search. This scales to millions of passages.
 
-A **cross-encoder** encodes the query and passage **together** as one sequence, `[CLS] query [SEP] passage`, so every query token attends to every passage token. It sees the interactions a bi-encoder misses: negation, which entity, which number.
+A **cross-encoder** encodes the query and passage **together** as one sequence, `[CLS] query [SEP] passage`, so every query token [attends]({{<ref "/docs/natural_language_processing/self_attention/#self_attention" >}}) to every passage token, as in [BERT]({{<ref "/docs/natural_language_processing/bert/#bert" >}}). It sees the interactions a bi-encoder misses: negation, which entity, which number.
 It is much more accurate at judging relevance (Nogueira & Cho showed this decisively on the MS MARCO benchmark in 2019), but nothing can be precomputed: every query–passage pair is a fresh forward pass.
 
 **The arithmetic.** Assume, for illustration, about 5 ms per pair for a small cross-encoder on a CPU. Reranking 10 candidates costs about 50 ms, which is fine.
@@ -251,7 +260,18 @@ Also inspect the chunks: the error code and its explanation may have been split 
 💡 _Retrieve what can be ranked. Never rank what must never be missed._
 {{< /panel >}}
 
-**Further reading**
+{{< panel color="gold" title="Related Notes" id="related_notes" >}}
+Concepts used in these notes are developed in the other courses on this site:
+
+- NLP: [TF-IDF]({{<ref "/docs/natural_language_processing/text_embedding/#tfidf" >}})
+- NLP: [Word2Vec]({{<ref "/docs/natural_language_processing/text_embedding/#word2vec" >}})
+- NLP: [Sentence-BERT]({{<ref "/docs/natural_language_processing/bert/#sbert" >}})
+- NLP: [BERT]({{<ref "/docs/natural_language_processing/bert/#bert" >}})
+- Machine Learning: [Cosine Similarity]({{<ref "/docs/machine_learning/supervised/k_nearest_neighbors/curse_of_dimensionality/#cosine-similarity" >}})
+- NLP: [Self-Attention]({{<ref "/docs/natural_language_processing/self_attention/#self_attention" >}})
+{{< /panel >}}
+
+{{< panel color="grey" title="Further Reading" id="further_reading" >}}
 - Lewis et al., [_Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks_](https://arxiv.org/abs/2005.11401), NeurIPS (2020): the paper that named RAG.
 - Salton, Wong & Yang, [_A Vector Space Model for Automatic Indexing_](https://doi.org/10.1145/361219.361220), Communications of the ACM (1975).
 - Robertson & Zaragoza, [_The Probabilistic Relevance Framework: BM25 and Beyond_](https://doi.org/10.1561/1500000019) (2009).
@@ -261,6 +281,7 @@ Also inspect the chunks: the error code and its explanation may have been split 
 - Nogueira & Cho, [_Passage Re-ranking with BERT_](https://arxiv.org/abs/1901.04085) (2019): cross-encoder reranking.
 - Sumers et al., [_Cognitive Architectures for Language Agents (CoALA)_](https://arxiv.org/abs/2309.02427) (2023); Tulving, [_Episodic and Semantic Memory_](https://psycnet.apa.org/record/1973-08477-007) (1972).
 - See also, in this site's NLP course: [Text Embeddings]({{<ref "/docs/natural_language_processing/text_embedding" >}}) and [BERT]({{<ref "/docs/natural_language_processing/bert" >}}).
+{{< /panel >}}
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

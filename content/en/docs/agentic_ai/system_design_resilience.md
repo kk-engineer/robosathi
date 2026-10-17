@@ -74,7 +74,9 @@ graph LR
 {{< panel color="blue" title="Timeout, and Little's Law" id="timeout" >}}
 **Timeout**: give every remote call a deadline; past it, stop waiting and fail with an error the caller can handle.
 
-📌 A checkout page waits on a fraud-scoring service with no deadline. The fraud service gets **slow** (not down, slow). Every checkout holds a worker while it waits; within minutes no worker is free, and the whole store is down because of one slow dependency.
+{{< panel color="cyan" title="Example" >}}
+A checkout page waits on a fraud-scoring service with no deadline. The fraud service gets **slow** (not down, slow). Every checkout holds a worker while it waits; within minutes no worker is free, and the whole store is down because of one slow dependency.
+{{< /panel >}}
 
 **Why hangs kill: Little's law** (Little, 1961). The average number of requests in a system \(L\) equals the arrival rate \(\lambda\) times the average time each spends inside \(W\):
 
@@ -94,7 +96,9 @@ Otherwise a throttled call times out, is retried, queues again, and times out ag
 {{< panel color="green" title="Retry with Backoff and Jitter" id="retry" >}}
 Most failures in a distributed system are **transient**: a connection reset, a brief overload, a rate limit. Trying again often works, if you wait longer each time (**exponential backoff**).
 
-📌 A phone app's photo upload fails on a weak signal; it retries after 1 s, 2 s, 4 s, and succeeds once the signal returns.
+{{< panel color="cyan" title="Example" >}}
+A phone app's photo upload fails on a weak signal; it retries after 1 s, 2 s, 4 s, and succeeds once the signal returns.
+{{< /panel >}}
 
 **Two borrowed ideas**:
 - **Exponential backoff** comes from **Ethernet** (Metcalfe & Boggs, 1976): stations that collide wait a random slot from a window that doubles after each collision.
@@ -133,7 +137,9 @@ stateDiagram-v2
 - **Open**: calls fail fast without touching the dependency.
 - **Half-open**: after a cooldown, **one** trial call is let through.
 
-📌 A store's recommendations service fails repeatedly. The page stops calling it and shows bestsellers, so product pages stay fast, until a trial call succeeds again.
+{{< panel color="cyan" title="Example" >}}
+A store's recommendations service fails repeatedly. The page stops calling it and shows bestsellers, so product pages stay fast, until a trial call succeeds again.
+{{< /panel >}}
 
 **Implemented as an explicit state machine**: only the legal transitions above are allowed; anything else is a bug and is rejected.
 **Which errors count is a decision**: a timeout-only breaker trips on silence, not on prompt errors, because "_a dependency returning errors is answering_", and tripping on those would hide a bug behind an outage.
@@ -145,7 +151,9 @@ stateDiagram-v2
 Borrowed from shipbuilding: a hull divided by watertight bulkheads floods **one compartment, not the vessel**.
 Give each dependency its own limited pool of capacity, so one can't use up everyone's.
 
-📌 An airline site gives fare search and payment separate worker pools. A fare-search spike (a sale, a bot) saturates the search pool; payments still have capacity.
+{{< panel color="cyan" title="Example" >}}
+An airline site gives fare search and payment separate worker pools. A fare-search spike (a sale, a bot) saturates the search pool; payments still have capacity.
+{{< /panel >}}
 
 ```mermaid
 graph LR
@@ -198,7 +206,9 @@ graph LR
     C -->|fails| CH[Cancel hotel] --> CF[Cancel flight]
 ```
 
-📌 No distributed transaction spans an airline, a hotel chain and a car-rental firm. Book in order; if the car fails, cancel the hotel, then the flight.
+{{< panel color="cyan" title="Example" >}}
+No distributed transaction spans an airline, a hotel chain and a car-rental firm. Book in order; if the car fails, cancel the hotel, then the flight.
+{{< /panel >}}
 
 ⚠️ Compensation is a **semantic undo** (a cancellation, a reversal), not a database rollback; it can fail too, and must be recorded for a person. **Put irreversible steps last.**
 
@@ -271,7 +281,15 @@ Fix: full-jitter backoff with a cap, a breaker per dependency, retries counted a
 💡 _The dangerous failure is not the call that errors; it's the call that never returns._
 {{< /panel >}}
 
-**Further reading**
+{{< panel color="gold" title="Related Notes" id="related_notes" >}}
+Concepts used in these notes are developed in the other courses on this site:
+
+- Maths: [Binomial Distribution]({{<ref "/docs/maths/probability/probability_mass_function/#binomial-distribution" >}})
+- Maths: [Central Limit Theorem]({{<ref "/docs/maths/statistics/central_limit_theorem/#clt" >}})
+- NLP: [Large Language Models]({{<ref "/docs/natural_language_processing/llm/" >}})
+{{< /panel >}}
+
+{{< panel color="grey" title="Further Reading" id="further_reading" >}}
 - Nygard, [_Release It! Design and Deploy Production-Ready Software, 2nd ed._](https://pragprog.com/titles/mnee2/release-it-second-edition/) (2018).
 - Little, [_A Proof for the Queuing Formula L = λW_](https://doi.org/10.1287/opre.9.3.383) Operations Research (1961); see also [Little's law](https://en.wikipedia.org/wiki/Little%27s_law).
 - Metcalfe & Boggs, [_Ethernet: Distributed Packet Switching for Local Computer Networks_](https://doi.org/10.1145/360248.360253) CACM (1976).
@@ -279,6 +297,7 @@ Fix: full-jitter backoff with a cap, a breaker per dependency, retries counted a
 - Stripe, [_Idempotent requests_](https://docs.stripe.com/api/idempotent_requests) API reference.
 - Garcia-Molina & Salem, [_Sagas_](https://doi.org/10.1145/38713.38742) SIGMOD (1987).
 - Dean & Barroso, [_The Tail at Scale_](https://doi.org/10.1145/2408776.2408794) CACM (2013).
+{{< /panel >}}
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

@@ -3103,5 +3103,94 @@ $rs-badge-border-hover: #B8945A;
   .rs-chapter__meta { grid-column: 2; }
 }
 
+// About: narrower, more compact cards
+.rs-about-grid, .rs-principles, .rs-about-note { max-width: 920px; }
+.rs-about-grid { gap: 1rem; margin-top: 1.1rem; }
+.rs-mini-card { padding: 0.85rem 1rem; border-radius: 10px; }
+.rs-panel-title { margin-bottom: 0.5rem; }
+.rs-founder { gap: 0.7rem; margin-bottom: 0.5rem; }
+.rs-founder img { width: 52px !important; height: 52px !important; }
+.rs-founder__name { font-size: 1rem; }
+.rs-founder__bio { font-size: 0.8rem; line-height: 1.5; margin-bottom: 0.5rem; }
+.rs-founder__creds li { font-size: 0.76rem; padding: 0.32rem 0; line-height: 1.3; }
+.rs-about-rows { gap: 0.35rem; }
+.rs-about-row {
+  grid-template-columns: 24px 1fr;
+  padding: 0.38rem 0;
+
+  strong { font-size: 0.82rem; }
+  span.rs-about-row__text { font-size: 0.74rem; line-height: 1.4; }
+  .rs-audit-card__icon { width: 24px; height: 24px; font-size: 0.68rem; border-radius: 6px; }
+}
+.rs-principles { gap: 0.7rem; margin-top: 1rem; }
+.rs-principle { padding: 0.7rem 0.85rem; }
+
+// Sections as calm panels (every section visibly in a panel)
+.rs-callout.rs-callout--section {
+  background: #ffffff !important;
+  border: 1px solid #ece3d4 !important;
+  border-left: 3px solid #d2b583 !important;
+  border-radius: 10px !important;
+  padding: 1rem 1.25rem 0.6rem !important;
+  margin: 1.4rem 0 !important;
+
+  .rs-callout__header { border-bottom: 1px solid #f1e9dc; margin-bottom: 0.7rem; padding-bottom: 0.4rem; }
+  .rs-callout__title { font-size: 1.25rem; }
+}
+
+// End-of-note panels: distinct look
+#related_notes.rs-callout,
+#further_reading.rs-callout {
+  background: #fbf8f2 !important;
+  border: 1px dashed #d2b583 !important;
+  border-left: 1px dashed #d2b583 !important;
+  border-radius: 10px;
+  font-size: 0.9rem;
+
+  .rs-callout__title {
+    font-size: 0.72rem !important;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #9a7340 !important;
+    font-family: "Inter", sans-serif !important;
+  }
+
+  ul { margin-bottom: 0.2rem; }
+  li { margin-bottom: 0.25rem; line-height: 1.5; }
+}
+
+#related_notes .rs-callout__title::before { content: "\2197  "; }
+#further_reading .rs-callout__title::before { content: "\1F4D6  "; }
+
+// About: full width, but vertically slim
+.rs-about-grid, .rs-principles, .rs-about-note { max-width: 1080px; }
+.rs-hero.rs-hero--compact { padding: 4.75rem 1rem 0 !important; }
+.rs-hero.rs-hero--compact .rs-h1 { font-size: clamp(1.5rem, 2.4vw, 2rem); margin-bottom: 0.4rem; }
+.rs-hero.rs-hero--compact .rs-sub { font-size: 0.86rem; }
+.rs-about-grid { margin-top: 0.9rem; align-items: start; }
+.rs-mini-card { padding: 0.7rem 1rem 0.55rem; }
+.rs-founder__creds li { padding: 0.22rem 0; }
+.rs-about-row { padding: 0.28rem 0; }
+.rs-about-row span.rs-about-row__text {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.rs-principles { margin-top: 0.8rem; }
+.rs-principle {
+  padding: 0.5rem 0.8rem;
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  column-gap: 0.5rem;
+  align-items: baseline;
+
+  i { margin: 0; font-size: 0.85rem; }
+  strong { margin: 0; }
+  span { grid-column: 2; font-size: 0.72rem; }
+}
+.rs-about-note { margin: 0.8rem auto 0.4rem; font-size: 0.82rem; }
+.rs-about-cta { margin: 0.2rem auto 1.5rem; font-size: 0.85rem; }
+
 // Interview Section scss
 @import "interview";

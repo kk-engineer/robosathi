@@ -41,7 +41,7 @@ In an agent this decision is made many times per task, because every turn of the
 Filling the window is easy: append everything and let the model sort it out. There are four reasons not to:
 
 1. 📏 **Finite**: the window is a hard cap in tokens. Something will always be left out; the only question is whether **you** choose what, or **arrival order** does.
-2. 💰 **Costly**: every token is paid for, and adds latency, on **every** call. An agent makes many calls per task, so a bloated window is paid for many times over.
+2. 💰 **Costly**: every [token]({{<ref "/docs/natural_language_processing/tokenization/" >}}) is paid for, and adds latency, on **every** call. An agent makes many calls per task, so a bloated window is paid for many times over.
 3. 📉 **Degrades**: more is not better. Quality drops as windows grow, even when nothing in them is wrong (see _rot_ below).
 4. 🕵️ **Attack surface**: anything in the window can be read as an instruction. A retrieved web page or an email is _data_, but the model can't tell unless the harness makes it tell ([Agent Security]({{<ref "/docs/agentic_ai/agent_security_principles" >}})).
 
@@ -270,7 +270,16 @@ and **isolate** exploratory sub-tasks into fresh windows. Measure answer quality
 💡 _Decide what the model reads, or arrival order will._
 {{< /panel >}}
 
-**Further reading**
+{{< panel color="gold" title="Related Notes" id="related_notes" >}}
+Concepts used in these notes are developed in the other courses on this site:
+
+- NLP: [Tokenization]({{<ref "/docs/natural_language_processing/tokenization/" >}})
+- NLP: [Self-Attention]({{<ref "/docs/natural_language_processing/self_attention/#self_attention" >}})
+- NLP: [Multi-Head Attention]({{<ref "/docs/natural_language_processing/transformer/#multi_head_attention" >}})
+- NLP: [Text Embeddings]({{<ref "/docs/natural_language_processing/text_embedding/" >}})
+{{< /panel >}}
+
+{{< panel color="grey" title="Further Reading" id="further_reading" >}}
 - Liu et al., [_Lost in the Middle: How Language Models Use Long Contexts_](https://arxiv.org/abs/2307.03172) TACL (2024): why position in the window matters.
 - Breunig, [_How Long Contexts Fail_](https://www.dbreunig.com/2025/06/22/how-contexts-fail-and-how-to-fix-them.html) (2025): poisoning, distraction, confusion and clash.
 - Hong et al., [_Context Rot: How Increasing Input Tokens Impacts LLM Performance_](https://research.trychroma.com/context-rot) Chroma Research (2025).
@@ -280,6 +289,7 @@ and **isolate** exploratory sub-tasks into fresh windows. Measure answer quality
 - Paramanayakam et al., [_Less is More: Optimizing Function Calling for LLM Execution on Edge Devices_](https://arxiv.org/abs/2411.15399) (2024).
 - Park et al., [_Generative Agents: Interactive Simulacra of Human Behavior_](https://arxiv.org/abs/2304.03442) UIST (2023): recency, importance and relevance scoring.
 - Google DeepMind, [_Gemini 2.5 technical report_](https://arxiv.org/abs/2507.06261) (2025): the long-context Pokémon agent.
+{{< /panel >}}
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

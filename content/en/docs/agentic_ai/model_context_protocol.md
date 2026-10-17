@@ -52,7 +52,9 @@ graph LR
     end
 ```
 
-📌 An engineering org with three AI tools and five systems: fifteen bespoke integrations, or eight protocol implementations. And the sixth system costs **one server**, not three integrations.
+{{< panel color="cyan" title="Example" >}}
+An engineering org with three AI tools and five systems: fifteen bespoke integrations, or eight protocol implementations. And the sixth system costs **one server**, not three integrations.
+{{< /panel >}}
 
 {{< keyidea >}}**The next tool costs one server, not one integration per app.**{{< /keyidea >}}
 {{< /definition >}}
@@ -162,7 +164,9 @@ graph LR
 **The graph**: propose ⇄ execute (governed MCP tools) → **review** (only if the model wrote SQL: one more call reads the question, the SQL and a few rows, and says accept or revise, catching the wrong view, an unasked-for filter, a count meant to be distinct) → **ground** (every figure in the answer must be found in the returned rows, within 1% for rounding).
 Reviewing the SQL _before_ the answer is written means the answer is written once, from reviewed rows ([reflection]({{<ref "/docs/agentic_ai/agentic_design_patterns/#reflection" >}})).
 
-📌 "_Worst p95 turn latency, 7 days_" → `list_metrics` → `compute_metric` × each agent, in parallel → an answer quoting the figures → each figure found in a row. No SQL was written, so there was nothing to review.
+{{< panel color="cyan" title="Example" >}}
+"_Worst p95 turn latency, 7 days_" → `list_metrics` → `compute_metric` × each agent, in parallel → an answer quoting the figures → each figure found in a row. No SQL was written, so there was nothing to review.
+{{< /panel >}}
 
 {{< keyidea >}}**Every number in the answer is a number a tool returned.**{{< /keyidea >}}
 {{< /panel >}}
@@ -292,7 +296,14 @@ So `delete_records` needs explicit configuration and, being destructive, human a
 💡 _A server describing its tool as harmless has asserted it, not established it._
 {{< /panel >}}
 
-**Further reading**
+{{< panel color="gold" title="Related Notes" id="related_notes" >}}
+Concepts used in these notes are developed in the other courses on this site:
+
+- NLP: [Large Language Models]({{<ref "/docs/natural_language_processing/llm/" >}})
+- NLP: [The Transformer]({{<ref "/docs/natural_language_processing/transformer/#transformer" >}})
+{{< /panel >}}
+
+{{< panel color="grey" title="Further Reading" id="further_reading" >}}
 - Model Context Protocol, [_Specification_](https://modelcontextprotocol.io/specification)
 - Anthropic, [_Introducing the Model Context Protocol_](https://www.anthropic.com/news/model-context-protocol) (Nov 2024).
 - Model Context Protocol, [_Python SDK_](https://github.com/modelcontextprotocol/python-sdk)
@@ -300,6 +311,7 @@ So `delete_records` needs explicit configuration and, being destructive, human a
 - Invariant Labs, [_MCP Security Notification: Tool Poisoning Attacks_](https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks) (2025).
 - [_JSON-RPC 2.0 Specification_](https://www.jsonrpc.org/specification)
 - IETF, [_The OAuth 2.1 Authorization Framework (draft)_](https://datatracker.ietf.org/doc/draft-ietf-oauth-v2-1/)
+{{< /panel >}}
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

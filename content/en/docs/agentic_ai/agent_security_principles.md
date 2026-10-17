@@ -143,8 +143,9 @@ Indirect injection is _the_ agent problem: **the more an agent reads and acts, t
 Authority comes from **where** an instruction came from, not how it is phrased:
 
 ```mermaid
-graph LR
-    P[provider] --> O[organization] --> PR[product] --> W[workspace] --> U[user_task] --> R[runtime_reminders] --> T[tool_observations] --> UC[untrusted_content]
+graph TD
+    P["provider"] --> O["organization"] --> PR["product"] --> W["workspace"]
+    W --> U["user_task"] --> R["runtime_reminders"] --> T["tool_observations"] --> UC["untrusted_content"]
 ```
 
 Only the top ranks can grant or expand authority. Everything below them is **input to be acted on, never instruction to be obeyed**.
@@ -239,13 +240,22 @@ It has the full **lethal trifecta**: private data (the inbox), untrusted content
 💡 _The strongest layer was never a detector._
 {{< /panel >}}
 
-**Further reading**
+{{< panel color="gold" title="Related Notes" id="related_notes" >}}
+Concepts used in these notes are developed in the other courses on this site:
+
+- Machine Learning: [Binary Classification]({{<ref "/docs/machine_learning/supervised/logistic_regression/binary_classification_intro/" >}})
+- NLP: [BERT]({{<ref "/docs/natural_language_processing/bert/#bert" >}})
+- NLP: [Large Language Models]({{<ref "/docs/natural_language_processing/llm/" >}})
+{{< /panel >}}
+
+{{< panel color="grey" title="Further Reading" id="further_reading" >}}
 - Willison, [_The lethal trifecta for AI agents_](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/) (2025).
 - OWASP GenAI Security Project, [_OWASP Top 10 for LLM Applications 2025_](https://genai.owasp.org/llm-top-10/)
 - Greshake et al., [_Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection_](https://arxiv.org/abs/2302.12173) AISec (2023).
 - AI Incident Database, [_Chevrolet dealership chatbot agrees to sell a Tahoe for $1_](https://incidentdatabase.ai/reports/3534) (Dec 2023).
 - Microsoft, [_Presidio_](https://microsoft.github.io/presidio/) PII detection and anonymisation.
 - NIST, [_Role Based Access Control_](https://csrc.nist.gov/projects/role-based-access-control)
+{{< /panel >}}
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

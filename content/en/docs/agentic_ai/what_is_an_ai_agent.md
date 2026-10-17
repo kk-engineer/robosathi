@@ -56,7 +56,7 @@ The first claim of the course is a decomposition:
 
 \[\text{Agent} = \text{Model} + \text{Harness}\]
 
-The **model** is the part that reasons. On each call it reads whatever has been placed in its context window and **proposes** the next action, typically a structured tool call such as `process_refund(order_id, amount)`.
+The **model**, a [large language model]({{<ref "/docs/natural_language_processing/llm/" >}}), is the part that reasons. On each call it reads whatever has been placed in its context window and **proposes** the next action, typically a structured tool call such as `process_refund(order_id, amount)`.
 It does not execute anything itself, it has no memory between calls, and it cannot see anything that is not in its window.
 
 The **harness** is everything else. It decides what goes into the context window and in what order; which tools exist and with what schemas; what is remembered between turns; how many times the loop may run; which inputs are screened; who is permitted to do what; and what is written to the audit trail.
@@ -247,7 +247,15 @@ A control is deterministic code that evaluates the **exact proposal**, **before*
 💡 _Don't ask what your agent can do. Ask who decides what it may do, and show me the code._
 {{< /panel >}}
 
-**Further reading**
+{{< panel color="gold" title="Related Notes" id="related_notes" >}}
+Concepts used in these notes are developed in the other courses on this site:
+
+- NLP: [Large Language Models]({{<ref "/docs/natural_language_processing/llm/" >}})
+- NLP: [The Transformer]({{<ref "/docs/natural_language_processing/transformer/#transformer" >}})
+- Deep Learning: [Introduction to Deep Learning]({{<ref "/docs/deep_learning/introduction/" >}})
+{{< /panel >}}
+
+{{< panel color="grey" title="Further Reading" id="further_reading" >}}
 - Russell & Norvig, [_Artificial Intelligence: A Modern Approach_](https://aima.cs.berkeley.edu/): the standard definition of an agent as perceiving and acting.
 - Anthropic, [_Building Effective Agents_](https://www.anthropic.com/research/building-effective-agents) (2024): agents vs workflows, and why simple designs usually win.
 - Vivek Trivedy, [_The Anatomy of an Agent Harness_](https://www.langchain.com/blog/the-anatomy-of-an-agent-harness), LangChain (Mar 2026): the "Agent = Model + Harness" decomposition.
@@ -256,6 +264,7 @@ A control is deterministic code that evaluates the **exact proposal**, **before*
 - Jensen & Meckling, [_Theory of the Firm: Managerial Behavior, Agency Costs and Ownership Structure_](https://doi.org/10.1016/0304-405X%2876%2990026-X), Journal of Financial Economics (1976): monitoring, bonding and residual loss.
 - Akerlof, [_The Market for "Lemons"_](https://doi.org/10.2307/1879431), Quarterly Journal of Economics (1970): hidden information.
 - Holmström, [_Moral Hazard and Observability_](https://doi.org/10.2307/3003320), Bell Journal of Economics (1979): hidden action.
+{{< /panel >}}
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

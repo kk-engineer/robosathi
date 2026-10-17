@@ -47,8 +47,10 @@ graph LR
     A[Extract text] --> B[Translate] --> C[Summarise] --> D[Format brief]
 ```
 
-**Example.** A document-intake system receives a PDF in another language. A parser extracts the text, one model call translates it, another summarises it, and a template formats the brief.
+{{< panel color="cyan" title="Example" >}}
+A document-intake system receives a PDF in another language. A parser extracts the text, one model call translates it, another summarises it, and a template formats the brief.
 The order never changes. Models work inside two of the four steps, but none of them chooses what comes next.
+{{< /panel >}}
 
 **When to use it.** When a task splits naturally into fixed stages, each simpler than the whole. Smaller steps are easier for a model to do well, and each link can be unit-tested and replayed on its own.
 
@@ -69,7 +71,9 @@ graph LR
     G --> R
 ```
 
-**Example.** A support ticket is classified, first by keyword rules and then by a small classifier, and routed to billing, technical support or a general queue. Anything the classifier is not confident about goes to the general queue rather than to a guess.
+{{< panel color="cyan" title="Example" >}}
+A support ticket is classified, first by keyword rules and then by a small classifier, and routed to billing, technical support or a general queue. Anything the classifier is not confident about goes to the general queue rather than to a guess.
+{{< /panel >}}
 
 **When to use it.** When inputs fall into known classes that need genuinely different handling: different prompts, different tools, even different models (a small, cheap model for easy questions and a large one for hard ones).
 
@@ -90,7 +94,9 @@ graph LR
     S --> M
 ```
 
-**Example.** A contract goes to three reviewers at once (legal, finance and security), and a merge step combines their findings into one report. It is always the same three, so the branches are visible on the diagram.
+{{< panel color="cyan" title="Example" >}}
+A contract goes to three reviewers at once (legal, finance and security), and a merge step combines their findings into one report. It is always the same three, so the branches are visible on the diagram.
+{{< /panel >}}
 
 **When to use it.** When the branches do not depend on each other's output and latency matters. Running them together cuts the latency to that of the **slowest** branch rather than the sum.
 
@@ -111,7 +117,9 @@ graph LR
     RN --> C
 ```
 
-**Example.** Summarise every product review for a product, in parallel (the _map_), then combine the summaries into one report (the _reduce_). There might be 5 reviews today and 500 tomorrow.
+{{< panel color="cyan" title="Example" >}}
+Summarise every product review for a product, in parallel (the _map_), then combine the summaries into one report (the _reduce_). There might be 5 reviews today and 500 tomorrow.
+{{< /panel >}}
 
 This looks like fan-out, with one important difference: the number of branches is **not on the diagram**. It comes from the data at run time.
 
@@ -129,7 +137,9 @@ graph LR
     T -->|cap reached| H[Hand over to a person]
 ```
 
-**Example.** A model generates a function; the test suite runs; the failures are fed back; the model tries again, at most three times. On the third failure, the system escalates to a person **with the failing tests attached**, instead of looping forever.
+{{< panel color="cyan" title="Example" >}}
+A model generates a function; the test suite runs; the failures are fed back; the model tries again, at most three times. On the third failure, the system escalates to a person **with the failing tests attached**, instead of looping forever.
+{{< /panel >}}
 
 **Why this is still a workflow.** The stopping rule is code: "_tests pass, or three attempts_". The model writes the code inside the step, but it does not decide whether to go round again. In the next chapter, it does.
 
@@ -147,7 +157,9 @@ graph LR
     R --> M
 ```
 
-**Example.** A model drafts a marketing email. A manager approves it, and it is sent, or rejects it with a note, and it is revised and comes back.
+{{< panel color="cyan" title="Example" >}}
+A model drafts a marketing email. A manager approves it, and it is sent, or rejects it with a note, and it is revised and comes back.
+{{< /panel >}}
 
 **When to use it.** Whenever an approval or an answer is needed before an action that matters.
 
@@ -171,13 +183,26 @@ Patterns are easiest to understand in a real system. Here is where each one appe
 **The support agent's graph.** Compiled with every feature on, the CSA has fifteen nodes, and only one of them lets the model choose the next step:
 
 ```mermaid
-graph LR
-    S((START)) --> A[authenticate] --> CO[choose order] --> P1[PII filter] --> P2[injection screen] --> P3[moderation] --> P4[deterministic checks] --> CI[classify intent]
-    CI -->|plain read| RI[read intent] --> E((END))
-    CI --> AC[assemble context] --> PF[prefetch] --> PR[propose]
+graph TB
+    subgraph FD ["Front door: a sequential pipeline"]
+    direction LR
+    A[authenticate] --> CO[choose order] --> P1[PII filter] --> P2[injection screen]
+    P2 --> P3[moderation] --> P4[deterministic checks] --> CI[classify intent]
+    end
+    subgraph Core ["The model-driven loop"]
+    direction LR
+    AC[assemble context] --> PF[prefetch] --> PR[propose]
     PR -->|tool call| EX[execute]
     EX -->|"loop ≤ 5"| PR
-    PR --> FN[finalize] --> AW[await approval] --> E
+    end
+    subgraph Close ["Finish"]
+    direction LR
+    FN[finalize] --> AW[await approval] --> E((END))
+    RI[read intent] --> E
+    end
+    CI -->|plain read| RI
+    CI --> AC
+    PR --> FN
 ```
 
 Read it as four workflow patterns. The screens from PII filtering to context assembly form a **sequential pipeline**. _Classify intent_ **branches** a plain read away with no model call.
@@ -214,10 +239,19 @@ That is a good thing. It is predictable, testable and cheap, and it should only 
 💡 _Before you call it an agent, draw the graph. If code picks every next step, it's a workflow, and that's usually what you want._
 {{< /panel >}}
 
-**Further reading**
+{{< panel color="gold" title="Related Notes" id="related_notes" >}}
+Concepts used in these notes are developed in the other courses on this site:
+
+- Machine Learning: [Binary Classification]({{<ref "/docs/machine_learning/supervised/logistic_regression/binary_classification_intro/" >}})
+- NLP: [Large Language Models]({{<ref "/docs/natural_language_processing/llm/" >}})
+- NLP: [The Transformer]({{<ref "/docs/natural_language_processing/transformer/#transformer" >}})
+{{< /panel >}}
+
+{{< panel color="grey" title="Further Reading" id="further_reading" >}}
 - Anthropic, [_Building Effective Agents_](https://www.anthropic.com/research/building-effective-agents) (2024): a catalogue of workflow patterns and when to prefer them over agents.
 - LangGraph, [_Documentation_](https://langchain-ai.github.io/langgraph/): the graph runtime used for the reference agents, including branching, fan-out and checkpoints.
 - LangGraph, [_Persistence_](https://langchain-ai.github.io/langgraph/concepts/persistence/): how durable pauses for human-in-the-loop steps work.
+{{< /panel >}}
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

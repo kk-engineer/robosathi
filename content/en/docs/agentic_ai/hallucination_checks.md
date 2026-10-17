@@ -90,7 +90,7 @@ Three verdicts, not two: "_I can't confirm this_" is different from "_this is fa
 {{< imgproc "images/agentic_ai/hallucination/embeddings_find_nli_decides.png" Resize "1000x" >}}{{< /imgproc >}}
 
 - **Embeddings retrieve**: for each claim, find the top 3 most similar evidence sentences. But **similarity is not truth**: "_the refund was issued_" and "_the refund was not issued_" are near-identical vectors.
-- **NLI decides**: a [cross-encoder]({{<ref "/docs/agentic_ai/rag/#bi_cross" >}}) (a local DeBERTa-v3 NLI model) reads claim and evidence **together** and sees the negation. Entailment ≥ 0.6 → supported.
+- **NLI decides**: a [cross-encoder]({{<ref "/docs/agentic_ai/rag/#bi_cross" >}}) (a local DeBERTa-v3 NLI model, a [BERT]({{<ref "/docs/natural_language_processing/bert/#bert" >}})-family encoder) reads claim and evidence **together** and sees the negation. Entailment ≥ 0.6 → supported.
 
 {{< keyidea >}}**Embeddings never decide whether a claim is true. NLI does.**{{< /keyidea >}}
 {{< /panel >}}
@@ -148,7 +148,7 @@ Only what the direct check can't place goes on to NLI.
 {{< /panel >}}
 
 {{< panel color="navy" title="Token Confidence: The Model's Own Doubt" id="logprobs" >}}
-For every token it emits, a model can return the **log-probability** it assigned to that token. A model that is guessing spreads probability over several candidates, so the token it picks carries a **low** probability.
+For every token it emits, a model can return the **log-probability** it assigned to that token (the output of the final [softmax]({{<ref "/docs/deep_learning/activation_function/#softmax" >}}) over the vocabulary). A model that is guessing spreads probability over several candidates, so the token it picks carries a **low** probability.
 
 {{< imgproc "images/agentic_ai/hallucination/logprobs_models_own_doubt.png" Resize "1000x" >}}{{< /imgproc >}}
 
@@ -235,7 +235,15 @@ The guardrail **repairs once** with the evidence in front of the model ("_Your r
 💡 _Check each claim against what the agent saw, not how sure it sounded._
 {{< /panel >}}
 
-**Further reading**
+{{< panel color="gold" title="Related Notes" id="related_notes" >}}
+Concepts used in these notes are developed in the other courses on this site:
+
+- Deep Learning: [Softmax]({{<ref "/docs/deep_learning/activation_function/#softmax" >}})
+- NLP: [BERT]({{<ref "/docs/natural_language_processing/bert/#bert" >}})
+- Machine Learning: [Log Loss]({{<ref "/docs/machine_learning/supervised/logistic_regression/log_loss/" >}})
+{{< /panel >}}
+
+{{< panel color="grey" title="Further Reading" id="further_reading" >}}
 - Maynez et al., [_On Faithfulness and Factuality in Abstractive Summarization_](https://arxiv.org/abs/2005.00661) ACL (2020).
 - Ji et al., [_Survey of Hallucination in Natural Language Generation_](https://arxiv.org/abs/2202.03629) ACM Computing Surveys (2023).
 - [_Moffatt v. Air Canada, 2024 BCCRT 149_](https://en.wikipedia.org/wiki/Moffatt_v._Air_Canada) a company held responsible for its chatbot.
@@ -248,6 +256,7 @@ The guardrail **repairs once** with the evidence in front of the model ("_Your r
 - Dhuliawala et al., [_Chain-of-Verification Reduces Hallucination in Large Language Models_](https://arxiv.org/abs/2309.11495) (2023).
 - Min et al., [_FActScore_](https://arxiv.org/abs/2305.14251) (2023).
 - Azaria & Mitchell, [_The Internal State of an LLM Knows When It's Lying_](https://arxiv.org/abs/2304.13734) (2023).
+{{< /panel >}}
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
