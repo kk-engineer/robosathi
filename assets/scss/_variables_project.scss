@@ -3343,5 +3343,18 @@ $ab-line: #e8ddd0; $ab-gold: #B8945A; $ab-gold-d: #9a7340; $ab-muted: #5b667a;
   .rs-audit-card { justify-self: end; max-width: 360px; }
 }
 
+// Hero: a compact centred group (text + card hug each other, no dead middle)
+@media (min-width: 992px) {
+  .rs-hero-split {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+    max-width: none;
+  }
+  .rs-hero-split__text { flex: 0 1 560px; max-width: 560px; justify-self: auto; }
+  .rs-audit-card { flex: 0 0 360px; max-width: 360px; justify-self: auto; }
+}
+
 // Interview Section scss
 @import "interview";
