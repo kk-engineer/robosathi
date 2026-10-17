@@ -36,11 +36,11 @@ Add styles or override variables from the theme here.
 }
 
 @font-face {
-  font-family: 'Playfair Display';
+  font-family: 'Source Serif 4';
   font-style: normal;
-  font-weight: 900;
+  font-weight: 700;
   font-display: swap;
-  src: url('/fonts/playfair-display-v40-latin-900.woff2') format('woff2');
+  src: url('/fonts/source-serif-4-v15-latin-700.woff2') format('woff2');
 }
 
 // Override Docsy's default fonts with a cleaner docs-oriented stack.
@@ -1291,7 +1291,7 @@ body {
 // DM Sans / DM Mono were never loaded; use the self-hosted Inter + JetBrains Mono.
 $font-family-sans-serif: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 $font-family-monospace:  'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
-$headings-font-family:   'Playfair Display', Georgia, serif;
+$headings-font-family: 'Source Serif 4', Georgia, serif;
 $headings-font-weight:   700;
 $headings-color:         #0a0a0a;
 $font-size-base:         0.9375rem;   // 15px
@@ -1352,15 +1352,15 @@ $btn-border-radius:      2px;
   margin-bottom: 1.25rem;
 }
 .rs-h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Source Serif 4', Georgia, serif;
   font-size: clamp(2.1rem, 4vw, 4rem);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.1;
   color: #0a0a0a;
   margin-bottom: 1.25rem;
   letter-spacing: -0.02em;
 }
-.rs-h1 em { font-style: italic; color: #B8945A; }
+.rs-h1 em { font-style: normal; color: #B8945A; }
 .rs-sub {
   font-size: 1.05rem;
   color: #1c1d1f;
@@ -1418,9 +1418,9 @@ $btn-border-radius:      2px;
 .rs-stat:last-child { border-right: none; }
 .rs-stat__num {
   display: block;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Source Serif 4', Georgia, serif;
   font-size: 1.6rem;
-  font-weight: 900;
+  font-weight: 700;
   color: #0a0a0a;
 }
 .rs-stat__label {
@@ -1446,14 +1446,14 @@ $btn-border-radius:      2px;
   margin-left: 0;
 }
 .td-content h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Source Serif 4', Georgia, serif;
   font-size: 24px;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: -0.025em;
   margin-bottom: 0.25rem !important;
 }
 .td-content h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Source Serif 4', Georgia, serif;
   font-size: 22px;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -1462,7 +1462,7 @@ $btn-border-radius:      2px;
   //border-top: 1px solid #e4e4e0;
 }
 .td-content h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Source Serif 4', Georgia, serif;
   font-size: 20px;
   font-weight: 600;
   letter-spacing: -0.015em;
@@ -1615,14 +1615,14 @@ $btn-border-radius:      2px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Source Serif 4', Georgia, serif;
   font-size: 1.4rem;
-  font-weight: 900;
+  font-weight: 700;
   flex-shrink: 0;
 }
 
 .rs-creator-card__name {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Source Serif 4', Georgia, serif;
   font-size: 22px;
   font-weight: 700;
   color: #0a0a0a;
@@ -1964,9 +1964,9 @@ $rs-muted: #5b667a;
   .rs-eyebrow { margin-bottom: 0.4rem; }
 
   h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Source Serif 4', Georgia, serif;
     font-size: clamp(1.6rem, 2.6vw, 2.2rem);
-    font-weight: 900;
+    font-weight: 700;
     color: #0a0a0a;
     letter-spacing: -0.02em;
     margin-bottom: 0.4rem;
@@ -2195,9 +2195,9 @@ $rs-muted: #5b667a;
 }
 
 .rs-svc__num {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Source Serif 4', Georgia, serif;
   font-size: 1.5rem;
-  font-weight: 900;
+  font-weight: 700;
   color: $rs-gold;
   line-height: 1;
 }
@@ -2291,8 +2291,8 @@ $rs-muted: #5b667a;
   background: #fff;
   border: 2px solid $rs-gold;
   color: $rs-gold-dark;
-  font-family: 'Playfair Display', serif;
-  font-weight: 900;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 700;
 }
 
 // ---------- Open Knowledge tiles ----------
@@ -2384,9 +2384,9 @@ $rs-muted: #5b667a;
 }
 
 .rs-contact-card__title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Source Serif 4', Georgia, serif;
   font-size: clamp(1.4rem, 2.4vw, 1.9rem);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.2;
   color: #0a0a0a;
   margin-bottom: 0.5rem;
@@ -2398,7 +2398,7 @@ $rs-muted: #5b667a;
 
 .rs-contact-card__email {
   display: block;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Source Serif 4', Georgia, serif;
   font-size: clamp(1.25rem, 2.2vw, 1.6rem);
   font-weight: 700;
   color: $rs-gold-dark;
@@ -2477,7 +2477,7 @@ html.rs-js .rs-reveal {
 }
 
 .rs-founder__name {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Source Serif 4', Georgia, serif;
   font-size: 1.3rem;
   font-weight: 700;
   color: #0a0a0a;
@@ -2883,9 +2883,9 @@ $rs-badge-border-hover: #B8945A;
 }
 
 .rs-contact-strip__title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Source Serif 4', Georgia, serif;
   font-size: 1.15rem;
-  font-weight: 900;
+  font-weight: 700;
   color: #0a0a0a;
   margin: 0 0 0.15rem;
 
@@ -3074,8 +3074,8 @@ $rs-badge-border-hover: #B8945A;
 }
 
 .rs-chapter__num {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-weight: 900;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 700;
   font-size: 1.05rem;
   color: #B8945A;
 }
@@ -3208,7 +3208,7 @@ $ab-line: #e8ddd0; $ab-gold: #B8945A; $ab-gold-d: #9a7340; $ab-muted: #5b667a;
 
 .ab-hero { text-align: center; margin-bottom: $ab-s4; }
 .ab-title {
-  font-family: 'Playfair Display', Georgia, serif; font-weight: 900; letter-spacing: -0.02em;
+  font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; letter-spacing: -0.02em;
   font-size: clamp(1.6rem, 2.6vw, 2.15rem); line-height: 1.15; color: #0a0a0a; margin: 0 0 $ab-s1;
   em { color: $ab-gold; }
 }
@@ -3225,7 +3225,7 @@ $ab-line: #e8ddd0; $ab-gold: #B8945A; $ab-gold-d: #9a7340; $ab-muted: #5b667a;
 .ab-person { display: flex; align-items: center; gap: $ab-s2; margin-bottom: $ab-s2; }
 .ab-person__photo .rs-figure { margin: 0; }
 .ab-person__photo img { width: 56px !important; height: 56px !important; max-width: none; border-radius: 50%; border: 2px solid $ab-line; object-fit: cover; }
-.ab-person__name { font-family: 'Playfair Display', Georgia, serif; font-weight: 900; font-size: 1.1rem; color: #0a0a0a; margin: 0 0 0.15rem;
+.ab-person__name { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 1.1rem; color: #0a0a0a; margin: 0 0 0.15rem;
   a { color: $ab-gold; font-size: 0.95rem; margin-left: 0.2rem; } }
 .ab-person__role { margin: 0; font-size: 0.64rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: $ab-gold-d; }
 
@@ -3312,6 +3312,23 @@ $ab-line: #e8ddd0; $ab-gold: #B8945A; $ab-gold-d: #9a7340; $ab-muted: #5b667a;
     main[role="main"] { flex: 1 1 auto !important; max-width: calc(100% - 220px) !important; min-width: 0; }
   }
 }
+
+// Headings: Source Serif 4 700 everywhere; gold accent words upright
+.rs-h1 em, .ab-title em, .rs-contact-strip__title em, .rs-contact-card__title em, .rs-cta-band__title em { font-style: normal; }
+
+// Hero: text leads, the plan card is a smaller, thinner side element
+@media (min-width: 992px) {
+  .rs-hero-split { grid-template-columns: 1.45fr 0.85fr; gap: 2.5rem; }
+  .rs-audit-card { max-width: 380px; justify-self: end; width: 100%; }
+}
+.rs-audit-card__bar { padding: 0.45rem 0.8rem; }
+.rs-audit-card__name { font-size: 0.7rem; }
+.rs-audit-card__rows { padding: 0.25rem 0.8rem 0.45rem; }
+.rs-audit-card__rows li { padding: 0.42rem 0; gap: 0.55rem; grid-template-columns: 24px 1fr auto; }
+.rs-audit-card .rs-audit-card__icon { width: 24px; height: 24px; font-size: 0.68rem; border-radius: 6px; }
+.rs-audit-card__label strong { font-size: 0.8rem; }
+.rs-audit-card__label small { font-size: 0.68rem; }
+.rs-audit-card__chip { width: 18px; height: 18px; font-size: 0.55rem; }
 
 // Interview Section scss
 @import "interview";
