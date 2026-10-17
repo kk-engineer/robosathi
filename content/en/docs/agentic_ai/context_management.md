@@ -8,6 +8,19 @@ math: true
 
 {{< playlist "" "Agentic AI | Full Course" >}}
 
+{{< panel color="gold" title="Overview" id="overview" >}}
+A language model has no memory between calls and no access to the world beyond the text it is given. On every call, its entire world is its **context window**.
+Deciding what goes into that window, in what order and at what size, is therefore one of the most consequential design decisions in an agent, and one that is repeated on every turn of the agent loop.
+
+These notes treat context engineering as a discipline: why the window must be managed rather than filled, the six strategies for managing it and what each costs, the five ways a window fails, and how a production pipeline builds, scores and health-checks every window.
+
+By the end of these notes you should be able to:
+- explain why more context is not always better, and why position within the window matters;
+- choose among offload, reduce, retrieve, isolate, cache and consolidate, naming what each gives up;
+- diagnose poisoning, clash, confusion, distraction and rot, and apply the matching fix;
+- describe a five-stage context pipeline and a weighted scoring scheme for candidates.
+{{< /panel >}}
+
 {{< definition title="Context" >}}
 📘 **Context** is everything the model reads on **one** call, and nothing else. A model has no other access to the world:
 no memory between calls, no database, no inbox. If something isn't in the window on _this_ call, for the model it doesn't exist.
@@ -248,7 +261,7 @@ Fixes: **reduce** (trim tool output, summarise old turns and say so), keep the i
 and **isolate** exploratory sub-tasks into fresh windows. Measure answer quality against window size so you compact before it degrades.
 {{< /answer >}}
 
-{{< panel color="gold" title="Recap" id="recap" >}}
+{{< panel color="gold" title="Summary" id="recap" >}}
 - 🌍 **Context is the model's whole world for one call**: finite, costly, degradable, attackable.
 - 🏷️ **Six strategies, six prices**: offload, reduce, retrieve, isolate, cache, consolidate.
 - 🩺 **Five failures, five fixes**: poisoning, clash, confusion, distraction, rot.
@@ -257,16 +270,16 @@ and **isolate** exploratory sub-tasks into fresh windows. Measure answer quality
 💡 _Decide what the model reads, or arrival order will._
 {{< /panel >}}
 
-_Reference_:
-- Liu et al., Lost in the Middle: How Language Models Use Long Contexts, TACL 2024, https://arxiv.org/abs/2307.03172
-- Breunig, How Long Contexts Fail, 2025, https://www.dbreunig.com/2025/06/22/how-contexts-fail-and-how-to-fix-them.html
-- Hong et al., Context Rot: How Increasing Input Tokens Impacts LLM Performance, Chroma Research, 2025, https://research.trychroma.com/context-rot
-- Greshake et al., Not What You've Signed Up For: Indirect Prompt Injection, 2023, https://arxiv.org/abs/2302.12173
-- Laban et al., LLMs Get Lost in Multi-Turn Conversation, 2025, https://arxiv.org/abs/2505.06120
-- Berkeley Function-Calling Leaderboard, https://gorilla.cs.berkeley.edu/leaderboard.html
-- Paramanayakam et al., Less is More: Optimizing Function Calling for LLM Execution on Edge Devices, 2024, https://arxiv.org/abs/2411.15399
-- Park et al., Generative Agents: Interactive Simulacra of Human Behavior, UIST 2023, https://arxiv.org/abs/2304.03442
-- Google, Gemini 2.5 technical report, 2025
+**Further reading**
+- Liu et al., [_Lost in the Middle: How Language Models Use Long Contexts_](https://arxiv.org/abs/2307.03172) TACL (2024): why position in the window matters.
+- Breunig, [_How Long Contexts Fail_](https://www.dbreunig.com/2025/06/22/how-contexts-fail-and-how-to-fix-them.html) (2025): poisoning, distraction, confusion and clash.
+- Hong et al., [_Context Rot: How Increasing Input Tokens Impacts LLM Performance_](https://research.trychroma.com/context-rot) Chroma Research (2025).
+- Greshake et al., [_Not What You've Signed Up For: Indirect Prompt Injection_](https://arxiv.org/abs/2302.12173) (2023).
+- Laban et al., [_LLMs Get Lost in Multi-Turn Conversation_](https://arxiv.org/abs/2505.06120) (2025).
+- Berkeley, [_Function-Calling Leaderboard_](https://gorilla.cs.berkeley.edu/leaderboard.html) tool-selection accuracy as tool sets grow.
+- Paramanayakam et al., [_Less is More: Optimizing Function Calling for LLM Execution on Edge Devices_](https://arxiv.org/abs/2411.15399) (2024).
+- Park et al., [_Generative Agents: Interactive Simulacra of Human Behavior_](https://arxiv.org/abs/2304.03442) UIST (2023): recency, importance and relevance scoring.
+- Google DeepMind, [_Gemini 2.5 technical report_](https://arxiv.org/abs/2507.06261) (2025): the long-context Pokémon agent.
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

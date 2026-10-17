@@ -7,8 +7,21 @@ weight: 14
 
 {{< playlist "" "Agentic AI | Full Course" >}}
 
+{{< panel color="gold" title="Overview" id="overview" >}}
+Every AI application that wants to use a tool or a data source needs an integration with it. Without a standard, that is one bespoke integration per pair of application and tool.
+The **Model Context Protocol (MCP)** replaces those pairwise integrations with one open protocol between AI applications and the systems they use.
+
+These notes cover the protocol's architecture and primitives, its security model (the protocol connects but does not decide trust), a worked example of an analytics server used by an operations agent, a client that governs every server's tools through its own configuration, and what it takes to move a server from a local subprocess to a shared HTTP service.
+
+By the end of these notes you should be able to:
+- describe the host, client and server roles and the three server primitives;
+- explain the discover, list and call sequence;
+- explain why tool annotations are claims, and how a host should govern third-party tools;
+- compare the stdio and Streamable HTTP transports, and list what moving to HTTP requires.
+{{< /panel >}}
+
 {{< panel color="gold" title="One Server, Any Client" id="cold_open" >}}
-The episode opens with an **ops agent** connecting to an **analytics MCP server**: the trace shows the handshake, the protocol version, the server's identity and the **5 tools** it offers.
+Consider an **ops agent** connecting to an **analytics MCP server**: the trace shows the handshake, the protocol version, the server's identity and the **5 tools** it offers.
 Asked "_Which agent had the worst p95 turn latency in the last 7 days?_", it lists the metrics, computes one per agent in a single step, answers, and the [hallucination check]({{<ref "/docs/agentic_ai/hallucination_checks" >}}) finds every figure in the returned rows.
 
 The same server could be added, unchanged, to an IDE assistant or the MCP Inspector. **One server, any client.**
@@ -270,7 +283,7 @@ Nothing should be auto-allowed on the server's word. **Annotations are claims, n
 So `delete_records` needs explicit configuration and, being destructive, human approval at the Gatekeeper.
 {{< /answer >}}
 
-{{< panel color="gold" title="Recap" id="recap" >}}
+{{< panel color="gold" title="Summary" id="recap" >}}
 - 🔌 **MCP turns N × M into N + M**: host, client, server; tools, resources, prompts.
 - 📊 **The ops agent answers from data** via five read-only tools, two walls and a figure check.
 - 🛂 **Our client governs**: the envelope comes from our config, never the server.
@@ -279,14 +292,14 @@ So `delete_records` needs explicit configuration and, being destructive, human a
 💡 _A server describing its tool as harmless has asserted it, not established it._
 {{< /panel >}}
 
-_Reference_:
-- Model Context Protocol specification, https://modelcontextprotocol.io/specification
-- Anthropic, Introducing the Model Context Protocol, Nov 2024, https://www.anthropic.com/news/model-context-protocol
-- MCP Python SDK, https://github.com/modelcontextprotocol/python-sdk
-- MCP Inspector, https://github.com/modelcontextprotocol/inspector
-- Invariant Labs, MCP Security Notification: Tool Poisoning Attacks, 2025, https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks
-- JSON-RPC 2.0 Specification, https://www.jsonrpc.org/specification
-- OAuth 2.1 (IETF draft), https://datatracker.ietf.org/doc/draft-ietf-oauth-v2-1/
+**Further reading**
+- Model Context Protocol, [_Specification_](https://modelcontextprotocol.io/specification)
+- Anthropic, [_Introducing the Model Context Protocol_](https://www.anthropic.com/news/model-context-protocol) (Nov 2024).
+- Model Context Protocol, [_Python SDK_](https://github.com/modelcontextprotocol/python-sdk)
+- Model Context Protocol, [_MCP Inspector_](https://github.com/modelcontextprotocol/inspector)
+- Invariant Labs, [_MCP Security Notification: Tool Poisoning Attacks_](https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks) (2025).
+- [_JSON-RPC 2.0 Specification_](https://www.jsonrpc.org/specification)
+- IETF, [_The OAuth 2.1 Authorization Framework (draft)_](https://datatracker.ietf.org/doc/draft-ietf-oauth-v2-1/)
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

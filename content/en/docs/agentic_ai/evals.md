@@ -8,11 +8,24 @@ math: true
 
 {{< playlist "" "Agentic AI | Full Course" >}}
 
-{{< panel color="gold" title="Every Episode Made a Claim" id="cold_open" >}}
-Eleven episodes of controls, and each one makes a claim: "_no refund over the limit_" ([E01]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#gatekeeper" >}})), "_no claim without evidence_" ([E09]({{<ref "/docs/agentic_ai/hallucination_checks" >}})), "_no other customer's data_" ([E11]({{<ref "/docs/agentic_ai/agent_security_principles/#pii" >}})).
+{{< panel color="gold" title="Overview" id="overview" >}}
+Every earlier chapter of this course made a claim about the system: no refund over the limit, no claim without evidence, no other customer's data. **Evals** are how those claims are checked, on every change, against a real model.
+
+Evals are not tests. Tests check that code does what it says, deterministically and in seconds; evals check that a non-deterministic system of model and harness behaves well on realistic cases and attacks, slowly and at a cost.
+These notes set out the principles that make an eval worth trusting, three kinds of grader, two open-source frameworks, and the design of an eval harness people will actually run.
+
+By the end of these notes you should be able to:
+- explain the difference between tests and evals, and why you need both;
+- apply eight principles, including outcome-not-path grading and balanced sets;
+- compute and interpret pass@k and pass^k;
+- choose between code, judge and adversarial graders, and design a fixed regression set.
+{{< /panel >}}
+
+{{< panel color="gold" title="A Motivating Example: Every Control Makes a Claim" id="cold_open" >}}
+The earlier chapters each made a claim: "_no refund over the limit_" ([E01]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#gatekeeper" >}})), "_no claim without evidence_" ([E09]({{<ref "/docs/agentic_ai/hallucination_checks" >}})), "_no other customer's data_" ([E11]({{<ref "/docs/agentic_ai/agent_security_principles/#pii" >}})).
 **Evals** are how we check those claims, on every change, against a real model.
 
-The episode opens with two runs: a colour-coded table of **30 golden cases** with every invariant checked per case, and a red-team report of **20 attacks** plus one benign control that must still be answered.
+Two artefacts make this concrete: a colour-coded table of **30 golden cases** with every invariant checked per case, and a red-team report of **20 attacks** plus one benign control that must still be answered.
 {{< /panel >}}
 
 {{< definition title="Tests Are Not Evals" >}}
@@ -113,7 +126,7 @@ For a money-moving agent, **pass^k is the one that matters**.
 The oracle is the **only** grader that reads ground truth: "_an LLM can be talked into anything a conversation can say_".
 Alongside these, component evals test pieces in isolation, e.g. an intent-classifier bake-off (accuracy, macro-F1, coverage at threshold, calibration, latency).
 
-**The oracle's invariants** check, after every case, a claim made by an earlier episode:
+**The oracle's invariants** check, after every case, a claim made in an earlier chapter:
 
 | Rule | Checks the claim from |
 |---|---|
@@ -236,7 +249,7 @@ The set isn't **balanced**: refusing everything scores 35/40. Add as many must-a
 Grade the **outcome** in the database (a valid refund that didn't happen is a failure), and keep safety invariants as **hard gates** so no average can hide them.
 {{< /answer >}}
 
-{{< panel color="gold" title="Recap" id="recap" >}}
+{{< panel color="gold" title="Summary" id="recap" >}}
 - 🧪 **Tests check code; evals check the system** with a real model, on purpose.
 - 📏 **Principles**: outcome not path, balanced sets, hard + soft gates, pass^k.
 - 🛠️ **DeepEval** grades quality with G-Eval; **Promptfoo** red-teams with the same rules.
@@ -245,12 +258,12 @@ Grade the **outcome** in the database (a valid refund that didn't happen is a fa
 💡 _If refusing everything passes your suite, your suite is broken._
 {{< /panel >}}
 
-_Reference_:
-- Yao et al., τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains, 2024, https://arxiv.org/abs/2406.12045
-- Liu et al., G-Eval: NLG Evaluation using GPT-4 with Better Human Alignment, EMNLP 2023, https://arxiv.org/abs/2303.16634
-- DeepEval documentation, https://deepeval.com/docs/getting-started
-- Promptfoo documentation: red teaming, https://www.promptfoo.dev/docs/red-team/
-- Chen et al., Evaluating Large Language Models Trained on Code (pass@k), 2021, https://arxiv.org/abs/2107.03374
+**Further reading**
+- Yao et al., [_τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains_](https://arxiv.org/abs/2406.12045) (2024): pass^k.
+- Chen et al., [_Evaluating Large Language Models Trained on Code_](https://arxiv.org/abs/2107.03374) (2021): pass@k.
+- Liu et al., [_G-Eval: NLG Evaluation using GPT-4 with Better Human Alignment_](https://arxiv.org/abs/2303.16634) EMNLP (2023).
+- Confident AI, [_DeepEval documentation_](https://deepeval.com/docs/getting-started)
+- Promptfoo, [_Red teaming documentation_](https://www.promptfoo.dev/docs/red-team/)
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

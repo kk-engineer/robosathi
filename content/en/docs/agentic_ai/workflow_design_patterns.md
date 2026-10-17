@@ -7,50 +7,57 @@ weight: 3
 
 {{< playlist "" "Agentic AI | Full Course" >}}
 
-{{< definition title="Who Decides the Next Step?" >}}
-📘 One distinction organises this episode and the next: **who decides the next step, code or model?**
+{{< panel color="gold" title="Overview" id="overview" >}}
+A surprising amount of what is marketed as "agentic AI" is, structurally, a **workflow**: a sequence of steps fixed in code, in which a language model does some of the work but never decides what happens next.
+That is not a criticism. Workflows are predictable, testable and cheap, and most production systems should be mostly workflow.
 
-| | **Workflow** (this episode) | **Agent** ([next episode]({{<ref "/docs/agentic_ai/agentic_design_patterns" >}})) |
-|---|---|---|
-| Path | Written **before** the run | **Emerges** at run time from the model's choices |
-| Models | May work **inside** a step; never pick the next one | Choose the next step |
-| Properties | Predictable, testable, cheap | Flexible, open-ended, harder to certify |
+These notes introduce the one distinction that organises this chapter and the next, **who decides the next step**, and then catalogue six workflow patterns.
+For each we give a concrete example, when to use it, and the failure it invites. We finish by locating the patterns inside the course's two reference agents.
 
-Ties to [Levels of Automation]({{<ref "/docs/agentic_ai/levels_of_automation/#three_questions" >}}): low cardinality → workflow; high cardinality with bounded blast radius → let the model choose.
-
-💡 **Most production systems are mostly workflow. That's the design, not a compromise.**
-{{< /definition >}}
-
-{{< panel color="gold" title="Six Workflow Patterns" id="six_patterns" >}}
-| # | Pattern | Example |
-|---|---|---|
-| 1 | **Sequential pipeline** | Document intake: extract → translate → summarise → format |
-| 2 | **Conditional branching** | Support ticket routed to billing / technical / general |
-| 3 | **Parallel fan-out / fan-in** | Contract: legal, finance, security checks at once |
-| 4 | **Map-reduce** | Summarise 500 product reviews, then combine |
-| 5 | **Iterative loop (fixed N)** | Generate code, run tests, at most 3 attempts |
-| 6 | **Human-in-the-loop** | Model drafts a marketing email; a manager approves |
-
-👉 In every one, **you could print the graph before the run**.
-
-_Two that look alike_: fan-out/fan-in has a **fixed** number of branches you can see on the diagram; map-reduce has **N** branches, decided at run time by the data.
+By the end of these notes you should be able to:
+- tell a workflow from an agent by asking who chooses the next step;
+- recognise and draw the six workflow patterns, and choose between them;
+- name the characteristic failure of each pattern and the guard against it;
+- read a real agent's graph and identify which parts are workflow and which are agentic.
 {{< /panel >}}
 
+{{< definition title="Who Decides the Next Step?" >}}
+In every agentic system, something decides what happens after each step. There are only two candidates.
+
+In a **workflow**, **code** decides. The path is written down before the run starts: you could print the graph in advance. A model may do work _inside_ a step (summarise this, classify that), but it never chooses which step comes next.
+In an **agent**, the **model** decides. The path emerges at run time from the model's choices, so you cannot know in advance how many steps a run will take or in what order. That is the subject of [Agentic Design Patterns]({{<ref "/docs/agentic_ai/agentic_design_patterns" >}}).
+
+| | **Workflow** | **Agent** |
+|---|---|---|
+| Who picks the next step | Code | The model |
+| When the path is known | Before the run | Only at run time |
+| Properties | Predictable, testable, cheap | Flexible, open-ended, harder to certify |
+
+The choice between them follows directly from the [three questions]({{<ref "/docs/agentic_ai/levels_of_automation/#three_questions" >}}) of the previous notes. Low cardinality (the situations can be enumerated) points to a workflow.
+High cardinality with a bounded blast radius is where it pays to let the model choose.
+
+💡 **Most production systems are mostly workflow. That is the design, not a compromise.**
+{{< /definition >}}
+
 {{< panel color="blue" title="1 · Sequential Pipeline" id="sequential" >}}
-Each step's output is the next step's input, in a fixed order.
+The simplest and most common pattern: each step's output is the next step's input, in a fixed order.
 
 ```mermaid
 graph LR
     A[Extract text] --> B[Translate] --> C[Summarise] --> D[Format brief]
 ```
 
-- 📌 **Example**: document intake. A parser extracts the text, a model call translates it, another summarises it, a template formats the brief. A model works inside two steps; **none chooses what comes next**.
-- ✅ **Use when**: the task splits into fixed stages, each simpler and testable on its own.
-- ⚠️ **Watch out**: latency adds up, and an early mistake flows downstream. **Validate between steps**: if extraction returned nothing, stop instead of paying three model calls to summarise an empty page.
+**Example.** A document-intake system receives a PDF in another language. A parser extracts the text, one model call translates it, another summarises it, and a template formats the brief.
+The order never changes. Models work inside two of the four steps, but none of them chooses what comes next.
+
+**When to use it.** When a task splits naturally into fixed stages, each simpler than the whole. Smaller steps are easier for a model to do well, and each link can be unit-tested and replayed on its own.
+
+**What goes wrong.** Latency adds up across steps, and an early mistake flows downstream: a bad extraction produces a confident summary of nothing.
+The guard is a cheap **validation between steps**. If extraction returned an empty page, stop there instead of paying for two model calls to translate and summarise it.
 {{< /panel >}}
 
 {{< panel color="green" title="2 · Conditional Branching" id="branching" >}}
-Code inspects the input and picks **exactly one branch from a closed set** (also called routing).
+Code inspects the input and picks **exactly one branch from a closed set**. This pattern is also called **routing**.
 
 ```mermaid
 graph LR
@@ -62,13 +69,16 @@ graph LR
     G --> R
 ```
 
-- 📌 **Example**: a support ticket is classified (keyword rules, then a small classifier) and routed. Anything the classifier isn't confident about goes to the **general queue**, not to a guess.
-- ✅ **Use when**: inputs fall into known classes that need different handling.
-- ⚠️ **Watch out**: misroutes become your error budget. **Always keep a fallback branch**, and watch its volume to know when the classes need updating.
+**Example.** A support ticket is classified, first by keyword rules and then by a small classifier, and routed to billing, technical support or a general queue. Anything the classifier is not confident about goes to the general queue rather than to a guess.
+
+**When to use it.** When inputs fall into known classes that need genuinely different handling: different prompts, different tools, even different models (a small, cheap model for easy questions and a large one for hard ones).
+
+**What goes wrong.** Every misroute is a silent failure, so the **misroute rate becomes your error budget**. Always keep a **fallback branch**, and watch its volume: when it grows, your classes need updating.
+Note that a classifier may well be a model, but it is still a workflow: the classifier produces a _label_, and code maps the label to a branch.
 {{< /panel >}}
 
 {{< panel color="orange" title="3 · Parallel Fan-out / Fan-in" id="fan_out" >}}
-A **fixed** set of independent branches run at the same time, then join.
+A **fixed** set of independent branches runs at the same time, and their results are joined.
 
 ```mermaid
 graph LR
@@ -80,13 +90,16 @@ graph LR
     S --> M
 ```
 
-- 📌 **Example**: contract review; three reviewers, always the same three.
-- ✅ **Use when**: branches are independent and latency matters. Latency drops to the **slowest** branch instead of the sum.
-- ⚠️ **Watch out**: **define the join**. Wait for all, or the first? If security times out: a partial report with a flag, or fail the whole thing? Handle branch failures and mind rate limits.
+**Example.** A contract goes to three reviewers at once (legal, finance and security), and a merge step combines their findings into one report. It is always the same three, so the branches are visible on the diagram.
+
+**When to use it.** When the branches do not depend on each other's output and latency matters. Running them together cuts the latency to that of the **slowest** branch rather than the sum.
+
+**What goes wrong.** The interesting design lives in the **join**. Does the report wait for all three branches, or the first? If the security check times out, do you publish a partial report with a flag, or fail the whole thing?
+These questions must be answered explicitly. Parallel calls also hit provider rate limits sooner ([Resilience]({{<ref "/docs/agentic_ai/system_design_resilience" >}})).
 {{< /panel >}}
 
 {{< panel color="magenta" title="4 · Map-Reduce" id="map_reduce" >}}
-The **same step over N items**, where N is known only at run time, then one aggregation.
+The **same step over N items**, where N is known only at run time, followed by one aggregation.
 
 ```mermaid
 graph LR
@@ -98,13 +111,15 @@ graph LR
     RN --> C
 ```
 
-- 📌 **Example**: summarise every product review in parallel (map), then combine into one report (reduce). 5 reviews today, 500 tomorrow.
-- ✅ **Use when**: N depends on the data and the items are independent.
-- ⚠️ **Watch out**: **bound N and concurrency**, or one big input becomes one big bill. Test the reduce step hardest: it's where contradictions between items get silently averaged away.
+**Example.** Summarise every product review for a product, in parallel (the _map_), then combine the summaries into one report (the _reduce_). There might be 5 reviews today and 500 tomorrow.
+
+This looks like fan-out, with one important difference: the number of branches is **not on the diagram**. It comes from the data at run time.
+
+**What goes wrong.** Two things. First, **bound N and the concurrency**, or one large input becomes one large bill. Second, test the **reduce** step hardest: it is where contradictions between items get silently averaged away.
 {{< /panel >}}
 
-{{< panel color="cyan" title="5 · Iterative Loop (Fixed N)" id="fixed_loop" >}}
-Repeat a step until a check passes, **at most N times. The cap is set in code.**
+{{< panel color="cyan" title="5 · Iterative Loop with a Fixed Cap" id="fixed_loop" >}}
+Repeat a step until a check passes, **at most N times**, with the cap set in code.
 
 ```mermaid
 graph LR
@@ -114,41 +129,46 @@ graph LR
     T -->|cap reached| H[Hand over to a person]
 ```
 
-- 📌 **Example**: generate a function, run the test suite, feed failures back, at most three attempts. On the third failure, **escalate with the failing tests attached**.
-- ✅ **Use when**: generate-and-check work where a retry with feedback usually succeeds.
-- ⚠️ **Watch out**: no cap means runaway cost. Good loops also detect "**no progress**": the same failure twice in a row is a reason to stop early.
+**Example.** A model generates a function; the test suite runs; the failures are fed back; the model tries again, at most three times. On the third failure, the system escalates to a person **with the failing tests attached**, instead of looping forever.
 
-💡 What makes this a _workflow_ loop: the stopping rule is code. The model writes the code inside the step; it doesn't decide whether to go round again (that's [agentic patterns]({{<ref "/docs/agentic_ai/agentic_design_patterns" >}})).
+**Why this is still a workflow.** The stopping rule is code: "_tests pass, or three attempts_". The model writes the code inside the step, but it does not decide whether to go round again. In the next chapter, it does.
+
+**What goes wrong.** A loop without a cap is a runaway bill. Good loops also detect **no progress**: the same failure twice in a row is a reason to stop early. We formalise this as [loop control]({{<ref "/docs/agentic_ai/guardrails_loop_control_state/#loop_control" >}}).
 {{< /panel >}}
 
 {{< panel color="red" title="6 · Human-in-the-Loop" id="human_in_loop" >}}
-The run **pauses, saves its state, and resumes** when a person decides. This is [level 5]({{<ref "/docs/agentic_ai/levels_of_automation/#sheridan_levels" >}}) as a workflow shape.
+The run **pauses, saves its state, and resumes** when a person decides. This is [level 5]({{<ref "/docs/agentic_ai/levels_of_automation/#sheridan_levels" >}}) of the automation scale, expressed as a workflow shape.
 
 ```mermaid
 graph LR
     D[Draft email] --> M{Manager}
     M -->|approve| S[Send]
-    M -->|reject| R[Revise]
+    M -->|reject with a note| R[Revise]
     R --> M
 ```
 
-- 📌 **Example**: a model drafts a campaign email; a manager approves (it's sent) or rejects with a note (it's revised and comes back).
-- ✅ **Use when**: an approval or an answer is needed before an action that matters.
-- ⚠️ **Watch out**: the pause must survive restarts (**checkpoint**): the approval may arrive in five minutes or five days, after a deploy or a crash.
-  And keep what reaches people small, or the [ironies of automation]({{<ref "/docs/agentic_ai/levels_of_automation/#ironies" >}}) set in.
+**Example.** A model drafts a marketing email. A manager approves it, and it is sent, or rejects it with a note, and it is revised and comes back.
+
+**When to use it.** Whenever an approval or an answer is needed before an action that matters.
+
+**What goes wrong.** The pause must be **durable**: the approval may arrive in five minutes or five days, after a deployment or a crash, and the run must resume exactly where it stopped.
+That requires checkpointing the run's state ([state management]({{<ref "/docs/agentic_ai/guardrails_loop_control_state/#durable_state" >}})).
+And keep what reaches people small: if everything goes to a person, nobody really reviews anything ([the ironies of automation]({{<ref "/docs/agentic_ai/levels_of_automation/#ironies" >}})).
 {{< /panel >}}
 
-{{< panel color="navy" title="Where We Used Them, and Why" id="csa_patterns" >}}
-| Pattern | Where in our code | Why there |
-|---|---|---|
-| **Sequential** | CSA front door · RA scope → contract → run | Order is safety: redact PII **before** hosted screens see the text |
-| **Branching** | CSA intent → read · RA `/research` vs plain question · RA replies | Cheap answers skip the model |
-| **Fan-out / fan-in** | RA research batches · **not** CSA screens | Speed in RA; privacy order wins in CSA |
-| **Map-reduce** | RA sub-questions → synthesize | N depends on the question; capped |
-| **Fixed-N loop** | CSA tool loop ≤ 5 · RA rounds, steps | Cost and runaway protection |
-| **Human-in-the-loop** | CSA refund > $50 · RA contract approval | Level 5, checkpointed |
+{{< panel color="navy" title="The Patterns in Real Agents" id="csa_patterns" >}}
+Patterns are easiest to understand in a real system. Here is where each one appears in the course's two reference agents, and why it is there.
 
-**CSA graph**: fifteen nodes, and only one lets the model choose the next step.
+| Pattern | Where it appears | Why there |
+|---|---|---|
+| **Sequential** | The CSA's front door; the RA's scope → contract → run | Order is safety: personal data is redacted **before** any hosted screen sees the text |
+| **Branching** | The CSA routes a plain status question to a database read; the RA routes `/research` vs a plain question | Cheap answers skip the model entirely |
+| **Fan-out / fan-in** | The RA's research batches; deliberately **not** the CSA's screens | Speed in the RA; in the CSA, the privacy order wins over speed |
+| **Map-reduce** | The RA's sub-questions, then synthesis | N depends on the question, and is capped |
+| **Fixed-N loop** | The CSA's tool loop (≤ 5); the RA's research rounds | Cost and runaway protection |
+| **Human-in-the-loop** | CSA refunds over $50; the RA's contract approval | Level 5, checkpointed |
+
+**The support agent's graph.** Compiled with every feature on, the CSA has fifteen nodes, and only one of them lets the model choose the next step:
 
 ```mermaid
 graph LR
@@ -160,48 +180,44 @@ graph LR
     PR --> FN[finalize] --> AW[await approval] --> E
 ```
 
-1. **Sequential pipeline**: PII → injection → moderation → deterministic checks → intent → context.
-2. **Branching**: classify intent sends a plain read to _read intent_, with no model call.
-3. **Fixed-N loop**: propose ⇄ execute, capped at 5. Whether to go round again is the model's call (that's [E04]({{<ref "/docs/agentic_ai/agentic_design_patterns" >}})), but **the cap is code**.
-4. **Human wait**: _await approval_, only when a refund was queued.
+Read it as four workflow patterns. The screens from PII filtering to context assembly form a **sequential pipeline**. _Classify intent_ **branches** a plain read away with no model call.
+_Propose ⇄ execute_ is a **loop capped at 5** (whether to go round again is the model's choice, but the cap is code). And _await approval_ is a **human-in-the-loop** step, reached only when a refund was escalated.
 
-**RA graphs**: the router between the research agent's three graphs is **code**.
+**The research agent's graphs.** The RA has three graphs, and the router between them is code: a plain question goes to a direct-answer graph; a `/research` request goes to a scoping interview, which ends when you approve a frozen contract; the run graph then researches autonomously and returns a report.
 
 ```mermaid
 graph LR
-    M[message] -->|plain question| AG["answer graph · ReAct"]
-    M -->|/research| SG["scoping graph · interview"]
-    SG -->|"you /approve · contract frozen"| RG["run graph · autonomous"]
+    M[message] -->|plain question| AG["answer graph"]
+    M -->|/research| SG["scoping graph · an interview"]
+    SG -->|"you approve · contract frozen"| RG["run graph · autonomous"]
     RG --> V[report with a verdict]
 ```
 
-Inside the run graph, **the model fills the steps; code decides where the run goes next**:
-map-reduce with fan-out/fan-in over sub-questions, fixed-N loops (research rounds, gap-fill rounds), and branching after an [LLM-judge audit]({{<ref "/docs/agentic_ai/llm_as_a_judge" >}}) (gap fill → revise → finalize).
-
-👉 A scope is a conversation; a run is a job.
+Inside the run graph, a model fills the steps but **code decides where the run goes next**: map-reduce over sub-questions, capped research and gap-filling loops, and a branch after an [independent audit]({{<ref "/docs/agentic_ai/llm_as_a_judge/#auditor" >}}) (gap fill, revise, or finalize).
+A scope is a conversation; a run is a job.
 {{< /panel >}}
 
 {{< question >}}
-An "AI agent" classifies a document, extracts fields, validates them against a schema, and asks a human when validation fails. Is it an agent?
+An "AI agent" classifies a document, extracts its fields, validates them against a schema, and asks a human when validation fails. Is it an agent?
 {{< /question >}}
 
 {{< answer >}}
-**No, it's a workflow**: a sequential pipeline with a branch and a human-in-the-loop step. Code picks every next step; models only work inside steps.
-That's a good thing: it's predictable, testable and cheap.
+**No, it is a workflow**: a sequential pipeline with a branch and a human-in-the-loop step. Code picks every next step; models only work inside steps.
+That is a good thing. It is predictable, testable and cheap, and it should only become agentic if some step genuinely needs the model to choose what to do next.
 {{< /answer >}}
 
-{{< panel color="gold" title="Recap" id="recap" >}}
-- ✍️ **Workflow = code picks the next step.** Models may still work inside a step.
-- 🧩 **Six shapes**: pipeline, branching, fan-out, map-reduce, fixed-N loop, human-in-the-loop.
-- 🎧 **CSA is mostly workflow**: one model-driven loop in fifteen nodes.
-- 🔎 **RA branches, maps and stops by code**; the model fills the steps.
+{{< panel color="gold" title="Summary" id="recap" >}}
+- A **workflow** is a system in which **code picks the next step**; models may still work inside steps. An **agent** lets the model pick.
+- Six workflow shapes cover most needs: **pipeline, branching, fan-out, map-reduce, capped loop, human-in-the-loop**. Each has a characteristic failure and guard.
+- The support agent is **mostly workflow**: one model-driven loop in fifteen nodes. The research agent branches, maps and stops by code; the model fills the steps.
 
 💡 _Before you call it an agent, draw the graph. If code picks every next step, it's a workflow, and that's usually what you want._
 {{< /panel >}}
 
-_Reference_:
-- Building Effective Agents, Anthropic, Dec 2024, https://www.anthropic.com/research/building-effective-agents
-- LangGraph documentation, https://langchain-ai.github.io/langgraph/
+**Further reading**
+- Anthropic, [_Building Effective Agents_](https://www.anthropic.com/research/building-effective-agents) (2024): a catalogue of workflow patterns and when to prefer them over agents.
+- LangGraph, [_Documentation_](https://langchain-ai.github.io/langgraph/): the graph runtime used for the reference agents, including branching, fan-out and checkpoints.
+- LangGraph, [_Persistence_](https://langchain-ai.github.io/langgraph/concepts/persistence/): how durable pauses for human-in-the-loop steps work.
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

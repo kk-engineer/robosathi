@@ -8,11 +8,24 @@ math: true
 
 {{< playlist "" "Agentic AI | Full Course" >}}
 
+{{< panel color="gold" title="Overview" id="overview" >}}
+A schema can guarantee that a reply has the right **shape**. It cannot guarantee that what the reply says is **true**. A perfectly formed sentence such as "_your refund of $118.84 has been issued_" is a serious failure if the refund is actually waiting for review.
+
+These notes define a hallucination precisely for an agent (a claim not supported by what the turn actually observed), explain why it is costly, and develop a two-level check that runs after the model writes and before the user reads:
+cheap **token-confidence** signals from log-probabilities, and **grounding** of each atomic claim against evidence, using deterministic record checks and natural-language inference.
+
+By the end of these notes you should be able to:
+- distinguish intrinsic (contradicted) from extrinsic (unsupported) hallucinations;
+- explain how NLI decides entailment, and why embedding similarity cannot;
+- use log-probabilities as a cheap first signal while knowing their limits;
+- describe a repair, trim and withhold policy for replies that fail.
+{{< /panel >}}
+
 {{< panel color="gold" title="Shape vs Truth" id="cold_open" >}}
 In [Guardrails]({{<ref "/docs/agentic_ai/guardrails_loop_control_state/#pydantic" >}}), Pydantic checked the **shape** of a reply: a non-empty string, the right fields, the right types.
 But a perfectly shaped reply can still say something false: "_Your refund of $118.84 has been issued_", when the refund is actually **queued for review**.
 
-This episode is about the second check: **is what the reply says true, given what the agent actually observed?**
+These notes are about the second check: **is what the reply says true, given what the agent actually observed?**
 In the [CSA]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#cold_open" >}}), every drafted reply gets a hallucination-check card in the trace with two levels:
 **token confidence** (how sure the model was of each sentence) and **NLI entailment** (each claim, the evidence it was checked against, and the verdict).
 {{< /panel >}}
@@ -213,7 +226,7 @@ It's a **record** claim, so the **direct check** runs first: the amount matches,
 The guardrail **repairs once** with the evidence in front of the model ("_Your refund of $118.84 is queued for review_"); if the repair still fails, the sentence is **trimmed**, and if nothing survives, the **withheld** reply is sent.
 {{< /answer >}}
 
-{{< panel color="gold" title="Recap" id="recap" >}}
+{{< panel color="gold" title="Summary" id="recap" >}}
 - 🔍 **Hallucination** = not supported by what the turn observed: contradicted or unsupported.
 - ⚖️ **NLI decides; embeddings only retrieve.** Records are read, not inferred.
 - 🎲 **Logprobs are level 1**: cheap doubt, two deterministic cuts, never the whole check.
@@ -222,19 +235,19 @@ The guardrail **repairs once** with the evidence in front of the model ("_Your r
 💡 _Check each claim against what the agent saw, not how sure it sounded._
 {{< /panel >}}
 
-_Reference_:
-- Maynez et al., On Faithfulness and Factuality in Abstractive Summarization, ACL 2020, https://arxiv.org/abs/2005.00661
-- Ji et al., Survey of Hallucination in Natural Language Generation, ACM Computing Surveys 2023, https://arxiv.org/abs/2202.03629
-- Moffatt v. Air Canada, 2024 BCCRT 149
-- Mata v. Avianca, Inc., S.D.N.Y. 2023
-- Bowman et al., A Large Annotated Corpus for Learning Natural Language Inference (SNLI), EMNLP 2015, https://arxiv.org/abs/1508.05326
-- Williams et al., A Broad-Coverage Challenge Corpus for Sentence Understanding through Inference (MultiNLI), NAACL 2018, https://arxiv.org/abs/1704.05426
-- Kadavath et al., Language Models (Mostly) Know What They Know, 2022, https://arxiv.org/abs/2207.05221
-- Manakul et al., SelfCheckGPT, 2023, https://arxiv.org/abs/2303.08896
-- Farquhar et al., Detecting Hallucinations in Large Language Models Using Semantic Entropy, Nature 2024, https://doi.org/10.1038/s41586-024-07421-0
-- Dhuliawala et al., Chain-of-Verification Reduces Hallucination in Large Language Models, 2023, https://arxiv.org/abs/2309.11495
-- Min et al., FActScore, 2023, https://arxiv.org/abs/2305.14251
-- Azaria & Mitchell, The Internal State of an LLM Knows When It's Lying, 2023, https://arxiv.org/abs/2304.13734
+**Further reading**
+- Maynez et al., [_On Faithfulness and Factuality in Abstractive Summarization_](https://arxiv.org/abs/2005.00661) ACL (2020).
+- Ji et al., [_Survey of Hallucination in Natural Language Generation_](https://arxiv.org/abs/2202.03629) ACM Computing Surveys (2023).
+- [_Moffatt v. Air Canada, 2024 BCCRT 149_](https://en.wikipedia.org/wiki/Moffatt_v._Air_Canada) a company held responsible for its chatbot.
+- [_Mata v. Avianca, Inc. (S.D.N.Y. 2023)_](https://en.wikipedia.org/wiki/Mata_v._Avianca,_Inc.) sanctions for invented case citations.
+- Bowman et al., [_A Large Annotated Corpus for Learning Natural Language Inference (SNLI)_](https://arxiv.org/abs/1508.05326) EMNLP (2015).
+- Williams et al., [_A Broad-Coverage Challenge Corpus for Sentence Understanding through Inference (MultiNLI)_](https://arxiv.org/abs/1704.05426) NAACL (2018).
+- Kadavath et al., [_Language Models (Mostly) Know What They Know_](https://arxiv.org/abs/2207.05221) (2022): calibration.
+- Manakul et al., [_SelfCheckGPT_](https://arxiv.org/abs/2303.08896) (2023).
+- Farquhar et al., [_Detecting Hallucinations in Large Language Models Using Semantic Entropy_](https://doi.org/10.1038/s41586-024-07421-0) Nature (2024).
+- Dhuliawala et al., [_Chain-of-Verification Reduces Hallucination in Large Language Models_](https://arxiv.org/abs/2309.11495) (2023).
+- Min et al., [_FActScore_](https://arxiv.org/abs/2305.14251) (2023).
+- Azaria & Mitchell, [_The Internal State of an LLM Knows When It's Lying_](https://arxiv.org/abs/2304.13734) (2023).
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

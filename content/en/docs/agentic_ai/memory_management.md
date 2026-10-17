@@ -8,8 +8,21 @@ math: true
 
 {{< playlist "" "Agentic AI | Full Course" >}}
 
+{{< panel color="gold" title="Overview" id="overview" >}}
+Context management decides what a model sees on one call; **memory** decides what survives **between** calls. An agent that remembers can offer continuity, learn from repeated situations and avoid asking the same questions twice.
+But what an agent remembers is also what it will **act on** later, which makes memory an attack surface and a privacy obligation as much as a feature.
+
+These notes cover working memory, the three long-term stores (episodic, semantic and procedural), how recall is scored, how every write is governed, and how memory can be consolidated offline, in a process we call **dreaming**.
+
+By the end of these notes you should be able to:
+- distinguish working, episodic, semantic and procedural memory, with an example of each;
+- explain how skills and an agent profile implement procedural memory;
+- describe a governed write pipeline and why a self-reported claim of authority must be refused;
+- explain why consolidation is better done after a session than during it, and how to make it safe.
+{{< /panel >}}
+
 {{< panel color="gold" title="An Agent That Learns While It Sleeps" id="cold_open" >}}
-The episode opens with three separate support sessions. In each one, a customer asks the [CSA]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#cold_open" >}}) to refund an order that has **already shipped**, and each time it is refused.
+Consider three separate support sessions. In each one, a customer asks the [CSA]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#cold_open" >}}) to refund an order that has **already shipped**, and each time it is refused.
 
 Then the operator runs a **dream**: an offline consolidation job. Its report shows:
 - **Episodic · ADD**: one summary per session, superseding the per-turn records.
@@ -270,7 +283,7 @@ The governed pipeline classifies it as authority-changing, refuses it (no role g
 It must also not slip back in through a session summary, which is why the dream event records "_withheld_" instead of the words.
 {{< /answer >}}
 
-{{< panel color="gold" title="Recap" id="recap" >}}
+{{< panel color="gold" title="Summary" id="recap" >}}
 - 🧠 **Working memory** is bounded, pinned and redacted: it's replayed every turn.
 - 🗄️ **Three long-term stores**: what happened, what is true, how to act. AGENT.md is _who_.
 - 🌙 **Dreams consolidate later**: events → summaries, reconciled facts, proposed skills.
@@ -279,14 +292,14 @@ It must also not slip back in through a session summary, which is why the dream 
 💡 _What an agent remembers, it acts on. Govern memory like an action._
 {{< /panel >}}
 
-_Reference_:
-- Sumers, Yao, Narasimhan & Griffiths, Cognitive Architectures for Language Agents (CoALA), TMLR 2024, https://arxiv.org/abs/2309.02427
-- Tulving, Episodic and Semantic Memory, 1972
-- Park et al., Generative Agents: Interactive Simulacra of Human Behavior, UIST 2023, https://arxiv.org/abs/2304.03442
-- Packer et al., MemGPT: Towards LLMs as Operating Systems, 2023, https://arxiv.org/abs/2310.08560
-- Lin et al., Sleep-time Compute: Beyond Inference Scaling at Test-time, Letta, 2025, https://arxiv.org/abs/2504.13171
-- Chhikara et al., Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory, 2025, https://arxiv.org/abs/2504.19413
-- Anthropic, Agent Skills, https://docs.anthropic.com/en/docs/agents-and-tools/agent-skills/overview
+**Further reading**
+- Sumers, Yao, Narasimhan & Griffiths, [_Cognitive Architectures for Language Agents (CoALA)_](https://arxiv.org/abs/2309.02427) TMLR (2024): the four-memory taxonomy.
+- Tulving, [_Episodic and Semantic Memory_](https://psycnet.apa.org/record/1973-08477-007) (1972).
+- Park et al., [_Generative Agents: Interactive Simulacra of Human Behavior_](https://arxiv.org/abs/2304.03442) UIST (2023).
+- Packer et al., [_MemGPT: Towards LLMs as Operating Systems_](https://arxiv.org/abs/2310.08560) (2023).
+- Lin et al., [_Sleep-time Compute: Beyond Inference Scaling at Test-time_](https://arxiv.org/abs/2504.13171) Letta (2025).
+- Chhikara et al., [_Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory_](https://arxiv.org/abs/2504.19413) (2025): ADD / UPDATE / NOOP reconciliation.
+- Anthropic, [_Agent Skills_](https://docs.anthropic.com/en/docs/agents-and-tools/agent-skills/overview) the SKILL.md format and progressive disclosure.
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

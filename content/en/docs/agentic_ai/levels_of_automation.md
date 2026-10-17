@@ -7,195 +7,189 @@ weight: 2
 
 {{< playlist "" "Agentic AI | Full Course" >}}
 
-{{< panel color="gold" title="One Agent, Three Answers" id="three_answers" >}}
-Three requests from the **same customer**, in the **same session**, to our [customer support agent]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#cold_open" >}}):
+{{< panel color="gold" title="Overview" id="overview" >}}
+"Is your agent autonomous?" is one of the most common questions asked about AI agents, and one of the least useful. Real systems are autonomous for some decisions, supervised for others, and fully manual for a few, often within a single conversation.
+These notes replace the yes/no question with a vocabulary borrowed from **human factors engineering**, a field that has studied the division of work between people and machines since the 1950s, in aviation, process control and undersea robotics.
 
-| Request | What happened | Human involved? |
-|---|---|---|
-| "Where's my order?" | Routed by a classifier to a database read. **No model call at all.** | No |
-| Refund · $30.95 | Model proposes, **Gatekeeper allows**, it runs and tells her. | No (but audited) |
-| Refund · $118.84 | Model proposes, **Gatekeeper escalates**, the run pauses. | **Yes, a person must decide** |
-
-Is this agent autonomous? Yes, no and partly, in the same session.
-
-👉 "_Is it autonomous?_" is the wrong question. "**Which decision, at what level?**" is the right one.
+By the end of these notes you should be able to:
+- describe Sheridan's ten levels of automation and the four places a human can sit relative to an automated decision;
+- explain why putting "a human in the loop" can fail, and what makes human oversight meaningful;
+- decide, for each step of a system, whether code, a model or a person should do the work, using three questions;
+- record and justify an autonomy decision so that it can be reviewed and changed deliberately.
 {{< /panel >}}
 
-{{< definition title="A Dial, Not a Switch" >}}
-📘 Most conversations treat autonomy as a **switch**: either a human approves everything, or the agent runs free.
-Every serious automation field abandoned that framing decades ago.
+{{< panel color="blue" title="A Motivating Example: One Agent, Three Answers" id="three_answers" >}}
+A single customer sends our [support agent]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#cold_open" >}}) three requests in one session.
 
-| | |
-|---|---|
-| ❌ **The wrong question** | "_Is your agent autonomous?_" Yes/no hides every decision that matters. |
-| ✅ **The right question** | "_Which decision runs at which level, and why?_" A level per decision, each one justified. |
+The first is "_Where's my order?_". An intent classifier routes it to a database read; **no model is called at all**, and the answer comes straight from the orders table.
+The second is a refund for $30.95. The model proposes it, the [Gatekeeper]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#gatekeeper" >}}) allows it because it is under the limit, it executes, and the customer is told. No person is involved, although every step is recorded.
+The third is a refund for $118.84. The model proposes it in exactly the same way, but the Gatekeeper escalates it. The run pauses, saves its state, and waits for a person to decide.
+
+So is this agent autonomous? For the first request the question doesn't even apply (no model was involved); for the second, yes; for the third, no. The same agent sits at three different points on a spectrum within minutes.
+The useful question is not "_is the agent autonomous?_" but "**which decision runs at which level, and why?**"
+{{< /panel >}}
+
+{{< definition title="Autonomy Is a Dial, Not a Switch" >}}
+Most discussions of agents treat autonomy as a **switch**: either a human approves everything, or the agent runs free. Every serious automation field abandoned that framing long ago, because it hides exactly the decisions that matter.
+A vendor describing a product as "fully autonomous" has told you nothing about its risk.
+
+The alternative is to treat autonomy as a **dial**, set separately for each decision. The vocabulary for the dial comes from **Thomas Sheridan** and **William Verplank** at MIT's Man-Machine Systems Laboratory,
+whose 1978 report for the US Office of Naval Research studied how much a human operator should delegate to a remotely operated undersea vehicle.
 
 💡 **Autonomy is not a property of an agent. It is a property of each decision.**
-
-_Borrowed from human factors engineering_: Sheridan & Verplank, MIT Man-Machine Systems Laboratory, 1978.
 {{< /definition >}}
 
-{{< panel color="blue" title="Sheridan's Ten Levels of Automation" id="sheridan_levels" >}}
-Thomas Sheridan's scale, from work on remotely operated undersea vehicles. Each line continues "_The computer..._":
+{{< panel color="green" title="Sheridan's Ten Levels of Automation" id="sheridan_levels" >}}
+Sheridan's scale describes, for a single decision, how the work is divided between the computer and the human. The form most people cite is the table in Parasuraman, Sheridan and Wickens (2000). Read each line as continuing "_The computer..._":
 
-| Level | The computer... | Band |
-|---|---|---|
-| **10** | Decides everything and acts autonomously, ignoring the human | Off the loop |
-| **9** | Acts, and informs the human only if it decides to | Out of the loop |
-| **8** | Acts, and informs the human only if asked | Out of the loop |
-| **7** | Executes automatically, then necessarily informs the human | Out of the loop |
-| **6** | Allows the human a restricted time to veto before it executes | On the loop |
-| **5** | Executes its suggestion if the human approves | On the loop |
-| **4** | Suggests one alternative | In the loop |
-| **3** | Narrows the selection down to a few | In the loop |
-| **2** | Offers a complete set of decision / action alternatives | In the loop |
-| **1** | Offers no assistance: the human makes every decision and action | In the loop |
-
-💡 The interesting lines aren't 1 vs 10. They are **4 → 5** (_who chooses_) and **6 → 7** (_whether a human sees it before it happens_).
-
-**One inbox, ten levels**: an email assistant at every rung.
-
-| Level | Email assistant |
+| Level | The computer... |
 |---|---|
-| 1 | Nothing: you write and send every email yourself |
-| 2 | Shows every reply template you have saved |
-| 3 | Offers three short replies; you pick one (Gmail **Smart Reply**) |
-| 4 | Drafts one reply; you edit and send it |
-| 5 | Drafts a reply and sends it when you click Approve |
-| 6 | Sends in 10 seconds unless you hit Undo (**Undo Send**) |
-| 7 | Auto-replies, then shows you what it sent |
-| 8 | Files mail to spam; you see it only if you look |
-| 9 | Sends you a digest of only what it thinks matters |
-| 10 | Deletes mail it dislikes, without a trace |
+| **10** | decides everything and acts autonomously, ignoring the human |
+| **9** | acts, and informs the human only if it decides to |
+| **8** | acts, and informs the human only if asked |
+| **7** | executes automatically, then necessarily informs the human |
+| **6** | allows the human a restricted time to veto before it executes |
+| **5** | executes its suggestion if the human approves |
+| **4** | suggests one alternative |
+| **3** | narrows the selection down to a few |
+| **2** | offers a complete set of decision or action alternatives |
+| **1** | offers no assistance: the human makes every decision and takes every action |
 
-Where would you stop being comfortable? Most people say between 6 and 7, and the reason is never "_the model isn't smart enough_". It's **blast radius**: an email you can't take back.
+The interesting boundaries are not the extremes. Between **4 and 5**, the question changes from "_who chooses?_" to "_who approves?_": at level 4 the human still chooses; at level 5 the computer chooses and the human approves.
+Between **6 and 7**, the question is whether a human sees the action **before** it happens or only **after**. Most real risk decisions live at those two boundaries.
+
+**Example: one inbox, ten levels.** Consider an email assistant doing the same job, handling your inbox, at every level.
+At level 1 you write every email yourself. At level 2 it shows your saved reply templates. At level 3 it offers three short replies and you pick one, which is exactly Gmail's **Smart Reply** (Kannan et al., 2016).
+At level 4 it drafts one reply for you to edit. At level 5 it sends its draft when you click _Approve_. At level 6 it sends in ten seconds unless you press _Undo_, which is **Undo Send**.
+At level 7 it auto-replies and then shows you what it sent. At level 8 it files mail to spam, and you only see it if you go and look. At level 9 it sends you a digest of only what it thinks matters. At level 10 it silently deletes mail it dislikes.
+
+Ask yourself at which rung you would stop being comfortable. Most people answer somewhere between 6 and 7, and the reason is never "_the model isn't smart enough_". It is **blast radius**: an email you can't take back.
 {{< /panel >}}
 
-{{< panel color="green" title="Where the Human Sits" id="human_bands" >}}
-Ten levels, four places for the human:
+{{< panel color="orange" title="Where the Human Sits" id="human_bands" >}}
+The ten levels group naturally into four bands, according to what the human actually does. Industry language describes the first three as being _in_, _on_ and _out of_ the loop:
 
 ```mermaid
 graph LR
-    A["In the loop · 1–4<br/>machine advises, human chooses"] --> B["On the loop · 5–6<br/>machine chooses, human approves"]
-    B --> C["Out of the loop · 7–9<br/>machine acts, then reports"]
-    C --> D["Off the loop · 10<br/>machine ignores the human"]
+    A["In the loop · levels 1–4<br/>the machine advises; the human chooses"] --> B["On the loop · levels 5–6<br/>the machine chooses; the human approves or vetoes"]
+    B --> C["Out of the loop · levels 7–9<br/>the machine acts, then reports"]
+    C --> D["Off the loop · level 10<br/>the machine ignores the human"]
 ```
 
-| Band | Levels | Example |
-|---|---|---|
-| 🧑‍💻 **In the loop** | 1–4 | Smart Reply · three route options in a maps app |
-| 👀 **On the loop** | 5–6 | Approve to send · Undo Send |
-| 📬 **Out of the loop** | 7–9 | Auto-reply · spam folder · card payment shown on your statement |
-| 🚫 **Off the loop** | 10 | Silent auto-delete · an agent with the [Gatekeeper off]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#csa_graph" >}}) |
+- **In the loop**: Smart Reply; a maps app offering three routes and letting you choose.
+- **On the loop**: "_Approve to send_"; Undo Send's veto window.
+- **Out of the loop**: an auto-reply; the spam folder; a bank approving your card payment and showing it on your statement later.
+- **Off the loop**: silent auto-delete; in agent terms, our support agent with the [Gatekeeper switched off]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#csa_graph" >}}).
 
-👉 Real systems sit in several bands at once. **Not knowing which decision is in which band is the risk.**
+Real systems sit in several bands at once, and that is perfectly fine. What is not fine is **not knowing which decision sits in which band**.
 {{< /panel >}}
 
 {{< panel color="red" title="The Ironies of Automation" id="ironies" >}}
-Putting a human "in the loop" has failure modes of its own (Lisanne Bainbridge, _Ironies of Automation_, 1983):
+It is tempting to conclude that the safe choice is always to keep a human in the loop. The human-factors literature has a well-known counterweight: Lisanne Bainbridge's 1983 paper _Ironies of Automation_, one of the most cited papers in the field.
 
-- 😴 **Vigilance decays**: people are poor monitors of things that are almost always right → approving whatever the queue shows (automation bias).
-- 📉 **Skill decays**: the reviewer loses the practice the hard cases need → judgement fades with disuse.
-- 🤝 **Bad handovers**: automation hands over exactly the case it can't handle → hardest case, least context.
+Bainbridge's central irony is that automating a system leaves the human with the tasks the designers _couldn't_ automate, which are usually the hardest, while removing the everyday practice that kept the human good at them. Three failure modes follow:
 
-✅ What we do about it in the CSA design:
-- Only **above-limit** refunds reach the queue, so it stays small and meaningful.
-- The escalation carries its **reason and amount**: the reviewer gets evidence, not a yes/no button.
-- We measure **how often reviewers override**. An override rate of zero isn't a safe system; it's a rubber stamp.
+- **Vigilance decays.** People are poor monitors of things that are almost always right. In AI systems this appears as **automation bias**: a reviewer who approves whatever the queue shows.
+- **Skill decays.** A reviewer who only sees rare edge cases loses the judgement those cases require.
+- **Handovers come at the worst moment.** The automation hands over exactly the case it cannot handle, with the least context, at the hardest time.
+
+The design response is to make human oversight **meaningful** rather than ubiquitous. In the support agent, only above-limit refunds reach the review queue, so the queue stays small and each item matters.
+Each escalation carries its **reason and amount**, so the reviewer receives evidence, not just a yes/no button. And the system **measures how often reviewers override** the agent: an override rate of zero does not indicate a safe system; it indicates a rubber stamp.
 
 💡 **A human in the loop is a control only if the human can really say no.**
 {{< /panel >}}
 
-{{< panel color="orange" title="Function Allocation" id="function_allocation" >}}
-How do you choose deterministic code vs. a model vs. a person for each step?
-Paul Fitts' 1951 report on air-traffic control introduced the **Fitts list**: what humans are better at, and what machines are better at.
-The 2026 version needs **three columns**:
+{{< panel color="magenta" title="Function Allocation: Code, Model or Person?" id="function_allocation" >}}
+Choosing a level is one decision; choosing **who does the work** is another. Human factors has a method for this too. In 1951, Paul Fitts edited a report for the US National Research Council on air-navigation and traffic-control systems.
+It contained what became known as the **Fitts list**: what humans are better at, and what machines are better at. The method it introduced, **allocating each function to whoever does it best**, is still how safety-critical systems are designed.
 
-| 🧮 **Code** is better at | 🧠 **Models** are better at | 🧑 **People** are better at |
+With language models, the list needs a third column:
+
+| Code is better at | Models are better at | People are better at |
 |---|---|---|
 | Enumerable rules, exact repetition, proof | Open-ended language, ambiguity, paraphrase | Accountability, novel judgement, saying no |
-| Same input, same output | Where rules break | Nobody can sue a model |
+| Same input, same output | Situations where rules break | Being answerable: nobody can sue a model |
 
-💡 **Allocate each function, not each agent.** "_Should this be an agent?_" is the wrong grain. "_Who should own this node?_" is the right one.
+The key word is **function**. "_Should this be an agent?_" is the wrong grain of question; "_who should own this step?_" is the right one.
 {{< /panel >}}
 
-{{< panel color="magenta" title="Three Questions per Node" id="three_questions" >}}
-The worksheet. Ask all three of **every node**, never of the agent as a whole:
+{{< panel color="cyan" title="Three Questions per Decision" id="three_questions" >}}
+To allocate a step, ask three questions of **each step**, never of the system as a whole.
 
-| Question | Asks | Low → | High → |
-|---|---|---|---|
-| 🔢 **Cardinality** | How many distinct situations must it handle? | Enumerable | Open-ended |
-| 💥 **Blast radius** | Worst plausible cost of a wrong call, and can it be undone? | Cheap, reversible | Money, data, trust |
-| 📜 **Certifiability** | Must it be proven, or is measuring enough? | Proof needed → **code** | Pass rate enough → **model** |
+1. **Cardinality.** How many distinct situations must this step handle? If you can enumerate them, code wins: it is cheaper, faster and provable. If you cannot (free-form customer language, the open web), a model earns its place.
+2. **Blast radius.** What is the worst plausible cost of a wrong call, and can it be undone? A clumsy sentence is cheap and fixable. Money leaving, data leaking or trust lost are not.
+3. **Certifiability.** Must the behaviour be **proven**, or is **measuring** it enough? An auditor or regulator asks for proof; a product manager may accept a pass rate. This is the question teams most often forget, and it is the one that decides what _must_ be code.
 
-**The decision rule.** Certifiability comes from avionics: under **DO-178C** Level A, every decision path must be proven.
-A rule can be proven (same input, same output); a model can only be **measured** (eval sets, pass rates, confidence intervals).
+The third question comes from avionics. Under **DO-178C**, the standard for airborne software, the most critical software (Level A) must have every decision path demonstrated.
+A rule can be proven: the same input always gives the same output. A model cannot: the same input gives a distribution of outputs, which can be measured with eval sets and confidence intervals but never proven.
 
-| Example | Cardinality · Blast · Certify | Decision |
+Applying the three questions yields a decision rule:
+
+| Example | Cardinality · blast radius · certifiability | Who does the work |
 |---|---|---|
-| Sales tax | Low · Low · Measure | **Code**: cheaper, faster |
-| Interest calculation, autopilot logic | Low · High · Prove | **Code**, certified |
-| Product recommendations | High · Low · Measure | **Model**, evaluated |
-| Claim payouts, loans, refunds | High · High · Prove the limit | **Split**: model proposes, code authorises, human above threshold |
+| Sales tax | Low · low · measure | **Code**: it is cheaper and faster |
+| Interest calculation, autopilot logic | Low · high · prove | **Code**, certified |
+| Product recommendations | High · low · measure | **A model**, evaluated |
+| Claim payouts, loans, refunds | High · high · prove the limit | **Split**: the model proposes, code authorises, a person decides above a threshold |
+
+The last row is the important one. When a decision is both open-ended and high-stakes, no single owner works, so we split it: the open-ended part (estimating the amount) goes to the model and is measured; the limit check goes to code and is proven.
+That split is exactly the [Gatekeeper pattern]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#gatekeeper" >}}) from the first notes.
 
 💡 **Certify the rule, measure the model: the model proposes, the rule authorises.**
-
-[Read more about measuring models with Evals]({{<ref "/docs/agentic_ai/evals" >}})
 {{< /panel >}}
 
-{{< panel color="cyan" title="Worked Example: An Insurance Claim" id="insurance_example" >}}
-Every step answers two separate questions: **who does the work** (code, model or person), and **what the human does** (the Sheridan level).
+{{< panel color="navy" title="Worked Example: An Insurance Claim" id="insurance_example" >}}
+Consider a car-insurance claims pipeline, outside our codebase but typical of how mature insurers divide the work. For each step we answer two separate questions: **who does the work** (code, a model or a person, from the three questions) and **what the human does** (the Sheridan level).
 
 | Step | Card. · Blast · Certify | Who does the work | Level: the human's role |
 |---|---|---|---|
-| Check policy is active | Low · High · Prove | Code: a lookup | **8** · nothing; logged |
-| Read claim documents | High · Med · Measure | Model reads photos, PDFs | **7** · sees it on the file |
-| Flag likely fraud | Med · High · Measure | Model scores the risk | **4** · investigator decides |
-| Payout, under limit | High · High · Measure | Model proposes, code checks | **7** · paid, then told |
-| Payout, over limit | High · High · Measure | Model proposes, code checks | **5** · adjuster approves |
-| Write customer letter | | Model drafts, code checks | **7** · copy on file |
-| Pay the claim | Low · High · Prove | Code, idempotent | **7** · paid, then told |
+| Check the policy is active | Low · high · prove | Code: a lookup | **8**: nothing per claim; logged for audit |
+| Read the claim documents | High · medium · measure | A model reads photos and PDFs | **7**: the adjuster sees it on the file |
+| Flag likely fraud | Medium · high · measure | A model scores the risk | **4**: an investigator decides |
+| Estimate the payout, under the limit | High · high · measure | A model proposes; code checks the limit | **7**: paid, then the customer is told |
+| Estimate the payout, over the limit | High · high · measure | A model proposes; code checks the limit | **5**: an adjuster approves |
+| Write the customer letter | Medium · medium · measure | A model drafts; code checks amounts and dates | **7**: a copy goes on file |
+| Pay the claim | Low · high · prove | Code, idempotent | **7**: paid, then the customer is told |
 
-👉 **Code or model is _who works_. The level is _what the human does_.**
-Deterministic code that pays automatically and then notifies is level 7, exactly like a model doing the same.
-
-💡 The same step (estimate the payout) runs at **two levels depending on the amount**: the same move as the CSA's $50 refund limit.
+Two lessons stand out. First, the level describes the **human's role**, not the technology: deterministic code that pays a claim and then notifies is level 7, exactly like a model doing the same.
+Second, the same step, estimating the payout, runs at **two different levels depending on the amount**. That is the same move as the support agent's $50 refund limit.
 {{< /panel >}}
 
-{{< panel color="navy" title="The Autonomy Decision Record" id="adr" >}}
-An artifact to take to work: one record per decision that has a level, kept next to the code (in the spirit of an Architecture Decision Record).
+{{< panel color="green" title="Recording the Decision: The Autonomy Decision Record" id="adr" >}}
+A level that exists only in someone's head will drift. A practical artifact is an **Autonomy Decision Record**, written in the spirit of an Architecture Decision Record: one record per decision that has a level, kept next to the code.
 
-| Field | Worked example · claim payout |
+| Field | Worked example: claim payout |
 |---|---|
 | **Decision** | Pay a car-damage claim |
 | **Cardinality** | High to estimate (any photo, any damage); low to pay |
 | **Blast radius** | High: money out, and fraud exposure |
-| **Certifiability** | Payment rule provable; the estimate only measurable |
-| **Level** | 7 under the threshold · 5 above |
+| **Certifiability** | The payment rule is provable; the estimate is only measurable |
+| **Level** | 7 under the threshold; 5 above it |
 | **Human** | A claims adjuster, through a review queue |
-| **Evidence** | Estimate evals vs adjusters · payment-rule tests |
+| **Evidence** | Estimate evals against adjusters' decisions; tests on the payment rule |
 | **Moves the dial** | The risk committee changes the threshold |
 
-👉 **No evidence, no level.** If you can't fill in "_evidence_" or "_moves the dial_", you don't have a level; you have a default.
+The last three rows do most of the work. "_Human_" must name a role with a queue, not just "_a human_". "_Evidence_" says what keeps the level honest ([evals]({{<ref "/docs/agentic_ai/evals" >}}) for the measured part, tests for the proven part).
+"_Moves the dial_" says who may change the level. If you cannot fill in those rows, you do not have a level; you have a default.
 {{< /panel >}}
 
-{{< panel color="blue" title="Our Two Agents on the Ladder" id="two_agents" >}}
-The same three questions, applied to the course's two reference agents:
+{{< panel color="orange" title="Our Two Agents, and Where the Dial Lives" id="two_agents" >}}
+The course uses two reference agents with very different profiles, and the same method gives them very different shapes.
 
-| | **CSA** (customer support) · human **before the act** | **RA** (research agent) · human **before the run** |
-|---|---|---|
-| Nature | Moves money: high blast, narrow choices | Reads the web: bounded blast, vast choices |
-| Decisions | Status reads: code, no model · Refund ≤ $50: model proposes, code allows → **7** · Refund > $50: waits for a person → **5** | You approve the contract (brief + rubric) → **5** · Plans, searches, writes alone, within budgets → **7** · COMPLETE / PARTIAL verdict decided by code |
+The **customer support agent (CSA)** moves money, so its blast radius is high and its choices are narrow. Its human sits **before the act**. Status questions are answered from the database with no model call.
+Refunds up to $50 are proposed by the model and allowed by code (level 7); refunds above $50 wait for a person (level 5). Every step that moves money is code; the model only ever proposes.
+
+The **research agent (RA)** reads the web, so its blast radius is bounded but its choices are vast. Its human sits **before the run**: you approve a contract (the brief and the acceptance rubric), which is then frozen (level 5).
+After that it plans, searches and writes on its own, within budgets (level 7). Whether the result is COMPLETE or PARTIAL is decided by code, not by the model.
 
 💡 **Approve the action when acts are costly. Approve the contract when the search is vast.**
 
-**The dial is configuration**: if the level isn't in config, it isn't a decision; it's an accident.
+Finally, a level is only real if it lives in **configuration**. Three kinds of setting move the dial:
+- a **threshold** (auto-pay under $2,000) moves the line between levels 7 and 5;
+- a **window** (undo within 10 seconds) is what makes level 6 level 6;
+- a **fence** (step caps, budgets, confidence cut-offs) bounds how far a level-7 run may go ([Loop Control]({{<ref "/docs/agentic_ai/guardrails_loop_control_state/#loop_control" >}})).
 
-- 🎚️ **The threshold** (auto-pay under $2,000): moves the line between level 7 and level 5.
-- ⏱️ **The window** (undo within 10 seconds): turns level 7 into level 6.
-- 🚧 **The fence** (step caps, budgets, confidence cut-offs): how far a level-7 run may go.
-
-[Read more about loop budgets and approval gates]({{<ref "/docs/agentic_ai/guardrails_loop_control_state" >}})
+Each of these is an operator decision, audited, and never something the model can reach. If the level isn't in configuration, it isn't a decision; it's an accident.
 {{< /panel >}}
 
 {{< question >}}
@@ -203,27 +197,26 @@ A refund agent sends every refund, of any size, to a human for approval. Is that
 {{< /question >}}
 
 {{< answer >}}
-Usually **not**. A queue full of trivial approvals triggers the **ironies of automation**: vigilance decays and reviewers rubber-stamp.
-
-Allocate per decision instead: small, reversible refunds at **level 7** (model proposes, code allows, audited), large ones at **level 5** with the reason and amount attached, and track the reviewers' override rate.
+Usually **not**. A queue full of trivial approvals invites the **ironies of automation**: vigilance decays and reviewers rubber-stamp, so the human check stops being a check.
+A better design allocates per decision: small, reversible refunds at **level 7** (the model proposes, code allows, everything audited) and large ones at **level 5**, with the reason and amount attached, while tracking the reviewers' override rate.
 {{< /answer >}}
 
-{{< panel color="gold" title="Recap" id="recap" >}}
-- 🎚️ **Autonomy is a dial.** Sheridan's ten levels, set per decision.
-- 🧑‍🔧 **Code or model is who works. The level is what the human does.**
-- ❓ **Three questions per node.** Cardinality, blast radius, certifiability.
-- ✂️ **Split high-stakes decisions.** Model proposes, code authorises, human above the limit.
+{{< panel color="gold" title="Summary" id="recap" >}}
+- **Autonomy is a dial**, set per decision. Sheridan's ten levels give the vocabulary; the boundaries at 4→5 (who chooses) and 6→7 (does a human see it first) carry most of the risk.
+- **Code or model is who works; the level is what the human does.** Allocate each function using cardinality, blast radius and certifiability.
+- **Split high-stakes, open-ended decisions**: the model proposes, code authorises, a person decides above a threshold.
+- **Human oversight must be meaningful** to be a control, and every level should be written down, evidenced, and held in configuration.
 
 💡 _Don't ask whether your agent is autonomous. Ask which decisions are, at what level, and who moves the dial._
 {{< /panel >}}
 
-_Reference_:
-- Sheridan & Verplank, Human and Computer Control of Undersea Teleoperators, MIT Man-Machine Systems Laboratory, 1978
-- Parasuraman, Sheridan & Wickens, A Model for Types and Levels of Human Interaction with Automation, IEEE Trans. SMC-A 30(3), 2000, https://doi.org/10.1109/3468.844354
-- Bainbridge, Ironies of Automation, Automatica 19(6), 1983, https://doi.org/10.1016/0005-1098(83)90046-8
-- Fitts (ed.), Human Engineering for an Effective Air-Navigation and Traffic-Control System, National Research Council, 1951
-- Kannan et al., Smart Reply: Automated Response Suggestion for Email, KDD 2016, https://arxiv.org/abs/1606.04870
-- RTCA DO-178C / EUROCAE ED-12C, Software Considerations in Airborne Systems and Equipment Certification, 2011
+**Further reading**
+- Sheridan & Verplank, [_Human and Computer Control of Undersea Teleoperators_](https://apps.dtic.mil/sti/citations/ADA057655), MIT Man-Machine Systems Laboratory (1978): the original ten-level scale.
+- Parasuraman, Sheridan & Wickens, [_A Model for Types and Levels of Human Interaction with Automation_](https://doi.org/10.1109/3468.844354), IEEE Trans. SMC-A (2000): the table most people cite.
+- Bainbridge, [_Ironies of Automation_](https://doi.org/10.1016/0005-1098%2883%2990046-8), Automatica (1983): why human oversight can fail.
+- Fitts (ed.), [_Human Engineering for an Effective Air-Navigation and Traffic-Control System_](https://skybrary.aero/bookshelf/human-engineering-effective-air-navigation-and-traffic-control-system), National Research Council (1951): the origin of function allocation.
+- Kannan et al., [_Smart Reply: Automated Response Suggestion for Email_](https://arxiv.org/abs/1606.04870), KDD (2016): a real level-3 system.
+- RTCA, [_DO-178C: Software Considerations in Airborne Systems and Equipment Certification_](https://www.rtca.org/do-178/) (2011); see also the [overview on Wikipedia](https://en.wikipedia.org/wiki/DO-178C).
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

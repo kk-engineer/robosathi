@@ -7,6 +7,19 @@ weight: 13
 
 {{< playlist "" "Agentic AI | Full Course" >}}
 
+{{< panel color="gold" title="Overview" id="overview" >}}
+A non-deterministic agent cannot be reproduced; it can only be recorded. The same input may take a different path tomorrow, so if a turn was not recorded when it happened, it is gone.
+**Observability** is the practice of recording enough, in the right shape, to answer three different questions: what happened in this turn, why it happened, and how the whole fleet is doing.
+
+These notes build that practice around a single trace identifier, compare a homegrown design with the OpenTelemetry standard and its emerging conventions for generative AI, and describe analytics as a platform contract from which dashboards are generated.
+
+By the end of these notes you should be able to:
+- explain traces and spans, and why one identifier must join logs, facts, traces and audit records;
+- compare a homegrown telemetry design with the OpenTelemetry GenAI conventions, and plan a migration;
+- define fleet metrics once and generate dashboards from them;
+- set rules for exporting traces safely to a third-party tool.
+{{< /panel >}}
+
 {{< panel color="gold" title="One Id, Three Views" id="cold_open" >}}
 Run one customer turn and copy its **trace id**. Then:
 1. Search the log files for that id: the whole turn appears, across every subsystem's file.
@@ -216,7 +229,7 @@ Start at the **fleet view**: p95/p99 latency, `fallback_rate` and `loop_abort_ra
 Then pick a slow turn and follow its **trace id**: the run tree shows which span dominates (a retry storm, a fallback model, a long tool call, extra loop iterations), and the **logs** for the same id explain why.
 {{< /answer >}}
 
-{{< panel color="gold" title="Recap" id="recap" >}}
+{{< panel color="gold" title="Summary" id="recap" >}}
 - 🆔 **One turn, one trace id**: W3C-shaped, on every log line, fact, run and audit row.
 - 🧾 **Logs are the record**: per subsystem, structured, never swallowing a failure.
 - 🔌 **OTel**: the same data under our names; the gaps are the wire and propagation.
@@ -225,12 +238,12 @@ Then pick a slow turn and follow its **trace id**: the run tree shows which span
 💡 _Record at choke points, and every view is one adapter away._
 {{< /panel >}}
 
-_Reference_:
-- W3C, Trace Context Recommendation, https://www.w3.org/TR/trace-context/
-- OpenTelemetry concepts: traces and spans, https://opentelemetry.io/docs/concepts/signals/traces/
-- OpenTelemetry Semantic Conventions for Generative AI, https://opentelemetry.io/docs/specs/semconv/gen-ai/
-- Rill Data, https://www.rilldata.com/
-- LangSmith observability documentation, https://docs.smith.langchain.com/
+**Further reading**
+- W3C, [_Trace Context_](https://www.w3.org/TR/trace-context/) Recommendation.
+- OpenTelemetry, [_Traces and spans_](https://opentelemetry.io/docs/concepts/signals/traces/)
+- OpenTelemetry, [_Semantic Conventions for Generative AI_](https://opentelemetry.io/docs/specs/semconv/gen-ai/)
+- Rill Data, [_Rill_](https://www.rilldata.com/) BI-as-code dashboards on DuckDB.
+- LangChain, [_LangSmith documentation_](https://docs.smith.langchain.com/)
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

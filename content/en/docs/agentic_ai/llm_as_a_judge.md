@@ -8,6 +8,19 @@ math: true
 
 {{< playlist "" "Agentic AI | Full Course" >}}
 
+{{< panel color="gold" title="Overview" id="overview" >}}
+Many of the qualities we care about in an agent's output have no deterministic test: is the explanation accurate, are the trade-offs stated, is the tone right? People can judge these, but slowly. A language model can judge thousands of outputs in minutes.
+The catch is that a judge is itself a model, with biases, drift and its own hallucinations.
+
+These notes treat an LLM judge the way psychometrics treats any measuring instrument: something to be designed carefully, calibrated against trusted raters, and trusted only as far as it has been measured.
+
+By the end of these notes you should be able to:
+- name the four common judge biases and the design fix for each;
+- compute Cohen's kappa and explain why raw agreement can mislead;
+- apply reliability and validity to judge design, and write a rubric like a test;
+- choose between pairwise and absolute judging, and design an independent auditor.
+{{< /panel >}}
+
 {{< definition title="LLM as a Judge" >}}
 📘 **LLM-as-a-judge** means asking a model to decide something about another model's output: does it meet a criterion, is it faithful to its evidence, which of two answers is better?
 
@@ -192,7 +205,7 @@ Strong **position bias**: the judge mostly prefers whichever answer appears in o
 Judge every pair **both ways**, count only **consistent** preferences as wins (inconsistent ones are ties), and report the win rate **with its standard error** so readers can see whether the difference exceeds sample noise.
 {{< /answer >}}
 
-{{< panel color="gold" title="Recap" id="recap" >}}
+{{< panel color="gold" title="Summary" id="recap" >}}
 - 🔭 **A judge is an instrument**: biased, drifting; calibrate before you trust it.
 - 🎲 **Cohen's κ removes chance**: 90% agreement can be κ = 0. Our bar: 0.6.
 - 📐 **Psychometrics**: reliability and validity; write the rubric like a test.
@@ -201,17 +214,18 @@ Judge every pair **both ways**, count only **consistent** preferences as wins (i
 💡 _A judge that has never been measured against another rater is an opinion with a temperature setting._
 {{< /panel >}}
 
-_Reference_:
-- Zheng et al., Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena, NeurIPS 2023, https://arxiv.org/abs/2306.05685
-- Wang et al., Large Language Models are not Fair Evaluators, 2023, https://arxiv.org/abs/2305.17926
-- Panickssery et al., LLM Evaluators Recognize and Favor Their Own Generations, 2024, https://arxiv.org/abs/2404.13076
-- Cohen, A Coefficient of Agreement for Nominal Scales, Educational and Psychological Measurement, 1960, https://doi.org/10.1177/001316446002000104
-- Landis & Koch, The Measurement of Observer Agreement for Categorical Data, Biometrics 1977, https://doi.org/10.2307/2529310
-- Williamson, Xi & Breyer, A Framework for Evaluation and Use of Automated Scoring, EM:IP 2012, https://doi.org/10.1111/j.1745-3992.2011.00223.x
-- AERA, APA & NCME, Standards for Educational and Psychological Testing, 2014
-- Thurstone, A Law of Comparative Judgment, Psychological Review 1927, https://doi.org/10.1037/h0070288
-- Chiang et al., Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference, 2024, https://arxiv.org/abs/2403.04132
-- Bradley & Terry, Rank Analysis of Incomplete Block Designs, Biometrika 1952, https://doi.org/10.2307/2334029
+**Further reading**
+- Zheng et al., [_Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena_](https://arxiv.org/abs/2306.05685) NeurIPS (2023).
+- Wang et al., [_Large Language Models are not Fair Evaluators_](https://arxiv.org/abs/2305.17926) (2023): position bias.
+- Panickssery et al., [_LLM Evaluators Recognize and Favor Their Own Generations_](https://arxiv.org/abs/2404.13076) (2024).
+- Cohen, [_A Coefficient of Agreement for Nominal Scales_](https://doi.org/10.1177/001316446002000104) (1960).
+- Landis & Koch, [_The Measurement of Observer Agreement for Categorical Data_](https://doi.org/10.2307/2529310) Biometrics (1977).
+- Williamson, Xi & Breyer, [_A Framework for Evaluation and Use of Automated Scoring_](https://doi.org/10.1111/j.1745-3992.2011.00223.x) EM:IP (2012).
+- AERA, APA & NCME, [_Standards for Educational and Psychological Testing_](https://www.testingstandards.net/) (2014).
+- Thurstone, [_A Law of Comparative Judgment_](https://doi.org/10.1037/h0070288) Psychological Review (1927).
+- Chiang et al., [_Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference_](https://arxiv.org/abs/2403.04132) (2024).
+- Bradley & Terry, [_Rank Analysis of Incomplete Block Designs_](https://doi.org/10.2307/2334029) Biometrika (1952).
+- Liu et al., [_G-Eval: NLG Evaluation using GPT-4 with Better Human Alignment_](https://arxiv.org/abs/2303.16634) EMNLP (2023).
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

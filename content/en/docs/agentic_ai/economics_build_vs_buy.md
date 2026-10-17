@@ -8,9 +8,20 @@ math: true
 
 {{< playlist "" "Agentic AI | Full Course" >}}
 
-{{< panel color="gold" title="Fourteen Episodes of Things We Built" id="cold_open" >}}
+{{< panel color="gold" title="Overview" id="overview" >}}
+This course built a gatekeeper, guardrails, memory governance, hallucination checks and an evaluation harness. Should a production team build all of that? Mostly not. Some of it, absolutely.
+These notes give the tools to tell which: a per-component framing with four options (build, adopt, buy, partner), the arithmetic of ROI, payback, NPV, total cost of ownership and break-even volume, and the non-financial factors that often decide the matter.
+
+By the end of these notes you should be able to:
+- frame build-versus-buy per component rather than per agent;
+- compute ROI, payback, NPV and a break-even volume, and interpret them;
+- explain why the falling price of model capability changes what is worth building;
+- recommend what to build, adopt and buy for an agent, and justify it.
+{{< /panel >}}
+
+{{< panel color="gold" title="A Motivating Question" id="cold_open" >}}
 This course built a Gatekeeper, guardrails, memory governance, hallucination checks, an eval harness. Should _you_ build all of that?
-**Mostly, no. Some of it, absolutely.** This episode is about telling which, with numbers.
+**Mostly, no. Some of it, absolutely.** These notes are about telling which, with numbers.
 {{< /panel >}}
 
 {{< definition title="Four Options, Per Component" >}}
@@ -75,7 +86,7 @@ The three numbers a CFO will ask for, over a stated horizon (e.g. 3 years):
 | Leaving | Nothing to leave | **Exit cost**: data, rewrites |
 | Always | **Opportunity cost**: what those engineers didn't build | **Vendor risk** |
 
-**Costs specific to agents**, each an instance of an earlier episode:
+**Costs specific to agents**, each an instance of an earlier chapter:
 
 | Cost | Why it recurs |
 |---|---|
@@ -239,7 +250,7 @@ A team wants to fine-tune its own model to save inference cost on a support agen
 - **Is it differentiating?** Probably not: the model is commodity. The money is better spent on what the curve doesn't touch (authority rules, domain checks, eval data) and on an adapter that keeps switching to a cheaper hosted model a config change.
 {{< /answer >}}
 
-{{< panel color="gold" title="Recap" id="recap" >}}
+{{< panel color="gold" title="Summary" id="recap" >}}
 - 🧩 **Decide per component**: build, adopt, buy or partner.
 - 🧮 **Know the arithmetic**: ROI, payback, NPV, TCO, and break-even \(Q^*\).
 - 🔨 **Build the control plane and the data**: their value rises as tokens get cheaper.
@@ -248,10 +259,10 @@ A team wants to fine-tune its own model to save inference cost on a support agen
 💡 _You can rent intelligence. You can't rent accountability._
 {{< /panel >}}
 
-_Reference_:
-- MIT NANDA, The GenAI Divide: State of AI in Business 2025
-- Fortune, MIT report: 95% of generative AI pilots at companies are failing, 18 Aug 2025
-- a16z, Welcome to LLMflation: LLM inference cost is going down fast, Nov 2024
+**Further reading**
+- MIT NANDA, [_The GenAI Divide: State of AI in Business 2025_](https://www.artificialintelligence-news.com/wp-content/uploads/2025/08/ai_report_2025.pdf) (2025), preliminary and survey-based.
+- Fortune, [_MIT report: 95% of generative AI pilots at companies are failing_](https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/) (18 Aug 2025).
+- Appenzeller (a16z), [_Welcome to LLMflation: LLM inference cost is going down fast_](https://a16z.com/llmflation-llm-inference-cost/) (Nov 2024).
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

@@ -8,6 +8,19 @@ math: true
 
 {{< playlist "" "Agentic AI | Full Course" >}}
 
+{{< panel color="gold" title="Overview" id="overview" >}}
+The model is the least reliable component of an agent, and it is surrounded by networks, quotas and databases that fail too. A single turn may make twenty calls; if each succeeds 99% of the time, one turn in five meets a failure somewhere.
+At scale, failure is not an exception to handle occasionally; it is the normal case to design for.
+
+These notes take the stability patterns from Michael Nygard's _Release It!_ (timeouts, retries, circuit breakers, bulkheads), add idempotency and sagas for actions that must never happen twice or half-way, and show how the order in which the patterns are composed is itself the design.
+
+By the end of these notes you should be able to:
+- explain with Little's law why an unbounded wait can take down a whole system;
+- design retries with jittered backoff, and know when not to retry;
+- use circuit breakers and bulkheads to contain a failing dependency;
+- make side effects idempotent and multi-step changes compensable with sagas.
+{{< /panel >}}
+
 {{< panel color="gold" title="It Does Not Pay Twice" id="cold_open" >}}
 A customer asks the [CSA]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#cold_open" >}}) to refund a $30.95 T-shirt (under the limit). The executor's trace shows an **idempotency key** for the call, and the **saga** steps that issue the refund.
 Then the customer asks again: "_Refund order 10535._" It **does not pay twice**: the order is already refunded, and a retried call under the same key **replays its first result**.
@@ -33,7 +46,7 @@ And if a backup model answered any call, the trace says which, and why.
 {{< /definition >}}
 
 {{< panel color="red" title="Failures Crack and Spread" id="cascades" >}}
-The intellectual source for this episode is Michael Nygard's _Release It!_ (2007; 2nd ed. 2018). Its central argument: integration points are the number-one killer in production;
+The intellectual source for these notes is Michael Nygard's _Release It!_ (2007; 2nd ed. 2018). Its central argument: integration points are the number-one killer in production;
 a failure in one place **cracks** into others (cascading failures); and **the worst failure is not the error but the hang**.
 
 ```mermaid
@@ -249,7 +262,7 @@ A **retry storm**: retries without **jitter** (so clients retry in synchronised 
 Fix: full-jitter backoff with a cap, a breaker per dependency, retries counted against the quota, and refuse retries of side-effecting calls that carry no idempotency key.
 {{< /answer >}}
 
-{{< panel color="gold" title="Recap" id="recap" >}}
+{{< panel color="gold" title="Summary" id="recap" >}}
 - ⏱️ **Bound every wait** (Little's law); retry with jitter, never without a key.
 - 🔌 **Breakers and bulkheads** stop one failing dependency from taking the rest.
 - 🔑 **Idempotency keys the intent**; sagas undo in reverse, irreversible steps last.
@@ -258,14 +271,14 @@ Fix: full-jitter backoff with a cap, a breaker per dependency, retries counted a
 💡 _The dangerous failure is not the call that errors; it's the call that never returns._
 {{< /panel >}}
 
-_Reference_:
-- Nygard, Release It! Design and Deploy Production-Ready Software, 2nd ed., 2018
-- Little, A Proof for the Queuing Formula L = λW, Operations Research 1961
-- Metcalfe & Boggs, Ethernet: Distributed Packet Switching for Local Computer Networks, CACM 1976
-- Brooker, Exponential Backoff and Jitter, AWS Architecture Blog, 2015
-- Stripe API reference, Idempotent requests
-- Garcia-Molina & Salem, Sagas, SIGMOD 1987
-- Dean & Barroso, The Tail at Scale, CACM 2013
+**Further reading**
+- Nygard, [_Release It! Design and Deploy Production-Ready Software, 2nd ed._](https://pragprog.com/titles/mnee2/release-it-second-edition/) (2018).
+- Little, [_A Proof for the Queuing Formula L = λW_](https://doi.org/10.1287/opre.9.3.383) Operations Research (1961); see also [Little's law](https://en.wikipedia.org/wiki/Little%27s_law).
+- Metcalfe & Boggs, [_Ethernet: Distributed Packet Switching for Local Computer Networks_](https://doi.org/10.1145/360248.360253) CACM (1976).
+- Brooker, [_Exponential Backoff and Jitter_](https://aws.amazon.com/blogs/architecture/exponential-backoff-and-jitter/) AWS Architecture Blog (2015).
+- Stripe, [_Idempotent requests_](https://docs.stripe.com/api/idempotent_requests) API reference.
+- Garcia-Molina & Salem, [_Sagas_](https://doi.org/10.1145/38713.38742) SIGMOD (1987).
+- Dean & Barroso, [_The Tail at Scale_](https://doi.org/10.1145/2408776.2408794) CACM (2013).
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
