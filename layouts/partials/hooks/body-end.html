@@ -17,6 +17,39 @@
 </script>
 {{ end }}
 
+{{/* Mermaid diagrams: load only on pages that contain a ```mermaid block */}}
+{{ if findRE "```mermaid" .RawContent 1 }}
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.esm.min.mjs';
+mermaid.initialize({
+  startOnLoad: false,
+  theme: 'base',
+  themeVariables: {
+    fontFamily: 'Inter, ui-sans-serif, system-ui, sans-serif',
+    fontSize: '14px',
+    primaryColor: '#fdf9f4',
+    primaryBorderColor: '#B8945A',
+    primaryTextColor: '#1c1d1f',
+    lineColor: '#9a7340',
+    secondaryColor: '#f5ede0',
+    tertiaryColor: '#ffffff'
+  }
+});
+// Render one by one with our own ids: mermaid's default ids are time-based and can collide.
+const blocks = document.querySelectorAll('pre.mermaid, div.mermaid');
+for (let i = 0; i < blocks.length; i++) {
+  const el = blocks[i];
+  try {
+    const { svg } = await mermaid.render('rs-mermaid-' + i, el.textContent);
+    el.innerHTML = svg;
+    el.setAttribute('data-processed', 'true');
+  } catch (e) {
+    console.error('Mermaid render failed', e);
+  }
+}
+</script>
+{{ end }}
+
 {{ if hugo.IsProduction }}
 <script>
 (function() {

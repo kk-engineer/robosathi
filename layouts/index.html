@@ -4,8 +4,60 @@
 {{- $mlPage := site.GetPage "/docs/machine_learning" -}}
 {{- $dlPage := site.GetPage "/docs/deep_learning" -}}
 {{- $nlpPage := site.GetPage "/docs/natural_language_processing" -}}
+{{- $agenticPage := site.GetPage "/docs/agentic_ai" -}}
+
+{{- $capabilities := slice
+  (dict "label" "AI Agents" "path" "/docs/agentic_ai/what_is_an_ai_agent")
+  (dict "label" "Workflow Patterns" "path" "/docs/agentic_ai/workflow_design_patterns")
+  (dict "label" "Agentic Patterns" "path" "/docs/agentic_ai/agentic_design_patterns")
+  (dict "label" "RAG" "path" "/docs/agentic_ai/rag")
+  (dict "label" "Guardrails" "path" "/docs/agentic_ai/guardrails_loop_control_state")
+  (dict "label" "Context Engineering" "path" "/docs/agentic_ai/context_management")
+  (dict "label" "Memory" "path" "/docs/agentic_ai/memory_management")
+  (dict "label" "Hallucination Checks" "path" "/docs/agentic_ai/hallucination_checks")
+  (dict "label" "LLM-as-a-Judge" "path" "/docs/agentic_ai/llm_as_a_judge")
+  (dict "label" "Agent Security" "path" "/docs/agentic_ai/agent_security_principles")
+  (dict "label" "Evals" "path" "/docs/agentic_ai/evals")
+  (dict "label" "Observability" "path" "/docs/agentic_ai/observability_analytics")
+  (dict "label" "MCP" "path" "/docs/agentic_ai/model_context_protocol")
+  (dict "label" "Resilience" "path" "/docs/agentic_ai/system_design_resilience")
+  (dict "label" "Build vs Buy" "path" "/docs/agentic_ai/economics_build_vs_buy")
+}}
+
+{{- $services := slice
+  (dict
+    "eyebrow" "Audit"
+    "title" "AI Readiness & Architecture Audit"
+    "description" "A deep-dive code and infrastructure review to identify latency, token waste, hallucination vulnerabilities, and security flaws in existing setups."
+    "icon" "fa-magnifying-glass-chart"
+    "ideal" "Teams with an AI feature in production that is slow, costly, or unreliable."
+  )
+  (dict
+    "eyebrow" "Build"
+    "title" "Production-Grade RAG & Knowledge Systems"
+    "description" "Building secure, enterprise-grade Retrieval-Augmented Generation systems that don't leak data and handle complex context retrieval accurately."
+    "icon" "fa-database"
+    "ideal" "Enterprises that need answers grounded in private, permissioned data."
+  )
+  (dict
+    "eyebrow" "Advise"
+    "title" "Fractional AI Architecture Retainer"
+    "description" "Ongoing advisory oversight, code reviews, and roadmap planning for companies that want elite AI leadership without paying a full-time executive salary."
+    "icon" "fa-compass-drafting"
+    "ideal" "Startups and scale-ups that need senior AI architecture judgement on tap."
+  )
+}}
 
 {{- $courses := slice
+  (dict
+    "eyebrow" "Agents & LLM Systems"
+    "title" "Agentic AI"
+    "description" "Design production AI agents: workflow and agentic patterns, RAG, memory, guardrails, evals, observability, MCP, and security."
+    "href" (cond $agenticPage $agenticPage.RelPermalink (relURL "/docs/"))
+    "accent" "agentic"
+    "badge" "New"
+    "icon" "fa-robot"
+  )
   (dict
     "eyebrow" "Large Language Model (LLM)"
     "title" "Natural Language Processing"
@@ -40,74 +92,160 @@
   )
 }}
 
-<!-- Hero Section -->
-<section class="rs-hero">
-  <div class="rs-hero__inner">
-    <p class="rs-eyebrow">Free · Open Source · Rigorous</p>
-    <h1 class="rs-h1">
-      Master AI Engineering<br>
-      <em>from first principles</em>
-    </h1>
-    <p class="rs-sub">
-      130+ articles · 71+ hours of video · a structured path from<br>
-      Maths foundations to Transformer architecture (LLMs).
-    </p>
-    <div class="rs-cta-row">
-      <a href="/docs/" class="rs-btn-primary">Start Learning — Free</a>
-      <a class="rs-btn-ghost" href="https://www.youtube.com/@RoboSathi/courses" target="_blank" rel="noopener">
-        Watch Courses <i class="fab fa-youtube ms-2" style="color: #ff0000;"></i>
-      </a>
+<!-- Hero: split layout -->
+<section class="rs-hero rs-hero--split">
+  <div class="rs-hero-split">
+    <div class="rs-hero-split__text">
+      <p class="rs-eyebrow">Agentic AI Systems Architecture Firm</p>
+      <h1 class="rs-h1">Agentic AI,<br><em>architected for production</em></h1>
+      <p class="rs-sub">We design Agentic AI systems, and show you where and how agents or LLM workflows fit into your new or existing systems.</p>
+      <div class="rs-hero-split__cta">
+        <a href="#contact" class="rs-btn-primary">Let's Talk <i class="fas fa-arrow-right ms-2" aria-hidden="true"></i></a>
+        <button type="button" class="rs-email-chip rs-copy-email" data-email="contact@robosathi.com" title="Copy email">
+          <span>contact@robosathi.com</span><i class="far fa-copy" aria-hidden="true"></i>
+        </button>
+      </div>
     </div>
 
-    <div class="rs-stats">
-      <div class="rs-stat">
-        <span class="rs-stat__num">130+</span>
-        <span class="rs-stat__label">Articles</span>
+    <div class="rs-audit-card" aria-hidden="true">
+      <div class="rs-audit-card__bar">
+        <span class="rs-audit-card__dots"><i></i><i></i><i></i></span>
+        <span class="rs-audit-card__name">agentic-architecture.plan</span>
       </div>
-      <div class="rs-stat">
-        <span class="rs-stat__num">70h+</span>
-        <span class="rs-stat__label">Video Content</span>
+      <div class="rs-audit-card__progress"><span></span></div>
+      <ul class="rs-audit-card__rows">
+        <li style="--i:0">
+          <span class="rs-audit-card__icon"><i class="fas fa-map-location-dot"></i></span>
+          <span class="rs-audit-card__label"><strong>Where AI fits</strong><small>processes mapped to workflows or agents</small></span>
+          <span class="rs-audit-card__chip"><i class="fas fa-check"></i></span>
+        </li>
+        <li style="--i:1">
+          <span class="rs-audit-card__icon"><i class="fas fa-sliders"></i></span>
+          <span class="rs-audit-card__label"><strong>Level of autonomy</strong><small>which decisions the AI may take</small></span>
+          <span class="rs-audit-card__chip"><i class="fas fa-check"></i></span>
+        </li>
+        <li style="--i:2">
+          <span class="rs-audit-card__icon"><i class="fas fa-scale-balanced"></i></span>
+          <span class="rs-audit-card__label"><strong>Authority &amp; guardrails</strong><small>gatekeeper, approvals, audit trail</small></span>
+          <span class="rs-audit-card__chip"><i class="fas fa-check"></i></span>
+        </li>
+        <li style="--i:3">
+          <span class="rs-audit-card__icon"><i class="fas fa-chart-line"></i></span>
+          <span class="rs-audit-card__label"><strong>Evals &amp; observability</strong><small>measured before it scales</small></span>
+          <span class="rs-audit-card__chip"><i class="fas fa-check"></i></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Capability marquee -->
+<div class="rs-marquee" aria-label="Capabilities">
+  <div class="rs-marquee__track">
+    {{- range $g := seq 2 }}
+    <div class="rs-marquee__group"{{ if eq $g 2 }} aria-hidden="true"{{ end }}>
+      {{- range $capabilities }}
+      {{- $pg := site.GetPage .path -}}
+      <a class="rs-marquee__chip" href="{{ with $pg }}{{ .RelPermalink }}{{ else }}/docs/agentic_ai/{{ end }}"{{ if eq $g 2 }} tabindex="-1"{{ end }}>{{ .label }}</a>
+      {{- end }}
+    </div>
+    {{- end }}
+  </div>
+</div>
+
+<!-- What We Do -->
+<section class="rs-firm-section" id="services">
+  <div class="rs-firm-shell">
+    <div class="rs-firm-heading rs-reveal">
+      <p class="rs-eyebrow">What We Do</p>
+      <h2>Architecture-first engagements</h2>
+      <p>For teams taking AI agents and RAG systems from prototype to production.</p>
+    </div>
+    <div class="rs-svc-grid">
+      {{- range $i, $s := $services }}
+      <div class="rs-svc rs-reveal" style="--d:{{ $i }}">
+        <div class="rs-svc__top">
+          <span class="rs-svc__num">0{{ add $i 1 }}</span>
+          <span class="rs-svc__icon"><i class="fas {{ $s.icon }}" aria-hidden="true"></i></span>
+        </div>
+        <h3 class="rs-svc__title">{{ $s.title }}</h3>
+        <p class="rs-svc__desc">{{ $s.description }}</p>
+        <p class="rs-svc__ideal"><span>Ideal for</span> {{ $s.ideal }}</p>
       </div>
-      <div class="rs-stat">
-        <span class="rs-stat__num">500+</span>
-        <span class="rs-stat__label">Topics Covered</span>
-      </div>
-      <div class="rs-stat">
-        <span class="rs-stat__num">100%</span>
-        <span class="rs-stat__label">Free</span>
-      </div>
+      {{- end }}
+    </div>
+    <p class="rs-svc-cta rs-reveal">Discuss your use case <a href="#contact">Let's Talk <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
+  </div>
+</section>
+
+<!-- How We Engage -->
+<section class="rs-firm-section">
+  <div class="rs-firm-shell">
+    <div class="rs-firm-heading rs-reveal">
+      <p class="rs-eyebrow">How We Engage</p>
+      <h2>Assess, design, then scale</h2>
+    </div>
+    <ol class="rs-timeline rs-reveal">
+      <li class="rs-timeline__step">
+        <span class="rs-timeline__dot">1</span>
+        <h3>Assess</h3>
+        <p>Map your processes and systems to find where agents or LLM workflows add value, and where they don't.</p>
+      </li>
+      <li class="rs-timeline__step">
+        <span class="rs-timeline__dot">2</span>
+        <h3>Design &amp; Build</h3>
+        <p>Design agentic systems and workflows with authority, guardrails, evals, and observability built in.</p>
+      </li>
+      <li class="rs-timeline__step">
+        <span class="rs-timeline__dot">3</span>
+        <h3>Advise &amp; Scale</h3>
+        <p>Ongoing architecture leadership: code reviews, roadmap planning, and build-vs-buy decisions.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- Open Knowledge -->
+<section class="rs-firm-section">
+  <div class="rs-firm-shell">
+    <div class="rs-firm-heading rs-reveal">
+      <p class="rs-eyebrow">Open Knowledge</p>
+      <h2>Free courses, built from first principles</h2>
+      <p>From the mathematics of probability and linear algebra to transformers, LLMs and production agentic systems: structured notes and video lessons, open to everyone.</p>
+    </div>
+    <div class="rs-course-tiles rs-reveal">
+      {{- range $courses }}
+      <a class="rs-course-tile" href="{{ .href }}">
+        <span class="rs-course-tile__icon"><i class="fas {{ .icon }}" aria-hidden="true"></i></span>
+        <span class="rs-course-tile__text">
+          <span class="rs-course-tile__eyebrow">{{ .eyebrow }}</span>
+          <span class="rs-course-tile__title">{{ .title }}</span>
+        </span>
+        {{- with .badge }}<span class="rs-course-tile__badge">{{ . }}</span>{{ end }}
+      </a>
+      {{- end }}
     </div>
   </div>
 </section>
 
-<!-- Modern Grid Courses Section -->
-<section class="rs-courses-section">
-  <div class="container rs-simple-shell">
-    <!-- Centered Heading Block with Sub-description Context -->
-    <div class="rs-course-heading">
-      <h1>Courses</h1>
-      <p>Structured courses designed to take you from foundational mathematical concepts to <br> state-of-the-art AI architectures.</p>
-    </div>
-
-    <div class="rs-course-grid">
-      {{ range $courses }}
-      <a class="rs-udemy-card" href="{{ .href }}">
-        <!-- Thumbnail Graphic Box with Golden Context Accents -->
-        <div class="rs-card-thumb">
-          <span class="rs-thumb-eyebrow">{{ .eyebrow }}</span>
-          <div class="rs-thumb-graphic-wrapper">
-            <i class="fas {{ .icon }} rs-thumb-icon"></i>
-          </div>
-        </div>
-
-        <!-- Meta Content Details Area -->
-        <div class="rs-card-content">
-          <h3 class="rs-card-title">{{ .title }}</h3>
-          <p class="rs-card-brief">{{ .description }}</p>
-        </div>
-      </a>
-      {{ end }}
-    </div>
+<!-- Contact -->
+<section class="rs-firm-section rs-firm-section--contact">
+  <div class="rs-firm-shell rs-reveal">
+    {{ partial "contact-card.html" . }}
   </div>
 </section>
+
+<script>
+(function () {
+  var els = document.querySelectorAll('.rs-reveal');
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('rs-js');
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { en.target.classList.add('is-visible'); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(function (el) { io.observe(el); });
+})();
+</script>
 {{- end }}

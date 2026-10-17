@@ -9,8 +9,10 @@ course_outline:
     - page_ref: /docs/maths/calculus
 #categories: [Probability, Statistics, Linear Algebra, Calculus]
 #tags: [ML, Maths]
-weight: 4
+weight: 5
 hide_readingtime: true
+icon: fa-calculator
+eyebrow: "Maths Foundations"
 ---
 
 {{< playlist "https://youtube.com/playlist?list=PLnpa6KP2ZQxen-R6NytSMigAri7piPhFp&si=JUBpWmnh7DBjhBCq" 

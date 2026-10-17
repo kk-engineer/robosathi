@@ -2,7 +2,7 @@
 title: Natural Language Processing
 description: Natural Language Processing (NLP) - from Tokenization, Embeddings, Transformers to LLMs
 date: 2026-04-28
-weight: 1
+weight: 2
 course_outline:
   sections:
     - page_ref: /docs/natural_language_processing/introduction
@@ -20,6 +20,8 @@ course_outline:
 #toc_hide: true
 #draft: true
 hide_readingtime: true
+icon: fa-language
+eyebrow: "Large Language Models"
 ---
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxcDlHCeNiKbRhLWKVunQaxn" 

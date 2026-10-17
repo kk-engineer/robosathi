@@ -1,0 +1,24 @@
+{{- /* Emits the copy-to-clipboard handler once per page for any .rs-copy-email element. */ -}}
+{{- if not (.Store.Get "rsCopyEmailScript") -}}
+{{- .Store.Set "rsCopyEmailScript" true -}}
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('.rs-copy-email');
+  if (!btn) return;
+  e.preventDefault();
+  var email = btn.getAttribute('data-email');
+  var label = btn.querySelector('span') || btn;
+  var done = function () {
+    var prev = label.textContent;
+    label.textContent = 'Copied ✓';
+    btn.classList.add('is-copied');
+    setTimeout(function () { label.textContent = prev; btn.classList.remove('is-copied'); }, 1800);
+  };
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(email).then(done, function () { window.location.href = 'mailto:' + email; });
+  } else {
+    window.prompt('Copy email:', email);
+  }
+});
+</script>
+{{- end -}}
