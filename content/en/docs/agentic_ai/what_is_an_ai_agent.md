@@ -104,7 +104,7 @@ Several doctrines map directly onto parts of an agent harness:
 The law spent a century working out who may bind whom. We do not need to invent those rules; we need to **compile them into code paths**.
 {{< /panel >}}
 
-{{< panel color="cyan" title="Why Delegation Is Risky: Fiduciary Duty and Information Asymmetry" id="fiduciary" >}}
+{{< panel color="green" title="Why Delegation Is Risky: Fiduciary Duty and Information Asymmetry" id="fiduciary" >}}
 Why does delegating to an agent need any of this machinery? Because the agent knows things the principal does not, and does things the principal does not see.
 
 The law's answer to this is **fiduciary duty** (Restatement §8.01): someone trusted to act for another, such as a trustee, a lawyer or a company director, owes **loyalty** (no self-dealing), **care** (competence), **obedience** (following lawful instructions), and must stay within actual authority.
@@ -238,7 +238,7 @@ The system prompt says "You may refund at most $50." Is that a control?
 A control is deterministic code that evaluates the **exact proposal**, **before** the side effect, against a policy the model cannot reach, and records its decision. That is the Gatekeeper's job.
 {{< /answer >}}
 
-{{< panel color="gold" title="Summary" id="recap" >}}
+{{< panel color="magenta" title="Summary" id="recap" >}}
 - An agent is a **model plus a harness**. The model proposes; the harness decides what the model sees, what it may do, and what is recorded. Almost everything production needs is in the harness.
 - **Agency is not authority.** Capacity to act is a property of the model; permission to act is granted by a principal, held outside the agent, and checked before the act.
 - The **law of agency** gives us the vocabulary (actual and apparent authority, ratification, the duty of scope, the four standings), and **agency-cost economics** tells us what delegation costs (monitoring, bonding, residual loss).

@@ -1,4 +1,7 @@
 {{- $color := .Get "color" | default (.Get 0 | default "gold") -}}
+{{- $parentColor := "" -}}
+{{- with .Parent }}{{ $parentColor = .Get "color" | default (.Get 0 | default "slate") }}{{ end -}}
+{{- $color = partial "callout-color.html" (dict "page" .Page "color" $color "parent" $parentColor) -}}
 {{- $title := .Get "title" | default (.Get 1) -}}
 {{- $icon  := .Get "icon"  | default (.Get 2) -}}
 {{- $id    := .Get "id" -}}

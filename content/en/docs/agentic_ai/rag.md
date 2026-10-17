@@ -95,7 +95,7 @@ A better approach uses two signals, cheapest first:
 
 Then enforce size bounds: fold fragments that are too short into a neighbour, and split runs that are too long at sentence boundaries.
 
-{{< panel color="cyan" title="Example" >}}
+{{< panel color="green" title="Example" >}}
 In the support agent's help articles, the passage "_5 to 10 business days_" only answers the customer's question because it carries its heading path, `Refunds › When the money arrives`.
 Stripped of its heading, the same sentence could be about delivery times, or anything else. A chunk without its heading is an answer without its question.
 {{< /panel >}}
@@ -250,7 +250,7 @@ Dense embeddings are weak at exact identifiers, so a purely vector-based retriev
 Also inspect the chunks: the error code and its explanation may have been split into different chunks, or lost the heading that says what they refer to.
 {{< /answer >}}
 
-{{< panel color="gold" title="Summary" id="recap" >}}
+{{< panel color="magenta" title="Summary" id="recap" >}}
 - Use the **weights for language** and the **index for facts that belong to you**.
 - Sparse (BM25) and dense retrieval **fail on different queries**; run both and **fuse by rank**, not by score.
 - **Bi-encoders recall** cheaply from millions of passages; **cross-encoders decide** accurately among a shortlist.

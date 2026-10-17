@@ -157,7 +157,7 @@ The forged "_Priya from the refunds team_" approval is `user_task` at best, so i
 [Read more about trust classes in the context window]({{<ref "/docs/agentic_ai/context_management/#protecting" >}})
 {{< /panel >}}
 
-{{< panel color="cyan" title="Content Moderation" id="moderation" >}}
+{{< panel color="green" title="Content Moderation" id="moderation" >}}
 Moderation screens for **harmful content**, as opposed to hostile **instructions**. Two tiers:
 
 1. **Deterministic term list**, matched on **word boundaries**. Substring matching produces the classic false positives (the "_Scunthorpe problem_"); word boundaries cost nothing and remove that class of error.
@@ -231,7 +231,7 @@ It has the full **lethal trifecta**: private data (the inbox), untrusted content
 **Break a leg of the trifecta** with controls in code, not in the prompt: require **approval** for outbound email, restrict recipients, scope tools so content touched by untrusted data can only reach **reversible** tools, and treat every email body as `untrusted_content` that can never grant authority.
 {{< /answer >}}
 
-{{< panel color="gold" title="Summary" id="recap" >}}
+{{< panel color="magenta" title="Summary" id="recap" >}}
 - ☠️ **The lethal trifecta**: private data + untrusted content + power to act.
 - 🏷️ **PII**: four surfaces; tokenise at the provider boundary; reveals audited.
 - 🛡️ **Injection**: six layers; authority from the source, never the grammar.

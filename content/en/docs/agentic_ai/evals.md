@@ -113,7 +113,7 @@ One run of a non-deterministic system proves little. Run each case \(k\) times. 
 | **pass^k** | **Every one** of the k trials was clean | _Will_ it do this every time? (reliability) |
 
 Both follow from the [binomial distribution]({{<ref "/docs/maths/probability/probability_mass_function/#binomial-distribution" >}}). **τ-bench** (Yao et al., 2024) introduced pass^k for agents and showed it falling steeply as \(k\) grows, even for strong models.
-{{< panel color="cyan" title="Example" >}}
+{{< panel color="green" title="Example" >}}
 With \(p = 0.9\) and \(k = 5\): pass@5 ≈ 0.99999, but pass^5 ≈ **0.59**.
 {{< /panel >}}
 
@@ -122,7 +122,7 @@ For a money-moving agent, **pass^k is the one that matters**.
 {{< keyidea >}}**Right 9 times in 10 means wrong for one customer in ten.**{{< /keyidea >}}
 {{< /panel >}}
 
-{{< panel color="cyan" title="Three Graders, Three Questions" id="graders" >}}
+{{< panel color="orange" title="Three Graders, Three Questions" id="graders" >}}
 | Grader | Kind | Grades | Gate |
 |---|---|---|---|
 | 🧮 **Oracle** | Code · **zero model calls** | The outcome vs ground truth: the state a case left behind | **Hard · 100%** |
@@ -255,7 +255,7 @@ The set isn't **balanced**: refusing everything scores 35/40. Add as many must-a
 Grade the **outcome** in the database (a valid refund that didn't happen is a failure), and keep safety invariants as **hard gates** so no average can hide them.
 {{< /answer >}}
 
-{{< panel color="gold" title="Summary" id="recap" >}}
+{{< panel color="magenta" title="Summary" id="recap" >}}
 - 🧪 **Tests check code; evals check the system** with a real model, on purpose.
 - 📏 **Principles**: outcome not path, balanced sets, hard + soft gates, pass^k.
 - 🛠️ **DeepEval** grades quality with G-Eval; **Promptfoo** red-teams with the same rules.

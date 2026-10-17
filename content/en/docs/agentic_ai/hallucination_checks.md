@@ -130,7 +130,7 @@ So it is allowed to **confirm**, never to **refute**.
 {{< keyidea >}}**A second model may confirm; only NLI and the record may refute.**{{< /keyidea >}}
 {{< /panel >}}
 
-{{< panel color="cyan" title="Records Are Read, Not Inferred" id="direct_check" >}}
+{{< panel color="green" title="Records Are Read, Not Inferred" id="direct_check" >}}
 A **record** claim is settled **without a model** whenever a field can settle it. Each finding gets a reason code:
 
 | Reason code | Means |
@@ -226,7 +226,7 @@ It's a **record** claim, so the **direct check** runs first: the amount matches,
 The guardrail **repairs once** with the evidence in front of the model ("_Your refund of $118.84 is queued for review_"); if the repair still fails, the sentence is **trimmed**, and if nothing survives, the **withheld** reply is sent.
 {{< /answer >}}
 
-{{< panel color="gold" title="Summary" id="recap" >}}
+{{< panel color="magenta" title="Summary" id="recap" >}}
 - 🔍 **Hallucination** = not supported by what the turn observed: contradicted or unsupported.
 - ⚖️ **NLI decides; embeddings only retrieve.** Records are read, not inferred.
 - 🎲 **Logprobs are level 1**: cheap doubt, two deterministic cuts, never the whole check.

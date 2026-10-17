@@ -115,7 +115,7 @@ With language models, the list needs a third column:
 The key word is **function**. "_Should this be an agent?_" is the wrong grain of question; "_who should own this step?_" is the right one.
 {{< /panel >}}
 
-{{< panel color="cyan" title="Three Questions per Decision" id="three_questions" >}}
+{{< panel color="green" title="Three Questions per Decision" id="three_questions" >}}
 To allocate a step, ask three questions of **each step**, never of the system as a whole.
 
 1. **Cardinality.** How many distinct situations must this step handle? If you can enumerate them, code wins: it is cheaper, faster and provable. If you cannot (free-form customer language, the open web), a model earns its place.
@@ -203,7 +203,7 @@ Usually **not**. A queue full of trivial approvals invites the **ironies of auto
 A better design allocates per decision: small, reversible refunds at **level 7** (the model proposes, code allows, everything audited) and large ones at **level 5**, with the reason and amount attached, while tracking the reviewers' override rate.
 {{< /answer >}}
 
-{{< panel color="gold" title="Summary" id="recap" >}}
+{{< panel color="magenta" title="Summary" id="recap" >}}
 - **Autonomy is a dial**, set per decision. Sheridan's ten levels give the vocabulary; the boundaries at 4→5 (who chooses) and 6→7 (does a human see it first) carry most of the risk.
 - **Code or model is who works; the level is what the human does.** Allocate each function using cardinality, blast radius and certifiability.
 - **Split high-stakes, open-ended decisions**: the model proposes, code authorises, a person decides above a threshold.

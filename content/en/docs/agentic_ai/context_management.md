@@ -159,7 +159,7 @@ You can't see rot in one window, only **across a session**: score answers agains
 {{< keyidea >}}**The window you can fill is not the window you should.**{{< /keyidea >}}
 {{< /panel >}}
 
-{{< panel color="cyan" title="Protecting the Window" id="protecting" >}}
+{{< panel color="green" title="Protecting the Window" id="protecting" >}}
 Five layers, in order:
 
 ```mermaid
@@ -261,7 +261,7 @@ Fixes: **reduce** (trim tool output, summarise old turns and say so), keep the i
 and **isolate** exploratory sub-tasks into fresh windows. Measure answer quality against window size so you compact before it degrades.
 {{< /answer >}}
 
-{{< panel color="gold" title="Summary" id="recap" >}}
+{{< panel color="magenta" title="Summary" id="recap" >}}
 - 🌍 **Context is the model's whole world for one call**: finite, costly, degradable, attackable.
 - 🏷️ **Six strategies, six prices**: offload, reduce, retrieve, isolate, cache, consolidate.
 - 🩺 **Five failures, five fixes**: poisoning, clash, confusion, distraction, rot.

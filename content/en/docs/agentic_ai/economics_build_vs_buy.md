@@ -106,7 +106,7 @@ The one formula that settles most cost arguments. **Build** has a high fixed cos
 
 **Below \(Q^*\), buy is cheaper; above it, build is.**
 
-{{< panel color="cyan" title="Example" >}}
+{{< panel color="green" title="Example" >}}
 _Illustrative_: build at $48k/month fixed + $0.125 per resolution; buy at $15k/month + $1.00 per resolution:
 {{< /panel >}}
 
@@ -120,7 +120,7 @@ _Illustrative_: build at $48k/month fixed + $0.125 per resolution; buy at $15k/m
 - 🔁 Keep switching cheap: models and judges behind configuration, so you can ride the curve.
 {{< /panel >}}
 
-{{< panel color="cyan" title="Eight Factors Beyond Price" id="factors" >}}
+{{< panel color="orange" title="Eight Factors Beyond Price" id="factors" >}}
 | Factor | The question to ask |
 |---|---|
 | 🏆 **Differentiation** | Does it make us better than competitors, or is it plumbing? |
@@ -142,7 +142,7 @@ _Illustrative_: build at $48k/month fixed + $0.125 per resolution; buy at $15k/m
 {{< keyidea >}}**Build only where you're different and nobody sells it well.**{{< /keyidea >}}
 {{< /panel >}}
 
-{{< panel color="navy" title="What to Build: The Control Plane and the Data" id="what_to_build" >}}
+{{< panel color="magenta" title="What to Build: The Control Plane and the Data" id="what_to_build" >}}
 **1 · The authority layer** ([Gatekeeper]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#gatekeeper" >}}), business rules, mandates, limits).
 The liability is yours, and no vendor knows your refund policy, limits or escalation paths. The economics:
 
@@ -254,7 +254,7 @@ A team wants to fine-tune its own model to save inference cost on a support agen
 - **Is it differentiating?** Probably not: the model is commodity. The money is better spent on what the curve doesn't touch (authority rules, domain checks, eval data) and on an adapter that keeps switching to a cheaper hosted model a config change.
 {{< /answer >}}
 
-{{< panel color="gold" title="Summary" id="recap" >}}
+{{< panel color="magenta" title="Summary" id="recap" >}}
 - 🧩 **Decide per component**: build, adopt, buy or partner.
 - 🧮 **Know the arithmetic**: ROI, payback, NPV, TCO, and break-even \(Q^*\).
 - 🔨 **Build the control plane and the data**: their value rises as tokens get cheaper.

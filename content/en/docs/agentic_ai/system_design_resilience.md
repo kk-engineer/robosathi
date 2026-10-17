@@ -71,7 +71,7 @@ graph LR
 {{< keyidea >}}**Name the failure first; the pattern follows from it.**{{< /keyidea >}}
 {{< /panel >}}
 
-{{< panel color="blue" title="Timeout, and Little's Law" id="timeout" >}}
+{{< panel color="green" title="Timeout, and Little's Law" id="timeout" >}}
 **Timeout**: give every remote call a deadline; past it, stop waiting and fail with an error the caller can handle.
 
 {{< panel color="cyan" title="Example" >}}
@@ -151,7 +151,7 @@ A store's recommendations service fails repeatedly. The page stops calling it an
 Borrowed from shipbuilding: a hull divided by watertight bulkheads floods **one compartment, not the vessel**.
 Give each dependency its own limited pool of capacity, so one can't use up everyone's.
 
-{{< panel color="cyan" title="Example" >}}
+{{< panel color="green" title="Example" >}}
 An airline site gives fare search and payment separate worker pools. A fare-search spike (a sale, a bot) saturates the search pool; payments still have capacity.
 {{< /panel >}}
 
@@ -169,7 +169,7 @@ By default a caller **queues**; with a wait budget it is **rejected** instead: s
 ⚠️ A single global concurrency limit looks like protection but isn't: one stalled dependency takes every permit.
 {{< /panel >}}
 
-{{< panel color="cyan" title="Idempotency" id="idempotency" >}}
+{{< panel color="orange" title="Idempotency" id="idempotency" >}}
 From algebra: an operation is **idempotent** when applying it twice equals applying it once:
 
 \[f(f(x)) = f(x)\]
@@ -197,7 +197,7 @@ A durable, per-agent guard runs a call **once** and replays its recorded result 
 {{< keyidea >}}**Remember what happened; forget it when it's undone.**{{< /keyidea >}}
 {{< /panel >}}
 
-{{< panel color="navy" title="Saga" id="saga" >}}
+{{< panel color="magenta" title="Saga" id="saga" >}}
 **Sagas** (Garcia-Molina & Salem, 1987): split a long operation into local transactions \(T_1 \dots T_n\), each with a compensating transaction \(C_1 \dots C_n\). If \(T_k\) fails, run \(C_{k-1} \dots C_1\) **in reverse**.
 
 ```mermaid
@@ -206,7 +206,7 @@ graph LR
     C -->|fails| CH[Cancel hotel] --> CF[Cancel flight]
 ```
 
-{{< panel color="cyan" title="Example" >}}
+{{< panel color="green" title="Example" >}}
 No distributed transaction spans an airline, a hotel chain and a car-rental firm. Book in order; if the car fails, cancel the hotel, then the flight.
 {{< /panel >}}
 
@@ -272,7 +272,7 @@ A **retry storm**: retries without **jitter** (so clients retry in synchronised 
 Fix: full-jitter backoff with a cap, a breaker per dependency, retries counted against the quota, and refuse retries of side-effecting calls that carry no idempotency key.
 {{< /answer >}}
 
-{{< panel color="gold" title="Summary" id="recap" >}}
+{{< panel color="magenta" title="Summary" id="recap" >}}
 - ⏱️ **Bound every wait** (Little's law); retry with jitter, never without a key.
 - 🔌 **Breakers and bulkheads** stop one failing dependency from taking the rest.
 - 🔑 **Idempotency keys the intent**; sagas undo in reverse, irreversible steps last.

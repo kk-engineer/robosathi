@@ -117,7 +117,7 @@ graph LR
     RN --> C
 ```
 
-{{< panel color="cyan" title="Example" >}}
+{{< panel color="green" title="Example" >}}
 Summarise every product review for a product, in parallel (the _map_), then combine the summaries into one report (the _reduce_). There might be 5 reviews today and 500 tomorrow.
 {{< /panel >}}
 
@@ -126,7 +126,7 @@ This looks like fan-out, with one important difference: the number of branches i
 **What goes wrong.** Two things. First, **bound N and the concurrency**, or one large input becomes one large bill. Second, test the **reduce** step hardest: it is where contradictions between items get silently averaged away.
 {{< /panel >}}
 
-{{< panel color="cyan" title="5 · Iterative Loop with a Fixed Cap" id="fixed_loop" >}}
+{{< panel color="orange" title="5 · Iterative Loop with a Fixed Cap" id="fixed_loop" >}}
 Repeat a step until a check passes, **at most N times**, with the cap set in code.
 
 ```mermaid
@@ -157,7 +157,7 @@ graph LR
     R --> M
 ```
 
-{{< panel color="cyan" title="Example" >}}
+{{< panel color="green" title="Example" >}}
 A model drafts a marketing email. A manager approves it, and it is sent, or rejects it with a note, and it is revised and comes back.
 {{< /panel >}}
 
@@ -231,7 +231,7 @@ An "AI agent" classifies a document, extracts its fields, validates them against
 That is a good thing. It is predictable, testable and cheap, and it should only become agentic if some step genuinely needs the model to choose what to do next.
 {{< /answer >}}
 
-{{< panel color="gold" title="Summary" id="recap" >}}
+{{< panel color="magenta" title="Summary" id="recap" >}}
 - A **workflow** is a system in which **code picks the next step**; models may still work inside steps. An **agent** lets the model pick.
 - Six workflow shapes cover most needs: **pipeline, branching, fan-out, map-reduce, capped loop, human-in-the-loop**. Each has a characteristic failure and guard.
 - The support agent is **mostly workflow**: one model-driven loop in fifteen nodes. The research agent branches, maps and stops by code; the model fills the steps.

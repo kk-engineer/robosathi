@@ -3125,17 +3125,22 @@ $rs-badge-border-hover: #B8945A;
 .rs-principles { gap: 0.7rem; margin-top: 1rem; }
 .rs-principle { padding: 0.7rem 0.85rem; }
 
-// Sections as calm panels (every section visibly in a panel)
+// Sections as calm panels, each in its own colour
 .rs-callout.rs-callout--section {
-  background: #ffffff !important;
-  border: 1px solid #ece3d4 !important;
-  border-left: 3px solid #d2b583 !important;
+  background: color-mix(in srgb, var(--rs-callout-surface) 70%, #ffffff 30%) !important;
+  border: 1px solid color-mix(in srgb, var(--rs-callout-accent) 55%, #ffffff 45%) !important;
+  border-left: 4px solid var(--rs-callout-accent-strong) !important;
   border-radius: 10px !important;
   padding: 1rem 1.25rem 0.6rem !important;
   margin: 1.4rem 0 !important;
 
-  .rs-callout__header { border-bottom: 1px solid #f1e9dc; margin-bottom: 0.7rem; padding-bottom: 0.4rem; }
-  .rs-callout__title { font-size: 1.25rem; }
+  .rs-callout__header {
+    border-bottom: 1px solid color-mix(in srgb, var(--rs-callout-accent) 45%, #ffffff 55%);
+    margin-bottom: 0.7rem;
+    padding-bottom: 0.4rem;
+  }
+
+  .rs-callout__title { font-size: 1.25rem; color: var(--rs-callout-accent-strong) !important; }
 }
 
 // End-of-note panels: distinct look

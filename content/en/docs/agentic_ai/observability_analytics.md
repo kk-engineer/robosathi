@@ -193,7 +193,7 @@ graph LR
 {{< keyidea >}}**A formula written twice drifts. Write it once, in the semantic layer.**{{< /keyidea >}}
 {{< /panel >}}
 
-{{< panel color="cyan" title="Dashboards as Code: From a Turn to a Tile" id="dashboards" >}}
+{{< panel color="green" title="Dashboards as Code: From a Turn to a Tile" id="dashboards" >}}
 **Rill** is an open-source, BI-as-code dashboard tool built on DuckDB: models are SQL, metric views are YAML, dashboards are files, so a dashboard is **reviewable and generated**, like code.
 
 ```mermaid
@@ -244,7 +244,7 @@ Start at the **fleet view**: p95/p99 latency, `fallback_rate` and `loop_abort_ra
 Then pick a slow turn and follow its **trace id**: the run tree shows which span dominates (a retry storm, a fallback model, a long tool call, extra loop iterations), and the **logs** for the same id explain why.
 {{< /answer >}}
 
-{{< panel color="gold" title="Summary" id="recap" >}}
+{{< panel color="magenta" title="Summary" id="recap" >}}
 - 🆔 **One turn, one trace id**: W3C-shaped, on every log line, fact, run and audit row.
 - 🧾 **Logs are the record**: per subsystem, structured, never swallowing a failure.
 - 🔌 **OTel**: the same data under our names; the gaps are the wire and propagation.

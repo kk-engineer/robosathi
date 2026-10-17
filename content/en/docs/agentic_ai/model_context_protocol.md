@@ -52,7 +52,7 @@ graph LR
     end
 ```
 
-{{< panel color="cyan" title="Example" >}}
+{{< panel color="magenta" title="Example" >}}
 An engineering org with three AI tools and five systems: fifteen bespoke integrations, or eight protocol implementations. And the sixth system costs **one server**, not three integrations.
 {{< /panel >}}
 
@@ -187,7 +187,7 @@ And `run_query` needs **its own permission**, so a policy that grants only the c
 {{< keyidea >}}**A query the parser misjudges still can't reach a file or the network.** (Defence in depth: [Agent Security]({{<ref "/docs/agentic_ai/agent_security_principles/#principles" >}}).){{< /keyidea >}}
 {{< /panel >}}
 
-{{< panel color="cyan" title="Our Server and a Governed Client" id="server_client" >}}
+{{< panel color="green" title="Our Server and a Governed Client" id="server_client" >}}
 **The server is small on purpose** (MCP Python SDK):
 
 ```python
@@ -238,7 +238,7 @@ A call **fails, never hangs**, when the server has gone away. Every protocol eve
 {{< keyidea >}}**A server describing its own tool as harmless has asserted it, not established it.**{{< /keyidea >}}
 {{< /panel >}}
 
-{{< panel color="navy" title="stdio vs Streamable HTTP" id="transports" >}}
+{{< panel color="orange" title="stdio vs Streamable HTTP" id="transports" >}}
 **stdio: a subprocess you own.** The client **launches** the server and exchanges JSON-RPC messages, one per line, over its stdin/stdout.
 **stdout _is_ the protocol**: anything else printed there corrupts the stream, so the server silences console output before settings even load; logs go to files and stderr.
 The server lives as long as the session, serves one client, and runs with the **local user's trust**.
@@ -287,7 +287,7 @@ Nothing should be auto-allowed on the server's word. **Annotations are claims, n
 So `delete_records` needs explicit configuration and, being destructive, human approval at the Gatekeeper.
 {{< /answer >}}
 
-{{< panel color="gold" title="Summary" id="recap" >}}
+{{< panel color="magenta" title="Summary" id="recap" >}}
 - 🔌 **MCP turns N × M into N + M**: host, client, server; tools, resources, prompts.
 - 📊 **The ops agent answers from data** via five read-only tools, two walls and a figure check.
 - 🛂 **Our client governs**: the envelope comes from our config, never the server.

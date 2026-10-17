@@ -108,7 +108,7 @@ graph LR
     R -->|passes| PB[Publish]
 ```
 
-{{< panel color="cyan" title="Example" >}}
+{{< panel color="green" title="Example" >}}
 A translator model drafts a translation. A reviewer model, ideally from a different model family, scores it against the company's style guide and glossary and lists specific problems. The translator revises only what was flagged.
 {{< /panel >}}
 
@@ -118,7 +118,7 @@ An evaluator that is the same model, merely prompted to "_be strict_", still has
 **How it fails.** A judge that is not independent, criteria that move, or a loop with no cap. Judges are themselves models with known biases, which we study in [LLM as a Judge]({{<ref "/docs/agentic_ai/llm_as_a_judge" >}}).
 {{< /panel >}}
 
-{{< panel color="cyan" title="5 · Planning and Decomposition" id="planning" >}}
+{{< panel color="orange" title="5 · Planning and Decomposition" id="planning" >}}
 ReAct decides one step at a time. **Planning** decides the shape of the whole job **first**, then executes the steps. Plan-and-Solve (Wang et al., 2023) and ReWOO (Xu et al., 2023) showed that planning up front can save a large share of the tokens step-by-step reasoning would use.
 
 ```mermaid
@@ -153,7 +153,7 @@ graph LR
 
 It looks like [map-reduce]({{<ref "/docs/agentic_ai/workflow_design_patterns/#map_reduce" >}}), with one difference: here **a model decides how many sub-tasks there are and what each one is**.
 
-{{< panel color="cyan" title="Example" >}}
+{{< panel color="green" title="Example" >}}
 "_How are our three main competitors pricing their enterprise tier?_" The orchestrator decides which competitors to cover and sends one subagent per competitor, each with only that brief.
 Each subagent has its own clean context and never sees the others' pages, which keeps contexts small and stops one bad source from contaminating everything ([context isolation]({{<ref "/docs/agentic_ai/context_management/#strategies" >}})).
 {{< /panel >}}
@@ -203,7 +203,7 @@ Because **blast radius sets the count** ([Levels of Automation]({{<ref "/docs/ag
 The support agent moves money, so every extra decision handed to the model would need another fence around a payment. The research agent only reads, so it can delegate planning, decomposition and self-review to the model, within budgets and an independent audit.
 {{< /answer >}}
 
-{{< panel color="gold" title="Summary" id="recap" >}}
+{{< panel color="magenta" title="Summary" id="recap" >}}
 - A pattern is **agentic** when the model decides **what to do next**, **whether the work is good enough**, or **how to split it**.
 - Six patterns, in increasing order of delegated control: **tool-use loop, ReAct, reflection, evaluator–optimizer, planning, orchestrator–subagent**.
 - Self-critique shares the author's blind spots; an **independent** evaluator does not.

@@ -193,7 +193,7 @@ An agent crashes after 4 of its 5 allowed tool iterations, one of which was a re
 **One iteration, and no retry.** The loop's state is checkpointed with the run, so the step count, clock and budget all continue, and the refused refund is still recorded as a duplicate. A restart that reset these would silently remove every fence.
 {{< /answer >}}
 
-{{< panel color="gold" title="Summary" id="recap" >}}
+{{< panel color="magenta" title="Summary" id="recap" >}}
 - **Validate** a model's output when you cannot control the decoder; **constrain** decoding when you can. Make the choice explicit in configuration.
 - Use **schemas everywhere** (tool arguments, replies, graph state, configuration, loop memory), and repair only syntax, never meaning.
 - Govern every loop through **one authority** that returns **one verdict**: step caps, reserved budgets, deadlines, four tiers of duplicate detection, and convergence.

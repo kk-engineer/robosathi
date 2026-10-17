@@ -45,7 +45,7 @@ Zheng et al. (MT-Bench, 2023) found that strong judges agree with human experts 
 {{< keyidea >}}**Every bias has a design fix, not a prompt fix.** "_Please be unbiased_" in the prompt changes nothing; swapping order, changing the judge model and narrowing the question do.{{< /keyidea >}}
 {{< /panel >}}
 
-{{< panel color="blue" title="Why Raw Agreement Lies" id="raw_agreement" >}}
+{{< panel color="green" title="Why Raw Agreement Lies" id="raw_agreement" >}}
 How do you know whether a judge is any good? Compare its labels with a trusted rater's. But **raw agreement lies** on skewed labels.
 
 {{< panel color="cyan" title="Example" >}}
@@ -146,7 +146,7 @@ For a pairwise win rate \(\hat{w}\) over \(n\) consistent comparisons, report it
 {{< keyidea >}}**Rank variants pairwise. Gate a single output against a criterion.**{{< /keyidea >}}
 {{< /panel >}}
 
-{{< panel color="cyan" title="Our Judges: One Skeleton for the Platform" id="our_judges" >}}
+{{< panel color="green" title="Our Judges: One Skeleton for the Platform" id="our_judges" >}}
 Every grader (eval metrics, rubric checks, agent judges) asks **one** judge client, so they all grade with the same model, fallback chain and rules:
 
 | Setting | Value · why |
@@ -207,7 +207,7 @@ Strong **position bias**: the judge mostly prefers whichever answer appears in o
 Judge every pair **both ways**, count only **consistent** preferences as wins (inconsistent ones are ties), and report the win rate **with its standard error** so readers can see whether the difference exceeds sample noise.
 {{< /answer >}}
 
-{{< panel color="gold" title="Summary" id="recap" >}}
+{{< panel color="magenta" title="Summary" id="recap" >}}
 - 🔭 **A judge is an instrument**: biased, drifting; calibrate before you trust it.
 - 🎲 **Cohen's κ removes chance**: 90% agreement can be κ = 0. Our bar: 0.6.
 - 📐 **Psychometrics**: reliability and validity; write the rubric like a test.

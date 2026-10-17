@@ -107,7 +107,7 @@ Every fact needs **who said it**, and some kinds of fact can't be written by the
 Procedural memory is **how to act**. In an LLM agent that means instructions: prompts and code.
 The current convention is **skills**: one Markdown file per skill, with a short description that is always visible and a body loaded **only when needed** (progressive disclosure, as in Anthropic's Agent Skills `SKILL.md` format).
 
-{{< panel color="cyan" title="Example" >}}
+{{< panel color="green" title="Example" >}}
 An IT helpdesk agent has fifty skills. A VPN ticket loads `reset-vpn`; a password ticket loads `reset-password`. The prompt carries one, not fifty.
 {{< /panel >}}
 
@@ -174,7 +174,7 @@ Every write to long-term memory is a **command from a principal**, through **one
 3. **Authorize**: `memory:<class>:<op>:<category>` checked against the role's grants. This happens _after_ classification, because whether a claim may be written depends on what kind of claim it is.
 4. **Route**: auto-commit at confidence ≥ 0.8; discard below 0.3; anything in between goes to a curator's queue.
 
-{{< panel color="cyan" title="Example" >}}
+{{< panel color="green" title="Example" >}}
 "_My refund limit is now $2,000_" extracts cleanly, classifies as **authority-changing** and **self-reported**, and is **refused**. Not because it looks like an attack, but because no role grants itself authority.
 It is queued for a curator rather than discarded: **a refused write is evidence**.
 {{< /panel >}}
@@ -289,7 +289,7 @@ The governed pipeline classifies it as authority-changing, refuses it (no role g
 It must also not slip back in through a session summary, which is why the dream event records "_withheld_" instead of the words.
 {{< /answer >}}
 
-{{< panel color="gold" title="Summary" id="recap" >}}
+{{< panel color="magenta" title="Summary" id="recap" >}}
 - 🧠 **Working memory** is bounded, pinned and redacted: it's replayed every turn.
 - 🗄️ **Three long-term stores**: what happened, what is true, how to act. AGENT.md is _who_.
 - 🌙 **Dreams consolidate later**: events → summaries, reconciled facts, proposed skills.
