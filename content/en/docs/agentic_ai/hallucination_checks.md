@@ -21,7 +21,7 @@ By the end of these notes you should be able to:
 - describe a repair, trim and withhold policy for replies that fail.
 {{< /panel >}}
 
-{{< panel color="gold" title="Shape vs Truth" id="cold_open" >}}
+{{< panel color="green" title="Shape vs Truth" id="cold_open" >}}
 In [Guardrails]({{<ref "/docs/agentic_ai/guardrails_loop_control_state/#pydantic" >}}), Pydantic checked the **shape** of a reply: a non-empty string, the right fields, the right types.
 But a perfectly shaped reply can still say something false: "_Your refund of $118.84 has been issued_", when the refund is actually **queued for review**.
 
@@ -87,7 +87,7 @@ Three verdicts, not two: "_I can't confirm this_" is different from "_this is fa
 
 **Embeddings find, NLI decides.** Two models, two jobs:
 
-{{< imgproc "images/agentic_ai/e09/embeddings_find_nli_decides.png" Resize "1000x" >}}{{< /imgproc >}}
+{{< imgproc "images/agentic_ai/hallucination/embeddings_find_nli_decides.png" Resize "1000x" >}}{{< /imgproc >}}
 
 - **Embeddings retrieve**: for each claim, find the top 3 most similar evidence sentences. But **similarity is not truth**: "_the refund was issued_" and "_the refund was not issued_" are near-identical vectors.
 - **NLI decides**: a [cross-encoder]({{<ref "/docs/agentic_ai/rag/#bi_cross" >}}) (a local DeBERTa-v3 NLI model) reads claim and evidence **together** and sees the negation. Entailment ≥ 0.6 → supported.
@@ -150,7 +150,7 @@ Only what the direct check can't place goes on to NLI.
 {{< panel color="navy" title="Token Confidence: The Model's Own Doubt" id="logprobs" >}}
 For every token it emits, a model can return the **log-probability** it assigned to that token. A model that is guessing spreads probability over several candidates, so the token it picks carries a **low** probability.
 
-{{< imgproc "images/agentic_ai/e09/logprobs_models_own_doubt.png" Resize "1000x" >}}{{< /imgproc >}}
+{{< imgproc "images/agentic_ai/hallucination/logprobs_models_own_doubt.png" Resize "1000x" >}}{{< /imgproc >}}
 
 The words are sure; the digits of an amount the model never saw are a guess. Per sentence we compute:
 
@@ -190,7 +190,7 @@ Each of these is legitimate; each has a cost that doesn't fit an agent answering
 💡 **Don't ask the author to grade its own work, and don't pay N× on every reply.**
 {{< /panel >}}
 
-{{< panel color="green" title="Two Levels, One Card; Repair, Trim, Withhold" id="repair" >}}
+{{< panel color="cyan" title="Two Levels, One Card; Repair, Trim, Withhold" id="repair" >}}
 The check is organised in **levels**, and every agent's trace card reads the same way:
 - **Level 1** is the platform's, identical for every agent: **token confidence**.
 - **Level 2** is whatever grounds **this** agent's claims: NLI against evidence for a reply (CSA, RA answers), or a figure found in a query result for an answer computed from one.

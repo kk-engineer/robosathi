@@ -20,7 +20,7 @@ By the end of these notes you should be able to:
 - set rules for exporting traces safely to a third-party tool.
 {{< /panel >}}
 
-{{< panel color="gold" title="One Id, Three Views" id="cold_open" >}}
+{{< panel color="green" title="One Id, Three Views" id="cold_open" >}}
 Run one customer turn and copy its **trace id**. Then:
 1. Search the log files for that id: the whole turn appears, across every subsystem's file.
 2. Open the same id in the tracing UI: the turn's run tree, with timings.
@@ -43,7 +43,7 @@ Run one customer turn and copy its **trace id**. Then:
 💡 **You can't reproduce a non-deterministic turn. You can only record it.**
 {{< /definition >}}
 
-{{< panel color="blue" title="What a Trace Is" id="trace" >}}
+{{< panel color="gold" title="What a Trace Is" id="trace" >}}
 A **trace** is one request's whole journey. It is made of **spans**, one per unit of work (an HTTP call, a database query, a model call), each with a start, an end, a **parent**, and attributes.
 The **trace id** is shared by every span in it.
 
@@ -167,12 +167,12 @@ graph LR
 | Metric | Formula (sketch) | Better |
 |---|---|---|
 | `resolution_rate` | Successful ÷ terminal tasks | Higher |
-| `groundedness` | Claims supported ÷ checked ([E09]({{<ref "/docs/agentic_ai/hallucination_checks" >}})) | Higher |
+| `groundedness` | Claims supported ÷ checked ([Hallucination Checks]({{<ref "/docs/agentic_ai/hallucination_checks" >}})) | Higher |
 | `hallucination_turn_rate` | Turns with an unsupported claim | Lower |
 | `fallback_rate` | Attempts served by a backup model | Lower |
 | `tool_call_validity` | Proposals that reached execution | Higher |
-| `loop_abort_rate` | Turns that hit the step cap ([E06]({{<ref "/docs/agentic_ai/guardrails_loop_control_state/#loop_control" >}})) | Lower |
-| `block_rate` | Screened messages blocked, by check ([E11]({{<ref "/docs/agentic_ai/agent_security_principles" >}})) | Context |
+| `loop_abort_rate` | Turns that hit the step cap ([Loop Control]({{<ref "/docs/agentic_ai/guardrails_loop_control_state/#loop_control" >}})) | Lower |
+| `block_rate` | Screened messages blocked, by check ([Agent Security]({{<ref "/docs/agentic_ai/agent_security_principles" >}})) | Context |
 | `tokens_per_resolved_task` | Tokens of resolved ÷ resolved tasks | Lower |
 
 💡 **A formula written twice drifts. Write it once, in the semantic layer.**

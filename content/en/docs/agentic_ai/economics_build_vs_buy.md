@@ -19,7 +19,7 @@ By the end of these notes you should be able to:
 - recommend what to build, adopt and buy for an agent, and justify it.
 {{< /panel >}}
 
-{{< panel color="gold" title="A Motivating Question" id="cold_open" >}}
+{{< panel color="green" title="A Motivating Question" id="cold_open" >}}
 This course built a Gatekeeper, guardrails, memory governance, hallucination checks, an eval harness. Should _you_ build all of that?
 **Mostly, no. Some of it, absolutely.** These notes are about telling which, with numbers.
 {{< /panel >}}
@@ -45,7 +45,7 @@ This course built a Gatekeeper, guardrails, memory governance, hallucination che
 💡 **Decide per component, never per "agent".** We built the control plane and the data; we adopted or bought the runtime.
 {{< /definition >}}
 
-{{< panel color="blue" title="What the Data Says (and Doesn't)" id="data" >}}
+{{< panel color="gold" title="What the Data Says (and Doesn't)" id="data" >}}
 One data point the industry argues about: MIT NANDA's _The GenAI Divide: State of AI in Business 2025_.
 
 - **~95%** of companies' generative-AI pilots in its dataset showed little or no measurable P&L impact.
@@ -226,7 +226,7 @@ The crossover is the break-even from earlier, about 94k tickets a month.
 💡 **The money answer moves with volume; the control answer doesn't.** The authority rules, the evals and the facts are yours to build **either way**, even when you buy the agent.
 {{< /panel >}}
 
-{{< panel color="green" title="The Recommendation" id="recommendation" >}}
+{{< panel color="cyan" title="The Recommendation" id="recommendation" >}}
 This course built most things because it is a **teaching platform**: you can't explain a Gatekeeper you didn't write. That's a legitimate reason here, and not one a product team has. For a production team:
 
 | | |

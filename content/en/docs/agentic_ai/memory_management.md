@@ -21,7 +21,7 @@ By the end of these notes you should be able to:
 - explain why consolidation is better done after a session than during it, and how to make it safe.
 {{< /panel >}}
 
-{{< panel color="gold" title="An Agent That Learns While It Sleeps" id="cold_open" >}}
+{{< panel color="green" title="An Agent That Learns While It Sleeps" id="cold_open" >}}
 Consider three separate support sessions. In each one, a customer asks the [CSA]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#cold_open" >}}) to refund an order that has **already shipped**, and each time it is refused.
 
 Then the operator runs a **dream**: an offline consolidation job. Its report shows:
@@ -48,7 +48,7 @@ Long-term memory must be **governed** because what an agent remembers next month
 💡 [Context Management]({{<ref "/docs/agentic_ai/context_management" >}}) managed one window. Memory decides what survives between windows.
 {{< /definition >}}
 
-{{< panel color="blue" title="Four Memories" id="four_memories" >}}
+{{< panel color="gold" title="Four Memories" id="four_memories" >}}
 The map comes from **CoALA** (_Cognitive Architectures for Language Agents_, Sumers, Yao, Narasimhan & Griffiths, 2024), which borrows its categories from cognitive science (Tulving's episodic/semantic split, 1972):
 
 | Memory | Question it answers | Example |
@@ -163,7 +163,7 @@ Recall is also **scoped**: the CSA only ever recalls the _verified_ customer's m
 {{< panel color="red" title="Writing Memory: Every Write Is Governed" id="governed_writes" >}}
 Every write to long-term memory is a **command from a principal**, through **one** pipeline. No store method is reachable around it.
 
-{{< imgproc "images/agentic_ai/e08/every_write_is_governed.png" Resize "1000x" >}}{{< /imgproc >}}
+{{< imgproc "images/agentic_ai/memory/every_write_is_governed.png" Resize "1000x" >}}{{< /imgproc >}}
 
 1. **Screen & extract** (regex, no model): reject injection patterns ("_ignore previous instructions_"), check that the text actually asserts something (a question asserts nothing), and extract claims ("_my X is Y_").
 2. **Classify & provenance**: what kind of claim is it? Provenance comes from the **principal's role**, never from the text: customer → _self-reported_, curator → _verified_.
@@ -220,7 +220,7 @@ Moved, not deleted, so a dream is **idempotent and auditable**, and inspectable 
 {{< /panel >}}
 
 {{< panel color="green" title="A Dream, Step by Step" id="dream_steps" >}}
-{{< imgproc "images/agentic_ai/e08/a_dream_step_by_step.png" Resize "1000x" >}}{{< /imgproc >}}
+{{< imgproc "images/agentic_ai/memory/a_dream_step_by_step.png" Resize "1000x" >}}{{< /imgproc >}}
 
 1. **Read** everything pending, grouped by session, oldest first.
 2. **Facts** (semantic): claims the person made, **reconciled** against current belief.

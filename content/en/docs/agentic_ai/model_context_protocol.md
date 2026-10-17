@@ -20,7 +20,7 @@ By the end of these notes you should be able to:
 - compare the stdio and Streamable HTTP transports, and list what moving to HTTP requires.
 {{< /panel >}}
 
-{{< panel color="gold" title="One Server, Any Client" id="cold_open" >}}
+{{< panel color="green" title="One Server, Any Client" id="cold_open" >}}
 Consider an **ops agent** connecting to an **analytics MCP server**: the trace shows the handshake, the protocol version, the server's identity and the **5 tools** it offers.
 Asked "_Which agent had the worst p95 turn latency in the last 7 days?_", it lists the metrics, computes one per agent in a single step, answers, and the [hallucination check]({{<ref "/docs/agentic_ai/hallucination_checks" >}}) finds every figure in the returned rows.
 
@@ -57,7 +57,7 @@ graph LR
 💡 **The next tool costs one server, not one integration per app.**
 {{< /definition >}}
 
-{{< panel color="blue" title="Host, Client, Server" id="architecture" >}}
+{{< panel color="gold" title="Host, Client, Server" id="architecture" >}}
 ```mermaid
 graph LR
     subgraph Host ["Host · the AI app (model + user)"]
@@ -256,7 +256,7 @@ Authorization is **OAuth 2.1**: the MCP server is a resource server, and clients
 💡 **stdio trusts the machine; HTTP must trust no one by default.**
 {{< /panel >}}
 
-{{< panel color="green" title="Moving Our Server to HTTP" id="move_to_http" >}}
+{{< panel color="cyan" title="Moving Our Server to HTTP" id="move_to_http" >}}
 | Concern | What to do | Today |
 |---|---|---|
 | Transport | Same server, Streamable HTTP at `/mcp` | stdio only |

@@ -39,7 +39,7 @@ High cardinality with a bounded blast radius is where it pays to let the model c
 💡 **Most production systems are mostly workflow. That is the design, not a compromise.**
 {{< /definition >}}
 
-{{< panel color="blue" title="1 · Sequential Pipeline" id="sequential" >}}
+{{< panel color="orange" title="1 · Sequential Pipeline" id="sequential" >}}
 The simplest and most common pattern: each step's output is the next step's input, in a fixed order.
 
 ```mermaid

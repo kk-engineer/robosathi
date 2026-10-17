@@ -21,7 +21,7 @@ By the end of these notes you should be able to:
 - make side effects idempotent and multi-step changes compensable with sagas.
 {{< /panel >}}
 
-{{< panel color="gold" title="It Does Not Pay Twice" id="cold_open" >}}
+{{< panel color="green" title="It Does Not Pay Twice" id="cold_open" >}}
 A customer asks the [CSA]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#cold_open" >}}) to refund a $30.95 T-shirt (under the limit). The executor's trace shows an **idempotency key** for the call, and the **saga** steps that issue the refund.
 Then the customer asks again: "_Refund order 10535._" It **does not pay twice**: the order is already refunded, and a retried call under the same key **replays its first result**.
 
@@ -218,7 +218,7 @@ A failing compensation is recorded and the unwinding **continues**. A **Stop** i
 💡 **A saga's promise isn't "all succeed"; it's "never half-applied".**
 {{< /panel >}}
 
-{{< panel color="green" title="Putting It Together: The Order Is the Design" id="composition" >}}
+{{< panel color="cyan" title="Putting It Together: The Order Is the Design" id="composition" >}}
 Every call to a dependency goes through one fixed stack, **outermost first**:
 
 ```mermaid

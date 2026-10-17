@@ -25,7 +25,7 @@ By the end of these notes you should be able to:
 📘 **Context** is everything the model reads on **one** call, and nothing else. A model has no other access to the world:
 no memory between calls, no database, no inbox. If something isn't in the window on _this_ call, for the model it doesn't exist.
 
-{{< imgproc "images/agentic_ai/e07/what_is_context.png" Resize "1000x" >}}{{< /imgproc >}}
+{{< imgproc "images/agentic_ai/context/what_is_context.png" Resize "1000x" >}}{{< /imgproc >}}
 
 Everything in the window falls into one of three kinds:
 
@@ -37,7 +37,7 @@ Everything in the window falls into one of three kinds:
 In an agent this decision is made many times per task, because every turn of the [agent loop]({{<ref "/docs/agentic_ai/agentic_design_patterns/#tool_use_loop" >}}) is a fresh call with a fresh window.
 {{< /definition >}}
 
-{{< panel color="blue" title="Why Manage It?" id="why_manage" >}}
+{{< panel color="orange" title="Why Manage It?" id="why_manage" >}}
 Filling the window is easy: append everything and let the model sort it out. There are four reasons not to:
 
 1. 📏 **Finite**: the window is a hard cap in tokens. Something will always be left out; the only question is whether **you** choose what, or **arrival order** does.
@@ -179,7 +179,7 @@ graph LR
 {{< panel color="navy" title="Our Implementation: One Window, Five Stages" id="five_stages" >}}
 Both reference agents share one context package; only their **sources** differ.
 
-{{< imgproc "images/agentic_ai/e07/one_window_five_stages.png" Resize "1000x" >}}{{< /imgproc >}}
+{{< imgproc "images/agentic_ai/context/one_window_five_stages.png" Resize "1000x" >}}{{< /imgproc >}}
 
 | Stage | What happens |
 |---|---|

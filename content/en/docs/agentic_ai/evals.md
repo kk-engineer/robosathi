@@ -21,8 +21,8 @@ By the end of these notes you should be able to:
 - choose between code, judge and adversarial graders, and design a fixed regression set.
 {{< /panel >}}
 
-{{< panel color="gold" title="A Motivating Example: Every Control Makes a Claim" id="cold_open" >}}
-The earlier chapters each made a claim: "_no refund over the limit_" ([E01]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#gatekeeper" >}})), "_no claim without evidence_" ([E09]({{<ref "/docs/agentic_ai/hallucination_checks" >}})), "_no other customer's data_" ([E11]({{<ref "/docs/agentic_ai/agent_security_principles/#pii" >}})).
+{{< panel color="green" title="A Motivating Example: Every Control Makes a Claim" id="cold_open" >}}
+The earlier chapters each made a claim: "_no refund over the limit_" ([the Gatekeeper]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#gatekeeper" >}})), "_no claim without evidence_" ([hallucination checks]({{<ref "/docs/agentic_ai/hallucination_checks" >}})), "_no other customer's data_" ([agent security]({{<ref "/docs/agentic_ai/agent_security_principles/#pii" >}})).
 **Evals** are how we check those claims, on every change, against a real model.
 
 Two artefacts make this concrete: a colour-coded table of **30 golden cases** with every invariant checked per case, and a red-team report of **20 attacks** plus one benign control that must still be answered.
@@ -43,7 +43,7 @@ Because evals are non-deterministic and costly, they need their own principles.
 💡 **A green test suite says nothing about whether the model refunds the wrong order.**
 {{< /definition >}}
 
-{{< panel color="blue" title="Eight Principles" id="principles" >}}
+{{< panel color="gold" title="Eight Principles" id="principles" >}}
 Each principle prevents a specific failure:
 
 | # | Principle | Prevents |
@@ -53,7 +53,7 @@ Each principle prevents a specific failure:
 | 3 | **Balance the set** | "_Refuse everything_" scoring well |
 | 4 | **Hard and soft gates** | Averaging a safety failure away |
 | 5 | **A fixed regression set** | Drift you mistake for progress |
-| 6 | **Measure the judge** | Trusting an uncalibrated grader ([κ, E10]({{<ref "/docs/agentic_ai/llm_as_a_judge/#kappa" >}})) |
+| 6 | **Measure the judge** | Trusting an uncalibrated grader ([Cohen's κ]({{<ref "/docs/agentic_ai/llm_as_a_judge/#kappa" >}})) |
 | 7 | **Repeat: pass@k and pass^k** | One lucky run |
 | 8 | **Make it cheap to run** | Evals nobody runs |
 
@@ -146,9 +146,9 @@ Alongside these, component evals test pieces in isolation, e.g. an intent-classi
 - **Test cases**: `LLMTestCase` (input, actual output, expected output, retrieval context, tools called) or `ConversationalTestCase` for multi-turn.
 - **Metrics**: ready-made (answer relevancy, faithfulness, contextual precision/recall, tool correctness...) and custom ones via **G-Eval** (Liu et al., 2023): you write criteria, the judge follows evaluation steps and fills a score.
 - **Thresholds**: each metric passes at a threshold; `assert_test` fails the run like a unit test.
-- **Any judge**: wrap your own model, here the platform judge from [E10]({{<ref "/docs/agentic_ai/llm_as_a_judge/#our_judges" >}}).
+- **Any judge**: wrap your own model, here the platform judge described in [LLM as a Judge]({{<ref "/docs/agentic_ai/llm_as_a_judge/#our_judges" >}}).
 
-**A real metric: honesty** (E10's rubric rules, in YAML: anchored bands, one construct, reason first):
+**A real metric: honesty** (the judge-rubric rules from [LLM as a Judge]({{<ref "/docs/agentic_ai/llm_as_a_judge/#psychometrics" >}}), in YAML: anchored bands, one construct, reason first):
 
 ```yaml
 honesty:
@@ -204,7 +204,7 @@ honesty:
 | Our gate | Soft · 80% | Hard · 100% |
 {{< /panel >}}
 
-{{< panel color="green" title="Our Eval Harness: Run Once, Grade Twice" id="harness" >}}
+{{< panel color="cyan" title="Our Eval Harness: Run Once, Grade Twice" id="harness" >}}
 ```mermaid
 graph LR
     G["Golden cases · YAML, labelled"] --> A["Agent under test · real agent, private fixture"]

@@ -34,7 +34,7 @@ This is also the order of these notes: from one model in a loop, to a model chec
 Each step up hands over more control, so each needs a stronger fence.
 {{< /definition >}}
 
-{{< panel color="blue" title="1 · The Tool-Use Loop" id="tool_use_loop" >}}
+{{< panel color="orange" title="1 · The Tool-Use Loop" id="tool_use_loop" >}}
 This is the base pattern every other one builds on. The model's output is not prose but a **structured tool call**: a tool name and JSON arguments. Code validates the call, runs it, and hands the result back to the model, which decides what to do next.
 
 ```mermaid

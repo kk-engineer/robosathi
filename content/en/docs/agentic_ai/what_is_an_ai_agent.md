@@ -22,7 +22,7 @@ By the end of these notes you should be able to:
 - reason about the costs of delegating to an agent using monitoring, bonding and residual loss.
 {{< /panel >}}
 
-{{< panel color="blue" title="A Motivating Example: The Same Model, Twice" id="cold_open" >}}
+{{< panel color="magenta" title="A Motivating Example: The Same Model, Twice" id="cold_open" >}}
 Consider a customer support agent (the course's running example, the **CSA**) that can look up orders and issue refunds. Its operator has a simple policy: the agent may refund **at most $50** on its own; anything larger needs a person.
 The policy is written into the agent's system prompt, so the model "knows" it.
 
@@ -135,7 +135,7 @@ The standing of an act is decided by the harness, not by the model. We return to
 If authority must be checked outside the model and before the act, where exactly does the check go? The answer follows from what the model produces.
 The model's output is never an action; it is a **proposal**, a typed tool call. Between _propose_ and _execute_ we place the Gatekeeper: deterministic code that evaluates that exact proposal against the principal's policy.
 
-{{< imgproc "images/agentic_ai/e01/where_authority_lives.png" Resize "1000x" >}}{{< /imgproc >}}
+{{< imgproc "images/agentic_ai/agent_basics/where_authority_lives.png" Resize "1000x" >}}{{< /imgproc >}}
 
 The checks run in order: is the agent enabled; was this tool offered on this turn; is the target record within the turn's mandate (for example, does the order belong to this customer); is the actor allowed; does the role carry the authority; do the business rules pass (the refund limit); and, where relevant, a cumulative ledger across actions.
 There are three possible verdicts. **ALLOW** lets the tool execute. **ESCALATE** parks the action for a person, which is ratification in code. **DENY** returns a deterministic refusal that the model then explains to the customer.
@@ -149,7 +149,7 @@ Second, every decision is **audited**, so the principal can later see what was d
 {{< panel color="red" title="Delegation Has a Price: Agency Costs" id="agency_costs" >}}
 Economics offers a second lens. Jensen and Meckling (1976) showed that whenever a principal delegates to an agent whose interests may diverge, the principal bears **agency costs** of three kinds.
 
-{{< imgproc "images/agentic_ai/e01/delegation_has_a_price.png" Resize "1000x" >}}{{< /imgproc >}}
+{{< imgproc "images/agentic_ai/agent_basics/delegation_has_a_price.png" Resize "1000x" >}}{{< /imgproc >}}
 
 - **Monitoring costs** are what the principal spends watching the agent. In an AI system these are traces, the audit ledger and [observability]({{<ref "/docs/agentic_ai/observability_analytics" >}}).
 - **Bonding costs** are what it costs to bind the agent to commitments it cannot break: typed tool schemas, [guardrails]({{<ref "/docs/agentic_ai/guardrails_loop_control_state" >}}), the Gatekeeper.
@@ -176,14 +176,14 @@ We return to this attack, and to the general problem of [prompt injection]({{<re
 {{< panel color="blue" title="The Agent as a Graph" id="csa_graph" >}}
 It helps to see the support agent as a graph of steps. With the Gatekeeper off, the model's proposal goes straight to the side effect:
 
-{{< imgproc "images/agentic_ai/e01/csa_graph_gatekeeper_off.png" Resize "1000x" >}}{{< /imgproc >}}
+{{< imgproc "images/agentic_ai/agent_basics/csa_graph_gatekeeper_off.png" Resize "1000x" >}}{{< /imgproc >}}
 
 The turn starts by **authenticating** the customer (an identity check, not a model call), **choosing the order** under discussion, and **prefetching** the obvious reads. Then the model is called (**propose**), which is the only place in the graph a model is used.
 If it proposes a tool call, **execute** runs it and the loop returns to propose; otherwise **finalize** writes the reply.
 
 With the Gatekeeper on, the same spine gains a Gatekeeper between _propose_ and _execute_, surrounded by the rest of the harness: a **front door** of screens (PII filtering, a prompt-injection screen, content moderation, deterministic checks, intent classification, context assembly), and an **await_approval** step where an escalated refund pauses until a person decides.
 
-{{< imgproc "images/agentic_ai/e01/csa_graph_gatekeeper_on.png" Resize "1000x" >}}{{< /imgproc >}}
+{{< imgproc "images/agentic_ai/agent_basics/csa_graph_gatekeeper_on.png" Resize "1000x" >}}{{< /imgproc >}}
 
 The bare graph is small enough to write out in full. In LangGraph, it is six nodes and one loop:
 

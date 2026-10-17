@@ -18,7 +18,7 @@ By the end of these notes you should be able to:
 - record and justify an autonomy decision so that it can be reviewed and changed deliberately.
 {{< /panel >}}
 
-{{< panel color="blue" title="A Motivating Example: One Agent, Three Answers" id="three_answers" >}}
+{{< panel color="magenta" title="A Motivating Example: One Agent, Three Answers" id="three_answers" >}}
 A single customer sends our [support agent]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#cold_open" >}}) three requests in one session.
 
 The first is "_Where's my order?_". An intent classifier routes it to a database read; **no model is called at all**, and the answer comes straight from the orders table.
