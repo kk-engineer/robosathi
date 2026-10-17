@@ -3274,5 +3274,44 @@ $ab-line: #e8ddd0; $ab-gold: #B8945A; $ab-gold-d: #9a7340; $ab-muted: #5b667a;
 .ab-grid > *, .ab-principles > *, .ab-list li > div, .ab-person > div { min-width: 0; }
 @media (max-width: 520px) { .ab { padding-left: 1rem; padding-right: 1rem; } .ab-card { padding: 1.1rem; } }
 
+// About: slimmer top cards
+.ab-grid { gap: 1rem; }
+.ab-card { padding: 1rem 1.1rem; }
+.ab-eyebrow--left { margin-bottom: 0.6rem; }
+.ab-person { margin-bottom: 0.6rem; gap: 0.75rem; }
+.ab-person__photo img { width: 48px !important; height: 48px !important; }
+.ab-quote { font-size: 0.82rem; line-height: 1.5; margin-bottom: 0.6rem; padding-left: 0.75rem; }
+.ab-list {
+  li { grid-template-columns: 26px 1fr; gap: 0.6rem; padding: 0.45rem 0; }
+  strong { font-size: 0.83rem; }
+  span:not(.ab-icon) { font-size: 0.75rem; line-height: 1.4; margin-top: 0.05rem; }
+}
+.ab-list--services li { padding: 0.45rem 0; }
+.ab-card .ab-icon { width: 26px; height: 26px; font-size: 0.72rem; border-radius: 7px; }
+
+// Course outline rows wrap instead of spilling at tablet/laptop widths
+.rs-course-outline__section summary,
+.rs-course-outline__item { flex-wrap: wrap; row-gap: 0.25rem; }
+.rs-course-outline__summary-text,
+.rs-course-outline__item-main { min-width: 0; flex: 1 1 14rem; }
+.rs-course-outline__summary-meta,
+.rs-course-outline__item-meta { min-width: 0; white-space: normal; flex-wrap: wrap; text-align: right; }
+@media (max-width: 640px) {
+  .rs-course-outline__summary-meta, .rs-course-outline__item-meta { text-align: left; }
+}
+
+.rs-course-outline__summary-meta, .rs-course-outline__item-meta { max-width: 100%; }
+.rs-course-outline__summary-meta *, .rs-course-outline__item-meta * { white-space: normal !important; min-width: 0; }
+
+// Tablet / small laptop: sidebar beside the article, never above it
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  body:has(.td-content) {
+    .td-main > .row { flex-wrap: nowrap; }
+    .td-sidebar { flex: 0 0 220px !important; max-width: 220px !important; width: 220px !important; }
+    .td-sidebar-nav a.td-sidebar-link, .td-sidebar-nav .td-sidebar-link { white-space: normal; overflow-wrap: anywhere; }
+    main[role="main"] { flex: 1 1 auto !important; max-width: calc(100% - 220px) !important; min-width: 0; }
+  }
+}
+
 // Interview Section scss
 @import "interview";
