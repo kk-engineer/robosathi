@@ -1,6 +1,6 @@
 ---
 title: "Observability & Analytics"
-description: "One trace id from a single turn to the whole fleet: logs, spans, facts, audit, OpenTelemetry, dashboards"
+description: "Analytics Dashboard(Rill), Langsmith trace, and Logging"
 date: 2026-10-16
 weight: 13
 ---

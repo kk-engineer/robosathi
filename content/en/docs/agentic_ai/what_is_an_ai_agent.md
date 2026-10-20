@@ -1,6 +1,6 @@
 ---
-title: "What Is an AI Agent, Really?"
-description: "Agent = Model + Harness, and why agency is not authority"
+title: "What Is an AI Agent?"
+description: "Agent = Model + Harness, and Agency ≠ Authority"
 date: 2026-10-16
 weight: 1
 math: true
@@ -22,7 +22,7 @@ By the end of these notes you should be able to:
 - reason about the costs of delegating to an agent using monitoring, bonding and residual loss.
 {{< /panel >}}
 
-{{< panel color="magenta" title="A Motivating Example: The Same Model, Twice" id="cold_open" >}}
+{{< panel color="magenta" title="Customer Support Agent" id="csa" >}}
 Consider a customer support agent (the course's running example, the **CSA**) that can look up orders and issue refunds. Its operator has a simple policy: the agent may refund **at most $50** on its own; anything larger needs a person.
 The policy is written into the agent's system prompt, so the model "knows" it.
 
@@ -88,7 +88,7 @@ A **control** is something that holds whatever the model proposes.
 {{< keyidea >}}**A rule in the prompt is a request. A check in code, before the action, is a control.**{{< /keyidea >}}
 {{< /panel >}}
 
-{{< panel color="orange" title="Borrowing from Law: The Agency Principle" id="agency_principle" >}}
+{{< panel color="orange" title="The Agency Principle" id="agency_principle" >}}
 The distinction between acting and being authorised to act is not new. The common law of agency has refined it for well over a century, and the **Restatement (Third) of Agency** (American Law Institute, 2006) summarises it.
 
 Section 1.01 defines agency as the relationship that arises when a **principal** manifests assent that an **agent** shall act on the principal's behalf **and subject to the principal's control**, and the agent consents to act.
@@ -218,7 +218,7 @@ Notice that **nothing about authority appears anywhere in this code**. That is n
 In the full system, the Gatekeeper lives inside the single tool path that `execute` calls, so every tool call passes through it. The graph's structure is studied further in [Workflow Design Patterns]({{<ref "/docs/agentic_ai/workflow_design_patterns/#csa_patterns" >}}).
 {{< /panel >}}
 
-{{< panel color="grey" title="An Everyday Analogy: The Corporate Travel Desk" id="travel_desk" >}}
+{{< panel color="grey" title="Example: The Corporate Travel Desk" id="travel_desk" >}}
 If the legal vocabulary feels abstract, consider a corporate travel desk. The travel agent has real agency: they search, compare, and can actually book.
 But the company's travel policy sets a fare cap, and anything above it needs a manager's approval **before** it is booked. Nobody thinks the travel agent is less useful because of the cap; the cap is precisely what lets the company hand them a booking tool at all.
 

@@ -1,6 +1,7 @@
 ---
 title: "System Design: Resilience"
-description: "The dangerous failure is the call that never returns: timeouts, retries, breakers, bulkheads, idempotency and sagas"
+description: "Timeouts, Retries, Circuit Breakers, Bulkheads, Idempotency, Saga, Rate Limit, 
+Dead Letter Queue, and Hedging"
 date: 2026-10-16
 weight: 15
 math: true

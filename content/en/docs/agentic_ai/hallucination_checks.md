@@ -195,16 +195,19 @@ Otherwise a sentence is merely **marked** LOW (mean under 0.6, or more than 25% 
 [Read more about Log Loss]({{<ref "/docs/machine_learning/supervised/logistic_regression/log_loss/" >}})
 {{< /panel >}}
 
-{{< panel color="grey" title="Methods We Didn't Use, and Why" id="other_methods" >}}
+{{< panel color="grey" title="Hallucination Check Methods" id="other_methods" >}}
 Each of these is legitimate; each has a cost that doesn't fit an agent answering a customer in real time on hosted models:
 
-| Method | Idea | Why not here |
-|---|---|---|
-| **Self-consistency / SelfCheckGPT** (Manakul et al., 2023) | Sample N answers; claims that don't recur are suspect | N× cost and latency (built, and left off) |
-| **Semantic entropy** (Farquhar et al., _Nature_ 2024) | Entropy over meaning clusters of N samples | N× cost + clustering |
-| **Chain-of-Verification** (Dhuliawala et al., 2023) | The model questions and revises its own draft | More calls; the checker shares the author's blind spots |
-| **LLM judge / FActScore** (Min et al., 2023) | A model verifies each atomic claim | Cost per claim; [judges hallucinate too]({{<ref "/docs/agentic_ai/llm_as_a_judge" >}}) |
-| **Internal-state probes** (Azaria & Mitchell, 2023) | A classifier on hidden activations | Needs model internals a hosted API doesn't expose |
+| Method                                       | Accuracy    | Primary Trade-off/Bottleneck                                    |
+|----------------------------------------------|-------------|-----------------------------------------------------------------|
+| **Embedding + NLI**                          | Medium      | Blind to multi-line facts and math errors                       |
+| **Hybrid + Reranker + NLI**                  | High        | Still bound by rigid NLI token limits (e.g., 512 tokens)        |
+| **Hybrid + Reranker + LLM-Judge (CoT)** | Very High   | Financial cost scales with usage; Judges can still hallucinate [judges hallucinate too]({{<ref "/docs/agentic_ai/llm_as_a_judge" >}}) |
+| **Semantic Entropy / Self-Consistency** | Exceptional | N× cost multiplier; requires expensive meaning clustering                                                 |
+
+**Note**: <br>
+Self-Consistency looks for exact consensus, while Semantic Entropy looks for consistent meaning.
+
 
 {{< keyidea >}}**Don't ask the author to grade its own work, and don't pay N× on every reply.**{{< /keyidea >}}
 {{< /panel >}}

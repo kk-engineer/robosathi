@@ -18,8 +18,8 @@ By the end of these notes you should be able to:
 - record and justify an autonomy decision so that it can be reviewed and changed deliberately.
 {{< /panel >}}
 
-{{< panel color="magenta" title="A Motivating Example: One Agent, Three Answers" id="three_answers" >}}
-A single customer sends our [support agent]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#cold_open" >}}) three requests in one session.
+{{< panel color="magenta" title="One Agent, Three Answers" id="three_answers" >}}
+A single customer sends our [support agent]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#csa" >}}) three requests in one session.
 
 The first is "_Where's my order?_". An intent classifier routes it to a database read; **no model is called at all**, and the answer comes straight from the orders table.
 The second is a refund for $30.95. The model proposes it, the [Gatekeeper]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#gatekeeper" >}}) allows it because it is under the limit, it executes, and the customer is told. No person is involved, although every step is recorded.
@@ -61,12 +61,22 @@ Between **6 and 7**, the question is whether a human sees the action **before** 
 
 {{< panel color="cyan" title="Example: One Inbox, Ten Levels" >}}
 Consider an email assistant doing the same job, handling your inbox, at every level.
-At level 1 you write every email yourself. At level 2 it shows your saved reply templates. At level 3 it offers three short replies and you pick one, which is exactly Gmail's **Smart Reply** (Kannan et al., 2016).
-At level 4 it drafts one reply for you to edit. At level 5 it sends its draft when you click _Approve_. At level 6 it sends in ten seconds unless you press _Undo_, which is **Undo Send**.
-At level 7 it auto-replies and then shows you what it sent. At level 8 it files mail to spam, and you only see it if you go and look. At level 9 it sends you a digest of only what it thinks matters. At level 10 it silently deletes mail it dislikes.
+- At level 1 you write every email yourself. 
+- At level 2 it shows your saved reply templates. 
+- At level 3 it offers three short replies and you pick one, which is exactly Gmail's **Smart Reply** (Kannan et al., 2016).
+- At level 4 it drafts one reply for you to edit. 
+- At level 5 it sends its draft when you click _Approve_. 
+- At level 6 it sends in ten seconds unless you press _Undo_, which is **Undo Send**.
+- At level 7 it auto-replies and then shows you what it sent. 
+- At level 8 it files mail to spam, and you only see it if you go and look. 
+- At level 9 it sends you a digest of only what it thinks matters. 
+- At level 10 it silently deletes mail it dislikes.
 {{< /panel >}}
 
-Ask yourself at which rung you would stop being comfortable. Most people answer somewhere between 6 and 7, and the reason is never "_the model isn't smart enough_". It is **blast radius**: an email you can't take back.
+Ask yourself at which rung you would stop being comfortable. 
+
+Most people answer somewhere between 6 and 7, and the reason is never "_the model isn't smart enough_". 
+It is **blast radius**: an email you can't take back.
 {{< /panel >}}
 
 {{< panel color="orange" title="Where the Human Sits" id="human_bands" >}}

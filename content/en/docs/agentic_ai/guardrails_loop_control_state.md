@@ -1,6 +1,6 @@
 ---
-title: "Guardrails, Loop Control & State"
-description: "Bound what the agent says, how long it runs, and what survives when it stops"
+title: "Type Safety, Loop Control & State"
+description: "Pydantic, Outlines, LMQL, Loop Control, and State Management"
 date: 2026-10-16
 weight: 6
 ---

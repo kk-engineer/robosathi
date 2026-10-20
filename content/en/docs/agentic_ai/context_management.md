@@ -1,6 +1,7 @@
 ---
 title: "Context Management"
-description: "Decide what the model reads, or arrival order will: six strategies, five failure modes, one pipeline"
+description: "6 Strategies: Offload, Reduce, Retrieve, Isolate, Cache, and Consolidate, 5 Failures: 
+Poisoning, Clash, Confusion, Confusion, and Rot"
 date: 2026-10-16
 weight: 7
 math: true

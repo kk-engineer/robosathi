@@ -1,6 +1,6 @@
 ---
 title: "Agent Security Principles"
-description: "The strongest layer was never a detector: OWASP risks, personal data, prompt injection, moderation, RBAC and the Gatekeeper"
+description: "OWASP Top 10, PII redaction, Prompt injection, Content noderation, RBAC, and the Gatekeeper"
 date: 2026-10-16
 weight: 11
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Retrieval-Augmented Generation"
-description: "Language from the weights, facts from the index: hybrid retrieval, reranking, grounding and what stays out of the index"
+description: "Semantic Chunking, Sparse(BM25) & Dense retrieval, Reciprocal Rank Fusion, Cross Encoder (Reranking), and Hallucination Checks"
 date: 2026-10-16
 weight: 5
 math: true
@@ -22,7 +22,7 @@ By the end of these notes you should be able to:
 - decide what knowledge belongs in an index and what must live elsewhere.
 {{< /panel >}}
 
-{{< panel color="magenta" title="A Motivating Example: The Model Doesn't Know Your Business" id="what_you_saw" >}}
+{{< panel color="magenta" title="The Model Doesn't Know Your Business" id="what_you_saw" >}}
 A customer asks the [support agent]({{<ref "/docs/agentic_ai/what_is_an_ai_agent/#cold_open" >}}): "_How long will my refund take to show on my card?_"
 
 With the knowledge base switched on, the agent retrieves a passage from the help article `refunds.md`, under the heading _When the money arrives_, which says "_5 to 10 business days_". The answer quotes it, and a grounding check can verify every word against the passage.

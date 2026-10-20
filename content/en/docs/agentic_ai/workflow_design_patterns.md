@@ -8,7 +8,7 @@ weight: 3
 {{< playlist "" "Agentic AI | Full Course" >}}
 
 {{< panel color="gold" title="Overview" id="overview" >}}
-A surprising amount of what is marketed as "agentic AI" is, structurally, a **workflow**: a sequence of steps fixed in code, in which a language model does some of the work but never decides what happens next.
+A surprising amount of what is marketed as "Agentic AI" is, structurally, a **workflow**: a sequence of steps fixed in code, in which a language model does some of the work but never decides what happens next.
 That is not a criticism. Workflows are predictable, testable and cheap, and most production systems should be mostly workflow.
 
 These notes introduce the one distinction that organises this chapter and the next, **who decides the next step**, and then catalogue six workflow patterns.

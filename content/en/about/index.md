@@ -17,7 +17,7 @@ menu: {main: {weight: 30}}
 <article class="ab-card">
   <p class="ab-eyebrow ab-eyebrow--left">The Architect</p>
   <div class="ab-person">
-    <a class="ab-person__photo" href="https://www.linkedin.com/in/kk-engineer/" target="_blank" rel="noopener noreferrer">{{< imgproc "images/about/kumar_karan.png" Fill "128x128" "eager" "high" >}}{{< /imgproc >}}</a>
+    <a class="ab-person__photo" href="https://www.linkedin.com/in/kk-engineer/" target="_blank" rel="noopener noreferrer">{{< imgproc "images/about/kumar_karan.jpg" Fill "128x128" "eager" "high" >}}{{< /imgproc >}}</a>
     <div>
       <p class="ab-person__name">Kumar Karan <a href="https://www.linkedin.com/in/kk-engineer/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></p>
       <p class="ab-person__role">Creator &amp; Agentic AI Architect</p>

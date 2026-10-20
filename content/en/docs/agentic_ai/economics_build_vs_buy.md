@@ -19,7 +19,7 @@ By the end of these notes you should be able to:
 - recommend what to build, adopt and buy for an agent, and justify it.
 {{< /panel >}}
 
-{{< panel color="green" title="A Motivating Question" id="cold_open" >}}
+{{< panel color="green" title="Point of View" id="cold_open" >}}
 This course built a Gatekeeper, guardrails, memory governance, hallucination checks, an eval harness. Should _you_ build all of that?
 **Mostly, no. Some of it, absolutely.** These notes are about telling which, with numbers.
 

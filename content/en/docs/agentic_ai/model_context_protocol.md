@@ -1,6 +1,6 @@
 ---
 title: "Model Context Protocol"
-description: "One server, any client: MCP fundamentals, a governed client, and moving a server from stdio to HTTP"
+description: "MCP Server, Client and Ops Agent"
 date: 2026-10-16
 weight: 14
 ---

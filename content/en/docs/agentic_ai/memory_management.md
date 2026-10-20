@@ -1,6 +1,6 @@
 ---
 title: "Memory Management"
-description: "Working memory, three long-term stores, and dreams: what an agent remembers, it acts on"
+description: "Working memory, Long-term memory: Episodic, Semantic, and Procedural, and Dreams"
 date: 2026-10-16
 weight: 8
 math: true
