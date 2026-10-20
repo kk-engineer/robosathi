@@ -1,5 +1,5 @@
 ---
-title: "System Design: Resilience"
+title: "System Design Patterns"
 description: "Timeouts, Retries, Circuit Breakers, Bulkheads, Idempotency, Saga, Rate Limit, 
 Dead Letter Queue, and Hedging"
 date: 2026-10-16
