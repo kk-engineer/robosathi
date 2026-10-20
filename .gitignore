@@ -6,3 +6,9 @@ package-lock.json
 .DS_Store
 **/.DS_Store
 .claude/
+
+# Zip files
+*.zip
+
+# Patch files
+*.patch
