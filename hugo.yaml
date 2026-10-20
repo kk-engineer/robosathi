@@ -245,7 +245,10 @@ minify:
       keepDefaultAttrVals: false
       keepWhitespace: false
     css:
-      precision: 1
+      # 0 = keep full numeric precision. Any positive value is *significant
+      # digits*, not decimals: precision: 1 turned 14.5px into 10px and
+      # line-height 1.4 into 1 in the minified (production-only) CSS.
+      precision: 0
     js:
       keepVarNames: false
 
