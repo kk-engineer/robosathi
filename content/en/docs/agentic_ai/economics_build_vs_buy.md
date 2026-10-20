@@ -1,5 +1,5 @@
 ---
-title: "Economics: Build vs Buy"
+title: "Build vs Buy"
 description: "You can rent intelligence, you can't rent accountability: build, adopt, buy or partner, per component, with the arithmetic"
 date: 2026-10-16
 weight: 16
