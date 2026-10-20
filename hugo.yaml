@@ -199,6 +199,10 @@ params:
   links:
     # End user relevant links. These will show up on left side of footer and in the community page if you have one.
     user:
+      - name: YouTube
+        url: https://www.youtube.com/@RoboSathi
+        icon: fab fa-youtube
+        desc: Watch our videos on YouTube!
       - name: LinkedIn
         url: https://www.linkedin.com/company/robosathi/
         icon: fab fa-linkedin
@@ -208,13 +212,9 @@ params:
         icon: fab fa-instagram
         desc: Follow us on Instagram.
       - name: Github
-        url: https://github.com/kk-engineer
+        url: https://github.com/RoboSathi
         icon: fab fa-github
         desc: Checkout Code!
-      - name: X.com
-        url: https://x.com/who_kkaran
-        icon: fab fa-x-twitter
-        desc: Follow us on X.com to get the latest news!
       - name: Support Us
         url: /support-us/
         icon: fas fa-hand-holding-heart
