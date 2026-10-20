@@ -1,4 +1,5 @@
 {{- $page := .page -}}
+{{- $noRemote := .noRemote | default false -}}
 {{- $leafPages := slice -}}
 {{- if eq $page.Kind "section" -}}
   {{- $leafPages = $page.RegularPagesRecursive.ByWeight -}}
@@ -38,6 +39,7 @@
     {{- $videoUrls = $videoUrls | append $url -}}
     {{- $title := printf "Video lesson %d" (add (len $videoTitles) 1) -}}
     {{- $apiURL := printf "https://www.youtube.com/oembed?url=%s&format=json" $url -}}
+    {{- if not $noRemote -}}
     {{- with try (resources.GetRemote $apiURL) -}}
       {{- with .Value -}}
         {{- with .Content -}}
@@ -46,8 +48,10 @@
         {{- end -}}
       {{- end -}}
     {{- end -}}
+    {{- end -}}
     {{- $videoTitles = $videoTitles | append $title -}}
     {{- $itemSeconds := 0 -}}
+    {{- if not $noRemote -}}
     {{- with try (resources.GetRemote $url) -}}
       {{- with .Value -}}
         {{- $matches := findRE "\"lengthSeconds\":\"([0-9]+)\"" (.Content | string) 1 -}}
@@ -55,6 +59,7 @@
           {{- $itemSeconds = int (replaceRE ".*\"lengthSeconds\":\"([0-9]+)\".*" "$1" .) -}}
         {{- end -}}
       {{- end -}}
+    {{- end -}}
     {{- end -}}
     {{- $stats.Add "videoSeconds" $itemSeconds -}}
     {{- $stats.Add "videoCount" 1 -}}

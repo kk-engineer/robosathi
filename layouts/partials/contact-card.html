@@ -1,0 +1,17 @@
+{{- $email := "contact@robosathi.com" -}}
+<div class="rs-contact-strip" id="contact">
+  <div class="rs-contact-strip__text">
+    <p class="rs-eyebrow">Let's Talk</p>
+    <h2 class="rs-contact-strip__title">Planning an <em>agentic AI system?</em></h2>
+    <p class="rs-contact-strip__sub">Tell us what you're building; we'll show you where agents or workflows fit.</p>
+  </div>
+  <div class="rs-contact-strip__actions">
+    <button type="button" class="rs-email-chip rs-copy-email" data-email="{{ $email }}" title="Copy email">
+      <span>{{ $email }}</span><i class="far fa-copy" aria-hidden="true"></i>
+    </button>
+    <a class="rs-contact-strip__icon" href="https://www.linkedin.com/company/robosathi/" target="_blank" rel="noopener" aria-label="RoboSathi on LinkedIn">
+      <i class="fab fa-linkedin" aria-hidden="true"></i>
+    </a>
+  </div>
+</div>
+{{- partial "copy-email-script.html" . -}}

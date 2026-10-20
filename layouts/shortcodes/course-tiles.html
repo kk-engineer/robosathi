@@ -1,0 +1,36 @@
+{{- /* Course tiles for the /docs/ landing page, built from this page's course_outline.
+       Icon and eyebrow come from each course's front matter; counts from course-stats.html;
+       the playlist link is read from the course's own playlist shortcode. */ -}}
+<div class="rs-docs-tiles">
+{{- range .Page.Params.course_outline.sections -}}
+  {{- with site.GetPage .page_ref -}}
+  {{- $stats := partial "course-stats.html" (dict "page" . "noRemote" true) -}}
+  {{- $playlist := "" -}}
+  {{- with findRE `playlist\s+"([^"]+)"` .RawContent 1 -}}
+    {{- $playlist = replaceRE `playlist\s+"([^"]+)"` "$1" (index . 0) -}}
+  {{- end -}}
+  <div class="rs-docs-tile">
+    <div class="rs-docs-tile__head">
+      <span class="rs-course-tile__icon"><i class="fas {{ .Params.icon | default "fa-book" }}" aria-hidden="true"></i></span>
+      <div>
+        {{- with .Params.eyebrow }}<span class="rs-course-tile__eyebrow">{{ . }}</span>{{ end }}
+        <a class="rs-docs-tile__title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </div>
+      {{- with .Params.badge }}<span class="rs-course-tile__badge">{{ . }}</span>{{ end }}
+    </div>
+    <p class="rs-docs-tile__desc">{{ .Description }}</p>
+    <div class="rs-docs-tile__foot">
+      <span class="rs-docs-tile__meta">{{ $stats.articleCount }} articles · {{ $stats.topicCount }} topics</span>
+      <span class="rs-docs-tile__links">
+        {{- if $playlist }}
+        <a href="{{ $playlist }}" target="_blank" rel="noopener"><i class="fab fa-youtube" aria-hidden="true"></i> Playlist</a>
+        {{- else }}
+        <span class="rs-docs-tile__soon"><i class="fab fa-youtube" aria-hidden="true"></i> Coming soon</span>
+        {{- end }}
+        <a href="{{ .RelPermalink }}">Start <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+      </span>
+    </div>
+  </div>
+  {{- end -}}
+{{- end -}}
+</div>

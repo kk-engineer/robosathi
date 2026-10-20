@@ -10,10 +10,14 @@
   </header>
   {{ .Render "_td-content-after-header" -}}
   {{ .Content }}
+  {{- $isRoot := eq .RelPermalink (relURL "/docs/") -}}
+  {{ if and .Params.course_outline (not $isRoot) }}
+    {{ partial "course-chapters.html" . }}
+  {{ end }}
   {{ if or .Params.course_outline .Params.auto_course_outline }}
     {{ partial "course-overview.html" . }}
   {{ end }}
-  {{ partial "section-index.html" . -}}
+  {{ if not .Params.course_outline }}{{ partial "section-index.html" . }}{{ end -}}
   {{ partial "feedback.html" . -}}
   {{ if (.Site.Config.Services.Disqus.Shortname) -}}
     <br />

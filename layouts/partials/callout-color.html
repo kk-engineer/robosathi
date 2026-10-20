@@ -1,0 +1,29 @@
+{{- /* Picks a callout colour so that neighbouring blocks never share a hue family.
+       Input: dict "page" "color" (preferred) "parent" (parent shortcode colour, "" if top level).
+       Hugo renders nested shortcodes before their parent, so nested blocks only contrast
+       with their parent, and top-level blocks also avoid the previous section's last child. */ -}}
+{{- $fam := dict "blue" "cool" "navy" "cool" "cyan" "cool" "slate" "cool" "green" "green" "sage" "green" "gold" "warm" "orange" "warm" "terra" "warm" "red" "red" "rust" "red" "magenta" "purple" "grey" "grey" -}}
+{{- $palette := slice "green" "orange" "magenta" "blue" "red" "cyan" "grey" -}}
+{{- $p := .page -}}
+{{- $c := .color -}}
+{{- $avoid := slice -}}
+{{- if .parent -}}
+  {{- $avoid = slice (index $fam .parent | default "") ($p.Store.Get "rsLastChild" | default "") -}}
+{{- else -}}
+  {{- $avoid = slice ($p.Store.Get "rsPrev" | default "") ($p.Store.Get "rsPrev2" | default "") ($p.Store.Get "rsAvoidNext" | default "") ($p.Store.Get "rsLastChild" | default "") -}}
+{{- end -}}
+{{- if in $avoid (index $fam $c | default $c) -}}
+  {{- $picked := false -}}
+  {{- range $palette -}}
+    {{- if and (not $picked) (not (in $avoid (index $fam .))) -}}{{- $c = . -}}{{- $picked = true -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if .parent -}}
+  {{- $p.Store.Set "rsLastChild" (index $fam $c | default $c) -}}
+{{- else -}}
+  {{- $p.Store.Set "rsPrev2" ($p.Store.Get "rsPrev" | default "") -}}
+  {{- $p.Store.Set "rsPrev" (index $fam $c | default $c) -}}
+  {{- $p.Store.Set "rsAvoidNext" ($p.Store.Get "rsLastChild" | default "") -}}
+  {{- $p.Store.Set "rsLastChild" "" -}}
+{{- end -}}
+{{- return $c -}}

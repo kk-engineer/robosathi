@@ -1,9 +1,24 @@
 {{- $color := .Get "color" | default (.Get 0 | default "gold") -}}
+{{- $parentColor := "" -}}
+{{- with .Parent }}{{ $parentColor = .Get "color" | default (.Get 0 | default "slate") }}{{ end -}}
+{{- $color = partial "callout-color.html" (dict "page" .Page "color" $color "parent" $parentColor) -}}
 {{- $title := .Get "title" | default (.Get 1) -}}
 {{- $icon  := .Get "icon"  | default (.Get 2) -}}
 {{- $id    := .Get "id" -}}
+{{- /* Reading-notes layout: a panel renders as a plain section (heading + text)
+       unless it is an example, overview, summary, note or key idea, which stay boxed.
+       `box="true"` or `box="false"` overrides the title-based choice. */ -}}
+{{- $boxed := findRE `(?i)example|overview|summary|recap|key idea|note|worked|exercise|history|analogy|reading|reference|related` (string $title) 1 -}}
+{{- $box := cond (gt (len $boxed) 0) true false -}}
+{{- with .Get "box" }}{{ $box = eq . "true" }}{{ end -}}
+{{- /* Sections get a stable anchor from their title so other notes can link to them. */ -}}
+{{- if and (not $id) (not $box) $title -}}
+  {{- $id = anchorize (string $title) -}}
+  {{- if index (.Page.Store.Get "rsAnchors" | default dict) $id }}{{ $id = printf "%s-%d" $id .Ordinal }}{{ end -}}
+  {{- .Page.Store.SetInMap "rsAnchors" $id true -}}
+{{- end -}}
 <div {{ with $id }}id="{{ . }}"{{ end }}
-  class="rs-callout rs-callout-panel rs-callout-{{ $color }}">
+  class="rs-callout rs-callout-panel rs-callout-{{ $color }}{{ if not $box }} rs-callout--section{{ end }}">
   {{- if or $title $icon -}}
   <div class="rs-callout__header">
     {{- with $icon -}}

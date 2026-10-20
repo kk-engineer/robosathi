@@ -1,6 +1,10 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
 {{- $title := .Get "title" -}}
-<div class="rs-callout rs-callout-question rs-callout-sage">
+{{- $c := "sage" -}}
+{{- $parentColor := "" -}}
+{{- with .Parent }}{{ $parentColor = .Get "color" | default (.Get 0 | default "slate") }}{{ end -}}
+{{- $c = partial "callout-color.html" (dict "page" .Page "color" $c "parent" $parentColor) -}}
+<div class="rs-callout rs-callout-question rs-callout-{{ $c }}">
   <div class="rs-callout__header">
     <span class="rs-callout__icon" aria-hidden="true">
       <i class="fas fa-circle-question"></i>

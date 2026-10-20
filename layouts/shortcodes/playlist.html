@@ -3,6 +3,7 @@
 {{- $playlistTitle := .Get 1 | default "Complete Course" -}}
 
 <div class="video-link-container">
+  {{- if $playlistUrl }}
   <a href="{{ $playlistUrl }}" target="_blank" rel="noopener" class="video-btn video-btn-playlist" aria-label="View {{ $playlistTitle }} Playlist">
     <span class="video-btn__icon" aria-hidden="true"><i class="fab fa-youtube"></i></span>
     <span class="video-btn__content">
@@ -10,4 +11,14 @@
       <span class="video-btn__title">{{ $playlistTitle }}</span>
     </span>
   </a>
+  {{- else }}
+  {{/* No URL yet: same box, not clickable */}}
+  <div class="video-btn video-btn-playlist" aria-label="{{ $playlistTitle }} playlist coming soon">
+    <span class="video-btn__icon" aria-hidden="true"><i class="fab fa-youtube"></i></span>
+    <span class="video-btn__content">
+      <span class="video-btn__eyebrow">Playlist</span>
+      <span class="video-btn__title">Coming Soon !</span>
+    </span>
+  </div>
+  {{- end }}
 </div>

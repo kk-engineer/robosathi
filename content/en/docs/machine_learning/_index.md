@@ -2,7 +2,7 @@
 title: Machine Learning
 description: Classical ML - Supervised & Unsupervised Learning, Feature Engineering, & ML Systems
 date: 2026-02-07
-weight: 3
+weight: 4
 course_outline:
   sections:
     - page_ref: /docs/machine_learning/introduction
@@ -15,6 +15,8 @@ course_outline:
 #toc_hide: true
 #draft: true
 hide_readingtime: true
+icon: fa-gear
+eyebrow: "Classical ML"
 ---
 
 {{< playlist "https://www.youtube.com/playlist?list=PLnpa6KP2ZQxeydAqz2lsSMFYinbrJy9mu" 
