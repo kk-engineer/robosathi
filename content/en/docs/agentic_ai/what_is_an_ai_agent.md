@@ -263,6 +263,8 @@ _Don't ask what your agent can do. Ask who decides what it may do, and show me t
 - Holmström, [_Moral Hazard and Observability_](https://doi.org/10.2307/3003320), Bell Journal of Economics (1979): hidden action.
 {{< /panel >}}
 
+{{< video "https://youtu.be/_7YFpdR_Ecs" >}}
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span></span>

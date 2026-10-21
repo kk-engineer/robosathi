@@ -320,6 +320,8 @@ _A server describing its tool as harmless has asserted it, not established it._
 - IETF, [_The OAuth 2.1 Authorization Framework (draft)_](https://datatracker.ietf.org/doc/draft-ietf-oauth-v2-1/)
 {{< /panel >}}
 
+{{< video "https://youtu.be/I4tOx1D0QGw" >}}
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/agentic_ai/observability_analytics" >}}">Previous: Observability & Analytics</a></span>

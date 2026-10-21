@@ -252,6 +252,8 @@ _Don't ask whether your agent is autonomous. Ask which decisions are, at what le
 - RTCA, [_DO-178C: Software Considerations in Airborne Systems and Equipment Certification_](https://www.rtca.org/do-178/) (2011); see also the [overview on Wikipedia](https://en.wikipedia.org/wiki/DO-178C).
 {{< /panel >}}
 
+{{< video "https://youtu.be/O-8Gz82mdg4" >}}
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/agentic_ai/what_is_an_ai_agent" >}}">Previous: What Is an AI Agent, Really?</a></span>

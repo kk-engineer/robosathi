@@ -317,6 +317,8 @@ _The dangerous failure is not the call that errors; it's the call that never ret
 - Dean & Barroso, [_The Tail at Scale_](https://doi.org/10.1145/2408776.2408794) CACM (2013).
 {{< /panel >}}
 
+{{< video "https://youtu.be/XhFSObSZlYs" >}}
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/agentic_ai/model_context_protocol" >}}">Previous: Model Context Protocol</a></span>

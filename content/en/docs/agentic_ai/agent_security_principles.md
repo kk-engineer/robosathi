@@ -284,6 +284,8 @@ _The strongest layer was never a detector._
 - NIST, [_Role Based Access Control_](https://csrc.nist.gov/projects/role-based-access-control)
 {{< /panel >}}
 
+{{< video "https://youtu.be/4ESufhJsNZE" >}}
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/agentic_ai/llm_as_a_judge" >}}">Previous: LLM as a Judge</a></span>

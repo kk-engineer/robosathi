@@ -1,6 +1,6 @@
 ---
 title: "Workflow Design Patterns"
-description: "When code picks the next step: six workflow shapes, and where they live in real agents"
+description: "6 workflow patterns:  sequential pipeline, parallel fan-out/fan-in, conditional branching, iterative loop, map-reduce and human-in-the-loop"
 date: 2026-10-16
 weight: 3
 ---
@@ -257,6 +257,8 @@ _Before you call it an agent, draw the graph. If code picks every next step, it'
 - LangGraph, [_Documentation_](https://langchain-ai.github.io/langgraph/): the graph runtime used for the reference agents, including branching, fan-out and checkpoints.
 - LangGraph, [_Persistence_](https://langchain-ai.github.io/langgraph/concepts/persistence/): how durable pauses for human-in-the-loop steps work.
 {{< /panel >}}
+
+{{< video "https://youtu.be/x8YzfRaERo0" >}}
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

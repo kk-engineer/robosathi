@@ -240,6 +240,8 @@ _A judge that has never been measured against another rater is an opinion with a
 - Liu et al., [_G-Eval: NLG Evaluation using GPT-4 with Better Human Alignment_](https://arxiv.org/abs/2303.16634) EMNLP (2023).
 {{< /panel >}}
 
+{{< video "https://youtu.be/8L__pExo-jM" >}}
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/agentic_ai/hallucination_checks" >}}">Previous: Hallucination Checks</a></span>

@@ -313,6 +313,8 @@ _What an agent remembers, it acts on. Govern memory like an action._
 - Anthropic, [_Agent Skills_](https://docs.anthropic.com/en/docs/agents-and-tools/agent-skills/overview) the SKILL.md format and progressive disclosure.
 {{< /panel >}}
 
+{{< video "https://youtu.be/fKlGb_Fxxsc" >}}
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/agentic_ai/context_management" >}}">Previous: Context Management</a></span>

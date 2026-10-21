@@ -284,6 +284,8 @@ _If refusing everything passes your suite, your suite is broken._
 - Promptfoo, [_Red teaming documentation_](https://www.promptfoo.dev/docs/red-team/)
 {{< /panel >}}
 
+{{< video "https://youtu.be/LB_VX_-DpEA" >}}
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/agentic_ai/agent_security_principles" >}}">Previous: Agent Security Principles</a></span>

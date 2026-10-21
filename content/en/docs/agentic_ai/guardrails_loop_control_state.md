@@ -235,6 +235,8 @@ _A guardrail that forgets on restart isn't a guardrail._
 - LangGraph, [_Persistence_](https://langchain-ai.github.io/langgraph/concepts/persistence/): checkpointers, threads and human-in-the-loop interrupts.
 {{< /panel >}}
 
+{{< video "https://youtu.be/VfwtH4dcxQs" >}}
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/agentic_ai/rag" >}}">Previous: Retrieval-Augmented Generation</a></span>

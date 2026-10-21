@@ -275,6 +275,8 @@ _You can rent intelligence. You can't rent accountability._
 - Appenzeller (a16z), [_Welcome to LLMflation: LLM inference cost is going down fast_](https://a16z.com/llmflation-llm-inference-cost/) (Nov 2024).
 {{< /panel >}}
 
+{{< video "https://youtu.be/sqtUBNgQb7A" >}}
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/agentic_ai/system_design_resilience" >}}">Previous: System Design: Resilience</a></span>

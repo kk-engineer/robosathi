@@ -268,6 +268,8 @@ _Record at choke points, and every view is one adapter away._
 - LangChain, [_LangSmith documentation_](https://docs.smith.langchain.com/)
 {{< /panel >}}
 
+{{< video "https://youtu.be/7XKXUgh_c9k" >}}
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/agentic_ai/evals" >}}">Previous: Evals</a></span>

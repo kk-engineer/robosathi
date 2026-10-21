@@ -301,6 +301,8 @@ _Decide what the model reads, or arrival order will._
 - Google DeepMind, [_Gemini 2.5 technical report_](https://arxiv.org/abs/2507.06261) (2025): the long-context Pokémon agent.
 {{< /panel >}}
 
+{{< video "https://youtu.be/0XxzCEVeOKo" >}}
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/agentic_ai/guardrails_loop_control_state" >}}">Previous: Guardrails, Loop Control & State</a></span>

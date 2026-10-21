@@ -272,6 +272,8 @@ _Check each claim against what the agent saw, not how sure it sounded._
 - Azaria & Mitchell, [_The Internal State of an LLM Knows When It's Lying_](https://arxiv.org/abs/2304.13734) (2023).
 {{< /panel >}}
 
+{{< video "https://youtu.be/PG9arygax-k" >}}
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/agentic_ai/memory_management" >}}">Previous: Memory Management</a></span>

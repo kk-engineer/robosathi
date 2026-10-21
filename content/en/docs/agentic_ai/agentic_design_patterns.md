@@ -1,6 +1,6 @@
 ---
 title: "Agentic Design Patterns"
-description: "When the model holds the pen: six agentic patterns, and the fence each one needs"
+description: "6 Agentic patterns, Tool Call, ReAct, Reflect, Planning & Decomposition, Orchestrator-Subagent, Evaluator-Optimizer"
 date: 2026-10-16
 weight: 4
 ---
@@ -226,6 +226,8 @@ _An agentic pattern is a decision you hand to the model. The fence is the part y
 - Xu et al., [_ReWOO: Decoupling Reasoning from Observations for Efficient Augmented Language Models_](https://arxiv.org/abs/2305.18323) (2023).
 - Anthropic, [_Building Effective Agents_](https://www.anthropic.com/research/building-effective-agents) (2024): orchestrator–workers and evaluator–optimizer, with guidance on when to use them.
 {{< /panel >}}
+
+{{< video "https://youtu.be/QUdPxZmhQh8" >}}
 
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">

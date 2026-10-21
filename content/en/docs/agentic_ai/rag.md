@@ -307,6 +307,8 @@ _Retrieve what can be ranked. Never rank what must never be missed._
 - See also, in this site's NLP course: [Text Embeddings]({{<ref "/docs/natural_language_processing/text_embedding" >}}) and [BERT]({{<ref "/docs/natural_language_processing/bert" >}}).
 {{< /panel >}}
 
+{{< video "https://youtu.be/tpxNTxoQpBM" >}}
+
 <!-- nav-panel:start -->
 <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px;">
 <span><a href="{{< ref "/docs/agentic_ai/agentic_design_patterns" >}}">Previous: Agentic Design Patterns</a></span>
