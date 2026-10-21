@@ -5,7 +5,7 @@ date: 2026-10-16
 weight: 13
 ---
 
-{{< playlist "" "Agentic AI | Full Course" >}}
+{{< playlist "https://www.youtube.com/playlist?list=PLCKGc6hN0Tm0" "Agentic AI | Full Course" >}}
 
 {{< panel color="gold" title="Overview" id="overview" >}}
 A non-deterministic agent cannot be reproduced; it can only be recorded. The same input may take a different path tomorrow, so if a turn was not recorded when it happened, it is gone.

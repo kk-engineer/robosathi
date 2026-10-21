@@ -6,7 +6,8 @@ weight: 5
 math: true
 ---
 
-{{< playlist "" "Agentic AI | Full Course" >}}
+{{< playlist "https://www.youtube.com/playlist?list=PLCKGc6hN0Tm0" "Agentic AI | Full Course" >}}
+
 
 {{< panel color="gold" title="Overview" id="overview" >}}
 A language model knows a great deal about language and the world as it was during training, and nothing about your business: your refund policy, your product catalogue, last week's price change.

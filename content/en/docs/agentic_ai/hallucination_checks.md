@@ -6,7 +6,7 @@ weight: 9
 math: true
 ---
 
-{{< playlist "" "Agentic AI | Full Course" >}}
+{{< playlist "https://www.youtube.com/playlist?list=PLCKGc6hN0Tm0" "Agentic AI | Full Course" >}}
 
 {{< panel color="gold" title="Overview" id="overview" >}}
 A schema can guarantee that a reply has the right **shape**. It cannot guarantee that what the reply says is **true**. A perfectly formed sentence such as "_your refund of $118.84 has been issued_" is a serious failure if the refund is actually waiting for review.

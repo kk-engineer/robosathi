@@ -1,13 +1,12 @@
 ---
 title: "Context Management"
-description: "6 Strategies: Offload, Reduce, Retrieve, Isolate, Cache, and Consolidate, 5 Failures: 
-Poisoning, Clash, Confusion, Confusion, and Rot"
+description: "6 Strategies: Offload, Reduce, Retrieve, Isolate, Cache, and Consolidate, 5 Failures: Poisoning, Clash, Confusion, Confusion, and Rot"
 date: 2026-10-16
 weight: 7
 math: true
 ---
 
-{{< playlist "" "Agentic AI | Full Course" >}}
+{{< playlist "https://www.youtube.com/playlist?list=PLCKGc6hN0Tm0" "Agentic AI | Full Course" >}}
 
 {{< panel color="gold" title="Overview" id="overview" >}}
 A language model has no memory between calls and no access to the world beyond the text it is given. On every call, its entire world is its **context window**.

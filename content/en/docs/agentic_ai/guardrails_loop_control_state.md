@@ -5,7 +5,7 @@ date: 2026-10-16
 weight: 6
 ---
 
-{{< playlist "" "Agentic AI | Full Course" >}}
+{{< playlist "https://www.youtube.com/playlist?list=PLCKGc6hN0Tm0" "Agentic AI | Full Course" >}}
 
 {{< panel color="gold" title="Overview" id="overview" >}}
 An agent can go off the rails in three distinct ways. It can produce output of the **wrong shape**: a tool call with a missing field, JSON that doesn't parse, an amount written as a string. It can run **too long or in circles**: the same call five times, a loop that never converges, a budget that quietly disappears.

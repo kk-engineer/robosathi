@@ -5,7 +5,7 @@ date: 2026-10-16
 weight: 4
 ---
 
-{{< playlist "" "Agentic AI | Full Course" >}}
+{{< playlist "https://www.youtube.com/playlist?list=PLCKGc6hN0Tm0" "Agentic AI | Full Course" >}}
 
 {{< panel color="gold" title="Overview" id="overview" >}}
 The [previous notes]({{<ref "/docs/agentic_ai/workflow_design_patterns" >}}) described systems in which code chooses every next step. Here we hand some of those choices to the model.

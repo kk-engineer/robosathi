@@ -1,13 +1,12 @@
 ---
 title: "System Design Patterns"
-description: "Timeouts, Retries, Circuit Breakers, Bulkheads, Idempotency, Saga, Rate Limit, 
-Dead Letter Queue, and Hedging"
+description: "Timeouts, Retries, Circuit Breakers, Bulkheads, Idempotency, Saga, Rate Limit, Dead Letter Queue, and Hedging"
 date: 2026-10-16
 weight: 15
 math: true
 ---
 
-{{< playlist "" "Agentic AI | Full Course" >}}
+{{< playlist "https://www.youtube.com/playlist?list=PLCKGc6hN0Tm0" "Agentic AI | Full Course" >}}
 
 {{< panel color="gold" title="Overview" id="overview" >}}
 The model is the least reliable component of an agent, and it is surrounded by networks, quotas and databases that fail too. A single turn may make twenty calls; if each succeeds 99% of the time, one turn in five meets a failure somewhere.

@@ -5,7 +5,7 @@ date: 2026-10-16
 weight: 14
 ---
 
-{{< playlist "" "Agentic AI | Full Course" >}}
+{{< playlist "https://www.youtube.com/playlist?list=PLCKGc6hN0Tm0" "Agentic AI | Full Course" >}}
 
 {{< panel color="gold" title="Overview" id="overview" >}}
 Every AI application that wants to use a tool or a data source needs an integration with it. Without a standard, that is one bespoke integration per pair of application and tool.

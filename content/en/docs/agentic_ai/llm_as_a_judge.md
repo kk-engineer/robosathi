@@ -6,7 +6,7 @@ weight: 10
 math: true
 ---
 
-{{< playlist "" "Agentic AI | Full Course" >}}
+{{< playlist "https://www.youtube.com/playlist?list=PLCKGc6hN0Tm0" "Agentic AI | Full Course" >}}
 
 {{< panel color="gold" title="Overview" id="overview" >}}
 Many of the qualities we care about in an agent's output have no deterministic test: is the explanation accurate, are the trade-offs stated, is the tone right? People can judge these, but slowly. A language model can judge thousands of outputs in minutes.

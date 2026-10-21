@@ -5,7 +5,7 @@ date: 2026-10-16
 weight: 11
 ---
 
-{{< playlist "" "Agentic AI | Full Course" >}}
+{{< playlist "https://www.youtube.com/playlist?list=PLCKGc6hN0Tm0" "Agentic AI | Full Course" >}}
 
 {{< panel color="gold" title="Overview" id="overview" >}}
 An agent combines things that are each manageable alone and dangerous together: access to private data, exposure to untrusted text, and the power to act. Because a model cannot reliably tell instructions from data, any text it reads can steer what it does.

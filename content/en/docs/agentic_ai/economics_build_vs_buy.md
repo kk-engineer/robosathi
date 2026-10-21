@@ -6,7 +6,7 @@ weight: 16
 math: true
 ---
 
-{{< playlist "" "Agentic AI | Full Course" >}}
+{{< playlist "https://www.youtube.com/playlist?list=PLCKGc6hN0Tm0" "Agentic AI | Full Course" >}}
 
 {{< panel color="gold" title="Overview" id="overview" >}}
 This course built a gatekeeper, guardrails, memory governance, hallucination checks and an evaluation harness. Should a production team build all of that? Mostly not. Some of it, absolutely.

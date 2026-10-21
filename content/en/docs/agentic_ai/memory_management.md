@@ -6,7 +6,7 @@ weight: 8
 math: true
 ---
 
-{{< playlist "" "Agentic AI | Full Course" >}}
+{{< playlist "https://www.youtube.com/playlist?list=PLCKGc6hN0Tm0" "Agentic AI | Full Course" >}}
 
 {{< panel color="gold" title="Overview" id="overview" >}}
 Context management decides what a model sees on one call; **memory** decides what survives **between** calls. An agent that remembers can offer continuity, learn from repeated situations and avoid asking the same questions twice.

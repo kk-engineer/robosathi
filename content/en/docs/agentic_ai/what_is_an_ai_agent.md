@@ -6,7 +6,7 @@ weight: 1
 math: true
 ---
 
-{{< playlist "" "Agentic AI | Full Course" >}}
+{{< playlist "https://www.youtube.com/playlist?list=PLCKGc6hN0Tm0" "Agentic AI | Full Course" >}}
 
 {{< panel color="gold" title="Overview" id="overview" >}}
 Most definitions of an "AI agent" describe what the agent _can do_: perceive, reason, call tools, pursue a goal.

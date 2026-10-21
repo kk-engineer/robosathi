@@ -27,4 +27,4 @@ eyebrow: "Agents & LLM Systems"
 badge: New
 ---
 
-{{< playlist "" "Agentic AI | Full Course" >}}
+{{< playlist "https://www.youtube.com/playlist?list=PLCKGc6hN0Tm0" "Agentic AI | Full Course" >}}

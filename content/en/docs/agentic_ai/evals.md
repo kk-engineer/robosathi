@@ -6,7 +6,7 @@ weight: 12
 math: true
 ---
 
-{{< playlist "" "Agentic AI | Full Course" >}}
+{{< playlist "https://www.youtube.com/playlist?list=PLCKGc6hN0Tm0" "Agentic AI | Full Course" >}}
 
 {{< panel color="gold" title="Overview" id="overview" >}}
 Every earlier chapter of this course made a claim about the system: no refund over the limit, no claim without evidence, no other customer's data. **Evals** are how those claims are checked, on every change, against a real model.

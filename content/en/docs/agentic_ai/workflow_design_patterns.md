@@ -5,7 +5,7 @@ date: 2026-10-16
 weight: 3
 ---
 
-{{< playlist "" "Agentic AI | Full Course" >}}
+{{< playlist "https://www.youtube.com/playlist?list=PLCKGc6hN0Tm0" "Agentic AI | Full Course" >}}
 
 {{< panel color="gold" title="Overview" id="overview" >}}
 A surprising amount of what is marketed as "Agentic AI" is, structurally, a **workflow**: a sequence of steps fixed in code, in which a language model does some of the work but never decides what happens next.
