@@ -1,7 +1,7 @@
 ---
 title: Agentic AI
-description: Agentic AI - from Agents, Design Patterns, RAG, and Memory to Evals, Security, and System Design
-date: 2026-10-16
+description: Agentic AI - from Agents, Design Patterns, RAG, Guardrails, Context, Memory, Hallucinations to Evals, Security, Observability, Analytics, MCP, System Design, and Economics of building an AI Agent.
+date: 2026-10-21
 weight: 1
 course_outline:
   sections:
